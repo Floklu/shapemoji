@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8709389187988209964}
   - component: {fileID: 7898857623381345542}
   m_Layer: 0
-  m_Name: HarpoonProjectile
+  m_Name: HarpoonPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,17 +80,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.0864402, y: 0.0055783167}
-      - {x: 1.0907712, y: 0.19186041}
-      - {x: 0.959365, y: 0.23916683}
+    - - {x: 0.8529397, y: 0.5851602}
+      - {x: 0.9615121, y: 0.7005583}
+      - {x: 0.5090424, y: 0.95634735}
       - {x: 0.111801624, y: 0.22651157}
-      - {x: -0.11382353, y: 0.0099032}
-      - {x: 0.14217366, y: -0.09954849}
-      - {x: 0.5000524, y: -0.13805893}
-      - {x: 0.66262645, y: -0.21986331}
-      - {x: 0.96543235, y: -0.23287481}
-      - {x: 1.0676737, y: -0.113800526}
-      - {x: 1.0887382, y: -0.049657892}
+      - {x: 0.084958196, y: 0.19106114}
+      - {x: 0.08631992, y: 0.15167153}
+      - {x: 0.14025903, y: 0.13691938}
+      - {x: 0.19198704, y: 0.09054363}
+      - {x: 0.25475442, y: 0.08808598}
+      - {x: 0.37496275, y: 0.14130792}
+      - {x: 0.47082227, y: 0.21378075}
+      - {x: 0.5651454, y: 0.24663544}
+      - {x: 0.5943331, y: 0.20076925}
+      - {x: 0.69657445, y: 0.36570978}
+      - {x: 0.738487, y: 0.48822755}
 --- !u!114 &7898857623381345542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc6497f1e201924498556da957dff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startRotationZ: 0
 --- !u!1 &8848486962579980344
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +119,7 @@ GameObject:
   - component: {fileID: 5362189771271090051}
   - component: {fileID: 5561784384504837235}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: HarpoonProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
