@@ -1,27 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Assertions.Must;
+﻿using UnityEngine;
+
 
 public class Harpoon : MonoBehaviour
 {
     [SerializeField] private float startRotationZ;
-    [SerializeField] private float harpoonRange = 45f;
 
     private bool onHarpoon;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        var eulerAngle = transform.eulerAngles.z;
-        startRotationZ = transform.eulerAngles.z;
-    }
-
+    private Vector3 initialPosition;
 
     private void OnMouseDown()
     {
         onHarpoon = true;
+        initialPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void OnMouseUp()
@@ -31,39 +22,15 @@ public class Harpoon : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (onHarpoon)
+        if (onHarpoon && initialPosition != Camera.main.ScreenToWorldPoint(Input.mousePosition))
         {
-            var difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            var difference = initialPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             difference.Normalize();
 
-            // // TODO: dont hardcode 45f 
-            // var rotationZ = nfmod(((Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg) - 45f), 360);
-            var rotationZ = (Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg) - 45f;
-
-            // if (rotationZ > nfmod(startRotationZ + harpoonRange, 360))
-            // {
-            //     rotationZ = nfmod(startRotationZ + harpoonRange, 360);
-            // }
-            // else if (rotationZ < nfmod(startRotationZ - harpoonRange, 360))
-            // {
-            //     rotationZ = nfmod(startRotationZ - harpoonRange, 360);
-            // }
-
-            Debug.Log(rotationZ);
+            var rotationZ = (Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg) - 90f;
 
             transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
         }
-    }
-
-    float nfmod(float a, float b)
-    {
-        return (float) (a - b * Math.Floor(a / b));
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }
