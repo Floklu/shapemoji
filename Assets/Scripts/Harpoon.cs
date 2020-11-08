@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,15 @@ public class Harpoon : MonoBehaviour
 
     private Camera mainCamera;
 
-    private Collider2D collider;
+    private Collider2D myCollider;
+
+    private GameObject projectile;
+
+    private Rigidbody2D projectileRigidbody;
+
+    private bool isShot = false;
+
+    [SerializeField] private float projectileSpeed = 200;
 
 
     /**
@@ -18,8 +27,10 @@ public class Harpoon : MonoBehaviour
      */
     private void Start()
     {
-        collider = GetComponent<Collider2D>();
+        myCollider = GetComponent<Collider2D>();
         mainCamera = Camera.main;
+        projectile = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
     }
 
     /**
@@ -37,6 +48,7 @@ public class Harpoon : MonoBehaviour
     private void OnMouseUp()
     {
         onHarpoon = false;
+        isShot = true;
     }
 
     /**
@@ -52,6 +64,15 @@ public class Harpoon : MonoBehaviour
         if (Input.touchCount > 0 && GetTouchIndexOnHarpoon() != -1)
         {
             RotateHarpoonWithTouch(GetTouchIndexOnHarpoon());
+        }
+    }
+
+
+    private void Update()
+    {
+        if (isShot)
+        {
+            ShootProjectile();
         }
     }
 
@@ -114,7 +135,7 @@ public class Harpoon : MonoBehaviour
         for (var i = 0; i < Input.touchCount; ++i)
         {
             var touchPosition = mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-            if (collider.OverlapPoint(touchPosition))
+            if (myCollider.OverlapPoint(touchPosition))
             {
                 touchIndex = i;
                 break;
@@ -122,5 +143,10 @@ public class Harpoon : MonoBehaviour
         }
 
         return touchIndex;
+    }
+
+    private void ShootProjectile()
+    {
+        projectileRigidbody.velocity = projectile.transform.right * projectileSpeed;
     }
 }

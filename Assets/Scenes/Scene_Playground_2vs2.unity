@@ -5062,5 +5062,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9058733848630800773, guid: 4dba746a049f2e546a9899a80de27da9,
+        type: 3}
+      propertyPath: projectileSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dba746a049f2e546a9899a80de27da9, type: 3}
