@@ -12,6 +12,8 @@ public class StoneFactory: MonoBehaviour
 
     public List<GameObject> preFabs;
 
+    private readonly System.Random _randomizer = new Random();
+
     private void Start()
     {
     }
@@ -25,8 +27,7 @@ public class StoneFactory: MonoBehaviour
      */
     public GameObject CreateStone(float x, float y)
     {
-        Random randomPrefab = new Random();
-        GameObject newStone = preFabs[randomPrefab.Next(preFabs.Count)];
+        GameObject newStone = preFabs[_randomizer.Next(preFabs.Count)];
         Vector3 spawnPosition = new Vector3(x, y, 0);
 
         Instantiate(newStone, spawnPosition, Quaternion.identity);

@@ -2338,6 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeaf805a1dc77141ab9ae46509f5574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxStones: 30
   factory: {fileID: 928387347}
   spawnArea: {fileID: 874193832}
 --- !u!1 &944766728

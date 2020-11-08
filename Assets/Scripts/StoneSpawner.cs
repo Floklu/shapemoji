@@ -7,9 +7,8 @@ using UnityEngine;
  */
 public class StoneSpawner : MonoBehaviour
 {
+    public int MaxStones;
 
-    private int MAX_STONES = 20;
-    
     public StoneFactory factory;
     public GameObject spawnArea;
 
@@ -33,7 +32,7 @@ public class StoneSpawner : MonoBehaviour
      */
     void CreateRandomStone()
     {
-        if (_stones.Count < MAX_STONES)
+        if (_stones.Count < MaxStones)
         {
             Vector3 spawnPosition = spawnArea.transform.position;
             Vector3 spawnBounds = spawnArea.transform.localScale;
