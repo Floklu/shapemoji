@@ -1,28 +1,48 @@
 ﻿using UnityEngine;
 
+/**
+ * @brief Stone Class
+ * This Class uses Event Handlers (Mouse and Collision Events).
+ * Following Functionality was implemented: Stone Drag & Drop (Playing Field and Workshop) 
+ * @author Andrei Dziubenka
+ * @date 09.11.2020
+ */
 public class Stone : MonoBehaviour
 {
-    private Collider2D _currentWorkShop;
+    /**
+     * Current Work Area
+     */
+    private GameObject _currentWorkArea;
 
+    /// <summary>
+    /// Trigger Event
+    /// Is used to assign current Work Area
+    /// </summary>
+    /// <param name="other">Collision Object</param>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("WorkArea"))
         {
-            _currentWorkShop = other;
+            _currentWorkArea = other.gameObject;
         }
     }
 
+    /// <summary>
+    /// Trigger Event Handler
+    /// Is used when Stone is dragged out from the WorkArea
+    /// </summary>
+    /// <param name="other">Collision Object</param>
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("WorkArea") && other==_currentWorkShop)
+        if (other.CompareTag("WorkArea") && other.gameObject == _currentWorkArea)
         {
-            _currentWorkShop = null;
+            _currentWorkArea = null;
         }
     }
-
 
     /// <summary>
     /// Drag Method
+    /// Is used to drag Stones
     /// </summary>
     private void OnMouseDrag()
     {
@@ -33,11 +53,15 @@ public class Stone : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Mouse Up Event Handler
+    /// Is used to center the Stone at the Work Area
+    /// </summary>
     private void OnMouseUp()
     {
-        if (_currentWorkShop != null)
+        if (_currentWorkArea != null)
         {
-            _currentWorkShop.gameObject.GetComponent<WorkArea>().PutObject();
+            _currentWorkArea.GetComponent<WorkArea>().PutObject();
         }
     }
 }

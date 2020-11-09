@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f98f2981-375a-4da1-88bd-d3505720c351" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_Playground_2vs2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_Playground_2vs2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.shapemoji/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shapemoji/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.shapemoji/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shapemoji/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.shapemoji/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shapemoji/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorkArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorkArea.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/WorkArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Stone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorkArea.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +106,7 @@
       <workItem from="1604906579392" duration="480000" />
       <workItem from="1604907402959" duration="395000" />
       <workItem from="1604907893914" duration="158000" />
+      <workItem from="1604953022480" duration="4221000" />
     </task>
     <servers />
   </component>
@@ -112,5 +114,15 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1095" height="495" key="VCS.FileHistoryDialog" timestamp="1604958001019">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="VCS.FileHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1604958001019" />
+    <state x="303" y="1" key="search.everywhere.popup" timestamp="1604953385416">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604953385416" />
   </component>
 </project>
