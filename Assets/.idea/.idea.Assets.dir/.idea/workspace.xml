@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4606ecbd-d89b-46fb-8c25-a89c02ec6a5c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Scene_Playground_2vs2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Scene_Playground_2vs2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts.meta" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Stone.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jqElSfEZj3bZ9dyN2BZ5UCSLRi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4606ecbd-d89b-46fb-8c25-a89c02ec6a5c" name="Default Changelist" comment="" />
+      <created>1604523390372</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604523390372</updated>
+      <workItem from="1604523418891" duration="1694000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
