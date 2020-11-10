@@ -1,25 +1,26 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class Harpoon contains functionality for the rotation and shooting of the harpoon.
+ */
 public class Harpoon : MonoBehaviour
 {
-    private bool onHarpoon;
+    private bool _onDrag;
 
-    private Vector3 initialPosition;
+    private Vector3 _initialPosition;
 
-    private Camera mainCamera;
+    private Camera _mainCamera;
 
-    private Collider2D myCollider;
-
-    private GameObject projectile;
-
-    private Rigidbody2D projectileRigidbody;
-
-    private bool isShot = false;
-
-    [SerializeField] private float projectileSpeed = 200;
+    private Collider2D _harpoonCollider;
+    
+    private GameObject _projectile;
+    
+    private Rigidbody2D _projectileRigidbody;
+    
+    private bool _isShot = false;
+    
+    [SerializeField] private float _projectileSpeed = 200;
 
 
     /**
@@ -27,10 +28,10 @@ public class Harpoon : MonoBehaviour
      */
     private void Start()
     {
-        myCollider = GetComponent<Collider2D>();
-        mainCamera = Camera.main;
-        projectile = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
+        _harpoonCollider = GetComponent<Collider2D>();
+        _mainCamera = Camera.main;
+        _projectile = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        _projectileRigidbody = _projectile.GetComponent<Rigidbody2D>();
     }
 
     /**
@@ -38,8 +39,8 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        onHarpoon = true;
-        initialPosition = GetMousePosition();
+        _onDrag = true;
+        _initialPosition = GetMousePosition();
     }
 
     /**
@@ -47,16 +48,16 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseUp()
     {
-        onHarpoon = false;
-        isShot = true;
+        _onDrag = false;
+        _isShot = true;
     }
 
     /**
-     * FixedUpdate is a frame-rate independent update method for physics calculations
+     * FixedUpdate is a frame-rate independent update method for physics calculations.
      */
     private void FixedUpdate()
     {
-        if (onHarpoon && initialPosition != GetMousePosition())
+        if (_onDrag && _initialPosition != GetMousePosition())
         {
             RotateHarpoonWithMouse();
         }
@@ -65,23 +66,19 @@ public class Harpoon : MonoBehaviour
         {
             RotateHarpoonWithTouch(GetTouchIndexOnHarpoon());
         }
-    }
-
-
-    private void Update()
-    {
-        if (isShot)
+        
+        if (_isShot)
         {
             ShootProjectile();
         }
     }
 
     /**
-     * RotateHarpoonWithMouse rotates the harpoon to the vector between the first initial mouse position and the current mouse position
+     * RotateHarpoonWithMouse rotates the harpoon to the vector between the first initial mouse position and the current mouse position.
      */
     private void RotateHarpoonWithMouse()
     {
-        var direction = initialPosition - GetMousePosition();
+        var direction = _initialPosition - GetMousePosition();
 
         direction.Normalize();
 
@@ -90,6 +87,10 @@ public class Harpoon : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
     }
 
+    /**
+     * RotateHarpoonWithTouch rotates the harpoon with touch interactions
+     * @param index is the index of the touch point that touches the harpoon
+     */
     private void RotateHarpoonWithTouch(int index)
     {
         var touch = Input.GetTouch(index);
@@ -99,13 +100,13 @@ public class Harpoon : MonoBehaviour
         {
             // Record initial touch position.
             case TouchPhase.Began:
-                onHarpoon = true;
-                initialPosition = touch.position;
+                _onDrag = true;
+                _initialPosition = touch.position;
                 break;
 
             // Determine direction by comparing the current touch position with the initial one.
             case TouchPhase.Moved:
-                var direction = initialPosition - new Vector3(touch.position.x, touch.position.y, 0f);
+                var direction = _initialPosition - new Vector3(touch.position.x, touch.position.y, 0f);
 
                 direction.Normalize();
 
@@ -116,26 +117,36 @@ public class Harpoon : MonoBehaviour
 
             // Report that a direction has been chosen when the finger is lifted.
             case TouchPhase.Ended:
-                onHarpoon = false;
+                _onDrag = false;
                 break;
+            case TouchPhase.Stationary:
+                break;
+            case TouchPhase.Canceled:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 
+    /**
+     * GetMousePosition returns the current mouse position
+     * @return Current mouse position
+     */
     private Vector3 GetMousePosition()
     {
-        return mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        return _mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     /**
-     * GetTouchIndexOnHarpoon loops through all touchpoints to check if one is on the harpoon
+     * GetTouchIndexOnHarpoon loops through all touch points to check if one is on the harpoon.
      */
     private int GetTouchIndexOnHarpoon()
     {
         var touchIndex = -1;
         for (var i = 0; i < Input.touchCount; ++i)
         {
-            var touchPosition = mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-            if (myCollider.OverlapPoint(touchPosition))
+            var touchPosition = _mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
+            if (_harpoonCollider.OverlapPoint(touchPosition))
             {
                 touchIndex = i;
                 break;
@@ -147,6 +158,6 @@ public class Harpoon : MonoBehaviour
 
     private void ShootProjectile()
     {
-        projectileRigidbody.velocity = projectile.transform.right * projectileSpeed;
+        _projectileRigidbody.velocity = _projectile.transform.right * _projectileSpeed;
     }
 }
