@@ -1,17 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /**
  * Class Harpoon contains functionality for the rotation and shooting of the harpoon.
  */
 public class Harpoon : MonoBehaviour
 {
-    private bool onDrag;
+    private bool _onDrag;
 
-    private Vector3 initialPosition;
+    private Vector3 _initialPosition;
 
-    private Camera mainCamera;
+    private Camera _mainCamera;
 
-    private Collider2D harpoonCollider;
+    private Collider2D _harpoonCollider;
 
 
     /**
@@ -19,8 +20,8 @@ public class Harpoon : MonoBehaviour
      */
     private void Start()
     {
-        harpoonCollider = GetComponent<Collider2D>();
-        mainCamera = Camera.main;
+        _harpoonCollider = GetComponent<Collider2D>();
+        _mainCamera = Camera.main;
     }
 
     /**
@@ -28,8 +29,8 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        onDrag = true;
-        initialPosition = GetMousePosition();
+        _onDrag = true;
+        _initialPosition = GetMousePosition();
     }
 
     /**
@@ -37,7 +38,7 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseUp()
     {
-        onDrag = false;
+        _onDrag = false;
     }
 
     /**
@@ -45,7 +46,7 @@ public class Harpoon : MonoBehaviour
      */
     private void FixedUpdate()
     {
-        if (onDrag && initialPosition != GetMousePosition())
+        if (_onDrag && _initialPosition != GetMousePosition())
         {
             RotateHarpoonWithMouse();
         }
@@ -61,7 +62,7 @@ public class Harpoon : MonoBehaviour
      */
     private void RotateHarpoonWithMouse()
     {
-        var direction = initialPosition - GetMousePosition();
+        var direction = _initialPosition - GetMousePosition();
 
         direction.Normalize();
 
@@ -72,7 +73,7 @@ public class Harpoon : MonoBehaviour
 
     /**
      * RotateHarpoonWithTouch rotates the harpoon with touch interactions
-     * @param index is the index of the touchpoint that touches the harpoon
+     * @param index is the index of the touch point that touches the harpoon
      */
     private void RotateHarpoonWithTouch(int index)
     {
@@ -83,13 +84,13 @@ public class Harpoon : MonoBehaviour
         {
             // Record initial touch position.
             case TouchPhase.Began:
-                onDrag = true;
-                initialPosition = touch.position;
+                _onDrag = true;
+                _initialPosition = touch.position;
                 break;
 
             // Determine direction by comparing the current touch position with the initial one.
             case TouchPhase.Moved:
-                var direction = initialPosition - new Vector3(touch.position.x, touch.position.y, 0f);
+                var direction = _initialPosition - new Vector3(touch.position.x, touch.position.y, 0f);
 
                 direction.Normalize();
 
@@ -100,8 +101,14 @@ public class Harpoon : MonoBehaviour
 
             // Report that a direction has been chosen when the finger is lifted.
             case TouchPhase.Ended:
-                onDrag = false;
+                _onDrag = false;
                 break;
+            case TouchPhase.Stationary:
+                break;
+            case TouchPhase.Canceled:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 
@@ -111,19 +118,19 @@ public class Harpoon : MonoBehaviour
      */
     private Vector3 GetMousePosition()
     {
-        return mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        return _mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     /**
-     * GetTouchIndexOnHarpoon loops through all touchpoints to check if one is on the harpoon.
+     * GetTouchIndexOnHarpoon loops through all touch points to check if one is on the harpoon.
      */
     private int GetTouchIndexOnHarpoon()
     {
         var touchIndex = -1;
         for (var i = 0; i < Input.touchCount; ++i)
         {
-            var touchPosition = mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-            if (harpoonCollider.OverlapPoint(touchPosition))
+            var touchPosition = _mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
+            if (_harpoonCollider.OverlapPoint(touchPosition))
             {
                 touchIndex = i;
                 break;
