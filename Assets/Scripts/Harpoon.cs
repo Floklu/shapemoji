@@ -1,16 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/**
+ * Class Harpoon contains functionality for the rotation and shooting of the harpoon.
+ */
 public class Harpoon : MonoBehaviour
 {
-    private bool onHarpoon;
+    private bool onDrag;
 
     private Vector3 initialPosition;
 
     private Camera mainCamera;
 
-    private Collider2D collider;
+    private Collider2D harpoonCollider;
 
 
     /**
@@ -18,7 +19,7 @@ public class Harpoon : MonoBehaviour
      */
     private void Start()
     {
-        collider = GetComponent<Collider2D>();
+        harpoonCollider = GetComponent<Collider2D>();
         mainCamera = Camera.main;
     }
 
@@ -27,7 +28,7 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        onHarpoon = true;
+        onDrag = true;
         initialPosition = GetMousePosition();
     }
 
@@ -36,15 +37,15 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseUp()
     {
-        onHarpoon = false;
+        onDrag = false;
     }
 
     /**
-     * FixedUpdate is a frame-rate independent update method for physics calculations
+     * FixedUpdate is a frame-rate independent update method for physics calculations.
      */
     private void FixedUpdate()
     {
-        if (onHarpoon && initialPosition != GetMousePosition())
+        if (onDrag && initialPosition != GetMousePosition())
         {
             RotateHarpoonWithMouse();
         }
@@ -56,7 +57,7 @@ public class Harpoon : MonoBehaviour
     }
 
     /**
-     * RotateHarpoonWithMouse rotates the harpoon to the vector between the first initial mouse position and the current mouse position
+     * RotateHarpoonWithMouse rotates the harpoon to the vector between the first initial mouse position and the current mouse position.
      */
     private void RotateHarpoonWithMouse()
     {
@@ -69,6 +70,10 @@ public class Harpoon : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
     }
 
+    /**
+     * RotateHarpoonWithTouch rotates the harpoon with touch interactions
+     * @param index is the index of the touchpoint that touches the harpoon
+     */
     private void RotateHarpoonWithTouch(int index)
     {
         var touch = Input.GetTouch(index);
@@ -78,7 +83,7 @@ public class Harpoon : MonoBehaviour
         {
             // Record initial touch position.
             case TouchPhase.Began:
-                onHarpoon = true;
+                onDrag = true;
                 initialPosition = touch.position;
                 break;
 
@@ -95,18 +100,22 @@ public class Harpoon : MonoBehaviour
 
             // Report that a direction has been chosen when the finger is lifted.
             case TouchPhase.Ended:
-                onHarpoon = false;
+                onDrag = false;
                 break;
         }
     }
 
+    /**
+     * GetMousePosition returns the current mouse position
+     * @return Current mouse position
+     */
     private Vector3 GetMousePosition()
     {
         return mainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
     /**
-     * GetTouchIndexOnHarpoon loops through all touchpoints to check if one is on the harpoon
+     * GetTouchIndexOnHarpoon loops through all touchpoints to check if one is on the harpoon.
      */
     private int GetTouchIndexOnHarpoon()
     {
@@ -114,7 +123,7 @@ public class Harpoon : MonoBehaviour
         for (var i = 0; i < Input.touchCount; ++i)
         {
             var touchPosition = mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-            if (collider.OverlapPoint(touchPosition))
+            if (harpoonCollider.OverlapPoint(touchPosition))
             {
                 touchIndex = i;
                 break;
