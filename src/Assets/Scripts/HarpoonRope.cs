@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 /**
- * @brief Rope Lengthening Class
+ * @brief This Class is used to stretch the Rope
  * @Author Andrei Dziubenka
  * @Date 11.11.2020
  */
@@ -12,7 +10,7 @@ public class HarpoonRope : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject cannon;
-    
+
     private SpriteRenderer _spriteRenderer;
 
     private Transform _ropeTransform;
@@ -22,7 +20,7 @@ public class HarpoonRope : MonoBehaviour
     /**
      * Start Method is used to initialize variables
      */
-    void Start()
+    private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _ropeTransform = transform;
@@ -32,20 +30,18 @@ public class HarpoonRope : MonoBehaviour
 
     /**
      * Update Method is called every frame
+     * Scales the rope according to projectile position
      */
-    void Update()
+    private void Update()
     {
-        
-        Vector3 ropeCenter = (cannon.transform.position + projectile.transform.position) / 2f;
-        
-        _ropeTransform.position = ropeCenter;
-        Vector3 ropeScale = _ropeTransform.localScale;
+        var ropeCenter = (cannon.transform.position + projectile.transform.position) / 2f;
+        var ropeScale = _ropeTransform.localScale;
 
-        float requiredRopeLength = Vector3.Distance(_cannonTransform.position,_projectileTransform.position);
-        
-        float currentRopeLength = _spriteRenderer.bounds.size.x;
+        var requiredRopeLength = Vector3.Distance(_cannonTransform.position, _projectileTransform.position);
+        var currentRopeLength = _spriteRenderer.bounds.size.x;
 
         ropeScale.x *= requiredRopeLength / currentRopeLength;
         transform.localScale = ropeScale;
+        _ropeTransform.position = ropeCenter;
     }
 }

@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e36e36dd-02f3-4191-b4db-a0acaf5564cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_Playground_2vs2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_Playground_2vs2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HarpoonRope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HarpoonRope.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +94,11 @@
       <workItem from="1605093044827" duration="2437000" />
       <workItem from="1605095854384" duration="740000" />
       <workItem from="1605096763307" duration="409000" />
+      <workItem from="1605101298881" duration="57000" />
+      <workItem from="1605101507452" duration="35000" />
+      <workItem from="1605101845306" duration="228000" />
+      <workItem from="1605102169825" duration="198000" />
+      <workItem from="1605102600763" duration="324000" />
     </task>
     <servers />
   </component>
