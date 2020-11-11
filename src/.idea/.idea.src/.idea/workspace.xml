@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e36e36dd-02f3-4191-b4db-a0acaf5564cf" name="Default Changelist" comment="" />
+    <list default="true" id="e36e36dd-02f3-4191-b4db-a0acaf5564cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HarpoonRope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HarpoonRope.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,14 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/HarpoonRope.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Harpoon.cs" />
         <option value="$PROJECT_DIR$/Assets/HarpoonRope.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HarpoonRope.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +89,9 @@
       <workItem from="1605049525778" duration="596000" />
       <workItem from="1605050971860" duration="6900000" />
       <workItem from="1605081897545" duration="2305000" />
+      <workItem from="1605091263437" duration="1494000" />
+      <workItem from="1605092920487" duration="29000" />
+      <workItem from="1605093044827" duration="991000" />
     </task>
     <servers />
   </component>
