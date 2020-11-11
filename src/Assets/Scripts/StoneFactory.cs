@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
@@ -12,11 +10,8 @@ public class StoneFactory: MonoBehaviour
 
     public List<GameObject> preFabs;
 
-    private readonly System.Random _randomizer = new Random();
+    private readonly Random _randomizer = new Random();
 
-    private void Start()
-    {
-    }
 
     /**
      * creates random stone from selection of prefabs and instantiates stone on the playground
@@ -27,8 +22,8 @@ public class StoneFactory: MonoBehaviour
      */
     public GameObject CreateStone(float x, float y)
     {
-        GameObject newStone = preFabs[_randomizer.Next(preFabs.Count)];
-        Vector3 spawnPosition = new Vector3(x, y, 0);
+        var newStone = preFabs[_randomizer.Next(preFabs.Count)];
+        var spawnPosition = new Vector3(x, y, 0);
 
         Instantiate(newStone, spawnPosition, Quaternion.identity);
         

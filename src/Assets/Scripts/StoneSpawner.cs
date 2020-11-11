@@ -1,40 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = System.Random;
 
 /**
  * Class, which manages the avaiable stones on the playground
  */
 public class StoneSpawner : MonoBehaviour
 {
-    public int MaxStones;
+    [FormerlySerializedAs("MaxStones")] public int maxStones;
 
     public StoneFactory factory;
     public List<GameObject> spawnZones;
 
     private List<GameObject> _stones;
-    private System.Random _randomizer;
+    private Random _randomizer;
     private List<GameObject> _spawnPlaces;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _stones = new List<GameObject>();
-        _randomizer = new System.Random();
+        _randomizer = new Random();
         _spawnPlaces = new List<GameObject>();
 
-        foreach (GameObject zone in spawnZones)
+        foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
         {
-            foreach (Transform child in zone.transform)
-            {
-                _spawnPlaces.Add(child.gameObject);
-            }
+            _spawnPlaces.Add(child.gameObject);
         }
-        
+
         InvokeRepeating(nameof(CreateRandomStone), 1f, 1f);
-        for (int i = 0; i < MaxStones; i++)
+        for (var i = 0; i < maxStones; i++)
         {
             CreateRandomStone();
         }
@@ -43,22 +39,21 @@ public class StoneSpawner : MonoBehaviour
     /*
      * creates a stone at a random location
      */
-    void CreateRandomStone()
+    private void CreateRandomStone()
     {
-        if (_stones.Count < MaxStones)
+        if (_stones.Count < maxStones)
         {
-            List<GameObject> places = _spawnPlaces.Where(plc => !containsStone(plc)).ToList();
+            var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
             if (places.Count > 0)
             {
-                float x, y;
-                GameObject place = places[_randomizer.Next(places.Count)];
-                SpawnPlace spawn = place.GetComponent<SpawnPlace>();
+                var place = places[_randomizer.Next(places.Count)];
+                var spawn = place.GetComponent<SpawnPlace>();
 
-                Vector3 spawnPosition = place.transform.position;
-                x = spawnPosition.x;
-                y = spawnPosition.y;
+                var spawnPosition = place.transform.position;
+                var x = spawnPosition.x;
+                var y = spawnPosition.y;
             
-                GameObject stone = factory.CreateStone(x, y);
+                var stone = factory.CreateStone(x, y);
                 _stones.Add(stone);
                 spawn.stone = stone;    
             }
@@ -72,9 +67,9 @@ public class StoneSpawner : MonoBehaviour
      * @param place chosen spawn place for a stone
      * @returns true, if the gameObject contains a SpawnPlace and it contains a stone
      */
-    private bool containsStone(GameObject place)
+    private static bool ContainsStone(GameObject place)
     {
-        SpawnPlace spawn = place.GetComponent<SpawnPlace>();
+        var spawn = place.GetComponent<SpawnPlace>();
         return spawn != null && spawn.stone != null;
     }
 }
