@@ -1,0 +1,12 @@
+digraph "UnityEditor.Timeline.BasePropertyKeyDataSource.TransformKeyTime"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Base\lPropertyKeyDataSource.Transform\lKeyTime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Base\lPropertyKeyDataSource.GetDescriptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_base_property_key_data_source.html#a4fa50fd387a4527214ce6d785822612d",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Base\lPropertyKeyDataSource.GetKeys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_base_property_key_data_source.html#a75d677977cb9107ca05cf83f9787d320",tooltip=" "];
+}

@@ -1,0 +1,22 @@
+digraph "TMPro.ITextPreprocessor.PreprocessText"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TMPro.ITextPreprocessor.\lPreprocessText",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Function used for preprocessing of text"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_Text.ParseInputText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#abf101b7be511178e9d0d6999dcd26977",tooltip="Method to parse the input text based on its source"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_Text.GetPreferred\lHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a754e5a230232f1ed55615e55a3ed32ad",tooltip="Method to calculate the preferred height of a text object."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Text.GetPreferred\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a9d3dbcb6ccf3ef97454b5ec89725eccb",tooltip="Function to Calculate the Preferred Width and Height of the text object."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TextMeshPro.Rebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro.html#a8ea12a256e97a7ab1d66945b5f3a0a88",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TextMeshProUGUI.Rebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a963457c98b96eb2387dd43d40a7dcc57",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_Text.GetPreferred\lWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#abb5c80b9a45b89007024c857593e12c8",tooltip="Method to calculate the preferred width of a text object."];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

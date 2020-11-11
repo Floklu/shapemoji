@@ -1,0 +1,25 @@
+digraph "TMPro.TextMeshProUGUI.LoadFontAsset"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TMPro.TextMeshProUGUI.Load\lFontAsset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Method which derived classes need to override to load Font Assets."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_Text.GetPadding\lForMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a7182ea72ca6b396af6cae05cee59243d",tooltip="Get the padding value for the currently assigned material"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_Text.GetSpecial\lCharacters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a17ad19c4cf9c5ad4485b208eb0a37bf2",tooltip="Method used to find and cache references to the Underline and Ellipsis characters."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Text.GetEllipsis\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a3193988e012b58e178ae978de5e64e6d",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a9d70106b39c64e03f4e62e1f13c0948b",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAssets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#afdc59bd1dcec2cddc898a4f034a66dee",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_Text.GetUnderline\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aa644bbb25fe0d440b1adf25dc2081f37",tooltip=" "];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMP_FontAsset.Read\lFontAssetDefinition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#ade90a42615b002bb0c31b06d497df510",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TMPro.TextMeshProUGUI.Set\lMaterialDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#af75e3f762ed8c445cc4ad100903b5cf1",tooltip=" "];
+}

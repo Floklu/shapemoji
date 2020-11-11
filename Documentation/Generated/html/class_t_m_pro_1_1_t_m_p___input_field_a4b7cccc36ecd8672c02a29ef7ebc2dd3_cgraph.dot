@@ -1,0 +1,31 @@
+digraph "TMPro.TMP_InputField.LateUpdate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TMPro.TMP_InputField.Late\lUpdate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Update the text based on input."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_InputField.OnDeselect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a4408fce00917fd765ef1a1e5017a3464",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_InputField.Deactivate\lInputField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#af972523ea46f02204c7471f54ccd61b6",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_InputField.Release\lSelection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a0ca70769250b44af1ef6a8c743f5563e",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_InputField.Send\lOnEndEdit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#adba4a85e3c7777a5573ed2ff139e4517",tooltip="Submit the input field's text."];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_InputField.Send\lOnEndTextSelection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#ac3305c44c797f1f8c62d81851e8f118c",tooltip=" "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_InputField.Send\lOnFocusLost",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a54f68d8730b8905a4a9a31c21c911926",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMP_InputField.OnSubmit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a5d0a7dce46ca21b97a7a1554579d2887",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TMPro.TMP_InputField.Send\lOnSubmit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#abf60ea8cc14546e9e0ca9f88db152b13",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="TMPro.TMP_InputField.Send\lTouchScreenKeyboardStatusChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a211b4307fb6c80ae9a94b85121eb81bc",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="TMPro.TMP_InputField.Validate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#afd6552ded1ac4de1c4efd868bdc66a33",tooltip="Validate the specified input."];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="TMPro.TMP_InputValidator.\lValidate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_validator.html#acb188d784d649daf3a0fac22d2c56738",tooltip=" "];
+}

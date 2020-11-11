@@ -1,0 +1,12 @@
+digraph "UnityEngine.Timeline.IPropertyCollector.AddFromName"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEngine.Timeline.IProperty\lCollector.AddFromName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Add property modifications using the serialized property name."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Activation\lTrack.GatherProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_activation_track.html#af4cf30aaabb54e30d80694a248dd32ff",tooltip="Called by the Timeline Editor to gather properties requiring preview."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Control\lPlayableAsset.GatherProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a56ee156f040a4606f873e2580b305512",tooltip="Called by the Timeline Editor to gather properties requiring preview."];
+}

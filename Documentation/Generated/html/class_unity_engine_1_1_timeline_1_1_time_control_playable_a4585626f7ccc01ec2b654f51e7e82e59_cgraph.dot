@@ -1,0 +1,10 @@
+digraph "UnityEngine.Timeline.TimeControlPlayable.PrepareFrame"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEngine.Timeline.Time\lControlPlayable.PrepareFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This function is called during the PrepareFrame phase of the PlayableGraph."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.ITime\lControl.SetTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_time_control.html#ab4c0716cf185f3833bfdf3c332f9c913",tooltip="Called each frame the Timeline clip is active."];
+}

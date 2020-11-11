@@ -1,0 +1,10 @@
+digraph "UnityEditor.Timeline.TimelineClipUnion.Intersection"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Timeline\lClipUnion.Intersection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Timeline\lClipUnion.Build",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_union.html#a42bfdea2b388845806ecf0735a47391b",tooltip=" "];
+}

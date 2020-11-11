@@ -1,0 +1,11 @@
+digraph "UnityEngine.Timeline.IMarker"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="UnityEngine.Timeline.IMarker",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Interface implemented by markers."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Marker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_marker.html",tooltip="Use Marker as a base class when creating a custom marker."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Signal\lEmitter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_signal_emitter.html",tooltip="Marker that emits a signal to a SignalReceiver."];
+}

@@ -1,0 +1,14 @@
+digraph "UnityEditor.Timeline.WindowState.CalculateRowRects"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Window\lState.CalculateRowRects",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Window\lState.ArmForRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a512c9c7166274feb83b0a8caf1a6f191",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lWindowTimeControl.StartRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a6abf67eacf64e942c48c60a681065423",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Animation\lTrackRecorder.FinializeTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html#a4ba1e227acdfa447fd6dd5b0dce91c4d",tooltip=" "];
+}

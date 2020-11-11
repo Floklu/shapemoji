@@ -1,0 +1,38 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node157 [label="PropertyDrawer",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node157 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="TMPro.EditorUtilities.Dropdown\lOptionListDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_dropdown_option_list_drawer.html",tooltip=" "];
+  Node157 -> Node159 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node159 [label="TMPro.EditorUtilities.Font\lWeightDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_font_weight_drawer.html",tooltip=" "];
+  Node157 -> Node160 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node160 [label="TMPro.EditorUtilities.Glyph\lMetricsPropertyDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_glyph_metrics_property_drawer.html",tooltip=" "];
+  Node157 -> Node161 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node161 [label="TMPro.EditorUtilities.Glyph\lRectPropertyDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_glyph_rect_property_drawer.html",tooltip=" "];
+  Node157 -> Node162 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node162 [label="TMPro.EditorUtilities.Style\lDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_style_drawer.html",tooltip=" "];
+  Node157 -> Node163 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="TMPro.EditorUtilities.TMP\l_CharacterPropertyDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___character_property_drawer.html",tooltip=" "];
+  Node157 -> Node164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="TMPro.EditorUtilities.TMP\l_GlyphPairAdjustmentRecordProperty\lDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html",tooltip=" "];
+  Node157 -> Node165 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="TMPro.EditorUtilities.TMP\l_GlyphPropertyDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_property_drawer.html",tooltip=" "];
+  Node157 -> Node166 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node166 [label="TMPro.EditorUtilities.TMP\l_HorizontalAlignmentDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___horizontal_alignment_drawer.html",tooltip=" "];
+  Node157 -> Node167 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node167 [label="TMPro.EditorUtilities.TMP\l_SpriteCharacterPropertyDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_character_property_drawer.html",tooltip=" "];
+  Node157 -> Node168 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node168 [label="TMPro.EditorUtilities.TMP\l_SpriteGlyphPropertyDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_glyph_property_drawer.html",tooltip=" "];
+  Node157 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="TMPro.EditorUtilities.TMP\l_TextAlignmentDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___text_alignment_drawer.html",tooltip=" "];
+  Node157 -> Node170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="TMPro.EditorUtilities.TMP\l_VerticalAlignmentDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___vertical_alignment_drawer.html",tooltip=" "];
+  Node157 -> Node171 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node171 [label="UnityEditor.Timeline.Time\lFieldDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_time_field_drawer.html",tooltip=" "];
+  Node157 -> Node172 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node172 [label="UnityEngine.Timeline.Audio\lClipPropertiesDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_audio_clip_properties_drawer.html",tooltip=" "];
+}

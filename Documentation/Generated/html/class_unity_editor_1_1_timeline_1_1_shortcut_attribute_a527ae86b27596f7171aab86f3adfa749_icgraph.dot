@@ -1,0 +1,18 @@
+digraph "UnityEditor.Timeline.ShortcutAttribute.MatchesEvent"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Shortcut\lAttribute.MatchesEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Timeline\lAction.HandleShortcut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8b0d1311b3c56f6c8232659bb2ded4ab",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lShortcutManipulator.ExecuteCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_shortcut_manipulator.html#acb444591cf652e50a0a43953a463fb2d",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Item\lAction\< TimelineClip \>\l::HandleShortcut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_item_action.html#aab9b449c05f93c479a730380a3c10abf",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Track\lAction.HandleShortcut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_action.html#a95af73057a5aec7baa1c83c337346dd7",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Track\lShortcutManipulator.ExecuteCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_shortcut_manipulator.html#ae7603696d6d41e04b49a42efb5435483",tooltip=" "];
+}

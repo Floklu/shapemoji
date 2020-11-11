@@ -1,0 +1,25 @@
+digraph "UnityEditor.Timeline.FrameAllAction.Execute"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEditor.Timeline.Frame\lAllAction.Execute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Frame\lSelectedAction.FrameInlineCurves",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#a0b8f235591f0655d06f0e67f6be6ce24",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Frame\lSelectedAction.FrameRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_frame_selected_action.html#ae0122012cd5227ac45050968f50db2f0",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Window\lState.Evaluate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#ab469068a54205d03f681a4ca66919395",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Window\lState.GatherProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a1f9998b0966727995f7fae56654ae710",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Window\lState.SetTimeAreaShownRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a94a4eb656945f98c6c57c6801b507b29",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Window\lState.GetWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Window\lState.IsEditingASubItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a2fcf53cb212d80e02e30d883bc259b75",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.Window\lState.IsCurrentEditingASequencer\lTextField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a",tooltip=" "];
+}

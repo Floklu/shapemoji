@@ -1,0 +1,24 @@
+digraph "UnityEngine.Timeline.DiscreteTime.DiscreteTime"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEngine.Timeline.Discrete\lTime.DiscreteTime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Discrete\lTime.FromTicks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#ac8cabbe47695df4c379825d6d9b0e8ca",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Discrete\lTime.Max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a917f1e63ba258c89ba567a3fa3a29f2d",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEngine.Timeline.Discrete\lTime.Min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a5b5c6c105e963a7ddea9391869c5d775",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEngine.Timeline.Discrete\lTime.OneTickAfter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#aaa730e255b03dac4f84a404018a8e476",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Discrete\lTime.OneTickBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a11b344c4584f14980b1632032b0efcee",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEngine.Timeline.Discrete\lTime.operator DiscreteTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a28c977d824ff6cba5e2603ba76b5e6cd",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEngine.Timeline.Discrete\lTime.operator+",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a577936fedb254fc233c25b2b532c1b20",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEngine.Timeline.Discrete\lTime.operator-",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a013aa5fce372187b143b60d0b327e28c",tooltip=" "];
+}

@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node539 [label="DelegatingTestCommand",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node539 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="UnityEngine.TestRunner.NUnit\lExtensions.Runner.UnityLogCheck\lDelegatingCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_unity_log_check_delegating_command.html",tooltip=" "];
+}

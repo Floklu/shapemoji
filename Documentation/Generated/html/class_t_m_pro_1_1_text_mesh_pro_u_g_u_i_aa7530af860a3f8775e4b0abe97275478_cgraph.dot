@@ -1,0 +1,24 @@
+digraph "TMPro.TextMeshProUGUI.OnEnable"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TMPro.TextMeshProUGUI.On\lEnable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TextMeshProUGUI.Compute\lMarginSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a585823ae58e0b54f1497ced737567a03",tooltip="Update the margin width and height"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TextMeshProUGUI.Get\lTextContainerLocalCorners",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a9061f9387fbed4095b88a7ad98a9bf90",tooltip="Method to return the local corners of the Text Container or RectTransform."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TextMeshProUGUI.Recalculate\lClipping",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#ada791339448a5b531f1bf276108b2b8c",tooltip="Method called when the state of a parent changes."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TextMeshProUGUI.Set\lActiveSubMeshes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a955de616cf76ff0886112394b6289d85",tooltip="Method to Enable or Disable child SubMesh objects."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TextMeshProUGUI.Set\lAllDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a749eb1a6e9aa2f277b07a01f14483cc3",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TextMeshProUGUI.Set\lLayoutDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a662b65a09b65317f716297d4377e27a7",tooltip=" "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TextMeshProUGUI.Set\lMaterialDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#af75e3f762ed8c445cc4ad100903b5cf1",tooltip=" "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TMPro.TextMeshProUGUI.Set\lVerticesDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#acc18f45edf09f79d04d6a9e461633d7c",tooltip=" "];
+}

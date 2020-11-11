@@ -1,0 +1,14 @@
+digraph "UnityEditor.Timeline.LayerZOrder.LayerZOrder"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Layer\lZOrder.LayerZOrder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Layer\lZOrder.ChangeLayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_editor_1_1_timeline_1_1_layer_z_order.html#a7990d1c3f3890e74970f4e199f575a4b",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lClipHandle.TimelineClipHandle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html#ace62ae78e0e959b334f29d63129aedeb",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Layer\lZOrder.operator++",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_editor_1_1_timeline_1_1_layer_z_order.html#aaa7a1823eae2f43342588b3038b8f549",tooltip=" "];
+}

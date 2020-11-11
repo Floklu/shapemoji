@@ -1,0 +1,10 @@
+digraph "VSCodeEditor.ProjectGeneration.GenerateAndWriteSolutionAndProjects"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="VSCodeEditor.ProjectGeneration.\lGenerateAndWriteSolutionAndProjects",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VSCodeEditor.ProjectGeneration.Sync",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_project_generation.html#a0b027bde77c5135f4bfdea3bf19b1a00",tooltip=" "];
+}

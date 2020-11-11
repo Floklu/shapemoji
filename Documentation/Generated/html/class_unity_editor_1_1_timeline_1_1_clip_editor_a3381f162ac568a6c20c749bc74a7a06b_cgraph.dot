@@ -1,0 +1,12 @@
+digraph "UnityEditor.Timeline.ClipEditor.GetClipOptions"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEditor.Timeline.Clip\lEditor.GetClipOptions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Implement this method to override the default options for drawing a clip."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Clip\lEditor.GetDefaultHighlightColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_editor.html#ab8b1aa2a6fa48c5f01fb91adb75812ad",tooltip="The color drawn under the clip. By default, the color is the same as the track color."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Clip\lEditor.GetErrorText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_editor.html#a59ef2b27cdfd2e2b0f2331556c3da101",tooltip="Gets the error text for the specified clip."];
+}

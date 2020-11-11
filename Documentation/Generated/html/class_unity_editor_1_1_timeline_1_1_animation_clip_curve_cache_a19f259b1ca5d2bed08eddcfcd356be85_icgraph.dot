@@ -1,0 +1,19 @@
+digraph "UnityEditor.Timeline.AnimationClipCurveCache.GetCurveInfo"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Animation\lClipCurveCache.GetCurveInfo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Utilities.\lKeyTraverser.GetClipKeyTimes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#abf9c2b7a498fe4fe224a01bbef3f0a4d",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Utilities.\lKeyTraverser.GetTrackKeyTimes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aec9e5e48fb6911300201dfc6dacb6670",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Base\lPropertyKeyDataSource.GetDescriptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_base_property_key_data_source.html#a4fa50fd387a4527214ce6d785822612d",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Base\lPropertyKeyDataSource.GetKeys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_base_property_key_data_source.html#a75d677977cb9107ca05cf83f9787d320",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Timeline\lClipGUI.SnappableEdgesFor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a909a411201375f90d27b33476be7bb5b",tooltip=" "];
+}

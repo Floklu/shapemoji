@@ -1,0 +1,22 @@
+digraph "UnityEditor.TestTools.TestRunner.TestRunnerWindow"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEditor.TestTools.Test\lRunner.TestRunnerWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The TestRunnerWindow class is repsonsible for drawing the Test Runner window."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="EditorWindow",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="IHasCustomMenu",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_SelectedTestTypes" ,fontname="Helvetica"];
+  Node4 [label="UnityEditor.TestTools.Test\lRunner.GUI.TestListGUI",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" SelectedTestsFilter" ,fontname="Helvetica"];
+  Node5 [label="UnityEditor.TestTools.Test\lRunner.GUI.UITestRunnerFilter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_TestRunnerUIFilter" ,fontname="Helvetica"];
+  Node6 [label="UnityEditor.TestTools.Test\lRunner.GUI.TestRunnerUIFilter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Window" ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" filterSettings" ,fontname="Helvetica"];
+  Node7 [label="UnityEditor.TestTools.Test\lRunner.GUI.TestFilterSettings",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" s_Instance" ,fontname="Helvetica"];
+}

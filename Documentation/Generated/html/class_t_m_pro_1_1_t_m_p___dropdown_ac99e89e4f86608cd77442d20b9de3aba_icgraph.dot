@@ -1,0 +1,14 @@
+digraph "TMPro.TMP_Dropdown.RefreshShownValue"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TMPro.TMP_Dropdown.Refresh\lShownValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Refreshes the text and image (if available) of the currently selected option."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_Dropdown.AddOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#aca7bde337dd9fb565f2a8ed96bf4bb25",tooltip="Add multiple options to the options of the Dropdown based on a list of OptionData objects."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_Dropdown.Clear\lOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a031c8b8c5711c7fdb8a64bad0d139a0d",tooltip="Clear the list of options in the Dropdown."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Dropdown.Start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#ad5f10181747d1751111539353dc2d3f6",tooltip=" "];
+}

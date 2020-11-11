@@ -1,0 +1,12 @@
+digraph "UnityEngine.Timeline.TimelineClip.IsExtrapolatedTime"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEngine.Timeline.Timeline\lClip.IsExtrapolatedTime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Given a time, returns whether it falls within the clips extrapolation"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Timeline\lClip.IsPostExtrapolatedTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a7f54df7e4c0accdefa6dfbc83068083e",tooltip="Given a time, returns whether it falls within the clip post-extrapolation"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Timeline\lClip.IsPreExtrapolatedTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a9b9ff4aba84f327c2822983ac3cdf50b",tooltip="Given a time, returns whether it falls within the clip pre-extrapolation"];
+}

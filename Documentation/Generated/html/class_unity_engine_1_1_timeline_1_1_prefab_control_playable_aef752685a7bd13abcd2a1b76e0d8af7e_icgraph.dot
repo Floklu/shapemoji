@@ -1,0 +1,10 @@
+digraph "UnityEngine.Timeline.PrefabControlPlayable.Create"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEngine.Timeline.Prefab\lControlPlayable.Create",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Creates a Playable with a PrefabControlPlayable behaviour attached"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Control\lPlayableAsset.CreatePlayable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a87c954a9c943e648eb2adfab74400ebb",tooltip="Creates the root of a Playable subgraph to control the contents of the game object."];
+}

@@ -1,0 +1,10 @@
+digraph "UnityEditor.Timeline.TrimItemModeRipple.TrimStart"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEditor.Timeline.Trim\lItemModeRipple.TrimStart",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.ITrimmable.\lSetStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_trimmable.html#a4075eaa48f206dfcf8183b00029c583d",tooltip=" "];
+}

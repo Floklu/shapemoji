@@ -1,0 +1,10 @@
+digraph "UnityEngine.Timeline.TimeControlPlayable.OnBehaviourPlay"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEngine.Timeline.Time\lControlPlayable.OnBehaviourPlay",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This function is called when the Playable play state is changed to Playables.PlayState...."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.ITime\lControl.OnControlTimeStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_time_control.html#a794f2a46049fb4575d0e592b4a86fb7e",tooltip="Called when the associated Timeline clip becomes active."];
+}

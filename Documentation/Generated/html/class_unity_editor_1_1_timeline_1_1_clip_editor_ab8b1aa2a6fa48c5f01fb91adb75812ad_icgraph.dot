@@ -1,0 +1,10 @@
+digraph "UnityEditor.Timeline.ClipEditor.GetDefaultHighlightColor"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEditor.Timeline.Clip\lEditor.GetDefaultHighlightColor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The color drawn under the clip. By default, the color is the same as the track color."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Clip\lEditor.GetClipOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_editor.html#a3381f162ac568a6c20c749bc74a7a06b",tooltip="Implement this method to override the default options for drawing a clip."];
+}

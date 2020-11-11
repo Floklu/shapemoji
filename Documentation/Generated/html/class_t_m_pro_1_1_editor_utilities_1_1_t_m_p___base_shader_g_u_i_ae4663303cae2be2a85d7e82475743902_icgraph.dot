@@ -1,0 +1,12 @@
+digraph "TMPro.EditorUtilities.TMP_BaseShaderGUI.EndPanel"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.EndPanel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_BitmapShaderGUI.DoGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___bitmap_shader_g_u_i.html#af4f6c43167899462930161b3db412cb5",tooltip="Override this method to create the specific shader GUI."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_SDFShaderGUI.DoGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___s_d_f_shader_g_u_i.html#ad54675b667fc314961cedb1beeacd6b4",tooltip="Override this method to create the specific shader GUI."];
+}

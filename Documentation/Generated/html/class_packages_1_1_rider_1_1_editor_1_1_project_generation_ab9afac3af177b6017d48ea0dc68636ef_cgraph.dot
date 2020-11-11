@@ -1,0 +1,14 @@
+digraph "Packages.Rider.Editor.ProjectGeneration.SyncIfNeeded"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Packages.Rider.Editor.Project\lGeneration.SyncIfNeeded",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Syncs the scripting solution if any affected files are relevant."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Packages.Rider.Editor.Project\lGeneration.Sync",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a7df4c31a74fb47f70fb901fc0e93b8a2",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Packages.Rider.Editor.Project\lGeneration.GenerateAndWriteSolution\lAndProjects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a98c773d55e6fc95774f6eb998a8c2ff8",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Packages.Rider.Editor.Project\lGeneration.GetAssetPostprocessorTypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ac24c22229cbee20613cc74b282edf1f0",tooltip=" "];
+}

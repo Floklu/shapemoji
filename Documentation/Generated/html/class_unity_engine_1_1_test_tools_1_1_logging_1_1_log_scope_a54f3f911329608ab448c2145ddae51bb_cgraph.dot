@@ -1,0 +1,10 @@
+digraph "UnityEngine.TestTools.Logging.LogScope.AnyFailingLogs"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEngine.TestTools.Logging.\lLogScope.AnyFailingLogs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.TestTools.Logging.\lLogScope.ProcessExpectedLogs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope.html#aa3a79260f9c661ea876c83c2fe2db0d4",tooltip=" "];
+}

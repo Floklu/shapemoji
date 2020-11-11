@@ -1,0 +1,14 @@
+digraph "UnityEngine.Timeline.AnimationTrack.CreateClip"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEngine.Timeline.Animation\lTrack.CreateClip",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Creates a TimelineClip on this track that uses an AnimationClip."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Animation\lTrack.CreateRecordableClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_animation_track.html#ad32f07442ffee64b07211ee7936ad149",tooltip="Creates a TimelineClip, AnimationPlayableAsset and an AnimationClip. Use this clip to record in a tim..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Animation\lTrackRecorder.AddRecordableClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html#ae9a7eb659ce6f6bf1b2dacdb659d7bb7",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Animation\lTrackRecorder.PrepareTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html#aaa1833fd02ef8ae07e3ed534f155e97d",tooltip=" "];
+}

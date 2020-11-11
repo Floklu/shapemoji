@@ -1,0 +1,10 @@
+digraph "Packages.Rider.Editor.RiderScriptEditor.SyncAll"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Packages.Rider.Editor.Rider\lScriptEditor.SyncAll",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Packages.Rider.Editor.IGenerator.Sync",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_packages_1_1_rider_1_1_editor_1_1_i_generator.html#a18d4c0b40c7ed4698d4e67fc06cf2c12",tooltip=" "];
+}
