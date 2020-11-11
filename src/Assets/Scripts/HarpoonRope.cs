@@ -3,17 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @brief Rope Lengthening Class
+ * @Author Andrei Dziubenka
+ * @Date 11.11.2020
+ */
 public class HarpoonRope : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject cannon;
+    
     private SpriteRenderer _spriteRenderer;
 
     private Transform _ropeTransform;
     private Transform _cannonTransform;
     private Transform _projectileTransform;
 
-    // Start is called before the first frame update
+    /**
+     * Start Method is used to initialize variables
+     */
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -22,7 +30,9 @@ public class HarpoonRope : MonoBehaviour
         _projectileTransform = projectile.transform;
     }
 
-    // Update is called once per frame
+    /**
+     * Update Method is called every frame
+     */
     void Update()
     {
         
@@ -34,7 +44,6 @@ public class HarpoonRope : MonoBehaviour
         float requiredRopeLength = Vector3.Distance(_cannonTransform.position,_projectileTransform.position);
         
         float currentRopeLength = _spriteRenderer.bounds.size.x;
-     
 
         ropeScale.x *= requiredRopeLength / currentRopeLength;
         transform.localScale = ropeScale;
