@@ -38,7 +38,7 @@ public class HarpoonRope : MonoBehaviour
         var ropeScale = _ropeTransform.localScale;
 
         var requiredRopeLength = Vector3.Distance(_cannonTransform.position, _projectileTransform.position);
-        var currentRopeLength = _spriteRenderer.bounds.size.x;
+        var currentRopeLength = _spriteRenderer.bounds.size.magnitude;
 
         ropeScale.x *= requiredRopeLength / currentRopeLength;
         transform.localScale = ropeScale;
