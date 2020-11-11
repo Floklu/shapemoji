@@ -7,8 +7,8 @@ using Random = System.Random;
 namespace Spawner
 {
     /**
- * Class, which manages the avaiable stones on the playground
- */
+    * Class, which manages the avaiable stones on the playground
+    */
     public class StoneSpawner : MonoBehaviour
     {
         [FormerlySerializedAs("MaxStones")] public int maxStones;
@@ -21,6 +21,14 @@ namespace Spawner
         private List<GameObject> _spawnPlaces;
 
         private void Start()
+        {
+            StartGeneration();
+        }
+
+        /**
+         * Generates predefined number of random stones and places them onto the playground 
+         */
+        public void StartGeneration()
         {
             _stones = new List<GameObject>();
             _randomizer = new Random();
@@ -38,9 +46,9 @@ namespace Spawner
             }
         }
 
-        /*
-     * creates a stone at a random location
-     */
+        /**
+         * creates a stone at a random location
+         */
         private void CreateRandomStone()
         {
             if (_stones.Count < maxStones)
