@@ -19,7 +19,7 @@ public class Harpoon : MonoBehaviour
     private Rigidbody2D _projectileRigidbody;
     
     private bool _isShot;
-    
+
     [SerializeField] private float projectileSpeed = 200;
 
 
