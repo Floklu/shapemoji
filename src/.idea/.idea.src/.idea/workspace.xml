@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e36e36dd-02f3-4191-b4db-a0acaf5564cf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HarpoonRope.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HarpoonRope.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e36e36dd-02f3-4191-b4db-a0acaf5564cf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +86,7 @@
       <workItem from="1605049381267" duration="90000" />
       <workItem from="1605049525778" duration="596000" />
       <workItem from="1605050971860" duration="6900000" />
-      <workItem from="1605081897545" duration="1981000" />
+      <workItem from="1605081897545" duration="2305000" />
     </task>
     <servers />
   </component>
