@@ -4,7 +4,6 @@ using NUnit.Framework;
 using Spawner;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
 namespace Tests
@@ -29,13 +28,10 @@ namespace Tests
             var stoneFactory = GameObject.Find("StoneSpawner")?.GetComponent<StoneFactory>();
             Assert.NotNull(stoneFactory);
 
-            const int x = 100;
-            const int y = 10;
+            var x = Random.Range(0,100);
+            var y = Random.Range(0,100);
             var stone = stoneFactory.CreateStone(x, y);
-            // skip frames to ensure stone is moved correctly
-            // TODO: add trigger?
-            for(int i=0; i<3; i++){yield return null;}
-
+            
             Assert.NotNull(stone);
             var location = stone.transform.position;
             Assert.AreEqual(x, location.x);

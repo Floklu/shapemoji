@@ -2,7 +2,6 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
-using Random = System.Random;
 
 namespace Spawner
 {
@@ -17,7 +16,6 @@ namespace Spawner
         public List<GameObject> spawnZones;
 
         private List<GameObject> _stones;
-        private Random _randomizer;
         private List<GameObject> _spawnPlaces;
 
         private void Start()
@@ -30,8 +28,8 @@ namespace Spawner
          */
         public void StartGeneration()
         {
+            Random.InitState((int) System.DateTime.Now.Ticks); //TODO should be moved to a different class
             _stones = new List<GameObject>();
-            _randomizer = new Random();
             _spawnPlaces = new List<GameObject>();
 
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
@@ -46,11 +44,13 @@ namespace Spawner
             }
         }
         
-        //TODO: DELTE STONE
+        //TODO: DELETE STONE
         /**
         * PLACEHOLDER FUNCTION: deletes a stone at given position
+         *
+         * @param stone delete reference of given stone to free position
         */
-        private void DeleteStone()
+        private void DeleteStone(GameObject stone)
         {
             
         }
@@ -66,7 +66,8 @@ namespace Spawner
                 var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
                 if (places.Count > 0)
                 {
-                    var place = places[_randomizer.Next(places.Count)];
+                    var random = Random.Range(0, places.Count);
+                    var place = places[random];
                     var spawn = place.GetComponent<SpawnPlace>();
 
                     var spawnPosition = place.transform.position;
@@ -82,11 +83,11 @@ namespace Spawner
         }
     
         /**
-     * determines, if the chosen GameObject already contains a stone
-     *
-     * @param place chosen spawn place for a stone
-     * @returns true, if the gameObject contains a SpawnPlace and it contains a stone
-     */
+         * determines, if the chosen GameObject already contains a stone
+         *
+         * @param place chosen spawn place for a stone
+         * @returns true, if the gameObject contains a SpawnPlace and it contains a stone
+         */
         private static bool ContainsStone(GameObject place)
         {
             var spawn = place.GetComponent<SpawnPlace>();
