@@ -45,7 +45,17 @@ namespace Spawner
                 CreateRandomStone();
             }
         }
-
+        
+        //TODO: DELTE STONE
+        /**
+        * PLACEHOLDER FUNCTION: deletes a stone at given position
+        */
+        private void DeleteStone()
+        {
+            
+        }
+        
+        
         /**
          * creates a stone at a random location
          */

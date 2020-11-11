@@ -33,10 +33,9 @@ namespace Tests
             const int y = 10;
             var stone = stoneFactory.CreateStone(x, y);
             // skip frames to ensure stone is moved correctly
-            yield return null;
-            yield return null;
-            yield return null;
-            
+            // TODO: add trigger?
+            for(int i=0; i<3; i++){yield return null;}
+
             Assert.NotNull(stone);
             var location = stone.transform.position;
             Assert.AreEqual(x, location.x);
