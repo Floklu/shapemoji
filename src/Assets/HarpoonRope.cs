@@ -21,14 +21,12 @@ public class HarpoonRope : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         Vector3 centerPos = (cannon.transform.position + projectile.transform.position) / 2f;
         transform.position = centerPos;
-        Vector3 scale = transform.localScale;
+        Vector3 ropeScale = transform.localScale;
         //scale.x = Vector3.Distance(cannon.transform.position,projectile.transform.position)/ GetComponent<SpriteRenderer>().bounds.size.x;
-        scale.x *= projectile.transform.position.x / _spriteRenderer.bounds.extents.x;
+        ropeScale.x *= projectile.transform.position.x / _spriteRenderer.bounds.extents.x;
 
-        if (scale.x < 0)
-        {
-            scale.x *= -1;
-        }
+        ropeScale.x = Math.Abs(ropeScale.x);
+        
 
     
         //transform.localScale = scale;
