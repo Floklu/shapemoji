@@ -14,6 +14,10 @@ public class Harpoon : MonoBehaviour
 
     private Collider2D _harpoonCollider;
 
+    private GameObject _projectile;
+
+    private bool _isShot;
+
 
     /**
      * Start is called on the frame when a script is enabled just before any of the Update methods are called the first time.
@@ -22,6 +26,7 @@ public class Harpoon : MonoBehaviour
     {
         _harpoonCollider = GetComponent<Collider2D>();
         _mainCamera = Camera.main;
+        _projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
     }
 
     /**
@@ -29,8 +34,11 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        _onDrag = true;
-        _initialPosition = GetMousePosition();
+        if (!_isShot)
+        {
+            _onDrag = true;
+            _initialPosition = GetMousePosition();
+        }
     }
 
     /**
@@ -39,6 +47,8 @@ public class Harpoon : MonoBehaviour
     private void OnMouseUp()
     {
         _onDrag = false;
+        _isShot = true;
+        _projectile.GetComponent<Projectile>().Shoot();
     }
 
     /**
@@ -123,6 +133,7 @@ public class Harpoon : MonoBehaviour
 
     /**
      * GetTouchIndexOnHarpoon loops through all touch points to check if one is on the harpoon.
+     * @return index of the touch that is on the harpoon
      */
     private int GetTouchIndexOnHarpoon()
     {

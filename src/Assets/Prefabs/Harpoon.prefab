@@ -92,6 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5616579081293148350}
   - component: {fileID: 8845351793595426936}
+  - component: {fileID: 880820740804656853}
+  - component: {fileID: 5808457211136051224}
+  - component: {fileID: 5697636029556474973}
   m_Layer: 0
   m_Name: HarpoonProjectile
   m_TagString: Untagged
@@ -163,6 +166,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &880820740804656853
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292088402987268832}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &5808457211136051224
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292088402987268832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3.6399999, y: -0.39999998}
+      - {x: 3.7099998, y: -0.38}
+      - {x: 4.31, y: -0.19999999}
+      - {x: 4.44, y: -0.16}
+      - {x: 4.5099998, y: -0.14}
+      - {x: 4.71, y: -0.08}
+      - {x: 4.8399997, y: -0.04}
+      - {x: 4.89, y: -0.02}
+      - {x: 4.89, y: 0.01}
+      - {x: 4.87, y: 0.03}
+      - {x: 4.81, y: 0.049999997}
+      - {x: 3.21, y: 0.53}
+      - {x: 3.1499999, y: 0.53999996}
+      - {x: 3.1299999, y: 0.52}
+      - {x: 3.1299999, y: 0.19}
+      - {x: -4.9, y: 0.19}
+      - {x: -4.92, y: 0.17}
+      - {x: -4.92, y: -0.17}
+      - {x: -4.9, y: -0.19}
+      - {x: 3.1299999, y: -0.19}
+      - {x: 3.1299999, y: -0.52}
+      - {x: 3.1399999, y: -0.53999996}
+      - {x: 3.1799998, y: -0.53999996}
+      - {x: 3.25, y: -0.53}
+      - {x: 3.31, y: -0.5}
+      - {x: 3.51, y: -0.44}
+--- !u!114 &5697636029556474973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3292088402987268832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a855020a8ccd1e843aec7953e7bf0ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  harpoon: {fileID: 5453997748309490788}
 --- !u!1 &5453997748309490788
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,3 +349,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fadba19ef1e9f643a0bb7b830b694cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpeed: 500
