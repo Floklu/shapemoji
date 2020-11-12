@@ -5,11 +5,19 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    /**
+     * Class, which tests harpoon functionality
+     *
+     * @author Robert Meier
+     * @date   09.11.2020
+     */
     public class HarpoonTest
     {
         
         /**
          * Tests, whether the rotation of a certain degrees results in the expected alignment of the harpoon
+         *
+         * @returns AssertionException, if alignment after rotation differs from expected value
          */
         [UnityTest]
         public IEnumerator HarpoonTestRotation()
@@ -23,7 +31,7 @@ namespace Tests
             rotation = rotationNew;
             harpoon.transform.rotation = rotation;
             Assert.AreEqual(rotation.eulerAngles.z,expectedValue%360,1f);
-            yield return null;
+            return null;
         }
     }
 }
