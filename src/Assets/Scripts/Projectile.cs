@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
         }
         else if (_stop)
         {
-            _projectileRigidBody2D.velocity = gameObject.transform.right * 0;
+            _projectileRigidBody2D.velocity = Vector2.zero;
         }
     }
 

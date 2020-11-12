@@ -26,7 +26,7 @@ public class Harpoon : MonoBehaviour
     {
         _harpoonCollider = GetComponent<Collider2D>();
         _mainCamera = Camera.main;
-        _projectile = gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        _projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
     }
 
     /**
