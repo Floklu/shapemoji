@@ -13,7 +13,7 @@ public class Harpoon : MonoBehaviour
     private Camera _mainCamera;
 
     private Collider2D _harpoonCollider;
-    
+
     private GameObject _projectile;
 
     private bool _isShot;
@@ -39,7 +39,6 @@ public class Harpoon : MonoBehaviour
             _onDrag = true;
             _initialPosition = GetMousePosition();
         }
-       
     }
 
     /**

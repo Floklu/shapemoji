@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/**
+ * Class Projectile contains the functionality for the harpoon projectile.
+ */
 public class Projectile : MonoBehaviour
 {
     private bool _stop;
@@ -15,13 +15,17 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private float projectileSpeed = 500;
 
-    // Start is called before the first frame update
+    /**
+     * Start is called before the first frame update and sets the rigidbody of the projectile.
+     */
     private void Start()
     {
         _projectileRigidBody2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    /**
+     * Update is called once per frame.
+     */
     private void Update()
     {
         if (!_stop && _isShot)
@@ -34,11 +38,17 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    /**
+     * OnTriggerEnter2D is called when the collider enters a trigger
+     */
     private void OnTriggerEnter2D(Collider2D other)
     {
         _stop = true;
     }
 
+    /**
+     * Shoot sets the _isShot boolean true so velocity can be applied to the projectile in the Update method
+     */
     public void Shoot()
     {
         _isShot = true;
