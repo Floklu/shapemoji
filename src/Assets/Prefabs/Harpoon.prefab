@@ -432,4 +432,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fadba19ef1e9f643a0bb7b830b694cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _harpoonRope: {fileID: 3191891762148148138}
   projectileSpeed: 500

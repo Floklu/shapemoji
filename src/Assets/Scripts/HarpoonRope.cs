@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 /**
  * @brief This Class is used to stretch the Rope
