@@ -16,7 +16,7 @@ public class Harpoon : MonoBehaviour
 
     private GameObject _projectile;
 
-    public GameObject _harpoonRope;
+    public GameObject harpoonRope;
 
     private Rigidbody2D _projectileRigidbody;
 
@@ -35,7 +35,7 @@ public class Harpoon : MonoBehaviour
         _projectile = gameObject.transform.GetChild(0).GetChild(0).gameObject;
         _projectileRigidbody = _projectile.GetComponent<Rigidbody2D>();
 
-        _harpoonRope.SetActive(false);
+        harpoonRope.SetActive(false);
     }
 
     /**
@@ -54,6 +54,7 @@ public class Harpoon : MonoBehaviour
     {
         _onDrag = false;
         _isShot = true;
+        harpoonRope.SetActive(true);
     }
 
     /**
@@ -166,16 +167,6 @@ public class Harpoon : MonoBehaviour
      */
     private void ShootProjectile()
     {
-        _harpoonRope.SetActive(true);
         _projectileRigidbody.velocity = _projectile.transform.right * projectileSpeed;
-    }
-
-    /**
-     * StopProjectile halts the harpoon
-     */
-    private void StopProjectile()
-    {
-        _harpoonRope.SetActive(false);
-        _projectileRigidbody.velocity = Vector2.zero;
     }
 }
