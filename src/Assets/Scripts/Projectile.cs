@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
         {
             _projectileRigidBody2D.velocity = gameObject.transform.right * projectileSpeed;
         }
-        else
+        else if (_stop)
         {
             _projectileRigidBody2D.velocity = gameObject.transform.right * 0;
         }
