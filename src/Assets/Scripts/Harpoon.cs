@@ -15,12 +15,8 @@ public class Harpoon : MonoBehaviour
     private Collider2D _harpoonCollider;
     
     private GameObject _projectile;
-    
-    private Rigidbody2D _projectileRigidbody;
-    
+
     private bool _isShot;
-    
-    [SerializeField] private float projectileSpeed = 200;
 
 
     /**
@@ -31,7 +27,6 @@ public class Harpoon : MonoBehaviour
         _harpoonCollider = GetComponent<Collider2D>();
         _mainCamera = Camera.main;
         _projectile = gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        _projectileRigidbody = _projectile.GetComponent<Rigidbody2D>();
     }
 
     /**
@@ -39,8 +34,12 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        _onDrag = true;
-        _initialPosition = GetMousePosition();
+        if (!_isShot)
+        {
+            _onDrag = true;
+            _initialPosition = GetMousePosition();
+        }
+       
     }
 
     /**
@@ -50,6 +49,7 @@ public class Harpoon : MonoBehaviour
     {
         _onDrag = false;
         _isShot = true;
+        _projectile.GetComponent<Projectile>().Shoot();
     }
 
     /**
@@ -65,11 +65,6 @@ public class Harpoon : MonoBehaviour
         if (Input.touchCount > 0 && GetTouchIndexOnHarpoon() != -1)
         {
             RotateHarpoonWithTouch(GetTouchIndexOnHarpoon());
-        }
-        
-        if (_isShot)
-        {
-            ShootProjectile();
         }
     }
 
@@ -155,13 +150,5 @@ public class Harpoon : MonoBehaviour
         }
 
         return touchIndex;
-    }
-
-    /**
-     * ShootProjectile moves the harpoon in the direction the harpoon is facing
-     */
-    private void ShootProjectile()
-    {
-        _projectileRigidbody.velocity = _projectile.transform.right * projectileSpeed;
     }
 }
