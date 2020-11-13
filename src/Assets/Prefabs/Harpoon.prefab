@@ -347,7 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a855020a8ccd1e843aec7953e7bf0ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  harpoon: {fileID: 5453997748309490788}
+  harpoonRope: {fileID: 3191891762148148138}
+  projectileSpeed: 500
 --- !u!1 &5453997748309490788
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,5 +447,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fadba19ef1e9f643a0bb7b830b694cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  harpoonRope: {fileID: 3191891762148148138}
-  projectileSpeed: 500

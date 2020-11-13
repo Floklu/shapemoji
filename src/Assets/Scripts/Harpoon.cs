@@ -16,8 +16,7 @@ public class Harpoon : MonoBehaviour
 
     private GameObject _projectile;
 
-    public GameObject harpoonRope;
-    
+
     private bool _isShot;
 
 
@@ -29,8 +28,6 @@ public class Harpoon : MonoBehaviour
         _harpoonCollider = GetComponent<Collider2D>();
         _mainCamera = Camera.main;
         _projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
-
-        harpoonRope.SetActive(false);
     }
 
     /**
@@ -53,7 +50,6 @@ public class Harpoon : MonoBehaviour
         _onDrag = false;
         _isShot = true;
         _projectile.GetComponent<Projectile>().Shoot();
-        harpoonRope.SetActive(true);
     }
 
     /**

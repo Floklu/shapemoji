@@ -24,6 +24,8 @@ public class Projectile : MonoBehaviour
 
     private Color _color;
 
+    public GameObject harpoonRope;
+
     [SerializeField] private float projectileSpeed = 500;
 
     /**
@@ -37,7 +39,8 @@ public class Projectile : MonoBehaviour
         _color = _cannon.GetComponent<Renderer>().material.color;
         _projectileRigidBody2D = gameObject.GetComponent<Rigidbody2D>();
         _hasGameObjHooked = false; //on start no object is hooked
- 
+
+        harpoonRope.SetActive(false);
     }
 
     /**
@@ -67,13 +70,14 @@ public class Projectile : MonoBehaviour
     {
         //TODO: remove comment when rewinding is implemented
         //uncomment to test attaching until rewinding is implemented
-        _stop = true;
+        set_stop(true);
         if (other != null) // and if hookable
         {
             if (other.tag.Equals("Stone")) //hook stone and clear spot in spawner
             {
                 AttachObject(other.gameObject);
             }
+
             //TODO: attach items via else if when items created
         }
     }
@@ -82,11 +86,11 @@ public class Projectile : MonoBehaviour
      * Shoot sets the _isShot boolean true so velocity can be applied to the projectile in the Update method
      */
     public void Shoot()
-    
     {
         _isShot = true;
-    } 
- 
+        harpoonRope.SetActive(true);
+    }
+
     /**
      *  sets parent to be classes gameObject
      *
@@ -99,7 +103,7 @@ public class Projectile : MonoBehaviour
         _hasGameObjHooked = true;
         _cannon.GetComponent<Renderer>().material.color = Color.green;
     }
-    
+
     /**
      * removes parent of _gameObjectHooked and therefore unattaches it 
      *
@@ -111,7 +115,6 @@ public class Projectile : MonoBehaviour
         _gameObjectHooked.transform.parent = null;
         _hasGameObjHooked = false;
         _stoneSpawner.DeleteStone(_gameObjectHooked);
-
     }
 
     /**
