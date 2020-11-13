@@ -18,7 +18,11 @@ public class Projectile : MonoBehaviour
 
     private GameObject _harpoon;
 
+    private GameObject _cannon;
+
     private Rigidbody2D _projectileRigidBody2D;
+
+    private Color _color;
 
     [SerializeField] private float projectileSpeed = 500;
 
@@ -27,9 +31,13 @@ public class Projectile : MonoBehaviour
      */
     private void Start()
     {
-        _stoneSpawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>(); 
+        _stoneSpawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
+        //get parent and its color
+        _cannon = gameObject.transform.parent.gameObject;
+        _color = _cannon.GetComponent<Renderer>().material.color;
         _projectileRigidBody2D = gameObject.GetComponent<Rigidbody2D>();
         _hasGameObjHooked = false; //on start no object is hooked
+ 
     }
 
     /**
@@ -65,7 +73,6 @@ public class Projectile : MonoBehaviour
             if (other.tag.Equals("Stone")) //hook stone and clear spot in spawner
             {
                 AttachObject(other.gameObject);
-                _stoneSpawner.DeleteStone(other.gameObject);
             }
             //TODO: attach items via else if when items created
         }
@@ -90,6 +97,7 @@ public class Projectile : MonoBehaviour
         _gameObjectHooked = child;
         _gameObjectHooked.transform.parent = gameObject.transform;
         _hasGameObjHooked = true;
+        _cannon.GetComponent<Renderer>().material.color = Color.green;
     }
     
     /**
@@ -99,9 +107,11 @@ public class Projectile : MonoBehaviour
     public void UnattachObject()
     {
         if (!_hasGameObjHooked) return;
-        
+        _cannon.GetComponent<Renderer>().material.color = _color;
         _gameObjectHooked.transform.parent = null;
         _hasGameObjHooked = false;
+        _stoneSpawner.DeleteStone(_gameObjectHooked);
+
     }
 
     /**

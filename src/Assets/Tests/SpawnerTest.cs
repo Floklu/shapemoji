@@ -61,5 +61,34 @@ namespace Tests
             
             yield return null;
         }
+
+        /**
+         * Tests, if stones can be properly deleted from the spawner
+         *
+         * @returns true, if spawner is full at first, but after deletion of a stone isn't full anymore.
+         */
+        [UnityTest]
+        public IEnumerator SpawnerTestDeleteStone()
+        {
+            var spawnPlaces = Object.FindObjectsOfType<GameObject>().Where(x => x.name.Equals("SpawnPlace"));
+            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
+            Assert.NotNull(spawner);
+            Assert.IsFalse(spawner.IsFull());
+            spawner.StartGeneration();
+            Assert.IsTrue(spawner.IsFull());
+
+            //get first stone
+            var stone = spawnPlaces
+                .Select(place => place.GetComponent<SpawnPlace>())
+                .First(x => x.stone != null).stone;
+
+            spawner.DeleteStone(stone);
+            Assert.IsFalse(spawner.IsFull());
+            
+            spawner.CreateRandomStone();
+            Assert.IsTrue(spawner.IsFull());
+            
+            yield return null;
+        }
     }
 }
