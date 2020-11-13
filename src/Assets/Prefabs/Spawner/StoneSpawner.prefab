@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeaf805a1dc77141ab9ae46509f5574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxStones: 20
+  maxStones: 20
   factory: {fileID: 3551211746315797966}
   spawnZones:
   - {fileID: 0}

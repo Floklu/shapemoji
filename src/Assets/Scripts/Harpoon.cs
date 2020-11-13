@@ -43,8 +43,11 @@ public class Harpoon : MonoBehaviour
      */
     private void OnMouseDown()
     {
-        _onDrag = true;
-        _initialPosition = GetMousePosition();
+        if (!_isShot)
+        {
+            _onDrag = true;
+            _initialPosition = GetMousePosition();
+        }
     }
 
     /**
@@ -54,6 +57,7 @@ public class Harpoon : MonoBehaviour
     {
         _onDrag = false;
         _isShot = true;
+        _projectile.GetComponent<Projectile>().Shoot();
         harpoonRope.SetActive(true);
     }
 
@@ -70,11 +74,6 @@ public class Harpoon : MonoBehaviour
         if (Input.touchCount > 0 && GetTouchIndexOnHarpoon() != -1)
         {
             RotateHarpoonWithTouch(GetTouchIndexOnHarpoon());
-        }
-
-        if (_isShot)
-        {
-            ShootProjectile();
         }
     }
 
@@ -160,13 +159,5 @@ public class Harpoon : MonoBehaviour
         }
 
         return touchIndex;
-    }
-
-    /**
-     * ShootProjectile moves the harpoon in the direction the harpoon is facing
-     */
-    private void ShootProjectile()
-    {
-        _projectileRigidbody.velocity = _projectile.transform.right * projectileSpeed;
     }
 }

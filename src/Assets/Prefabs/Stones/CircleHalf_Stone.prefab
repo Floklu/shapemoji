@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7219427178969211044}
   - component: {fileID: 7219427178969211043}
-  - component: {fileID: -1072299850541942129}
+  - component: {fileID: 2799842374994750655}
   m_Layer: 0
   m_Name: CircleHalf_Stone
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-1072299850541942129
-BoxCollider2D:
+--- !u!60 &2799842374994750655
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,6 +105,34 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.14, y: 2.17}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.05, y: -0.815}
+      - {x: 1.1999999, y: -0.715}
+      - {x: 1.35, y: -0.585}
+      - {x: 1.53, y: -0.405}
+      - {x: 1.66, y: -0.255}
+      - {x: 1.78, y: -0.074999996}
+      - {x: 1.8299999, y: 0.015}
+      - {x: 1.9399999, y: 0.255}
+      - {x: 1.9699999, y: 0.345}
+      - {x: 2.06, y: 0.635}
+      - {x: 2.07, y: 0.73499995}
+      - {x: 2.07, y: 1.0849999}
+      - {x: -2.07, y: 1.0849999}
+      - {x: -2.07, y: 0.765}
+      - {x: -2.04, y: 0.545}
+      - {x: -1.9699999, y: 0.345}
+      - {x: -1.89, y: 0.145}
+      - {x: -1.78, y: -0.074999996}
+      - {x: -1.66, y: -0.255}
+      - {x: -1.53, y: -0.415}
+      - {x: -1.29, y: -0.655}
+      - {x: -1.14, y: -0.765}
+      - {x: -1, y: -0.85499996}
+      - {x: -0.75, y: -0.97499996}
+      - {x: -0.45999998, y: -1.0649999}
+      - {x: -0.29, y: -1.0849999}
+      - {x: 0.29999998, y: -1.0849999}
+      - {x: 0.53999996, y: -1.045}
+      - {x: 0.75, y: -0.965}
