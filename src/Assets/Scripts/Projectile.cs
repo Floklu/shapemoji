@@ -62,9 +62,9 @@ public class Projectile : MonoBehaviour
         _stop = true;
         if (other != null) // and if hookable
         {
-            if (other.tag == "Stone") //hook stone and clear spot in spawner
+            if (other.tag.Equals("Stone")) //hook stone and clear spot in spawner
             {
-                attachObject(other.gameObject);
+                AttachObject(other.gameObject);
                 _stoneSpawner.DeleteStone(other.gameObject);
             }
             //TODO: attach items via else if when items created
@@ -84,7 +84,7 @@ public class Projectile : MonoBehaviour
      *
      * @ param child object set to be child of gameObject 
     */
-    private void attachObject(GameObject child)
+    private void AttachObject(GameObject child)
     {
         _gameObjectHooked = child;
         _gameObjectHooked.transform.parent = gameObject.transform;
@@ -95,7 +95,7 @@ public class Projectile : MonoBehaviour
      * removes parent of _gameObjectHooked and therefore unattaches it 
      *
      */
-    private void unattachObject()
+    private void UnattachObject()
     {
         if (_hasGameObjHooked) 
         { 
