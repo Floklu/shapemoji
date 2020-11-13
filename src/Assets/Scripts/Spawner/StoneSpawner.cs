@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 namespace Spawner
 {
     /**
-    * Class, which manages the avaiable stones on the playground
+    * Class, which manages the available stones on the playground
     */
     public class StoneSpawner : MonoBehaviour
     {
@@ -14,13 +14,18 @@ namespace Spawner
 
         public StoneFactory factory;
         public List<GameObject> spawnZones;
+        
+        private readonly List<GameObject> _spawnPlaces;
 
-        private List<GameObject> _stones;
-        private List<GameObject> _spawnPlaces;
+        public StoneSpawner()
+        {
+            _spawnPlaces = new List<GameObject>();
+        }
 
         private void Start()
         {
             StartGeneration();
+            InvokeRepeating(nameof(CreateRandomStone), 1f, 1f);
         }
 
         /**
@@ -29,39 +34,50 @@ namespace Spawner
         public void StartGeneration()
         {
             Random.InitState((int) System.DateTime.Now.Ticks); //TODO should be moved to a different class
-            _stones = new List<GameObject>();
-            _spawnPlaces = new List<GameObject>();
-
+            
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
             {
                 _spawnPlaces.Add(child.gameObject);
             }
-
-            InvokeRepeating(nameof(CreateRandomStone), 1f, 1f);
+            
             for (var i = 0; i < maxStones; i++)
             {
                 CreateRandomStone();
             }
         }
         
-        //TODO: DELETE STONE
         /**
-        * PLACEHOLDER FUNCTION: deletes a stone at given position
+        * deletes a stone at given position
          *
          * @param stone delete reference of given stone to free position
         */
-        private void DeleteStone(GameObject stone)
+        public void DeleteStone(GameObject stone)
         {
-            
+            var places = _spawnPlaces
+                .Where(ContainsStone)
+                .Select(x => x.GetComponent<SpawnPlace>())
+                .Where(x => x.stone.Equals(stone)).ToList();
+            places.ForEach(x => x.stone = null);
+        }
+
+        /**
+         * checks, if Spawner is at maximum capacity
+         *
+         * @returns true, if spawner cannot spawn any new stones
+         */
+        public bool IsFull()
+        {
+            var places = _spawnPlaces.Where(ContainsStone).Select(x => 1).Sum();
+            return places == maxStones;
         }
         
         
         /**
          * creates a stone at a random location
          */
-        private void CreateRandomStone()
+        public void CreateRandomStone()
         {
-            if (_stones.Count < maxStones)
+            if (!IsFull())
             {
                 var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
                 if (places.Count > 0)
@@ -75,7 +91,6 @@ namespace Spawner
                     var y = spawnPosition.y;
             
                     var stone = factory.CreateStone(x, y);
-                    _stones.Add(stone);
                     spawn.stone = stone;    
                 }
             
