@@ -1,0 +1,23 @@
+digraph "TMPro.TMP_Text.ParseInputText"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TMPro.TMP_Text.ParseInputText",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Method to parse the input text based on its source"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_Text.CharArray\lToInternalParsingBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a6d53cd25d63debfdf935d1a8c6f80fd8",tooltip="Copies Content of formatted SetText() to charBuffer."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.ITextPreprocessor.\lPreprocessText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_t_m_pro_1_1_i_text_preprocessor.html#a211b26c6e7a5eec73c08ab268289c38a",tooltip="Function used for preprocessing of text"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Text.SetArraySizes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aae071dbc72453798f55d616867d137c4",tooltip="Method used to determine the number of visible characters and required buffer allocations."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_Text.StringToInternal\lParsingBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a0e45cd8e4f33d123b9068ba75cff441f",tooltip="Method to store the content of a string into an integer array."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_Text.GetUTF16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#ac300ce0327de1c0807c6617496b367cb",tooltip="Convert UTF-16 Hex to Char"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_Text.HexToInt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a2c888ce3a21999d51131753730cac678",tooltip="Function to pack scale information in the UV2 Channel."];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMP_Text.GetUTF32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#add381cfff574155b2b44eddc9fedd883",tooltip="Convert UTF-32 Hex to Char"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

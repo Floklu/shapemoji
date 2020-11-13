@@ -1,0 +1,42 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node573 [label="ClipAction",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node573 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="UnityEditor.Timeline.Complete\lLastLoop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_complete_last_loop.html",tooltip=" "];
+  Node573 -> Node575 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node575 [label="UnityEditor.Timeline.Copy\lClipsToClipboard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_copy_clips_to_clipboard.html",tooltip=" "];
+  Node573 -> Node576 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node576 [label="UnityEditor.Timeline.Double\lSpeed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_double_speed.html",tooltip=" "];
+  Node573 -> Node577 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node577 [label="UnityEditor.Timeline.Edit\lClipInAnimationWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_clip_in_animation_window.html",tooltip=" "];
+  Node573 -> Node578 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node578 [label="UnityEditor.Timeline.Edit\lSubTimeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_sub_timeline.html",tooltip=" "];
+  Node573 -> Node579 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node579 [label="UnityEditor.Timeline.Find\lSourceAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_find_source_asset.html",tooltip=" "];
+  Node573 -> Node580 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node580 [label="UnityEditor.Timeline.Half\lSpeed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_half_speed.html",tooltip=" "];
+  Node573 -> Node581 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node581 [label="UnityEditor.Timeline.Match\lDuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_match_duration.html",tooltip=" "];
+  Node573 -> Node582 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node582 [label="UnityEditor.Timeline.Match\lOffsetsNextAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_match_offsets_next_action.html",tooltip=" "];
+  Node573 -> Node583 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node583 [label="UnityEditor.Timeline.Match\lOffsetsPreviousAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_match_offsets_previous_action.html",tooltip=" "];
+  Node573 -> Node584 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node584 [label="UnityEditor.Timeline.ResetAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_reset_all.html",tooltip=" "];
+  Node573 -> Node585 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node585 [label="UnityEditor.Timeline.Reset\lDuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_reset_duration.html",tooltip=" "];
+  Node573 -> Node586 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node586 [label="UnityEditor.Timeline.Reset\lOffsets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_reset_offsets.html",tooltip=" "];
+  Node573 -> Node587 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node587 [label="UnityEditor.Timeline.Reset\lSpeed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_reset_speed.html",tooltip=" "];
+  Node573 -> Node588 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node588 [label="UnityEditor.Timeline.Split",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_split.html",tooltip=" "];
+  Node573 -> Node589 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node589 [label="UnityEditor.Timeline.Tile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_tile.html",tooltip=" "];
+  Node573 -> Node590 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node590 [label="UnityEditor.Timeline.Trim\lLastLoop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_trim_last_loop.html",tooltip=" "];
+}

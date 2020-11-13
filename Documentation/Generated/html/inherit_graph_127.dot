@@ -1,0 +1,21 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node531 [label="EditorWindow",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node531 -> Node532 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node532 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html",tooltip=" "];
+  Node531 -> Node533 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node533 [label="TMPro.TMP_ProjectConversion\lUtility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___project_conversion_utility.html",tooltip=" "];
+  Node531 -> Node534 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node534 [label="TMPro.TMP_SpriteAssetImporter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html",tooltip=" "];
+  Node531 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="UnityEditor.TestTools.Test\lRunner.TestRunnerWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_test_runner_window.html",tooltip="The TestRunnerWindow class is repsonsible for drawing the Test Runner window."];
+  Node531 -> Node413 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node413 [label="UnityEditor.Timeline.Timeline\lWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window.html",tooltip=" "];
+  Node411 [label="IHasCustomMenu",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node411 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node411 -> Node413 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

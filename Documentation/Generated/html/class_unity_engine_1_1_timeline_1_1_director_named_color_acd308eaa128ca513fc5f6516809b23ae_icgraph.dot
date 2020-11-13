@@ -1,0 +1,10 @@
+digraph "UnityEngine.Timeline.DirectorNamedColor.FromText"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="UnityEngine.Timeline.Director\lNamedColor.FromText",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Director\lNamedColor.CreateAndLoadFromText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701",tooltip=" "];
+}

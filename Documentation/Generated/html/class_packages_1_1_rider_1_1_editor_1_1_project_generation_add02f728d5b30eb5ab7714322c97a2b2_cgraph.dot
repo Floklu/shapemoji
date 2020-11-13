@@ -1,0 +1,10 @@
+digraph "Packages.Rider.Editor.ProjectGeneration.HasSolutionBeenGenerated"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Packages.Rider.Editor.Project\lGeneration.HasSolutionBeenGenerated",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Packages.Rider.Editor.Project\lGeneration.SolutionFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#abf9e79381de332f27c30b34fa6cfade3",tooltip=" "];
+}

@@ -1,0 +1,14 @@
+digraph "TMPro.TMP_Text.InsertNewLine"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TMPro.TMP_Text.InsertNewLine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Function used in conjunction with GetTextInfo to figure out Array allocations."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_Text.AdjustLine\lOffset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a423bcbf346f99fef8d457316729c95da",tooltip="Method to adjust line spacing as a result of using different fonts or font point size."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_Text.ResizeLine\lExtents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#ab4057d4bf48b3f95e69bd3146a9fc50e",tooltip="Function to increase the size of the Line Extents Array."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Text.SaveWordWrapping\lState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#af4575fb91d41221be3bd2764a356eda1",tooltip="Save the State of various variables used in the mesh creation loop in conjunction with Word Wrapping"];
+}

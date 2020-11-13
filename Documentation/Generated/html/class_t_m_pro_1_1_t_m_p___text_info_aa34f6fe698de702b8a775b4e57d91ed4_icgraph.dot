@@ -1,0 +1,10 @@
+digraph "TMPro.TMP_TextInfo.ClearMeshInfo"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TMPro.TMP_TextInfo.Clear\lMeshInfo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Function to clear the content of the MeshInfo array while preserving the Triangles,..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TextMeshPro.ClearMesh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro.html#ae306e084f9bdd5f374e9168d00fa0d17",tooltip="Function to clear the geometry of the Primary and Sub Text objects."];
+}

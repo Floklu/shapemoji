@@ -1,0 +1,12 @@
+digraph "UnityEngine.Timeline.DiscreteTime.DiscreteTime"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UnityEngine.Timeline.Discrete\lTime.DiscreteTime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Discrete\lTime.IntToDiscreteTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a7c5775a0b21728875b105b2d75555f8a",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Discrete\lTime.DoubleToDiscreteTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_discrete_time.html#aadb8be5b96263dacc7db7fbb50c9e485",tooltip=" "];
+}

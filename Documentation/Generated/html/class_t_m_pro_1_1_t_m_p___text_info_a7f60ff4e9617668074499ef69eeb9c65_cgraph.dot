@@ -1,0 +1,10 @@
+digraph "TMPro.TMP_TextInfo.ClearUnusedVertices"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TMPro.TMP_TextInfo.Clear\lUnusedVertices",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Function used to mark unused vertices as degenerate."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_MeshInfo.Clear\lUnusedVertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7abd732cdaf4d54113166700701defd4",tooltip="Function to clear the vertices while preserving the Triangles, Normals and Tangents."];
+}

@@ -1,0 +1,22 @@
+digraph "TMPro.TMP_Dropdown.DestroyBlocker"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TMPro.TMP_Dropdown.Destroy\lBlocker",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Convenience method to explicitly destroy the previously generated blocker object"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_Dropdown.Hide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a7b1a625bbfae2222ce459deb2df40afd",tooltip="Hide the dropdown list. I.e. close it."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_Dropdown.Create\lBlocker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#aaaca2aca289284551cb768b4de31123d",tooltip="Create a blocker that blocks clicks to other controls while the dropdown list is open."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Dropdown.Show",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#ae309311315603a4869384e1591842a73",tooltip="Show the dropdown."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_Dropdown.OnPointer\lClick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a4694d50db9f52ecc96cb8dc27ea9f8e3",tooltip="Handling for when the dropdown is initially 'clicked'. Typically shows the dropdown"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_Dropdown.OnSubmit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a258ceecac06f7f153c9a3569a817d74f",tooltip="Handling for when the dropdown is selected and a submit event is processed. Typically shows the dropd..."];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_Dropdown.OnCancel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#aa645c81e1d5c8ddaef20c6fcb1d77345",tooltip="This will hide the dropdown list."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMP_Dropdown.OnDisable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#aea5132cb3aedcc5874ea40a4a493c7e5",tooltip=" "];
+}

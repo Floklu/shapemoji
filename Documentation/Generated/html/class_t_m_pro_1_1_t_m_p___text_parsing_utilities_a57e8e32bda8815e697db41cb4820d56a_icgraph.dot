@@ -1,0 +1,14 @@
+digraph "TMPro.TMP_TextParsingUtilities.ToUpperASCIIFast"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TMPro.TMP_TextParsingUtilities.\lToUpperASCIIFast",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get uppercase version of this ASCII character."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TMPro.TMP_TextParsingUtilities.\lGetHashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a77bb7b39afef3f677e915499b48e2c7a",tooltip="Function returning the hashcode value of a given string."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_StyleSheet.Get\lStyle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___style_sheet.html#a0766b88921d3c2fe462608796af79b1f",tooltip="Get the Style for the given name."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Style.RefreshStyle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___style.html#a45cd2cf30f163d32c1bfa91914852154",tooltip="Function to update the content of the int[] resulting from changes to OpeningDefinition & ClosingDefi..."];
+}

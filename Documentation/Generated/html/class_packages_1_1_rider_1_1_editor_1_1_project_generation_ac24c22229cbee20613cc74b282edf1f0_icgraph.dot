@@ -1,0 +1,12 @@
+digraph "Packages.Rider.Editor.ProjectGeneration.GetAssetPostprocessorTypes"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Packages.Rider.Editor.Project\lGeneration.GetAssetPostprocessorTypes",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Packages.Rider.Editor.Project\lGeneration.Sync",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a7df4c31a74fb47f70fb901fc0e93b8a2",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Packages.Rider.Editor.Project\lGeneration.SyncIfNeeded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ab9afac3af177b6017d48ea0dc68636ef",tooltip="Syncs the scripting solution if any affected files are relevant."];
+}
