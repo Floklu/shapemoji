@@ -1,5 +1,6 @@
 using UnityEngine;
 using Spawner;
+using UnityEditor;
 
 /**
  * Class Projectile contains the functionality for the harpoon projectile.
@@ -75,6 +76,7 @@ public class Projectile : MonoBehaviour
      * Shoot sets the _isShot boolean true so velocity can be applied to the projectile in the Update method
      */
     public void Shoot()
+    
     {
         _isShot = true;
     } 
@@ -84,7 +86,7 @@ public class Projectile : MonoBehaviour
      *
      * @ param child object set to be child of gameObject 
     */
-    private void AttachObject(GameObject child)
+    public void AttachObject(GameObject child)
     {
         _gameObjectHooked = child;
         _gameObjectHooked.transform.parent = gameObject.transform;
@@ -95,12 +97,21 @@ public class Projectile : MonoBehaviour
      * removes parent of _gameObjectHooked and therefore unattaches it 
      *
      */
-    private void UnattachObject()
+    public void UnattachObject()
     {
-        if (_hasGameObjHooked) 
-        { 
-            _gameObjectHooked.transform.parent = null;
-            _hasGameObjHooked = false;
-        }
+        if (!_hasGameObjHooked) return;
+        
+        _gameObjectHooked.transform.parent = null;
+        _hasGameObjHooked = false;
+    }
+
+    /**
+     * sets boolean _stop
+     *
+     * @param status value _stop is set to
+     */
+    public void set_stop(bool status)
+    {
+        _stop = status;
     }
 }
