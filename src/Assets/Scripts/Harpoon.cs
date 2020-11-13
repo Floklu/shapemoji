@@ -17,12 +17,8 @@ public class Harpoon : MonoBehaviour
     private GameObject _projectile;
 
     public GameObject harpoonRope;
-
-    private Rigidbody2D _projectileRigidbody;
-
+    
     private bool _isShot;
-
-    [SerializeField] private float projectileSpeed = 200;
 
 
     /**
@@ -32,8 +28,7 @@ public class Harpoon : MonoBehaviour
     {
         _harpoonCollider = GetComponent<Collider2D>();
         _mainCamera = Camera.main;
-        _projectile = gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        _projectileRigidbody = _projectile.GetComponent<Rigidbody2D>();
+        _projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
 
         harpoonRope.SetActive(false);
     }
