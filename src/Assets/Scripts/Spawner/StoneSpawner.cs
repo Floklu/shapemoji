@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -50,7 +50,7 @@ namespace Spawner
          *
          * @param stone delete reference of given stone to free position
         */
-        private void DeleteStone(GameObject stone)
+        public void DeleteStone(GameObject stone)
         {
             
         }
