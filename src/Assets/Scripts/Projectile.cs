@@ -1,6 +1,5 @@
 using UnityEngine;
 using Spawner;
-using UnityEditor;
 
 /**
  * Class Projectile contains the functionality for the harpoon projectile.
