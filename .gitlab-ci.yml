@@ -1,5 +1,5 @@
 # by Marc Marschall based on https://gitlab.com/gableroux/unity3d-gitlab-ci-example
-stages:i
+stages:
   - pre_requesits
   - build_and_test
   - deploy
