@@ -38,7 +38,8 @@ image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 
 install-libcap2-doxygen:
   stage: pre_requesits
-  script: apt-get update && apt-get install -y doxygen libcap2
+  script: 
+    - apt-get update && apt-get install -y doxygen libcap2
 
 get-activation-file:
   rules:
