@@ -104,10 +104,11 @@ build-StandaloneWindows64:
   image: $IMAGE:$UNITY_VERSION-windows-mono-$IMAGE_VERSION
   variables:
     BUILD_TARGET: StandaloneWindows64
+
 build_docu:   
   stage: build   
   script:    
-     - doxygen Documentation/Doxyfile   
+    - doxygen Documentation/Doxyfile   
   artifacts:     
     paths:
       - Documentation/Generated/html/    
