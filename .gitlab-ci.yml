@@ -1,5 +1,6 @@
 # by Marc Marschall based on https://gitlab.com/gableroux/unity3d-gitlab-ci-example
-stages:
+stages:i
+  - pre_requesits
   - build_and_test
   - deploy
 
@@ -32,6 +33,13 @@ image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 
 # run this job when you need to request a license
 # you may need to follow activation steps from documentation
+
+# added libcap2 as it seems to be needed for our version of unity
+
+install-libcap2-doxygen:
+  stage: pre_requesits
+  script: apt-get update && apt-get install -y doxygen libcap2
+
 get-activation-file:
   rules:
     - if: '$UNITY_LICENSE == null'
