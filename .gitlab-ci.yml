@@ -1,6 +1,4 @@
 # by Marc Marschall based on https://gitlab.com/gableroux/unity3d-gitlab-ci-example
-
-
 stages:
   - build_and_test
   - deploy
@@ -92,8 +90,6 @@ build-StandaloneLinux64:
   <<: *build
   variables:
     BUILD_TARGET: StandaloneLinux64
-
-     BUILD_TARGET: StandaloneOSXUniversal
 
 build-StandaloneWindows64:
   <<: *build
