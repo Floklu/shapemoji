@@ -76,28 +76,28 @@ test-editmode:
   variables:
     TEST_PLATFORM: editmode
 
-.build: &build
-  stage: build_and_test
-  <<: *unity_before_script
-  <<: *cache
-  <<: *license
-  script:
-    - chmod +x ./ci/build.sh && ./ci/build.sh
-  artifacts:
-    paths:
-      - ./Builds/
+#.build: &build
+#  stage: build_and_test
+#  <<: *unity_before_script
+#  <<: *cache
+#  <<: *license
+#  script:
+#    - chmod +x ./ci/build.sh && ./ci/build.sh
+#  artifacts:
+#    paths:
+#      - ./Builds/
 
 
-build-StandaloneLinux64:
-  <<: *build
-  variables:
-    BUILD_TARGET: StandaloneLinux64
+#build-StandaloneLinux64:
+#  <<: *build
+#  variables:
+#    BUILD_TARGET: StandaloneLinux64
 
-build-StandaloneWindows64:
-  <<: *build
-  image: $IMAGE:$UNITY_VERSION-windows-mono-$IMAGE_VERSION
-  variables:
-    BUILD_TARGET: StandaloneWindows64
+#build-StandaloneWindows64:
+#  <<: *build
+#  image: $IMAGE:$UNITY_VERSION-windows-mono-$IMAGE_VERSION
+#  variables:
+#    BUILD_TARGET: StandaloneWindows64
 
 build_docu:   
   stage: build_and_test
