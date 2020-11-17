@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using NUnit.Framework;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
@@ -15,14 +14,18 @@ namespace Tests.PlayMode
      */
     public class ProjectileTest
     {
+        /**
+         * LoadScene loads the Scene ones for every Test in ProjectileTest.
+         */
         [OneTimeSetUp]
         public void LoadScene()
         {
             SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
+        /**
+         * ShootProjectileTest tests if the Projectile moves after being shot.
+         */
         [UnityTest]
         public IEnumerator ShootProjectileTest()
         {
