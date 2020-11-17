@@ -9,7 +9,8 @@ stages:
 variables:
   BUILD_NAME: ShapeMoji
   UNITY_ACTIVATION_FILE: ./unity3d.alf
-  UNITY_VERSION: "2019.4.13f1"
+    #UNITY_VERSION: "2019.4.13f1"
+  UNITY_VERSIOM: "2020.1.13f1"
   IMAGE: unityci/editor # https://hub.docker.com/r/unityci/editor
   IMAGE_VERSION: "0.6" # https://github.com/Unity-CI/docker/releases
 
