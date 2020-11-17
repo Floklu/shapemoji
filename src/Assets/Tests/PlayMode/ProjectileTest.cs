@@ -15,7 +15,6 @@ namespace Tests.PlayMode
      */
     public class ProjectileTest
     {
-
         [OneTimeSetUp]
         public void LoadScene()
         {
@@ -30,9 +29,9 @@ namespace Tests.PlayMode
             var projectile = GameObject.Find("HarpoonProjectile");
             var location = projectile.transform.position;
             projectile.GetComponent<Projectile>().Shoot();
-         
+
             yield return new WaitForSeconds(1);
-            
+
             Assert.AreNotEqual(projectile.transform.position, location);
         }
     }
