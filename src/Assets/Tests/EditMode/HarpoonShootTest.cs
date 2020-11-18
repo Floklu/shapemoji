@@ -4,8 +4,17 @@ using UnityEngine;
 
 namespace Tests.EditMode
 {
+    /**
+     * Tests in Edit Mode for User Story Shoot Harpoon
+     * 
+     * @author Andrei Dziubenka
+     * @date 18.11.2020
+     */
     public class HarpoonShootTest
     {
+        /**
+         * Loads game scene
+         */
         [SetUp]
         public void SetUp()
         {
@@ -13,16 +22,33 @@ namespace Tests.EditMode
         }
 
         /**
-         * Tests, if Harpoon Objects for Team1/Player_1 exist
+         * Tests, if Harpoon Objects exist
          */
         [Test]
-        public void HarpoonShootTestObjectsExistencePasses()
+        public void HarpoonTestObjectsExistence()
         {
-            var harpoon = GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon");
-            var cannon = GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon");
+            for (int i = 0; i < 4; i++)
+            {
+                checkHarpoonExistence(i / 2 + 1, i + 1);
+            }
+        }
+
+        /**
+         * tests, if harpoon for specified team/player exists
+         * @param team Team Number
+         * @param player Player Number
+         */
+        private void checkHarpoonExistence(int team, int player)
+        {
+            Debug.Log("Team_" + team + "/Player_" + player + "/Base/HarpoonBase/Harpoon");
+            var harpoon = GameObject.Find("Team_" + team + "/Player_" + player + "/Base/HarpoonBase/Harpoon");
+            var cannon =
+                GameObject.Find("Team_" + team + "/Player_" + player + "/Base/HarpoonBase/Harpoon/HarpoonCannon");
             var projectile =
-                GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
-            var rope = GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonRope");
+                GameObject.Find("Team_" + team + "/Player_" + player +
+                                "/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
+            var rope = GameObject.Find("Team_" + team + "/Player_" + player +
+                                       "/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonRope");
 
             Assert.NotNull(harpoon);
             Assert.NotNull(cannon);
