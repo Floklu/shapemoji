@@ -43,4 +43,5 @@ public class HarpoonRope : MonoBehaviour
         transform.localScale = ropeScale;
         _ropeTransform.position = ropeCenter;
     }
+
 }
