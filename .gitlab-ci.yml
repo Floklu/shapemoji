@@ -110,14 +110,14 @@ build_docu:
     expire_in: 1 day
 
 
-pages:
-  image: alpine:latest
-  stage: deploy
-  script:
-    - mv "./Builds/WebGL/${BUILD_NAME}" public
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
+#pages:
+#  image: alpine:latest
+#  stage: deploy
+#  script:
+#    - mv "./Builds/WebGL/${BUILD_NAME}" public
+#  artifacts:
+#    paths:
+#      - public
+# only:
+#    - master
 
