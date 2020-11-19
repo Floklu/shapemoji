@@ -66,10 +66,10 @@ get-activation-file:
       - $(pwd)/$TEST_PLATFORM-coverage/
   coverage: /<Linecoverage>(.*?)</Linecoverage>/
 
-    #test-playmode:
-    #  <<: *test
-    #  variables:
-    #    TEST_PLATFORM: playmode
+test-playmode:
+  <<: *test
+  variables:
+    TEST_PLATFORM: playmode
 
 test-editmode:
   <<: *test
