@@ -109,6 +109,9 @@ build_docu:
       - Documentation/Generated/html/    
     expire_in: 1 day
 
+deploy_docu:
+  stage: docu
+  script: ls
 
 #pages:
 #  image: alpine:latest
