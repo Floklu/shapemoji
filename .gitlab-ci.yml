@@ -52,8 +52,7 @@ build_docu:
     expire_in: 1 week
   only: 
     - master
-  resource_group:
-    - all
+  resource_group: all
 
 get-activation-file:
   rules:
@@ -80,22 +79,19 @@ get-activation-file:
       - $(pwd)/$TEST_PLATFORM-results.xml
       - $(pwd)/$TEST_PLATFORM-coverage/
   coverage: /<Linecoverage>(.*?)</Linecoverage>/
-  resource_group:
-    - all
+  resource_group: all
 
 test-playmode:
   <<: *test
   variables:
     TEST_PLATFORM: playmode
-  resource_group:
-    - all
+  resource_group: all
 
 test-editmode:
   <<: *test
   variables:
     TEST_PLATFORM: editmode
-  resource_group:
-    - all
+  resource_group: all
 #.build: &build
 #  stage: build_and_test
 #  <<: *unity_before_script
