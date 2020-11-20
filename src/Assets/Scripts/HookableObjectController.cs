@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using Harpoon;
 using Unity.Profiling;
 using UnityEditor.PackageManager;
 using UnityEditor.SceneManagement;
@@ -31,7 +32,7 @@ public static class HookableObjectController
      */
     public static void OnHookableObjectCollision(Stone stone, GameObject gameObject)
     {
-        if (gameObject.GetType() == typeof(Projectile))
+        if (gameObject.GetType() == typeof(ProjectileCollision))
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
@@ -45,7 +46,7 @@ public static class HookableObjectController
      */
     public static void OnHookableObjectCollision(Item item, GameObject gameObject)
     {
-        if (gameObject.GetType() == typeof(Projectile))
+        if (gameObject.GetType() == typeof(ProjectileCollision))
         {
             AttachHookableObjectToProjectile(item, gameObject);
         }

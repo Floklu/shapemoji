@@ -75,10 +75,12 @@ namespace Harpoon
             transform.rotation = Quaternion.Euler(0,0,rotation);
         }
 
-        /*
-         * TODO: Not Yet Implemented
-         * public void NotifyCollision(Stone stone, GameObject projectile)                
-         */
+
+        public void NotifyCollision(Stone stone, GameObject projectile)
+        {
+            throw new NotImplementedException();
+        }                
+         
         
         #region EventHandling
         
