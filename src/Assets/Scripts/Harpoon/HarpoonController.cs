@@ -1,4 +1,5 @@
 ﻿using System;
+using Spawner;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -73,6 +74,11 @@ namespace Harpoon
         {
             transform.rotation = Quaternion.Euler(0,0,rotation);
         }
+
+        /*
+         * TODO: Not Yet Implemented
+         * public void NotifyCollision(Stone stone, GameObject projectile)                
+         */
         
         #region EventHandling
         
