@@ -41,6 +41,14 @@ public abstract class HookableObject : MonoBehaviour
     {
         this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
+
+    /**
+     * sets transform parent so movement is joined
+     */
+    public void SetTransformParent(Transform parentTransform)
+    {
+        this.transform.parent = parentTransform;
+    }
 }
 
 /**

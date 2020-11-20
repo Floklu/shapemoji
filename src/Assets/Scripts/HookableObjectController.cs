@@ -78,6 +78,8 @@ public static  class HookableObjectController
             harpoonController.NotifyCollision(Stone, projectileGameObject)
         }
         */
+        
+        hookableObject.SetTransformParent(projectileGameObject.transform);
     }
 
     /**
@@ -95,4 +97,5 @@ public static  class HookableObjectController
     {
         _harpoonControllers.Remove(harpoonController);
     }
+    
 }
