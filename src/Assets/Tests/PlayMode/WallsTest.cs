@@ -27,7 +27,8 @@ namespace Tests.PlayMode
             
             if (!(Camera.main is null))
             {
-                screenSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+                screenSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0));
+                screenSize.z = 0;
             }
             else
             {
@@ -44,7 +45,7 @@ namespace Tests.PlayMode
 
             Vector3 path = screenSize - harpoonPosition;
 
-            float angle = Vector3.Angle(Vector3.up, path);
+            float angle = Vector3.Angle(Vector3.up+Vector3.left, path);
             
             harpoon.transform.Rotate(0,0,angle);
             
@@ -52,9 +53,13 @@ namespace Tests.PlayMode
             
             
             
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
 
             Assert.Zero(projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
+            Debug.Log(projectile.transform.position.ToString());
+            Debug.Log(screenSize.ToString());
+            
+            
         }
     }
 }
