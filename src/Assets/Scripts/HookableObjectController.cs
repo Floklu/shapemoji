@@ -1,11 +1,19 @@
-﻿using UnityEditor.SceneManagement;
+﻿using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
+using Unity.Profiling;
+using UnityEditor.PackageManager;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 /**
- * HookableObjectController contains the functionality of Hookable Objects
+ * HookableObjectController is a static class and contains the functionality of Hookable Objects 
  */
 public static  class HookableObjectController
 {
+    //list of receivers
+    private static readonly List<HarpoonController> _harpoonControllers = new List<HarpoonController>();
+    
     /**Manages Collision Event of HookableObject (called by HookableObject Instance)
      *
      * @param hookableObject HookableObject which detected collision
@@ -14,6 +22,13 @@ public static  class HookableObjectController
     public static void OnHookableObjectCollision(HookableObject hookableObject, GameObject gameObject)
     {
     }
+    
+    /**
+     *  OnHookableObjectCollision handles collision between Stone and other GameObject
+     *
+     * @param stone: stone which detected collision
+     * @param gameObject: GameObject which stone collided with
+     */
     public static void OnHookableObjectCollision(Stone stone, GameObject gameObject)
     {
         if (gameObject.GetType() == typeof(Projectile))
@@ -23,7 +38,12 @@ public static  class HookableObjectController
         }
     }
  
-   
+    /**
+     *  OnHookableObjectCollision handles collision between Item and other GameObject
+     *
+     * @param item: item which detected collision
+     * @param gameObject: GameObject which item collided with (should be projectile)
+     */
     public static void OnHookableObjectCollision(Item item, GameObject gameObject)
     {
         if (gameObject.GetType() == typeof(Projectile))
@@ -32,7 +52,47 @@ public static  class HookableObjectController
         }
     }
 
-    private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject){}
-    
-    
+    /**
+     * action needed when Stone is made draggable
+     *
+     * @param stone: Stone to be set draggable
+     */
+    public static void EnableStoneDraggable(Stone stone)
+    {
+        stone.SetDraggable(true);    
+        //TODO: probably some more
+    }
+
+    /**
+     * Called after Collision of HookableObject and Projectile
+     *
+     * @param hookableObject: object which is attached to projectile
+     * @param projectileGameObject: projectile where hookableObject is attached to
+     */
+    private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
+    {
+        //TODO: enable when implemented in harpoonController
+        /*
+        foreach (var harpoonController in harpoonControllers)
+        {
+            harpoonController.NotifyCollision(Stone, projectileGameObject)
+        }
+        */
+    }
+
+    /**
+     * AddHarpoonController adds HarpoonController to _harpoonControllers receiver list
+     */
+    public static void AddHarpoonController(HarpoonController harpoonController)
+    {
+        _harpoonControllers.Add(harpoonController);
+    }
+
+    /**
+     * RemoveHarpoonController removes HarpoonController from _harpoonControllers receiver list
+     */
+    public static void RemoveHarpoonController(HarpoonController harpoonController)
+    {
+        _harpoonControllers.Remove(harpoonController);
+    }
 }
