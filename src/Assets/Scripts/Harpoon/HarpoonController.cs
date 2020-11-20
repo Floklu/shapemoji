@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Spawner;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -65,7 +65,7 @@ namespace Harpoon
             _rope.enabled = false;
         }
 
-        /*
+        /**
          * rotates Harpoon to certain degree
          *
          * @param rotation rotates object to chosen degree
@@ -75,8 +75,13 @@ namespace Harpoon
             transform.rotation = Quaternion.Euler(0,0,rotation);
         }
 
-
-        public void NotifyCollision(Stone stone, GameObject projectile)
+        /**
+         * called on collision of HookableObject
+         * 
+         * @param hookableObject: object which collided
+         * @param projectile which had collision
+        */
+        public void NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject projectile)
         {
             throw new NotImplementedException();
         }                
