@@ -1,8 +1,8 @@
 # by Marc Marschall based on https://gitlab.com/gableroux/unity3d-gitlab-ci-example
 stages:
   - pre_requesits
-  - build_and_test
   - docu
+  - build_and_test
   - deploy
 
 # If you are looking for a place where to add 'UNITY_LICENSE_FILE' and other secrets, please visit your project's gitlab page:
