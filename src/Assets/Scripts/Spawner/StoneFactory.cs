@@ -24,8 +24,8 @@ namespace Spawner
             var preFabStone = preFabs[random];
             var spawnPosition = new Vector3(x, y, 0);
 
-            var stone = Instantiate(preFabStone, spawnPosition, Quaternion.identity);
-        
+            var stone = Instantiate(preFabStone, spawnPosition, Quaternion.identity); 
+            //TODO: stone.addComponent(StoneObject)
             return stone;
         }
     }
