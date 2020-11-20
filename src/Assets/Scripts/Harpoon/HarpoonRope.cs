@@ -19,8 +19,8 @@ namespace Harpoon
         private Transform _projectileTransform;
 
         /**
-     * Start Method is used to initialize variables
-     */
+        * Start Method is used to initialize variables
+        */
         private void Start()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -30,9 +30,9 @@ namespace Harpoon
         }
 
         /**
-     * Update Method is called every frame
-     * Scales the rope according to projectile position
-     */
+        * Update Method is called every frame
+        * Scales the rope according to projectile position
+        */
         private void Update()
         {
             var ropeCenter = (cannon.transform.position + projectile.transform.position) / 2f;

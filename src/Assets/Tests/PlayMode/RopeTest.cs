@@ -29,16 +29,14 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator RopeTestSameLengthening()
         {
-            var projectile1 =
-                GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
             var rope1 = GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonRope");
-
-            var projectile2 =
-                GameObject.Find("Team_1/Player_2/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
             var rope2 = GameObject.Find("Team_1/Player_2/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonRope");
 
-            projectile1.GetComponent<Projectile>().Shoot();
-            projectile2.GetComponent<Projectile>().Shoot();
+            var harpoon1 = GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon");
+            var harpoon2 = GameObject.Find("Team_1/Player_2/Base/HarpoonBase/Harpoon");
+            
+            harpoon1.GetComponent<HarpoonController>().Shoot();
+            harpoon2.GetComponent<HarpoonController>().Shoot();
             yield return new WaitForSeconds(1);
 
             float length1 = rope1.gameObject.GetComponent<SpriteRenderer>().bounds.size.magnitude;

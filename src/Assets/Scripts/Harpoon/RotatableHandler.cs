@@ -1,79 +1,64 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Harpoon
 {
     /**
-    * Class Harpoon contains functionality for the rotation and shooting of the harpoon.
-    */
-    public class Harpoon : MonoBehaviour
+     * Handles the interaction with rotatable gameObjects
+     */
+    public class RotatableHandler : MonoBehaviour
     {
         private bool _onDrag;
-
         private Vector3 _initialPosition;
-
         private Camera _mainCamera;
-
-        private Collider2D _harpoonCollider;
-
-        private GameObject _projectile;
-
-
-        private bool _isShot;
-
+        private Collider2D _collider;
 
         /**
-     * Start is called on the frame when a script is enabled just before any of the Update methods are called the first time.
-     */
+        * Start is called on the frame when a script is enabled just before any of the Update methods are called the first time.
+        */
         private void Start()
         {
-            _harpoonCollider = GetComponent<Collider2D>();
+            _collider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
-            _projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
         }
 
         /**
-     * OnMouseDown is called when the user has pressed the mouse button while over the Collider.
-     */
+        * OnMouseDown is called when the user has pressed the mouse button while over the Collider.
+        */
         private void OnMouseDown()
         {
-            if (!_isShot)
-            {
-                _onDrag = true;
-                _initialPosition = GetMousePosition();
-            }
+            _onDrag = true;
+            _initialPosition = GetMousePosition();
         }
 
         /**
-     * OnMouseUp is called when the user has released the mouse button.
-     */
+        * OnMouseUp is called when the user has released the mouse button.
+        */
         private void OnMouseUp()
         {
             _onDrag = false;
-            _isShot = true;
-            _projectile.GetComponent<Projectile>().Shoot();
         }
 
         /**
-     * FixedUpdate is a frame-rate independent update method for physics calculations.
-     */
+        * FixedUpdate is a frame-rate independent update method for physics calculations.
+        */
         private void FixedUpdate()
         {
             if (_onDrag && _initialPosition != GetMousePosition())
             {
-                RotateHarpoonWithMouse();
+                TurnRotatableWithMouse();
             }
 
-            if (Input.touchCount > 0 && GetTouchIndexOnHarpoon() != -1)
+            if (Input.touchCount > 0 && GetTouchIndexOnRotatable() != -1)
             {
-                RotateHarpoonWithTouch(GetTouchIndexOnHarpoon());
+                TurnRotatableWithTouch(GetTouchIndexOnRotatable());
             }
         }
 
         /**
-     * RotateHarpoonWithMouse rotates the harpoon to the vector between the first initial mouse position and the current mouse position.
-     */
-        private void RotateHarpoonWithMouse()
+        *  rotates the gameObject to the vector between the first initial mouse position and the current mouse position.
+        */
+        private void TurnRotatableWithMouse()
         {
             var direction = _initialPosition - GetMousePosition();
 
@@ -81,14 +66,15 @@ namespace Harpoon
 
             var rotationZ = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90f;
 
-            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+            OnRotationEvent(rotationZ);
+            //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
         }
 
         /**
-     * RotateHarpoonWithTouch rotates the harpoon with touch interactions
-     * @param index is the index of the touch point that touches the harpoon
-     */
-        private void RotateHarpoonWithTouch(int index)
+        * rotates the object with touch interactions
+        * @param index is the index of the touch point that touches the harpoon
+        */
+        private void TurnRotatableWithTouch(int index)
         {
             var touch = Input.GetTouch(index);
 
@@ -108,8 +94,8 @@ namespace Harpoon
                     direction.Normalize();
 
                     var rotationZ = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90f;
-
-                    transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+                    OnRotationEvent(rotationZ);
+                    //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
                     break;
 
                 // Report that a direction has been chosen when the finger is lifted.
@@ -126,25 +112,25 @@ namespace Harpoon
         }
 
         /**
-     * GetMousePosition returns the current mouse position
-     * @return Current mouse position
-     */
+        *  returns the current mouse position
+        * @return Current mouse position
+        */
         private Vector3 GetMousePosition()
         {
             return _mainCamera.ScreenToWorldPoint(Input.mousePosition);
         }
 
         /**
-     * GetTouchIndexOnHarpoon loops through all touch points to check if one is on the harpoon.
-     * @return index of the touch that is on the harpoon
-     */
-        private int GetTouchIndexOnHarpoon()
+        * GetTouchIndexOnHarpoon loops through all touch points to check if one is on the harpoon.
+        * @return index of the touch that is on the harpoon
+        */
+        private int GetTouchIndexOnRotatable()
         {
             var touchIndex = -1;
             for (var i = 0; i < Input.touchCount; ++i)
             {
                 var touchPosition = _mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-                if (_harpoonCollider.OverlapPoint(touchPosition))
+                if (_collider.OverlapPoint(touchPosition))
                 {
                     touchIndex = i;
                     break;
@@ -152,6 +138,19 @@ namespace Harpoon
             }
 
             return touchIndex;
+        }
+
+        /**
+         * invokes Event, if rotation happens
+         */
+        public event EventHandler<float> RotationEvent;
+
+        /**
+         * raises RotationEvent
+         */
+        private void OnRotationEvent(float e)
+        {
+            RotationEvent?.Invoke(this, e);
         }
     }
 }
