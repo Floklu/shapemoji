@@ -2,41 +2,59 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
 namespace Tests.PlayMode
 {
     public class WallsTest
     {
+        /**
+         * Loads game scene
+         */
+        [OneTimeSetUp]
+        public void LoadScene()
+        {
+            SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
+        }
+        
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
         public IEnumerator WallsTestWithEnumeratorPasses()
         {
-            /*
-            var wall =
-                GameObject.Find("Wall_1");
+            Vector3 screenSize = new Vector3(100,100,0);
             
-            var spriteRenderer = wall.GetComponent<SpriteRenderer>();
+            if (!(Camera.main is null))
+            {
+                screenSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+            }
+            else
+            {
+                Assert.IsTrue(false);
+            }
 
-            float x = spriteRenderer.bounds.size.x;
-            float y = spriteRenderer.bounds.size.y;
 
-            Vector2 wallPosition = wall.transform.position;
-            
-            var cannon =
-                GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon");
-            
+            var harpoon =
+                GameObject.Find("Team_2/Player_3/Base/HarpoonBase/Harpoon");
             var projectile =
-                GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
+                GameObject.Find("Team_2/Player_3/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
 
-            //cannon.transform.Rotate(0,0,45);
-            //transform.InverseTransformDirection ...
+            Vector3 harpoonPosition = harpoon.transform.position;
+
+            Vector3 path = screenSize - harpoonPosition;
+
+            float angle = Vector3.Angle(Vector3.up, path);
+            
+            harpoon.transform.Rotate(0,0,angle);
+            
             projectile.GetComponent<Projectile>().Shoot();
-            */
+            
+            
+            
             yield return new WaitForSeconds(1);
 
-            Assert.IsFalse(false);
+            Assert.Zero(projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
         }
     }
 }
