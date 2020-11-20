@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Harpoon;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,7 +32,8 @@ namespace Tests.PlayMode
         {
             var projectile = GameObject.Find("HarpoonProjectile");
             var location = projectile.transform.position;
-            projectile.GetComponent<Projectile>().Shoot();
+            var harpoon = GameObject.Find("Harpoon");
+            harpoon.GetComponent<HarpoonController>().Shoot();
 
             yield return new WaitForSeconds(1);
 
