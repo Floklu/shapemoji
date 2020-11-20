@@ -9,11 +9,11 @@ using UnityEngine;
 /**
  * HookableObjectController is a static class and contains the functionality of Hookable Objects 
  */
-public static  class HookableObjectController
+public static class HookableObjectController
 {
     //list of receivers
     private static readonly List<HarpoonController> _harpoonControllers = new List<HarpoonController>();
-    
+
     /**Manages Collision Event of HookableObject (called by HookableObject Instance)
      *
      * @param hookableObject HookableObject which detected collision
@@ -22,7 +22,7 @@ public static  class HookableObjectController
     public static void OnHookableObjectCollision(HookableObject hookableObject, GameObject gameObject)
     {
     }
-    
+
     /**
      *  OnHookableObjectCollision handles collision between Stone and other GameObject
      *
@@ -34,10 +34,9 @@ public static  class HookableObjectController
         if (gameObject.GetType() == typeof(Projectile))
         {
             AttachHookableObjectToProjectile(stone, gameObject);
-
         }
     }
- 
+
     /**
      *  OnHookableObjectCollision handles collision between Item and other GameObject
      *
@@ -59,7 +58,7 @@ public static  class HookableObjectController
      */
     public static void EnableStoneDraggable(Stone stone)
     {
-        stone.SetDraggable(true);    
+        stone.SetDraggable(true);
         //TODO: probably some more
     }
 
@@ -78,7 +77,7 @@ public static  class HookableObjectController
             harpoonController.NotifyCollision(Stone, projectileGameObject)
         }
         */
-        
+
         hookableObject.SetTransformParent(projectileGameObject.transform);
     }
 
@@ -97,5 +96,4 @@ public static  class HookableObjectController
     {
         _harpoonControllers.Remove(harpoonController);
     }
-    
 }

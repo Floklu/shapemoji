@@ -6,11 +6,10 @@ namespace Spawner
     /**
      * Factory Class, which spawns Stones onto the playground
      */
-    public class StoneFactory: MonoBehaviour
+    public class StoneFactory : MonoBehaviour
     {
-
         public List<GameObject> preFabs;
-        
+
         /**
          * creates random stone from selection of prefabs and instantiates stone on the playground
          * 
@@ -24,7 +23,7 @@ namespace Spawner
             var preFabStone = preFabs[random];
             var spawnPosition = new Vector3(x, y, 0);
 
-            var stone = Instantiate(preFabStone, spawnPosition, Quaternion.identity); 
+            var stone = Instantiate(preFabStone, spawnPosition, Quaternion.identity);
             //TODO: stone.addComponent(StoneObject)
             return stone;
         }

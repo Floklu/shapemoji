@@ -13,7 +13,6 @@ using UnityEngine;
  *  */
 public abstract class HookableObject : MonoBehaviour
 {
-
     private GameObject _parent;
 
     /**
@@ -23,7 +22,7 @@ public abstract class HookableObject : MonoBehaviour
     {
         ChangeLayerPlayingFieldLayer();
     }
-    
+
     /**
      * Calls for action at controller on collision with
      *
@@ -59,13 +58,12 @@ public abstract class HookableObject : MonoBehaviour
 public class Stone : HookableObject
 {
     private bool _draggable;
-    
+
     protected override void Start()
     {
         base.Start();
-        
     }
-    
+
     /**
      * change collision layer to DraggableLayer
      */
@@ -73,6 +71,7 @@ public class Stone : HookableObject
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
+
     /**
      * sets property _draggable
      *
@@ -82,7 +81,6 @@ public class Stone : HookableObject
     {
         _draggable = state;
     }
-    
 }
 
 /**
@@ -92,5 +90,4 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
-    
 }
