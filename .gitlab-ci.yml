@@ -25,8 +25,8 @@ image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 .cache: &cache
   cache:
     key: "$CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$TEST_PLATFORM"
-    paths:
-      - Library/
+  #  paths:
+  #    - Library/
 
 .license: &license
   rules:
