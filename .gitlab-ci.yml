@@ -41,6 +41,18 @@ image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 before_script:
   - apt-get update && apt-get install -y doxygen libcap2
 
+build_docu:   
+  stage: docu
+  script:    
+    - apt-get update && apt-get install -y doxygen
+    - doxygen Documentation/Doxyfile   
+  artifacts:     
+    paths:
+      - Documentation/Generated/html/    
+    expire_in: 1 week
+  only: 
+    - master
+
 get-activation-file:
   rules:
     - if: '$UNITY_LICENSE == null'
@@ -52,6 +64,7 @@ get-activation-file:
     paths:
       - $UNITY_ACTIVATION_FILE
     expire_in: 10 min # Expiring this as artifacts may contain sensitive data and should not be kept public
+
 
 .test: &test
   stage: build_and_test
@@ -65,6 +78,7 @@ get-activation-file:
       - $(pwd)/$TEST_PLATFORM-results.xml
       - $(pwd)/$TEST_PLATFORM-coverage/
   coverage: /<Linecoverage>(.*?)</Linecoverage>/
+
 
 test-playmode:
   <<: *test
@@ -99,17 +113,6 @@ test-editmode:
 #  variables:
 #    BUILD_TARGET: StandaloneWindows64
 
-build_docu:   
-  stage: docu
-  script:    
-    - apt-get update && apt-get install -y doxygen
-    - doxygen Documentation/Doxyfile   
-  artifacts:     
-    paths:
-      - Documentation/Generated/html/    
-    expire_in: 1 week
-  only: 
-    - master
 
 #pages:
 #  image: alpine:latest
