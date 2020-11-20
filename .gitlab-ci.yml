@@ -107,11 +107,7 @@ build_docu:
   artifacts:     
     paths:
       - Documentation/Generated/html/    
-    expire_in: 1 day
-
-deploy_docu:
-  stage: docu
-  script: ls
+    expire_in: 1 week
 
 #pages:
 #  image: alpine:latest
