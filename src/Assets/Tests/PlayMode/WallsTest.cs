@@ -6,6 +6,11 @@ using UnityEngine.TestTools;
 
 namespace Tests.PlayMode
 {
+    /**
+     * Test class for border collisions
+     * @author Andrei Dziubenka
+     * @date 2020.11.20
+     */
     public class WallsTest
     {
         /**
@@ -17,7 +22,9 @@ namespace Tests.PlayMode
             SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
         }
 
-        
+        /**
+         * Test border collision near blue base
+         */
         [UnityTest]
         public IEnumerator WallsTestBlueBase()
         {
@@ -26,7 +33,7 @@ namespace Tests.PlayMode
             var projectile =
                 GameObject.Find("Team_2/Player_3/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
 
-            aimAtWall(harpoon, projectile, Screen.width, 0,Vector3.up+Vector3.left);
+            aimAtPoint(harpoon, Screen.width, 0);
 
             projectile.GetComponent<Projectile>().Shoot();
 
@@ -34,8 +41,10 @@ namespace Tests.PlayMode
 
             Assert.Zero(projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
         }
-        
-        
+
+        /**
+         * Test border collision near red base
+         */
         [UnityTest]
         public IEnumerator WallsTestRedBase()
         {
@@ -44,7 +53,7 @@ namespace Tests.PlayMode
             var projectile =
                 GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
 
-            aimAtWall(harpoon, projectile, 0, 0,Vector3.up+Vector3.right);
+            aimAtPoint(harpoon, 0, 0);
 
             projectile.GetComponent<Projectile>().Shoot();
 
@@ -52,7 +61,10 @@ namespace Tests.PlayMode
 
             Assert.Zero(projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
         }
-        
+
+        /**
+         * Test border collision near green base
+         */
         [UnityTest]
         public IEnumerator WallsTestGreenBase()
         {
@@ -61,7 +73,7 @@ namespace Tests.PlayMode
             var projectile =
                 GameObject.Find("Team_1/Player_2/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
 
-            aimAtWall(harpoon, projectile, 0, Screen.height,Vector3.down+Vector3.right);
+            aimAtPoint(harpoon, 0, Screen.height);
 
             projectile.GetComponent<Projectile>().Shoot();
 
@@ -69,7 +81,10 @@ namespace Tests.PlayMode
 
             Assert.Zero(projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
         }
-        
+
+        /**
+         * Test border collision near orange base
+         */
         [UnityTest]
         public IEnumerator WallsTestOrangeBase()
         {
@@ -78,7 +93,7 @@ namespace Tests.PlayMode
             var projectile =
                 GameObject.Find("Team_2/Player_4/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
 
-            aimAtWall(harpoon, projectile, Screen.width, Screen.height,Vector3.down+Vector3.left);
+            aimAtPoint(harpoon, Screen.width, Screen.height);
 
             projectile.GetComponent<Projectile>().Shoot();
 
@@ -87,9 +102,18 @@ namespace Tests.PlayMode
             Assert.Zero(projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
         }
 
-        private void aimAtWall(GameObject harpoon, GameObject projectile, int pointX, int pointY,Vector3 harpoonRotation)
+        /**
+         * Rotates Harpoon to aim at point
+         * @param harpoon Harpoon Object to aim
+         * @param pointX x parameter of point to aim in Screen Coordinates
+         * @param pointY y parameter of point to aim in Screen Coordinates
+         */
+        private void aimAtPoint(GameObject harpoon, int pointX, int pointY)
         {
-            Vector3 screenSize = new Vector3(100, 100, 0);
+            Quaternion q = Quaternion.Euler(harpoon.transform.eulerAngles);
+            Vector3 harpoonRotation = q * Vector3.up;
+
+            Vector3 screenSize = new Vector3(0, 0, 0);
 
             if (!(Camera.main is null))
             {
@@ -102,13 +126,8 @@ namespace Tests.PlayMode
             }
 
             Vector3 harpoonPosition = harpoon.transform.position;
-
             Vector3 path = screenSize - harpoonPosition;
-            
-            
-
             float angle = Vector3.Angle(harpoonRotation, path);
-
             harpoon.transform.Rotate(0, 0, angle);
         }
     }
