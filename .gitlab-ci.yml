@@ -108,6 +108,8 @@ build_docu:
     paths:
       - Documentation/Generated/html/    
     expire_in: 1 week
+  only: 
+    - master
 
 #pages:
 #  image: alpine:latest
