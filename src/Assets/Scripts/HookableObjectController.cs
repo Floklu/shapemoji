@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using Harpoon;
@@ -75,7 +75,7 @@ public static class HookableObjectController
         /*
         foreach (var harpoonController in harpoonControllers)
         {
-            harpoonController.NotifyCollision(Stone, projectileGameObject)
+            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject)
         }
         */
 
