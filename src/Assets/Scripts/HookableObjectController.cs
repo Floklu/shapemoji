@@ -98,6 +98,9 @@ public static class HookableObjectController
         _harpoonControllers.Remove(harpoonController);
     }
 
+    /**
+     * StoneToInventory handles adding and functionality if the inventory is full
+     */
     public static void StoneToInventory(Stone stone, GameObject inventory)
     {
         if (inventory.GetComponent<Inventory>().AddToInventory(stone))
@@ -110,6 +113,9 @@ public static class HookableObjectController
         }
     }
 
+    /**
+     * ActivateItem activates the item
+     */
     public static void ActivateItem(Item item)
     {
     }

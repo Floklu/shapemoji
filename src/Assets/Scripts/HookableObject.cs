@@ -49,11 +49,19 @@ public abstract class HookableObject : MonoBehaviour
         this.transform.parent = parentTransform;
     }
 
+    /**
+     * SetParent sets the parent of this gameobject
+     *
+     * @param GameObject parent: parent to set
+     */
     public void SetParent(GameObject parent)
     {
         _parent = parent;
     }
 
+    /**
+     * OnWoundIn is called when the Harpoon is wound in
+     */
     protected virtual void OnWoundIn()
     {
     }
@@ -91,10 +99,12 @@ public class Stone : HookableObject
         _draggable = state;
     }
 
+    /**
+     * OnWoundIn changes the stone so it can be dragged and not get hit by projectiles 
+     */
     protected override void OnWoundIn()
     {
         SetLayerToDraggableLayer();
-        
     }
 }
 
