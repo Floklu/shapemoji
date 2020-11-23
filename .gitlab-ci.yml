@@ -1,6 +1,7 @@
 # by Marc Marschall based on https://gitlab.com/gableroux/unity3d-gitlab-ci-example
 stages:
   - pre_requesits
+  - docu
   - build_and_test
   - deploy
 
@@ -12,7 +13,7 @@ variables:
   UNITY_VERSION: "2019.4.13f1"
   #UNITY_VERSION: "2020.1.13f1"
   IMAGE: unityci/editor # https://hub.docker.com/r/unityci/editor
-  IMAGE_VERSION: "0.6" # https://github.com/Unity-CI/docker/releases
+  IMAGE_VERSION: "0.7" # https://github.com/Unity-CI/docker/releases
 
 image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 
@@ -20,7 +21,6 @@ image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 .unity_before_script: &unity_before_script
   before_script:
     - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
-    - apt-get update && apt-get install -y doxygen libcap2
 
 .cache: &cache
   cache:
@@ -41,6 +41,19 @@ image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
 before_script:
   - apt-get update && apt-get install -y doxygen libcap2
 
+build_docu:   
+  stage: docu
+  script:    
+    - apt-get update && apt-get install -y doxygen
+    - doxygen Documentation/Doxyfile   
+  artifacts:     
+    paths:
+      - Documentation/Generated/html/    
+    expire_in: 1 week
+  only: 
+    - master
+  resource_group: all
+
 get-activation-file:
   rules:
     - if: '$UNITY_LICENSE == null'
@@ -52,6 +65,7 @@ get-activation-file:
     paths:
       - $UNITY_ACTIVATION_FILE
     expire_in: 10 min # Expiring this as artifacts may contain sensitive data and should not be kept public
+
 
 .test: &test
   stage: build_and_test
@@ -65,17 +79,19 @@ get-activation-file:
       - $(pwd)/$TEST_PLATFORM-results.xml
       - $(pwd)/$TEST_PLATFORM-coverage/
   coverage: /<Linecoverage>(.*?)</Linecoverage>/
+  resource_group: all
 
-    #test-playmode:
-    #  <<: *test
-    #  variables:
-    #    TEST_PLATFORM: playmode
+test-playmode:
+  <<: *test
+  variables:
+    TEST_PLATFORM: playmode
+  resource_group: all
 
 test-editmode:
   <<: *test
   variables:
     TEST_PLATFORM: editmode
-
+  resource_group: all
 #.build: &build
 #  stage: build_and_test
 #  <<: *unity_before_script
@@ -99,24 +115,15 @@ test-editmode:
 #  variables:
 #    BUILD_TARGET: StandaloneWindows64
 
-build_docu:   
-  stage: build_and_test
-  script:    
-    - doxygen Documentation/Doxyfile   
-  artifacts:     
-    paths:
-      - Documentation/Generated/html/    
-    expire_in: 1 day
 
-
-pages:
-  image: alpine:latest
-  stage: deploy
-  script:
-    - mv "./Builds/WebGL/${BUILD_NAME}" public
-  artifacts:
-    paths:
-      - public
-  only:
-    - master
+#pages:
+#  image: alpine:latest
+#  stage: deploy
+#  script:
+#    - mv "./Builds/WebGL/${BUILD_NAME}" public
+#  artifacts:
+#    paths:
+#      - public
+# only:
+#    - master
 
