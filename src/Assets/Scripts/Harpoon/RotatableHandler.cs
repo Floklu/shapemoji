@@ -64,7 +64,7 @@ namespace Harpoon
 
             direction.Normalize();
 
-            var rotationZ = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90f;
+            var rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
 
             OnRotationEvent(rotationZ);
             //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
@@ -93,7 +93,7 @@ namespace Harpoon
 
                     direction.Normalize();
 
-                    var rotationZ = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) - 90f;
+                    var rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
                     OnRotationEvent(rotationZ);
                     //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
                     break;
@@ -130,11 +130,9 @@ namespace Harpoon
             for (var i = 0; i < Input.touchCount; ++i)
             {
                 var touchPosition = _mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-                if (_collider.OverlapPoint(touchPosition))
-                {
-                    touchIndex = i;
-                    break;
-                }
+                if (!_collider.OverlapPoint(touchPosition)) continue;
+                touchIndex = i;
+                break;
             }
 
             return touchIndex;

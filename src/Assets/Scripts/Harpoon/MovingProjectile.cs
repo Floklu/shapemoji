@@ -8,22 +8,6 @@ namespace Harpoon
     public class MovingProjectile : MonoBehaviour
     {
         private GameObject _gameObjectHooked;
-        //private Rigidbody2D _projectileRigidBody2D;
-        
-        // /**
-        // * Update is called once per frame.
-        // */
-        // private void Update()
-        // {
-        //     if (!_stop && _isShot)
-        //     {
-        //         _projectileRigidBody2D.velocity = gameObject.transform.right * projectileSpeed;
-        //     }
-        //     else if (_stop)
-        //     {
-        //         _projectileRigidBody2D.velocity = Vector2.zero;
-        //     }
-        // }
 
         /**
          * sets the velocity of the projectile

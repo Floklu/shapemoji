@@ -1,7 +1,5 @@
 using System;
-using Spawner;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Harpoon
 {
@@ -17,18 +15,27 @@ namespace Harpoon
         private ProjectileCollision _projectileCollision;
         private MovingProjectile _movingProjectile;
         private HarpoonRope _rope;
-
+        private WindInProjectile _windInProjectile;
+        private CrankController _crankController;
         
+        private bool _woundIn = true;
+        private BoxCollider2D _cannonCollider; //needed to better handle collision while wound in
+
+
         private void Start()
         {
+            _cannonCollider = gameObject.transform.Find("HarpoonCannon").gameObject.GetComponent<BoxCollider2D>();
             var projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
             var ropeObj = gameObject.transform.Find("HarpoonCannon/HarpoonRope").gameObject;
-            
+            _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
+
             _rotatableHandler = GetComponent<RotatableHandler>();
             _shotHandler = GetComponent<HarpoonShotHandler>();
             _projectileCollision = projectile.GetComponent<ProjectileCollision>();
             _movingProjectile = projectile.GetComponent<MovingProjectile>();
             _rope = ropeObj.GetComponent<HarpoonRope>();
+            _windInProjectile = projectile.GetComponent<WindInProjectile>();
+            _crankController.CrankRotationEvent += _windInProjectile.AddTravelDistance;
             
             _rotatableHandler.RotationEvent += OnRotationEvent;
             _shotHandler.ShotEvent += OnShotEvent;
@@ -42,6 +49,7 @@ namespace Harpoon
         {
             _movingProjectile.SetVelocity(projectileSpeed);
             _rope.enabled = true;
+            _woundIn = false;
         }
         
         /**
@@ -49,9 +57,25 @@ namespace Harpoon
          */
         public void StopCannon()
         {
-            _movingProjectile.SetVelocity(0);
-            _rope.enabled = false;
-            _rotatableHandler.enabled = false;
+            if (_woundIn) //Harpoon has been wound in
+            {
+                ResetCannon();
+                //TODO handle WoundIn specific behaviour
+            }
+            else //Harpoon hasn't been wound in
+            {
+                _cannonCollider.enabled = true;
+                _rotatableHandler.enabled = false;
+                _movingProjectile.SetVelocity(0);
+
+                _crankController.EnableController(true);
+                
+                //prepare windInProjectile functionality
+                _windInProjectile.ResetProjectile();
+                _windInProjectile.TravelSpeed = projectileSpeed;
+                _woundIn = true;
+            }
+            
         }
 
         //ReSharper disable once UnusedMember.Global
@@ -63,6 +87,12 @@ namespace Harpoon
         {
             _rotatableHandler.enabled = true;
             _rope.enabled = false;
+            _windInProjectile.TravelSpeed = 0;
+            _windInProjectile.enabled = false;
+            _shotHandler.ResetHandler();
+            _windInProjectile.ResetProjectile();
+            _cannonCollider.enabled = false;
+            _crankController.EnableController(false);
         }
 
         /**
