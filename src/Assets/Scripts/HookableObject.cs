@@ -60,6 +60,16 @@ public abstract class HookableObject : MonoBehaviour
     }
 
     /**
+     * SetPosition sets the position of the hookable object
+     *
+     * @param position The position to set the hookable object to
+     */
+    public void SetPosition(Vector3 position)
+    {
+        gameObject.transform.position = position;
+    }
+
+    /**
      * OnWoundIn is called when the Harpoon is wound in
      */
     protected virtual void OnWoundIn()

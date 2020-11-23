@@ -106,9 +106,11 @@ public static class HookableObjectController
      */
     public static void StoneToInventory(Stone stone, GameObject inventory)
     {
-        if (inventory.GetComponent<Inventory>().AddToInventory(stone))
+        var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
+        if (position.HasValue)
         {
             stone.SetParent(inventory);
+            stone.SetPosition(position.Value);
         }
         else
         {
