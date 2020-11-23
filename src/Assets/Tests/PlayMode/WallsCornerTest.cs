@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Harpoon;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,6 +27,7 @@ namespace Tests.PlayMode
 
         /**
          * Test border collision at corner (both sides)
+         * Projectile is a Polygon Collider, therefore a precise aim is not possible
          */
         [UnityTest]
         public IEnumerator CornerTest()
@@ -43,6 +45,7 @@ namespace Tests.PlayMode
         
         /**
          * Test border collision at corner (left side)
+         * Projectile is a Polygon Collider, therefore a precise aim is not possible
          */
         [UnityTest]
         public IEnumerator CornerLeftTest()
@@ -60,6 +63,7 @@ namespace Tests.PlayMode
         
         /**
          * Test border collision at corner (right side)
+         * Projectile is a Polygon Collider, therefore a precise aim is not possible
          */
         [UnityTest]
         public IEnumerator CornerRightTest()
@@ -101,8 +105,8 @@ namespace Tests.PlayMode
             Vector3 path = pointWorldCoord - harpoonPosition;
             float angle = Vector3.SignedAngle(harpoonRotation, path,Vector3.forward);
             _harpoon.transform.Rotate(0, 0, angle);
-            _projectile.GetComponent<Projectile>().Shoot();
-            
+            _harpoon.GetComponent<HarpoonController>().Shoot();
+
             yield return new WaitForSeconds(1.5f);
             
             Assert.Zero(_projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
