@@ -97,4 +97,20 @@ public static class HookableObjectController
     {
         _harpoonControllers.Remove(harpoonController);
     }
+
+    public static void StoneToInventory(Stone stone, GameObject inventory)
+    {
+        if (inventory.GetComponent<Inventory>().AddToInventory(stone))
+        {
+            stone.SetParent(inventory);
+        }
+        else
+        {
+            // Task #417
+        }
+    }
+
+    public static void ActivateItem(Item item)
+    {
+    }
 }

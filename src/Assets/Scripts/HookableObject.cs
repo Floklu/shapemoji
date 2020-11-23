@@ -20,7 +20,7 @@ public abstract class HookableObject : MonoBehaviour
      */
     protected virtual void Start()
     {
-        ChangeLayerPlayingFieldLayer();
+        SetLayerToPlayingFieldLayer();
     }
 
     /**
@@ -36,7 +36,7 @@ public abstract class HookableObject : MonoBehaviour
     /**
      * change collision layer to PlayingFieldLayer
      */
-    public void ChangeLayerPlayingFieldLayer()
+    public void SetLayerToPlayingFieldLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
@@ -47,6 +47,15 @@ public abstract class HookableObject : MonoBehaviour
     public void SetTransformParent(Transform parentTransform)
     {
         this.transform.parent = parentTransform;
+    }
+
+    public void SetParent(GameObject parent)
+    {
+        _parent = parent;
+    }
+
+    protected virtual void OnWoundIn()
+    {
     }
 }
 
@@ -67,7 +76,7 @@ public class Stone : HookableObject
     /**
      * change collision layer to DraggableLayer
      */
-    public void ChangeLayerDraggableLayer()
+    public void SetLayerToDraggableLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
@@ -81,6 +90,12 @@ public class Stone : HookableObject
     {
         _draggable = state;
     }
+
+    protected override void OnWoundIn()
+    {
+        SetLayerToDraggableLayer();
+        
+    }
 }
 
 /**
@@ -90,4 +105,8 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
+    protected override void OnWoundIn()
+    {
+        base.OnWoundIn();
+    }
 }
