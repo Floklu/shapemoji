@@ -77,23 +77,22 @@ namespace Spawner
          */
         public void CreateRandomStone()
         {
-            if (!IsFull())
-            {
-                var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
-                if (places.Count > 0)
-                {
-                    var random = Random.Range(0, places.Count);
-                    var place = places[random];
-                    var spawn = place.GetComponent<SpawnPlace>();
-
-                    var spawnPosition = place.transform.position;
-                    var x = spawnPosition.x;
-                    var y = spawnPosition.y;
-                    var stone = factory.CreateStone(x, y);
-                    spawn.stone = stone;    
-                }
+            if (IsFull()) return;
             
-            }
+            var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
+            
+            if (places.Count < 1) return;
+            
+            var random = Random.Range(0, places.Count);
+            var place = places[random];
+            var spawn = place.GetComponent<SpawnPlace>();
+
+            var spawnPosition = place.transform.position;
+            var x = spawnPosition.x;
+            var y = spawnPosition.y;
+            var stone = factory.CreateStone(x, y);
+            spawn.stone = stone;    
+            
         }
     
         /**
