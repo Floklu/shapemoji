@@ -150,6 +150,7 @@ namespace Harpoon
          */
         private void OnRotationEvent(float e)
         {
+            e = (e + 360) % 360;
             RotationEvent?.Invoke(this, e);
         }
     }
