@@ -100,6 +100,9 @@ public static class HookableObjectController
 
     /**
      * StoneToInventory handles adding and functionality if the inventory is full
+     *
+     * @param stone The stone to put into the inventory
+     * @param inventory The inventory the stone is added to
      */
     public static void StoneToInventory(Stone stone, GameObject inventory)
     {
@@ -115,6 +118,8 @@ public static class HookableObjectController
 
     /**
      * ActivateItem activates the item
+     *
+     * @param Item item
      */
     public static void ActivateItem(Item item)
     {
