@@ -12,7 +12,7 @@ namespace Spawner
     {
         [FormerlySerializedAs("MaxStones")] public int maxStones;
 
-        public StoneFactory factory;
+        public HookableGameObjectFactory factory;
         public List<GameObject> spawnZones;
         
         private readonly List<GameObject> _spawnPlaces;
@@ -89,7 +89,6 @@ namespace Spawner
                     var spawnPosition = place.transform.position;
                     var x = spawnPosition.x;
                     var y = spawnPosition.y;
-            
                     var stone = factory.CreateStone(x, y);
                     spawn.stone = stone;    
                 }

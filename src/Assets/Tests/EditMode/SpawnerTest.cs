@@ -25,7 +25,7 @@ namespace Tests.EditMode
         [UnityTest]
         public IEnumerator SpawnerTestStoneFactoryCreateStone()
         {
-            var stoneFactory = GameObject.Find("StoneSpawner")?.GetComponent<StoneFactory>();
+            var stoneFactory = GameObject.Find("StoneSpawner")?.GetComponent<HookableGameObjectFactory>();
             Assert.NotNull(stoneFactory);
 
             var x = Random.Range(0,100);
