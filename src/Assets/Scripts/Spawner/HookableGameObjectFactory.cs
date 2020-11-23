@@ -59,6 +59,7 @@ namespace Spawner
             //create item
             var item = CreateHookableGameObject(preFab, x, y);
             item.AddComponent(typeof(Item));
+
             return item; 
         }
 
@@ -74,6 +75,7 @@ namespace Spawner
         {
             var spawnPosition = new Vector3(x, y, 0);
             return Instantiate(preFab, spawnPosition, Quaternion.identity);
+
         }
     }
 }

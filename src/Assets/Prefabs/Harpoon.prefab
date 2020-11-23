@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 5808457211136051224}
   - component: {fileID: 4991288599808777349}
   - component: {fileID: 7904420701052112367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HarpoonProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
