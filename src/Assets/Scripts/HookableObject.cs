@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Transactions;
 using UnityEditor;
 using UnityEngine;
+using Lean.Touch;
 
 
 //TODO: at critical number of lines cut into multiple .cs files
@@ -115,6 +116,8 @@ public class Stone : HookableObject
     protected override void OnWoundIn()
     {
         SetLayerToDraggableLayer();
+        // still WIP
+        gameObject.AddComponent<LeanDragTranslate>();
     }
 }
 
