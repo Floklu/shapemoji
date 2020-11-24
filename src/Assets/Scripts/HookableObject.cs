@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
-using Lean.Touch;
+//using Lean.Touch;
 using UnityEditor;
 using UnityEngine;
 
@@ -124,12 +124,14 @@ public class Stone : HookableObject
     public override void OnWoundIn()
     {
         SetLayerToDraggableLayer();
+        /*
         // to move the stone with touch
         gameObject.AddComponent<LeanDragTranslate>();
         // to only move the stone you touch
         gameObject.AddComponent<LeanSelectable>();
         // to deselect when not touching the stone anymore
         gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
+        */
     }
 }
 
