@@ -127,4 +127,9 @@ public static class HookableObjectController
     public static void ActivateItem(Item item)
     {
     }
+
+    public void RemoveFromInventory(Stone stone)
+    {
+        
+    }
 }

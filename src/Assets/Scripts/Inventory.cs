@@ -6,6 +6,9 @@
 public class Inventory : MonoBehaviour
 {
     private readonly bool[] _slotIsFull = new bool[4];
+    private readonly Stone[] _stoneInSlot = new Stone[4];
+    
+    
 
     [SerializeField] private GameObject[] slots = new GameObject[4];
 
@@ -23,10 +26,16 @@ public class Inventory : MonoBehaviour
             if (_slotIsFull[i] == false)
             {
                 _slotIsFull[i] = true;
+                _stoneInSlot = stone;
                 return slots[i].transform.position;
             }
         }
 
         return null;
+    }
+
+    public void RemoveFromInventory(Stone stone)
+    {
+        
     }
 }
