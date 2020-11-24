@@ -77,6 +77,9 @@ public abstract class HookableObject : MonoBehaviour
     {
     }
 
+    /**
+     * DestroyHookableObject destroys the hookable object
+     */
     public void DestroyHookableObject()
     {
         Destroy(gameObject);
