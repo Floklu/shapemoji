@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
             if (_slotIsFull[i] == false)
             {
                 _slotIsFull[i] = true;
-                _stoneInSlot = stone;
+                _stoneInSlot[i] = stone;
                 return slots[i].transform.position;
             }
         }
