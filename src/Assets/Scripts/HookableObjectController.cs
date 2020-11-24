@@ -128,7 +128,7 @@ public static class HookableObjectController
     {
     }
 
-    public void RemoveFromInventory(Stone stone)
+    public static void RemoveFromInventory(Stone stone)
     {
         
     }
