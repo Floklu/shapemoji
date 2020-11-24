@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
+using Lean.Touch;
 using UnityEditor;
 using UnityEngine;
 
@@ -20,7 +21,7 @@ public abstract class HookableObject : MonoBehaviour
      */
     protected virtual void Start()
     {
-        ChangeLayerPlayingFieldLayer();
+        SetLayerToPlayingFieldLayer();
     }
 
     /**
@@ -36,7 +37,7 @@ public abstract class HookableObject : MonoBehaviour
     /**
      * change collision layer to PlayingFieldLayer
      */
-    public void ChangeLayerPlayingFieldLayer()
+    public void SetLayerToPlayingFieldLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
@@ -47,6 +48,33 @@ public abstract class HookableObject : MonoBehaviour
     public void SetTransformParent(Transform parentTransform)
     {
         this.transform.parent = parentTransform;
+    }
+
+    /**
+     * SetParent sets the parent of this gameobject
+     *
+     * @param GameObject parent: parent to set
+     */
+    public void SetParent(GameObject parent)
+    {
+        _parent = parent;
+    }
+
+    /**
+     * SetPosition sets the position of the hookable object
+     *
+     * @param position The position to set the hookable object to
+     */
+    public void SetPosition(Vector3 position)
+    {
+        gameObject.transform.position = position;
+    }
+
+    /**
+     * OnWoundIn is called when the Harpoon is wound in
+     */
+    public virtual void OnWoundIn()
+    {
     }
 }
 
@@ -67,7 +95,7 @@ public class Stone : HookableObject
     /**
      * change collision layer to DraggableLayer
      */
-    public void ChangeLayerDraggableLayer()
+    public void SetLayerToDraggableLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
@@ -81,6 +109,20 @@ public class Stone : HookableObject
     {
         _draggable = state;
     }
+
+    /**
+     * OnWoundIn changes the stone so it can be dragged and not get hit by projectiles 
+     */
+    public override void OnWoundIn()
+    {
+        SetLayerToDraggableLayer();
+        // to move the stone with touch
+        gameObject.AddComponent<LeanDragTranslate>();
+        // to only move the stone you touch
+        gameObject.AddComponent<LeanSelectable>();
+        // to deselect when not touching the stone anymore
+        gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
+    }
 }
 
 /**
@@ -90,4 +132,8 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
+    public override void OnWoundIn()
+    {
+        base.OnWoundIn();
+    }
 }

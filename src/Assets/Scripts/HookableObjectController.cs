@@ -97,4 +97,34 @@ public static class HookableObjectController
     {
         _harpoonControllers.Remove(harpoonController);
     }
+
+    /**
+     * StoneToInventory handles adding and functionality if the inventory is full
+     *
+     * @param stone The stone to put into the inventory
+     * @param inventory The inventory the stone is added to
+     */
+    public static void StoneToInventory(Stone stone, GameObject inventory)
+    {
+        var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
+        if (position.HasValue)
+        {
+            stone.OnWoundIn();
+            stone.SetParent(inventory);
+            stone.SetPosition(position.Value);
+        }
+        else
+        {
+            // Task #417
+        }
+    }
+
+    /**
+     * ActivateItem activates the item
+     *
+     * @param Item item
+     */
+    public static void ActivateItem(Item item)
+    {
+    }
 }

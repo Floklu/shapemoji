@@ -16,18 +16,17 @@ public class Inventory : MonoBehaviour
      *
      * @return true if stone could be added, false otherwise 
      */
-    public bool AddToInventory(Stone stone)
+    public Vector3? AddToInventory(Stone stone)
     {
         for (int i = 0; i < slots.Length; i++)
         {
             if (_slotIsFull[i] == false)
             {
                 _slotIsFull[i] = true;
-                stone.gameObject.transform.position = slots[i].transform.position;
-                return true;
+                return slots[i].transform.position;
             }
         }
 
-        return false;
+        return null;
     }
 }
