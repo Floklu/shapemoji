@@ -76,6 +76,11 @@ public abstract class HookableObject : MonoBehaviour
     public virtual void OnWoundIn()
     {
     }
+
+    public void DestroyHookableObject()
+    {
+        Destroy(gameObject);
+    }
 }
 
 /**

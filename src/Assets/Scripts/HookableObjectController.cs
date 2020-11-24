@@ -115,7 +115,7 @@ public static class HookableObjectController
         }
         else
         {
-            // Task #417
+            stone.DestroyHookableObject();
         }
     }
 
