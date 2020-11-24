@@ -32,24 +32,26 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator CornerTest()
         {
+            
             LoadPlayer(3);
             yield return AimAtPoint(Screen.width, 1);
-            LoadPlayer(1);
-            yield return AimAtPoint(0, 0);
-            LoadPlayer(2);
-            yield return AimAtPoint(0, Screen.height);
-            LoadPlayer(4);
-            yield return AimAtPoint(Screen.width, Screen.height);
+            //LoadPlayer(1);
+            //yield return AimAtPoint(0, 0);
+            //LoadPlayer(2);
+            //yield return AimAtPoint(0, Screen.height);
+            //LoadPlayer(4);
+            //yield return AimAtPoint(Screen.width, Screen.height);
 
         }
         
         /**
          * Test border collision at corner (left side)
          * Projectile is a Polygon Collider, therefore a precise aim is not possible
-         */
+         
         [UnityTest]
         public IEnumerator CornerLeftTest()
         {
+            
             LoadPlayer(3);
             yield return AimAtPoint(Screen.width, 0);
             LoadPlayer(1);
@@ -58,16 +60,20 @@ namespace Tests.PlayMode
             yield return AimAtPoint(2, Screen.height);
             LoadPlayer(4);
             yield return AimAtPoint(Screen.width, Screen.height-6);
-
+            
         }
+        */
         
         /**
          * Test border collision at corner (right side)
          * Projectile is a Polygon Collider, therefore a precise aim is not possible
-         */
+         
+        
         [UnityTest]
+        
         public IEnumerator CornerRightTest()
         {
+            
             LoadPlayer(3);
             yield return AimAtPoint(Screen.width, 6);
             LoadPlayer(1);
@@ -76,8 +82,10 @@ namespace Tests.PlayMode
             yield return AimAtPoint(0, Screen.height-5);
             LoadPlayer(4);
             yield return AimAtPoint(Screen.width-3, Screen.height);
+            
 
         }
+        */
 
         /**
          * Rotates Harpoon to aim at point
