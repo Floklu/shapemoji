@@ -14,7 +14,8 @@ namespace Tests.PlayMode
      */
     public class WallsCornerTest
     {
-        private GameObject _harpoon,_projectile;
+        private float _centerX, _centerY;
+        private GameObject _harpoon, _projectile, _inventory;
 
         /**
          * Setup test environment
@@ -32,60 +33,47 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator CornerTest()
         {
-            
-            LoadPlayer(3);
-            yield return AimAtPoint(Screen.width, 1);
-            //LoadPlayer(1);
-            //yield return AimAtPoint(0, 0);
-            //LoadPlayer(2);
-            //yield return AimAtPoint(0, Screen.height);
-            //LoadPlayer(4);
-            //yield return AimAtPoint(Screen.width, Screen.height);
-
+            for (int i = 0; i < 4; i++)
+            {
+                LoadPlayer(i + 1);
+                yield return AimAtPoint(_centerX, _centerY);
+            }
         }
-        
+
         /**
          * Test border collision at corner (left side)
          * Projectile is a Polygon Collider, therefore a precise aim is not possible
-         
+         */
         [UnityTest]
         public IEnumerator CornerLeftTest()
         {
-            
             LoadPlayer(3);
-            yield return AimAtPoint(Screen.width, 0);
+            yield return AimAtPoint(_centerX - 1, _centerY);
             LoadPlayer(1);
-            yield return AimAtPoint(0, 5);
+            yield return AimAtPoint(_centerX, _centerY + 1);
             LoadPlayer(2);
-            yield return AimAtPoint(2, Screen.height);
+            yield return AimAtPoint(_centerX + 1, _centerY);
             LoadPlayer(4);
-            yield return AimAtPoint(Screen.width, Screen.height-6);
-            
+            yield return AimAtPoint(_centerX, _centerY - 1);
         }
-        */
-        
+
         /**
          * Test border collision at corner (right side)
          * Projectile is a Polygon Collider, therefore a precise aim is not possible
-         
-        
+         */
         [UnityTest]
-        
         public IEnumerator CornerRightTest()
         {
-            
             LoadPlayer(3);
-            yield return AimAtPoint(Screen.width, 6);
+            yield return AimAtPoint(_centerX, _centerY + 1);
             LoadPlayer(1);
-            yield return AimAtPoint(1, 0);
+            yield return AimAtPoint(_centerX + 1, _centerY);
             LoadPlayer(2);
-            yield return AimAtPoint(0, Screen.height-5);
+            yield return AimAtPoint(_centerX, _centerY - 1);
             LoadPlayer(4);
-            yield return AimAtPoint(Screen.width-3, Screen.height);
-            
-
+            yield return AimAtPoint(_centerX - 1, _centerY);
         }
-        */
+
 
         /**
          * Rotates Harpoon to aim at point
@@ -93,36 +81,19 @@ namespace Tests.PlayMode
          * @param pointX x parameter of point to aim in Screen Coordinates
          * @param pointY y parameter of point to aim in Screen Coordinates
          */
-        private IEnumerator AimAtPoint(int pointX, int pointY)
+        private IEnumerator AimAtPoint(float pointX, float pointY)
         {
             Quaternion q = Quaternion.Euler(_harpoon.transform.eulerAngles);
             Vector3 harpoonRotation = q * Vector3.up;
-            Vector3 pointWorldCoord = new Vector3(0, 0, 0);
-
-            if (!(Camera.main is null))
-            {
-                pointWorldCoord = Camera.main.ScreenToWorldPoint(new Vector3(pointX, pointY, 0));
-                pointWorldCoord.z = 0;
-            }
-            else
-            {
-                Assert.IsTrue(false);
-            }
+            Vector3 pointWorldCoord = new Vector3(pointX, pointY, 0);
 
             Vector3 harpoonPosition = _harpoon.transform.position;
             Vector3 path = pointWorldCoord - harpoonPosition;
-            float angle = Vector3.SignedAngle(harpoonRotation, path,Vector3.forward);
+            float angle = Vector3.SignedAngle(harpoonRotation, path, Vector3.forward);
             _harpoon.transform.Rotate(0, 0, angle);
             _harpoon.GetComponent<HarpoonController>().Shoot();
-
-            yield return new WaitForSeconds(5.0f);
-            
+            yield return new WaitForSeconds(1.5f);
             Assert.Zero(_projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
-            var distanceFromTarget = (_projectile.transform.position - pointWorldCoord);
-            Assert.AreEqual(0.0f,distanceFromTarget.magnitude,200);
-            
-            //Assert.AreEqual(1,1);
-
         }
 
         /**
@@ -136,7 +107,14 @@ namespace Tests.PlayMode
             _projectile =
                 GameObject.Find("Team_" + team + "/Player_" + player +
                                 "/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
+            _inventory =
+                GameObject.Find("Team_" + team + "/Player_" + player +
+                                "/Base/Inventory");
 
+            var inventoryPosition = _inventory.transform.position;
+
+            _centerX = inventoryPosition.x;
+            _centerY = inventoryPosition.y;
         }
     }
 }
