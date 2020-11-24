@@ -115,7 +115,7 @@ namespace Tests.PlayMode
             _harpoon.transform.Rotate(0, 0, angle);
             _harpoon.GetComponent<HarpoonController>().Shoot();
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(5.0f);
             
             Assert.Zero(_projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
             var distanceFromTarget = (_projectile.transform.position - pointWorldCoord);
