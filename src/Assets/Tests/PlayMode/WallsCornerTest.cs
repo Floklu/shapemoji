@@ -14,7 +14,14 @@ namespace Tests.PlayMode
      */
     public class WallsCornerTest
     {
+        /*
+         * _centerX is x coordinate of inventory center
+         * _centerY is y coordinate of inventory center
+         */
         private float _centerX, _centerY;
+        /*
+         * _harpoon, _projectile, _inventory are GameObjects selected by class method LoadPlayer
+         */
         private GameObject _harpoon, _projectile, _inventory;
 
         /**
@@ -28,7 +35,6 @@ namespace Tests.PlayMode
 
         /**
          * Test border collision at corner (both sides)
-         * Projectile is a Polygon Collider, therefore a precise aim is not possible
          */
         [UnityTest]
         public IEnumerator CornerTest()
@@ -42,7 +48,6 @@ namespace Tests.PlayMode
 
         /**
          * Test border collision at corner (left side)
-         * Projectile is a Polygon Collider, therefore a precise aim is not possible
          */
         [UnityTest]
         public IEnumerator CornerLeftTest()
@@ -59,7 +64,6 @@ namespace Tests.PlayMode
 
         /**
          * Test border collision at corner (right side)
-         * Projectile is a Polygon Collider, therefore a precise aim is not possible
          */
         [UnityTest]
         public IEnumerator CornerRightTest()
