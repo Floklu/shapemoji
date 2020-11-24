@@ -104,19 +104,25 @@ public static class HookableObjectController
      * @param stone The stone to put into the inventory
      * @param inventory The inventory the stone is added to
      */
-    public static void StoneToInventory(Stone stone, GameObject inventory)
+    public static void StoneToInventory(Stone stone, Inventory inventory)
     {
         var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
         if (position.HasValue)
         {
-            stone.OnWoundIn();
-            stone.SetParent(inventory);
+            stone.SetLayerToDraggableLayer();
+            stone.SetDraggable(true);
+            stone.SetParent(inventory.gameObject);
             stone.SetPosition(position.Value);
         }
         else
         {
             // Task #417
         }
+    }
+
+    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
+    {
+        hookableObject.OnWoundIn(inventory);
     }
 
     /**
@@ -128,8 +134,13 @@ public static class HookableObjectController
     {
     }
 
-    public static void RemoveFromInventory(Stone stone)
+    public static void RemoveStoneFromInventory(Stone stone, Inventory inventory)
     {
-        
+        inventory.RemoveFromInventory(stone);
+    }
+
+    public static Vector3 GetParentPositionOfChildStone(CanHoldHookableObject parent, Stone stone)
+    {
+        return parent.GetPositionOfStoneChild(stone);
     }
 }

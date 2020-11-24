@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 /**
  * Class Inventory contains the inventory functionality
  */
-public class Inventory : MonoBehaviour
+public class Inventory : CanHoldHookableObject
 {
     private readonly bool[] _slotIsFull = new bool[4];
-    private readonly Stone[] _stoneInSlot = new Stone[4];
-    
-    
+    private readonly List<Stone> _stoneInSlot = new List<Stone>(4);
+
+
 
     [SerializeField] private GameObject[] slots = new GameObject[4];
 
@@ -34,8 +35,18 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
+    
     public void RemoveFromInventory(Stone stone)
     {
-        
+        var i = _stoneInSlot.IndexOf(stone);
+        _slotIsFull[i] = false;
+        _stoneInSlot.RemoveAt(i);
+    }
+    
+
+    public override Vector3 GetPositionOfStoneChild(Stone stone)
+    {
+        var i = _stoneInSlot.IndexOf(stone);
+        return slots[i].transform.position;
     }
 }
