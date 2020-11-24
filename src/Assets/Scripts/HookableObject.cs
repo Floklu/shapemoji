@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
+using Lean.Touch;
 using UnityEditor;
 using UnityEngine;
-using Lean.Touch;
 
 
 //TODO: at critical number of lines cut into multiple .cs files
@@ -73,7 +73,7 @@ public abstract class HookableObject : MonoBehaviour
     /**
      * OnWoundIn is called when the Harpoon is wound in
      */
-    protected virtual void OnWoundIn()
+    public virtual void OnWoundIn()
     {
     }
 }
@@ -113,11 +113,15 @@ public class Stone : HookableObject
     /**
      * OnWoundIn changes the stone so it can be dragged and not get hit by projectiles 
      */
-    protected override void OnWoundIn()
+    public override void OnWoundIn()
     {
         SetLayerToDraggableLayer();
-        // still WIP
+        // to move the stone with touch
         gameObject.AddComponent<LeanDragTranslate>();
+        // to only move the stone you touch
+        gameObject.AddComponent<LeanSelectable>();
+        // to deselect when not touching the stone anymore
+        gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
     }
 }
 
@@ -128,7 +132,7 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
-    protected override void OnWoundIn()
+    public override void OnWoundIn()
     {
         base.OnWoundIn();
     }

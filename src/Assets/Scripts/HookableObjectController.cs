@@ -109,6 +109,7 @@ public static class HookableObjectController
         var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
         if (position.HasValue)
         {
+            stone.OnWoundIn();
             stone.SetParent(inventory);
             stone.SetPosition(position.Value);
         }
