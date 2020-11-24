@@ -34,7 +34,7 @@ namespace Tests.PlayMode
             var projectile = GameObject.Find("HarpoonProjectile");
             var location = projectile.transform.position;
             var harpoon = GameObject.Find("Harpoon");
-            harpoon.GetComponent<HarpoonController>().Shoot();
+            harpoon.GetComponent<HarpoonController>().ShootProjectile();
 
             yield return new WaitForSeconds(1);
 
@@ -53,11 +53,11 @@ namespace Tests.PlayMode
             var location = projectile.transform.position;
             var harpoon = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
             var wheel = GameObject.Find("Wheel").GetComponent<CrankController>();
-            harpoon.Shoot();
+            harpoon.ShootProjectile();
 
             yield return new WaitForSeconds(1);
 
-            harpoon.StopCannon();
+            harpoon.StopProjectileMovement();
             var locationNew = projectile.transform.position;
             Assert.AreNotEqual(projectile.transform.position, location, "Projectile has not been moved since 1 second");
             yield return new WaitForSeconds(1);
@@ -84,11 +84,11 @@ namespace Tests.PlayMode
             var location = projectile.transform.position;
             var harpoon = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
             var wheel = GameObject.Find("Wheel").GetComponent<CrankController>();
-            harpoon.Shoot();
+            harpoon.ShootProjectile();
 
             yield return new WaitForSeconds(1);
 
-            harpoon.StopCannon();
+            harpoon.StopProjectileMovement();
             var locationNew = projectile.transform.position;
             Assert.AreNotEqual(projectile.transform.position, location, "Projectile has not been moved since 1 second");
             yield return new WaitForSeconds(1);
@@ -105,7 +105,7 @@ namespace Tests.PlayMode
             
             // Projectile should have returned to harpoon
             location = projectile.transform.position;
-            harpoon.Shoot();
+            harpoon.ShootProjectile();
             yield return new WaitForSeconds(1);
 
             Assert.AreNotEqual(projectile.transform.position, location, "Second shot wasn't successful");
