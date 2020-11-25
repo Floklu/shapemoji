@@ -114,13 +114,6 @@ public class Stone : HookableObject
         HookableObjectController.StoneToInventory(this, inventory);
     }
     
-    /**
-     * change collision layer to DraggableLayer
-     */
-    public void SetLayerToDraggableLayer()
-    {
-        this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
-    }
 
     /**
      * Calls for action at controller on collision with

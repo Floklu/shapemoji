@@ -11,7 +11,7 @@ public class Inventory : CanHoldHookableObject
 
 
 
-[SerializeField] private GameObject[] slots = new GameObject[4];
+[SerializeField] public GameObject[] slots = new GameObject[4];
 
     /**
      * AddToInventory adds a Stone to an empty slot in the inventory
