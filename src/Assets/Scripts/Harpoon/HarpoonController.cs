@@ -121,7 +121,7 @@ namespace Harpoon
         */
         public void NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject collidedObject)
         {
-            if (collidedObject == _projectileObj)
+            if (collidedObject.Equals(_projectileObj))
             {
                 _objectHooked = hookableObject;
                 _movingProjectile.AttachObject(hookableObject.gameObject);
