@@ -48,6 +48,15 @@ public abstract class HookableObject : MonoBehaviour
     {
         this.transform.parent = parentTransform;
     }
+    
+    /**
+     * OnWoundIn is called when the Harpoon is wound in
+     * Source: branch 414
+     * ToDo: Change GameObject to Inventory
+     */
+    public abstract void OnWoundIn(GameObject inventory);
+
+    
 }
 
 /**
@@ -71,6 +80,18 @@ public class Stone : HookableObject
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
+    
+    /**
+     * Source: Branch 414
+     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
+     *
+     * @param inventory where stone is put to
+     */
+    public override void OnWoundIn(GameObject inventory)
+    {
+        HookableObjectController.StoneToInventory(this, inventory);
+    }
+
 
     /**
      * sets property _draggable
@@ -90,4 +111,17 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
+    
+    /**
+     * Source: branch 414
+     * ToDo: change GameObject to Inventory
+     *  gets called by controller on wound in event
+     *
+     * @param inventory belonging to the player base
+     */
+    public override void OnWoundIn(GameObject inventory)
+    {
+        throw new System.NotImplementedException();
+    }
+
 }

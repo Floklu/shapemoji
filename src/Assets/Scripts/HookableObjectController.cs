@@ -51,6 +51,33 @@ public static class HookableObjectController
             AttachHookableObjectToProjectile(item, gameObject);
         }
     }
+    
+    /**
+     * Source: Branch 414
+     * ToDo: remove comments and chane GameObject to Inventory
+     * StoneToInventory handles adding and functionality if the inventory is full
+     *
+     * @param stone The stone to put into the inventory
+     * @param inventory The inventory the stone is added to
+     */
+    public static void StoneToInventory(Stone stone, GameObject inventory)
+    {
+        /*
+        var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
+        if (position.HasValue)
+        {
+            stone.SetLayerToDraggableLayer();
+            stone.SetDraggable(true);
+            stone.SetParent(inventory.gameObject);
+            stone.SetPosition(position.Value);
+        }
+        else
+        {
+            // Task #417
+        }
+        */
+    }
+
 
     /**
      * action needed when Stone is made draggable
@@ -72,14 +99,23 @@ public static class HookableObjectController
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
         //TODO: enable when implemented in harpoonController
-        /*
-        foreach (var harpoonController in harpoonControllers)
+        
+        foreach (var harpoonController in _harpoonControllers)
         {
-            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject)
+            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
         }
-        */
+        
 
         hookableObject.SetTransformParent(projectileGameObject.transform);
+    }
+
+    /**
+     * TODO: replace GameObject with Inventory Class
+     * (Code from 414 Branch)
+     */
+    public static void OnWoundIn(HookableObject hookableObject, GameObject inventory)
+    {
+        //hookableObject.OnWoundIn(inventory);
     }
 
     /**
