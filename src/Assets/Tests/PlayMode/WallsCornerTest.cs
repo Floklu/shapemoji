@@ -95,7 +95,7 @@ namespace Tests.PlayMode
             Vector3 path = pointWorldCoord - harpoonPosition;
             float angle = Vector3.SignedAngle(harpoonRotation, path, Vector3.forward);
             _harpoon.transform.Rotate(0, 0, angle);
-            _harpoon.GetComponent<HarpoonController>().Shoot();
+            _harpoon.GetComponent<HarpoonController>().ShootProjectile();
             yield return new WaitForSeconds(1.5f);
             Assert.Zero(_projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
         }
