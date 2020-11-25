@@ -120,6 +120,12 @@ public static class HookableObjectController
         }
     }
 
+    /**
+     * handles OnWoundIn event, called by HarpoonContoler
+     *
+     * @param hookableObject object attached to projectile to be handeled
+     * @param inventory of player base where WoundIn event happened
+     */
     public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
     {
         hookableObject.OnWoundIn(inventory);
@@ -134,11 +140,23 @@ public static class HookableObjectController
     {
     }
 
+    /**
+     * remove a stone from inventory. Caution: no new parent for stone is set at this point! Instead this has to be done in event of new parent.
+     *
+     * @param stone to remove
+     * @param inventory where stone should be removed
+     */
     public static void RemoveStoneFromInventory(Stone stone, Inventory inventory)
     {
         inventory.RemoveFromInventory(stone);
     }
-
+    
+    /**
+     * returns designated Vector3 position of stone from any CanHoldHookableObject knowing this stone
+     *
+     * @param parent CanHoldHookableObject where stone is part of
+     * @param stone to find its position to
+     */
     public static Vector3 GetParentPositionOfChildStone(CanHoldHookableObject parent, Stone stone)
     {
         return parent.GetPositionOfStoneChild(stone);
