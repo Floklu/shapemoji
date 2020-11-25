@@ -12,6 +12,7 @@ namespace Harpoon
         
         private RotatableHandler _rotatableHandler;
         private HarpoonShotHandler _shotHandler;
+        private HarpoonWoundInHandler _woundInHandler;
         private ProjectileCollision _projectileCollision;
         private MovingProjectile _movingProjectile;
         private HarpoonRope _rope;
@@ -20,6 +21,8 @@ namespace Harpoon
         
         private bool _windIn;
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
+        private HookableObject _objectHooked;
+        private GameObject _inventory;
 
 
         private void Start()
@@ -29,8 +32,11 @@ namespace Harpoon
             var ropeObj = gameObject.transform.Find("HarpoonCannon/HarpoonRope").gameObject;
             _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
 
+            _inventory = gameObject.transform.Find("../../Inventory").gameObject;
+            
             _rotatableHandler = GetComponent<RotatableHandler>();
             _shotHandler = GetComponent<HarpoonShotHandler>();
+            _woundInHandler = _cannonCollider.GetComponent<HarpoonWoundInHandler>();
             _projectileCollision = projectileObj.GetComponent<ProjectileCollision>();
             _movingProjectile = projectileObj.GetComponent<MovingProjectile>();
             _rope = ropeObj.GetComponent<HarpoonRope>();
@@ -41,7 +47,8 @@ namespace Harpoon
             _rotatableHandler.RotationEvent += OnRotationEvent;
             _shotHandler.ShotEvent += OnShotEvent;
             _projectileCollision.CollisionEvent += ProjectileOnCollisionEvent;
-            
+            _woundInHandler.CollisionEvent += OnWoundInEvent;
+
         }
 
         /**
@@ -63,6 +70,7 @@ namespace Harpoon
             {
                 ResetCannon();
                 //TODO handle WoundIn specific behaviour
+                
             }
             else //Harpoon hasn't been wound in
             {
@@ -115,11 +123,39 @@ namespace Harpoon
         */
         public void NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject projectile)
         {
-            throw new NotImplementedException();
+            var projectileObj = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
+
+            if (projectile == projectileObj)
+            {
+                if (hookableObject.GetType() == typeof(Stone))
+                {
+                    _objectHooked = hookableObject;
+                    _movingProjectile.AttachObject(hookableObject.gameObject);
+                
+                } 
+                else if (hookableObject.GetType() == typeof(Item))
+                {
+                    _objectHooked = hookableObject;
+                    _movingProjectile.AttachObject(hookableObject.gameObject);
+                }
+            }
+
         }                
          
         
         #region EventHandling
+
+        private void OnWoundInEvent(object sender, EventArgs eventArg)
+        {
+            if (_objectHooked != null)
+            {
+                _movingProjectile.UnattachObject();
+                HookableObjectController.OnWoundIn(_objectHooked,_inventory);
+            }
+
+            _objectHooked = null;
+            Debug.Log("Wound In");
+        }
         
         /**
          * implements CollisionEvent
