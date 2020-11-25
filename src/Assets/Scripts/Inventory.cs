@@ -1,11 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 /**
  * Class Inventory contains the inventory functionality
  */
-public class Inventory : MonoBehaviour
+public class Inventory : CanHoldHookableObject
 {
     private readonly bool[] _slotIsFull = new bool[4];
+    private readonly List<Stone> _stoneInSlot = new List<Stone>(4);
+
+
 
     [SerializeField] private GameObject[] slots = new GameObject[4];
 
@@ -16,18 +20,42 @@ public class Inventory : MonoBehaviour
      *
      * @return true if stone could be added, false otherwise 
      */
-    public bool AddToInventory(Stone stone)
+    public Vector3? AddToInventory(Stone stone)
     {
         for (int i = 0; i < slots.Length; i++)
         {
             if (_slotIsFull[i] == false)
             {
                 _slotIsFull[i] = true;
-                stone.gameObject.transform.position = slots[i].transform.position;
-                return true;
+                _stoneInSlot[i] = stone;
+                return slots[i].transform.position;
             }
         }
 
-        return false;
+        return null;
+    }
+
+    /**
+     * remove a given stone from inventory, making its slot again
+     *
+     * @param stone to remove
+     */
+    public void RemoveFromInventory(Stone stone)
+    {
+        var i = _stoneInSlot.IndexOf(stone);
+        _slotIsFull[i] = false;
+        _stoneInSlot.RemoveAt(i);
+    }
+    
+    /**
+     * returns the position of stone inventory slot belonging to stone
+     *
+     * @param stone belonging to slot
+     */
+    //TODO: handle index out of boundary exception?
+    public override Vector3 GetPositionOfStoneChild(Stone stone)
+    {
+        var i = _stoneInSlot.IndexOf(stone);
+        return slots[i].transform.position;
     }
 }

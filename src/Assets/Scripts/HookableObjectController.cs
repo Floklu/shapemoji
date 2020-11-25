@@ -51,33 +51,6 @@ public static class HookableObjectController
             AttachHookableObjectToProjectile(item, gameObject);
         }
     }
-    
-    /**
-     * Source: Branch 414
-     * ToDo: remove comments and chane GameObject to Inventory
-     * StoneToInventory handles adding and functionality if the inventory is full
-     *
-     * @param stone The stone to put into the inventory
-     * @param inventory The inventory the stone is added to
-     */
-    public static void StoneToInventory(Stone stone, GameObject inventory)
-    {
-        /*
-        var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
-        if (position.HasValue)
-        {
-            stone.SetLayerToDraggableLayer();
-            stone.SetDraggable(true);
-            stone.SetParent(inventory.gameObject);
-            stone.SetPosition(position.Value);
-        }
-        else
-        {
-            // Task #417
-        }
-        */
-    }
-
 
     /**
      * action needed when Stone is made draggable
@@ -99,23 +72,14 @@ public static class HookableObjectController
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
         //TODO: enable when implemented in harpoonController
-        
-        foreach (var harpoonController in _harpoonControllers)
+        /*
+        foreach (var harpoonController in harpoonControllers)
         {
-            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
+            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject)
         }
-        
+        */
 
         hookableObject.SetTransformParent(projectileGameObject.transform);
-    }
-
-    /**
-     * TODO: replace GameObject with Inventory Class
-     * (Code from 414 Branch)
-     */
-    public static void OnWoundIn(HookableObject hookableObject, GameObject inventory)
-    {
-        //hookableObject.OnWoundIn(inventory);
     }
 
     /**
@@ -132,5 +96,69 @@ public static class HookableObjectController
     public static void RemoveHarpoonController(HarpoonController harpoonController)
     {
         _harpoonControllers.Remove(harpoonController);
+    }
+
+    /**
+     * StoneToInventory handles adding and functionality if the inventory is full
+     *
+     * @param stone The stone to put into the inventory
+     * @param inventory The inventory the stone is added to
+     */
+    public static void StoneToInventory(Stone stone, Inventory inventory)
+    {
+        var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
+        if (position.HasValue)
+        {
+            stone.SetLayerToDraggableLayer();
+            stone.SetDraggable(true);
+            stone.SetParent(inventory.gameObject);
+            stone.SetPosition(position.Value);
+        }
+        else
+        {
+            // Task #417
+        }
+    }
+
+    /**
+     * handles OnWoundIn event, called by HarpoonContoler
+     *
+     * @param hookableObject object attached to projectile to be handeled
+     * @param inventory of player base where WoundIn event happened
+     */
+    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
+    {
+        hookableObject.OnWoundIn(inventory);
+    }
+
+    /**
+     * ActivateItem activates the item
+     *
+     * @param Item item
+     */
+    public static void ActivateItem(Item item)
+    {
+    }
+
+    /**
+     * remove a stone from inventory. Caution: no new parent for stone is set at this point! Instead this has to be done in event of new parent.
+     *
+     * @param stone to remove
+     * @param inventory where stone should be removed
+     */
+    public static void RemoveStoneFromInventory(Stone stone, Inventory inventory)
+    {
+        inventory.RemoveFromInventory(stone);
+    }
+    
+    /**
+     * returns designated Vector3 position of stone from any CanHoldHookableObject knowing this stone
+     *
+     * @param parent CanHoldHookableObject where stone is part of
+     * @param stone to find its position to
+     */
+    public static Vector3 GetParentPositionOfChildStone(CanHoldHookableObject parent, Stone stone)
+    {
+        return parent.GetPositionOfStoneChild(stone);
     }
 }

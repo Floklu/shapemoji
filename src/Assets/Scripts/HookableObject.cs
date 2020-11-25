@@ -13,14 +13,15 @@ using UnityEngine;
  *  */
 public abstract class HookableObject : MonoBehaviour
 {
-    private GameObject _parent;
+    protected GameObject _parent;
+    
 
     /**
      * on Start() set layer to PlayingFieldLayer
      */
     protected virtual void Start()
     {
-        ChangeLayerPlayingFieldLayer();
+        SetLayerToPlayingFieldLayer();
     }
 
     /**
@@ -36,7 +37,7 @@ public abstract class HookableObject : MonoBehaviour
     /**
      * change collision layer to PlayingFieldLayer
      */
-    public void ChangeLayerPlayingFieldLayer()
+    public void SetLayerToPlayingFieldLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
@@ -48,15 +49,44 @@ public abstract class HookableObject : MonoBehaviour
     {
         this.transform.parent = parentTransform;
     }
-    
+
+    /**
+     * SetParent sets the parent of this gameobject
+     *
+     * @param GameObject parent: parent to set
+     */
+    public void SetParent(GameObject parent)
+    {
+        _parent = parent;
+    }
+
+    /**
+     * set new parent and return old parent
+     *
+     * @returns parent before changing
+     * @param newParent is the parent given to SetParent
+     */
+    public GameObject ChangeParent(GameObject newParent)
+    {
+        GameObject oldParent = _parent;
+        SetParent(newParent);
+        return oldParent;
+    }
+
+    /**
+     * SetPosition sets the position of the hookable object
+     *
+     * @param position The position to set the hookable object to
+     */
+    public void SetPosition(Vector3 position)
+    {
+        gameObject.transform.position = position;
+    }
+
     /**
      * OnWoundIn is called when the Harpoon is wound in
-     * Source: branch 414
-     * ToDo: Change GameObject to Inventory
      */
-    public abstract void OnWoundIn(GameObject inventory);
-
-    
+    public abstract void OnWoundIn(Inventory inventory);
 }
 
 /**
@@ -72,11 +102,20 @@ public class Stone : HookableObject
     {
         base.Start();
     }
-
+    /**
+     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
+     *
+     * @param inventory where stone is put to
+     */
+    public override void OnWoundIn(Inventory inventory)
+    {
+        HookableObjectController.StoneToInventory(this, inventory);
+    }
+    
     /**
      * change collision layer to DraggableLayer
      */
-    public void ChangeLayerDraggableLayer()
+    public void SetLayerToDraggableLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
@@ -101,7 +140,24 @@ public class Stone : HookableObject
     public void SetDraggable(bool state)
     {
         _draggable = state;
+        /*
+ // to move the stone with touch
+ gameObject.AddComponent<LeanDragTranslate>();
+ // to only move the stone you touch
+ gameObject.AddComponent<LeanSelectable>();
+ // to deselect when not touching the stone anymore
+ gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
+ */
     }
+
+    /**
+     * gets called by lean event, when releasing stone from drag and puts it back to parent position
+     */
+    public void OnDeselectOnUp()
+    {
+        transform.position = HookableObjectController.GetParentPositionOfChildStone(_parent.GetComponent<CanHoldHookableObject>(), this);
+    }
+
 }
 
 /**
@@ -111,17 +167,13 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
-    
     /**
-     * Source: branch 414
-     * ToDo: change GameObject to Inventory
      *  gets called by controller on wound in event
      *
      * @param inventory belonging to the player base
      */
-    public override void OnWoundIn(GameObject inventory)
+    public override void OnWoundIn(Inventory inventory)
     {
         throw new System.NotImplementedException();
     }
-
 }
