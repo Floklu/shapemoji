@@ -7,11 +7,11 @@ using UnityEngine;
 public class Inventory : CanHoldHookableObject
 {
     private readonly bool[] _slotIsFull = new bool[4];
-    private readonly List<Stone> _stoneInSlot = new List<Stone>(4);
+    private readonly Stone[] _stoneInSlot = new Stone[4];
 
 
 
-    [SerializeField] private GameObject[] slots = new GameObject[4];
+[SerializeField] private GameObject[] slots = new GameObject[4];
 
     /**
      * AddToInventory adds a Stone to an empty slot in the inventory
@@ -22,7 +22,7 @@ public class Inventory : CanHoldHookableObject
      */
     public Vector3? AddToInventory(Stone stone)
     {
-        for (int i = 0; i < slots.Length; i++)
+        for (var i = 0; i < slots.Length; i++)
         {
             if (_slotIsFull[i] == false)
             {
@@ -42,9 +42,11 @@ public class Inventory : CanHoldHookableObject
      */
     public void RemoveFromInventory(Stone stone)
     {
-        var i = _stoneInSlot.IndexOf(stone);
-        _slotIsFull[i] = false;
-        _stoneInSlot.RemoveAt(i);
+        var slotIndex = GetIndexOfStoneInSlot(stone);
+        if (!(slotIndex >= 0 & slotIndex < 4)) return;
+        _slotIsFull[slotIndex] = false;
+        _stoneInSlot[slotIndex]=null;
+
     }
     
     /**
@@ -55,7 +57,21 @@ public class Inventory : CanHoldHookableObject
     //TODO: handle index out of boundary exception?
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
-        var i = _stoneInSlot.IndexOf(stone);
-        return slots[i].transform.position;
+        var slotIndex = GetIndexOfStoneInSlot(stone);
+        if (!(slotIndex >= 0 & slotIndex < 4)) return Vector3.zero;
+        return slots[slotIndex].transform.position;
+    }
+
+    private int GetIndexOfStoneInSlot(Stone stone)
+    {
+        int slotIndex=-1;
+        for (var i=0; i<_stoneInSlot.Length; i++)
+        {
+            if (_stoneInSlot[i].Equals(stone))
+            {
+                slotIndex = i;
+            }
+        }
+        return slotIndex;
     }
 }
