@@ -103,7 +103,11 @@ public class Stone : HookableObject
     {
         base.Start();
     }
-
+    /**
+     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
+     *
+     * @param inventory where stone is put to
+     */
     public override void OnWoundIn(Inventory inventory)
     {
         HookableObjectController.StoneToInventory(this, inventory);
@@ -135,6 +139,9 @@ public class Stone : HookableObject
  */
     }
 
+    /**
+     * gets called by lean event, when releasing stone from drag and puts it back to parent position
+     */
     public void OnDeselectOnUp()
     {
         transform.position = HookableObjectController.GetParentPositionOfChildStone(_parent.GetComponent<CanHoldHookableObject>(), this);
@@ -149,6 +156,11 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
+    /**
+     *  gets called by controller on wound in event
+     *
+     * @param inventory belonging to the player base
+     */
     public override void OnWoundIn(Inventory inventory)
     {
         throw new System.NotImplementedException();

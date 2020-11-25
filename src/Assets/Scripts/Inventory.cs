@@ -35,7 +35,11 @@ public class Inventory : CanHoldHookableObject
         return null;
     }
 
-    
+    /**
+     * remove a given stone from inventory, making its slot again
+     *
+     * @param stone to remove
+     */
     public void RemoveFromInventory(Stone stone)
     {
         var i = _stoneInSlot.IndexOf(stone);
@@ -43,7 +47,12 @@ public class Inventory : CanHoldHookableObject
         _stoneInSlot.RemoveAt(i);
     }
     
-
+    /**
+     * returns the position of stone inventory slot belonging to stone
+     *
+     * @param stone belonging to slot
+     */
+    //TODO: handle index out of boundary exception?
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
         var i = _stoneInSlot.IndexOf(stone);
