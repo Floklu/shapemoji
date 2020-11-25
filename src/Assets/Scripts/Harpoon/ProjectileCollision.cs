@@ -19,7 +19,7 @@ namespace Harpoon
         */
         private void OnTriggerEnter2D(Collider2D other)
         {
-            OnCollisionEvent();
+            OnCollisionEvent(other);
         }
         
         #region Events
@@ -27,14 +27,14 @@ namespace Harpoon
         /**
          * invokes CollisionEvent, if the gameObjects collides with other Object
          */
-        public event EventHandler CollisionEvent;
+        public event EventHandler<Collider2D> CollisionEvent;
         
         /**
          * raises Event CollisionEvent
          */
-        protected virtual void OnCollisionEvent()
+        protected virtual void OnCollisionEvent(Collider2D other)
         {
-            CollisionEvent?.Invoke(this, EventArgs.Empty);
+            CollisionEvent?.Invoke(this, other);
         }
         
         #endregion
