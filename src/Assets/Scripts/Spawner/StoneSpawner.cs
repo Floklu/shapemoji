@@ -12,7 +12,7 @@ namespace Spawner
     {
         [FormerlySerializedAs("MaxStones")] public int maxStones;
 
-        public StoneFactory factory;
+        public HookableGameObjectFactory factory;
         public List<GameObject> spawnZones;
         
         private readonly List<GameObject> _spawnPlaces;
@@ -77,24 +77,22 @@ namespace Spawner
          */
         public void CreateRandomStone()
         {
-            if (!IsFull())
-            {
-                var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
-                if (places.Count > 0)
-                {
-                    var random = Random.Range(0, places.Count);
-                    var place = places[random];
-                    var spawn = place.GetComponent<SpawnPlace>();
+            if (IsFull()) return;
+            
+            var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
+            
+            if (places.Count < 1) return;
+            
+            var random = Random.Range(0, places.Count);
+            var place = places[random];
+            var spawn = place.GetComponent<SpawnPlace>();
 
-                    var spawnPosition = place.transform.position;
-                    var x = spawnPosition.x;
-                    var y = spawnPosition.y;
+            var spawnPosition = place.transform.position;
+            var x = spawnPosition.x;
+            var y = spawnPosition.y;
+            var stone = factory.CreateStone(x, y);
+            spawn.stone = stone;    
             
-                    var stone = factory.CreateStone(x, y);
-                    spawn.stone = stone;    
-                }
-            
-            }
         }
     
         /**

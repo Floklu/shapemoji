@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Harpoon
 {
@@ -21,7 +22,7 @@ namespace Harpoon
         private bool _windIn;
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
-        private GameObject _inventory;
+        private Inventory _inventory;
         private GameObject _projectileObj;
 
 
@@ -32,7 +33,7 @@ namespace Harpoon
             var ropeObj = gameObject.transform.Find("HarpoonCannon/HarpoonRope").gameObject;
             _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
 
-            _inventory = gameObject.transform.Find("../../Inventory").gameObject;
+            _inventory = gameObject.transform.Find("../../Inventory").gameObject.GetComponent<Inventory>();
             
             _rotatableHandler = GetComponent<RotatableHandler>();
             _shotHandler = GetComponent<HarpoonShotHandler>();
@@ -46,6 +47,7 @@ namespace Harpoon
             _rotatableHandler.RotationEvent += OnRotationEvent;
             _shotHandler.ShotEvent += OnShotEvent;
             _projectileCollision.CollisionEvent += ProjectileOnCollisionEvent;
+            HookableObjectController.AddHarpoonController(this);
 
         }
 
@@ -67,8 +69,6 @@ namespace Harpoon
             if (_windIn) //Harpoon has been wound in
             {
                 ResetCannon();
-                //TODO handle WoundIn specific behaviour
-                
             }
             else //Harpoon hasn't been wound in
             {
@@ -124,8 +124,6 @@ namespace Harpoon
             if (collidedObject.Equals(_projectileObj))
             {
                 _objectHooked = hookableObject;
-                _movingProjectile.AttachObject(hookableObject.gameObject);
-
             }
 
         }                
@@ -140,18 +138,25 @@ namespace Harpoon
          */
         private void ProjectileOnCollisionEvent(object sender, Collider2D collidedObject)
         {
-            if (collidedObject == _cannonCollider)
+            if (_windIn)
             {
-                if (_objectHooked != null)
+                if (collidedObject.Equals(_cannonCollider))
                 {
-                    _movingProjectile.UnattachObject();
-                    HookableObjectController.OnWoundIn(_objectHooked,_inventory);
+                    StopProjectileMovement();
+                    if (_objectHooked != null)
+                    {
+                        HookableObjectController.OnWoundIn(_objectHooked,_inventory);
+                    }
+                    //TODO: should be called?
+                    _objectHooked = null;
                 }
-                _objectHooked = null;
-               
+            }
+            else
+            {
+                StopProjectileMovement();
             }
             
-            StopProjectileMovement();
+            
             
         }
         

@@ -14,7 +14,7 @@ using UnityEngine;
 public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject _parent;
-    
+  
 
     /**
      * on Start() set layer to PlayingFieldLayer
@@ -29,19 +29,24 @@ public abstract class HookableObject : MonoBehaviour
      *
      * @param Collider other
      */
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
-    }
+    public abstract void OnTriggerEnter2D(Collider2D other);
 
     /**
-     * change collision layer to PlayingFieldLayer
-     */
+         * change collision layer to PlayingFieldLayer
+         */
     public void SetLayerToPlayingFieldLayer()
     {
         this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
 
+    /**
+         * change collision layer to DraggableLayer
+         */
+    public void SetLayerToDraggableLayer()
+    {
+        this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
+    }
+    
     /**
      * sets transform parent so movement is joined
      */
@@ -98,10 +103,6 @@ public class Stone : HookableObject
 {
     private bool _draggable;
 
-    protected override void Start()
-    {
-        base.Start();
-    }
     /**
      * gets called by controller when WoundIn event is triggered. calls StoneToInventory
      *
@@ -109,6 +110,7 @@ public class Stone : HookableObject
      */
     public override void OnWoundIn(Inventory inventory)
     {
+        Debug.Log("Stone OnWoundInHit");
         HookableObjectController.StoneToInventory(this, inventory);
     }
     
@@ -119,18 +121,16 @@ public class Stone : HookableObject
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
-    
-    /**
-     * Source: Branch 414
-     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
-     *
-     * @param inventory where stone is put to
-     */
-    public override void OnWoundIn(GameObject inventory)
-    {
-        HookableObjectController.StoneToInventory(this, inventory);
-    }
 
+    /**
+     * Calls for action at controller on collision with
+     *
+     * @param Collider other
+     */
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        HookableObjectController.OnHookableObjectCollision(this, other.gameObject); 
+    }
 
     /**
      * sets property _draggable
@@ -176,4 +176,15 @@ public class Item : HookableObject
     {
         throw new System.NotImplementedException();
     }
+    
+    /**
+     * Calls for action at controller on collision with
+     *
+     * @param Collider other
+     */
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
+    }
+    
 }

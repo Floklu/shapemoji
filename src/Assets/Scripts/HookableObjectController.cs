@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
@@ -15,14 +16,6 @@ public static class HookableObjectController
     //list of receivers
     private static readonly List<HarpoonController> _harpoonControllers = new List<HarpoonController>();
 
-    /**Manages Collision Event of HookableObject (called by HookableObject Instance)
-     *
-     * @param hookableObject HookableObject which detected collision
-     * @param otherObject GameObject which collided with HookableObject
-     */
-    public static void OnHookableObjectCollision(HookableObject hookableObject, GameObject gameObject)
-    {
-    }
 
     /**
      *  OnHookableObjectCollision handles collision between Stone and other GameObject
@@ -32,7 +25,7 @@ public static class HookableObjectController
      */
     public static void OnHookableObjectCollision(Stone stone, GameObject gameObject)
     {
-        if (gameObject.GetType() == typeof(ProjectileCollision))
+        if (gameObject.GetComponent<ProjectileCollision>())
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
@@ -46,7 +39,7 @@ public static class HookableObjectController
      */
     public static void OnHookableObjectCollision(Item item, GameObject gameObject)
     {
-        if (gameObject.GetType() == typeof(ProjectileCollision))
+        if (gameObject.GetComponent<ProjectileCollision>())
         {
             AttachHookableObjectToProjectile(item, gameObject);
         }
@@ -71,15 +64,15 @@ public static class HookableObjectController
      */
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
-        //TODO: enable when implemented in harpoonController
-        /*
-        foreach (var harpoonController in harpoonControllers)
+        foreach (var harpoonController in _harpoonControllers)
         {
-            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject)
+            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
         }
-        */
+        
 
         hookableObject.SetTransformParent(projectileGameObject.transform);
+        // need to change layer here so we can pass other stone during wind in
+        hookableObject.SetLayerToDraggableLayer();
     }
 
     /**
@@ -106,7 +99,7 @@ public static class HookableObjectController
      */
     public static void StoneToInventory(Stone stone, Inventory inventory)
     {
-        var position = inventory.GetComponent<Inventory>().AddToInventory(stone);
+        var position = inventory.AddToInventory(stone);
         if (position.HasValue)
         {
             stone.SetLayerToDraggableLayer();
@@ -129,6 +122,7 @@ public static class HookableObjectController
     public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
     {
         hookableObject.OnWoundIn(inventory);
+        Debug.Log("hit");
     }
 
     /**
