@@ -22,13 +22,13 @@ namespace Harpoon
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
         private GameObject _inventory;
-        private GameObject _projectile;
+        private GameObject _projectileObj;
 
 
         private void Start()
         {
             _cannonCollider = gameObject.transform.Find("HarpoonCannon").gameObject.GetComponent<BoxCollider2D>();
-            _projectile = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
+            _projectileObj = gameObject.transform.Find("HarpoonCannon/HarpoonProjectile").gameObject;
             var ropeObj = gameObject.transform.Find("HarpoonCannon/HarpoonRope").gameObject;
             _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
 
@@ -36,10 +36,10 @@ namespace Harpoon
             
             _rotatableHandler = GetComponent<RotatableHandler>();
             _shotHandler = GetComponent<HarpoonShotHandler>();
-            _projectileCollision = _projectile.GetComponent<ProjectileCollision>();
-            _movingProjectile = _projectile.GetComponent<MovingProjectile>();
+            _projectileCollision = _projectileObj.GetComponent<ProjectileCollision>();
+            _movingProjectile = _projectileObj.GetComponent<MovingProjectile>();
             _rope = ropeObj.GetComponent<HarpoonRope>();
-            _windInProjectile = _projectile.GetComponent<WindInProjectile>();
+            _windInProjectile = _projectileObj.GetComponent<WindInProjectile>();
             _cannonCollider.enabled = false;
             
             _crankController.CrankRotationEvent += _windInProjectile.AddTravelDistance;
@@ -121,7 +121,7 @@ namespace Harpoon
         */
         public void NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject collidedObject)
         {
-            if (collidedObject == _projectile)
+            if (collidedObject == _projectileObj)
             {
                 _objectHooked = hookableObject;
                 _movingProjectile.AttachObject(hookableObject.gameObject);
