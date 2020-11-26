@@ -82,7 +82,7 @@ namespace Tests.EditMode
                 .Select(place => place.GetComponent<SpawnPlace>())
                 .First(x => x.stone != null).stone;
 
-            spawner.DeleteStone(stone);
+            spawner.DeleteHookableObject(stone.GetComponent<HookableObject>());
             Assert.IsFalse(spawner.IsFull());
             
             spawner.CreateRandomStone();

@@ -51,12 +51,12 @@ namespace Spawner
          *
          * @param stone delete reference of given stone to free position
         */
-        public void DeleteStone(GameObject stone)
+        public void DeleteHookableObject(HookableObject hookableObject)
         {
             var places = _spawnPlaces
                 .Where(ContainsStone)
                 .Select(x => x.GetComponent<SpawnPlace>())
-                .Where(x => x.stone.Equals(stone)).ToList();
+                .Where(x => x.stone.Equals(hookableObject.gameObject)).ToList();
             places.ForEach(x => x.stone = null);
         }
 

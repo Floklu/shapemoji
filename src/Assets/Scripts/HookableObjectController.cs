@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Harpoon;
+using Spawner;
 using UnityEngine;
 
 /**
@@ -58,15 +59,16 @@ public static class HookableObjectController
      */
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
+
         foreach (var harpoonController in HarpoonControllers)
         {
             harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
         }
-
-
+        //TODO: dont use find every time
+        GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
         hookableObject.SetTransformParent(projectileGameObject.transform);
-        // need to change layer here so we can pass other stone during wind in
         hookableObject.SetLayerToDraggableLayer();
+
     }
 
     /**
