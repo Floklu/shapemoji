@@ -19,6 +19,7 @@ namespace Harpoon
         private CrankController _crankController;
 
         private bool _windIn;
+        private bool _projectileShot;
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
         private Inventory _inventory;
@@ -57,6 +58,8 @@ namespace Harpoon
             _movingProjectile.SetVelocity(projectileSpeed);
             _rope.enabled = true;
             _windIn = false;
+            _rotatableHandler.enabled = false;
+            _projectileShot = true;
         }
 
         /**
@@ -71,7 +74,6 @@ namespace Harpoon
             else //Harpoon hasn't been wound in
             {
                 _cannonCollider.enabled = true;
-                _rotatableHandler.enabled = false;
                 _movingProjectile.SetVelocity(0);
 
                 _crankController.EnableController(true);
@@ -96,6 +98,9 @@ namespace Harpoon
             _windInProjectile.ResetProjectile();
             _cannonCollider.enabled = false;
             _crankController.EnableController(false);
+            
+            _projectileShot = false;
+            _windIn = false;
         }
 
         /**
@@ -105,7 +110,10 @@ namespace Harpoon
          */
         public void RotateHarpoon(float rotation)
         {
-            transform.rotation = Quaternion.Euler(0, 0, rotation);
+            if (!_projectileShot && !_windIn)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, rotation);
+            }
         }
 
         /**
