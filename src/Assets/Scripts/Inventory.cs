@@ -9,15 +9,6 @@ public class Inventory : CanHoldHookableObject
     private readonly Stone[] _stoneInSlot = new Stone[4];
     [SerializeField] public GameObject[] slots = new GameObject[4];
 
-    private void Start()
-    {
-        for (var i = 0; i < slots.Length; i++)
-        {
-            var slotName = "Slot (" + (i + 1) + ")";
-            slots[i] = gameObject.transform.Find(slotName).gameObject;
-        }
-    }
-
     /**
      * AddToInventory adds a Stone to an empty slot in the inventory
      *

@@ -94,15 +94,10 @@ public static class HookableObjectController
     public static void StoneToInventory(Stone stone, Inventory inventory)
     {
         var position = inventory.AddToInventory(stone);
+        NotifyHarpoonControllersRemoveHookableObject(stone);
         if (position.HasValue)
         {
             stone.SetLayerToDraggableLayer();
-            stone.SetDraggable(true);
-            foreach (var harpoonController in HarpoonControllers)
-            {
-                harpoonController.NotifyRemoveHookableObject(stone);
-            }
-
             stone.SetParent(inventory.gameObject);
             stone.SetPosition(position.Value);
             stone.SetTransformParent(null);
@@ -110,14 +105,22 @@ public static class HookableObjectController
         }
         else
         {
-            // Task #417
+            stone.DestroyHookableObject();
+        }
+    }
+
+    private static void NotifyHarpoonControllersRemoveHookableObject(HookableObject hookableObject)
+    {
+        foreach (var harpoonController in HarpoonControllers)
+        {
+            harpoonController.NotifyRemoveHookableObject(hookableObject);
         }
     }
 
     /**
-     * handles OnWoundIn event, called by HarpoonContoler
+     * handles OnWoundIn event, called by HarpoonController
      *
-     * @param hookableObject object attached to projectile to be handeled
+     * @param hookableObject object attached to projectile to be handled
      * @param inventory of player base where WoundIn event happened
      */
     public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
