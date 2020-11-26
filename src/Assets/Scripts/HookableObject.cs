@@ -85,6 +85,14 @@ public abstract class HookableObject : MonoBehaviour
     }
 
     /**
+     * DestroyHookableObject destroys the hookable object
+     */
+    public void DestroyHookableObject()
+    {
+        Destroy(gameObject);
+    }
+
+    /**
      * OnWoundIn is called when the Harpoon is wound in
      */
     public abstract void OnWoundIn(Inventory inventory);
