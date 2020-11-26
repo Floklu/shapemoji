@@ -148,7 +148,7 @@ public static class HookableObjectController
      * @param stone to remove
      * @param inventory where stone should be removed
      */
-    public static void RemoveStoneCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
+    public static void RemoveStoneFromCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         canHoldHookableObject.RemoveStone(stone);
     }

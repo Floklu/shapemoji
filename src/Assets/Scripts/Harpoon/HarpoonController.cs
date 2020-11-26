@@ -147,12 +147,15 @@ namespace Harpoon
          */
         private void ProjectileOnCollisionEvent(object sender, Collider2D collidedObject)
         {
-            if (_isWoundIn && collidedObject.Equals(_cannonCollider))
+            if (_isWoundIn)
             {
-                StopProjectileMovement();
-                if (_objectHooked != null)
+                if (collidedObject.Equals(_cannonCollider))
                 {
-                    HookableObjectController.OnWoundIn(_objectHooked, _inventory);
+                    StopProjectileMovement();
+                    if (_objectHooked != null)
+                    {
+                        HookableObjectController.OnWoundIn(_objectHooked, _inventory);
+                    }
                 }
             }
             else
