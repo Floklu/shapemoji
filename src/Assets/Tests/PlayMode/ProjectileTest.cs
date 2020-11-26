@@ -110,5 +110,23 @@ namespace Tests.PlayMode
 
             Assert.AreNotEqual(projectile.transform.position, location, "Second shot wasn't successful");
         }
+        
+        /**
+         * ShootProjectileAndRotateHarpoonTest tests if the harpoon permits rotations after the projectile was shot.
+         */
+        [UnityTest]
+        public IEnumerator ShootProjectileAndRotateHarpoonTest()
+        {
+            var projectile = GameObject.Find("HarpoonProjectile");
+            var location = projectile.transform.position;
+            var harpoon = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
+            harpoon.ShootProjectile();
+            var rotationProjectile = projectile.transform.rotation.eulerAngles.z;
+            yield return new WaitForSeconds(1);
+            harpoon.RotateHarpoon(rotationProjectile+90);
+            yield return new WaitForSeconds(1);
+            Assert.AreEqual(rotationProjectile, projectile.transform.rotation.eulerAngles.z, 0.1f, "Harpoon rotated after cannon has been shot");
+
+        }
     }
 }
