@@ -10,7 +10,7 @@ namespace Harpoon
     public class HarpoonController : MonoBehaviour
     {
         public float projectileSpeed = 500;
-        
+
         private RotatableHandler _rotatableHandler;
         private HarpoonShotHandler _shotHandler;
         private ProjectileCollision _projectileCollision;
@@ -18,7 +18,7 @@ namespace Harpoon
         private HarpoonRope _rope;
         private WindInProjectile _windInProjectile;
         private CrankController _crankController;
-        
+
         private bool _windIn;
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
@@ -34,7 +34,7 @@ namespace Harpoon
             _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
 
             _inventory = gameObject.transform.Find("../../Inventory").gameObject.GetComponent<Inventory>();
-            
+
             _rotatableHandler = GetComponent<RotatableHandler>();
             _shotHandler = GetComponent<HarpoonShotHandler>();
             _projectileCollision = _projectileObj.GetComponent<ProjectileCollision>();
@@ -42,13 +42,12 @@ namespace Harpoon
             _rope = ropeObj.GetComponent<HarpoonRope>();
             _windInProjectile = _projectileObj.GetComponent<WindInProjectile>();
             _cannonCollider.enabled = false;
-            
+
             _crankController.CrankRotationEvent += _windInProjectile.AddTravelDistance;
             _rotatableHandler.RotationEvent += OnRotationEvent;
             _shotHandler.ShotEvent += OnShotEvent;
             _projectileCollision.CollisionEvent += ProjectileOnCollisionEvent;
             HookableObjectController.AddHarpoonController(this);
-
         }
 
         /**
@@ -60,7 +59,7 @@ namespace Harpoon
             _rope.enabled = true;
             _windIn = false;
         }
-        
+
         /**
          * stops the projectile
          */
@@ -77,17 +76,14 @@ namespace Harpoon
                 _movingProjectile.SetVelocity(0);
 
                 _crankController.EnableController(true);
-                
+
                 //prepare windInProjectile functionality
                 _windInProjectile.ResetProjectile();
                 _windInProjectile.TravelSpeed = projectileSpeed;
                 _windIn = true;
             }
-            
         }
 
-        //ReSharper disable once UnusedMember.Global
-        //TODO used when projectile is wound in
         /**
          * resets Cannon behaviour
          */
@@ -110,7 +106,7 @@ namespace Harpoon
          */
         public void RotateHarpoon(float rotation)
         {
-            transform.rotation = Quaternion.Euler(0,0,rotation);
+            transform.rotation = Quaternion.Euler(0, 0, rotation);
         }
 
         /**
@@ -125,20 +121,18 @@ namespace Harpoon
             {
                 _objectHooked = hookableObject;
             }
+        }
 
-        }                
-         
         public void NotifyRemoveHookableObject(HookableObject hookableObject)
         {
             if (hookableObject.Equals(_objectHooked))
             {
                 _objectHooked = null;
             }
+        }
 
-        }     
-        
         #region EventHandling
-        
+
         /**
          * implements CollisionEvent
          * @param sender sender of event
@@ -153,21 +147,16 @@ namespace Harpoon
                     StopProjectileMovement();
                     if (_objectHooked != null)
                     {
-                        HookableObjectController.OnWoundIn(_objectHooked,_inventory);
+                        HookableObjectController.OnWoundIn(_objectHooked, _inventory);
                     }
-                    //TODO: should be called?
-                    _objectHooked = null;
                 }
             }
             else
             {
                 StopProjectileMovement();
             }
-            
-            
-            
         }
-        
+
         /**
          * implements ShotEvent
          *
@@ -189,7 +178,7 @@ namespace Harpoon
         {
             RotateHarpoon(rotation);
         }
-        
+
         #endregion
     }
 }

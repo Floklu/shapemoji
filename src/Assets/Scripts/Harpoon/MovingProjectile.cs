@@ -30,6 +30,5 @@ namespace Harpoon
 
             rigidBody2d.velocity = vector;
         }
-
     }
 }

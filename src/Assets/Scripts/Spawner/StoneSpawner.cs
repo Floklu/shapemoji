@@ -14,7 +14,7 @@ namespace Spawner
 
         public HookableGameObjectFactory factory;
         public List<GameObject> spawnZones;
-        
+
         private readonly List<GameObject> _spawnPlaces;
 
         public StoneSpawner()
@@ -34,18 +34,18 @@ namespace Spawner
         public void StartGeneration()
         {
             Random.InitState((int) System.DateTime.Now.Ticks); //TODO should be moved to a different class
-            
+
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
             {
                 _spawnPlaces.Add(child.gameObject);
             }
-            
+
             for (var i = 0; i < maxStones; i++)
             {
                 CreateRandomStone();
             }
         }
-        
+
         /**
         * deletes a stone at given position
          *
@@ -70,19 +70,19 @@ namespace Spawner
             var places = _spawnPlaces.Where(ContainsStone).Select(x => 1).Sum();
             return places == maxStones;
         }
-        
-        
+
+
         /**
          * creates a stone at a random location
          */
         public void CreateRandomStone()
         {
             if (IsFull()) return;
-            
+
             var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
-            
+
             if (places.Count < 1) return;
-            
+
             var random = Random.Range(0, places.Count);
             var place = places[random];
             var spawn = place.GetComponent<SpawnPlace>();
@@ -91,10 +91,9 @@ namespace Spawner
             var x = spawnPosition.x;
             var y = spawnPosition.y;
             var stone = factory.CreateStone(x, y);
-            spawn.stone = stone;    
-            
+            spawn.stone = stone;
         }
-    
+
         /**
          * determines, if the chosen GameObject already contains a stone
          *

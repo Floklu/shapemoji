@@ -13,10 +13,9 @@ public class Inventory : CanHoldHookableObject
 
     private void Start()
     {
-        //TODO: this should be done in a better and more elegant way!
         for (int i = 0; i < slots.Length; i++)
         {
-            String slotName = "Slot (" + (i+1) + ")";
+            String slotName = "Slot (" + (i + 1) + ")";
             slots[i] = gameObject.transform.Find(slotName).gameObject;
         }
     }
@@ -53,10 +52,9 @@ public class Inventory : CanHoldHookableObject
         var slotIndex = GetIndexOfStoneInSlot(stone);
         if (!(slotIndex >= 0 & slotIndex < 4)) return;
         _slotIsFull[slotIndex] = false;
-        _stoneInSlot[slotIndex]=null;
-
+        _stoneInSlot[slotIndex] = null;
     }
-    
+
     /**
      * returns the position of stone inventory slot belonging to stone
      *
@@ -72,14 +70,15 @@ public class Inventory : CanHoldHookableObject
 
     private int GetIndexOfStoneInSlot(Stone stone)
     {
-        int slotIndex=-1;
-        for (var i=0; i<_stoneInSlot.Length; i++)
+        int slotIndex = -1;
+        for (var i = 0; i < _stoneInSlot.Length; i++)
         {
             if (_stoneInSlot[i].Equals(stone))
             {
                 slotIndex = i;
             }
         }
+
         return slotIndex;
     }
 }

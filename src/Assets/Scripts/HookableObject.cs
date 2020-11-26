@@ -14,7 +14,7 @@ using UnityEngine;
 public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject _parent;
-  
+
 
     /**
      * on Start() set layer to PlayingFieldLayer
@@ -46,7 +46,7 @@ public abstract class HookableObject : MonoBehaviour
     {
         this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
-    
+
     /**
      * sets transform parent so movement is joined
      */
@@ -110,10 +110,9 @@ public class Stone : HookableObject
      */
     public override void OnWoundIn(Inventory inventory)
     {
-        Debug.Log("Stone OnWoundInHit");
         HookableObjectController.StoneToInventory(this, inventory);
     }
-    
+
 
     /**
      * Calls for action at controller on collision with
@@ -122,7 +121,7 @@ public class Stone : HookableObject
      */
     public override void OnTriggerEnter2D(Collider2D other)
     {
-        HookableObjectController.OnHookableObjectCollision(this, other.gameObject); 
+        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
     }
 
     /**
@@ -148,9 +147,9 @@ public class Stone : HookableObject
      */
     public void OnDeselectOnUp()
     {
-        transform.position = HookableObjectController.GetParentPositionOfChildStone(_parent.GetComponent<CanHoldHookableObject>(), this);
+        transform.position =
+            HookableObjectController.GetParentPositionOfChildStone(_parent.GetComponent<CanHoldHookableObject>(), this);
     }
-
 }
 
 /**
@@ -169,7 +168,7 @@ public class Item : HookableObject
     {
         throw new System.NotImplementedException();
     }
-    
+
     /**
      * Calls for action at controller on collision with
      *
@@ -179,5 +178,4 @@ public class Item : HookableObject
     {
         HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
     }
-    
 }

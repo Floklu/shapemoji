@@ -28,13 +28,14 @@ namespace Spawner
             {
                 throw new IndexOutOfRangeException();
             }
+
             //choose prefab
             var random = Random.Range(0, preFabsStonesRange);
             var preFab = preFabsStones[random];
             //create stone
             var stone = CreateHookableGameObject(preFab, x, y);
             stone.AddComponent(typeof(Stone));
-            return stone; 
+            return stone;
         }
 
         /**
@@ -52,15 +53,16 @@ namespace Spawner
             {
                 throw new IndexOutOfRangeException();
             }
+
             //choose preFab
             var random = Random.Range(0, preFabItemsRange);
             var preFab = preFabsItems[random];
-            
+
             //create item
             var item = CreateHookableGameObject(preFab, x, y);
             item.AddComponent(typeof(Item));
 
-            return item; 
+            return item;
         }
 
         /**
@@ -75,7 +77,6 @@ namespace Spawner
         {
             var spawnPosition = new Vector3(x, y, 0);
             return Instantiate(preFab, spawnPosition, Quaternion.identity);
-
         }
     }
 }

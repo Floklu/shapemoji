@@ -8,7 +8,6 @@ namespace Harpoon
      */
     public class ProjectileCollision : MonoBehaviour
     {
-       
         /**
         * OnTriggerEnter2D is called when the collider enters a trigger
         *
@@ -21,14 +20,14 @@ namespace Harpoon
         {
             OnCollisionEvent(other);
         }
-        
+
         #region Events
 
         /**
          * invokes CollisionEvent, if the gameObjects collides with other Object
          */
         public event EventHandler<Collider2D> CollisionEvent;
-        
+
         /**
          * raises Event CollisionEvent
          */
@@ -36,10 +35,7 @@ namespace Harpoon
         {
             CollisionEvent?.Invoke(this, other);
         }
-        
-        #endregion
 
-        
-        
+        #endregion
     }
 }

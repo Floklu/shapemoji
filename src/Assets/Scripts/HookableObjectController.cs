@@ -62,7 +62,7 @@ public static class HookableObjectController
         {
             harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
         }
-        
+
 
         hookableObject.SetTransformParent(projectileGameObject.transform);
         // need to change layer here so we can pass other stone during wind in
@@ -102,6 +102,7 @@ public static class HookableObjectController
             {
                 harpoonController.NotifyRemoveHookableObject(stone);
             }
+
             stone.SetParent(inventory.gameObject);
             stone.SetPosition(position.Value);
             stone.SetTransformParent(null);
@@ -121,7 +122,6 @@ public static class HookableObjectController
     public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
     {
         hookableObject.OnWoundIn(inventory);
-        Debug.Log("hit");
     }
 
     /**
@@ -143,7 +143,7 @@ public static class HookableObjectController
     {
         inventory.RemoveFromInventory(stone);
     }
-    
+
     /**
      * returns designated Vector3 position of stone from any CanHoldHookableObject knowing this stone
      *

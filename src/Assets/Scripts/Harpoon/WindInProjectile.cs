@@ -29,7 +29,6 @@ namespace Harpoon
 
             _travelDistance -= distanceTraveled;
             projectile.position -= projectile.right * distanceTraveled;
-            
         }
 
         /**
