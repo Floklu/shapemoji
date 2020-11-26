@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /**
@@ -8,10 +9,17 @@ public class Inventory : CanHoldHookableObject
 {
     private readonly bool[] _slotIsFull = new bool[4];
     private readonly Stone[] _stoneInSlot = new Stone[4];
+    [SerializeField] public GameObject[] slots = new GameObject[4];
 
-
-
-[SerializeField] public GameObject[] slots = new GameObject[4];
+    private void Start()
+    {
+        //TODO: this should be done in a better and more elegant way!
+        for (int i = 0; i < slots.Length; i++)
+        {
+            String slotName = "Slot (" + (i+1) + ")";
+            slots[i] = gameObject.transform.Find(slotName).gameObject;
+        }
+    }
 
     /**
      * AddToInventory adds a Stone to an empty slot in the inventory
