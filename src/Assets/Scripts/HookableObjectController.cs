@@ -59,20 +59,21 @@ public static class HookableObjectController
      */
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
-
         foreach (var harpoonController in HarpoonControllers)
         {
             harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
         }
+
         //TODO: dont use find every time
         GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
         hookableObject.SetTransformParent(projectileGameObject.transform);
         hookableObject.SetLayerToDraggableLayer();
-
     }
 
     /**
      * AddHarpoonController adds HarpoonController to _harpoonControllers receiver list
+     *
+     * @param harpoonController HarpoonController added to list of observers
      */
     public static void AddHarpoonController(HarpoonController harpoonController)
     {
@@ -81,6 +82,8 @@ public static class HookableObjectController
 
     /**
      * RemoveHarpoonController removes HarpoonController from _harpoonControllers receiver list
+     *
+     * @param harpoonController HarpoonController to be removed from list of receivers
      */
     public static void RemoveHarpoonController(HarpoonController harpoonController)
     {
@@ -145,9 +148,9 @@ public static class HookableObjectController
      * @param stone to remove
      * @param inventory where stone should be removed
      */
-    public static void RemoveStoneFromInventory(Stone stone, Inventory inventory)
+    public static void RemoveStoneCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
-        inventory.RemoveFromInventory(stone);
+        canHoldHookableObject.RemoveStone(stone);
     }
 
     /**

@@ -57,7 +57,9 @@ namespace Harpoon
         }
 
         /**
-         * enables MonoBehaviour for Controller 
+         * enables MonoBehaviour for Controller
+         *
+         * @param status bool to enable (true) or disable (false) Controller
          */
         public void EnableController(bool status)
         {

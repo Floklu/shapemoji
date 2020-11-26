@@ -18,7 +18,7 @@ namespace Harpoon
         private WindInProjectile _windInProjectile;
         private CrankController _crankController;
 
-        private bool _windIn;
+        private bool _isWoundIn;
         private bool _projectileShot;
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
@@ -57,7 +57,7 @@ namespace Harpoon
         {
             _movingProjectile.SetVelocity(projectileSpeed);
             _rope.enabled = true;
-            _windIn = false;
+            _isWoundIn = false;
             _rotatableHandler.enabled = false;
             _projectileShot = true;
         }
@@ -67,7 +67,7 @@ namespace Harpoon
          */
         public void StopProjectileMovement()
         {
-            if (_windIn) //Harpoon has been wound in
+            if (_isWoundIn) //Harpoon has been wound in
             {
                 ResetCannon();
             }
@@ -81,7 +81,7 @@ namespace Harpoon
                 //prepare windInProjectile functionality
                 _windInProjectile.ResetProjectile();
                 _windInProjectile.TravelSpeed = projectileSpeed;
-                _windIn = true;
+                _isWoundIn = true;
             }
         }
 
@@ -98,9 +98,9 @@ namespace Harpoon
             _windInProjectile.ResetProjectile();
             _cannonCollider.enabled = false;
             _crankController.EnableController(false);
-            
+
             _projectileShot = false;
-            _windIn = false;
+            _isWoundIn = false;
         }
 
         /**
@@ -110,7 +110,7 @@ namespace Harpoon
          */
         public void RotateHarpoon(float rotation)
         {
-            if (!_projectileShot && !_windIn)
+            if (!_projectileShot && !_isWoundIn)
             {
                 transform.rotation = Quaternion.Euler(0, 0, rotation);
             }
@@ -147,15 +147,12 @@ namespace Harpoon
          */
         private void ProjectileOnCollisionEvent(object sender, Collider2D collidedObject)
         {
-            if (_windIn)
+            if (_isWoundIn && collidedObject.Equals(_cannonCollider))
             {
-                if (collidedObject.Equals(_cannonCollider))
+                StopProjectileMovement();
+                if (_objectHooked != null)
                 {
-                    StopProjectileMovement();
-                    if (_objectHooked != null)
-                    {
-                        HookableObjectController.OnWoundIn(_objectHooked, _inventory);
-                    }
+                    HookableObjectController.OnWoundIn(_objectHooked, _inventory);
                 }
             }
             else

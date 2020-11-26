@@ -11,4 +11,6 @@ public abstract class CanHoldHookableObject : MonoBehaviour
      * @param stone to find its position to
      */
     public abstract Vector3 GetPositionOfStoneChild(Stone stone);
+
+    public abstract void RemoveStone(Stone stone);
 }
