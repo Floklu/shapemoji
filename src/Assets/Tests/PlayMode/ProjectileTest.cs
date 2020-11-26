@@ -16,6 +16,12 @@ namespace Tests.PlayMode
      */
     public class ProjectileTest
     {
+        private GameObject _projectile;
+        //private GameObject _harpoon;
+        private HarpoonController _harpoonController;
+        private CrankController _crankController;
+
+
         /**
          * LoadScene loads the Scene ones for every Test in ProjectileTest.
          */
@@ -31,14 +37,29 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator ShootProjectileTest()
         {
-            var projectile = GameObject.Find("HarpoonProjectile");
-            var location = projectile.transform.position;
-            var harpoon = GameObject.Find("Harpoon");
-            harpoon.GetComponent<HarpoonController>().ShootProjectile();
+            LoadProjectile();
+            LoadHarpoonController();
+            var location = _projectile.transform.position;
+            
+            _harpoonController.ShootProjectile();
 
             yield return new WaitForSeconds(1);
 
-            Assert.AreNotEqual(projectile.transform.position, location);
+            Assert.AreNotEqual(_projectile.transform.position, location);
+        }
+
+        private void LoadHarpoonController()
+        {
+            _harpoonController = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
+        }
+
+        private void LoadProjectile()
+        {
+            _projectile = GameObject.Find("HarpoonProjectile");
+        }
+        private void LoadCrankController()
+        {
+            _crankController = GameObject.Find("Wheel").GetComponent<CrankController>();
         }
 
         /**
@@ -49,28 +70,30 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator TestWindInAfterProjectile()
         {
-            var projectile = GameObject.Find("HarpoonProjectile");
-            var location = projectile.transform.position;
-            var harpoon = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
-            var wheel = GameObject.Find("Wheel").GetComponent<CrankController>();
-            harpoon.ShootProjectile();
+            LoadProjectile();
+            LoadHarpoonController();
+            LoadCrankController();
+            var location = _projectile.transform.position;
+            
+            _harpoonController.ShootProjectile();
 
             yield return new WaitForSeconds(1);
 
-            harpoon.StopProjectileMovement();
-            var locationNew = projectile.transform.position;
-            Assert.AreNotEqual(projectile.transform.position, location, "Projectile has not been moved since 1 second");
+            _harpoonController.StopProjectileMovement();
+            var locationNew = _projectile.transform.position;
+            Assert.AreNotEqual(_projectile.transform.position, location, "Projectile has not been moved since 1 second");
             yield return new WaitForSeconds(1);
-            Assert.AreNotEqual(projectile.transform.position, location,
+            Assert.AreNotEqual(_projectile.transform.position, location,
                 "Projectile continues after harpoon has been stopped"); 
 
-            wheel.RotateCrank(180);
+            _crankController.RotateCrank(180);
 
             yield return new WaitForSeconds(1);
 
-            Assert.AreNotEqual(projectile.transform.position, locationNew, "Projectile has not been properly wound in");
+            Assert.AreNotEqual(_projectile.transform.position, locationNew, "Projectile has not been properly wound in");
 
         }
+
 
         /**
          * Tests if the harpoon is properly wound in and ready for the next shot
@@ -80,35 +103,35 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator TestShootAfterWindIn()
         {
-            var projectile = GameObject.Find("HarpoonProjectile");
-            var location = projectile.transform.position;
-            var harpoon = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
-            var wheel = GameObject.Find("Wheel").GetComponent<CrankController>();
-            harpoon.ShootProjectile();
-
+            LoadProjectile();
+            LoadHarpoonController();
+            LoadCrankController();
+            
+            var location = _projectile.transform.position;
+            _harpoonController.ShootProjectile();
             yield return new WaitForSeconds(1);
 
-            harpoon.StopProjectileMovement();
-            var locationNew = projectile.transform.position;
-            Assert.AreNotEqual(projectile.transform.position, location, "Projectile has not been moved since 1 second");
+            _harpoonController.StopProjectileMovement();
+            var locationNew = _projectile.transform.position;
+            Assert.AreNotEqual(_projectile.transform.position, location, "Projectile has not been moved since 1 second");
             yield return new WaitForSeconds(1);
-            Assert.AreNotEqual(projectile.transform.position, location,
+            Assert.AreNotEqual(_projectile.transform.position, location,
                 "Projectile continues after harpoon has been stopped");
 
             for (var i = 0; i < 100; i++)
             {
-                wheel.RotateCrank(180);
-                wheel.RotateCrank(0);
+                _crankController.RotateCrank(180);
+                _crankController.RotateCrank(0);
             }
             yield return new WaitForSeconds(5);
-            Assert.AreNotEqual(projectile.transform.position, locationNew, "Projectile has not been properly wound in");
+            Assert.AreNotEqual(_projectile.transform.position, locationNew, "Projectile has not been properly wound in");
             
             // Projectile should have returned to harpoon
-            location = projectile.transform.position;
-            harpoon.ShootProjectile();
+            location = _projectile.transform.position;
+            _harpoonController.ShootProjectile();
             yield return new WaitForSeconds(1);
 
-            Assert.AreNotEqual(projectile.transform.position, location, "Second shot wasn't successful");
+            Assert.AreNotEqual(_projectile.transform.position, location, "Second shot wasn't successful");
         }
         
         /**
@@ -119,14 +142,15 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator ShootProjectileAndRotateHarpoonTest()
         {
-            var projectile = GameObject.Find("HarpoonProjectile");
-            var harpoon = GameObject.Find("Harpoon").GetComponent<HarpoonController>();
-            harpoon.ShootProjectile();
-            var rotationProjectile = projectile.transform.rotation.eulerAngles.z;
+            LoadProjectile();
+            LoadHarpoonController();
+            
+            _harpoonController.ShootProjectile();
+            var rotationProjectile = _projectile.transform.rotation.eulerAngles.z;
             yield return new WaitForSeconds(1);
-            harpoon.RotateHarpoon(rotationProjectile+90);
+            _harpoonController.RotateHarpoon(rotationProjectile+90);
             yield return new WaitForSeconds(1);
-            Assert.AreEqual(rotationProjectile, projectile.transform.rotation.eulerAngles.z, 0.1f, "Harpoon rotated after cannon has been shot");
+            Assert.AreEqual(rotationProjectile, _projectile.transform.rotation.eulerAngles.z, 0.1f, "Harpoon rotated after cannon has been shot");
         }
     }
 }
