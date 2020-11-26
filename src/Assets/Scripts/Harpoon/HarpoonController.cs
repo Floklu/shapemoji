@@ -128,6 +128,14 @@ namespace Harpoon
 
         }                
          
+        public void NotifyRemoveHookableObject(HookableObject hookableObject)
+        {
+            if (hookableObject.Equals(_objectHooked))
+            {
+                _objectHooked = null;
+            }
+
+        }     
         
         #region EventHandling
         
