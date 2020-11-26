@@ -98,8 +98,10 @@ public static class HookableObjectController
         {
             stone.SetLayerToDraggableLayer();
             stone.SetDraggable(true);
+            //TODO set _objectHooked=null in HarpoonController
             stone.SetParent(inventory.gameObject);
             stone.SetPosition(position.Value);
+            stone.SetTransformParent(null);
         }
         else
         {
