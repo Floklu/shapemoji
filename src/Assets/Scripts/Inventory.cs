@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /**
  * Class Inventory contains the inventory functionality
@@ -13,9 +11,9 @@ public class Inventory : CanHoldHookableObject
 
     private void Start()
     {
-        for (int i = 0; i < slots.Length; i++)
+        for (var i = 0; i < slots.Length; i++)
         {
-            String slotName = "Slot (" + (i + 1) + ")";
+            var slotName = "Slot (" + (i + 1) + ")";
             slots[i] = gameObject.transform.Find(slotName).gameObject;
         }
     }
@@ -70,7 +68,7 @@ public class Inventory : CanHoldHookableObject
 
     private int GetIndexOfStoneInSlot(Stone stone)
     {
-        int slotIndex = -1;
+        var slotIndex = -1;
         for (var i = 0; i < _stoneInSlot.Length; i++)
         {
             if (_stoneInSlot[i].Equals(stone))

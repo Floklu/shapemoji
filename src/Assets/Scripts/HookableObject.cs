@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 //TODO: at critical number of lines cut into multiple .cs files
@@ -13,7 +9,7 @@ using UnityEngine;
  *  */
 public abstract class HookableObject : MonoBehaviour
 {
-    protected GameObject _parent;
+    protected GameObject Parent;
 
 
     /**
@@ -36,7 +32,7 @@ public abstract class HookableObject : MonoBehaviour
          */
     public void SetLayerToPlayingFieldLayer()
     {
-        this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
+        gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
 
     /**
@@ -44,7 +40,7 @@ public abstract class HookableObject : MonoBehaviour
          */
     public void SetLayerToDraggableLayer()
     {
-        this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
+        gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
 
     /**
@@ -52,7 +48,7 @@ public abstract class HookableObject : MonoBehaviour
      */
     public void SetTransformParent(Transform parentTransform)
     {
-        this.transform.parent = parentTransform;
+        transform.parent = parentTransform;
     }
 
     /**
@@ -62,7 +58,7 @@ public abstract class HookableObject : MonoBehaviour
      */
     public void SetParent(GameObject parent)
     {
-        _parent = parent;
+        Parent = parent;
     }
 
     /**
@@ -73,7 +69,7 @@ public abstract class HookableObject : MonoBehaviour
      */
     public GameObject ChangeParent(GameObject newParent)
     {
-        GameObject oldParent = _parent;
+        var oldParent = Parent;
         SetParent(newParent);
         return oldParent;
     }
@@ -148,7 +144,7 @@ public class Stone : HookableObject
     public void OnDeselectOnUp()
     {
         transform.position =
-            HookableObjectController.GetParentPositionOfChildStone(_parent.GetComponent<CanHoldHookableObject>(), this);
+            HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);
     }
 }
 

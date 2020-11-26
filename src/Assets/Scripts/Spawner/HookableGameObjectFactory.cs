@@ -73,7 +73,7 @@ namespace Spawner
          * @param y Y-Position on the playground
          * @returns GameObject of a Stone
          */
-        private GameObject CreateHookableGameObject(GameObject preFab, float x, float y)
+        private static GameObject CreateHookableGameObject(GameObject preFab, float x, float y)
         {
             var spawnPosition = new Vector3(x, y, 0);
             return Instantiate(preFab, spawnPosition, Quaternion.identity);

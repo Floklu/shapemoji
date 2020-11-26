@@ -8,7 +8,7 @@ using UnityEngine;
 public static class HookableObjectController
 {
     //list of receivers
-    private static readonly List<HarpoonController> _harpoonControllers = new List<HarpoonController>();
+    private static readonly List<HarpoonController> HarpoonControllers = new List<HarpoonController>();
 
 
     /**
@@ -58,7 +58,7 @@ public static class HookableObjectController
      */
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
-        foreach (var harpoonController in _harpoonControllers)
+        foreach (var harpoonController in HarpoonControllers)
         {
             harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
         }
@@ -74,7 +74,7 @@ public static class HookableObjectController
      */
     public static void AddHarpoonController(HarpoonController harpoonController)
     {
-        _harpoonControllers.Add(harpoonController);
+        HarpoonControllers.Add(harpoonController);
     }
 
     /**
@@ -82,7 +82,7 @@ public static class HookableObjectController
      */
     public static void RemoveHarpoonController(HarpoonController harpoonController)
     {
-        _harpoonControllers.Remove(harpoonController);
+        HarpoonControllers.Remove(harpoonController);
     }
 
     /**
@@ -98,7 +98,7 @@ public static class HookableObjectController
         {
             stone.SetLayerToDraggableLayer();
             stone.SetDraggable(true);
-            foreach (var harpoonController in _harpoonControllers)
+            foreach (var harpoonController in HarpoonControllers)
             {
                 harpoonController.NotifyRemoveHookableObject(stone);
             }
@@ -106,6 +106,7 @@ public static class HookableObjectController
             stone.SetParent(inventory.gameObject);
             stone.SetPosition(position.Value);
             stone.SetTransformParent(null);
+            EnableStoneDraggable(stone);
         }
         else
         {
