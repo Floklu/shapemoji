@@ -25,7 +25,7 @@ namespace Tests.EditMode
         [UnityTest]
         public IEnumerator SpawnerTestStoneFactoryCreateStone()
         {
-            var stoneFactory = GameObject.Find("StoneSpawner")?.GetComponent<StoneFactory>();
+            var stoneFactory = GameObject.Find("StoneSpawner")?.GetComponent<HookableGameObjectFactory>();
             Assert.NotNull(stoneFactory);
 
             var x = Random.Range(0,100);
@@ -82,7 +82,7 @@ namespace Tests.EditMode
                 .Select(place => place.GetComponent<SpawnPlace>())
                 .First(x => x.stone != null).stone;
 
-            spawner.DeleteStone(stone);
+            spawner.DeleteHookableObject(stone.GetComponent<HookableObject>());
             Assert.IsFalse(spawner.IsFull());
             
             spawner.CreateRandomStone();

@@ -35,8 +35,8 @@ namespace Tests.PlayMode
             var harpoon1 = GameObject.Find("Team_1/Player_1/Base/HarpoonBase/Harpoon");
             var harpoon2 = GameObject.Find("Team_1/Player_2/Base/HarpoonBase/Harpoon");
             
-            harpoon1.GetComponent<HarpoonController>().Shoot();
-            harpoon2.GetComponent<HarpoonController>().Shoot();
+            harpoon1.GetComponent<HarpoonController>().ShootProjectile();
+            harpoon2.GetComponent<HarpoonController>().ShootProjectile();
             yield return new WaitForSeconds(1);
 
             float length1 = rope1.gameObject.GetComponent<SpriteRenderer>().bounds.size.magnitude;

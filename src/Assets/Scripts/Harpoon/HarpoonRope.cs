@@ -45,6 +45,5 @@ namespace Harpoon
             transform.localScale = ropeScale;
             _ropeTransform.position = ropeCenter;
         }
-
     }
 }

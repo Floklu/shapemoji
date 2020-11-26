@@ -1,10 +1,6 @@
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 using Harpoon;
-using Unity.Profiling;
-using UnityEditor.PackageManager;
-using UnityEditor.SceneManagement;
+using Spawner;
 using UnityEngine;
 
 /**
@@ -13,16 +9,8 @@ using UnityEngine;
 public static class HookableObjectController
 {
     //list of receivers
-    private static readonly List<HarpoonController> _harpoonControllers = new List<HarpoonController>();
+    private static readonly List<HarpoonController> HarpoonControllers = new List<HarpoonController>();
 
-    /**Manages Collision Event of HookableObject (called by HookableObject Instance)
-     *
-     * @param hookableObject HookableObject which detected collision
-     * @param otherObject GameObject which collided with HookableObject
-     */
-    public static void OnHookableObjectCollision(HookableObject hookableObject, GameObject gameObject)
-    {
-    }
 
     /**
      *  OnHookableObjectCollision handles collision between Stone and other GameObject
@@ -32,7 +20,7 @@ public static class HookableObjectController
      */
     public static void OnHookableObjectCollision(Stone stone, GameObject gameObject)
     {
-        if (gameObject.GetType() == typeof(ProjectileCollision))
+        if (gameObject.GetComponent<ProjectileCollision>())
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
@@ -46,7 +34,7 @@ public static class HookableObjectController
      */
     public static void OnHookableObjectCollision(Item item, GameObject gameObject)
     {
-        if (gameObject.GetType() == typeof(ProjectileCollision))
+        if (gameObject.GetComponent<ProjectileCollision>())
         {
             AttachHookableObjectToProjectile(item, gameObject);
         }
@@ -71,15 +59,16 @@ public static class HookableObjectController
      */
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
-        //TODO: enable when implemented in harpoonController
-        /*
-        foreach (var harpoonController in harpoonControllers)
-        {
-            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject)
-        }
-        */
 
+        foreach (var harpoonController in HarpoonControllers)
+        {
+            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
+        }
+        //TODO: dont use find every time
+        GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
         hookableObject.SetTransformParent(projectileGameObject.transform);
+        hookableObject.SetLayerToDraggableLayer();
+
     }
 
     /**
@@ -87,7 +76,7 @@ public static class HookableObjectController
      */
     public static void AddHarpoonController(HarpoonController harpoonController)
     {
-        _harpoonControllers.Add(harpoonController);
+        HarpoonControllers.Add(harpoonController);
     }
 
     /**
@@ -95,6 +84,80 @@ public static class HookableObjectController
      */
     public static void RemoveHarpoonController(HarpoonController harpoonController)
     {
-        _harpoonControllers.Remove(harpoonController);
+        HarpoonControllers.Remove(harpoonController);
+    }
+
+    /**
+     * StoneToInventory handles adding and functionality if the inventory is full
+     *
+     * @param stone The stone to put into the inventory
+     * @param inventory The inventory the stone is added to
+     */
+    public static void StoneToInventory(Stone stone, Inventory inventory)
+    {
+        var position = inventory.AddToInventory(stone);
+        NotifyHarpoonControllersRemoveHookableObject(stone);
+        if (position.HasValue)
+        {
+            stone.SetLayerToDraggableLayer();
+            stone.SetParent(inventory.gameObject);
+            stone.SetPosition(position.Value);
+            stone.SetTransformParent(null);
+            EnableStoneDraggable(stone);
+        }
+        else
+        {
+            stone.DestroyHookableObject();
+        }
+    }
+
+    private static void NotifyHarpoonControllersRemoveHookableObject(HookableObject hookableObject)
+    {
+        foreach (var harpoonController in HarpoonControllers)
+        {
+            harpoonController.NotifyRemoveHookableObject(hookableObject);
+        }
+    }
+
+    /**
+     * handles OnWoundIn event, called by HarpoonController
+     *
+     * @param hookableObject object attached to projectile to be handled
+     * @param inventory of player base where WoundIn event happened
+     */
+    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
+    {
+        hookableObject.OnWoundIn(inventory);
+    }
+
+    /**
+     * ActivateItem activates the item
+     *
+     * @param Item item
+     */
+    public static void ActivateItem(Item item)
+    {
+    }
+
+    /**
+     * remove a stone from inventory. Caution: no new parent for stone is set at this point! Instead this has to be done in event of new parent.
+     *
+     * @param stone to remove
+     * @param inventory where stone should be removed
+     */
+    public static void RemoveStoneFromInventory(Stone stone, Inventory inventory)
+    {
+        inventory.RemoveFromInventory(stone);
+    }
+
+    /**
+     * returns designated Vector3 position of stone from any CanHoldHookableObject knowing this stone
+     *
+     * @param parent CanHoldHookableObject where stone is part of
+     * @param stone to find its position to
+     */
+    public static Vector3 GetParentPositionOfChildStone(CanHoldHookableObject parent, Stone stone)
+    {
+        return parent.GetPositionOfStoneChild(stone);
     }
 }

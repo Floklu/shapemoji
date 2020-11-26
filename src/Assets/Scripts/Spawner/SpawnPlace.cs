@@ -7,9 +7,7 @@ namespace Spawner
  */
     public class SpawnPlace : MonoBehaviour
     {
-    
         //keeps track of a stone
         public GameObject stone;
-    
     }
 }
