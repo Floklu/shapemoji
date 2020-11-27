@@ -23,7 +23,7 @@ namespace Tests.EditMode
                 var team = (player + 1) / 2;
                 float pullDistance = 0;
                 var crank = GameObject.Find($"Teams/Team_{team}/Player_{player}/Base/Wheel").GetComponent<CrankController>();
-                var expectedValue = (360 + (-3000 % 360)) * crank.rangePerRevolution;
+                var expectedValue = (float)240/360 * crank.rangePerRevolution;
                 
                 crank.CrankRotationEvent += (sender, value) => pullDistance += value;
                 crank.RotateCrank(-3000);
