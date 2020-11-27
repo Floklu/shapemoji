@@ -22,7 +22,7 @@ namespace Tests.PlayMode
         /*
          * _harpoon, _projectile, _inventory, _field are GameObjects selected by class method LoadPlayer
          */
-        private GameObject _harpoon, _projectile, _inventory, _field,_field2, _spawner;
+        private GameObject _harpoon, _projectile, _inventory, _field,_field2, _spawner, _wheel;
         
         /**
          * Setup test environment
@@ -38,8 +38,8 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator InventoryTestWithEnumeratorPasses()
         {
-            yield return new WaitForSeconds(5.0f);
-            
+            LoadPlayer(1);
+        
             List<GameObject> stones = new List<GameObject>();
             
             List<GameObject> spawnZones = new List<GameObject>();
@@ -52,12 +52,22 @@ namespace Tests.PlayMode
             {
                 spawnPlaces.Add(child.gameObject);
             }
-/*            
+           
             stones = spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
 
             var stoneToAim = stones.First();
-            yield return AimAtObject(stoneToAim);
-*/
+            var stonePos = stoneToAim.transform.position;
+            yield return AimAtPoint(stonePos.x,stonePos.y);
+
+            for (var i = 0; i < 40; i++)
+            {
+                _wheel.GetComponent<CrankController>().RotateCrank(-3000);
+                yield return new WaitForSeconds(0.3f);
+            }
+            
+            
+            
+
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.
             yield return null;
@@ -66,22 +76,25 @@ namespace Tests.PlayMode
         }
         
         /**
-         * Aims at Object and Shoots Harpoon#
-         * @param gameObject Object to aim
+         * Rotates Harpoon to aim at point
+         * @param harpoon Harpoon Object to aim
+         * @param pointX x parameter of point to aim in Screen Coordinates
+         * @param pointY y parameter of point to aim in Screen Coordinates
          */
-        private IEnumerator AimAtObject(GameObject gameObject)
+        private IEnumerator AimAtPoint(float pointX, float pointY)
         {
+            yield return new WaitForSeconds(1.5f);
             Quaternion q = Quaternion.Euler(_harpoon.transform.eulerAngles);
             Vector3 harpoonRotation = q * Vector3.up;
-            Vector3 pointWorldCoord = gameObject.transform.position;
+            Vector3 pointWorldCoord = new Vector3(pointX, pointY, 0);
 
             Vector3 harpoonPosition = _harpoon.transform.position;
             Vector3 path = pointWorldCoord - harpoonPosition;
             float angle = Vector3.SignedAngle(harpoonRotation, path, Vector3.forward);
             _harpoon.transform.Rotate(0, 0, angle);
             _harpoon.GetComponent<HarpoonController>().ShootProjectile();
-            yield return new WaitForSeconds(5.0f);
-            Assert.Zero(_projectile.GetComponent<Rigidbody2D>().velocity.magnitude);
+            yield return new WaitForSeconds(10.0f);
+            
         }
 
         /**
@@ -108,6 +121,10 @@ namespace Tests.PlayMode
             _inventory =
                 GameObject.Find("Team_" + team + "/Player_" + player +
                                 "/Base/Inventory");
+            
+            _wheel =
+                GameObject.Find("Team_" + team + "/Player_" + player +
+                                "/Base/Wheel");
 
             switch (player)
             {
