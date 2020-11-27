@@ -143,10 +143,10 @@ public static class HookableObjectController
     }
 
     /**
-     * remove a stone from inventory. Caution: no new parent for stone is set at this point! Instead this has to be done in event of new parent.
+     * remove a stone from canHoldHookableObject. Caution: no new parent for stone is set at this point! Instead this has to be done in event of new parent.
      *
      * @param stone to remove
-     * @param inventory where stone should be removed
+     * @param canHoldHookableObject where stone should be removed
      */
     public static void RemoveStoneFromCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
