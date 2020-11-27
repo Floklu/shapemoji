@@ -27,6 +27,7 @@ namespace Tests.EditMode
                 
                 crank.CrankRotationEvent += (sender, value) => pullDistance += value;
                 crank.RotateCrank(-3000);
+                Debug.Log($"Crank Rotation: expected {expectedValue}, got {pullDistance}");
                 Assert.AreEqual(expectedValue, pullDistance, 0.1f, $"Player {player}: crank rotation results in wrong value");
             }
             
