@@ -1,4 +1,5 @@
-﻿using Lean.Touch;
+﻿using System;
+using Lean.Touch;
 using UnityEngine;
 
 //TODO: at critical number of lines cut into multiple .cs files
@@ -142,6 +143,7 @@ public class Stone : HookableObject
         gameObject.AddComponent<LeanDragTranslate>();
         //set deselectable
         gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
+        gameObject.GetComponent<LeanSelectable>().IsolateSelectingFingers = true;
     }
 
     /**
@@ -168,7 +170,7 @@ public class Item : HookableObject
      */
     public override void OnWoundIn(Inventory inventory)
     {
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
 
     /**
