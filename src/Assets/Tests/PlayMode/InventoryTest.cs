@@ -33,26 +33,40 @@ namespace Tests.PlayMode
             SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
+        /**
+         * Test for Player 1
+         */
         [UnityTest]
-        public IEnumerator InventoryTestWithEnumeratorPasses()
+        public IEnumerator InventoryTestPlayer1()
         {
-            for (int i = 0; i < 4; i++)
-            {
-                yield return TestPlayer(i+1);
-            }
-            
-            
-            
-            yield return new WaitForSeconds(10f);
-            
-
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
-            
-            
+            yield return TestPlayer(1);
+        }
+        
+        /**
+         * Test for Player 1
+         */
+        [UnityTest]
+        public IEnumerator InventoryTestPlayer2()
+        {
+            yield return TestPlayer(2);
+        }
+        
+        /**
+         * Test for Player 1
+         */
+        [UnityTest]
+        public IEnumerator InventoryTestPlayer3()
+        {
+            yield return TestPlayer(3);
+        }
+        
+        /**
+         * Test for Player 1
+         */
+        [UnityTest]
+        public IEnumerator InventoryTestPlayer4()
+        {
+            yield return TestPlayer(4);
         }
 
         private IEnumerator TestPlayer(int n)
@@ -66,6 +80,9 @@ namespace Tests.PlayMode
                 yield return AimAtPoint(stonePos.x,stonePos.y);
                 WindIn();
                 yield return new WaitForSeconds(10f);
+
+                Assert.IsTrue(_inventory.GetComponent<Inventory>().slots.ToList().Contains(stoneToAim));
+
             }
         }
 
