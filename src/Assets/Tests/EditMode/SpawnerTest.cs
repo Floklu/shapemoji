@@ -34,8 +34,8 @@ namespace Tests.EditMode
             
             Assert.NotNull(stone);
             var location = stone.transform.position;
-            Assert.AreEqual(x, location.x);
-            Assert.AreEqual(y, location.y);
+            Assert.AreEqual(x, location.x, "Stone spawned at expected x");
+            Assert.AreEqual(y, location.y,"Stone spawned at expected y");
             
             yield return null;
         }
@@ -51,13 +51,13 @@ namespace Tests.EditMode
         {
             var spawnPlaces = Object.FindObjectsOfType<GameObject>().Where(x => x.name.Equals("SpawnPlace"));
             var spawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
-            Assert.NotNull(spawner);
+            Assert.NotNull(spawner, "spawner != null");
             spawner.StartGeneration();
             
             //count spawned stones
             var stonesSpawned = spawnPlaces.Select(place => place.GetComponent<SpawnPlace>()).Select(placeScript => placeScript.stone != null ? 1 : 0).Sum();
 
-            Assert.AreEqual(spawner.maxStones, stonesSpawned );
+            Assert.AreEqual(spawner.maxStones, stonesSpawned, "Max amount of stones spawned?" );
             
             yield return null;
         }

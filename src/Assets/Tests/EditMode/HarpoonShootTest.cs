@@ -50,10 +50,10 @@ namespace Tests.EditMode
             var rope = GameObject.Find("Team_" + team + "/Player_" + player +
                                        "/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonRope");
 
-            Assert.NotNull(harpoon);
-            Assert.NotNull(cannon);
-            Assert.NotNull(projectile);
-            Assert.NotNull(rope);
+            Assert.NotNull(harpoon, "Harpoon not Null");
+            Assert.NotNull(cannon, "Cannon not Null");
+            Assert.NotNull(projectile, "Projectile not Null");
+            Assert.NotNull(rope, "Rope not Null");
         }
     }
 }

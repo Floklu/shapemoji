@@ -33,7 +33,7 @@ namespace Tests.EditMode
             rotation = rotationNew;
             //harpoon.transform.rotation = rotation;
             harpoonController.RotateHarpoon(expectedValue);
-            Assert.AreEqual(rotation.eulerAngles.z,expectedValue%360,1f);
+            Assert.AreEqual(rotation.eulerAngles.z,expectedValue%360,1f, "Rotation as intended?");
             return null;
         }
     }
