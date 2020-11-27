@@ -17,6 +17,9 @@ namespace Spawner
 
         private readonly List<GameObject> _spawnPlaces;
 
+        /**
+         * constructor of class StoneSpawner
+         */
         public StoneSpawner()
         {
             _spawnPlaces = new List<GameObject>();

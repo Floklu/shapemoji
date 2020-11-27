@@ -36,7 +36,7 @@ public class Inventory : CanHoldHookableObject
      *
      * @param stone to remove
      */
-    public void RemoveFromInventory(Stone stone)
+    public override void RemoveStone(Stone stone)
     {
         var slotIndex = GetIndexOfStoneInSlot(stone);
         if (!(slotIndex >= 0 & slotIndex < 4)) return;
@@ -57,6 +57,11 @@ public class Inventory : CanHoldHookableObject
         return slots[slotIndex].transform.position;
     }
 
+    /**
+     * returns index of slot containing Stone stone,returns -1 if not found
+     *
+     * @param stone to find its position
+     */
     private int GetIndexOfStoneInSlot(Stone stone)
     {
         var slotIndex = -1;
