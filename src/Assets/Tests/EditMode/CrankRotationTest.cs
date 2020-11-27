@@ -16,7 +16,7 @@ namespace Tests.EditMode
          * @returns true, if values above 360 and below 0 produce the expected values
          */
         [UnityTest]
-        public IEnumerator CrankRotationTestHighValues()
+        public void CrankRotationTestHighValues()
         {
             for (var player = 1; player <= MAX_PLAYER; player++)
             {
@@ -27,11 +27,8 @@ namespace Tests.EditMode
                 
                 crank.CrankRotationEvent += (sender, value) => pullDistance += value;
                 crank.RotateCrank(-3000);
-                Debug.Log($"Crank Rotation: expected {expectedValue}, got {pullDistance}");
                 Assert.AreEqual(expectedValue, pullDistance, 0.1f, $"Player {player}: crank rotation results in wrong value");
             }
-            
-            yield return null;
         }
     }
 }
