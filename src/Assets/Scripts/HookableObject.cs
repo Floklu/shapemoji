@@ -139,9 +139,9 @@ public class Stone : HookableObject
         //set selectable
         gameObject.AddComponent<LeanSelectable>();
         //move on drag
-        gameObject.AddComponent<Lean.Touch.LeanDragTranslate>();
+        gameObject.AddComponent<LeanDragTranslate>();
         //set deselectable
-        gameObject.GetComponent<Lean.Touch.LeanSelectable>().DeselectOnUp = true;
+        gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
     }
 
     /**
