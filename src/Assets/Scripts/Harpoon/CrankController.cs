@@ -40,6 +40,9 @@ namespace Harpoon
          */
         public void RotateCrank(float rotation)
         {
+            rotation %= 360;
+            if (rotation < 0) rotation = 360 + rotation;
+            
             transform.rotation = Quaternion.Euler(0, 0, rotation);
 
             var windInRange = 0f;
