@@ -1,8 +1,6 @@
-using System.Collections;
 using Harpoon;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.TestTools;
 
 namespace Tests.EditMode
 {
@@ -15,7 +13,7 @@ namespace Tests.EditMode
          *
          * @returns true, if values above 360 and below 0 produce the expected values
          */
-        [UnityTest]
+        [Test]
         public void CrankRotationTestHighValues()
         {
             for (var player = 1; player <= MAX_PLAYER; player++)
