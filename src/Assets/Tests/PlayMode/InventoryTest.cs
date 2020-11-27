@@ -75,13 +75,36 @@ namespace Tests.PlayMode
 
             for (int i = 0; i < 5; i++)
             {
-                var stoneToAim = FindStone();
-                var stonePos = stoneToAim.transform.position;
+                GameObject stoneToAim = FindStone();
+                GameObject stoneCollided = stoneToAim;
+                _projectile.GetComponent<ProjectileCollision>().CollisionEvent+=
+                    delegate(object sender, Collider2D collider2D) { if(stoneCollided.CompareTag("Stone")) stoneCollided = collider2D.gameObject; };
+                Vector3 stonePos = stoneToAim.transform.position;
                 yield return AimAtPoint(stonePos.x,stonePos.y);
                 WindIn();
-                yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(0.1f);
+                var pos1 = stoneCollided.transform.position;
+                yield return new WaitForSeconds(0.1f);
+                var pos2 = stoneCollided.transform.position;
+                
+                yield return new WaitForSeconds(5.0f);
+                Assert.AreNotEqual(pos1, pos2);
 
-                Assert.IsTrue(_inventory.GetComponent<Inventory>().slots.ToList().Contains(stoneToAim));
+                
+                Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
+                Assert.AreEqual(stoneCollided.transform.position, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s));
+                
+                /*
+                Debug.Log(stoneToAim.GetComponent<HookableObject>().ToString());
+                Debug.Log((Stone) stoneToAim.GetComponent<HookableObject>());
+                Stone s = (Stone) stoneToAim.GetComponent<HookableObject>();
+                Debug.Log(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s));
+                */
+                //Debug.Log(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild((Stone)stoneToAim.GetComponent<HookableObject>()));
+                //Assert.AreEqual(stoneToAim.transform.position, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild());
+
+                //GameObject a = _inventory.GetComponent<Inventory>().slots[0].GetComponentInChildren<GameObject>();
+                //Assert.IsTrue(_inventory.GetComponent<Inventory>().slots.ToList().Contains(stoneToAim));
 
             }
         }
@@ -117,7 +140,7 @@ namespace Tests.PlayMode
             stones = spawnPlaces.Where(ContainsStone).ToList();
 
             
-            var stoneToAim = stones.First();
+            var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
             return stoneToAim;
             
             
