@@ -38,8 +38,52 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator InventoryTestWithEnumeratorPasses()
         {
-            LoadPlayer(1);
-        
+            for (int i = 0; i < 4; i++)
+            {
+                yield return TestPlayer(i+1);
+            }
+            
+            
+            
+            yield return new WaitForSeconds(10f);
+            
+
+            // Use the Assert class to test conditions.
+            // Use yield to skip a frame.
+            yield return null;
+            
+            
+        }
+
+        private IEnumerator TestPlayer(int n)
+        {
+            LoadPlayer(n);
+
+            for (int i = 0; i < 5; i++)
+            {
+                var stoneToAim = FindStone();
+                var stonePos = stoneToAim.transform.position;
+                yield return AimAtPoint(stonePos.x,stonePos.y);
+                WindIn();
+                yield return new WaitForSeconds(10f);
+            }
+        }
+
+        private void WindIn()
+        {
+            
+            for (var i = 0; i < 400; i++)
+            {
+                _wheel.GetComponent<CrankController>().RotateCrank(180);
+                
+                _wheel.GetComponent<CrankController>().RotateCrank(0);
+                
+            }
+        }
+
+        private GameObject FindStone()
+        {
+            
             List<GameObject> stones = new List<GameObject>();
             
             List<GameObject> spawnZones = new List<GameObject>();
@@ -53,28 +97,15 @@ namespace Tests.PlayMode
                 spawnPlaces.Add(child.gameObject);
             }
            
-            stones = spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
+            stones = spawnPlaces.Where(ContainsStone).ToList();
 
+            
             var stoneToAim = stones.First();
-            var stonePos = stoneToAim.transform.position;
-            yield return AimAtPoint(stonePos.x,stonePos.y);
-
-            for (var i = 0; i < 40; i++)
-            {
-                _wheel.GetComponent<CrankController>().RotateCrank(-3000);
-                yield return new WaitForSeconds(0.3f);
-            }
-            
-            
-            
-
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            return stoneToAim;
             
             
         }
-        
+
         /**
          * Rotates Harpoon to aim at point
          * @param harpoon Harpoon Object to aim
@@ -83,7 +114,7 @@ namespace Tests.PlayMode
          */
         private IEnumerator AimAtPoint(float pointX, float pointY)
         {
-            yield return new WaitForSeconds(1.5f);
+            
             Quaternion q = Quaternion.Euler(_harpoon.transform.eulerAngles);
             Vector3 harpoonRotation = q * Vector3.up;
             Vector3 pointWorldCoord = new Vector3(pointX, pointY, 0);
