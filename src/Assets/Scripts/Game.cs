@@ -15,9 +15,9 @@ public class Game : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // this quits the game in the unity editor
-            #if UNITY_EDITOR
-                EditorApplication.isPlaying = false;
-            #endif 
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#endif
             // this quits the game if it's already build and running
             Application.Quit();
         }

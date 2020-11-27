@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
-using UnityEditor;
+﻿using Lean.Touch;
 using UnityEngine;
-
 
 //TODO: at critical number of lines cut into multiple .cs files
 
@@ -13,14 +9,15 @@ using UnityEngine;
  *  */
 public abstract class HookableObject : MonoBehaviour
 {
-    private GameObject _parent;
+    protected GameObject Parent;
+
 
     /**
      * on Start() set layer to PlayingFieldLayer
      */
     protected virtual void Start()
     {
-        ChangeLayerPlayingFieldLayer();
+        SetLayerToPlayingFieldLayer();
     }
 
     /**
@@ -28,17 +25,22 @@ public abstract class HookableObject : MonoBehaviour
      *
      * @param Collider other
      */
-    private void OnTriggerEnter2D(Collider2D other)
+    public abstract void OnTriggerEnter2D(Collider2D other);
+
+    /**
+         * change collision layer to PlayingFieldLayer
+         */
+    public void SetLayerToPlayingFieldLayer()
     {
-        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
+        gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
     }
 
     /**
-     * change collision layer to PlayingFieldLayer
-     */
-    public void ChangeLayerPlayingFieldLayer()
+         * change collision layer to DraggableLayer
+         */
+    public void SetLayerToDraggableLayer()
     {
-        this.gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
+        gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
     }
 
     /**
@@ -46,8 +48,54 @@ public abstract class HookableObject : MonoBehaviour
      */
     public void SetTransformParent(Transform parentTransform)
     {
-        this.transform.parent = parentTransform;
+        transform.parent = parentTransform;
     }
+
+    /**
+     * SetParent sets the parent of this gameobject
+     *
+     * @param GameObject parent: parent to set
+     */
+    public void SetParent(GameObject parent)
+    {
+        Parent = parent;
+    }
+
+    /**
+     * set new parent and return old parent
+     *
+     * @returns parent before changing
+     * @param newParent is the parent given to SetParent
+     */
+    public GameObject ChangeParent(GameObject newParent)
+    {
+        var oldParent = Parent;
+        SetParent(newParent);
+        return oldParent;
+    }
+
+    /**
+     * SetPosition sets the position of the hookable object
+     *
+     * @param position The position to set the hookable object to
+     */
+    public void SetPosition(Vector3 position)
+    {
+        gameObject.transform.position = position;
+    }
+
+    /**
+     * DestroyHookableObject destroys the hookable object
+     */
+    public void DestroyHookableObject()
+    {
+        Destroy(gameObject);
+    }
+
+    /**
+     * OnWoundIn is called when the Harpoon is wound in
+     */
+    public abstract void OnWoundIn(Inventory inventory);
 }
 
 /**
@@ -59,17 +107,25 @@ public class Stone : HookableObject
 {
     private bool _draggable;
 
-    protected override void Start()
+    /**
+     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
+     *
+     * @param inventory where stone is put to
+     */
+    public override void OnWoundIn(Inventory inventory)
     {
-        base.Start();
+        HookableObjectController.StoneToInventory(this, inventory);
     }
 
+
     /**
-     * change collision layer to DraggableLayer
+     * Calls for action at controller on collision with
+     *
+     * @param Collider other
      */
-    public void ChangeLayerDraggableLayer()
+    public override void OnTriggerEnter2D(Collider2D other)
     {
-        this.gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
+        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
     }
 
     /**
@@ -80,6 +136,21 @@ public class Stone : HookableObject
     public void SetDraggable(bool state)
     {
         _draggable = state;
+        //set selectable
+        gameObject.AddComponent<LeanSelectable>();
+        //move on drag
+        gameObject.AddComponent<LeanDragTranslate>();
+        //set deselectable
+        gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
+    }
+
+    /**
+     * gets called by lean event, when releasing stone from drag and puts it back to parent position
+     */
+    public void OnDeselectOnUp()
+    {
+        transform.position =
+            HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);
     }
 }
 
@@ -90,4 +161,23 @@ public class Stone : HookableObject
  */
 public class Item : HookableObject
 {
+    /**
+     *  gets called by controller on wound in event
+     *
+     * @param inventory belonging to the player base
+     */
+    public override void OnWoundIn(Inventory inventory)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    /**
+     * Calls for action at controller on collision with
+     *
+     * @param Collider other
+     */
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
+    }
 }

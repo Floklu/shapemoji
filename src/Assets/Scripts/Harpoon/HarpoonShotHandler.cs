@@ -9,7 +9,7 @@ namespace Harpoon
     public class HarpoonShotHandler : MonoBehaviour
     {
         private bool _isShot;
-        
+
         /**
         * Triggers ShotEvent
         */
@@ -28,9 +28,9 @@ namespace Harpoon
         {
             _isShot = false;
         }
-            
+
         #region Events
-        
+
         /**
          * invokes event, when Harpoon is shot
          */
@@ -44,7 +44,7 @@ namespace Harpoon
             _isShot = true;
             ShotEvent?.Invoke(this, EventArgs.Empty);
         }
-        
+
         #endregion
     }
 }
