@@ -7,18 +7,17 @@ using Spawner;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+using Assert = NUnit.Framework.Assert;
 
 namespace Tests.PlayMode
 {
-    
     /**
-     * Test class for wind in and inventory
+     * Test class for wind in and inventory functionality
      * @author Andrei Dziubenka
      * @date 2020.11.26
      */
     public class InventoryTest
     {
-        
         /*
          * _harpoon, _projectile, _inventory, _field are GameObjects selected by class method LoadPlayer
          */
@@ -43,7 +42,7 @@ namespace Tests.PlayMode
         }
         
         /**
-         * Test for Player 1
+         * Test for Player 2
          */
         [UnityTest]
         public IEnumerator InventoryTestPlayer2()
@@ -52,7 +51,7 @@ namespace Tests.PlayMode
         }
         
         /**
-         * Test for Player 1
+         * Test for Player 3
          */
         [UnityTest]
         public IEnumerator InventoryTestPlayer3()
@@ -61,7 +60,7 @@ namespace Tests.PlayMode
         }
         
         /**
-         * Test for Player 1
+         * Test for Player 4
          */
         [UnityTest]
         public IEnumerator InventoryTestPlayer4()
@@ -69,16 +68,30 @@ namespace Tests.PlayMode
             yield return TestPlayer(4);
         }
 
-        private IEnumerator TestPlayer(int n)
+        /**
+         * Run test for player
+         * @param player Player number
+         */
+        private IEnumerator TestPlayer(int player)
         {
-            LoadPlayer(n);
+            LoadPlayer(player);
+            GameObject stoneCollided;
+            
+            _projectile.GetComponent<ProjectileCollision>().CollisionEvent+=
+                delegate(object sender, Collider2D collider2D) {
+                    if (collider2D.gameObject.CompareTag("Stone"))
+                    {
+                        stoneCollided = collider2D.gameObject;
+                    }
+                };
 
             for (int i = 0; i < 5; i++)
             {
                 GameObject stoneToAim = FindStone();
-                GameObject stoneCollided = stoneToAim;
-                _projectile.GetComponent<ProjectileCollision>().CollisionEvent+=
-                    delegate(object sender, Collider2D collider2D) { if(stoneCollided.CompareTag("Stone")) stoneCollided = collider2D.gameObject; };
+                // stoneCollided can be changed by Collision Event Handler
+                // stoneCollided is used to determine which stone was catched by harpoon
+                stoneCollided = stoneToAim;
+
                 Vector3 stonePos = stoneToAim.transform.position;
                 yield return AimAtPoint(stonePos.x,stonePos.y);
                 WindIn();
@@ -88,44 +101,41 @@ namespace Tests.PlayMode
                 var pos2 = stoneCollided.transform.position;
                 
                 yield return new WaitForSeconds(5.0f);
+                
+                // check if stone is dragged away
                 Assert.AreNotEqual(pos1, pos2);
 
-                
-                Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
-                Assert.AreEqual(stoneCollided.transform.position, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s));
-                
-                /*
-                Debug.Log(stoneToAim.GetComponent<HookableObject>().ToString());
-                Debug.Log((Stone) stoneToAim.GetComponent<HookableObject>());
-                Stone s = (Stone) stoneToAim.GetComponent<HookableObject>();
-                Debug.Log(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s));
-                */
-                //Debug.Log(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild((Stone)stoneToAim.GetComponent<HookableObject>()));
-                //Assert.AreEqual(stoneToAim.transform.position, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild());
+                // last stone should be deleted, because inventory is full
+                if (i == 4)
+                {
+                    UnityEngine.Assertions.Assert.IsNull(stoneCollided);
+                }
+                // first 4 stones are expected to get into inventory
+                else
+                {
+                    Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
+                    Assert.AreEqual(stoneCollided.transform.position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x,0.1f);
+                    Assert.AreEqual(stoneCollided.transform.position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y,0.1f);
 
-                //GameObject a = _inventory.GetComponent<Inventory>().slots[0].GetComponentInChildren<GameObject>();
-                //Assert.IsTrue(_inventory.GetComponent<Inventory>().slots.ToList().Contains(stoneToAim));
-
+                }
             }
         }
-
+        
+        /**
+         * Wind in harpoon method
+         */
         private void WindIn()
         {
-            
             for (var i = 0; i < 400; i++)
             {
                 _wheel.GetComponent<CrankController>().RotateCrank(180);
-                
                 _wheel.GetComponent<CrankController>().RotateCrank(0);
-                
             }
         }
 
         private GameObject FindStone()
         {
-            
             List<GameObject> stones = new List<GameObject>();
-            
             List<GameObject> spawnZones = new List<GameObject>();
             List<GameObject> spawnPlaces = new List<GameObject>();
             
@@ -138,12 +148,8 @@ namespace Tests.PlayMode
             }
            
             stones = spawnPlaces.Where(ContainsStone).ToList();
-
-            
             var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
             return stoneToAim;
-            
-            
         }
 
         /**
@@ -182,6 +188,10 @@ namespace Tests.PlayMode
             return spawn != null && spawn.stone != null;
         }
 
+        /**
+         * Method to load player Game Objects
+         * @param player Player number
+         */
         private void LoadPlayer(int player)
         {
             var team = (player + 1) / 2;
@@ -205,13 +215,14 @@ namespace Tests.PlayMode
                     break;
                 case 2:
                     _field = GameObject.Find("SpawnArea_NorthWest");
-                    _field2 = GameObject.Find("SpawnArea_SouthWest");
+                    _field2 = GameObject.Find("SpawnArea_NorthEast");
                     break;
                 case 3:
                     _field = GameObject.Find("SpawnArea_SouthEast");
+                    _field2 = GameObject.Find("SpawnArea_SouthWest");
                     break;
                 case 4:
-                    _field = GameObject.Find("SpawnArea_SouthWest");
+                    _field = GameObject.Find("SpawnArea_NorthEast");
                     _field2 = GameObject.Find("SpawnArea_NorthWest");
                     break;
             }
