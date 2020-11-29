@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5157790541497175616}
   - component: {fileID: 2287853520606006067}
   - component: {fileID: 3428013771187844832}
+  - component: {fileID: 5530699165194842811}
   m_Layer: 0
   m_Name: TriangleRectangular_Stone
   m_TagString: Stone
@@ -146,3 +147,24 @@ PolygonCollider2D:
       - {x: -3.08, y: -2.565}
       - {x: -0.62, y: -2.565}
       - {x: -0.61, y: -2.5549998}
+--- !u!50 &5530699165194842811
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848690935837112765}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

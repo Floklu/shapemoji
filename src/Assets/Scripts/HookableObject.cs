@@ -1,4 +1,5 @@
-﻿using Lean.Touch;
+﻿using System;
+using Lean.Touch;
 using UnityEngine;
 
 //TODO: at critical number of lines cut into multiple .cs files
@@ -10,6 +11,8 @@ using UnityEngine;
 public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject Parent;
+    protected GameObject Base;
+    protected GameObject CurrentParent;
 
 
     /**
@@ -18,6 +21,11 @@ public abstract class HookableObject : MonoBehaviour
     protected virtual void Start()
     {
         SetLayerToPlayingFieldLayer();
+    }
+
+    private void Update()
+    {
+        // Debug.Log(CurrentParent);
     }
 
     /**
@@ -92,10 +100,20 @@ public abstract class HookableObject : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public GameObject GetBase()
+    {
+        return Base;
+    }
+
+    public void SetCurrentParent(GameObject gameObject)
+    {
+        CurrentParent = gameObject;
+    }
+
     /**
      * OnWoundIn is called when the Harpoon is wound in
      */
-    public abstract void OnWoundIn(Inventory inventory);
+    public abstract void OnWoundIn(Inventory inventory, GameObject myBase);
 }
 
 /**
@@ -112,8 +130,9 @@ public class Stone : HookableObject
      *
      * @param inventory where stone is put to
      */
-    public override void OnWoundIn(Inventory inventory)
+    public override void OnWoundIn(Inventory inventory, GameObject myBase)
     {
+        Base = myBase;
         HookableObjectController.StoneToInventory(this, inventory);
     }
 
@@ -126,6 +145,11 @@ public class Stone : HookableObject
     public override void OnTriggerEnter2D(Collider2D other)
     {
         HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        CurrentParent = null;
     }
 
     /**
@@ -141,7 +165,10 @@ public class Stone : HookableObject
         //move on drag
         gameObject.AddComponent<LeanDragTranslate>();
         //set deselectable
-        gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
+        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
+        leanSelectable.DeselectOnUp = true;
+
+        leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
     }
 
     /**
@@ -149,6 +176,10 @@ public class Stone : HookableObject
      */
     public void OnDeselectOnUp()
     {
+        if (CurrentParent != null)
+        {
+            Parent = CurrentParent;
+        }
         transform.position =
             HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);
     }
@@ -166,7 +197,7 @@ public class Item : HookableObject
      *
      * @param inventory belonging to the player base
      */
-    public override void OnWoundIn(Inventory inventory)
+    public override void OnWoundIn(Inventory inventory, GameObject myBase)
     {
         throw new System.NotImplementedException();
     }

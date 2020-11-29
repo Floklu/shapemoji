@@ -24,6 +24,10 @@ public static class HookableObjectController
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
+        else if (gameObject.CompareTag("Workshop") && gameObject.GetComponent<Workshop>().GetBase() == stone.GetBase())
+        {
+            stone.SetCurrentParent(gameObject);
+        }
     }
 
     /**
@@ -128,9 +132,9 @@ public static class HookableObjectController
      * @param hookableObject object attached to projectile to be handled
      * @param inventory of player base where WoundIn event happened
      */
-    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
+    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory, GameObject myBase)
     {
-        hookableObject.OnWoundIn(inventory);
+        hookableObject.OnWoundIn(inventory, myBase);
     }
 
     /**
