@@ -35,6 +35,7 @@ namespace Harpoon
          * adds given range to current travel range
          *
          * @param distance distance
+         * @param sender sending notify
          */
         public void AddTravelDistance(object sender, float distance)
         {
@@ -42,6 +43,9 @@ namespace Harpoon
             _travelDistance += distance;
         }
 
+        /**
+         * resets projectile to spawn state, at travel distance 0 with velocity 0
+         */
         public void ResetProjectile()
         {
             _travelDistance = 0;

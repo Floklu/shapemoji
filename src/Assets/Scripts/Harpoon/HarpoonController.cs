@@ -18,7 +18,8 @@ namespace Harpoon
         private WindInProjectile _windInProjectile;
         private CrankController _crankController;
 
-        private bool _windIn;
+        private bool _isWoundIn;
+        private bool _projectileShot;
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
         private Inventory _inventory;
@@ -56,7 +57,9 @@ namespace Harpoon
         {
             _movingProjectile.SetVelocity(projectileSpeed);
             _rope.enabled = true;
-            _windIn = false;
+            _isWoundIn = false;
+            _rotatableHandler.enabled = false;
+            _projectileShot = true;
         }
 
         /**
@@ -64,14 +67,13 @@ namespace Harpoon
          */
         public void StopProjectileMovement()
         {
-            if (_windIn) //Harpoon has been wound in
+            if (_isWoundIn) //Harpoon has been wound in
             {
                 ResetCannon();
             }
             else //Harpoon hasn't been wound in
             {
                 _cannonCollider.enabled = true;
-                _rotatableHandler.enabled = false;
                 _movingProjectile.SetVelocity(0);
 
                 _crankController.EnableController(true);
@@ -79,7 +81,7 @@ namespace Harpoon
                 //prepare windInProjectile functionality
                 _windInProjectile.ResetProjectile();
                 _windInProjectile.TravelSpeed = projectileSpeed;
-                _windIn = true;
+                _isWoundIn = true;
             }
         }
 
@@ -96,6 +98,9 @@ namespace Harpoon
             _windInProjectile.ResetProjectile();
             _cannonCollider.enabled = false;
             _crankController.EnableController(false);
+
+            _projectileShot = false;
+            _isWoundIn = false;
         }
 
         /**
@@ -105,7 +110,10 @@ namespace Harpoon
          */
         public void RotateHarpoon(float rotation)
         {
-            transform.rotation = Quaternion.Euler(0, 0, rotation);
+            if (!_projectileShot && !_isWoundIn)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, rotation);
+            }
         }
 
         /**
@@ -139,7 +147,7 @@ namespace Harpoon
          */
         private void ProjectileOnCollisionEvent(object sender, Collider2D collidedObject)
         {
-            if (_windIn)
+            if (_isWoundIn)
             {
                 if (collidedObject.Equals(_cannonCollider))
                 {

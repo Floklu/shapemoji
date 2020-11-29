@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-
+﻿using Lean.Touch;
+using UnityEngine;
 
 //TODO: at critical number of lines cut into multiple .cs files
 
@@ -136,14 +136,12 @@ public class Stone : HookableObject
     public void SetDraggable(bool state)
     {
         _draggable = state;
-        /*
- // to move the stone with touch
- gameObject.AddComponent<LeanDragTranslate>();
- // to only move the stone you touch
- gameObject.AddComponent<LeanSelectable>();
- // to deselect when not touching the stone anymore
- gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
- */
+        //set selectable
+        gameObject.AddComponent<LeanSelectable>();
+        //move on drag
+        gameObject.AddComponent<LeanDragTranslate>();
+        //set deselectable
+        gameObject.GetComponent<LeanSelectable>().DeselectOnUp = true;
     }
 
     /**
