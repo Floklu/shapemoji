@@ -11,8 +11,6 @@ using UnityEngine;
 public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject Parent;
-    protected GameObject Base;
-    protected GameObject CurrentParent;
 
 
     /**
@@ -95,16 +93,6 @@ public abstract class HookableObject : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public GameObject GetBase()
-    {
-        return Base;
-    }
-
-    public void SetCurrentParent(GameObject gameObject)
-    {
-        CurrentParent = gameObject;
-    }
-
     /**
      * OnWoundIn is called when the Harpoon is wound in
      */
@@ -119,6 +107,7 @@ public abstract class HookableObject : MonoBehaviour
 public class Stone : HookableObject
 {
     private bool _draggable;
+    private CanHoldHookableObject _onDeselectParent;
 
     /**
      * gets called by controller when WoundIn event is triggered. calls StoneToInventory
@@ -143,7 +132,12 @@ public class Stone : HookableObject
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        CurrentParent = null;
+        _onDeselectParent = null;
+    }
+
+    public void SetOnDeselectParent(CanHoldHookableObject canHoldHookableObject)
+    {
+        _onDeselectParent = canHoldHookableObject;
     }
 
     /**
@@ -165,11 +159,10 @@ public class Stone : HookableObject
      */
     public void OnDeselectOnUp()
     {
-        if (CurrentParent != null)
+        if (_onDeselectParent != null && _onDeselectParent != Parent.GetComponent<CanHoldHookableObject>())
         {
             HookableObjectController.RemoveStoneFromCanHoldHookableObject(this, Parent);
-            SetParent(CurrentParent);
-            
+            HookableObjectController.OnDeselectOnCanHoldHookableObject(this, _onDeselectParent);
         }
 
         transform.position =

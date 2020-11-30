@@ -5,12 +5,12 @@
  */
 public class Workshop : CanHoldHookableObject
 {
-    [SerializeField] private GameObject myBase;
+    [SerializeField] private GameObject inventory;
     private Stone _child;
 
-    public GameObject GetBase()
+    public GameObject GetInventory()
     {
-        return myBase;
+        return inventory;
     }
 
     public void SetChild(Stone stone)
@@ -18,9 +18,9 @@ public class Workshop : CanHoldHookableObject
         _child = stone;
     }
 
-    public Stone GetChild()
+    public bool IsEmpty()
     {
-        return _child;
+        return _child == null;
     }
 
     public override Vector3 GetPositionOfStoneChild(Stone stone)

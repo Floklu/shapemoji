@@ -43,7 +43,7 @@ public class Inventory : CanHoldHookableObject
         _slotIsFull[slotIndex] = false;
         _stoneInSlot[slotIndex] = null;
     }
-    
+
     /**
      * returns the position of stone inventory slot belonging to stone
      *
@@ -73,5 +73,10 @@ public class Inventory : CanHoldHookableObject
         }
 
         return -1;
+    }
+
+    public bool StoneInInventory(Stone stone)
+    {
+        return GetIndexOfStoneInSlot(stone) != -1;
     }
 }

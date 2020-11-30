@@ -25,10 +25,11 @@ public static class HookableObjectController
             AttachHookableObjectToProjectile(stone, gameObject);
         }
         else if (gameObject.CompareTag("Workshop") &&
-                 gameObject.GetComponent<Workshop>().GetBase() == stone.GetBase() &&
-                 !gameObject.GetComponent<Workshop>().GetChild())
+                 IsStoneInInventory(stone,
+                     gameObject.GetComponent<Workshop>().GetInventory().GetComponent<Inventory>()) &&
+                 gameObject.GetComponent<Workshop>().IsEmpty())
         {
-            stone.SetCurrentParent(gameObject);
+            SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
     }
 
@@ -45,6 +46,17 @@ public static class HookableObjectController
             AttachHookableObjectToProjectile(item, gameObject);
         }
     }
+
+    public static void SetOnDeselectParentOfStone(Stone stone, CanHoldHookableObject canHoldHookableObject)
+    {
+        stone.SetOnDeselectParent(canHoldHookableObject);
+    }
+
+    public static bool IsStoneInInventory(Stone stone, Inventory inventory)
+    {
+        return inventory.StoneInInventory(stone);
+    }
+
 
     /**
      * action needed when Stone is made draggable
@@ -122,9 +134,19 @@ public static class HookableObjectController
 
     public static void StoneToWorkshop(Stone stone, Workshop workshop)
     {
+        // TODO: #450 add rotation, scale in here
         stone.SetParent(workshop.gameObject);
         workshop.SetChild(stone);
     }
+
+    public static void OnDeselectOnCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
+    {
+        if (canHoldHookableObject.GetComponent<Workshop>())
+        {
+            StoneToWorkshop(stone, canHoldHookableObject.GetComponent<Workshop>());
+        }
+    }
+
 
     private static void NotifyHarpoonControllersRemoveHookableObject(HookableObject hookableObject)
     {
