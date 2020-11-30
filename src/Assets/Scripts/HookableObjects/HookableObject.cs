@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 //TODO: at critical number of lines cut into multiple .cs files
 
