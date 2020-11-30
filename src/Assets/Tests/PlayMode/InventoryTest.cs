@@ -21,8 +21,8 @@ namespace Tests.PlayMode
         /*
          * _harpoon, _projectile, _inventory, _field are GameObjects selected by class method LoadPlayer
          */
-        private GameObject _harpoon, _projectile, _inventory, _field,_field2, _spawner, _wheel;
-        
+        private GameObject _harpoon, _projectile, _inventory, _field, _field2, _spawner, _wheel;
+
         /**
          * Setup test environment
          */
@@ -40,7 +40,7 @@ namespace Tests.PlayMode
         {
             yield return TestPlayer(1);
         }
-        
+
         /**
          * Test for Player 2
          */
@@ -49,7 +49,7 @@ namespace Tests.PlayMode
         {
             yield return TestPlayer(2);
         }
-        
+
         /**
          * Test for Player 3
          */
@@ -58,7 +58,7 @@ namespace Tests.PlayMode
         {
             yield return TestPlayer(3);
         }
-        
+
         /**
          * Test for Player 4
          */
@@ -76,9 +76,10 @@ namespace Tests.PlayMode
         {
             LoadPlayer(player);
             GameObject stoneCollided = null;
-            
-            _projectile.GetComponent<ProjectileCollision>().CollisionEvent+=
-                delegate(object sender, Collider2D collider2D) {
+
+            _projectile.GetComponent<ProjectileCollision>().CollisionEvent +=
+                delegate(object sender, Collider2D collider2D)
+                {
                     //if it is a stone
                     if (collider2D.gameObject.CompareTag("Stone"))
                     {
@@ -88,52 +89,53 @@ namespace Tests.PlayMode
                         {
                             stoneCollided = collider2D.gameObject;
                         }
-                        
                     }
                 };
 
             for (int i = 0; i < 5; i++)
             {
                 GameObject stoneToAim = FindStone();
-                Assert.IsNotNull(stoneToAim,$"Player {player}: not enough stones on the playing field");
-                
+                Assert.IsNotNull(stoneToAim, $"Player {player}: not enough stones on the playing field");
+
                 // stoneCollided can be changed by Collision Event Handler
                 // stoneCollided is used to determine which stone was catched by harpoon
                 stoneCollided = null;
 
                 Vector3 stonePos = stoneToAim.transform.position;
-                yield return AimAtPoint(stonePos.x,stonePos.y);
+                yield return AimAtPoint(stonePos.x, stonePos.y);
                 WindIn();
                 yield return new WaitForSeconds(0.1f);
-                Assert.IsNotNull(stoneCollided,$"Player {player}: could not find collided stone");
+                Assert.IsNotNull(stoneCollided, $"Player {player}: could not find collided stone");
                 var pos1 = stoneCollided.transform.position;
                 yield return new WaitForSeconds(0.1f);
                 // get new stone position, pos2
                 // ReSharper disable once Unity.InefficientPropertyAccess
                 var pos2 = stoneCollided.transform.position;
-                
+
                 yield return new WaitForSeconds(5.0f);
-                
+
                 // check if stone is dragged away
-                Assert.AreNotEqual(pos1, pos2,$"Player {player}: Stone isn't dragged away during wind in");
+                Assert.AreNotEqual(pos1, pos2, $"Player {player}: Stone isn't dragged away during wind in");
 
                 // last stone should be deleted, because inventory is full
                 if (i == 4)
                 {
-                    UnityEngine.Assertions.Assert.IsNull(stoneCollided,$"Player {player}: Stone isn't deleted, despite full inventory");
+                    UnityEngine.Assertions.Assert.IsNull(stoneCollided,
+                        $"Player {player}: Stone isn't deleted, despite full inventory");
                 }
                 // first 4 stones are expected to get into inventory
                 else
                 {
                     Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
                     var position = stoneCollided.transform.position;
-                    Assert.AreEqual(position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x,0.1f, $"Player {player}: Stone wasn't placed into inventory (x-Axis)");
-                    Assert.AreEqual(position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y,0.1f, $"Player {player}: Stone wasn't placed into inventory (y-Axis)");
-
+                    Assert.AreEqual(position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x, 0.1f,
+                        $"Player {player}: Stone wasn't placed into inventory (x-Axis)");
+                    Assert.AreEqual(position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y, 0.1f,
+                        $"Player {player}: Stone wasn't placed into inventory (y-Axis)");
                 }
             }
         }
-        
+
         /**
          * Wind in harpoon method
          */
@@ -150,7 +152,7 @@ namespace Tests.PlayMode
         {
             List<GameObject> spawnZones = new List<GameObject>();
             List<GameObject> spawnPlaces = new List<GameObject>();
-            
+
             spawnZones.Add(_field);
             spawnZones.Add(_field2);
 
@@ -158,21 +160,17 @@ namespace Tests.PlayMode
             {
                 spawnPlaces.Add(child.gameObject);
             }
-           
+
             var stones = spawnPlaces.Where(ContainsStone).ToList();
-            
+
             if (stones.Any())
             {
                 var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
                 return stoneToAim;
             }
-            
+
             // return null, if no stones are found
             return null;
-            
-            
-            
-            
         }
 
         /**
@@ -183,18 +181,13 @@ namespace Tests.PlayMode
          */
         private IEnumerator AimAtPoint(float pointX, float pointY)
         {
-            
-            Quaternion q = Quaternion.Euler(_harpoon.transform.eulerAngles);
-            Vector3 harpoonRotation = q * Vector3.up;
             Vector3 pointWorldCoord = new Vector3(pointX, pointY, 0);
-
             Vector3 harpoonPosition = _harpoon.transform.position;
             Vector3 path = pointWorldCoord - harpoonPosition;
-            float angle = Vector3.SignedAngle(harpoonRotation, path, Vector3.forward);
-            _harpoon.transform.Rotate(0, 0, angle);
+            float angle = Vector3.SignedAngle(Vector3.up, path, Vector3.forward);
+            _harpoon.GetComponent<HarpoonController>().RotateHarpoon(angle);
             _harpoon.GetComponent<HarpoonController>().ShootProjectile();
             yield return new WaitForSeconds(10.0f);
-            
         }
 
         /**
@@ -225,7 +218,7 @@ namespace Tests.PlayMode
             _inventory =
                 GameObject.Find("Team_" + team + "/Player_" + player +
                                 "/Base/Inventory");
-            
+
             _wheel =
                 GameObject.Find("Team_" + team + "/Player_" + player +
                                 "/Base/Wheel");
@@ -249,9 +242,6 @@ namespace Tests.PlayMode
                     _field2 = GameObject.Find("SpawnArea_NorthWest");
                     break;
             }
-
-
         }
-        
     }
 }
