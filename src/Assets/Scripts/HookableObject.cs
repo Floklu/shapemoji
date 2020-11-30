@@ -1,5 +1,4 @@
-﻿using System;
-using Lean.Touch;
+﻿using Lean.Touch;
 using UnityEngine;
 
 //TODO: at critical number of lines cut into multiple .cs files
@@ -107,6 +106,8 @@ public abstract class HookableObject : MonoBehaviour
 public class Stone : HookableObject
 {
     private bool _draggable;
+
+    // Parent that changes when the stone collides with a CanHoldHookableObject
     private CanHoldHookableObject _onDeselectParent;
 
     /**
@@ -130,11 +131,21 @@ public class Stone : HookableObject
         HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
     }
 
+    /**
+     * OnTriggerExit2D is called when the Collider other has stopped touching the trigger.
+     *
+     * @param Collider2D other
+     */
     private void OnTriggerExit2D(Collider2D other)
     {
         _onDeselectParent = null;
     }
 
+    /**
+     * SetOnDeselectParent sets the parent of the current frame
+     *
+     * @param canHoldHookableObject the parent to set
+     */
     public void SetOnDeselectParent(CanHoldHookableObject canHoldHookableObject)
     {
         _onDeselectParent = canHoldHookableObject;
@@ -155,7 +166,7 @@ public class Stone : HookableObject
     }
 
     /**
-     * gets called by lean event, when releasing stone from drag and puts it back to parent position
+     * gets called by lean event, when releasing stone from drag and puts it back to parent position or first sets the new parent
      */
     public void OnDeselectOnUp()
     {
@@ -169,6 +180,9 @@ public class Stone : HookableObject
             HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);
     }
 
+    /**
+     * MakeDraggable adds the Lean Touch Scripts and functionality to the stone to make it draggable
+     */
     private void MakeDraggable()
     {
         //set selectable

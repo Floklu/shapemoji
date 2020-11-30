@@ -75,6 +75,11 @@ public class Inventory : CanHoldHookableObject
         return -1;
     }
 
+    /**
+     * StoneInInventory checks if stone is in this inventory
+     *
+     * @param stone: stone to check
+     */
     public bool StoneInInventory(Stone stone)
     {
         return GetIndexOfStoneInSlot(stone) != -1;

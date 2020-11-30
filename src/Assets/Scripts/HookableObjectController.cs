@@ -47,11 +47,25 @@ public static class HookableObjectController
         }
     }
 
+    /**
+     * SetOnDeselectParentOfStone sets the onDeselectParent of the stone
+     *
+     * @param stone: stone which is selected
+     * @param canHoldHookableObject: the parent to set
+     */
     public static void SetOnDeselectParentOfStone(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         stone.SetOnDeselectParent(canHoldHookableObject);
     }
 
+    /**
+     * IsStoneInInventory checks if the stone is in the inventory
+     *
+     * @param stone: stone which is selected
+     * @param inventory: inventory to search the stone in
+     *
+     * @return true if stone is in inventory, else false
+     */
     public static bool IsStoneInInventory(Stone stone, Inventory inventory)
     {
         return inventory.StoneInInventory(stone);
@@ -132,6 +146,12 @@ public static class HookableObjectController
         }
     }
 
+    /**
+     * StoneToWorkshop handles adding of stones to the workshop
+     *
+     * @param stone: the stone to add to the workshop
+     * @param workshop: the workshop to add a stone to
+     */
     public static void StoneToWorkshop(Stone stone, Workshop workshop)
     {
         // TODO: #450 add rotation, scale in here
@@ -139,6 +159,12 @@ public static class HookableObjectController
         workshop.SetChild(stone);
     }
 
+    /**
+     * OnDeselectOnCanHoldHookableObject is called when a stone is deselected over a canHoldHookableObject
+     *
+     * @param stone: stone which is selected
+     * @param canHoldHookableObject: object under the stone
+     */
     public static void OnDeselectOnCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         if (canHoldHookableObject.GetComponent<Workshop>())
@@ -148,6 +174,11 @@ public static class HookableObjectController
     }
 
 
+    /**
+     * NotifyHarpoonControllersRemoveHookableObject removes the hookableObject from the harpoon controller
+     *
+     * @param hookableObject: object to remove
+     */
     private static void NotifyHarpoonControllersRemoveHookableObject(HookableObject hookableObject)
     {
         foreach (var harpoonController in HarpoonControllers)
@@ -187,6 +218,12 @@ public static class HookableObjectController
         canHoldHookableObject.RemoveStone(stone);
     }
 
+    /**
+     * remove a stone from gameObject
+     *
+     * @param stone to remove
+     * @param gameObject where stone should be removed
+     */
     public static void RemoveStoneFromCanHoldHookableObject(Stone stone, GameObject gameObject)
     {
         RemoveStoneFromCanHoldHookableObject(stone, gameObject.GetComponent<CanHoldHookableObject>());
