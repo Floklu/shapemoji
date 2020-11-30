@@ -159,6 +159,11 @@ public static class HookableObjectController
         canHoldHookableObject.RemoveStone(stone);
     }
 
+    public static void SetChildOfCanHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
+    {
+        canHoldHookableObject.SetChild(stone);
+    }
+
     /**
      * returns designated Vector3 position of stone from any CanHoldHookableObject knowing this stone
      *

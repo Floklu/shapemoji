@@ -173,9 +173,9 @@ public class Stone : HookableObject
     {
         if (CurrentParent != null)
         {
-            Parent.GetComponent<CanHoldHookableObject>().RemoveStone(this);
+            HookableObjectController.RemoveStoneFromCanHoldHookableObject(this, Parent.GetComponent<CanHoldHookableObject>());
             SetParent(CurrentParent);
-            CurrentParent.GetComponent<CanHoldHookableObject>().SetChild(this);
+            HookableObjectController.SetChildOfCanHookableObject(this, Parent.GetComponent<CanHoldHookableObject>());
             
         }
         transform.position =

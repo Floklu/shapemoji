@@ -39,7 +39,7 @@ public class Inventory : CanHoldHookableObject
     public override void RemoveStone(Stone stone)
     {
         var slotIndex = GetIndexOfStoneInSlot(stone);
-        if (!(slotIndex >= 0 & slotIndex < 4)) return;
+        if (slotIndex == -1) return;
         _slotIsFull[slotIndex] = false;
         _stoneInSlot[slotIndex] = null;
     }
@@ -58,7 +58,7 @@ public class Inventory : CanHoldHookableObject
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
         var slotIndex = GetIndexOfStoneInSlot(stone);
-        if (!(slotIndex >= 0 & slotIndex < 4)) return Vector3.zero;
+        if (slotIndex == -1) return Vector3.zero;
         return slots[slotIndex].transform.position;
     }
 
