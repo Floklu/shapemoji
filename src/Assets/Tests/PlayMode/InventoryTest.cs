@@ -96,8 +96,11 @@ namespace Tests.PlayMode
                 yield return AimAtPoint(stonePos.x,stonePos.y);
                 WindIn();
                 yield return new WaitForSeconds(0.1f);
+                Assert.IsNotNull(stoneCollided);
                 var pos1 = stoneCollided.transform.position;
                 yield return new WaitForSeconds(0.1f);
+                // get new stone position, pos2
+                // ReSharper disable once Unity.InefficientPropertyAccess
                 var pos2 = stoneCollided.transform.position;
                 
                 yield return new WaitForSeconds(5.0f);
@@ -114,8 +117,9 @@ namespace Tests.PlayMode
                 else
                 {
                     Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
-                    Assert.AreEqual(stoneCollided.transform.position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x,0.1f);
-                    Assert.AreEqual(stoneCollided.transform.position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y,0.1f);
+                    var position = stoneCollided.transform.position;
+                    Assert.AreEqual(position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x,0.1f);
+                    Assert.AreEqual(position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y,0.1f);
 
                 }
             }
@@ -135,7 +139,6 @@ namespace Tests.PlayMode
 
         private GameObject FindStone()
         {
-            List<GameObject> stones = new List<GameObject>();
             List<GameObject> spawnZones = new List<GameObject>();
             List<GameObject> spawnPlaces = new List<GameObject>();
             
@@ -147,7 +150,7 @@ namespace Tests.PlayMode
                 spawnPlaces.Add(child.gameObject);
             }
            
-            stones = spawnPlaces.Where(ContainsStone).ToList();
+            var stones = spawnPlaces.Where(ContainsStone).ToList();
             var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
             return stoneToAim;
         }
