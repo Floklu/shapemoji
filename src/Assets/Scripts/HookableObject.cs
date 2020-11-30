@@ -23,11 +23,6 @@ public abstract class HookableObject : MonoBehaviour
         SetLayerToPlayingFieldLayer();
     }
 
-    private void Update()
-    {
-        // Debug.Log(CurrentParent);
-    }
-
     /**
      * Calls for action at controller on collision with
      *
@@ -178,7 +173,10 @@ public class Stone : HookableObject
     {
         if (CurrentParent != null)
         {
-            Parent = CurrentParent;
+            Parent.GetComponent<CanHoldHookableObject>().RemoveStone(this);
+            SetParent(CurrentParent);
+            CurrentParent.GetComponent<CanHoldHookableObject>().SetChild(this);
+            
         }
         transform.position =
             HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);

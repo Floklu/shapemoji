@@ -24,7 +24,9 @@ public static class HookableObjectController
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
-        else if (gameObject.CompareTag("Workshop") && gameObject.GetComponent<Workshop>().GetBase() == stone.GetBase())
+        else if (gameObject.CompareTag("Workshop") &&
+                 gameObject.GetComponent<Workshop>().GetBase() == stone.GetBase() &&
+                 !gameObject.GetComponent<Workshop>().GetChild())
         {
             stone.SetCurrentParent(gameObject);
         }
