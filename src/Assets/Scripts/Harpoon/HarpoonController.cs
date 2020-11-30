@@ -42,6 +42,7 @@ namespace Harpoon
             _rope = ropeObj.GetComponent<HarpoonRope>();
             _windInProjectile = _projectileObj.GetComponent<WindInProjectile>();
             _cannonCollider.enabled = false;
+            _crankController.EnableController(false);
 
             _crankController.CrankRotationEvent += _windInProjectile.AddTravelDistance;
             _rotatableHandler.RotationEvent += OnRotationEvent;
@@ -118,16 +119,21 @@ namespace Harpoon
 
         /**
          * called on collision of HookableObject
+         *
+         * returns false if an object is already hooked
          * 
          * @param hookableObject: object which collided
          * @param projectile which had collision
         */
-        public void NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject collidedObject)
+        public bool NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject collidedObject)
         {
-            if (collidedObject.Equals(_projectileObj))
+            if (collidedObject.Equals(_projectileObj) && _objectHooked == null)
             {
                 _objectHooked = hookableObject;
+                return true;
             }
+
+            return false;
         }
 
         public void NotifyRemoveHookableObject(HookableObject hookableObject)
