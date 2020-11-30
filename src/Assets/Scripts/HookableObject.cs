@@ -155,15 +155,10 @@ public class Stone : HookableObject
     public void SetDraggable(bool state)
     {
         _draggable = state;
-        //set selectable
-        gameObject.AddComponent<LeanSelectable>();
-        //move on drag
-        gameObject.AddComponent<LeanDragTranslate>();
-        //set deselectable
-        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
-        leanSelectable.DeselectOnUp = true;
-
-        leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
+        if (state)
+        {
+            MakeDraggable();
+        }
     }
 
     /**
@@ -173,13 +168,26 @@ public class Stone : HookableObject
     {
         if (CurrentParent != null)
         {
-            HookableObjectController.RemoveStoneFromCanHoldHookableObject(this, Parent.GetComponent<CanHoldHookableObject>());
+            HookableObjectController.RemoveStoneFromCanHoldHookableObject(this, Parent);
             SetParent(CurrentParent);
-            HookableObjectController.SetChildOfCanHookableObject(this, Parent.GetComponent<CanHoldHookableObject>());
-            
+            HookableObjectController.SetChildOfCanHookableObject(this, Parent);
         }
+
         transform.position =
             HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);
+    }
+
+    private void MakeDraggable()
+    {
+        //set selectable
+        gameObject.AddComponent<LeanSelectable>();
+        //move on drag
+        gameObject.AddComponent<LeanDragTranslate>();
+        //set deselectable
+        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
+        leanSelectable.DeselectOnUp = true;
+        leanSelectable.IsolateSelectingFingers = true;
+        leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
     }
 }
 

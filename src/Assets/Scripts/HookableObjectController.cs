@@ -159,9 +159,19 @@ public static class HookableObjectController
         canHoldHookableObject.RemoveStone(stone);
     }
 
+    public static void RemoveStoneFromCanHoldHookableObject(Stone stone, GameObject gameObject)
+    {
+        RemoveStoneFromCanHoldHookableObject(stone, gameObject.GetComponent<CanHoldHookableObject>());
+    }
+
     public static void SetChildOfCanHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         canHoldHookableObject.SetChild(stone);
+    }
+
+    public static void SetChildOfCanHookableObject(Stone stone, GameObject gameObject)
+    {
+        SetChildOfCanHookableObject(stone, gameObject.GetComponent<CanHoldHookableObject>());
     }
 
     /**
