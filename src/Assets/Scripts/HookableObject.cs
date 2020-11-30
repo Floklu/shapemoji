@@ -108,7 +108,7 @@ public abstract class HookableObject : MonoBehaviour
     /**
      * OnWoundIn is called when the Harpoon is wound in
      */
-    public abstract void OnWoundIn(Inventory inventory, GameObject myBase);
+    public abstract void OnWoundIn(Inventory inventory);
 }
 
 /**
@@ -125,9 +125,8 @@ public class Stone : HookableObject
      *
      * @param inventory where stone is put to
      */
-    public override void OnWoundIn(Inventory inventory, GameObject myBase)
+    public override void OnWoundIn(Inventory inventory)
     {
-        Base = myBase;
         HookableObjectController.StoneToInventory(this, inventory);
     }
 
@@ -170,7 +169,7 @@ public class Stone : HookableObject
         {
             HookableObjectController.RemoveStoneFromCanHoldHookableObject(this, Parent);
             SetParent(CurrentParent);
-            HookableObjectController.SetChildOfCanHookableObject(this, Parent);
+            
         }
 
         transform.position =
@@ -203,7 +202,7 @@ public class Item : HookableObject
      *
      * @param inventory belonging to the player base
      */
-    public override void OnWoundIn(Inventory inventory, GameObject myBase)
+    public override void OnWoundIn(Inventory inventory)
     {
         throw new System.NotImplementedException();
     }

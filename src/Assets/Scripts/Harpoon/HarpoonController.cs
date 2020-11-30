@@ -23,7 +23,6 @@ namespace Harpoon
         private Collider2D _cannonCollider; //needed to better handle collision while wound in
         private HookableObject _objectHooked;
         private Inventory _inventory;
-        private GameObject _base;
         private GameObject _projectileObj;
 
 
@@ -35,7 +34,6 @@ namespace Harpoon
             _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
 
             _inventory = gameObject.transform.Find("../../Inventory").gameObject.GetComponent<Inventory>();
-            _base = gameObject.transform.Find("../../../Base").gameObject;
 
             _rotatableHandler = GetComponent<RotatableHandler>();
             _shotHandler = GetComponent<HarpoonShotHandler>();
@@ -156,7 +154,7 @@ namespace Harpoon
                     StopProjectileMovement();
                     if (_objectHooked != null)
                     {
-                        HookableObjectController.OnWoundIn(_objectHooked, _inventory, _base);
+                        HookableObjectController.OnWoundIn(_objectHooked, _inventory);
                     }
                 }
             }

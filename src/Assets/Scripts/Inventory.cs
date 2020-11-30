@@ -43,12 +43,7 @@ public class Inventory : CanHoldHookableObject
         _slotIsFull[slotIndex] = false;
         _stoneInSlot[slotIndex] = null;
     }
-
-    public override void SetChild(Stone stone)
-    {
-        throw new System.NotImplementedException();
-    }
-
+    
     /**
      * returns the position of stone inventory slot belonging to stone
      *

@@ -120,6 +120,12 @@ public static class HookableObjectController
         }
     }
 
+    public static void StoneToWorkshop(Stone stone, Workshop workshop)
+    {
+        stone.SetParent(workshop.gameObject);
+        workshop.SetChild(stone);
+    }
+
     private static void NotifyHarpoonControllersRemoveHookableObject(HookableObject hookableObject)
     {
         foreach (var harpoonController in HarpoonControllers)
@@ -134,9 +140,9 @@ public static class HookableObjectController
      * @param hookableObject object attached to projectile to be handled
      * @param inventory of player base where WoundIn event happened
      */
-    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory, GameObject myBase)
+    public static void OnWoundIn(HookableObject hookableObject, Inventory inventory)
     {
-        hookableObject.OnWoundIn(inventory, myBase);
+        hookableObject.OnWoundIn(inventory);
     }
 
     /**
@@ -162,16 +168,6 @@ public static class HookableObjectController
     public static void RemoveStoneFromCanHoldHookableObject(Stone stone, GameObject gameObject)
     {
         RemoveStoneFromCanHoldHookableObject(stone, gameObject.GetComponent<CanHoldHookableObject>());
-    }
-
-    public static void SetChildOfCanHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
-    {
-        canHoldHookableObject.SetChild(stone);
-    }
-
-    public static void SetChildOfCanHookableObject(Stone stone, GameObject gameObject)
-    {
-        SetChildOfCanHookableObject(stone, gameObject.GetComponent<CanHoldHookableObject>());
     }
 
     /**

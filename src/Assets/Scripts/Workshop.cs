@@ -13,7 +13,7 @@ public class Workshop : CanHoldHookableObject
         return myBase;
     }
 
-    public override void SetChild(Stone stone)
+    public void SetChild(Stone stone)
     {
         _child = stone;
     }

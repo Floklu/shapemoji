@@ -13,6 +13,4 @@ public abstract class CanHoldHookableObject : MonoBehaviour
     public abstract Vector3 GetPositionOfStoneChild(Stone stone);
 
     public abstract void RemoveStone(Stone stone);
-
-    public abstract void SetChild(Stone stone);
 }
