@@ -64,15 +64,14 @@ public class Inventory : CanHoldHookableObject
      */
     private int GetIndexOfStoneInSlot(Stone stone)
     {
-        var slotIndex = -1;
         for (var i = 0; i < _stoneInSlot.Length; i++)
         {
-            if (_stoneInSlot[i].Equals(stone))
+            if (_stoneInSlot != null && _stoneInSlot[i].Equals(stone))
             {
-                slotIndex = i;
+                return i;
             }
         }
 
-        return slotIndex;
+        return -1;
     }
 }
