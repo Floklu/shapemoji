@@ -85,8 +85,6 @@ namespace Lean.Touch
             var newScale = transform.localScale * pinchScale;
             if (newScale.x > _localScale.x * MAX_SCALE || newScale.x < _localScale.x * MIN_SCALE) pinchScale = 1f;
 
-            Debug.Log(pinchScale);
-
             if (pinchScale != 1.0f)
 			{
 				pinchScale = Mathf.Pow(pinchScale, Sensitivity);
