@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 namespace Harpoon
@@ -132,6 +131,7 @@ namespace Harpoon
                 _objectHooked = hookableObject;
                 return true;
             }
+
             return false;
         }
 

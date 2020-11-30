@@ -62,7 +62,7 @@ public static class HookableObjectController
         foreach (var harpoonController in HarpoonControllers)
         {
             // if there is a reason to hook stone, harpoon controller will return true
-            if(harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
+            if (harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
             {
                 //TODO: dont use find every time
                 GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
