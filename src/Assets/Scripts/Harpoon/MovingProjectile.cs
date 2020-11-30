@@ -7,8 +7,6 @@ namespace Harpoon
      */
     public class MovingProjectile : MonoBehaviour
     {
-        private GameObject _gameObjectHooked;
-
         /**
          * sets the velocity of the projectile
          *
