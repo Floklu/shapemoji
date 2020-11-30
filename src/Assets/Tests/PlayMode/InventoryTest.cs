@@ -92,7 +92,7 @@ namespace Tests.PlayMode
                     }
                 };
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < _inventory.GetComponent<Inventory>().slots.Length + 1; i++)
             {
                 GameObject stoneToAim = FindStone();
                 Assert.IsNotNull(stoneToAim, $"Player {player}: not enough stones on the playing field");
@@ -148,6 +148,10 @@ namespace Tests.PlayMode
             }
         }
 
+        /**
+         * Find stone for the current player to aim at
+         * @return Stone from a spawn place or null, if no stones found
+         */
         private GameObject FindStone()
         {
             List<GameObject> spawnZones = new List<GameObject>();
