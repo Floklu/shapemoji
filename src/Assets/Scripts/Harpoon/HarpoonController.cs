@@ -42,6 +42,7 @@ namespace Harpoon
             _rope = ropeObj.GetComponent<HarpoonRope>();
             _windInProjectile = _projectileObj.GetComponent<WindInProjectile>();
             _cannonCollider.enabled = false;
+            _crankController.EnableController(false);
 
             _crankController.CrankRotationEvent += _windInProjectile.AddTravelDistance;
             _rotatableHandler.RotationEvent += OnRotationEvent;
