@@ -3,7 +3,8 @@
     "references": [
         "Scripts",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "LeanTouch"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

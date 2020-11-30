@@ -6,9 +6,9 @@ using Vector3 = UnityEngine.Vector3;
 namespace Lean.Touch
 {
 	/// <summary>This component allows you to scale the current GameObject relative to the specified camera using the pinch gesture.</summary>
-	[HelpURL(LeanTouch.HelpUrlPrefix + "LeanPinchMaxScale")]
+	[HelpURL(LeanTouch.HelpUrlPrefix + "LeanPinchBoundedScale")]
 	[AddComponentMenu(LeanTouch.ComponentPathPrefix + "Pinch Scale (With Min and Max Constraint)")]
-	public class LeanPinchMaxScale : MonoBehaviour
+	public class LeanPinchBoundedScale : MonoBehaviour
     {
         private const float MAX_SCALE = 3f;
         private const float MIN_SCALE = 1f;
