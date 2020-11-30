@@ -66,7 +66,7 @@ public class Inventory : CanHoldHookableObject
     {
         for (var i = 0; i < _stoneInSlot.Length; i++)
         {
-            if (_stoneInSlot != null && _stoneInSlot[i].Equals(stone))
+            if (_stoneInSlot[i] != null && _stoneInSlot[i].Equals(stone))
             {
                 return i;
             }
