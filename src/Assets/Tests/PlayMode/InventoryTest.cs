@@ -75,28 +75,37 @@ namespace Tests.PlayMode
         private IEnumerator TestPlayer(int player)
         {
             LoadPlayer(player);
-            GameObject stoneCollided;
+            GameObject stoneCollided = null;
             
             _projectile.GetComponent<ProjectileCollision>().CollisionEvent+=
                 delegate(object sender, Collider2D collider2D) {
+                    //if it is a stone
                     if (collider2D.gameObject.CompareTag("Stone"))
                     {
-                        stoneCollided = collider2D.gameObject;
+                        //if no stone collision happened in the past
+                        // ReSharper disable once AccessToModifiedClosure
+                        if (stoneCollided == null)
+                        {
+                            stoneCollided = collider2D.gameObject;
+                        }
+                        
                     }
                 };
 
             for (int i = 0; i < 5; i++)
             {
                 GameObject stoneToAim = FindStone();
+                Assert.IsNotNull(stoneToAim,$"Player {player}: not enough stones on the playing field");
+                
                 // stoneCollided can be changed by Collision Event Handler
                 // stoneCollided is used to determine which stone was catched by harpoon
-                stoneCollided = stoneToAim;
+                stoneCollided = null;
 
                 Vector3 stonePos = stoneToAim.transform.position;
                 yield return AimAtPoint(stonePos.x,stonePos.y);
                 WindIn();
                 yield return new WaitForSeconds(0.1f);
-                Assert.IsNotNull(stoneCollided);
+                Assert.IsNotNull(stoneCollided,$"Player {player}: could not find collided stone");
                 var pos1 = stoneCollided.transform.position;
                 yield return new WaitForSeconds(0.1f);
                 // get new stone position, pos2
@@ -106,20 +115,20 @@ namespace Tests.PlayMode
                 yield return new WaitForSeconds(5.0f);
                 
                 // check if stone is dragged away
-                Assert.AreNotEqual(pos1, pos2);
+                Assert.AreNotEqual(pos1, pos2,$"Player {player}: Stone isn't dragged away during wind in");
 
                 // last stone should be deleted, because inventory is full
                 if (i == 4)
                 {
-                    UnityEngine.Assertions.Assert.IsNull(stoneCollided);
+                    UnityEngine.Assertions.Assert.IsNull(stoneCollided,$"Player {player}: Stone isn't deleted, despite full inventory");
                 }
                 // first 4 stones are expected to get into inventory
                 else
                 {
                     Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
                     var position = stoneCollided.transform.position;
-                    Assert.AreEqual(position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x,0.1f);
-                    Assert.AreEqual(position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y,0.1f);
+                    Assert.AreEqual(position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x,0.1f, $"Player {player}: Stone wasn't placed into inventory (x-Axis)");
+                    Assert.AreEqual(position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y,0.1f, $"Player {player}: Stone wasn't placed into inventory (y-Axis)");
 
                 }
             }
@@ -151,8 +160,19 @@ namespace Tests.PlayMode
             }
            
             var stones = spawnPlaces.Where(ContainsStone).ToList();
-            var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
-            return stoneToAim;
+            
+            if (stones.Any())
+            {
+                var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
+                return stoneToAim;
+            }
+            
+            // return null, if no stones are found
+            return null;
+            
+            
+            
+            
         }
 
         /**
