@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 405677847727981847}
   - component: {fileID: 5324913245602141195}
   - component: {fileID: 210030664650962260}
+  - component: {fileID: -3699997059774596250}
   m_Layer: 0
   m_Name: TriangleEquilateral_Stone
   m_TagString: Stone
@@ -163,3 +164,24 @@ PolygonCollider2D:
       - {x: -3.08, y: -2.565}
       - {x: -0.61, y: -2.565}
       - {x: -0.59999996, y: -2.5549998}
+--- !u!50 &-3699997059774596250
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735554338465470828}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
