@@ -118,7 +118,7 @@ namespace Tests.PlayMode
                     _crankController.RotateCrank(180);
                     _crankController.RotateCrank(0);
                 }
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(1);
                 Assert.AreNotEqual(_projectile.transform.position, locationNew, $"Player {player}: Projectile has not been properly wound in");
             
                 // Projectile should have returned to harpoon
