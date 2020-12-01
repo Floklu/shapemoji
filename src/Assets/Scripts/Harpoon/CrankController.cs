@@ -11,7 +11,7 @@ namespace Harpoon
         /**
          * defines the distance of the wind-in-operation
          */
-        public float rangePerRevolution = 20f;
+        public float rangePerRevolution = 10f;
 
         private RotatableHandler _rotatableHandler;
         private float _rotation;
