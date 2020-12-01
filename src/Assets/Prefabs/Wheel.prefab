@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf5c81b64a14b7487dc1cba9714beb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newRotationBehaviour: 1
 --- !u!114 &8898773222788440701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84db4fa9eeaa46ba832caabbc5305ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangePerRevolution: 10
+  rangePerRevolution: 100
 --- !u!58 &5599555051473217034
 CircleCollider2D:
   m_ObjectHideFlags: 0
