@@ -29,8 +29,11 @@ namespace Harpoon
          */
         private void OnFingerDown(LeanFinger finger)
         {
-            if (!finger.CollidesWithGameObject(_collider, _camera)) return;
-            _finger = finger;
+            if ((_finger is null))
+            {
+                if (!finger.CollidesWithGameObject(_collider, _camera)) return;
+                _finger = finger;    
+            }
         }
 
         /**

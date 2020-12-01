@@ -143,8 +143,7 @@ namespace Tests.PlayMode
         {
             for (var i = 0; i < 400; i++)
             {
-                _wheel.GetComponent<CrankController>().RotateCrank(180);
-                _wheel.GetComponent<CrankController>().RotateCrank(0);
+                _wheel.GetComponent<CrankController>().RotateCrank(90);
             }
         }
 
