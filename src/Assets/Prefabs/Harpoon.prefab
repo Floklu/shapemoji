@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c34a3a725143a9a1513ef195d91fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 500
+  projectileSpeed: 1000
 --- !u!114 &2408820144506658766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,6 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf5c81b64a14b7487dc1cba9714beb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newRotationBehaviour: 0
 --- !u!114 &3885253304907609868
 MonoBehaviour:
   m_ObjectHideFlags: 0
