@@ -46,9 +46,9 @@ namespace Tests.PlayMode
 
             var worldToScreenPoint1 = camera.WorldToScreenPoint(stonePosition);
             var worldToScreenPoint2 = camera.WorldToScreenPoint(stonePosition);
-            worldToScreenPoint2 += new Vector3(10, 0, 0);
+            //worldToScreenPoint2 += new Vector3(10, 0, 0);
             LeanFinger finger1 = new LeanFinger {ScreenPosition = worldToScreenPoint1, Set = true};
-            LeanFinger finger2 = new LeanFinger {ScreenPosition = worldToScreenPoint2, Set = true};
+            LeanFinger finger2 = new LeanFinger {ScreenPosition = worldToScreenPoint1, Set = true};
 
             LeanTouch.SimulateFingerDown(finger1);
             LeanTouch.SimulateFingerDown(finger2);
