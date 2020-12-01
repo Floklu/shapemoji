@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Harpoon;
-//using Lean.Touch;
+using Lean.Touch;
 using NUnit.Framework;
 using Spawner;
 using UnityEngine;
@@ -19,10 +20,22 @@ namespace Tests.PlayMode
      */
     public class WorkshopTest
     {
+        private int _currentPlayer;
+
+        private Stone _currentStone;
+
         /*
          * _harpoon, _projectile, _inventory, _field are GameObjects selected by class method LoadPlayer
          */
-        private GameObject _harpoon, _projectile, _inventory, _field, _field2, _spawner, _wheel, _workshopSlot;
+        private GameObject _harpoon,
+            _projectile,
+            _inventory,
+            _field,
+            _field2,
+            _spawner,
+            _wheel,
+            _workshopSlot,
+            _otherSlot;
 
         /**
          * Setup test environment
@@ -39,7 +52,8 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator WorkshopTestPlayer1()
         {
-            yield return TestPlayer(1);
+            _currentPlayer = 1;
+            yield return TestPlayer();
         }
 
         /**
@@ -48,7 +62,8 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator WorkshopTestPlayer2()
         {
-            yield return TestPlayer(2);
+            _currentPlayer = 2;
+            yield return TestPlayer();
         }
 
         /**
@@ -57,7 +72,8 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator WorkshopTestPlayer3()
         {
-            yield return TestPlayer(3);
+            _currentPlayer = 3;
+            yield return TestPlayer();
         }
 
         /**
@@ -66,16 +82,111 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator WorkshopTestPlayer4()
         {
-            yield return TestPlayer(4);
+            _currentPlayer = 4;
+            yield return TestPlayer();
         }
 
         /**
          * Run test for player
          * @param player Player number
          */
-        private IEnumerator TestPlayer(int player)
+        private IEnumerator TestPlayer()
         {
-            LoadPlayer(player);
+            LoadPlayer();
+            yield return GetStone();
+            InitTest();
+            yield return MoveToOtherSlot();
+            yield return MoveToSlot();
+            yield return MoveBackToInventory();
+            yield return GetStone();
+            yield return MoveToFullSlot();
+        }
+
+        /**
+         * Test, if initial conditions are correct
+         */
+        private void InitTest()
+        {
+            var leanSelectable = _currentStone.gameObject.GetComponent<LeanSelectable>();
+            Assert.IsNotNull(leanSelectable, $"Player {_currentPlayer}: Stone is not selectable in the inventory");
+            Assert.AreEqual(_workshopSlot.GetComponent<Workshop>().GetInventory(), _inventory, $"Player {_currentPlayer}: Inventory not assigned to workshop");
+            Assert.IsTrue(_workshopSlot.GetComponent<Workshop>().IsEmpty(), $"Player {_currentPlayer}: workshop is already full");
+        }
+
+        /**
+         * Move current stone to a slot, that doesn't belong to current player and test, if stone is moved back into inventory
+         */
+        private IEnumerator MoveToOtherSlot()
+        {
+            yield return AssertMovement(_otherSlot.transform.position, _currentStone.transform.position,
+                $"Player {_currentPlayer}: Stone is not in the Inventory");
+            // ReSharper disable once Unity.InefficientPropertyAccess
+            AssertVectors(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild(_currentStone),
+                _currentStone.transform.position, $"Player {_currentPlayer}: Stone is not in the Inventory");
+        }
+
+        /**
+         * Move current stone to current workshop slot and test, if stone is in workshop
+         */
+        private IEnumerator MoveToSlot()
+        {
+            // ReSharper disable once Unity.InefficientPropertyAccess
+            yield return AssertMovement(_workshopSlot.transform.position + Vector3.up, _workshopSlot.transform.position,
+                $"Player {_currentPlayer}: Stone is not in center of workshop");
+            Assert.IsFalse(_workshopSlot.GetComponent<Workshop>().IsEmpty(),$"Player {_currentPlayer}: Workshop slot should be full");
+        }
+
+        /**
+         * Move current stone from workshop to inventory and test, if stone is moved back to workshop slot
+         */
+        private IEnumerator MoveBackToInventory()
+        {
+            // ReSharper disable once Unity.InefficientPropertyAccess
+            yield return AssertMovement(_inventory.transform.position, _workshopSlot.transform.position,
+                $"Player {_currentPlayer}: Stone is not in center of workshop");
+            Assert.AreEqual(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild(_currentStone), Vector3.zero,
+                $"Player {_currentPlayer}: Stone was not removed from inventory");
+        }
+
+        /**
+         * Move new stone to current slot, which is already full, and test, if stone is moved back to inventory
+         */
+        private IEnumerator MoveToFullSlot()
+        {
+            // ReSharper disable twice Unity.InefficientPropertyAccess
+            yield return AssertMovement(_workshopSlot.transform.position, _currentStone.transform.position,
+                $"Player {_currentPlayer}: Stone is not in the Inventory, despite being moved to full inventory");
+        }
+
+        /**
+         * Move stone and assert position
+         * @param movePosition Position, to move current stone to
+         * @param expectedPosition expected Position, after current stone was dropped
+         * @param message error message
+         */
+        private IEnumerator AssertMovement(Vector3 movePosition, Vector3 expectedPosition, String message)
+        {
+            yield return MoveStone(_currentStone, movePosition);
+            AssertVectors(expectedPosition, _currentStone.transform.position, message);
+        }
+
+        /**
+         * Check, if 2 Vectors are equal, with delta=0.1
+         * @param a first vector
+         * @param b second vector
+         * @param message error message, if vectors are not equal
+         */
+        private void AssertVectors(Vector3 a, Vector3 b, String message)
+        {
+            Assert.AreEqual(a.x, b.x, 0.1, message);
+            Assert.AreEqual(a.y, b.y, 0.1, message);
+        }
+
+        /**
+         * Get new stone into Inventory
+         */
+        private IEnumerator GetStone()
+        {
             GameObject stoneCollided = null;
 
             _projectile.GetComponent<ProjectileCollision>().CollisionEvent +=
@@ -92,9 +203,9 @@ namespace Tests.PlayMode
                         }
                     }
                 };
-            
+
             GameObject stoneToAim = FindStone();
-            Assert.IsNotNull(stoneToAim, $"Player {player}: not enough stones on the playing field");
+            Assert.IsNotNull(stoneToAim, $"Player {_currentPlayer}: not enough stones on the playing field");
             // stoneCollided can be changed by Collision Event Handler
             // stoneCollided is used to determine which stone was catched by harpoon
             stoneCollided = null;
@@ -102,31 +213,33 @@ namespace Tests.PlayMode
             yield return AimAtPoint(stonePos.x, stonePos.y);
             WindIn();
             yield return new WaitForSeconds(0.1f);
-            Assert.IsNotNull(stoneCollided, $"Player {player}: could not find collided stone");
-            
-            Stone windingInStone = (Stone) stoneCollided.GetComponent<HookableObject>();
-            //Assert.IsNull(windingInStone.gameObject.GetComponent<LeanSelectable>());
-            
-            yield return new WaitForSeconds(5.0f);
-            
-            Stone s = (Stone) stoneCollided.GetComponent<HookableObject>();
-            var position = stoneCollided.transform.position;
-            Assert.AreEqual(position.x, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).x, 0.1f,
-                $"Player {player}: Stone wasn't placed into inventory (x-Axis)");
-            Assert.AreEqual(position.y, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(s).y, 0.1f,
-                $"Player {player}: Stone wasn't placed into inventory (y-Axis)");
-            
-            //var leanSelectable = s.gameObject.GetComponent<LeanSelectable>();
-            
-            //Assert.IsNotNull(leanSelectable);
+            Assert.IsNotNull(stoneCollided, $"Player {_currentPlayer}: could not find collided stone");
 
-            s.transform.position = _workshopSlot.transform.position + Vector3.up;
-            
-            yield return new WaitForSeconds(0.5f);
-            
-            // ReSharper disable twice Unity.InefficientPropertyAccess
-            Assert.AreEqual(_workshopSlot.transform.position, s.transform.position);
-            
+            _currentStone = (Stone) stoneCollided.GetComponent<HookableObject>();
+
+            Assert.IsNull(_currentStone.gameObject.GetComponent<LeanSelectable>(),
+                $"Player {_currentPlayer}: Stone is selectable on the playing field");
+
+            yield return new WaitForSeconds(5.0f);
+
+
+            var position = stoneCollided.transform.position;
+            AssertVectors(position, _inventory.GetComponent<Inventory>().GetPositionOfStoneChild(_currentStone),
+                $"Player {_currentPlayer}: Stone wasn't placed into inventory");
+        }
+
+        /**
+         * Moves stone to a position and simulates Deselect Event
+         * @param stone Stone to move
+         * 
+         */
+        private IEnumerator MoveStone(Stone stone, Vector3 position)
+        {
+            stone.transform.position = position;
+
+            yield return new WaitForSeconds(0.2f);
+            stone.OnDeselectOnUp();
+            yield return new WaitForSeconds(0.2f);
         }
 
         /**
@@ -205,25 +318,25 @@ namespace Tests.PlayMode
          * Method to load player Game Objects
          * @param player Player number
          */
-        private void LoadPlayer(int player)
+        private void LoadPlayer()
         {
-            var team = (player + 1) / 2;
-            _harpoon = GameObject.Find("Team_" + team + "/Player_" + player + "/Base/HarpoonBase/Harpoon");
+            var team = (_currentPlayer + 1) / 2;
+            _harpoon = GameObject.Find("Team_" + team + "/Player_" + _currentPlayer + "/Base/HarpoonBase/Harpoon");
             _projectile =
-                GameObject.Find("Team_" + team + "/Player_" + player +
+                GameObject.Find("Team_" + team + "/Player_" + _currentPlayer +
                                 "/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
             _inventory =
-                GameObject.Find("Team_" + team + "/Player_" + player +
+                GameObject.Find("Team_" + team + "/Player_" + _currentPlayer +
                                 "/Base/Inventory");
 
             _wheel =
-                GameObject.Find("Team_" + team + "/Player_" + player +
+                GameObject.Find("Team_" + team + "/Player_" + _currentPlayer +
                                 "/Base/Wheel");
-            
-            
-            int slotNumber=1;
-            
-            switch (player)
+
+
+            int slotNumber = 1;
+
+            switch (_currentPlayer)
             {
                 case 1:
                     _field = GameObject.Find("SpawnArea_SouthWest");
@@ -246,9 +359,14 @@ namespace Tests.PlayMode
                     slotNumber = 2;
                     break;
             }
-            
+
             _workshopSlot = GameObject.Find("Team_" + team + "/Workshop/Slot (" + slotNumber +
                                             ")");
+
+            var otherSlot = slotNumber == 1 ? 2 : 1;
+
+            _otherSlot = GameObject.Find("Team_" + team + "/Workshop/Slot (" + otherSlot +
+                                         ")");
         }
     }
 }
