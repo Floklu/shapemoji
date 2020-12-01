@@ -58,5 +58,6 @@ public class Workshop : CanHoldHookableObject
     public override void RemoveStone(Stone stone)
     {
         _child = null;
+        HookableObjectController.StoneFromWorkshop(stone);
     }
 }

@@ -8,6 +8,7 @@ namespace Harpoon
     public class WindInProjectile : MonoBehaviour
     {
         private float _travelDistance;
+        private const int DISTANCE_BUFFER = 2; //Buffers input to prevent wobble effect of projectile
 
         /**
          * manages TravelSpeed of projectile
@@ -39,8 +40,8 @@ namespace Harpoon
          */
         public void AddTravelDistance(object sender, float distance)
         {
-            enabled = true;
             _travelDistance += distance;
+            if (_travelDistance > DISTANCE_BUFFER) enabled = true;
         }
 
         /**

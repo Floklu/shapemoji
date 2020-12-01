@@ -1,102 +1,5 @@
-﻿using Lean.Touch;
+using Lean.Touch;
 using UnityEngine;
-
-//TODO: at critical number of lines cut into multiple .cs files
-
-/**
- * abstract class HookableObject is parent class of all GameObject which can be hooked by projectile
- *
- *  */
-public abstract class HookableObject : MonoBehaviour
-{
-    protected GameObject Parent;
-
-
-    /**
-     * on Start() set layer to PlayingFieldLayer
-     */
-    protected virtual void Start()
-    {
-        SetLayerToPlayingFieldLayer();
-    }
-
-    /**
-     * Calls for action at controller on collision with
-     *
-     * @param Collider other
-     */
-    public abstract void OnTriggerEnter2D(Collider2D other);
-
-    /**
-         * change collision layer to PlayingFieldLayer
-         */
-    public void SetLayerToPlayingFieldLayer()
-    {
-        gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
-    }
-
-    /**
-         * change collision layer to DraggableLayer
-         */
-    public void SetLayerToDraggableLayer()
-    {
-        gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
-    }
-
-    /**
-     * sets transform parent so movement is joined
-     */
-    public void SetTransformParent(Transform parentTransform)
-    {
-        transform.parent = parentTransform;
-    }
-
-    /**
-     * SetParent sets the parent of this gameobject
-     *
-     * @param GameObject parent: parent to set
-     */
-    public void SetParent(GameObject parent)
-    {
-        Parent = parent;
-    }
-
-    /**
-     * set new parent and return old parent
-     *
-     * @returns parent before changing
-     * @param newParent is the parent given to SetParent
-     */
-    public GameObject ChangeParent(GameObject newParent)
-    {
-        var oldParent = Parent;
-        SetParent(newParent);
-        return oldParent;
-    }
-
-    /**
-     * SetPosition sets the position of the hookable object
-     *
-     * @param position The position to set the hookable object to
-     */
-    public void SetPosition(Vector3 position)
-    {
-        gameObject.transform.position = position;
-    }
-
-    /**
-     * DestroyHookableObject destroys the hookable object
-     */
-    public void DestroyHookableObject()
-    {
-        Destroy(gameObject);
-    }
-
-    /**
-     * OnWoundIn is called when the Harpoon is wound in
-     */
-    public abstract void OnWoundIn(Inventory inventory);
-}
 
 /**
  * class Stone inherited from HookableObject
@@ -195,32 +98,28 @@ public class Stone : HookableObject
         leanSelectable.IsolateSelectingFingers = true;
         leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
     }
-}
 
-/**
- * class Item inherited from HookableObject
- *
- * future: will hold some 
- */
-public class Item : HookableObject
-{
     /**
-     *  gets called by controller on wound in event
-     *
-     * @param inventory belonging to the player base
+     * adds or enables Lean Touch Scripts for Rotating and Scaling Stone with two fingers
      */
-    public override void OnWoundIn(Inventory inventory)
+    public void MakeScalableAndRotatable()
     {
-        throw new System.NotImplementedException();
+        var scalable = gameObject.GetComponent<LeanPinchBoundedScale>();
+        var rotatable = gameObject.GetComponent<LeanTwistRotate>();
+        if (scalable == null) scalable = gameObject.AddComponent<LeanPinchBoundedScale>();
+        if (rotatable == null) rotatable = gameObject.AddComponent<LeanTwistRotate>();
+        scalable.enabled = true;
+        rotatable.enabled = true;
     }
 
     /**
-     * Calls for action at controller on collision with
-     *
-     * @param Collider other
+     * Disables Lean Touch Scripts for Rotating and Scaling Stone with two fingers
      */
-    public override void OnTriggerEnter2D(Collider2D other)
+    public void DisableScalableAndRotatable()
     {
-        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
+        var scalable = gameObject.GetComponent<LeanPinchBoundedScale>();
+        var rotatable = gameObject.GetComponent<LeanTwistRotate>();
+        if (scalable != null) scalable.enabled = false;
+        if (rotatable != null) rotatable.enabled = false;
     }
 }

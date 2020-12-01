@@ -51,7 +51,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator ShootProjectileTest()
         {
-            for (var player = 1; player < MAX_PLAYERS; player++)
+            for (var player = 1; player <= MAX_PLAYERS; player++)
             {
                 LoadPlayer(player);
                 var location = _projectile.transform.position;
@@ -69,7 +69,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator TestWindInAfterProjectile()
         {
-            for (var player = 1; player < MAX_PLAYERS; player++)
+            for (var player = 1; player <= MAX_PLAYERS; player++)
             {
                 LoadPlayer(player);
                 var location = _projectile.transform.position;
@@ -98,7 +98,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator TestShootAfterWindIn()
         {
-            for (var player = 1; player < MAX_PLAYERS; player++)
+            for (var player = 1; player <= MAX_PLAYERS; player++)
             {
                 LoadPlayer(player);
             
@@ -138,7 +138,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator ShootProjectileAndRotateHarpoonTest()
         {
-            for (var player = 1; player < MAX_PLAYERS; player++)
+            for (var player = 1; player <= MAX_PLAYERS; player++)
             {
                 LoadPlayer(player);
             

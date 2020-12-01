@@ -425,6 +425,16 @@ namespace Lean.Touch
 				OnFingerTap(simulatedTapFinger);
 			}
 		}
+        
+        /**
+         * Simulate Input for LeanFinger, used to test Input operations on the screen
+         *
+         * @param finger LeanFinger Object
+         */
+        public static void SimulateFingerDown(LeanFinger finger)
+        {
+            OnFingerDown?.Invoke(finger);
+        }
 
 		protected virtual void Awake()
 		{
