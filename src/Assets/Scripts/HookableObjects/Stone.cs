@@ -1,103 +1,6 @@
 ﻿using Lean.Touch;
 using UnityEngine;
 
-//TODO: at critical number of lines cut into multiple .cs files
-
-/**
- * abstract class HookableObject is parent class of all GameObject which can be hooked by projectile
- *
- *  */
-public abstract class HookableObject : MonoBehaviour
-{
-    protected GameObject Parent;
-
-
-    /**
-     * on Start() set layer to PlayingFieldLayer
-     */
-    protected virtual void Start()
-    {
-        SetLayerToPlayingFieldLayer();
-    }
-
-    /**
-     * Calls for action at controller on collision with
-     *
-     * @param Collider other
-     */
-    public abstract void OnTriggerEnter2D(Collider2D other);
-
-    /**
-         * change collision layer to PlayingFieldLayer
-         */
-    public void SetLayerToPlayingFieldLayer()
-    {
-        gameObject.layer = LayerMask.NameToLayer("PlayingFieldLayer");
-    }
-
-    /**
-         * change collision layer to DraggableLayer
-         */
-    public void SetLayerToDraggableLayer()
-    {
-        gameObject.layer = LayerMask.NameToLayer("DraggableLayer");
-    }
-
-    /**
-     * sets transform parent so movement is joined
-     */
-    public void SetTransformParent(Transform parentTransform)
-    {
-        transform.parent = parentTransform;
-    }
-
-    /**
-     * SetParent sets the parent of this gameobject
-     *
-     * @param GameObject parent: parent to set
-     */
-    public void SetParent(GameObject parent)
-    {
-        Parent = parent;
-    }
-
-    /**
-     * set new parent and return old parent
-     *
-     * @returns parent before changing
-     * @param newParent is the parent given to SetParent
-     */
-    public GameObject ChangeParent(GameObject newParent)
-    {
-        var oldParent = Parent;
-        SetParent(newParent);
-        return oldParent;
-    }
-
-    /**
-     * SetPosition sets the position of the hookable object
-     *
-     * @param position The position to set the hookable object to
-     */
-    public void SetPosition(Vector3 position)
-    {
-        gameObject.transform.position = position;
-    }
-
-    /**
-     * DestroyHookableObject destroys the hookable object
-     */
-    public void DestroyHookableObject()
-    {
-        Destroy(gameObject);
-    }
-
-    /**
-     * OnWoundIn is called when the Harpoon is wound in
-     */
-    public abstract void OnWoundIn(Inventory inventory);
-}
-
 /**
  * class Stone inherited from HookableObject
  *
@@ -208,7 +111,7 @@ public class Stone : HookableObject
         scalable.enabled = true;
         rotatable.enabled = true;
     }
-    
+
     /**
      * Disables Lean Touch Scripts for Rotating and Scaling Stone with two fingers
      */
@@ -216,35 +119,7 @@ public class Stone : HookableObject
     {
         var scalable = gameObject.GetComponent<LeanPinchBoundedScale>();
         var rotatable = gameObject.GetComponent<LeanTwistRotate>();
-        if (scalable != null) scalable.enabled = false; 
+        if (scalable != null) scalable.enabled = false;
         if (rotatable != null) rotatable.enabled = false;
-    }
-}
-
-/**
- * class Item inherited from HookableObject
- *
- * future: will hold some 
- */
-public class Item : HookableObject
-{
-    /**
-     *  gets called by controller on wound in event
-     *
-     * @param inventory belonging to the player base
-     */
-    public override void OnWoundIn(Inventory inventory)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    /**
-     * Calls for action at controller on collision with
-     *
-     * @param Collider other
-     */
-    public override void OnTriggerEnter2D(Collider2D other)
-    {
-        HookableObjectController.OnHookableObjectCollision(this, other.gameObject);
     }
 }
