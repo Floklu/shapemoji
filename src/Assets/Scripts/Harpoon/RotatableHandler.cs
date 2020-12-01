@@ -15,8 +15,9 @@ namespace Harpoon
         private Vector3 _initialPosition;
         private Camera _mainCamera;
         private Collider2D _collider;
-        
+
         private LeanFinger _finger;
+
         // Determines, whether RotationEvent passes differences in degrees since last event (true) or the total degree (false) 
         [SerializeField] private bool newRotationBehaviour = false;
 
@@ -30,7 +31,7 @@ namespace Harpoon
         }
 
         #region LeanTouchEvents
-        
+
         /**
          * Handle LeanTouch OnFingerUp Event
          *
@@ -53,9 +54,8 @@ namespace Harpoon
             {
                 if (!leanFinger.ScreenDelta.normalized.Equals(Vector2.zero))
                 {
-                    ProcessTouchMovement(leanFinger);    
+                    ProcessTouchMovement(leanFinger);
                 }
-                
             }
         }
 
@@ -72,7 +72,7 @@ namespace Harpoon
                 _initialPosition = finger.GetWorldPosition(0, _mainCamera);
             }
         }
-        
+
         #endregion
 
         /**
@@ -106,23 +106,19 @@ namespace Harpoon
                 {
                     var position = finger.GetWorldPosition(0, _mainCamera);
                     var direction = _initialPosition - position;
-                
+
                     direction.Normalize();
-                
+
                     var rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
                     OnRotationEvent(rotationZ);
                 }
                 else
                 {
-                    OnRotationEvent(finger.GetDeltaDegrees(_mainCamera.WorldToScreenPoint(transform.position)));    
+                    OnRotationEvent(finger.GetDeltaDegrees(_mainCamera.WorldToScreenPoint(transform.position)));
                 }
-                
-
-                    
             }
-            
         }
-        
+
         /**
          * invokes Event, if rotation happens
          */

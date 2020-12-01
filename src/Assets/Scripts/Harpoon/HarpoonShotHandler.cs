@@ -32,7 +32,7 @@ namespace Harpoon
             if ((_finger is null))
             {
                 if (!finger.CollidesWithGameObject(_collider, _camera)) return;
-                _finger = finger;    
+                _finger = finger;
             }
         }
 
@@ -49,7 +49,7 @@ namespace Harpoon
                 {
                     _finger = null;
                     OnShotEvent();
-                }                
+                }
             }
         }
 
