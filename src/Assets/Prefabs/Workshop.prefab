@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7718696415901263452}
   - component: {fileID: 7629608882183884677}
   - component: {fileID: 4680625960135458077}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Slot (1)
   m_TagString: Workshop
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f544952a64d36c140b154152ef162d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myBase: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!1 &3527310409826344567
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 4700000273315972856}
   - component: {fileID: 3510747679052119314}
   - component: {fileID: 7669749939318737846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Slot (2)
   m_TagString: Workshop
   m_Icon: {fileID: 0}
@@ -326,4 +326,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f544952a64d36c140b154152ef162d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myBase: {fileID: 0}
+  inventory: {fileID: 0}
