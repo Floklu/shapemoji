@@ -1,3 +1,4 @@
+using System;
 using Lean.Touch;
 using UnityEngine;
 
@@ -15,7 +16,16 @@ public static class ClassExtensions
      */
     public static bool CollidesWithGameObject(this LeanFinger finger, Collider2D collider, Camera camera)
     {
-        var position = camera.ScreenToWorldPoint(finger.ScreenPosition);
-        return collider.OverlapPoint(position);
+        try //Abfangen, wenn für Kamera keine gültige Referenz vorliegt. 
+        {
+            if (camera is null) return false;
+            var position = camera.ScreenToWorldPoint(finger.ScreenPosition);
+            return collider.OverlapPoint(position);
+        }
+        catch (MissingReferenceException e)
+        {
+            return false;
+        }
+        
     }
 }

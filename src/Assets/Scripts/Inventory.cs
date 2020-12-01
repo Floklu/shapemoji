@@ -39,7 +39,7 @@ public class Inventory : CanHoldHookableObject
     public override void RemoveStone(Stone stone)
     {
         var slotIndex = GetIndexOfStoneInSlot(stone);
-        if (!(slotIndex >= 0 & slotIndex < 4)) return;
+        if (slotIndex == -1) return;
         _slotIsFull[slotIndex] = false;
         _stoneInSlot[slotIndex] = null;
     }
@@ -53,7 +53,7 @@ public class Inventory : CanHoldHookableObject
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
         var slotIndex = GetIndexOfStoneInSlot(stone);
-        if (!(slotIndex >= 0 & slotIndex < 4)) return Vector3.zero;
+        if (slotIndex == -1) return Vector3.zero;
         return slots[slotIndex].transform.position;
     }
 
@@ -66,12 +66,22 @@ public class Inventory : CanHoldHookableObject
     {
         for (var i = 0; i < _stoneInSlot.Length; i++)
         {
-            if (_stoneInSlot != null && _stoneInSlot[i].Equals(stone))
+            if (_stoneInSlot[i] != null && _stoneInSlot[i].Equals(stone))
             {
                 return i;
             }
         }
 
         return -1;
+    }
+
+    /**
+     * StoneInInventory checks if stone is in this inventory
+     *
+     * @param stone: stone to check
+     */
+    public bool StoneInInventory(Stone stone)
+    {
+        return GetIndexOfStoneInSlot(stone) != -1;
     }
 }
