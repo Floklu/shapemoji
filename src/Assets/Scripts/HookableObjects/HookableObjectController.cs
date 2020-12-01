@@ -93,13 +93,17 @@ public static class HookableObjectController
     {
         foreach (var harpoonController in HarpoonControllers)
         {
-            harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject);
+            // if there is a reason to hook stone, harpoon controller will return true
+            if (harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
+            {
+                //TODO: dont use find every time
+                GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
+                hookableObject.SetTransformParent(projectileGameObject.transform);
+                hookableObject.SetLayerToDraggableLayer();
+                //parent not needed right now, but available for future
+                hookableObject.SetParent(projectileGameObject);
+            }
         }
-
-        //TODO: dont use find every time
-        GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
-        hookableObject.SetTransformParent(projectileGameObject.transform);
-        hookableObject.SetLayerToDraggableLayer();
     }
 
     /**

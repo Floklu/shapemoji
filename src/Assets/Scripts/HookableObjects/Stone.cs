@@ -1,4 +1,4 @@
-﻿using Lean.Touch;
+using Lean.Touch;
 using UnityEngine;
 
 /**

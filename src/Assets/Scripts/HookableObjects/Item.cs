@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 /**
  * class Item inherited from HookableObject

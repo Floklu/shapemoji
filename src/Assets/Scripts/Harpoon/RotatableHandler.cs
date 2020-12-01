@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Lean.Touch;
 using UnityEngine;
 
 namespace Harpoon
@@ -12,6 +15,8 @@ namespace Harpoon
         private Vector3 _initialPosition;
         private Camera _mainCamera;
         private Collider2D _collider;
+        
+        private LeanFinger _finger;
 
         /**
         * Start is called on the frame when a script is enabled just before any of the Update methods are called the first time.
@@ -20,124 +25,74 @@ namespace Harpoon
         {
             _collider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
+            LeanTouch.OnFingerDown += OnFingerDown;
+            LeanTouch.OnGesture += OnGesture;
+            LeanTouch.OnFingerUp += OnFingerUp;
+        }
+
+        #region LeanTouchEvents
+        
+        /**
+         * Handle LeanTouch OnFingerUp Event
+         *
+         * @param finger selected touch point
+         */
+        private void OnFingerUp(LeanFinger finger)
+        {
+            if (_finger != null && _finger.Equals(finger)) _finger = null;
         }
 
         /**
-        * OnMouseDown is called when the user has pressed the mouse button while over the Collider.
-        */
-        private void OnMouseDown()
+         * Processes LeanTouch Finger Gestures
+         *
+         * @param lstFinger List of currently active LeanFinger Objects
+         */
+        private void OnGesture(List<LeanFinger> lstFinger)
         {
-            _onDrag = true;
-            _initialPosition = GetMousePosition();
-        }
-
-        /**
-        * OnMouseUp is called when the user has released the mouse button.
-        */
-        private void OnMouseUp()
-        {
-            _onDrag = false;
-        }
-
-        /**
-        * FixedUpdate is a frame-rate independent update method for physics calculations.
-        */
-        private void FixedUpdate()
-        {
-            if (_onDrag && _initialPosition != GetMousePosition())
+            var fingers = lstFinger.Where(leanFinger => leanFinger.Equals(_finger));
+            foreach (var leanFinger in fingers)
             {
-                TurnRotatableWithMouse();
-            }
-
-            if (Input.touchCount > 0 && GetTouchIndexOnRotatable() != -1)
-            {
-                TurnRotatableWithTouch(GetTouchIndexOnRotatable());
+                if (!leanFinger.ScreenDelta.normalized.Equals(Vector2.zero))
+                {
+                    ProcessTouchMovement(leanFinger);    
+                }
+                
             }
         }
 
         /**
-        *  rotates the gameObject to the vector between the first initial mouse position and the current mouse position.
-        */
-        private void TurnRotatableWithMouse()
+         *  Handle LeanTouch OnFingerDown Event
+         *
+         *  @param finger selected touch point
+         */
+        private void OnFingerDown(LeanFinger finger)
         {
-            var direction = _initialPosition - GetMousePosition();
+            if (finger.CollidesWithGameObject(_collider, _mainCamera))
+            {
+                _finger = finger;
+                _initialPosition = finger.GetWorldPosition(0, _mainCamera);
+            }
+        }
+        
+        #endregion
+        
+        /**
+         * processes the touch movements and 
+         */
+        private void ProcessTouchMovement(LeanFinger finger)
+        {
+            var position = finger.GetWorldPosition(0, _mainCamera);
+            var direction = _initialPosition - position;
 
             direction.Normalize();
 
             var rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-
+            rotationZ += 360;
+            rotationZ %= 360;
+            
             OnRotationEvent(rotationZ);
-            //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
         }
-
-        /**
-        * rotates the object with touch interactions
-        * @param index is the index of the touch point that touches the harpoon
-        */
-        private void TurnRotatableWithTouch(int index)
-        {
-            var touch = Input.GetTouch(index);
-
-            // Handle finger movements based on touch phase.
-            switch (touch.phase)
-            {
-                // Record initial touch position.
-                case TouchPhase.Began:
-                    _onDrag = true;
-                    _initialPosition = touch.position;
-                    break;
-
-                // Determine direction by comparing the current touch position with the initial one.
-                case TouchPhase.Moved:
-                    var direction = _initialPosition - new Vector3(touch.position.x, touch.position.y, 0f);
-
-                    direction.Normalize();
-
-                    var rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-                    OnRotationEvent(rotationZ);
-                    //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
-                    break;
-
-                // Report that a direction has been chosen when the finger is lifted.
-                case TouchPhase.Ended:
-                    _onDrag = false;
-                    break;
-                case TouchPhase.Stationary:
-                    break;
-                case TouchPhase.Canceled:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-
-        /**
-        *  returns the current mouse position
-        * @return Current mouse position
-        */
-        private Vector3 GetMousePosition()
-        {
-            return _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        }
-
-        /**
-        * GetTouchIndexOnHarpoon loops through all touch points to check if one is on the harpoon.
-        * @return index of the touch that is on the harpoon
-        */
-        private int GetTouchIndexOnRotatable()
-        {
-            var touchIndex = -1;
-            for (var i = 0; i < Input.touchCount; ++i)
-            {
-                var touchPosition = _mainCamera.ScreenToWorldPoint(Input.GetTouch(i).position);
-                if (!_collider.OverlapPoint(touchPosition)) continue;
-                touchIndex = i;
-                break;
-            }
-
-            return touchIndex;
-        }
-
+        
         /**
          * invokes Event, if rotation happens
          */
