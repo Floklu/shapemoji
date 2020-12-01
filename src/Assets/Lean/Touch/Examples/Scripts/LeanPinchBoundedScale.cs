@@ -10,7 +10,7 @@ namespace Lean.Touch
 	[AddComponentMenu(LeanTouch.ComponentPathPrefix + "Pinch Scale (With Min and Max Constraint)")]
 	public class LeanPinchBoundedScale : MonoBehaviour
     {
-        private const float MAX_SCALE = 3f;
+        private const float MAX_SCALE = 2.5f;
         private const float MIN_SCALE = 1f;
         private Vector3 _localScale = Vector3.zero;
         

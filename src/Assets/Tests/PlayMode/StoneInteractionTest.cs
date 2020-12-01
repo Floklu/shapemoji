@@ -40,7 +40,7 @@ namespace Tests.PlayMode
             stone.AddComponent<LeanTouchEvents>();
             
             
-            var camera = Camera.main;
+            var camera = GameObject.Find("Main Camera").GetComponent<Camera>();
             var stonePosition = stone.transform.position;
             var stoneX = stone.transform.localScale.x;
 
