@@ -195,6 +195,30 @@ public class Stone : HookableObject
         leanSelectable.IsolateSelectingFingers = true;
         leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
     }
+
+    /**
+     * adds or enables Lean Touch Scripts for Rotating and Scaling Stone with two fingers
+     */
+    public void MakeScalableAndRotatable()
+    {
+        var scalable = gameObject.GetComponent<LeanPinchBoundedScale>();
+        var rotatable = gameObject.GetComponent<LeanTwistRotate>();
+        if (scalable == null) scalable = gameObject.AddComponent<LeanPinchBoundedScale>();
+        if (rotatable == null) rotatable = gameObject.AddComponent<LeanTwistRotate>();
+        scalable.enabled = true;
+        rotatable.enabled = true;
+    }
+    
+    /**
+     * Disables Lean Touch Scripts for Rotating and Scaling Stone with two fingers
+     */
+    public void DisableScalableAndRotatable()
+    {
+        var scalable = gameObject.GetComponent<LeanPinchBoundedScale>();
+        var rotatable = gameObject.GetComponent<LeanTwistRotate>();
+        if (scalable != null) scalable.enabled = false; 
+        if (rotatable != null) rotatable.enabled = false;
+    }
 }
 
 /**
