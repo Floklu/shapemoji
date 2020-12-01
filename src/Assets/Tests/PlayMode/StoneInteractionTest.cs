@@ -25,12 +25,13 @@ namespace Tests.PlayMode
         
         /**
          * Tests, if the stone scales according to the touch input
+         *
+         * @returns true if size of stone has been successfully manipulated
          */
         [UnityTest]
         public IEnumerator StoneScalingTest()
         {
             var spawner = GameObject.Find("StoneSpawner").GetComponent<HookableGameObjectFactory>();
-            var leanSelect = GameObject.Find("Down To Select (2D)").GetComponent<LeanSelect>();
             var stone = spawner.CreateStone(0, -800);
             stone.AddComponent<LeanSelectable>();
             stone.GetComponent<LeanSelectable>().DeselectOnUp = true;
@@ -47,7 +48,7 @@ namespace Tests.PlayMode
             var worldToScreenPoint2 = camera.WorldToScreenPoint(stonePosition);
             worldToScreenPoint2 += new Vector3(10, 0, 0);
             LeanFinger finger1 = new LeanFinger {ScreenPosition = worldToScreenPoint1, Set = true};
-            LeanFinger finger2 = new LeanFinger {ScreenPosition = worldToScreenPoint1, Set = true};
+            LeanFinger finger2 = new LeanFinger {ScreenPosition = worldToScreenPoint2, Set = true};
 
             LeanTouch.SimulateFingerDown(finger1);
             LeanTouch.SimulateFingerDown(finger2);
