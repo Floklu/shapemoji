@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c34a3a725143a9a1513ef195d91fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 500
+  projectileSpeed: 1000
 --- !u!114 &2408820144506658766
 MonoBehaviour:
   m_ObjectHideFlags: 0

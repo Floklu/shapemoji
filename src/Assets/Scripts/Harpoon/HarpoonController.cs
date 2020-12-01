@@ -8,7 +8,7 @@ namespace Harpoon
     */
     public class HarpoonController : MonoBehaviour
     {
-        public float projectileSpeed = 500;
+        public float projectileSpeed = 1000;
 
         private RotatableHandler _rotatableHandler;
         private HarpoonShotHandler _shotHandler;
