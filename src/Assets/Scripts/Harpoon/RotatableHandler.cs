@@ -25,9 +25,6 @@ namespace Harpoon
         {
             _collider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
-            LeanTouch.OnFingerDown += OnFingerDown;
-            LeanTouch.OnGesture += OnGesture;
-            LeanTouch.OnFingerUp += OnFingerUp;
         }
 
         #region LeanTouchEvents
@@ -75,7 +72,27 @@ namespace Harpoon
         }
         
         #endregion
-        
+
+        /**
+         * Fired if behaviour is enabled
+         */
+        private void OnEnable()
+        {
+            LeanTouch.OnFingerDown += OnFingerDown;
+            LeanTouch.OnGesture += OnGesture;
+            LeanTouch.OnFingerUp += OnFingerUp;
+        }
+
+        /**
+         * Fired if behaviour is disabled
+         */
+        private void OnDisable()
+        {
+            LeanTouch.OnFingerDown -= OnFingerDown;
+            LeanTouch.OnGesture -= OnGesture;
+            LeanTouch.OnFingerUp -= OnFingerUp;
+        }
+
         /**
          * processes the touch movements and 
          */
