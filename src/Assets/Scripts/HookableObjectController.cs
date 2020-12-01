@@ -154,9 +154,19 @@ public static class HookableObjectController
      */
     public static void StoneToWorkshop(Stone stone, Workshop workshop)
     {
-        // TODO: #450 add rotation, scale in here
+        stone.MakeScalableAndRotatable();
         stone.SetParent(workshop.gameObject);
         workshop.SetChild(stone);
+    }
+
+    /**
+     * Handles behaviour for removing stones from workshop
+     *
+     * @param stone: stone to remove from the workshop
+     */
+    public static void StoneFromWorkshop(Stone stone)
+    {
+        stone.DisableScalableAndRotatable();
     }
 
     /**
