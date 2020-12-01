@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1164731652153084563}
   - component: {fileID: 2636003214868129054}
   - component: {fileID: 1046163329453842284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HarpoonCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5246044106002417529}
   - component: {fileID: 2734771144761329562}
   - component: {fileID: 4908543014110971816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HarpoonRope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4991288599808777349}
   - component: {fileID: 7904420701052112367}
   - component: {fileID: 421231224301625096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HarpoonProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 321757176823506254}
   - component: {fileID: 2408820144506658766}
   - component: {fileID: 3885253304907609868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Harpoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
