@@ -6,12 +6,12 @@ public class ScoreArea : CanHoldHookableObject
 {
     private List<Stone> _stones;
 
-    private Collider _collider;
+    private BoxCollider2D _collider;
     // Start is called before the first frame update
     void Start()
     {
         _stones = new List<Stone>();
-        _collider = gameObject.GetComponent<Collider>();
+        _collider = gameObject.GetComponent<BoxCollider2D>();
     }
 
     public void AddStone(Stone stone)
