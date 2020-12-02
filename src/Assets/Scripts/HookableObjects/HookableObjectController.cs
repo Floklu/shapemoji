@@ -31,6 +31,21 @@ public static class HookableObjectController
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
+        else if (gameObject.GetType() == typeof(ScoreArea))
+        {
+            SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
+        }
+    }
+
+
+    /**
+     * returns Vector3 containing current position of HookableObject
+     *
+     * @param hookableObject HookableObject whose position is given 
+     */
+    public static Vector3 GetPositionOfHookableObject(HookableObject hookableObject)
+    {
+        return hookableObject.transform.position;
     }
 
     /**
@@ -83,6 +98,16 @@ public static class HookableObjectController
         //TODO: probably some more
     }
 
+    /**
+     * sets stone to draggable
+     *
+     * @param stone to set undraggable
+     */
+    public static void DisableStoneDraggable(Stone stone)
+    {
+        stone.SetDraggable(false);
+    }
+    
     /**
      * Called after Collision of HookableObject and Projectile
      *

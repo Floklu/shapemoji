@@ -924,6 +924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299322943}
+  - component: {fileID: 299322944}
   m_Layer: 0
   m_Name: Emoji
   m_TagString: Untagged
@@ -946,6 +947,18 @@ Transform:
   m_Father: {fileID: 1011719102}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &299322944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299322942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb38fde6fd027176bfb1c1fcfa5be8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &321025235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2201,6 +2214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999247572}
+  - component: {fileID: 999247573}
   m_Layer: 0
   m_Name: Emoji
   m_TagString: Untagged
@@ -2223,6 +2237,18 @@ Transform:
   m_Father: {fileID: 1811355959}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999247573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999247571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb38fde6fd027176bfb1c1fcfa5be8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011719101
 GameObject:
   m_ObjectHideFlags: 0
