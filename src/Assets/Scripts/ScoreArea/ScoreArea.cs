@@ -5,10 +5,13 @@ using UnityEngine;
 public class ScoreArea : CanHoldHookableObject
 {
     private List<Stone> _stones;
+
+    private Collider _collider;
     // Start is called before the first frame update
     void Start()
     {
         _stones = new List<Stone>();
+        _collider = gameObject.GetComponent<Collider>();
     }
 
     public void AddStone(Stone stone)
@@ -20,7 +23,12 @@ public class ScoreArea : CanHoldHookableObject
 
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
-        return HookableObjectController.GetPositionOfHookableObject(stone);
+        Vector3 currentPosition = HookableObjectController.GetPositionOfHookableObject(stone);
+        if (_stones.Contains(stone) && !_collider.bounds.Contains(currentPosition)) // bound only works with rectengular colliders 
+        {
+            return gameObject.transform.position;
+        }
+        return currentPosition;
     }
 
     public override void RemoveStone(Stone stone)

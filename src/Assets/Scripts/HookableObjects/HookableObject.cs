@@ -10,7 +10,14 @@ public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject Parent;
 
-
+/**
+ * get current position on playing field
+ */
+    public Vector3 GetPosition()
+{
+    return gameObject.transform.position;
+}
+    
     /**
      * on Start() set layer to PlayingFieldLayer
      */

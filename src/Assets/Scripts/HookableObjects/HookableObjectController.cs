@@ -31,7 +31,7 @@ public static class HookableObjectController
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
-        else if (gameObject.GetType() == typeof(ScoreArea))
+        else if (gameObject.CompareTag("ScoreArea"))
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
@@ -45,7 +45,7 @@ public static class HookableObjectController
      */
     public static Vector3 GetPositionOfHookableObject(HookableObject hookableObject)
     {
-        return hookableObject.transform.position;
+        return hookableObject.GetPosition();
     }
 
     /**
@@ -204,15 +204,39 @@ public static class HookableObjectController
      * @param stone: stone which is selected
      * @param canHoldHookableObject: object under the stone
      */
+    
+    //TODO get rid of this ifGetComponent kind of style (medium refactoring)
     public static void OnDeselectOnCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         if (canHoldHookableObject.GetComponent<Workshop>())
         {
             StoneToWorkshop(stone, canHoldHookableObject.GetComponent<Workshop>());
         }
+
+        if (canHoldHookableObject.GetComponent<ScoreArea>())
+        {
+            StoneToScoreArea(stone, canHoldHookableObject.GetComponent<ScoreArea>());
+        }
     }
 
 
+
+    /**
+     * put stone in Score area
+     *
+     * @param stone
+     * @param scoreArea
+     */
+
+    public static void StoneToScoreArea(Stone stone, ScoreArea scoreArea)
+    {
+        stone.MakeScalableAndRotatable();
+        stone.SetParent(scoreArea.gameObject);
+        scoreArea.AddStone(stone);
+    }
+    
+    
+    
     /**
      * NotifyHarpoonControllersRemoveHookableObject removes the hookableObject from the harpoon controller
      *
