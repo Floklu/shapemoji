@@ -44,6 +44,13 @@ public class Inventory : CanHoldHookableObject
         _stoneInSlot[slotIndex] = null;
     }
 
+    public override bool StoneToCanHoldHookableObject(Stone stone)
+    {
+        throw new System.NotImplementedException();
+    }
+
+
+
     /**
      * returns the position of stone inventory slot belonging to stone
      *
@@ -80,8 +87,9 @@ public class Inventory : CanHoldHookableObject
      *
      * @param stone: stone to check
      */
-    public bool StoneInInventory(Stone stone)
+    public override bool IsStoneInCanHoldHookableObject(Stone stone)
     {
         return GetIndexOfStoneInSlot(stone) != -1;
     }
+
 }

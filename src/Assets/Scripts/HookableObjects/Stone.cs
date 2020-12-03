@@ -122,4 +122,9 @@ public class Stone : HookableObject
         if (scalable != null) scalable.enabled = false;
         if (rotatable != null) rotatable.enabled = false;
     }
+
+    public GameObject GetParentGameObject()
+    {
+        return Parent;
+    }
 }

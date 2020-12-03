@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Harpoon;
 using Spawner;
+using UnityEditor;
 using UnityEngine;
 
 /**
@@ -25,18 +26,22 @@ public static class HookableObjectController
             AttachHookableObjectToProjectile(stone, gameObject);
         }
         else if (gameObject.CompareTag("Workshop") &&
-                 IsStoneInInventory(stone,
-                     gameObject.GetComponent<Workshop>().GetInventory().GetComponent<Inventory>()) &&
+                 IsStoneInCanHoldHookableObject(stone, stone.GetParentGameObject().GetComponent<CanHoldHookableObject>())&&
                  gameObject.GetComponent<Workshop>().IsEmpty())
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
-        else if (gameObject.CompareTag("ScoreArea"))
+        else if (gameObject.GetComponent<ScoreArea>())
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
     }
 
+
+    private static bool IsStoneInCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
+    {
+        return canHoldHookableObject.IsStoneInCanHoldHookableObject(stone);
+    }
 
     /**
      * returns Vector3 containing current position of HookableObject
@@ -71,19 +76,6 @@ public static class HookableObjectController
     public static void SetOnDeselectParentOfStone(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         stone.SetOnDeselectParent(canHoldHookableObject);
-    }
-
-    /**
-     * IsStoneInInventory checks if the stone is in the inventory
-     *
-     * @param stone: stone which is selected
-     * @param inventory: inventory to search the stone in
-     *
-     * @return true if stone is in inventory, else false
-     */
-    public static bool IsStoneInInventory(Stone stone, Inventory inventory)
-    {
-        return inventory.StoneInInventory(stone);
     }
 
 
@@ -189,34 +181,24 @@ public static class HookableObjectController
     }
 
     /**
-     * Handles behaviour for removing stones from workshop
+     * Disables Scalability and rotability of stone
      *
-     * @param stone: stone to remove from the workshop
+     * @param stone: stone to disable scale and rotate
      */
-    public static void StoneFromWorkshop(Stone stone)
+    public static void DisableScalableAndRotatable(Stone stone)
     {
         stone.DisableScalableAndRotatable();
     }
-
+    
     /**
      * OnDeselectOnCanHoldHookableObject is called when a stone is deselected over a canHoldHookableObject
      *
      * @param stone: stone which is selected
      * @param canHoldHookableObject: object under the stone
      */
-    
-    //TODO get rid of this ifGetComponent kind of style (medium refactoring)
     public static void OnDeselectOnCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
-        if (canHoldHookableObject.GetComponent<Workshop>())
-        {
-            StoneToWorkshop(stone, canHoldHookableObject.GetComponent<Workshop>());
-        }
-
-        if (canHoldHookableObject.GetComponent<ScoreArea>())
-        {
-            StoneToScoreArea(stone, canHoldHookableObject.GetComponent<ScoreArea>());
-        }
+        canHoldHookableObject.StoneToCanHoldHookableObject(stone);
     }
 
 

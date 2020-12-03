@@ -57,7 +57,23 @@ public class Workshop : CanHoldHookableObject
      */
     public override void RemoveStone(Stone stone)
     {
-        _child = null;
-        HookableObjectController.StoneFromWorkshop(stone);
+        if (stone.Equals(_child))
+        {
+            _child = null;
+            HookableObjectController.DisableScalableAndRotatable(stone);
+        }
+
+    }
+
+    public override bool StoneToCanHoldHookableObject(Stone stone)
+    {
+        HookableObjectController.StoneToWorkshop(stone, this);
+        return true;
+    }
+
+    public override bool IsStoneInCanHoldHookableObject(Stone stone)
+    {
+        //stone cannot be null, but child can, so needs to be called this way
+        return stone.Equals(_child);
     }
 }

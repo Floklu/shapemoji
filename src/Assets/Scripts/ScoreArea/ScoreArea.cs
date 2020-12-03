@@ -14,11 +14,26 @@ public class ScoreArea : CanHoldHookableObject
         _collider = gameObject.GetComponent<BoxCollider2D>();
     }
 
+    public override bool StoneToCanHoldHookableObject(Stone stone)
+    {
+        HookableObjectController.StoneToScoreArea(stone, this);
+
+        return true;
+    }
+
+    public override bool IsStoneInCanHoldHookableObject(Stone stone)
+    {
+        return _stones.Contains(stone);
+    }
+
     public void AddStone(Stone stone)
     {
         _stones.Add(stone);
         //lock n-1th stone
-        HookableObjectController.DisableStoneDraggable(_stones[_stones.Count-2]);
+        if (_stones.Count > 1)
+        {
+            HookableObjectController.DisableStoneDraggable(_stones[_stones.Count - 2]);
+        }
     }
 
     public override Vector3 GetPositionOfStoneChild(Stone stone)
@@ -35,6 +50,12 @@ public class ScoreArea : CanHoldHookableObject
     {
         _stones.Remove(stone);
         // reenable draggable on last stone
-        HookableObjectController.EnableStoneDraggable(_stones[_stones.Count-1]);
+        var stoneCount = _stones.Count;
+        if (stoneCount > 1)
+        {
+            HookableObjectController.EnableStoneDraggable(_stones[stoneCount-1]);
+
+        }
     }
+    
 }

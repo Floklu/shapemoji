@@ -14,5 +14,7 @@ public abstract class CanHoldHookableObject : MonoBehaviour
 
     public abstract void RemoveStone(Stone stone);
 
-    //public abstract bool AddStone(Stone stone);
+    public abstract bool StoneToCanHoldHookableObject(Stone stone);
+
+    public abstract bool IsStoneInCanHoldHookableObject(Stone stone);
 }
