@@ -87,7 +87,6 @@ public static class HookableObjectController
     public static void EnableStoneDraggable(Stone stone)
     {
         stone.SetDraggable(true);
-        //TODO: probably some more
     }
 
     /**
@@ -113,7 +112,6 @@ public static class HookableObjectController
             // if there is a reason to hook stone, harpoon controller will return true
             if (harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
             {
-                //TODO: dont use find every time
                 GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
                 hookableObject.SetTransformParent(projectileGameObject.transform);
                 hookableObject.SetLayerToDraggableLayer();
