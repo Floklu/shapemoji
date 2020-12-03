@@ -94,7 +94,6 @@ public static class HookableObjectController
     public static void EnableStoneDraggable(Stone stone)
     {
         stone.SetDraggable(true);
-        //TODO: probably some more
     }
 
     /**
