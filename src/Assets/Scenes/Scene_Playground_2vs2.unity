@@ -486,6 +486,21 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1651748432}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1099364807}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1099364807}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Team
+      value: 
+      objectReference: {fileID: 1011719101}
     - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: myBase
@@ -496,6 +511,21 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 259403148}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 261425616}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 261425616}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Team
+      value: 
+      objectReference: {fileID: 1011719101}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039119c5730240e409535042692c5de7, type: 3}
 --- !u!4 &176105953 stripped
@@ -601,6 +631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 261425617}
+  - component: {fileID: 261425618}
   m_Layer: 0
   m_Name: Player_4
   m_TagString: Untagged
@@ -623,6 +654,18 @@ Transform:
   m_Father: {fileID: 1011719102}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &261425618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261425616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46465d1812e1c0a2bc71c156a212b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &263080741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +1083,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.8, y: 1.8}
   m_EdgeRadius: 0
 --- !u!1001 &321025235
 PrefabInstance:
@@ -2478,7 +2521,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1.8, y: 1.8}
   m_EdgeRadius: 0
 --- !u!1 &1011719101
 GameObject:
@@ -2489,6 +2532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1011719102}
+  - component: {fileID: 1011719103}
   m_Layer: 0
   m_Name: Team_2
   m_TagString: Untagged
@@ -2514,6 +2558,18 @@ Transform:
   m_Father: {fileID: 1243851627}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1011719103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011719101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffcf9ec310c98b3e8ca44ac4becd474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1015873060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2694,6 +2750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099364808}
+  - component: {fileID: 1099364809}
   m_Layer: 0
   m_Name: Player_3
   m_TagString: Untagged
@@ -2716,6 +2773,18 @@ Transform:
   m_Father: {fileID: 1011719102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099364809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099364807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46465d1812e1c0a2bc71c156a212b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1105659365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,6 +3579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1492818063}
+  - component: {fileID: 1492818064}
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Untagged
@@ -3532,6 +3602,18 @@ Transform:
   m_Father: {fileID: 1811355959}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1492818064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492818062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46465d1812e1c0a2bc71c156a212b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499988573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6686723403685417011, guid: e12cbe1fed66a9a4582498c71aaf5afa,
@@ -3792,6 +3874,21 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 267303521}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1978965087}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1978965087}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Team
+      value: 
+      objectReference: {fileID: 1811355958}
     - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: myBase
@@ -3802,6 +3899,21 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2004575003}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1492818062}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1492818062}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: Team
+      value: 
+      objectReference: {fileID: 1811355958}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039119c5730240e409535042692c5de7, type: 3}
 --- !u!4 &1601438880 stripped
@@ -4615,6 +4727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1811355959}
+  - component: {fileID: 1811355960}
   m_Layer: 0
   m_Name: Team_1
   m_TagString: Untagged
@@ -4640,6 +4753,18 @@ Transform:
   m_Father: {fileID: 1243851627}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811355960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811355958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffcf9ec310c98b3e8ca44ac4becd474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1855783505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2424456828585251335, guid: 4064168966897cc42ad82c9170ccf049,
@@ -4988,6 +5113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1978965088}
+  - component: {fileID: 1978965089}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Untagged
@@ -5010,6 +5136,18 @@ Transform:
   m_Father: {fileID: 1811355959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978965089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978965087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46465d1812e1c0a2bc71c156a212b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004575003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7520659676618978919, guid: e12cbe1fed66a9a4582498c71aaf5afa,

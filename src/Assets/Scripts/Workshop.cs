@@ -1,22 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 /**
  * Class Workshop contains the workshop functionality
  */
 public class Workshop : CanHoldHookableObject
 {
-    [SerializeField] private GameObject inventory;
+    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject Team;
+    
     private Stone _child;
 
-    /**
-     * GetInventory returns the inventory of the player from were the workshop belongs to
-     *
-     * @return the inventory
-     */
-    public GameObject GetInventory()
-    {
-        return inventory;
-    }
 
     /**
      * SetChild sets the child of the workshop
@@ -75,5 +70,15 @@ public class Workshop : CanHoldHookableObject
     {
         //stone cannot be null, but child can, so needs to be called this way
         return stone.Equals(_child);
+    }
+
+    public override Player GetPlayer()
+    {
+        return Player.GetComponent<Player>();
+    }
+
+    public override Team GetTeam()
+    {
+        return Team.GetComponent<Team>();
     }
 }

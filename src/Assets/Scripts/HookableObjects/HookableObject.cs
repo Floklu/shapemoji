@@ -102,4 +102,5 @@ public abstract class HookableObject : MonoBehaviour
      * OnWoundIn is called when the Harpoon is wound in
      */
     public abstract void OnWoundIn(Inventory inventory);
+
 }

@@ -25,16 +25,23 @@ public static class HookableObjectController
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
-        else if (gameObject.CompareTag("Workshop") &&
-                 IsStoneInCanHoldHookableObject(stone, stone.GetParentGameObject().GetComponent<CanHoldHookableObject>())&&
-                 gameObject.GetComponent<Workshop>().IsEmpty())
+        //TODO this if needs to be less pointy
+        else if ( AllowedToPutInWorkshop(gameObject, stone) )
+        {
+            SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
+            gameObject.GetComponent<Workshop>().GetPlayer().RemoveStone(stone);
+        }
+        else if ( gameObject.GetComponent<ScoreArea>() && gameObject.GetComponent<CanHoldHookableObject>().GetTeam().ContainsStone(stone))
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
-        else if (gameObject.GetComponent<ScoreArea>())
-        {
-            SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
-        }
+    }
+
+    public static bool AllowedToPutInWorkshop(GameObject gameObject, Stone stone)
+    {
+        return gameObject.CompareTag("Workshop") && gameObject.GetComponent<Workshop>().IsEmpty() && 
+               (gameObject.GetComponent<Workshop>().GetPlayer().ContainsStone(stone) || gameObject.GetComponent<Workshop>().GetTeam().GetScoreArea().ContainsStone(stone));
+
     }
 
 
@@ -113,12 +120,16 @@ public static class HookableObjectController
             // if there is a reason to hook stone, harpoon controller will return true
             if (harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
             {
-                //TODO: dont use find every time
                 GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
                 hookableObject.SetTransformParent(projectileGameObject.transform);
                 hookableObject.SetLayerToDraggableLayer();
-                //parent not needed right now, but available for future
+                //parent not needed right now
                 hookableObject.SetParent(projectileGameObject);
+                //TODO: change for implementation of Item!!
+                //TODO this is ugly, dont do that. just to test code flow
+                projectileGameObject.GetComponentInParent<Team>().AddStone(hookableObject.GetComponent<Stone>());
+                projectileGameObject.GetComponentInParent<Player>().AddStone(hookableObject.GetComponent<Stone>());
+
             }
         }
     }
@@ -212,7 +223,6 @@ public static class HookableObjectController
 
     public static void StoneToScoreArea(Stone stone, ScoreArea scoreArea)
     {
-        stone.MakeScalableAndRotatable();
         stone.SetParent(scoreArea.gameObject);
         scoreArea.AddStone(stone);
     }

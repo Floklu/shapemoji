@@ -9,7 +9,7 @@ using UnityEngine;
 public class Stone : HookableObject
 {
     private bool _draggable;
-
+    
     // Parent that changes when the stone collides with a CanHoldHookableObject
     private CanHoldHookableObject _onDeselectParent;
 
@@ -66,8 +66,19 @@ public class Stone : HookableObject
         {
             MakeDraggable();
         }
+        else
+        {
+            MakeUnDraggable();
+        }
     }
 
+    private void MakeUnDraggable()
+    {
+        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
+        leanSelectable.DeselectOnUp = false;
+        leanSelectable.IsolateSelectingFingers = false;
+    }
+    
     /**
      * gets called by lean event, when releasing stone from drag and puts it back to parent position or first sets the new parent
      */

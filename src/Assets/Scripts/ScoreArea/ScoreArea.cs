@@ -5,13 +5,15 @@ using UnityEngine;
 public class ScoreArea : CanHoldHookableObject
 {
     private List<Stone> _stones;
-
     private BoxCollider2D _collider;
+
     // Start is called before the first frame update
     void Start()
     {
         _stones = new List<Stone>();
         _collider = gameObject.GetComponent<BoxCollider2D>();
+        _player = gameObject.GetComponentInParent<Player>();
+        _team = gameObject.GetComponentInParent<Team>();
     }
 
     public override bool StoneToCanHoldHookableObject(Stone stone)
@@ -26,6 +28,11 @@ public class ScoreArea : CanHoldHookableObject
         return _stones.Contains(stone);
     }
 
+    public bool ContainsStone(Stone stone)
+    {
+        return _stones.Contains(stone);
+    }
+    
     public void AddStone(Stone stone)
     {
         _stones.Add(stone);

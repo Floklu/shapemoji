@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Security.Cryptography;
+using UnityEngine;
 
 /**
  * Class Inventory contains the inventory functionality
@@ -8,6 +9,14 @@ public class Inventory : CanHoldHookableObject
     private readonly bool[] _slotIsFull = new bool[4];
     private readonly Stone[] _stoneInSlot = new Stone[4];
     [SerializeField] public GameObject[] slots = new GameObject[4];
+
+
+    void Start()
+    {
+        _player = gameObject.GetComponentInParent<Player>();
+        _team = gameObject.GetComponentInParent<Team>();
+
+    }
 
     /**
      * AddToInventory adds a Stone to an empty slot in the inventory
