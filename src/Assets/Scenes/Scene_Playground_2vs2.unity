@@ -2570,6 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffcf9ec310c98b3e8ca44ac4becd474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreArea: {fileID: 299322945}
 --- !u!1001 &1015873060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4765,6 +4766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffcf9ec310c98b3e8ca44ac4becd474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreArea: {fileID: 999247574}
 --- !u!4 &1855783505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2424456828585251335, guid: 4064168966897cc42ad82c9170ccf049,
