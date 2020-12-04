@@ -307,4 +307,15 @@ public static class HookableObjectController
     {
         return parent.GetPositionOfStoneChild(stone);
     }
+    
+
+    /**
+     * called if already draggable but set inactive stone is to be made draggable again. DO NOT CALL IF STONE DOES NOT HAVE COMPONENT LEANSELECTABLE!
+     *
+     * @param stone Stone to set selectable active in
+     */
+    public static void ReEnableStoneDraggable(Stone stone)
+    {
+        stone.ReEnableStoneDraggable();
+    }
 }

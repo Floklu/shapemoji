@@ -110,8 +110,6 @@ public class Stone : HookableObject
         leanSelectable.DeselectOnUp = true;
         leanSelectable.IsolateSelectingFingers = true;
         leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
-        leanSelectable.enabled = true;
-
     }
 
     /**
@@ -136,5 +134,14 @@ public class Stone : HookableObject
         var rotatable = gameObject.GetComponent<LeanTwistRotate>();
         if (scalable != null) scalable.enabled = false;
         if (rotatable != null) rotatable.enabled = false;
+    }
+    
+    /**
+     * renabables leanSelectable, only to be called if Stone has Component LeanSelectable
+     */
+    public void ReEnableStoneDraggable()
+    {
+        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
+        leanSelectable.enabled = true;
     }
 }

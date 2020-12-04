@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ScoreArea : CanHoldHookableObject
@@ -96,9 +97,10 @@ public class ScoreArea : CanHoldHookableObject
         _stones.Remove(stone);
         // reenable draggable on last stone
         var stoneCount = _stones.Count;
-        if (stoneCount > 1)
+        var newLastStone = _stones.Last();
+        if (newLastStone)
         {
-            HookableObjectController.EnableStoneDraggable(_stones[stoneCount-1]);
+            HookableObjectController.ReEnableStoneDraggable(newLastStone);
 
         }
     }
