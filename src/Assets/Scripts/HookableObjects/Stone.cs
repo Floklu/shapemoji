@@ -75,8 +75,7 @@ public class Stone : HookableObject
     private void MakeUnDraggable()
     {
         var leanSelectable = gameObject.GetComponent<LeanSelectable>();
-        leanSelectable.DeselectOnUp = false;
-        leanSelectable.IsolateSelectingFingers = false;
+        leanSelectable.enabled = false;
     }
     
     /**
