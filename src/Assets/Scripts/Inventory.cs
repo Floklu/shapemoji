@@ -53,6 +53,11 @@ public class Inventory : CanHoldHookableObject
         _stoneInSlot[slotIndex] = null;
     }
 
+    /**
+     * not yet implemented
+     *
+     * TODO: Future work add AddStoneToInventory should start by refactoring to use this method instead
+     */
     public override bool StoneToCanHoldHookableObject(Stone stone)
     {
         throw new System.NotImplementedException();

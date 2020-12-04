@@ -5,7 +5,9 @@ using UnityEditor;
 using UnityEngine;
 
 /**
- * HookableObjectController is a static class and contains the functionality of Hookable Objects 
+ * HookableObjectController is a static class and contains the functionality of Hookable Objects
+ *
+ * TODO: split into multiple statics, too long
  */
 public static class HookableObjectController
 {
@@ -18,6 +20,8 @@ public static class HookableObjectController
      *
      * @param stone: stone which detected collision
      * @param gameObject: GameObject which stone collided with
+     *
+     *TODO: better description, more elegant ways should be implemented
      */
     public static void OnHookableObjectCollision(Stone stone, GameObject gameObject)
     {
@@ -25,7 +29,6 @@ public static class HookableObjectController
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
-        //TODO this if needs to be less pointy
         else if ( AllowedToPutInWorkshop(gameObject, stone) )
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
@@ -37,7 +40,10 @@ public static class HookableObjectController
         }
     }
 
-    public static bool AllowedToPutInWorkshop(GameObject gameObject, Stone stone)
+    /**
+     * helper function for OnHookableObjectCollision, decides if Stone shoud be put into gameObject in the case gameObject is Workshops
+     */
+    private static bool AllowedToPutInWorkshop(GameObject gameObject, Stone stone)
     {
         return gameObject.CompareTag("Workshop") && gameObject.GetComponent<Workshop>().IsEmpty() && 
                (gameObject.GetComponent<Workshop>().GetPlayer().ContainsStone(stone) || gameObject.GetComponent<Workshop>().GetTeam().GetScoreArea().ContainsStone(stone));
@@ -45,6 +51,14 @@ public static class HookableObjectController
     }
 
 
+    /**
+     * checks if stone is child of CanHoldHookableObject
+     *
+     * @param stone Stone to check if it is child
+     * @param canHoldHookableObject CanHoldHookableObject to check childs in
+     * 
+     * TODO: should be called instead of Stone.contains()
+     */
     private static bool IsStoneInCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
         return canHoldHookableObject.IsStoneInCanHoldHookableObject(stone);

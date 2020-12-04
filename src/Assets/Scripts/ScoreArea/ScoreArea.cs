@@ -16,6 +16,13 @@ public class ScoreArea : CanHoldHookableObject
         _team = gameObject.GetComponentInParent<Team>();
     }
 
+    /**
+     * implementation of method required by parent class, calls StoneToScoreArea at HookableObjectController
+     *
+     * @param stone Stone to add
+     *
+     * TODO: do not call Method from HookableGameObject, this has historic reasons and is not necessary with refactored code structure 
+     */
     public override bool StoneToCanHoldHookableObject(Stone stone)
     {
         HookableObjectController.StoneToScoreArea(stone, this);
@@ -23,16 +30,35 @@ public class ScoreArea : CanHoldHookableObject
         return true;
     }
 
+    /**
+     * true if stone is part of _stones
+     *
+     * @param stone Stone to check
+     */
     public override bool IsStoneInCanHoldHookableObject(Stone stone)
     {
         return _stones.Contains(stone);
     }
 
+    /**
+     * true if stone is part of _stones
+     *
+     * @param stone Stone to check
+     *
+     * TODO: IsStoneInCanHoldHookableObject shoud be used instead
+     */
     public bool ContainsStone(Stone stone)
     {
         return _stones.Contains(stone);
     }
     
+    /**
+     * adds stone to _stones and disables draggable on old _stones
+     *
+     * @param stone Stone to add
+     *
+     * TODO: should not be needed but part of StoneToCanHoldHookableObject
+     */
     public void AddStone(Stone stone)
     {
         _stones.Add(stone);
@@ -43,6 +69,13 @@ public class ScoreArea : CanHoldHookableObject
         }
     }
 
+    /**
+     * get snapbackposition of stone
+     *
+     * @param stone Stone to add
+     *
+     * TODO: maybe try to store information of where stone has been placed before on ScoreArea and return this for snapback when outside ScoreArea but ScoreArea is still parent
+     */
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
         Vector3 currentPosition = HookableObjectController.GetPositionOfHookableObject(stone);
@@ -53,6 +86,11 @@ public class ScoreArea : CanHoldHookableObject
         return currentPosition;
     }
 
+    /**
+     * remove stone from ScoreArea, make last stone in list _stones draggable again
+     *
+     * @param stone Stone to remove
+     */
     public override void RemoveStone(Stone stone)
     {
         _stones.Remove(stone);

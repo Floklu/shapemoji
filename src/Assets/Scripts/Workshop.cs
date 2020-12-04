@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 /**
  * Class Workshop contains the workshop functionality
@@ -60,23 +58,40 @@ public class Workshop : CanHoldHookableObject
 
     }
 
+    /**
+     * implementation of parent class, adding Stone to Workshop
+     *
+     * @param stone Stone To Add
+     */
     public override bool StoneToCanHoldHookableObject(Stone stone)
     {
         HookableObjectController.StoneToWorkshop(stone, this);
         return true;
     }
 
+    /**
+     * stone equals _child?
+     *
+     * @param Stone to compare
+     */
     public override bool IsStoneInCanHoldHookableObject(Stone stone)
     {
         //stone cannot be null, but child can, so needs to be called this way
         return stone.Equals(_child);
     }
 
+    /**
+     * get player owning Workshop
+     *
+     */
     public override Player GetPlayer()
     {
         return Player.GetComponent<Player>();
     }
 
+    /**
+     * get team of the player owning Workshop
+     */
     public override Team GetTeam()
     {
         return Team.GetComponent<Team>();

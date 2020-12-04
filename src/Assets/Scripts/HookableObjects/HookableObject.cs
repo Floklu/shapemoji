@@ -1,7 +1,5 @@
 using UnityEngine;
 
-//TODO: at critical number of lines cut into multiple .cs files
-
 /**
  * abstract class HookableObject is parent class of all GameObject which can be hooked by projectile
  *

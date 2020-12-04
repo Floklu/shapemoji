@@ -72,6 +72,9 @@ public class Stone : HookableObject
         }
     }
 
+    /**
+     * make Stone unselectable and therefore undraggable
+     */
     private void MakeUnDraggable()
     {
         var leanSelectable = gameObject.GetComponent<LeanSelectable>();
@@ -107,6 +110,8 @@ public class Stone : HookableObject
         leanSelectable.DeselectOnUp = true;
         leanSelectable.IsolateSelectingFingers = true;
         leanSelectable.OnDeselect.AddListener(OnDeselectOnUp);
+        leanSelectable.enabled = true;
+
     }
 
     /**
@@ -131,10 +136,5 @@ public class Stone : HookableObject
         var rotatable = gameObject.GetComponent<LeanTwistRotate>();
         if (scalable != null) scalable.enabled = false;
         if (rotatable != null) rotatable.enabled = false;
-    }
-
-    public GameObject GetParentGameObject()
-    {
-        return Parent;
     }
 }
