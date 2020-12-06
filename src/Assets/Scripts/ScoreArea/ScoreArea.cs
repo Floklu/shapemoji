@@ -97,11 +97,10 @@ public class ScoreArea : CanHoldHookableObject
         _stones.Remove(stone);
         // reenable draggable on last stone
         var stoneCount = _stones.Count;
-        var newLastStone = _stones.Last();
-        if (newLastStone)
+        if (stoneCount > 0)
         {
+            var newLastStone = _stones.Last();
             HookableObjectController.ReEnableStoneDraggable(newLastStone);
-
         }
     }
     
