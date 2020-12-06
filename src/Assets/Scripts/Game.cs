@@ -1,11 +1,17 @@
-﻿using UnityEditor;
+﻿using System;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /**
- * Class Game has functionality to quit the game.
+ * manages game related functionality
  */
 public class Game : MonoBehaviour
 {
+    public static Game Instance;
+    [SerializeField] private List<Sprite> emojiSprites;
+
     /**
      * Update is called once per frame.
      * The game is quitting if the escape key is pressed.
@@ -21,5 +27,30 @@ public class Game : MonoBehaviour
             // this quits the game if it's already build and running
             Application.Quit();
         }
+    }
+
+    // Unity Event function, called when component is enabled
+    private void OnEnable()
+    {
+        Instance = this;
+        Random.InitState((int) DateTime.Now.Ticks);
+        emojiSprites.Shuffle();
+    }
+
+    // Unity Event function, called when component is disabled
+    private void OnDisable()
+    {
+        Instance = null;
+    }
+
+    /**
+     * Get the n-th emoji from the list of emoji sprites
+     * 
+     * @param num the position modulo the count of emojis
+     * @returns the sprite at the given position
+     */
+    public Sprite GetEmoji(int num)
+    {
+        return emojiSprites[num % emojiSprites.Count];
     }
 }
