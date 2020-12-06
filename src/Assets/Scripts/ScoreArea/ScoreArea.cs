@@ -2,12 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreArea : CanHoldHookableObject
 {
     private List<Stone> _stones;
     private BoxCollider2D _collider;
     private int _teamScore;
+
+    // UI
+    private Text teamScoreText;
+    private Text emojiScoreText;
+    private Toggle _button1;
+    private Toggle _button2;
+    [SerializeField] private GameObject emojiScoreUI;
+    [SerializeField] private GameObject teamScoreUI;
+    [SerializeField] private GameObject button1;
+    [SerializeField] private GameObject button2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +28,15 @@ public class ScoreArea : CanHoldHookableObject
         _collider = gameObject.GetComponent<BoxCollider2D>();
         _player = gameObject.GetComponentInParent<Player>();
         _team = gameObject.GetComponentInParent<Team>();
+
+        // UI
+        teamScoreText = teamScoreUI.GetComponent<Text>();
+        emojiScoreText = emojiScoreUI.GetComponent<Text>();
+        emojiScoreUI.SetActive(false);
+        _button1 = button1.GetComponent<Toggle>();
+        _button1.onValueChanged.AddListener(delegate { TurnInEmoji(); });
+        _button2 = button2.GetComponent<Toggle>();
+        _button2.onValueChanged.AddListener(delegate { TurnInEmoji(); });
     }
 
     /**
@@ -115,10 +136,29 @@ public class ScoreArea : CanHoldHookableObject
     public void AddScore(int score)
     {
         _teamScore += score;
+        teamScoreText.text = "" + _teamScore;
     }
 
     public void ChangeEmoji()
     {
-        
+        // EmojiSpriteManager.ChangeEmoji()
+    }
+
+    IEnumerator DisplayScore(int score)
+    {
+        emojiScoreUI.SetActive(true);
+        emojiScoreText.text = "" + score;
+
+        yield return new WaitForSeconds(1);
+
+        emojiScoreUI.SetActive(false);
+    }
+
+    private void TurnInEmoji()
+    {
+        if (_button1.isOn && _button2.isOn)
+        {
+            // ScoreCalculation.CalculateScore()
+        }
     }
 }
