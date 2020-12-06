@@ -7,6 +7,7 @@ public class ScoreArea : CanHoldHookableObject
 {
     private List<Stone> _stones;
     private BoxCollider2D _collider;
+    private int _teamScore;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,7 @@ public class ScoreArea : CanHoldHookableObject
     {
         return _stones.Contains(stone);
     }
-    
+
     /**
      * adds stone to _stones and disables draggable on old _stones
      *
@@ -80,10 +81,12 @@ public class ScoreArea : CanHoldHookableObject
     public override Vector3 GetPositionOfStoneChild(Stone stone)
     {
         Vector3 currentPosition = HookableObjectController.GetPositionOfHookableObject(stone);
-        if (_stones.Contains(stone) && !_collider.bounds.Contains(currentPosition)) // bound only works with rectengular colliders 
+        if (_stones.Contains(stone) && !_collider.bounds.Contains(currentPosition)
+        ) // bound only works with rectengular colliders 
         {
             return gameObject.transform.position;
         }
+
         return currentPosition;
     }
 
@@ -101,8 +104,21 @@ public class ScoreArea : CanHoldHookableObject
         if (newLastStone)
         {
             HookableObjectController.ReEnableStoneDraggable(newLastStone);
-
         }
     }
-    
+
+    /**
+ * AddScore adds the calculated score to the team score
+ *
+ * @param score calculated Score
+ */
+    public void AddScore(int score)
+    {
+        _teamScore += score;
+    }
+
+    public void ChangeEmoji()
+    {
+        
+    }
 }
