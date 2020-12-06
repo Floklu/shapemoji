@@ -1546,6 +1546,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740a92fb782581e408cdd298d56f0ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emojiSprites:
+  - {fileID: 21300000, guid: 926d277dc0e11114f9ba24a4ab4e8dff, type: 3}
+  - {fileID: 21300000, guid: 67497832f05bc82449015a7ab0ed63d0, type: 3}
+  - {fileID: 21300000, guid: 9b8e4bb5c47fea24ebda1bc22d3ce814, type: 3}
+  - {fileID: 21300000, guid: d25d63707f11aba429c5a65ee85c6f0e, type: 3}
+  - {fileID: 21300000, guid: ae2a584270ee197459bd84fb5eb69cf8, type: 3}
+  - {fileID: 21300000, guid: 211e8edd51cb91244ad8dac33d166b8b, type: 3}
+  - {fileID: 21300000, guid: 2143475ba1a6c6447b14311819fd9000, type: 3}
+  - {fileID: 21300000, guid: ced85bdf408a30048abe6e140817fcff, type: 3}
+  - {fileID: 21300000, guid: 067e1471643823e42b1ab5aba0784ab2, type: 3}
+  - {fileID: 21300000, guid: 51d2126ea4499084a9b88d07b3ea8b1c, type: 3}
+  - {fileID: 21300000, guid: f824075b00836cf44857b12e0642611b, type: 3}
+  - {fileID: 21300000, guid: 31d3f2607730e5f4b891a5f212870ccd, type: 3}
+  - {fileID: 21300000, guid: 9129fb9e50a6ce340818331c00fc157d, type: 3}
+  - {fileID: 21300000, guid: f7df04b9a985ce341930189150eba1b6, type: 3}
 --- !u!1 &578965296
 GameObject:
   m_ObjectHideFlags: 0

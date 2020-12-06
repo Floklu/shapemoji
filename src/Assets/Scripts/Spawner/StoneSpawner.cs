@@ -36,8 +36,6 @@ namespace Spawner
          */
         public void StartGeneration()
         {
-            Random.InitState((int) System.DateTime.Now.Ticks); //TODO should be moved to a different class
-
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
             {
                 _spawnPlaces.Add(child.gameObject);
