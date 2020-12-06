@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /**
  * manages game related functionality
@@ -31,8 +33,8 @@ public class Game : MonoBehaviour
     private void OnEnable()
     {
         Instance = this;
-        Random.InitState((int) System.DateTime.Now.Ticks);
-        emojiSprites.Shuffle(); 
+        Random.InitState((int) DateTime.Now.Ticks);
+        emojiSprites.Shuffle();
     }
 
     // Unity Event function, called when component is disabled
@@ -43,12 +45,12 @@ public class Game : MonoBehaviour
 
     /**
      * Get the n-th emoji from the list of emoji sprites
-     *
+     * 
      * @param num the position modulo the count of emojis
      * @returns the sprite at the given position
      */
     public Sprite GetEmoji(int num)
     {
-        return emojiSprites[num%emojiSprites.Count];
+        return emojiSprites[num % emojiSprites.Count];
     }
 }

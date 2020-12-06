@@ -32,26 +32,21 @@ namespace Spawner
         }
 
         /**
-         * Generates predefined number of random stones and places them onto the playground 
+         * Generates predefined number of random stones and places them onto the playground
          */
         public void StartGeneration()
         {
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
-            {
                 _spawnPlaces.Add(child.gameObject);
-            }
 
-            for (var i = 0; i < maxStones; i++)
-            {
-                CreateRandomStone();
-            }
+            for (var i = 0; i < maxStones; i++) CreateRandomStone();
         }
 
         /**
-        * deletes a stone at given position
-         *
-         * @param stone delete reference of given stone to free position
-        */
+         * * deletes a stone at given position
+         * *
+         * * @param stone delete reference of given stone to free position
+         */
         public void DeleteHookableObject(HookableObject hookableObject)
         {
             var places = _spawnPlaces
@@ -63,7 +58,7 @@ namespace Spawner
 
         /**
          * checks, if Spawner is at maximum capacity
-         *
+         * 
          * @returns true, if spawner cannot spawn any new stones
          */
         public bool IsFull()
@@ -97,7 +92,7 @@ namespace Spawner
 
         /**
          * determines, if the chosen GameObject already contains a stone
-         *
+         * 
          * @param place chosen spawn place for a stone
          * @returns true, if the gameObject contains a SpawnPlace and it contains a stone
          */
