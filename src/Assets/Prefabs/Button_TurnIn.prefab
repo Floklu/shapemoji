@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 3530502132215902813}
   - component: {fileID: 3530502132215902812}
   m_Layer: 0
-  m_Name: Button_TurnIn_Player_1
+  m_Name: Button_TurnIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,4 +200,4 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1

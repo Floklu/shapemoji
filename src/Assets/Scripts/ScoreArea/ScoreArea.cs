@@ -37,22 +37,14 @@ namespace ScoreArea
             emojiScoreUI.SetActive(false);
 
             _button1 = button1.GetComponent<Toggle>();
-            // change the button color to red at the start
-            var button1Colors = _button1.colors;
-            button1Colors.normalColor = Color.red;
-            button1Colors.highlightedColor = Color.red;
-            _button1.colors = button1Colors;
             _button1.onValueChanged.AddListener(delegate { TurnInEmoji(); });
             _button1.onValueChanged.AddListener(delegate { ChangeColorOfButton(_button1); });
+            _button1.isOn = false;
 
             _button2 = button2.GetComponent<Toggle>();
-            // change the button color to red at the start
-            var button2Colors = _button2.colors;
-            button2Colors.normalColor = Color.red;
-            button2Colors.highlightedColor = Color.red;
-            _button2.colors = button2Colors;
             _button2.onValueChanged.AddListener(delegate { TurnInEmoji(); });
             _button2.onValueChanged.AddListener(delegate { ChangeColorOfButton(_button2); });
+            _button2.isOn = false;
         }
 
         /**
@@ -207,6 +199,18 @@ namespace ScoreArea
             }
 
             button.colors = buttonColors;
+        }
+
+        private void ResetScoreArea()
+        {
+            _button1.isOn = false;
+            _button2.isOn = false;
+
+            foreach (Stone stone in _stones)
+            {
+                stone.DestroyHookableObject();
+            }
+            _stones = new List<Stone>();
         }
     }
 }
