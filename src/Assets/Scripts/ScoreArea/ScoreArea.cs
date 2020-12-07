@@ -11,6 +11,7 @@ namespace ScoreArea
         private List<Stone> _stones;
         private BoxCollider2D _collider;
         private int _teamScore;
+        private EmojiSpriteManager _emojiSpriteManager;
 
         // UI
         private Text teamScoreText;
@@ -30,6 +31,7 @@ namespace ScoreArea
             _collider = gameObject.GetComponent<BoxCollider2D>();
             _player = gameObject.GetComponentInParent<Player>();
             _team = gameObject.GetComponentInParent<Team>();
+            _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
 
             // UI
             teamScoreText = teamScoreUI.GetComponent<Text>();
@@ -146,7 +148,7 @@ namespace ScoreArea
          */
         public void ChangeEmoji()
         {
-            // EmojiSpriteManager.ChangeEmoji()
+            _emojiSpriteManager.ChangeEmoji();
         }
 
         /**
@@ -206,10 +208,11 @@ namespace ScoreArea
             _button1.isOn = false;
             _button2.isOn = false;
 
-            foreach (Stone stone in _stones)
+            foreach (var stone in _stones)
             {
                 stone.DestroyHookableObject();
             }
+
             _stones = new List<Stone>();
         }
     }
