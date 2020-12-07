@@ -47,7 +47,7 @@ namespace ScoreArea
      *
      * @param stone Stone to check
      *
-     * TODO: IsStoneInCanHoldHookableObject shoud be used instead
+     * TODO: IsStoneInCanHoldHookableObject should be used instead
      */
         public bool ContainsStone(Stone stone)
         {
@@ -64,8 +64,14 @@ namespace ScoreArea
         public void AddStone(Stone stone)
         {
             _stones.Add(stone);
-            //lock n-1th stone
-            if (_stones.Count > 1) HookableObjectController.DisableStoneDraggable(_stones[_stones.Count - 2]);
+            //lock n-1th stone and deactivate collider
+            if (_stones.Count > 1)
+            {
+                var oldStone = _stones[_stones.Count - 2];
+                HookableObjectController.DisableStoneDraggable(oldStone);
+                HookableObjectController.SetHookableObjectColliderState(oldStone, true);
+
+            }
         }
 
         /**
@@ -92,12 +98,13 @@ namespace ScoreArea
         public override void RemoveStone(Stone stone)
         {
             _stones.Remove(stone);
-            // reenable draggable on last stone
+            // reenable draggable and collider on last stone
             var stoneCount = _stones.Count;
             if (stoneCount > 0)
             {
                 var newLastStone = _stones.Last();
                 HookableObjectController.ReEnableStoneDraggable(newLastStone);
+                HookableObjectController.SetHookableObjectColliderState(stone, true);
             }
         }
     }

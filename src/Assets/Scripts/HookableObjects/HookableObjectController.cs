@@ -94,6 +94,20 @@ public static class HookableObjectController
         if (gameObject.GetComponent<ProjectileCollision>()) AttachHookableObjectToProjectile(item, gameObject);
     }
 
+
+    /**
+     * enable or disable colliderbox of HookableObject
+     *
+     * @param state bool to set
+     * @param hookableObject HookableObject to set state in
+     * 
+     */
+
+    public static void SetHookableObjectColliderState(HookableObject hookableObject, bool state)
+    {
+        hookableObject.SetColliderState(state);
+    }
+    
     /**
      * SetOnDeselectParentOfStone sets the onDeselectParent of the stone
      *
