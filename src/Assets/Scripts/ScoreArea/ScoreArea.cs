@@ -174,7 +174,6 @@ namespace ScoreArea
         {
             if (_button1.isOn && _button2.isOn)
             {
-                HandleScore(30);
                 // ScoreCalculation.GetScore()
             }
         }
