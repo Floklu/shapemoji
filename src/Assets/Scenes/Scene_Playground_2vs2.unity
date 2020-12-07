@@ -1395,6 +1395,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4064168966897cc42ad82c9170ccf049, type: 3}
+--- !u!114 &410874653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5012775770123773912, guid: f6cebfc13952a2f49b8204fa11efc9b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5012775770836625678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554bd93dbae32132e8a46758213f7e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &418408497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2214,7 +2226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffcf9ec310c98b3e8ca44ac4becd474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreArea: {fileID: 0}
+  ScoreArea: {fileID: 1495954913}
 --- !u!1001 &1015873060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3391,6 +3403,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46465d1812e1c0a2bc71c156a212b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1495954913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5012775770123773912, guid: f6cebfc13952a2f49b8204fa11efc9b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1054266179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554bd93dbae32132e8a46758213f7e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499988573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6686723403685417011, guid: e12cbe1fed66a9a4582498c71aaf5afa,
@@ -4495,7 +4519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffcf9ec310c98b3e8ca44ac4becd474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreArea: {fileID: 0}
+  ScoreArea: {fileID: 410874653}
 --- !u!4 &1855783505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2424456828585251335, guid: 4064168966897cc42ad82c9170ccf049,
