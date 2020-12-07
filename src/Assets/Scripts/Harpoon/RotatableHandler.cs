@@ -13,7 +13,8 @@ namespace Harpoon
     {
         // Determines, whether RotationEvent passes differences in degrees since last event (true) or the total degree (false) 
         [SerializeField] private bool newRotationBehaviour;
-        private Collider2D _collider;
+
+        private LeanFingerFilter Use = new LeanFingerFilter(true);
 
         private LeanFinger _finger;
         private Vector3 _initialPosition;
@@ -25,41 +26,22 @@ namespace Harpoon
         */
         private void Start()
         {
-            _collider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
-        }
-
-        /**
-         * Fired if behaviour is enabled
-         */
-        private void OnEnable()
-        {
-            LeanTouch.OnFingerDown += OnFingerDown;
-            LeanTouch.OnGesture += OnGesture;
-            LeanTouch.OnFingerUp += OnFingerUp;
-        }
-
-        /**
-         * Fired if behaviour is disabled
-         */
-        private void OnDisable()
-        {
-            LeanTouch.OnFingerDown -= OnFingerDown;
-            LeanTouch.OnGesture -= OnGesture;
-            LeanTouch.OnFingerUp -= OnFingerUp;
         }
 
         /**
          * processes the touch movements and
          */
-        private void ProcessTouchMovement(LeanFinger finger)
+        private void Update()
         {
-            if (_finger.Equals(finger))
+            var fingers = Use.GetFingers();
+            if (fingers.Count > 0)
             {
+                var finger = fingers[0];
                 if (!newRotationBehaviour)
                 {
                     var position = finger.GetWorldPosition(0, _mainCamera);
-                    var direction = _initialPosition - position;
+                    var direction = transform.position - position;
 
                     direction.Normalize();
 
@@ -72,12 +54,23 @@ namespace Harpoon
                 }
             }
         }
+        
+#if UNITY_EDITOR
+        protected virtual void Reset()
+        {
+            Use.UpdateRequiredSelectable(gameObject);
+        }
+#endif
+        protected virtual void Awake()
+        {
+            Use.UpdateRequiredSelectable(gameObject);
+        }
 
         /**
          * invokes Event, if rotation happens
          */
         public event EventHandler<float> RotationEvent;
-
+        
         /**
          * raises RotationEvent
          */
@@ -86,45 +79,5 @@ namespace Harpoon
             RotationEvent?.Invoke(this, e);
         }
 
-        #region LeanTouchEvents
-
-        /**
-         * Handle LeanTouch OnFingerUp Event
-         *
-         * @param finger selected touch point
-         */
-        private void OnFingerUp(LeanFinger finger)
-        {
-            if (_finger != null && _finger.Equals(finger)) _finger = null;
-        }
-
-        /**
-         * Processes LeanTouch Finger Gestures
-         *
-         * @param lstFinger List of currently active LeanFinger Objects
-         */
-        private void OnGesture(List<LeanFinger> lstFinger)
-        {
-            var fingers = lstFinger.Where(leanFinger => leanFinger.Equals(_finger));
-            foreach (var leanFinger in fingers)
-                if (!leanFinger.ScreenDelta.normalized.Equals(Vector2.zero))
-                    ProcessTouchMovement(leanFinger);
-        }
-
-        /**
-         * Handle LeanTouch OnFingerDown Event
-         * 
-         * @param finger selected touch point
-         */
-        private void OnFingerDown(LeanFinger finger)
-        {
-            if (finger.CollidesWithGameObject(_collider, _mainCamera))
-            {
-                _finger = finger;
-                _initialPosition = finger.GetWorldPosition(0, _mainCamera);
-            }
-        }
-
-        #endregion
     }
 }
