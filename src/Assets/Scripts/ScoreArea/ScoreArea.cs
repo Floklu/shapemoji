@@ -143,24 +143,33 @@ public class ScoreArea : CanHoldHookableObject
     }
 
     /**
- * AddScore adds the calculated score to the team score
- *
- * @param score calculated Score
- */
+    * AddScore adds the calculated score to the team score
+    *
+    * @param score calculated Score
+    */
     public void AddScore(int score)
     {
         _teamScore += score;
-        teamScoreText.text = "" + _teamScore;
         StartCoroutine(DisplayScore(score));
     }
 
+    /**
+     * ChangeEmoji calls the EmojiSpriteManager to change the emoji
+     */
     public void ChangeEmoji()
     {
         // EmojiSpriteManager.ChangeEmoji()
     }
 
+    /**
+     * DisplayScore updates the team score and displays the emoji score for one second
+     *
+     * @param score Score to be displayed
+     */
     IEnumerator DisplayScore(int score)
     {
+        teamScoreText.text = "" + _teamScore;
+
         emojiScoreUI.SetActive(true);
         emojiScoreText.text = "" + score;
 
@@ -169,6 +178,9 @@ public class ScoreArea : CanHoldHookableObject
         emojiScoreUI.SetActive(false);
     }
 
+    /**
+     * TurnInEmoji calls the calculation in the ScoreCalculation script
+     */
     private void TurnInEmoji()
     {
         if (_button1.isOn && _button2.isOn)
@@ -177,6 +189,11 @@ public class ScoreArea : CanHoldHookableObject
         }
     }
 
+    /**
+     * ChangeColorOfButton changes the color of the button on every click
+     *
+     * @param button Button to be changed
+     */
     private void ChangeColorOfButton(Toggle button)
     {
         var buttonColors = button.colors;
