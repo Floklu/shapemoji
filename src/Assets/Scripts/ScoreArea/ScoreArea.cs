@@ -137,16 +137,15 @@ namespace ScoreArea
         *
         * @param score calculated Score
         */
-        public void AddScore(int score)
+        private void AddScore(int score)
         {
             _teamScore += score;
-            StartCoroutine(DisplayScore(score));
         }
 
         /**
          * ChangeEmoji calls the EmojiSpriteManager to change the emoji
          */
-        public void ChangeEmoji()
+        private void ChangeEmoji()
         {
             _emojiSpriteManager.ChangeEmoji();
         }
@@ -175,6 +174,7 @@ namespace ScoreArea
         {
             if (_button1.isOn && _button2.isOn)
             {
+                HandleScore(30);
                 // ScoreCalculation.GetScore()
             }
         }
@@ -214,6 +214,19 @@ namespace ScoreArea
             }
 
             _stones = new List<Stone>();
+        }
+
+        /**
+         * HandleScore handles the calculated score from the ScoreCalculation script
+         *
+         * @param score The calculated score
+         */
+        public void HandleScore(int score)
+        {
+            AddScore(score);
+            StartCoroutine(DisplayScore(score));
+            ChangeEmoji();
+            ResetScoreArea();
         }
     }
 }
