@@ -69,7 +69,7 @@ namespace ScoreArea
             {
                 var oldStone = _stones[_stones.Count - 2];
                 HookableObjectController.DisableStoneDraggable(oldStone);
-                HookableObjectController.SetHookableObjectColliderState(oldStone, true);
+                HookableObjectController.SetHookableObjectColliderState(oldStone, false);
 
             }
         }
