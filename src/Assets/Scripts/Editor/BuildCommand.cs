@@ -1,3 +1,4 @@
+# if false
 #if UNITY_STANDALONE_LINUX
 using UnityEditor;
 using System.Linq;
@@ -292,4 +293,5 @@ static class BuildCommand
         PlayerSettings.Android.keyaliasPass = keystoreAliasPass;
     }
 }
+#endif
 #endif

@@ -13,16 +13,6 @@ public class Stone : HookableObject
     // Parent that changes when the stone collides with a CanHoldHookableObject
     private CanHoldHookableObject _onDeselectParent;
 
-    /**
-     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
-     *
-     * @param inventory where stone is put to
-     */
-    public override void OnWoundIn(Inventory inventory)
-    {
-        HookableObjectController.StoneToInventory(this, inventory);
-    }
-
 
     /**
      * Calls for action at controller on collision with
@@ -45,6 +35,16 @@ public class Stone : HookableObject
     }
 
     /**
+     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
+     *
+     * @param inventory where stone is put to
+     */
+    public override void OnWoundIn(Inventory inventory)
+    {
+        HookableObjectController.StoneToInventory(this, inventory);
+    }
+
+    /**
      * SetOnDeselectParent sets the parent of the current frame
      *
      * @param canHoldHookableObject the parent to set
@@ -63,9 +63,18 @@ public class Stone : HookableObject
     {
         _draggable = state;
         if (state)
-        {
             MakeDraggable();
-        }
+        else
+            MakeUnDraggable();
+    }
+
+    /**
+     * make Stone unselectable and therefore undraggable
+     */
+    private void MakeUnDraggable()
+    {
+        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
+        leanSelectable.enabled = false;
     }
 
     /**
@@ -121,5 +130,14 @@ public class Stone : HookableObject
         var rotatable = gameObject.GetComponent<LeanTwistRotate>();
         if (scalable != null) scalable.enabled = false;
         if (rotatable != null) rotatable.enabled = false;
+    }
+
+    /**
+     * renabables leanSelectable, only to be called if Stone has Component LeanSelectable
+     */
+    public void ReEnableStoneDraggable()
+    {
+        var leanSelectable = gameObject.GetComponent<LeanSelectable>();
+        leanSelectable.enabled = true;
     }
 }

@@ -9,21 +9,21 @@ namespace Harpoon
     public class HarpoonController : MonoBehaviour
     {
         public float projectileSpeed = 500;
+        private Collider2D _cannonCollider; //needed to better handle collision while wound in
+        private CrankController _crankController;
+        private Inventory _inventory;
+
+        private bool _isWoundIn;
+        private MovingProjectile _movingProjectile;
+        private HookableObject _objectHooked;
+        private ProjectileCollision _projectileCollision;
+        private GameObject _projectileObj;
+        private bool _projectileShot;
+        private HarpoonRope _rope;
 
         private RotatableHandler _rotatableHandler;
         private HarpoonShotHandler _shotHandler;
-        private ProjectileCollision _projectileCollision;
-        private MovingProjectile _movingProjectile;
-        private HarpoonRope _rope;
         private WindInProjectile _windInProjectile;
-        private CrankController _crankController;
-
-        private bool _isWoundIn;
-        private bool _projectileShot;
-        private Collider2D _cannonCollider; //needed to better handle collision while wound in
-        private HookableObject _objectHooked;
-        private Inventory _inventory;
-        private GameObject _projectileObj;
 
 
         private void Start()
@@ -111,10 +111,7 @@ namespace Harpoon
          */
         public void RotateHarpoon(float rotation)
         {
-            if (!_projectileShot && !_isWoundIn)
-            {
-                transform.rotation = Quaternion.Euler(0, 0, rotation);
-            }
+            if (!_projectileShot && !_isWoundIn) transform.rotation = Quaternion.Euler(0, 0, rotation);
         }
 
         /**
@@ -138,10 +135,7 @@ namespace Harpoon
 
         public void NotifyRemoveHookableObject(HookableObject hookableObject)
         {
-            if (hookableObject.Equals(_objectHooked))
-            {
-                _objectHooked = null;
-            }
+            if (hookableObject.Equals(_objectHooked)) _objectHooked = null;
         }
 
         #region EventHandling
@@ -158,10 +152,7 @@ namespace Harpoon
                 if (collidedObject.Equals(_cannonCollider))
                 {
                     StopProjectileMovement();
-                    if (_objectHooked != null)
-                    {
-                        HookableObjectController.OnWoundIn(_objectHooked, _inventory);
-                    }
+                    if (_objectHooked != null) HookableObjectController.OnWoundIn(_objectHooked, _inventory);
                 }
             }
             else

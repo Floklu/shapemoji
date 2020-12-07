@@ -11,12 +11,12 @@ namespace Harpoon
     {
         public GameObject projectile;
         public GameObject cannon;
-
-        private SpriteRenderer _spriteRenderer;
-
-        private Transform _ropeTransform;
         private Transform _cannonTransform;
         private Transform _projectileTransform;
+
+        private Transform _ropeTransform;
+
+        private SpriteRenderer _spriteRenderer;
 
         /**
         * Start Method is used to initialize variables

@@ -1,7 +1,5 @@
 using UnityEngine;
 
-//TODO: at critical number of lines cut into multiple .cs files
-
 /**
  * abstract class HookableObject is parent class of all GameObject which can be hooked by projectile
  *
@@ -9,7 +7,6 @@ using UnityEngine;
 public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject Parent;
-
 
     /**
      * on Start() set layer to PlayingFieldLayer
@@ -25,6 +22,14 @@ public abstract class HookableObject : MonoBehaviour
      * @param Collider other
      */
     public abstract void OnTriggerEnter2D(Collider2D other);
+
+    /**
+ * get current position on playing field
+ */
+    public Vector3 GetPosition()
+    {
+        return gameObject.transform.position;
+    }
 
     /**
          * change collision layer to PlayingFieldLayer

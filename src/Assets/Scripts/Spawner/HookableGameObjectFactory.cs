@@ -24,10 +24,7 @@ namespace Spawner
         {
             var preFabsStonesRange = preFabsStones.Count;
             //if no prefabs are available
-            if (preFabsStonesRange < 1)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            if (preFabsStonesRange < 1) throw new IndexOutOfRangeException();
 
             //choose prefab
             var random = Random.Range(0, preFabsStonesRange);
@@ -49,10 +46,7 @@ namespace Spawner
         {
             var preFabItemsRange = preFabsItems.Count;
             //if no prefabs are available 
-            if (preFabItemsRange < 1)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            if (preFabItemsRange < 1) throw new IndexOutOfRangeException();
 
             //choose preFab
             var random = Random.Range(0, preFabItemsRange);

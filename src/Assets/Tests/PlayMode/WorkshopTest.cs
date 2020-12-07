@@ -25,9 +25,7 @@ namespace Tests.PlayMode
         private Stone _currentStone;
 
         /*
-         * _harpoon, _projectile, _inventory, _field1, _field2 etc. are GameObjects selected by class method LoadPlayer
-         * _workshopSlotCurrentPlayer is the Workshop Slot that belongs to current player
-         * _workshopSlotAnotherPlayer is the Workshop Slot that belongs to another player (different from current player)
+         * _harpoon, _projectile, _inventory, _field are GameObjects selected by class method LoadPlayer
          */
         private GameObject _harpoon,
             _projectile,
@@ -36,8 +34,8 @@ namespace Tests.PlayMode
             _field2,
             _spawner,
             _wheel,
-            _workshopSlotCurrentPlayer,
-            _workshopSlotAnotherPlayer;
+            _workshopSlot,
+            _otherSlot;
 
         /**
          * Setup test environment
@@ -97,11 +95,11 @@ namespace Tests.PlayMode
             LoadPlayer();
             yield return GetStone();
             InitTest();
-            yield return MoveToOtherWorkshopSlot();
-            yield return MoveToWorkshopSlot();
+            yield return MoveToOtherSlot();
+            yield return MoveToSlot();
             yield return MoveBackToInventory();
             yield return GetStone();
-            yield return MoveToFullWorkshopSlot();
+            yield return MoveToFullSlot();
         }
 
         /**
@@ -111,16 +109,16 @@ namespace Tests.PlayMode
         {
             var leanSelectable = _currentStone.gameObject.GetComponent<LeanSelectable>();
             Assert.IsNotNull(leanSelectable, $"Player {_currentPlayer}: Stone is not selectable in the inventory");
-            Assert.AreEqual(_workshopSlotCurrentPlayer.GetComponent<Workshop>().GetInventory(), _inventory, $"Player {_currentPlayer}: Inventory not assigned to workshop");
-            Assert.IsTrue(_workshopSlotCurrentPlayer.GetComponent<Workshop>().IsEmpty(), $"Player {_currentPlayer}: workshop is already full");
+            //Assert.AreEqual(_workshopSlot.GetComponent<Workshop>().GetInventory(), _inventory, $"Player {_currentPlayer}: Inventory not assigned to workshop");
+            Assert.IsTrue(_workshopSlot.GetComponent<Workshop>().IsEmpty(), $"Player {_currentPlayer}: workshop is already full");
         }
 
         /**
-         * Move current stone to a workshop slot, that doesn't belong to current player and test, if stone is moved back into inventory
+         * Move current stone to a slot, that doesn't belong to current player and test, if stone is moved back into inventory
          */
-        private IEnumerator MoveToOtherWorkshopSlot()
+        private IEnumerator MoveToOtherSlot()
         {
-            yield return AssertMovement(_workshopSlotAnotherPlayer.transform.position, _currentStone.transform.position,
+            yield return AssertMovement(_otherSlot.transform.position, _currentStone.transform.position,
                 $"Player {_currentPlayer}: Stone is not in the Inventory");
             // ReSharper disable once Unity.InefficientPropertyAccess
             AssertVectors(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild(_currentStone),
@@ -130,12 +128,12 @@ namespace Tests.PlayMode
         /**
          * Move current stone to current workshop slot and test, if stone is in workshop
          */
-        private IEnumerator MoveToWorkshopSlot()
+        private IEnumerator MoveToSlot()
         {
             // ReSharper disable once Unity.InefficientPropertyAccess
-            yield return AssertMovement(_workshopSlotCurrentPlayer.transform.position + Vector3.up, _workshopSlotCurrentPlayer.transform.position,
+            yield return AssertMovement(_workshopSlot.transform.position + Vector3.up, _workshopSlot.transform.position,
                 $"Player {_currentPlayer}: Stone is not in center of workshop");
-            Assert.IsFalse(_workshopSlotCurrentPlayer.GetComponent<Workshop>().IsEmpty(),$"Player {_currentPlayer}: Workshop slot should be full");
+            Assert.IsFalse(_workshopSlot.GetComponent<Workshop>().IsEmpty(),$"Player {_currentPlayer}: Workshop slot should be full");
         }
 
         /**
@@ -144,7 +142,7 @@ namespace Tests.PlayMode
         private IEnumerator MoveBackToInventory()
         {
             // ReSharper disable once Unity.InefficientPropertyAccess
-            yield return AssertMovement(_inventory.transform.position, _workshopSlotCurrentPlayer.transform.position,
+            yield return AssertMovement(_inventory.transform.position, _workshopSlot.transform.position,
                 $"Player {_currentPlayer}: Stone is not in center of workshop");
             Assert.AreEqual(_inventory.GetComponent<Inventory>().GetPositionOfStoneChild(_currentStone), Vector3.zero,
                 $"Player {_currentPlayer}: Stone was not removed from inventory");
@@ -153,10 +151,10 @@ namespace Tests.PlayMode
         /**
          * Move new stone to current slot, which is already full, and test, if stone is moved back to inventory
          */
-        private IEnumerator MoveToFullWorkshopSlot()
+        private IEnumerator MoveToFullSlot()
         {
             // ReSharper disable twice Unity.InefficientPropertyAccess
-            yield return AssertMovement(_workshopSlotCurrentPlayer.transform.position, _currentStone.transform.position,
+            yield return AssertMovement(_workshopSlot.transform.position, _currentStone.transform.position,
                 $"Player {_currentPlayer}: Stone is not in the Inventory, despite being moved to full inventory");
         }
 
@@ -335,38 +333,38 @@ namespace Tests.PlayMode
                                 "/Base/Wheel");
 
 
-            int currentWorkshopSlotNumber = 1;
+            int slotNumber = 1;
 
             switch (_currentPlayer)
             {
                 case 1:
                     _field = GameObject.Find("SpawnArea_SouthWest");
                     _field2 = GameObject.Find("SpawnArea_SouthEast");
-                    currentWorkshopSlotNumber = 1;
+                    slotNumber = 1;
                     break;
                 case 2:
                     _field = GameObject.Find("SpawnArea_NorthWest");
                     _field2 = GameObject.Find("SpawnArea_NorthEast");
-                    currentWorkshopSlotNumber = 2;
+                    slotNumber = 2;
                     break;
                 case 3:
                     _field = GameObject.Find("SpawnArea_SouthEast");
                     _field2 = GameObject.Find("SpawnArea_SouthWest");
-                    currentWorkshopSlotNumber = 1;
+                    slotNumber = 1;
                     break;
                 case 4:
                     _field = GameObject.Find("SpawnArea_NorthEast");
                     _field2 = GameObject.Find("SpawnArea_NorthWest");
-                    currentWorkshopSlotNumber = 2;
+                    slotNumber = 2;
                     break;
             }
 
-            _workshopSlotCurrentPlayer = GameObject.Find("Team_" + team + "/Workshop/Slot (" + currentWorkshopSlotNumber +
+            _workshopSlot = GameObject.Find("Team_" + team + "/Workshop/Slot (" + slotNumber +
                                             ")");
 
-            var otherWorkshopSlotNumber = currentWorkshopSlotNumber == 1 ? 2 : 1;
+            var otherSlot = slotNumber == 1 ? 2 : 1;
 
-            _workshopSlotAnotherPlayer = GameObject.Find("Team_" + team + "/Workshop/Slot (" + otherWorkshopSlotNumber +
+            _otherSlot = GameObject.Find("Team_" + team + "/Workshop/Slot (" + otherSlot +
                                          ")");
         }
     }
