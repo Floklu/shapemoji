@@ -33,10 +33,24 @@ public class ScoreArea : CanHoldHookableObject
         teamScoreText = teamScoreUI.GetComponent<Text>();
         emojiScoreText = emojiScoreUI.GetComponent<Text>();
         emojiScoreUI.SetActive(false);
+
         _button1 = button1.GetComponent<Toggle>();
+        // change the button color to red at the start
+        var button1Colors = _button1.colors;
+        button1Colors.normalColor = Color.red;
+        button1Colors.highlightedColor = Color.red;
+        _button1.colors = button1Colors;
         _button1.onValueChanged.AddListener(delegate { TurnInEmoji(); });
+        _button1.onValueChanged.AddListener(delegate { ChangeColorOfButton(_button1); });
+
         _button2 = button2.GetComponent<Toggle>();
+        // change the button color to red at the start
+        var button2Colors = _button2.colors;
+        button2Colors.normalColor = Color.red;
+        button2Colors.highlightedColor = Color.red;
+        _button2.colors = button2Colors;
         _button2.onValueChanged.AddListener(delegate { TurnInEmoji(); });
+        _button2.onValueChanged.AddListener(delegate { ChangeColorOfButton(_button2); });
     }
 
     /**
@@ -137,6 +151,7 @@ public class ScoreArea : CanHoldHookableObject
     {
         _teamScore += score;
         teamScoreText.text = "" + _teamScore;
+        StartCoroutine(DisplayScore(score));
     }
 
     public void ChangeEmoji()
@@ -158,7 +173,26 @@ public class ScoreArea : CanHoldHookableObject
     {
         if (_button1.isOn && _button2.isOn)
         {
-            // ScoreCalculation.CalculateScore()
+            // ScoreCalculation.GetScore()
         }
+    }
+
+    private void ChangeColorOfButton(Toggle button)
+    {
+        var buttonColors = button.colors;
+        if (button.isOn)
+        {
+            buttonColors.normalColor = Color.green;
+            buttonColors.selectedColor = Color.green;
+            buttonColors.highlightedColor = Color.green;
+        }
+        else
+        {
+            buttonColors.normalColor = Color.red;
+            buttonColors.selectedColor = Color.red;
+            buttonColors.highlightedColor = Color.red;
+        }
+
+        button.colors = buttonColors;
     }
 }
