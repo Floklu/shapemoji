@@ -5,6 +5,7 @@
  */
 public class EmojiSpriteManager : MonoBehaviour
 {
+    [SerializeField] private GameObject emoji;
     private Game _game;
     private int _currentEmojiNumber;
     // Start is called before the first frame update
@@ -15,14 +16,22 @@ public class EmojiSpriteManager : MonoBehaviour
     }
 
     /**
-     * Method to change current Emoji to the next one from the Sprite List
+     * Get next one Emoji from the Sprite List
      * @return new Emoji-Sprite
      */
-    public Sprite GetNewEmoji()
+    private Sprite GetNewEmoji()
     {
         _currentEmojiNumber++;
         Sprite newEmoji = _game.GetEmoji(_currentEmojiNumber);
         return newEmoji;
+    }
+
+    /**
+     * Change Emoji-Sprite
+     */
+    public void ChangeEmoji()
+    {
+        emoji.GetComponent<SpriteRenderer>().sprite = GetNewEmoji();
     }
     
     

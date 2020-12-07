@@ -964,6 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a666c420f0001e64cb1acf2f89250617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emoji: {fileID: 452616269}
 --- !u!1001 &321025235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,6 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a666c420f0001e64cb1acf2f89250617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emoji: {fileID: 1568343016}
 --- !u!1 &1011719101
 GameObject:
   m_ObjectHideFlags: 0
