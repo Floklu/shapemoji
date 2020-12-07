@@ -4,7 +4,9 @@ using Spawner;
 using UnityEngine;
 
 /**
- * HookableObjectController is a static class and contains the functionality of Hookable Objects 
+ * HookableObjectController is a static class and contains the functionality of Hookable Objects
+ *
+ * TODO: split into multiple statics, too long
  */
 public static class HookableObjectController
 {
@@ -13,10 +15,12 @@ public static class HookableObjectController
 
 
     /**
-     *  OnHookableObjectCollision handles collision between Stone and other GameObject
-     *
+     * OnHookableObjectCollision handles collision between Stone and other GameObject
+     * 
      * @param stone: stone which detected collision
      * @param gameObject: GameObject which stone collided with
+     * 
+     * TODO: better description, more elegant ways should be implemented
      */
     public static void OnHookableObjectCollision(Stone stone, GameObject gameObject)
     {
@@ -24,27 +28,70 @@ public static class HookableObjectController
         {
             AttachHookableObjectToProjectile(stone, gameObject);
         }
-        else if (gameObject.CompareTag("Workshop") &&
-                 IsStoneInInventory(stone,
-                     gameObject.GetComponent<Workshop>().GetInventory().GetComponent<Inventory>()) &&
-                 gameObject.GetComponent<Workshop>().IsEmpty())
+        else if (AllowedToPutInWorkshop(gameObject, stone))
+        {
+            SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
+            gameObject.GetComponent<Workshop>().GetPlayer().RemoveStone(stone);
+        }
+        else if (AllowedToPutOnEmoji(gameObject, stone))
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
         }
     }
 
+
     /**
-     *  OnHookableObjectCollision handles collision between Item and other GameObject
+     * helper function for OnHookableObjectCollision, decides if Stone shoud be put into gameObject in the case gameObject is ScoreArea
+     */
+    private static bool AllowedToPutOnEmoji(GameObject gameObject, Stone stone)
+    {
+        return gameObject.GetComponent<ScoreArea.ScoreArea>() &&
+               gameObject.GetComponent<CanHoldHookableObject>().GetTeam().ContainsStone(stone);
+    }
+
+    /**
+     * helper function for OnHookableObjectCollision, decides if Stone shoud be put into gameObject in the case gameObject is Workshop
+     */
+    private static bool AllowedToPutInWorkshop(GameObject gameObject, Stone stone)
+    {
+        return gameObject.CompareTag("Workshop") && gameObject.GetComponent<Workshop>().IsEmpty() &&
+               (gameObject.GetComponent<Workshop>().GetPlayer().ContainsStone(stone) ||
+                gameObject.GetComponent<Workshop>().GetTeam().GetScoreArea().ContainsStone(stone));
+    }
+
+
+    /**
+     * checks if stone is child of CanHoldHookableObject
      *
+     * @param stone Stone to check if it is child
+     * @param canHoldHookableObject CanHoldHookableObject to check childs in
+     * 
+     * TODO: should be called instead of Stone.contains()
+     */
+    private static bool IsStoneInCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
+    {
+        return canHoldHookableObject.IsStoneInCanHoldHookableObject(stone);
+    }
+
+    /**
+     * returns Vector3 containing current position of HookableObject
+     * 
+     * @param hookableObject HookableObject whose position is given
+     */
+    public static Vector3 GetPositionOfHookableObject(HookableObject hookableObject)
+    {
+        return hookableObject.GetPosition();
+    }
+
+    /**
+     * OnHookableObjectCollision handles collision between Item and other GameObject
+     * 
      * @param item: item which detected collision
      * @param gameObject: GameObject which item collided with (should be projectile)
      */
     public static void OnHookableObjectCollision(Item item, GameObject gameObject)
     {
-        if (gameObject.GetComponent<ProjectileCollision>())
-        {
-            AttachHookableObjectToProjectile(item, gameObject);
-        }
+        if (gameObject.GetComponent<ProjectileCollision>()) AttachHookableObjectToProjectile(item, gameObject);
     }
 
     /**
@@ -58,19 +105,6 @@ public static class HookableObjectController
         stone.SetOnDeselectParent(canHoldHookableObject);
     }
 
-    /**
-     * IsStoneInInventory checks if the stone is in the inventory
-     *
-     * @param stone: stone which is selected
-     * @param inventory: inventory to search the stone in
-     *
-     * @return true if stone is in inventory, else false
-     */
-    public static bool IsStoneInInventory(Stone stone, Inventory inventory)
-    {
-        return inventory.StoneInInventory(stone);
-    }
-
 
     /**
      * action needed when Stone is made draggable
@@ -80,7 +114,16 @@ public static class HookableObjectController
     public static void EnableStoneDraggable(Stone stone)
     {
         stone.SetDraggable(true);
-        //TODO: probably some more
+    }
+
+    /**
+     * sets stone to draggable
+     *
+     * @param stone to set undraggable
+     */
+    public static void DisableStoneDraggable(Stone stone)
+    {
+        stone.SetDraggable(false);
     }
 
     /**
@@ -92,18 +135,19 @@ public static class HookableObjectController
     private static void AttachHookableObjectToProjectile(HookableObject hookableObject, GameObject projectileGameObject)
     {
         foreach (var harpoonController in HarpoonControllers)
-        {
             // if there is a reason to hook stone, harpoon controller will return true
             if (harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
             {
-                //TODO: dont use find every time
                 GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
                 hookableObject.SetTransformParent(projectileGameObject.transform);
                 hookableObject.SetLayerToDraggableLayer();
-                //parent not needed right now, but available for future
+                //parent not needed right now
                 hookableObject.SetParent(projectileGameObject);
+                //TODO: change for implementation of Item!!
+                //TODO this is ugly, dont do that. just to test code flow
+                projectileGameObject.GetComponentInParent<Team>().AddStone(hookableObject.GetComponent<Stone>());
+                projectileGameObject.GetComponentInParent<Player>().AddStone(hookableObject.GetComponent<Stone>());
             }
-        }
     }
 
     /**
@@ -164,11 +208,11 @@ public static class HookableObjectController
     }
 
     /**
-     * Handles behaviour for removing stones from workshop
+     * Disables Scalability and rotability of stone
      *
-     * @param stone: stone to remove from the workshop
+     * @param stone: stone to disable scale and rotate
      */
-    public static void StoneFromWorkshop(Stone stone)
+    public static void DisableScalableAndRotatable(Stone stone)
     {
         stone.DisableScalableAndRotatable();
     }
@@ -181,10 +225,20 @@ public static class HookableObjectController
      */
     public static void OnDeselectOnCanHoldHookableObject(Stone stone, CanHoldHookableObject canHoldHookableObject)
     {
-        if (canHoldHookableObject.GetComponent<Workshop>())
-        {
-            StoneToWorkshop(stone, canHoldHookableObject.GetComponent<Workshop>());
-        }
+        canHoldHookableObject.StoneToCanHoldHookableObject(stone);
+    }
+
+
+    /**
+     * put stone in Score area
+     *
+     * @param stone
+     * @param scoreArea
+     */
+    public static void StoneToScoreArea(Stone stone, ScoreArea.ScoreArea scoreArea)
+    {
+        stone.SetParent(scoreArea.gameObject);
+        scoreArea.AddStone(stone);
     }
 
 
@@ -196,9 +250,7 @@ public static class HookableObjectController
     private static void NotifyHarpoonControllersRemoveHookableObject(HookableObject hookableObject)
     {
         foreach (var harpoonController in HarpoonControllers)
-        {
             harpoonController.NotifyRemoveHookableObject(hookableObject);
-        }
     }
 
     /**
@@ -252,5 +304,16 @@ public static class HookableObjectController
     public static Vector3 GetParentPositionOfChildStone(CanHoldHookableObject parent, Stone stone)
     {
         return parent.GetPositionOfStoneChild(stone);
+    }
+
+
+    /**
+     * called if already draggable but set inactive stone is to be made draggable again. DO NOT CALL IF STONE DOES NOT HAVE COMPONENT LEANSELECTABLE!
+     *
+     * @param stone Stone to set selectable active in
+     */
+    public static void ReEnableStoneDraggable(Stone stone)
+    {
+        stone.ReEnableStoneDraggable();
     }
 }

@@ -18,13 +18,9 @@ namespace Harpoon
             var rigidBody2d = gameObject.GetComponent<Rigidbody2D>();
 
             if (velocity != 0)
-            {
                 vector = gameObject.transform.right * velocity;
-            }
             else
-            {
                 vector = Vector3.zero;
-            }
 
             rigidBody2d.velocity = vector;
         }

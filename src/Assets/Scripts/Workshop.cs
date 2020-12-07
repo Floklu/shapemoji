@@ -1,22 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 /**
  * Class Workshop contains the workshop functionality
  */
 public class Workshop : CanHoldHookableObject
 {
-    [SerializeField] private GameObject inventory;
+    [FormerlySerializedAs("Player")] [SerializeField]
+    private GameObject player;
+
+    [FormerlySerializedAs("Team")] [SerializeField]
+    private GameObject team;
+
     private Stone _child;
 
-    /**
-     * GetInventory returns the inventory of the player from were the workshop belongs to
-     *
-     * @return the inventory
-     */
-    public GameObject GetInventory()
-    {
-        return inventory;
-    }
 
     /**
      * SetChild sets the child of the workshop
@@ -57,7 +54,49 @@ public class Workshop : CanHoldHookableObject
      */
     public override void RemoveStone(Stone stone)
     {
-        _child = null;
-        HookableObjectController.StoneFromWorkshop(stone);
+        if (stone.Equals(_child))
+        {
+            _child = null;
+            HookableObjectController.DisableScalableAndRotatable(stone);
+        }
+    }
+
+    /**
+     * implementation of parent class, adding Stone to Workshop
+     *
+     * @param stone Stone To Add
+     */
+    public override bool StoneToCanHoldHookableObject(Stone stone)
+    {
+        HookableObjectController.StoneToWorkshop(stone, this);
+        return true;
+    }
+
+    /**
+     * stone equals _child?
+     *
+     * @param Stone to compare
+     */
+    public override bool IsStoneInCanHoldHookableObject(Stone stone)
+    {
+        //stone cannot be null, but child can, so needs to be called this way
+        return stone.Equals(_child);
+    }
+
+    /**
+     * get player owning Workshop
+     *
+     */
+    public override Player GetPlayer()
+    {
+        return player.GetComponent<Player>();
+    }
+
+    /**
+     * get team of the player owning Workshop
+     */
+    public override Team GetTeam()
+    {
+        return team.GetComponent<Team>();
     }
 }

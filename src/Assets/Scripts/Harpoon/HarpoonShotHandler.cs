@@ -9,10 +9,10 @@ namespace Harpoon
      */
     public class HarpoonShotHandler : MonoBehaviour
     {
-        private bool _isShot;
+        private Camera _camera;
         private Collider2D _collider;
         private LeanFinger _finger;
-        private Camera _camera;
+        private bool _isShot;
 
         private void Start()
         {
@@ -29,7 +29,7 @@ namespace Harpoon
          */
         private void OnFingerDown(LeanFinger finger)
         {
-            if ((_finger is null))
+            if (_finger is null)
             {
                 if (!finger.CollidesWithGameObject(_collider, _camera)) return;
                 _finger = finger;
@@ -44,13 +44,11 @@ namespace Harpoon
         private void OnFingerUp(LeanFinger finger)
         {
             if (finger.Equals(_finger))
-            {
                 if (!_isShot)
                 {
                     _finger = null;
                     OnShotEvent();
                 }
-            }
         }
 
         /**
