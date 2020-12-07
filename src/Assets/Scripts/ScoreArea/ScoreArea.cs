@@ -71,6 +71,9 @@ namespace ScoreArea
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
+            //TODO: remove
+            var scoreCalculation = new ScoreCalculation();
+            scoreCalculation.AnalyzeScoreableView(this);
         }
 
         /**
