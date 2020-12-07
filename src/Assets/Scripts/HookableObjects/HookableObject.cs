@@ -100,4 +100,16 @@ public abstract class HookableObject : MonoBehaviour
      * OnWoundIn is called when the Harpoon is wound in
      */
     public abstract void OnWoundIn(Inventory inventory);
+
+
+    /**
+     * activates or deactivades Collider2D
+     *
+     * @param state bool to set Collider2D.enabled
+     */
+    public void SetColliderState(bool state)
+    {
+        var _collider = GetComponent<PolygonCollider2D>();
+        _collider.enabled = state;
+    }
 }
