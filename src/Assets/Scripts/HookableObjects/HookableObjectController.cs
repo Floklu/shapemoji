@@ -102,12 +102,11 @@ public static class HookableObjectController
      * @param hookableObject HookableObject to set state in
      * 
      */
-
     public static void SetHookableObjectColliderState(HookableObject hookableObject, bool state)
     {
         hookableObject.SetColliderState(state);
     }
-    
+
     /**
      * SetOnDeselectParentOfStone sets the onDeselectParent of the stone
      *
