@@ -18,8 +18,19 @@ namespace Harpoon
         {
             _camera = Camera.main;
             _collider = GetComponent<Collider2D>();
+            
+        }
+
+        private void OnEnable()
+        {
             LeanTouch.OnFingerDown += OnFingerDown;
             LeanTouch.OnFingerUp += OnFingerUp;
+        }
+
+        private void OnDisable()
+        {
+            LeanTouch.OnFingerDown -= OnFingerDown;
+            LeanTouch.OnFingerUp -= OnFingerUp;
         }
 
         /**
@@ -48,6 +59,7 @@ namespace Harpoon
                 {
                     _finger = null;
                     OnShotEvent();
+                    enabled = false;
                 }
         }
 
