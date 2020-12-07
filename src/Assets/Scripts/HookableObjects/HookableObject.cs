@@ -27,9 +27,9 @@ public abstract class HookableObject : MonoBehaviour
  * get current position on playing field
  */
     public Vector3 GetPosition()
-{
-    return gameObject.transform.position;
-}
+    {
+        return gameObject.transform.position;
+    }
 
     /**
          * change collision layer to PlayingFieldLayer

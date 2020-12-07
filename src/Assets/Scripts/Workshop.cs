@@ -6,8 +6,11 @@ using UnityEngine.Serialization;
  */
 public class Workshop : CanHoldHookableObject
 {
-    [FormerlySerializedAs("Player")] [SerializeField] private GameObject player;
-    [FormerlySerializedAs("Team")] [SerializeField] private GameObject team;
+    [FormerlySerializedAs("Player")] [SerializeField]
+    private GameObject player;
+
+    [FormerlySerializedAs("Team")] [SerializeField]
+    private GameObject team;
 
     private Stone _child;
 
@@ -56,7 +59,6 @@ public class Workshop : CanHoldHookableObject
             _child = null;
             HookableObjectController.DisableScalableAndRotatable(stone);
         }
-
     }
 
     /**
