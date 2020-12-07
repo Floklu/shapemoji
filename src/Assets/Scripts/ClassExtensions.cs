@@ -1,4 +1,3 @@
-using System;
 using Lean.Touch;
 using UnityEngine;
 
@@ -26,6 +25,5 @@ public static class ClassExtensions
         {
             return false;
         }
-        
     }
 }

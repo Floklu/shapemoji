@@ -8,14 +8,6 @@ public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject Parent;
 
-/**
- * get current position on playing field
- */
-    public Vector3 GetPosition()
-{
-    return gameObject.transform.position;
-}
-    
     /**
      * on Start() set layer to PlayingFieldLayer
      */
@@ -30,6 +22,14 @@ public abstract class HookableObject : MonoBehaviour
      * @param Collider other
      */
     public abstract void OnTriggerEnter2D(Collider2D other);
+
+    /**
+ * get current position on playing field
+ */
+    public Vector3 GetPosition()
+{
+    return gameObject.transform.position;
+}
 
     /**
          * change collision layer to PlayingFieldLayer
@@ -100,5 +100,4 @@ public abstract class HookableObject : MonoBehaviour
      * OnWoundIn is called when the Harpoon is wound in
      */
     public abstract void OnWoundIn(Inventory inventory);
-
 }

@@ -9,19 +9,9 @@ using UnityEngine;
 public class Stone : HookableObject
 {
     private bool _draggable;
-    
+
     // Parent that changes when the stone collides with a CanHoldHookableObject
     private CanHoldHookableObject _onDeselectParent;
-
-    /**
-     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
-     *
-     * @param inventory where stone is put to
-     */
-    public override void OnWoundIn(Inventory inventory)
-    {
-        HookableObjectController.StoneToInventory(this, inventory);
-    }
 
 
     /**
@@ -45,6 +35,16 @@ public class Stone : HookableObject
     }
 
     /**
+     * gets called by controller when WoundIn event is triggered. calls StoneToInventory
+     *
+     * @param inventory where stone is put to
+     */
+    public override void OnWoundIn(Inventory inventory)
+    {
+        HookableObjectController.StoneToInventory(this, inventory);
+    }
+
+    /**
      * SetOnDeselectParent sets the parent of the current frame
      *
      * @param canHoldHookableObject the parent to set
@@ -63,13 +63,9 @@ public class Stone : HookableObject
     {
         _draggable = state;
         if (state)
-        {
             MakeDraggable();
-        }
         else
-        {
             MakeUnDraggable();
-        }
     }
 
     /**
@@ -80,7 +76,7 @@ public class Stone : HookableObject
         var leanSelectable = gameObject.GetComponent<LeanSelectable>();
         leanSelectable.enabled = false;
     }
-    
+
     /**
      * gets called by lean event, when releasing stone from drag and puts it back to parent position or first sets the new parent
      */
@@ -135,7 +131,7 @@ public class Stone : HookableObject
         if (scalable != null) scalable.enabled = false;
         if (rotatable != null) rotatable.enabled = false;
     }
-    
+
     /**
      * renabables leanSelectable, only to be called if Stone has Component LeanSelectable
      */

@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+﻿using System;
 using UnityEngine;
 
 /**
@@ -6,36 +6,33 @@ using UnityEngine;
  */
 public class Inventory : CanHoldHookableObject
 {
+    [SerializeField] public GameObject[] slots = new GameObject[4];
     private readonly bool[] _slotIsFull = new bool[4];
     private readonly Stone[] _stoneInSlot = new Stone[4];
-    [SerializeField] public GameObject[] slots = new GameObject[4];
 
 
-    void Start()
+    private void Start()
     {
         _player = gameObject.GetComponentInParent<Player>();
         _team = gameObject.GetComponentInParent<Team>();
-
     }
 
     /**
      * AddToInventory adds a Stone to an empty slot in the inventory
-     *
+     * 
      * @param stoneGameObject the game object to add
-     *
-     * @return true if stone could be added, false otherwise 
+     * 
+     * @return true if stone could be added, false otherwise
      */
     public Vector3? AddToInventory(Stone stone)
     {
         for (var i = 0; i < slots.Length; i++)
-        {
             if (_slotIsFull[i] == false)
             {
                 _slotIsFull[i] = true;
                 _stoneInSlot[i] = stone;
                 return slots[i].transform.position;
             }
-        }
 
         return null;
     }
@@ -55,14 +52,13 @@ public class Inventory : CanHoldHookableObject
 
     /**
      * not yet implemented
-     *
+     * 
      * TODO: Future work add AddStoneToInventory should start by refactoring to use this method instead
      */
     public override bool StoneToCanHoldHookableObject(Stone stone)
     {
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
-
 
 
     /**
@@ -86,12 +82,8 @@ public class Inventory : CanHoldHookableObject
     private int GetIndexOfStoneInSlot(Stone stone)
     {
         for (var i = 0; i < _stoneInSlot.Length; i++)
-        {
             if (_stoneInSlot[i] != null && _stoneInSlot[i].Equals(stone))
-            {
                 return i;
-            }
-        }
 
         return -1;
     }
@@ -105,5 +97,4 @@ public class Inventory : CanHoldHookableObject
     {
         return GetIndexOfStoneInSlot(stone) != -1;
     }
-
 }

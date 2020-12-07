@@ -11,15 +11,14 @@ namespace Harpoon
      */
     public class RotatableHandler : MonoBehaviour
     {
-        private bool _onDrag;
-        private Vector3 _initialPosition;
-        private Camera _mainCamera;
+        // Determines, whether RotationEvent passes differences in degrees since last event (true) or the total degree (false) 
+        [SerializeField] private bool newRotationBehaviour;
         private Collider2D _collider;
 
         private LeanFinger _finger;
-
-        // Determines, whether RotationEvent passes differences in degrees since last event (true) or the total degree (false) 
-        [SerializeField] private bool newRotationBehaviour = false;
+        private Vector3 _initialPosition;
+        private Camera _mainCamera;
+        private bool _onDrag;
 
         /**
         * Start is called on the frame when a script is enabled just before any of the Update methods are called the first time.
@@ -29,51 +28,6 @@ namespace Harpoon
             _collider = GetComponent<Collider2D>();
             _mainCamera = Camera.main;
         }
-
-        #region LeanTouchEvents
-
-        /**
-         * Handle LeanTouch OnFingerUp Event
-         *
-         * @param finger selected touch point
-         */
-        private void OnFingerUp(LeanFinger finger)
-        {
-            if (_finger != null && _finger.Equals(finger)) _finger = null;
-        }
-
-        /**
-         * Processes LeanTouch Finger Gestures
-         *
-         * @param lstFinger List of currently active LeanFinger Objects
-         */
-        private void OnGesture(List<LeanFinger> lstFinger)
-        {
-            var fingers = lstFinger.Where(leanFinger => leanFinger.Equals(_finger));
-            foreach (var leanFinger in fingers)
-            {
-                if (!leanFinger.ScreenDelta.normalized.Equals(Vector2.zero))
-                {
-                    ProcessTouchMovement(leanFinger);
-                }
-            }
-        }
-
-        /**
-         *  Handle LeanTouch OnFingerDown Event
-         *
-         *  @param finger selected touch point
-         */
-        private void OnFingerDown(LeanFinger finger)
-        {
-            if (finger.CollidesWithGameObject(_collider, _mainCamera))
-            {
-                _finger = finger;
-                _initialPosition = finger.GetWorldPosition(0, _mainCamera);
-            }
-        }
-
-        #endregion
 
         /**
          * Fired if behaviour is enabled
@@ -96,7 +50,7 @@ namespace Harpoon
         }
 
         /**
-         * processes the touch movements and 
+         * processes the touch movements and
          */
         private void ProcessTouchMovement(LeanFinger finger)
         {
@@ -131,5 +85,46 @@ namespace Harpoon
         {
             RotationEvent?.Invoke(this, e);
         }
+
+        #region LeanTouchEvents
+
+        /**
+         * Handle LeanTouch OnFingerUp Event
+         *
+         * @param finger selected touch point
+         */
+        private void OnFingerUp(LeanFinger finger)
+        {
+            if (_finger != null && _finger.Equals(finger)) _finger = null;
+        }
+
+        /**
+         * Processes LeanTouch Finger Gestures
+         *
+         * @param lstFinger List of currently active LeanFinger Objects
+         */
+        private void OnGesture(List<LeanFinger> lstFinger)
+        {
+            var fingers = lstFinger.Where(leanFinger => leanFinger.Equals(_finger));
+            foreach (var leanFinger in fingers)
+                if (!leanFinger.ScreenDelta.normalized.Equals(Vector2.zero))
+                    ProcessTouchMovement(leanFinger);
+        }
+
+        /**
+         * Handle LeanTouch OnFingerDown Event
+         * 
+         * @param finger selected touch point
+         */
+        private void OnFingerDown(LeanFinger finger)
+        {
+            if (finger.CollidesWithGameObject(_collider, _mainCamera))
+            {
+                _finger = finger;
+                _initialPosition = finger.GetWorldPosition(0, _mainCamera);
+            }
+        }
+
+        #endregion
     }
 }

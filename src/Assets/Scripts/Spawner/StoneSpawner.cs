@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Spawner
 {
@@ -32,28 +34,23 @@ namespace Spawner
         }
 
         /**
-         * Generates predefined number of random stones and places them onto the playground 
+         * Generates predefined number of random stones and places them onto the playground
          */
         public void StartGeneration()
         {
-            Random.InitState((int) System.DateTime.Now.Ticks); //TODO should be moved to a different class
+            Random.InitState((int) DateTime.Now.Ticks); //TODO should be moved to a different class
 
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
-            {
                 _spawnPlaces.Add(child.gameObject);
-            }
 
-            for (var i = 0; i < maxStones; i++)
-            {
-                CreateRandomStone();
-            }
+            for (var i = 0; i < maxStones; i++) CreateRandomStone();
         }
 
         /**
-        * deletes a stone at given position
-         *
-         * @param stone delete reference of given stone to free position
-        */
+         * * deletes a stone at given position
+         * *
+         * * @param stone delete reference of given stone to free position
+         */
         public void DeleteHookableObject(HookableObject hookableObject)
         {
             var places = _spawnPlaces
