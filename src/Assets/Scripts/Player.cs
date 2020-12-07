@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /** class to store player wide information
@@ -7,13 +6,13 @@ using UnityEngine;
  */
 public class Player : MonoBehaviour
 {
-    private Workshop _workshop;
     private Inventory _inventory;
     private List<Stone> _stones;
+    private Workshop _workshop;
 
-    
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _inventory = gameObject.GetComponent<Inventory>();
         _workshop = gameObject.GetComponent<Workshop>();
@@ -35,7 +34,7 @@ public class Player : MonoBehaviour
     {
         return _workshop;
     }
-    
+
     /**
      * add Stone to make them owned by Player
      *
@@ -55,7 +54,7 @@ public class Player : MonoBehaviour
     {
         _stones.Remove(stone);
     }
- 
+
     /**
      * check if Stone is owned by Player
      *
@@ -66,5 +65,4 @@ public class Player : MonoBehaviour
         //will cause null pointer exception if contains called and some stones are null if deleted?
         return _stones.Contains(stone);
     }
-
 }

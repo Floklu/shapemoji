@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 /**
  * Class Workshop contains the workshop functionality
  */
 public class Workshop : CanHoldHookableObject
 {
-    [SerializeField] private GameObject Player;
-    [SerializeField] private GameObject Team;
-    
+    [FormerlySerializedAs("Player")] [SerializeField]
+    private GameObject player;
+
+    [FormerlySerializedAs("Team")] [SerializeField]
+    private GameObject team;
+
     private Stone _child;
 
 
@@ -55,7 +59,6 @@ public class Workshop : CanHoldHookableObject
             _child = null;
             HookableObjectController.DisableScalableAndRotatable(stone);
         }
-
     }
 
     /**
@@ -86,7 +89,7 @@ public class Workshop : CanHoldHookableObject
      */
     public override Player GetPlayer()
     {
-        return Player.GetComponent<Player>();
+        return player.GetComponent<Player>();
     }
 
     /**
@@ -94,6 +97,6 @@ public class Workshop : CanHoldHookableObject
      */
     public override Team GetTeam()
     {
-        return Team.GetComponent<Team>();
+        return team.GetComponent<Team>();
     }
 }

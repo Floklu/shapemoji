@@ -8,7 +8,7 @@ public abstract class CanHoldHookableObject : MonoBehaviour
     protected Player _player;
     protected Team _team;
 
-    
+
     /**
      * get the position where a specific stone should be placed
      *
@@ -23,7 +23,7 @@ public abstract class CanHoldHookableObject : MonoBehaviour
      */
     public abstract void RemoveStone(Stone stone);
 
-    
+
     /**
      * add Stone to CanHoldHookableObject, behaviour depends on Type
      *

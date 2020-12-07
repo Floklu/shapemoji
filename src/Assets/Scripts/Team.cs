@@ -6,11 +6,12 @@ using UnityEngine;
  */
 public class Team : MonoBehaviour
 {
-    [SerializeField] private ScoreArea ScoreArea;
- 
+    [SerializeField] private ScoreArea.ScoreArea ScoreArea;
+
     //private Player[] _players;
     private List<Stone> _stones;
-    void Start()
+
+    private void Start()
     {
         //_players = gameObject.GetComponents<Player>();
         _stones = new List<Stone>();
@@ -40,7 +41,7 @@ public class Team : MonoBehaviour
     /**
      * get ScoreArea belonging to Team
      */
-    public ScoreArea GetScoreArea()
+    public ScoreArea.ScoreArea GetScoreArea()
     {
         return ScoreArea;
     }
