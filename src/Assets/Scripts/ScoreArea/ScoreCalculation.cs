@@ -2,12 +2,13 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace ScoreArea
 {
     public class ScoreCalculation : MonoBehaviour
     {
-        public AnalyzeScoreAreaResults AnalyzeScoreableView(ScoreArea scoreArea)
+        public IEnumerable<WaitForEndOfFrame> AnalyzeScoreableView(ScoreArea scoreArea)
         {
             var result = new AnalyzeScoreAreaResults();
             var renderer = scoreArea.GetComponent<Renderer>();
@@ -19,11 +20,45 @@ namespace ScoreArea
             var img = new Texture2D((int) size.x, (int) size.y, TextureFormat.RGB24, false);
             // create rectengular at score area position
             var rect = new Rect((Vector2)position, (Vector2)size);
+            // wait for frame ot be rendered
+            yield return new WaitForEndOfFrame();
             // create the image
             img.ReadPixels(rect, 0, 0);
             img.Apply();
             var pixels = img.GetPixels();
+
+
+            result = AnalyzePixelMap(pixels);
+            //TODO push result into ScoreArea
             
+            yield return null;
+        }
+
+
+        private AnalyzeScoreAreaResults AnalyzePixelMap(Color[] pixels)
+        {
+            var result = new AnalyzeScoreAreaResults();
+            int emojiCovered = 0;
+            int scoreAreaCovered = 0;
+            int emojiUncovered = 0;
+            foreach (var pixel in pixels)
+            {
+                if (pixel.r > 0 && pixel.g > 0)
+                {
+                    scoreAreaCovered++;
+                }
+                else if (pixel.b > 0 && pixel.g > 0)
+                {
+                    emojiCovered++;
+                }
+                else if ( pixel.b > 0)
+                {
+                    emojiUncovered++;
+                }
+            }
+            result.SetEmojiCovered(emojiCovered);
+            result.SetBackgroundCovered(scoreAreaCovered);
+            result.SetEmojiUncovered(emojiUncovered);
             return result;
         }
    
