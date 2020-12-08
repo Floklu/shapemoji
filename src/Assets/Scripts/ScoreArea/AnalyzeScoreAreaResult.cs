@@ -1,40 +1,32 @@
 ﻿
 namespace ScoreArea
 {
-    public class AnalyzeScoreAreaResults
+    /**
+     * class storing information about pixel color analysus
+     *
+     */
+    public class AnalyzeScoreAreaResult
     {
         private int _emojiCovered;
         private int _emojiUncovered;
         private int _backgroundCovered;
 
-        public void SetEmojiCovered(int i)
+        public int EmojiCovered
         {
-            _emojiCovered = i;
+            get => _emojiCovered;
+            set => _emojiCovered = value;
         }
 
-        public void SetEmojiUncovered(int i)
+        public int EmojiUncovered
         {
-            _emojiUncovered = i;
+            get => _emojiUncovered;
+            set => _emojiUncovered = value;
         }
 
-        public void SetBackgroundCovered(int i)
+        public int BackgroundCovered
         {
-            _backgroundCovered = i;
-        }
-
-        public int GetEmojiCovered()
-        {
-            return _emojiCovered;
-        }
-
-        public int GetEmojiUncovered()
-        {
-            return _emojiUncovered;
-        }
-
-        public int GetBackgroundCovered()
-        {
-            return _backgroundCovered;
+            get => _backgroundCovered;
+            set => _backgroundCovered = value;
         }
         
     }

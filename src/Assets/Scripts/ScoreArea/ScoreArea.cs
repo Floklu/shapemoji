@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace ScoreArea
     {
         private BoxCollider2D _collider;
         private List<Stone> _stones;
+        private Camera _cam;
+        private Renderer _renderer;
 
         // Start is called before the first frame update
         private void Start()
@@ -16,6 +19,8 @@ namespace ScoreArea
             _collider = gameObject.GetComponent<BoxCollider2D>();
             _player = gameObject.GetComponentInParent<Player>();
             _team = gameObject.GetComponentInParent<Team>();
+            _cam = Camera.main;
+            _renderer = GetComponent<Renderer>();
         }
 
         /**
@@ -71,10 +76,8 @@ namespace ScoreArea
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
-            //TODO: remove
-            var scoreCalculation = gameObject.AddComponent<ScoreCalculation>();
-            scoreCalculation.AnalyzeScoreableView(this);
         }
+        
 
         /**
      * get snapbackposition of stone
