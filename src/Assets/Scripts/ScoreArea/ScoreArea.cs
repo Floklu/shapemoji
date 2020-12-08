@@ -110,7 +110,7 @@ namespace ScoreArea
             var scoreCalculation = gameObject.AddComponent<ScoreCalculation>();
             StartCoroutine(scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
         }
-        
+
 
         /**
      * get snapbackposition of stone
@@ -196,7 +196,8 @@ namespace ScoreArea
         {
             if (_button1.isOn && _button2.isOn)
             {
-                HandleScore(_stones.Count);
+                CreateScorableView();
+                //HandleScore(_stones.Count);
             }
         }
 
@@ -248,6 +249,24 @@ namespace ScoreArea
             StartCoroutine(DisplayScore(score));
             ResetScoreArea();
             ChangeEmoji();
+        }
+
+        /**
+         * CreateScorableView creates a scorable view to be used by the score calculation
+         */
+        private void CreateScorableView()
+        {
+            // change color in stones 
+            foreach (var stone in _stones)
+            {
+                stone.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.2f);
+            }
+
+            // change color of scorearea 
+            GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+
+            //change color of emoji
+            _emojiSpriteManager.ChangeColor();
         }
     }
 }
