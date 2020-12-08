@@ -72,7 +72,7 @@ namespace ScoreArea
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
             //TODO: remove
-            var scoreCalculation = new ScoreCalculation();
+            var scoreCalculation = gameObject.AddComponent<ScoreCalculation>();
             scoreCalculation.AnalyzeScoreableView(this);
         }
 
