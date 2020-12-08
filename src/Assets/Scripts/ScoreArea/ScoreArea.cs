@@ -172,7 +172,7 @@ namespace ScoreArea
             }
             else
             {
-                emojiScoreText.text = "-" + score;
+                emojiScoreText.text = "" + score;
             }
 
 
