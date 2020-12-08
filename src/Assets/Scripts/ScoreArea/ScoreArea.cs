@@ -163,12 +163,20 @@ namespace ScoreArea
          */
         IEnumerator DisplayScore(int score)
         {
-            teamScoreText.text = "" + _teamScore;
+            teamScoreText.text = _teamScore + " P";
 
             emojiScoreUI.SetActive(true);
-            emojiScoreText.text = "" + score;
+            if (score >= 0)
+            {
+                emojiScoreText.text = "+" + score;
+            }
+            else
+            {
+                emojiScoreText.text = "-" + score;
+            }
 
-            yield return new WaitForSeconds(1);
+
+            yield return new WaitForSeconds(3);
 
             emojiScoreUI.SetActive(false);
         }
@@ -180,7 +188,7 @@ namespace ScoreArea
         {
             if (_button1.isOn && _button2.isOn)
             {
-                // ScoreCalculation.GetScore()
+                HandleScore(_stones.Count);
             }
         }
 
@@ -230,8 +238,8 @@ namespace ScoreArea
         {
             AddScore(score);
             StartCoroutine(DisplayScore(score));
-            ChangeEmoji();
             ResetScoreArea();
+            ChangeEmoji();
         }
     }
 }
