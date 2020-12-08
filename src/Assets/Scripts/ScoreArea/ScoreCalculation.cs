@@ -30,7 +30,7 @@ namespace ScoreArea
 
             result = AnalyzePixelMap(pixels);
             //TODO push result into ScoreArea
-            
+            //@FLO here I need to call a function inside ScoreArea, something like ReceiveNewResults(result) which will then trigger all your stuff
             yield return null;
         }
 
