@@ -39,9 +39,8 @@ namespace ScoreArea
             //analyze pixels
             result = AnalyzePixelMap(pixels);
             //calculate score
-            
+            var score = CalculateScore(result);
             //TODO push result into ScoreArea
-
             yield return null;
         }
 
@@ -78,6 +77,22 @@ namespace ScoreArea
             result.BackgroundCovered = scoreAreaCovered;
             result.EmojiUncovered = emojiUncovered;
             return result;
+        }
+
+        /**
+         * calculates score from AnalyzeScoreAreaResult within range -100:100
+         * 50% "good coverage": 0 points
+         * 100%: 100 points
+         *
+         * @param analyzed AnalyzeScoreAreaResults to analyze
+         */
+        private int CalculateScore(AnalyzeScoreAreaResult analyzed)
+        {
+            // emoji size must not be zero!
+            var score = 200 * (analyzed.EmojiCovered - analyzed.BackgroundCovered) / (analyzed.EmojiCovered + analyzed.EmojiUncovered) - 100;
+            // do not loose more then 100 points per emoji
+            if (score < -100) score = -100;
+            return score;
         }
     }
 }
