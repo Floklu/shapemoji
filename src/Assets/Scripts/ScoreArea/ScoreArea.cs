@@ -134,7 +134,7 @@ namespace ScoreArea
             {
                 var newLastStone = _stones.Last();
                 HookableObjectController.ReEnableStoneDraggable(newLastStone);
-                HookableObjectController.SetHookableObjectColliderState(stone, true);
+                HookableObjectController.SetHookableObjectColliderState(newLastStone, true);
             }
         }
 
