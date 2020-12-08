@@ -27,6 +27,7 @@ namespace Tests.PlayMode
         }
 
         #region Properties
+
         public Stone CurrentStone { get; private set; }
         public GameObject Harpoon { get; private set; }
         public GameObject Projectile { get; private set; }
@@ -45,6 +46,7 @@ namespace Tests.PlayMode
 
 
         #region Stone
+
         /**
          * Test, if wound in Stone is draggable and if the workshop slot is empty
          */
@@ -188,7 +190,7 @@ namespace Tests.PlayMode
             stone.OnDeselectOnUp();
             yield return new WaitForSeconds(0.2f);
         }
-        
+
         /**
          * Find stone for the current player to aim at
          * @return Stone from a spawn place or null, if no stones found
@@ -227,11 +229,11 @@ namespace Tests.PlayMode
             var spawn = place.GetComponent<SpawnPlace>();
             return spawn != null && spawn.stone != null;
         }
-        
+
         #endregion
 
         #region Harpoon
-        
+
         /**
          * Rotates Harpoon to aim at point
          * @param harpoon Harpoon Object to aim
@@ -250,7 +252,7 @@ namespace Tests.PlayMode
             Harpoon.GetComponent<HarpoonController>().ShootProjectile();
             yield return new WaitUntil(() => collision);
         }
-        
+
         /**
          * Wind in harpoon method
          */
@@ -258,9 +260,9 @@ namespace Tests.PlayMode
         {
             for (var i = 0; i < 400; i++) Wheel.GetComponent<CrankController>().RotateCrank(90);
         }
-        
+
         #endregion
-        
+
         #region Emoji
 
         /**
@@ -284,9 +286,9 @@ namespace Tests.PlayMode
             Assert.AreNotEqual(spriteNew, sprite, $"Player {_currentPlayer}: Emoji sprite didn't change after turn in");
             Assert.AreNotEqual(countStonesNew, countStones, $"Player {_currentPlayer}: expected stones to be cleared from Emoji after turn in");
         }
-        
+
         #endregion
-        
+
         /**
          * initializes GameObjects related for a player
          * 
@@ -331,12 +333,12 @@ namespace Tests.PlayMode
             switch (team)
             {
                 case 1:
-                    ButtonEmoji_1 = GameObject.Find($"UIElements/Canvas/Button_TurnIn_Player_1");
-                    ButtonEmoji_2 = GameObject.Find($"UIElements/Canvas/Button_TurnIn_Player_2");
+                    ButtonEmoji_1 = GameObject.Find("UIElements/Canvas/Button_TurnIn_Player_1");
+                    ButtonEmoji_2 = GameObject.Find("UIElements/Canvas/Button_TurnIn_Player_2");
                     break;
                 case 2:
-                    ButtonEmoji_1 = GameObject.Find($"UIElements/Canvas/Button_TurnIn_Player_3");
-                    ButtonEmoji_2 = GameObject.Find($"UIElements/Canvas/Button_TurnIn_Player_4");
+                    ButtonEmoji_1 = GameObject.Find("UIElements/Canvas/Button_TurnIn_Player_3");
+                    ButtonEmoji_2 = GameObject.Find("UIElements/Canvas/Button_TurnIn_Player_4");
                     break;
             }
             

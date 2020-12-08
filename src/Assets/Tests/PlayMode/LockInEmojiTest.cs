@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Harpoon;
-using Lean.Touch;
+﻿using System.Collections;
 using NUnit.Framework;
-using Spawner;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
-using Assert = NUnit.Framework.Assert;
 
 namespace Tests.PlayMode
 {
@@ -81,6 +73,5 @@ namespace Tests.PlayMode
             yield return helper.MoveToEmoji();
             yield return helper.TurnInEmoji();
         }
-        
     }
 }
