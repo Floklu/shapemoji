@@ -106,9 +106,6 @@ namespace ScoreArea
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
-
-            var scoreCalculation = gameObject.AddComponent<ScoreCalculation>();
-            StartCoroutine(scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
         }
 
 
@@ -197,6 +194,7 @@ namespace ScoreArea
             if (_button1.isOn && _button2.isOn)
             {
                 CreateScorableView();
+                StartCoroutine(GetComponent<ScoreCalculation>().AnalyzeScoreableView(this, _renderer, _cam));
                 //HandleScore(_stones.Count);
             }
         }

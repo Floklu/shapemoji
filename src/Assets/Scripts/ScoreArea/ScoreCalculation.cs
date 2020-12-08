@@ -43,6 +43,7 @@ namespace ScoreArea
             //calculate score
             var score = CalculateScore(result);
             //TODO push result into ScoreArea
+            GetComponent<ScoreArea>().HandleScore(score);
             yield return null;
         }
 
