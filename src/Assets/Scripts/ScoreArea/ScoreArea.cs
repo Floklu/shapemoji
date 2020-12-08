@@ -9,6 +9,8 @@ namespace ScoreArea
     public class ScoreArea : CanHoldHookableObject
     {
         private List<Stone> _stones;
+        private Camera _cam;
+        private Renderer _renderer;
         private BoxCollider2D _collider;
         private int _teamScore;
         private EmojiSpriteManager _emojiSpriteManager;
@@ -31,6 +33,8 @@ namespace ScoreArea
             _collider = gameObject.GetComponent<BoxCollider2D>();
             _player = gameObject.GetComponentInParent<Player>();
             _team = gameObject.GetComponentInParent<Team>();
+            _cam = Camera.main;
+            _renderer = GetComponent<Renderer>();
             _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
 
             // UI
@@ -102,7 +106,11 @@ namespace ScoreArea
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
+
+            var scoreCalculation = gameObject.AddComponent<ScoreCalculation>();
+            StartCoroutine(scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
         }
+        
 
         /**
      * get snapbackposition of stone
