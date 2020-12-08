@@ -27,7 +27,7 @@ namespace Tests.PlayMode
          * Test for Player 1
          */
         [UnityTest]
-        public IEnumerator WorkshopTestPlayer1()
+        public IEnumerator LockInTestPlayer1()
         {
             yield return TestPlayer(1);
         }
@@ -36,7 +36,7 @@ namespace Tests.PlayMode
          * Test for Player 2
          */
         [UnityTest]
-        public IEnumerator WorkshopTestPlayer2()
+        public IEnumerator LockInTestPlayer2()
         {
             yield return TestPlayer(2);
         }
@@ -45,7 +45,7 @@ namespace Tests.PlayMode
          * Test for Player 3
          */
         [UnityTest]
-        public IEnumerator WorkshopTestPlayer3()
+        public IEnumerator LockInTestPlayer3()
         {
             yield return TestPlayer(3);
         }
@@ -54,7 +54,7 @@ namespace Tests.PlayMode
          * Test for Player 4
          */
         [UnityTest]
-        public IEnumerator WorkshopTestPlayer4()
+        public IEnumerator LockInTestPlayer4()
         {
             yield return TestPlayer(4);
         }
