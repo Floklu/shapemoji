@@ -10,11 +10,15 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour
 {
     /**
-     * elapsed time from game start
+     * game start time in unix format
      */
-    private static int elapsedTime;
+    private int startTime;
     /**
-     * overall playtime
+     * current time in unix format, will be updated by timer
+     */
+    private int currentTime;
+    /**
+     * game duration
      */
     [SerializeField] private int finishTime;
     [SerializeField] private GameObject textTimeCountdown;
@@ -27,7 +31,8 @@ public class Game : MonoBehaviour
      */
     private void Start()
     {
-        elapsedTime = 0;
+        startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         timer = new Timer(1000);
         timer.Elapsed += OnTimerUpdate;
         timer.AutoReset = true;
@@ -61,8 +66,16 @@ public class Game : MonoBehaviour
      */
     private void OnTimerUpdate(object source, ElapsedEventArgs e)
     {
-        elapsedTime++;
-        
+        currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+    }
+
+    /**
+     * find out remaining time until game end
+     * @return remaining time
+     */
+    private int GetRemainingTime()
+    {
+        return finishTime - currentTime + startTime;
     }
 
     /**
@@ -70,12 +83,11 @@ public class Game : MonoBehaviour
      */
     private void TimeDisplay()
     {
-        int time = finishTime - elapsedTime;
+        int time = GetRemainingTime();
         int seconds = time % 60;
         int minutes = time / 60;
         textTimeRemaining1.GetComponent<Text>().text = $"{minutes:D2}:{seconds:D2}";
         textTimeRemaining2.GetComponent<Text>().text = $"{minutes:D2}:{seconds:D2}";
-        
     }
     
     /**
@@ -83,9 +95,9 @@ public class Game : MonoBehaviour
      */
     private void CountdownDisplay()
     {
-        if ((elapsedTime + 5) > finishTime)
+        if (GetRemainingTime() <= 5)
         {
-            textTimeCountdown.GetComponent<Text>().text = Convert.ToString(finishTime - elapsedTime);
+            textTimeCountdown.GetComponent<Text>().text = Convert.ToString(GetRemainingTime());
         }
         
     }
@@ -95,7 +107,7 @@ public class Game : MonoBehaviour
      */
     private void CheckGameOver()
     {
-        if (elapsedTime >= finishTime)
+        if (GetRemainingTime() <= 0)
         {
             timer.Enabled = false;
             GameSceneManager.Instance.LoadEndScene();
