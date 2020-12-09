@@ -25,13 +25,14 @@ namespace Tests.EditMode
             foreach (var file in Directory.EnumerateFiles("./Assets/Tests/EditMode/test_images", "*.png"))
             {
                 var fileInBytes = File.ReadAllBytes(file);
-                var texture = new Texture2D(2,2);
+                var texture = new Texture2D(2, 2);
                 texture.LoadImage(fileInBytes);
                 images.Add(texture.GetPixels());
                 //remove string but integer
-                var scoreInt= file.Replace("./Assets/Tests/EditMode/test_images/", "");
+                var scoreInt = file.Replace("./Assets/Tests/EditMode/test_images/", "");
                 expectedScores.Add(Int32.Parse(scoreInt.Replace(".png", "")));
             }
+
             //check if files are read correctly
             Assert.AreEqual(images.Count, expectedScores.Count, "could not read expected values from file names");
             Assert.AreNotSame(images.Count, 0, "no images found");

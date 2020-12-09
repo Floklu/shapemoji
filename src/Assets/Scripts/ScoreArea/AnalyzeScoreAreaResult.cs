@@ -1,5 +1,4 @@
-﻿
-namespace ScoreArea
+﻿namespace ScoreArea
 {
     /**
      * class storing information about pixel color analysus
@@ -28,6 +27,5 @@ namespace ScoreArea
             get => _backgroundCovered;
             set => _backgroundCovered = value;
         }
-        
     }
 }
