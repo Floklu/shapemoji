@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 namespace Spawner
 {
@@ -38,8 +36,6 @@ namespace Spawner
          */
         public void StartGeneration()
         {
-            Random.InitState((int) DateTime.Now.Ticks); //TODO should be moved to a different class
-
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
                 _spawnPlaces.Add(child.gameObject);
 
@@ -62,7 +58,7 @@ namespace Spawner
 
         /**
          * checks, if Spawner is at maximum capacity
-         *
+         * 
          * @returns true, if spawner cannot spawn any new stones
          */
         public bool IsFull()
@@ -96,7 +92,7 @@ namespace Spawner
 
         /**
          * determines, if the chosen GameObject already contains a stone
-         *
+         * 
          * @param place chosen spawn place for a stone
          * @returns true, if the gameObject contains a SpawnPlace and it contains a stone
          */
