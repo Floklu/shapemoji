@@ -43,7 +43,7 @@ public class EmojiSpriteManager : MonoBehaviour
      */
     public void ChangeColorOfEmojiSpriteToBlue()
     {
-        emoji.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 1);
+        _emojiSprite.color = new Color(0, 0, 1, 1);
     }
 
     /**
@@ -51,6 +51,6 @@ public class EmojiSpriteManager : MonoBehaviour
      */
     public void RemoveColorFromEmoji()
     {
-        emoji.GetComponent<SpriteRenderer>().color = Color.white;
+        _emojiSprite.color = Color.white;
     }
 }
