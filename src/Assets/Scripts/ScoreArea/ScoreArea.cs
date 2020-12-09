@@ -197,7 +197,6 @@ namespace ScoreArea
             {
                 CreateScorableView();
                 StartCoroutine(GetComponent<ScoreCalculation>().AnalyzeScoreableView(this, _renderer, _cam));
-                //HandleScore(_stones.Count);
             }
         }
 
