@@ -15,6 +15,7 @@ namespace ScoreArea
         private int _teamScore;
         private EmojiSpriteManager _emojiSpriteManager;
         private SpriteRenderer _scoreAreaRenderer;
+        private ScoreCalculation _scoreCalculation;
 
         // UI
         private Text teamScoreText;
@@ -38,6 +39,8 @@ namespace ScoreArea
             _renderer = GetComponent<Renderer>();
             _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
             _scoreAreaRenderer = GetComponent<SpriteRenderer>();
+            _scoreCalculation = GetComponent<ScoreCalculation>();
+
 
             // UI
             teamScoreText = teamScoreUI.GetComponent<Text>();
@@ -196,7 +199,7 @@ namespace ScoreArea
             if (_button1.isOn && _button2.isOn)
             {
                 CreateScorableView();
-                StartCoroutine(GetComponent<ScoreCalculation>().AnalyzeScoreableView(this, _renderer, _cam));
+                StartCoroutine(_scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
             }
         }
 
