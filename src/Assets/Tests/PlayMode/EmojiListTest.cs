@@ -12,9 +12,6 @@ namespace Tests.PlayMode
      */
     public class EmojiListTest
     {
-        // Current Number of Emojis placed in GameObjects/PlayingField::Game
-        private const int NUM_EMOJIS = 14;
-
         /**
          * Setup test environment
          */
@@ -32,7 +29,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator EmojiListSimpleAccessTest()
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
             var game = Game.Instance;
             Assert.NotNull(game, "Expected Object Game to be initialized");
             var sprite = game.GetEmoji(0); // get first emoji in list
@@ -48,11 +45,11 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator EmojiListOverMaxNumberEmojisTest()
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
             var game = Game.Instance;
             Assert.NotNull(game, "Expected Object Game to be initialized");
             var sprite = game.GetEmoji(0); // get first emoji in list
-            var comparer = game.GetEmoji(NUM_EMOJIS);
+            var comparer = game.GetEmoji(game.GetSpriteListCount());
             Assert.AreEqual(sprite, comparer, "The two given emoji sprites are not the same.");
             yield return null;
         }
@@ -65,11 +62,11 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator EmojiListCheckDuplicatesTest()
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
             var game = Game.Instance;
             Assert.NotNull(game, "Expected Object Game to be initialized");
             var sprites = new List<Sprite>();
-            for (var i = 0; i < NUM_EMOJIS; i++)
+            for (var i = 0; i < game.GetSpriteListCount(); i++)
             {
                 var sprite = game.GetEmoji(i);
                 if (sprites.Contains(sprite))

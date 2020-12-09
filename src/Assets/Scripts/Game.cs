@@ -51,6 +51,16 @@ public class Game : MonoBehaviour
      */
     public Sprite GetEmoji(int num)
     {
-        return emojiSprites[num % emojiSprites.Count];
+        return emojiSprites.Count != 0 ? emojiSprites[num % emojiSprites.Count] : null;
+    }
+
+    /**
+     * GetSpriteListCount returns the length of the sprite list
+     *
+     * @return the length of the emoji sprite list
+     */
+    public int GetSpriteListCount()
+    {
+        return emojiSprites.Count;
     }
 }

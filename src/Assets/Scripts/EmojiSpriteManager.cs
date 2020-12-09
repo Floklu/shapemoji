@@ -7,6 +7,7 @@ public class EmojiSpriteManager : MonoBehaviour
 {
     [SerializeField] private GameObject emoji;
     private Game _game;
+    private SpriteRenderer _emojiSprite;
 
     private int _currentEmojiNumber;
 
@@ -14,27 +15,27 @@ public class EmojiSpriteManager : MonoBehaviour
     private void Start()
     {
         _game = Game.Instance;
-        _currentEmojiNumber = -1;
-        ChangeEmoji();
+        _emojiSprite = emoji.GetComponent<SpriteRenderer>();
+        ChangeEmojiSprite();
     }
 
     /**
      * Get next Emoji from the Sprite List
      * @return new Emoji-Sprite
      */
-    private Sprite GetNewEmoji()
+    private Sprite GetNewEmojiSprite()
     {
-        _currentEmojiNumber++;
         var newEmoji = _game.GetEmoji(_currentEmojiNumber);
+        _currentEmojiNumber++;
         return newEmoji;
     }
 
     /**
      * Change Emoji-Sprite
      */
-    public void ChangeEmoji()
+    public void ChangeEmojiSprite()
     {
-        emoji.GetComponent<SpriteRenderer>().sprite = GetNewEmoji();
+        _emojiSprite.sprite = GetNewEmojiSprite();
     }
 
     /**
