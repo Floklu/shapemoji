@@ -14,6 +14,7 @@ namespace ScoreArea
         private BoxCollider2D _collider;
         private int _teamScore;
         private EmojiSpriteManager _emojiSpriteManager;
+        private SpriteRenderer _scoreAreaRenderer;
 
         // UI
         private Text teamScoreText;
@@ -36,6 +37,7 @@ namespace ScoreArea
             _cam = Camera.main;
             _renderer = GetComponent<Renderer>();
             _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
+            _scoreAreaRenderer = GetComponent<SpriteRenderer>();
 
             // UI
             teamScoreText = teamScoreUI.GetComponent<Text>();
@@ -234,6 +236,8 @@ namespace ScoreArea
             }
 
             _stones = new List<Stone>();
+
+            RemoveScorableView();
         }
 
         /**
@@ -257,14 +261,27 @@ namespace ScoreArea
             // change color in stones 
             foreach (var stone in _stones)
             {
+                // don't know how I can change this so it doesn't use the getComponent<>
                 stone.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.2f);
             }
 
             // change color of scorearea 
-            GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            _scoreAreaRenderer.color = new Color(1, 0, 0, 1);
 
             //change color of emoji
-            _emojiSpriteManager.ChangeColor();
+            _emojiSpriteManager.ChangeColorOfEmojiSpriteToBlue();
+        }
+
+        /**
+         * RemoveScorableView changes the colors back
+         */
+        private void RemoveScorableView()
+        {
+            // hide color of scorearea
+            _scoreAreaRenderer.color = Color.clear;
+
+            // change color of emoji back
+            _emojiSpriteManager.RemoveColorFromEmoji();
         }
     }
 }
