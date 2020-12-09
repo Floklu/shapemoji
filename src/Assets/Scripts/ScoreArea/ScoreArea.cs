@@ -14,6 +14,7 @@ namespace ScoreArea
         private BoxCollider2D _collider;
         private int _teamScore;
         private EmojiSpriteManager _emojiSpriteManager;
+        private SpriteRenderer _scoreAreaRenderer;
 
         // UI
         private Text teamScoreText;
@@ -36,6 +37,7 @@ namespace ScoreArea
             _cam = Camera.main;
             _renderer = GetComponent<Renderer>();
             _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
+            _scoreAreaRenderer = GetComponent<SpriteRenderer>();
 
             // UI
             teamScoreText = teamScoreUI.GetComponent<Text>();
@@ -106,11 +108,8 @@ namespace ScoreArea
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
-
-            var scoreCalculation = gameObject.AddComponent<ScoreCalculation>();
-            StartCoroutine(scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
         }
-        
+
 
         /**
      * get snapbackposition of stone
@@ -196,7 +195,9 @@ namespace ScoreArea
         {
             if (_button1.isOn && _button2.isOn)
             {
-                HandleScore(_stones.Count);
+                CreateScorableView();
+                StartCoroutine(GetComponent<ScoreCalculation>().AnalyzeScoreableView(this, _renderer, _cam));
+                //HandleScore(_stones.Count);
             }
         }
 
@@ -235,6 +236,8 @@ namespace ScoreArea
             }
 
             _stones = new List<Stone>();
+
+            RemoveScorableView();
         }
 
         /**
@@ -248,6 +251,37 @@ namespace ScoreArea
             StartCoroutine(DisplayScore(score));
             ResetScoreArea();
             ChangeEmojiSprite();
+        }
+
+        /**
+         * CreateScorableView creates a scorable view to be used by the score calculation
+         */
+        private void CreateScorableView()
+        {
+            // change color in stones 
+            foreach (var stone in _stones)
+            {
+                // don't know how I can change this so it doesn't use the getComponent<>
+                stone.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.2f);
+            }
+
+            // change color of scorearea 
+            _scoreAreaRenderer.color = new Color(1, 0, 0, 1);
+
+            //change color of emoji
+            _emojiSpriteManager.ChangeColorOfEmojiSpriteToBlue();
+        }
+
+        /**
+         * RemoveScorableView changes the colors back
+         */
+        private void RemoveScorableView()
+        {
+            // hide color of scorearea
+            _scoreAreaRenderer.color = Color.clear;
+
+            // change color of emoji back
+            _emojiSpriteManager.RemoveColorFromEmoji();
         }
     }
 }

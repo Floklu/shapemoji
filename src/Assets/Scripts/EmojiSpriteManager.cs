@@ -37,4 +37,20 @@ public class EmojiSpriteManager : MonoBehaviour
     {
         _emojiSprite.sprite = GetNewEmojiSprite();
     }
+
+    /**
+     * ChangeColorOfEmojiSpriteToBlue changes the color of the emoji to blue
+     */
+    public void ChangeColorOfEmojiSpriteToBlue()
+    {
+        emoji.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 1);
+    }
+
+    /**
+     * RemoveColorFromEmoji changes the emoji sprite to its original color
+     */
+    public void RemoveColorFromEmoji()
+    {
+        emoji.GetComponent<SpriteRenderer>().color = Color.white;
+    }
 }
