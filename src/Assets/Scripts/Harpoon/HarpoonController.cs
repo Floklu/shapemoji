@@ -99,6 +99,7 @@ namespace Harpoon
             _windInProjectile.ResetProjectile();
             _cannonCollider.enabled = false;
             _crankController.EnableController(false);
+            _shotHandler.enabled = true;
 
             _projectileShot = false;
             _isWoundIn = false;

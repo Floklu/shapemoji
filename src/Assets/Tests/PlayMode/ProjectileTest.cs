@@ -74,7 +74,7 @@ namespace Tests.PlayMode
                 LoadPlayer(player);
                 var location = _projectile.transform.position;
                 _harpoonController.ShootProjectile();
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.5f);
 
                 _harpoonController.StopProjectileMovement();
                 var locationNew = _projectile.transform.position;
@@ -104,7 +104,7 @@ namespace Tests.PlayMode
             
                 var location = _projectile.transform.position;
                 _harpoonController.ShootProjectile();
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.5f);
 
                 _harpoonController.StopProjectileMovement();
                 var locationNew = _projectile.transform.position;
