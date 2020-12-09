@@ -23,20 +23,21 @@ namespace ScoreArea
             var result = new AnalyzeScoreAreaResult();
             var bounds = renderer.bounds;
             // get dimensions of Score Area
-            var size = bounds.size;
+            var size = cam.WorldToScreenPoint(bounds.max);
             // get position and transform to screen point
             var position = cam.WorldToScreenPoint(bounds.min);
             // create texture to store "screenshot" in
-            var img = new Texture2D((int) size.x, (int) size.y, TextureFormat.RGB24, false);
+            var img = new Texture2D((int) (size.x - position.x), (int) (size.y - position.y), TextureFormat.RGB24,
+                false);
             // create rectengular at score area
-            var rect = new Rect((Vector2)position, (Vector2)size);
+            var rect = new Rect((Vector2) position, (Vector2) (size - position));
             // wait for frame ot be rendered
             yield return new WaitForEndOfFrame();
             // create the image
             img.ReadPixels(rect, 0, 0);
             img.Apply();
-            byte[] toPNG = img.EncodeToPNG();
-            System.IO.File.WriteAllBytes("./screenshot.png", toPNG);
+            //byte[] toPNG = img.EncodeToPNG();
+            //System.IO.File.WriteAllBytes("./screenshot.png", toPNG);
             var pixels = img.GetPixels();
             //analyze pixels
             result = AnalyzePixelMap(pixels);
@@ -47,7 +48,7 @@ namespace ScoreArea
             yield return null;
         }
 
-        
+
         /**
          * analyzes pixel map for colors, identifying emojiCovered, emojiUncovered, scoreAreaCovered
          *
@@ -55,7 +56,7 @@ namespace ScoreArea
          *
          * @return results of analysis in AnalyzeScoreAreaResult
          */
-        private static AnalyzeScoreAreaResult AnalyzePixelMap(Color[] pixels)
+        public static AnalyzeScoreAreaResult AnalyzePixelMap(Color[] pixels)
         {
             var result = new AnalyzeScoreAreaResult();
             int emojiCovered = 0;
@@ -71,11 +72,12 @@ namespace ScoreArea
                 {
                     emojiCovered++;
                 }
-                else if ( pixel.b > 0)
+                else if (pixel.b > 0)
                 {
                     emojiUncovered++;
                 }
             }
+
             result.EmojiCovered = emojiCovered;
             result.BackgroundCovered = scoreAreaCovered;
             result.EmojiUncovered = emojiUncovered;
@@ -89,10 +91,12 @@ namespace ScoreArea
          *
          * @param analyzed AnalyzeScoreAreaResults to analyze
          */
-        private int CalculateScore(AnalyzeScoreAreaResult analyzed)
+        public static int CalculateScore(AnalyzeScoreAreaResult analyzed)
         {
             // emoji size must not be zero!
-            var score = 200 * (analyzed.EmojiCovered - analyzed.BackgroundCovered) / (analyzed.EmojiCovered + analyzed.EmojiUncovered) - 100;
+            if (analyzed.EmojiCovered + analyzed.EmojiUncovered < 1) return 0;
+            var score = 200 * (analyzed.EmojiCovered - analyzed.BackgroundCovered) /
+                (analyzed.EmojiCovered + analyzed.EmojiUncovered) - 100;
             // do not loose more then 100 points per emoji
             if (score < -100) score = -100;
             return score;
