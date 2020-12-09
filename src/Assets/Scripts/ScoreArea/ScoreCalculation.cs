@@ -55,7 +55,7 @@ namespace ScoreArea
          *
          * @return results of analysis in AnalyzeScoreAreaResult
          */
-        private static AnalyzeScoreAreaResult AnalyzePixelMap(Color[] pixels)
+        public static AnalyzeScoreAreaResult AnalyzePixelMap(Color[] pixels)
         {
             var result = new AnalyzeScoreAreaResult();
             int emojiCovered = 0;
@@ -90,7 +90,7 @@ namespace ScoreArea
          *
          * @param analyzed AnalyzeScoreAreaResults to analyze
          */
-        private int CalculateScore(AnalyzeScoreAreaResult analyzed)
+        public static int CalculateScore(AnalyzeScoreAreaResult analyzed)
         {
             // emoji size must not be zero!
             if (analyzed.EmojiCovered + analyzed.EmojiUncovered < 1) return 0;
