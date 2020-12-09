@@ -1,13 +1,32 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ScoreArea
 {
     public class ScoreArea : CanHoldHookableObject
     {
-        private BoxCollider2D _collider;
         private List<Stone> _stones;
+        private Camera _cam;
+        private Renderer _renderer;
+        private BoxCollider2D _collider;
+        private int _teamScore;
+        private EmojiSpriteManager _emojiSpriteManager;
+        private SpriteRenderer _scoreAreaRenderer;
+        private ScoreCalculation _scoreCalculation;
+
+        // UI
+        private Text teamScoreText;
+        private Text emojiScoreText;
+        private Toggle _button1;
+        private Toggle _button2;
+        [SerializeField] private GameObject emojiScoreUI;
+        [SerializeField] private GameObject teamScoreUI;
+        [SerializeField] private GameObject button1;
+        [SerializeField] private GameObject button2;
+
 
         // Start is called before the first frame update
         private void Start()
@@ -16,6 +35,27 @@ namespace ScoreArea
             _collider = gameObject.GetComponent<BoxCollider2D>();
             _player = gameObject.GetComponentInParent<Player>();
             _team = gameObject.GetComponentInParent<Team>();
+            _cam = Camera.main;
+            _renderer = GetComponent<Renderer>();
+            _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
+            _scoreAreaRenderer = GetComponent<SpriteRenderer>();
+            _scoreCalculation = GetComponent<ScoreCalculation>();
+
+
+            // UI
+            teamScoreText = teamScoreUI.GetComponent<Text>();
+            emojiScoreText = emojiScoreUI.GetComponent<Text>();
+            emojiScoreUI.SetActive(false);
+
+            _button1 = button1.GetComponent<Toggle>();
+            _button1.onValueChanged.AddListener(delegate { TurnInEmoji(); });
+            _button1.onValueChanged.AddListener(delegate { ToggleColorOfButton(_button1); });
+            _button1.isOn = false;
+
+            _button2 = button2.GetComponent<Toggle>();
+            _button2.onValueChanged.AddListener(delegate { TurnInEmoji(); });
+            _button2.onValueChanged.AddListener(delegate { ToggleColorOfButton(_button2); });
+            _button2.isOn = false;
         }
 
         /**
@@ -73,6 +113,7 @@ namespace ScoreArea
             }
         }
 
+
         /**
      * get snapbackposition of stone
      *
@@ -105,6 +146,144 @@ namespace ScoreArea
                 HookableObjectController.ReEnableStoneDraggable(newLastStone);
                 HookableObjectController.SetHookableObjectColliderState(newLastStone, true);
             }
+        }
+
+        /**
+        * AddScore adds the calculated score to the team score
+        *
+        * @param score calculated Score
+        */
+        private void AddScore(int score)
+        {
+            _teamScore += score;
+        }
+
+        /**
+         * ChangeEmoji calls the EmojiSpriteManager to change the emoji
+         */
+        private void ChangeEmojiSprite()
+        {
+            _emojiSpriteManager.ChangeEmojiSprite();
+        }
+
+        /**
+         * DisplayScore updates the team score and displays the emoji score for one second
+         *
+         * @param score Score to be displayed
+         */
+        IEnumerator DisplayScore(int score)
+        {
+            teamScoreText.text = _teamScore + " P";
+
+            emojiScoreUI.SetActive(true);
+            if (score >= 0)
+            {
+                emojiScoreText.text = "+" + score;
+            }
+            else
+            {
+                emojiScoreText.text = "" + score;
+            }
+
+
+            yield return new WaitForSeconds(3);
+
+            emojiScoreUI.SetActive(false);
+        }
+
+        /**
+         * TurnInEmoji calls the calculation in the ScoreCalculation script
+         */
+        private void TurnInEmoji()
+        {
+            if (_button1.isOn && _button2.isOn)
+            {
+                CreateScorableView();
+                StartCoroutine(_scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
+            }
+        }
+
+        /**
+         * ChangeColorOfButton changes the color of the button on every click
+         *
+         * @param button Button to be changed
+         */
+        private void ToggleColorOfButton(Toggle button)
+        {
+            var buttonColors = button.colors;
+            if (button.isOn)
+            {
+                buttonColors.normalColor = Color.green;
+                buttonColors.selectedColor = Color.green;
+                buttonColors.highlightedColor = Color.green;
+            }
+            else
+            {
+                buttonColors.normalColor = Color.red;
+                buttonColors.selectedColor = Color.red;
+                buttonColors.highlightedColor = Color.red;
+            }
+
+            button.colors = buttonColors;
+        }
+
+        private void ResetScoreArea()
+        {
+            _button1.isOn = false;
+            _button2.isOn = false;
+
+            foreach (var stone in _stones)
+            {
+                stone.DestroyHookableObject();
+            }
+
+            _stones = new List<Stone>();
+
+            RemoveScorableView();
+        }
+
+        /**
+         * HandleScore handles the calculated score from the ScoreCalculation script
+         *
+         * @param score The calculated score
+         */
+        public void HandleScore(int score)
+        {
+            AddScore(score);
+            StartCoroutine(DisplayScore(score));
+            ResetScoreArea();
+            ChangeEmojiSprite();
+        }
+
+        /**
+         * CreateScorableView creates a scorable view to be used by the score calculation
+         */
+        private void CreateScorableView()
+        {
+            // change color in stones 
+            foreach (var stone in _stones)
+            {
+                // don't know how I can change this so it doesn't use the getComponent<>
+                stone.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.2f);
+            }
+
+            // change color of scorearea 
+            _scoreAreaRenderer.color = new Color(1, 0, 0, 1);
+
+            //change color of emoji
+            _emojiSpriteManager.ChangeColorOfEmojiSpriteToBlue();
+        }
+
+        /**
+         * RemoveScorableView changes the colors back
+         */
+        private void RemoveScorableView()
+        {
+            // hide color of scorearea
+            _scoreAreaRenderer.color = Color.clear;
+
+            // change color of emoji back
+            _emojiSpriteManager.RemoveColorFromEmoji();
         }
     }
 }
