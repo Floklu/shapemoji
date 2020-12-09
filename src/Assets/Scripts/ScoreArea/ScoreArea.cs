@@ -40,12 +40,12 @@ namespace ScoreArea
 
             _button1 = button1.GetComponent<Toggle>();
             _button1.onValueChanged.AddListener(delegate { TurnInEmoji(); });
-            _button1.onValueChanged.AddListener(delegate { ChangeColorOfButton(_button1); });
+            _button1.onValueChanged.AddListener(delegate { ToggleColorOfButton(_button1); });
             _button1.isOn = false;
 
             _button2 = button2.GetComponent<Toggle>();
             _button2.onValueChanged.AddListener(delegate { TurnInEmoji(); });
-            _button2.onValueChanged.AddListener(delegate { ChangeColorOfButton(_button2); });
+            _button2.onValueChanged.AddListener(delegate { ToggleColorOfButton(_button2); });
             _button2.isOn = false;
         }
 
@@ -153,7 +153,7 @@ namespace ScoreArea
          */
         private void ChangeEmoji()
         {
-            _emojiSpriteManager.ChangeEmoji();
+            _emojiSpriteManager.ChangeEmojiSprite();
         }
 
         /**
@@ -197,7 +197,7 @@ namespace ScoreArea
          *
          * @param button Button to be changed
          */
-        private void ChangeColorOfButton(Toggle button)
+        private void ToggleColorOfButton(Toggle button)
         {
             var buttonColors = button.colors;
             if (button.isOn)
