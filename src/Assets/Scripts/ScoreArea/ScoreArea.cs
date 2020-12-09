@@ -151,7 +151,7 @@ namespace ScoreArea
         /**
          * ChangeEmoji calls the EmojiSpriteManager to change the emoji
          */
-        private void ChangeEmoji()
+        private void ChangeEmojiSprite()
         {
             _emojiSpriteManager.ChangeEmojiSprite();
         }
@@ -239,7 +239,7 @@ namespace ScoreArea
             AddScore(score);
             StartCoroutine(DisplayScore(score));
             ResetScoreArea();
-            ChangeEmoji();
+            ChangeEmojiSprite();
         }
     }
 }
