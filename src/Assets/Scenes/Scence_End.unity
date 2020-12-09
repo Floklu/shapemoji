@@ -257,8 +257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 4000, y: 300}
+  m_AnchoredPosition: {x: 0, y: -400}
+  m_SizeDelta: {x: 4000, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72691918
 MonoBehaviour:
@@ -368,8 +368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1200, y: 600}
-  m_SizeDelta: {x: 2000, y: 300}
+  m_AnchoredPosition: {x: -1200, y: 500}
+  m_SizeDelta: {x: 2000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113601917
 MonoBehaviour:
@@ -403,9 +403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team 2 Score:
-
-'
+  m_Text: 'Team 2 Score:'
 --- !u!222 &113601918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -449,7 +447,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 800}
-  m_SizeDelta: {x: 2000, y: 300}
+  m_SizeDelta: {x: 4000, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265627009
 MonoBehaviour:
@@ -483,9 +481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Winner:
-
-'
+  m_Text: 'Winner: '
 --- !u!222 &265627010
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -741,6 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 908064995}
+  - component: {fileID: 908064996}
   m_Layer: 0
   m_Name: GameObjects
   m_TagString: Untagged
@@ -764,6 +761,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &908064996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908064994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4826dfb4ab6641446b4bda07bb7ba6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerText: {fileID: 265627009}
+  scoreTeam1Text: {fileID: 113601917}
+  scoreTeam2Text: {fileID: 2071365581}
+  creditsText: {fileID: 72691918}
 --- !u!1 &2071365579
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,8 +811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1200, y: 600}
-  m_SizeDelta: {x: 2000, y: 300}
+  m_AnchoredPosition: {x: 1200, y: 500}
+  m_SizeDelta: {x: 2000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071365581
 MonoBehaviour:
@@ -833,9 +846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team 1 Score:
-
-'
+  m_Text: 'Team 1 Score:'
 --- !u!222 &2071365582
 CanvasRenderer:
   m_ObjectHideFlags: 0
