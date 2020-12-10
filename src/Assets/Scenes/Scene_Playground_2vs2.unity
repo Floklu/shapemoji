@@ -669,7 +669,7 @@ PrefabInstance:
     - target: {fileID: 3527310409826344566, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 165
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 3527310409826344567, guid: 039119c5730240e409535042692c5de7,
         type: 3}
@@ -701,6 +701,16 @@ PrefabInstance:
       propertyPath: Team
       value: 
       objectReference: {fileID: 1011719101}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1099364807}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 1011719101}
     - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: myBase
@@ -724,6 +734,16 @@ PrefabInstance:
     - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: Team
+      value: 
+      objectReference: {fileID: 1011719101}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 261425616}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: team
       value: 
       objectReference: {fileID: 1011719101}
     m_RemovedComponents: []
@@ -3662,7 +3682,7 @@ PrefabInstance:
     - target: {fileID: 3527310409826344566, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 165
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 3527310409826344567, guid: 039119c5730240e409535042692c5de7,
         type: 3}
@@ -3694,6 +3714,16 @@ PrefabInstance:
       propertyPath: Team
       value: 
       objectReference: {fileID: 1811355958}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1978965087}
+    - target: {fileID: 4680625960135458077, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 1811355958}
     - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: myBase
@@ -3717,6 +3747,16 @@ PrefabInstance:
     - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
         type: 3}
       propertyPath: Team
+      value: 
+      objectReference: {fileID: 1811355958}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1492818062}
+    - target: {fileID: 7669749939318737846, guid: 039119c5730240e409535042692c5de7,
+        type: 3}
+      propertyPath: team
       value: 
       objectReference: {fileID: 1811355958}
     m_RemovedComponents: []
