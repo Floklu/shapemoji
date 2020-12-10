@@ -70,7 +70,7 @@ public class GameTime : MonoBehaviour
      * find out remaining time until game end
      * @return remaining time
      */
-    private int GetRemainingTime()
+    public int GetRemainingTime()
     {
         return finishTime - currentTime + startTime;
     }
@@ -109,5 +109,15 @@ public class GameTime : MonoBehaviour
             timer.Enabled = false;
             GameSceneManager.Instance.LoadEndScene();
         }
+    }
+
+    /**
+     * SetFinishTime sets the finish time. Used in test
+     *
+     * @param time
+     */
+    public void SetFinishTime(int time)
+    {
+        finishTime = time;
     }
 }
