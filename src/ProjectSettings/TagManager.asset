@@ -19,7 +19,7 @@ TagManager:
   - PlayingFieldLayer
   - DraggableLayer
   - Workshop
-  - 
+  - Menu
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Menu
+    uniqueID: 3413286297
     locked: 0
