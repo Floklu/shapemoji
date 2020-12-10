@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,24 +9,24 @@ namespace ScoreArea
 {
     public class ScoreArea : CanHoldHookableObject
     {
-        private List<Stone> _stones;
-        private Camera _cam;
-        private Renderer _renderer;
-        private BoxCollider2D _collider;
-        private int _teamScore;
-        private EmojiSpriteManager _emojiSpriteManager;
-        private SpriteRenderer _scoreAreaRenderer;
-        private ScoreCalculation _scoreCalculation;
-
-        // UI
-        private Text _teamScoreText;
-        private Text _emojiScoreText;
-        private Toggle _button1;
-        private Toggle _button2;
         [SerializeField] private GameObject emojiScoreUI;
         [SerializeField] private GameObject teamScoreUI;
         [SerializeField] private GameObject button1;
         [SerializeField] private GameObject button2;
+        private Toggle _button1;
+        private Toggle _button2;
+        private Camera _cam;
+        private BoxCollider2D _collider;
+        private Text _emojiScoreText;
+        private EmojiSpriteManager _emojiSpriteManager;
+        private Renderer _renderer;
+        private SpriteRenderer _scoreAreaRenderer;
+        private ScoreCalculation _scoreCalculation;
+        private List<Stone> _stones;
+        private int _teamScore;
+
+        // UI
+        private Text _teamScoreText;
         private Text teamScoreText;
 
         public int TeamScore
@@ -111,12 +112,16 @@ namespace ScoreArea
         public void AddStone(Stone stone)
         {
             _stones.Add(stone);
+            var stonesCount = _stones.Count;
+            //emoji has layer -5, unadded stone layer 1000
+            HookableObjectController.SetOrderInLayer(stone, stonesCount+100);
             //lock n-1th stone and deactivate collider
-            if (_stones.Count > 1)
+            if (stonesCount > 1)
             {
-                var oldStone = _stones[_stones.Count - 2];
+                var oldStone = _stones[stonesCount - 2];
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
+                
             }
         }
 
@@ -145,6 +150,7 @@ namespace ScoreArea
         public override void RemoveStone(Stone stone)
         {
             _stones.Remove(stone);
+            HookableObjectController.SetOrderInLayer(stone, 1000);
             // reenable draggable and collider on last stone
             var stoneCount = _stones.Count;
             if (stoneCount > 0)

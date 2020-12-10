@@ -6,18 +6,8 @@ using UnityEngine;
  *  */
 public abstract class HookableObject : MonoBehaviour
 {
-    protected GameObject Parent;
     private SpriteRenderer _spriteRenderer;
-
-
-    /**set color of renderer
-     *
-     * @param color Color to set
-     */
-    public void SetColor(Color color)
-    {
-        _spriteRenderer.color = color;
-    }
+    protected GameObject Parent;
 
     /**
      * on Start() set layer to PlayingFieldLayer
@@ -34,6 +24,26 @@ public abstract class HookableObject : MonoBehaviour
      * @param Collider other
      */
     public abstract void OnTriggerEnter2D(Collider2D other);
+
+
+    /**
+     * sets order in layer
+     *
+     * @param order Int to be set as order in layer
+     */
+    public void SetOrderInLayer(int order)
+    {
+        _spriteRenderer.sortingOrder = order;
+    }
+
+    /**set color of renderer
+     *
+     * @param color Color to set
+     */
+    public void SetColor(Color color)
+    {
+        _spriteRenderer.color = color;
+    }
 
     /**
  * get current position on playing field

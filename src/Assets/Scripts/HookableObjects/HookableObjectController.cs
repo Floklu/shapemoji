@@ -329,4 +329,15 @@ public static class HookableObjectController
     {
         stone.ReEnableStoneDraggable();
     }
+
+    /**
+     * set order in layer of HookableObjects SpriteRenderer
+     *
+     * @param hookableObject to change order of layer in
+     * @param order int to set as order in layer
+     */
+    public static void SetOrderInLayer(HookableObject hookableObject, int order)
+    {
+        hookableObject.SetOrderInLayer(order);
+    }
 }
