@@ -113,8 +113,8 @@ namespace ScoreArea
         {
             _stones.Add(stone);
             var stonesCount = _stones.Count;
-            //emoji has layer -1005, unadded stone layer 10
-            HookableObjectController.SetOrderInLayer(stone, stonesCount-1000);
+            //emoji has layer -5, unadded stone layer 1000
+            HookableObjectController.SetOrderInLayer(stone, stonesCount+100);
             //lock n-1th stone and deactivate collider
             if (stonesCount > 1)
             {
