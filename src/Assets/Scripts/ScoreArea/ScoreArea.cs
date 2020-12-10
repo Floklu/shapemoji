@@ -8,24 +8,24 @@ namespace ScoreArea
 {
     public class ScoreArea : CanHoldHookableObject
     {
+        private List<Stone> _stones;
+        private Camera _cam;
+        private Renderer _renderer;
+        private BoxCollider2D _collider;
+        private int _teamScore;
+        private EmojiSpriteManager _emojiSpriteManager;
+        private SpriteRenderer _scoreAreaRenderer;
+        private ScoreCalculation _scoreCalculation;
+
+        // UI
+        private Text _teamScoreText;
+        private Text _emojiScoreText;
+        private Toggle _button1;
+        private Toggle _button2;
         [SerializeField] private GameObject emojiScoreUI;
         [SerializeField] private GameObject teamScoreUI;
         [SerializeField] private GameObject button1;
         [SerializeField] private GameObject button2;
-        private Toggle _button1;
-        private Toggle _button2;
-        private Camera _cam;
-        private BoxCollider2D _collider;
-
-        private EmojiSpriteManager _emojiSpriteManager;
-        private Renderer _renderer;
-        private SpriteRenderer _scoreAreaRenderer;
-        private ScoreCalculation _scoreCalculation;
-        private List<Stone> _stones;
-        private int _teamScore;
-        private Text emojiScoreText;
-
-        // UI
         private Text teamScoreText;
 
         public int TeamScore
@@ -50,8 +50,8 @@ namespace ScoreArea
 
 
             // UI
-            teamScoreText = teamScoreUI.GetComponent<Text>();
-            emojiScoreText = emojiScoreUI.GetComponent<Text>();
+            _teamScoreText = teamScoreUI.GetComponent<Text>();
+            _emojiScoreText = emojiScoreUI.GetComponent<Text>();
             emojiScoreUI.SetActive(false);
 
             _button1 = button1.GetComponent<Toggle>();
@@ -180,16 +180,16 @@ namespace ScoreArea
          */
         IEnumerator DisplayScore(int score)
         {
-            teamScoreText.text = _teamScore + " P";
+            _teamScoreText.text = _teamScore + " P";
 
             emojiScoreUI.SetActive(true);
             if (score >= 0)
             {
-                emojiScoreText.text = "+" + score;
+                _emojiScoreText.text = "+" + score;
             }
             else
             {
-                emojiScoreText.text = "" + score;
+                _emojiScoreText.text = "" + score;
             }
 
 
@@ -270,8 +270,7 @@ namespace ScoreArea
             // change color in stones 
             foreach (var stone in _stones)
             {
-                // don't know how I can change this so it doesn't use the getComponent<>
-                stone.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.2f);
+                stone.SetColor(new Color(0, 1, 0, 0.2f));
             }
 
             // change color of scorearea 
