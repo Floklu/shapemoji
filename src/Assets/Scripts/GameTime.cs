@@ -50,7 +50,7 @@ public class GameTime : MonoBehaviour
     /**
      * Update is called once per frame.
      * Time display is refreshed.
-     * The game is quitting if the escape key is pressed.
+     * 
      */
     private void Update()
     {
