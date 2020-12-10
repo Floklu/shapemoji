@@ -301,7 +301,7 @@ namespace Tests.PlayMode
             Projectile = GameObject.Find($"Team_{team}/Player_{player}/Base/HarpoonBase/Harpoon/HarpoonCannon/HarpoonProjectile");
             Inventory = GameObject.Find($"Team_{team}/Player_{player}/Base/Inventory");
             Wheel = GameObject.Find($"Team_{team}/Player_{player}/Base/Wheel");
-            Emoji = GameObject.Find($"Team_{team}/ScoreArea/Brofist_sample");
+            Emoji = GameObject.Find($"Team_{team}/ScoreArea/Emoji");
             MainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
 
             var slotNumber = 1;

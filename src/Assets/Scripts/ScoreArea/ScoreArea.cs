@@ -9,13 +9,17 @@ namespace ScoreArea
     public class ScoreArea : CanHoldHookableObject
     {
         private List<Stone> _stones;
+        private Camera _cam;
+        private Renderer _renderer;
         private BoxCollider2D _collider;
         private int _teamScore;
         private EmojiSpriteManager _emojiSpriteManager;
+        private SpriteRenderer _scoreAreaRenderer;
+        private ScoreCalculation _scoreCalculation;
 
         // UI
-        private Text teamScoreText;
-        private Text emojiScoreText;
+        private Text _teamScoreText;
+        private Text _emojiScoreText;
         private Toggle _button1;
         private Toggle _button2;
         [SerializeField] private GameObject emojiScoreUI;
@@ -31,11 +35,16 @@ namespace ScoreArea
             _collider = gameObject.GetComponent<BoxCollider2D>();
             _player = gameObject.GetComponentInParent<Player>();
             _team = gameObject.GetComponentInParent<Team>();
+            _cam = Camera.main;
+            _renderer = GetComponent<Renderer>();
             _emojiSpriteManager = GetComponent<EmojiSpriteManager>();
+            _scoreAreaRenderer = GetComponent<SpriteRenderer>();
+            _scoreCalculation = GetComponent<ScoreCalculation>();
+
 
             // UI
-            teamScoreText = teamScoreUI.GetComponent<Text>();
-            emojiScoreText = emojiScoreUI.GetComponent<Text>();
+            _teamScoreText = teamScoreUI.GetComponent<Text>();
+            _emojiScoreText = emojiScoreUI.GetComponent<Text>();
             emojiScoreUI.SetActive(false);
 
             _button1 = button1.GetComponent<Toggle>();
@@ -104,6 +113,7 @@ namespace ScoreArea
             }
         }
 
+
         /**
      * get snapbackposition of stone
      *
@@ -163,16 +173,16 @@ namespace ScoreArea
          */
         IEnumerator DisplayScore(int score)
         {
-            teamScoreText.text = _teamScore + " P";
+            _teamScoreText.text = _teamScore + " P";
 
             emojiScoreUI.SetActive(true);
             if (score >= 0)
             {
-                emojiScoreText.text = "+" + score;
+                _emojiScoreText.text = "+" + score;
             }
             else
             {
-                emojiScoreText.text = "" + score;
+                _emojiScoreText.text = "" + score;
             }
 
 
@@ -188,7 +198,8 @@ namespace ScoreArea
         {
             if (_button1.isOn && _button2.isOn)
             {
-                HandleScore(_stones.Count);
+                CreateScorableView();
+                StartCoroutine(_scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
             }
         }
 
@@ -227,6 +238,8 @@ namespace ScoreArea
             }
 
             _stones = new List<Stone>();
+
+            RemoveScorableView();
         }
 
         /**
@@ -240,6 +253,36 @@ namespace ScoreArea
             StartCoroutine(DisplayScore(score));
             ResetScoreArea();
             ChangeEmojiSprite();
+        }
+
+        /**
+         * CreateScorableView creates a scorable view to be used by the score calculation
+         */
+        private void CreateScorableView()
+        {
+            // change color in stones 
+            foreach (var stone in _stones)
+            {
+                stone.SetColor(new Color(0, 1, 0, 0.2f));
+            }
+
+            // change color of scorearea 
+            _scoreAreaRenderer.color = new Color(1, 0, 0, 1);
+
+            //change color of emoji
+            _emojiSpriteManager.ChangeColorOfEmojiSpriteToBlue();
+        }
+
+        /**
+         * RemoveScorableView changes the colors back
+         */
+        private void RemoveScorableView()
+        {
+            // hide color of scorearea
+            _scoreAreaRenderer.color = Color.clear;
+
+            // change color of emoji back
+            _emojiSpriteManager.RemoveColorFromEmoji();
         }
     }
 }
