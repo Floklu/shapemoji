@@ -263,8 +263,7 @@ namespace ScoreArea
             // change color in stones 
             foreach (var stone in _stones)
             {
-                // don't know how I can change this so it doesn't use the getComponent<>
-                stone.GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.2f);
+                stone.SetColor(new Color(0, 1, 0, 0.2f));
             }
 
             // change color of scorearea 

@@ -7,6 +7,17 @@ using UnityEngine;
 public abstract class HookableObject : MonoBehaviour
 {
     protected GameObject Parent;
+    private SpriteRenderer _spriteRenderer;
+
+
+    /**set color of renderer
+     *
+     * @param color Color to set
+     */
+    public void SetColor(Color color)
+    {
+        _spriteRenderer.color = color;
+    }
 
     /**
      * on Start() set layer to PlayingFieldLayer
@@ -14,6 +25,7 @@ public abstract class HookableObject : MonoBehaviour
     protected virtual void Start()
     {
         SetLayerToPlayingFieldLayer();
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     /**
