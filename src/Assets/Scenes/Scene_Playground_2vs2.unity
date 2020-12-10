@@ -1796,6 +1796,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9129fb9e50a6ce340818331c00fc157d, type: 3}
   - {fileID: 21300000, guid: f7df04b9a985ce341930189150eba1b6, type: 3}
   pauseMenu: {fileID: 580150640}
+  buttonExitGame: {fileID: 550878974}
+  buttonRestartGame: {fileID: 119003153}
+  buttonViewCredits: {fileID: 1667602539}
 --- !u!114 &541673401
 MonoBehaviour:
   m_ObjectHideFlags: 0

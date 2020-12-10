@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 using Random = UnityEngine.Random;
 
 /**
@@ -13,8 +14,15 @@ public class Game : MonoBehaviour
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
     [SerializeField] private GameObject pauseMenu;
+
+    [SerializeField] private GameObject buttonExitGame;
+    [SerializeField] private GameObject buttonRestartGame;
+    [SerializeField] private GameObject buttonViewCredits;
     
     private bool _isPaused;
+    private Button _buttonExitGame;
+    private Button _buttonRestartGame;
+    private Button _buttonViewCredits;
 
     /**
      * run once at start
@@ -24,6 +32,12 @@ public class Game : MonoBehaviour
     {
         _isPaused = false;
         pauseMenu.SetActive(false);
+        _buttonExitGame = buttonExitGame.GetComponent<Button>();
+        _buttonExitGame.onClick.AddListener( StopGame) ;
+        _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
+        _buttonRestartGame.onClick.AddListener(RestartGame);
+        _buttonViewCredits = buttonViewCredits.GetComponent<Button>();
+        _buttonViewCredits.onClick.AddListener(ViewCredits);
     }
     
     /**
@@ -47,18 +61,6 @@ public class Game : MonoBehaviour
                 Time.timeScale = 1;
                 pauseMenu.SetActive(false);
             }
-
-
-
-            /*
-            // this quits the game in the unity editor
-    #if UNITY_EDITOR
-            //EditorApplication.isPlaying = false;
-    #endif
-            // this quits the game if it's already build and running
-            //Application.Quit();
-            Time.timeScale = 0;
-            */
         }
     }
 
@@ -96,5 +98,36 @@ public class Game : MonoBehaviour
     public int GetSpriteListCount()
     {
         return emojiSprites.Count;
+    }
+
+    /**
+     * stops and exits game
+     */
+    private void StopGame()
+    {
+        // this quits the game in the unity editor
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
+        // this quits the game if it's already build and running
+        Application.Quit();
+    }
+
+    /**
+     * restart the game 
+     */
+    private void RestartGame()
+    {
+        GameSceneManager.Instance.LoadPlayingScene();
+
+    }
+    
+    /**
+     * jump to end screen to show credits
+     */
+    private void ViewCredits()
+    {
+        GameSceneManager.Instance.LoadEndScene();
+
     }
 }
