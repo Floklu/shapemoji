@@ -1,8 +1,5 @@
-﻿using System.IO;
-using UnityEngine;
-using UnityEngine.Networking;
+﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace ScoreArea
 {
@@ -18,10 +15,9 @@ namespace ScoreArea
          * @param renderer Renderer of score area
          * @param cam Main Camera
          */
-        public IEnumerator AnalyzeScoreableView(ScoreArea scoreArea, Renderer renderer, Camera cam)
+        public IEnumerator AnalyzeScoreableView(ScoreArea scoreArea, Renderer sceneRenderer, Camera cam)
         {
-            var result = new AnalyzeScoreAreaResult();
-            var bounds = renderer.bounds;
+            var bounds = sceneRenderer.bounds;
             // get dimensions of Score Area
             var size = cam.WorldToScreenPoint(bounds.max);
             // get position and transform to screen point
@@ -40,11 +36,10 @@ namespace ScoreArea
             //System.IO.File.WriteAllBytes("./screenshot.png", toPNG);
             var pixels = img.GetPixels();
             //analyze pixels
-            result = AnalyzePixelMap(pixels);
+            AnalyzeScoreAreaResult result = AnalyzePixelMap(pixels);
             //calculate score
             var score = CalculateScore(result);
-            //TODO push result into ScoreArea
-            GetComponent<ScoreArea>().HandleScore(score);
+            scoreArea.HandleScore(score);
             yield return null;
         }
 

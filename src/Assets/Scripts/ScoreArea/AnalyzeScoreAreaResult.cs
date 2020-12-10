@@ -1,7 +1,7 @@
 ﻿namespace ScoreArea
 {
     /**
-     * class storing information about pixel color analysus
+     * class storing information about pixel color analysis
      *
      */
     public class AnalyzeScoreAreaResult

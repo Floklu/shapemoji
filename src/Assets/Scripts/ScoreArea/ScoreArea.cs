@@ -18,8 +18,8 @@ namespace ScoreArea
         private ScoreCalculation _scoreCalculation;
 
         // UI
-        private Text teamScoreText;
-        private Text emojiScoreText;
+        private Text _teamScoreText;
+        private Text _emojiScoreText;
         private Toggle _button1;
         private Toggle _button2;
         [SerializeField] private GameObject emojiScoreUI;
@@ -43,8 +43,8 @@ namespace ScoreArea
 
 
             // UI
-            teamScoreText = teamScoreUI.GetComponent<Text>();
-            emojiScoreText = emojiScoreUI.GetComponent<Text>();
+            _teamScoreText = teamScoreUI.GetComponent<Text>();
+            _emojiScoreText = emojiScoreUI.GetComponent<Text>();
             emojiScoreUI.SetActive(false);
 
             _button1 = button1.GetComponent<Toggle>();
@@ -173,16 +173,16 @@ namespace ScoreArea
          */
         IEnumerator DisplayScore(int score)
         {
-            teamScoreText.text = _teamScore + " P";
+            _teamScoreText.text = _teamScore + " P";
 
             emojiScoreUI.SetActive(true);
             if (score >= 0)
             {
-                emojiScoreText.text = "+" + score;
+                _emojiScoreText.text = "+" + score;
             }
             else
             {
-                emojiScoreText.text = "" + score;
+                _emojiScoreText.text = "" + score;
             }
 
 
