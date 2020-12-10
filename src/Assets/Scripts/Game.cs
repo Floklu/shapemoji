@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 /**
- * manages game related functionality
+ * Class Game has functionality to quit the game and time display
  */
 public class Game : MonoBehaviour
 {
@@ -28,6 +28,7 @@ public class Game : MonoBehaviour
             Application.Quit();
         }
     }
+
 
     // Unity Event function, called when component is enabled
     private void OnEnable()

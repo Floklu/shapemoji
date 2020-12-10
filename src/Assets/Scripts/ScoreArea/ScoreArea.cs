@@ -26,6 +26,13 @@ namespace ScoreArea
         [SerializeField] private GameObject teamScoreUI;
         [SerializeField] private GameObject button1;
         [SerializeField] private GameObject button2;
+        private Text teamScoreText;
+
+        public int TeamScore
+        {
+            get => _teamScore;
+            set => _teamScore = value;
+        }
 
 
         // Start is called before the first frame update

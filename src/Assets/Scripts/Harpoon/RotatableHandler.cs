@@ -14,12 +14,24 @@ namespace Harpoon
         // Determines, whether RotationEvent passes differences in degrees since last event (true) or the total degree (false) 
         [SerializeField] private bool newRotationBehaviour;
 
-        private LeanFingerFilter Use = new LeanFingerFilter(true);
-
         private LeanFinger _finger;
         private Vector3 _initialPosition;
         private Camera _mainCamera;
         private bool _onDrag;
+
+        private LeanFingerFilter Use = new LeanFingerFilter(true);
+
+        protected virtual void Awake()
+        {
+            Use.UpdateRequiredSelectable(gameObject);
+        }
+
+#if UNITY_EDITOR
+        protected virtual void Reset()
+        {
+            Use.UpdateRequiredSelectable(gameObject);
+        }
+#endif
 
         /**
         * Start is called on the frame when a script is enabled just before any of the Update methods are called the first time.
@@ -54,23 +66,12 @@ namespace Harpoon
                 }
             }
         }
-        
-#if UNITY_EDITOR
-        protected virtual void Reset()
-        {
-            Use.UpdateRequiredSelectable(gameObject);
-        }
-#endif
-        protected virtual void Awake()
-        {
-            Use.UpdateRequiredSelectable(gameObject);
-        }
 
         /**
          * invokes Event, if rotation happens
          */
         public event EventHandler<float> RotationEvent;
-        
+
         /**
          * raises RotationEvent
          */
@@ -78,6 +79,5 @@ namespace Harpoon
         {
             RotationEvent?.Invoke(this, e);
         }
-
     }
 }

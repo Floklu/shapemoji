@@ -18,7 +18,6 @@ namespace Harpoon
         {
             _camera = Camera.main;
             _collider = GetComponent<Collider2D>();
-            
         }
 
         private void OnEnable()
