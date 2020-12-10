@@ -6,6 +6,9 @@ using UnityEngine.TestTools;
 
 namespace Tests.PlayMode
 {
+    /**
+     * Class to test finish game functionality
+     */
     public class FinishGameTest
     {
         /**
@@ -15,6 +18,18 @@ namespace Tests.PlayMode
         public void Setup()
         {
             SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
+        }
+
+        /**
+         * Test if the timer counts correctly
+         */
+        [UnityTest]
+        public IEnumerator TimerTest()
+        {
+            var gameTime = GameObject.Find("PlayingField").GetComponent<GameTime>();
+            gameTime.SetFinishTime(10);
+            yield return new WaitForSeconds(2);
+            Assert.IsTrue(gameTime.GetRemainingTime() == 8);
         }
 
         /**

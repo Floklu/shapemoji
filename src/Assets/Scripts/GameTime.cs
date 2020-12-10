@@ -70,7 +70,7 @@ public class GameTime : MonoBehaviour
      * find out remaining time until game end
      * @return remaining time
      */
-    private int GetRemainingTime()
+    public int GetRemainingTime()
     {
         return finishTime - currentTime + startTime;
     }
