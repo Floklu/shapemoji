@@ -6,8 +6,24 @@ using UnityEngine;
  *  */
 public abstract class HookableObject : MonoBehaviour
 {
-    protected GameObject Parent;
     private SpriteRenderer _spriteRenderer;
+    protected GameObject Parent;
+
+    /**
+     * on Start() set layer to PlayingFieldLayer
+     */
+    protected virtual void Start()
+    {
+        SetLayerToPlayingFieldLayer();
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
+    /**
+     * Calls for action at controller on collision with
+     *
+     * @param Collider other
+     */
+    public abstract void OnTriggerEnter2D(Collider2D other);
 
 
     /**
@@ -28,22 +44,6 @@ public abstract class HookableObject : MonoBehaviour
     {
         _spriteRenderer.color = color;
     }
-
-    /**
-     * on Start() set layer to PlayingFieldLayer
-     */
-    protected virtual void Start()
-    {
-        SetLayerToPlayingFieldLayer();
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-    }
-
-    /**
-     * Calls for action at controller on collision with
-     *
-     * @param Collider other
-     */
-    public abstract void OnTriggerEnter2D(Collider2D other);
 
     /**
  * get current position on playing field

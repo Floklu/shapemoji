@@ -9,24 +9,24 @@ namespace ScoreArea
 {
     public class ScoreArea : CanHoldHookableObject
     {
-        private List<Stone> _stones;
-        private Camera _cam;
-        private Renderer _renderer;
-        private BoxCollider2D _collider;
-        private int _teamScore;
-        private EmojiSpriteManager _emojiSpriteManager;
-        private SpriteRenderer _scoreAreaRenderer;
-        private ScoreCalculation _scoreCalculation;
-
-        // UI
-        private Text _teamScoreText;
-        private Text _emojiScoreText;
-        private Toggle _button1;
-        private Toggle _button2;
         [SerializeField] private GameObject emojiScoreUI;
         [SerializeField] private GameObject teamScoreUI;
         [SerializeField] private GameObject button1;
         [SerializeField] private GameObject button2;
+        private Toggle _button1;
+        private Toggle _button2;
+        private Camera _cam;
+        private BoxCollider2D _collider;
+        private Text _emojiScoreText;
+        private EmojiSpriteManager _emojiSpriteManager;
+        private Renderer _renderer;
+        private SpriteRenderer _scoreAreaRenderer;
+        private ScoreCalculation _scoreCalculation;
+        private List<Stone> _stones;
+        private int _teamScore;
+
+        // UI
+        private Text _teamScoreText;
         private Text teamScoreText;
 
         public int TeamScore

@@ -340,5 +340,4 @@ public static class HookableObjectController
     {
         hookableObject.SetOrderInLayer(order);
     }
-
 }
