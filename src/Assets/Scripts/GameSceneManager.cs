@@ -15,13 +15,7 @@ public class GameSceneManager
     
     public int ScoreTeam1 { get; set; }
     public int ScoreTeam2 { get; set; }
-
-    private void Start()
-    {
-        scoreArea1 = GameObject.Find("Team_1/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
-        scoreArea2 = GameObject.Find("Team_2/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
-    }
-
+    
     /**
      * returns the current Instance of the GameSceneManager
      *
@@ -40,8 +34,6 @@ public class GameSceneManager
     public void LoadPlayingScene()
     {
         SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
-        ScoreTeam1 = scoreArea1.TeamScore;
-        ScoreTeam2 = scoreArea2.TeamScore;
     }
 
     /**
@@ -49,7 +41,10 @@ public class GameSceneManager
      */
     public void LoadEndScene()
     {
-        //TODO get score from scoreAreas
+        scoreArea1 = GameObject.Find("Team_1/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
+        scoreArea2 = GameObject.Find("Team_2/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
+        ScoreTeam1 = scoreArea1.TeamScore;
+        ScoreTeam2 = scoreArea2.TeamScore;
         // ReSharper disable once Unity.LoadSceneUnexistingScene 
         SceneManager.LoadScene("Scenes/Scene_End");
     }
