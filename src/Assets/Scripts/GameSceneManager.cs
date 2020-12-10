@@ -40,8 +40,8 @@ public class GameSceneManager
     public void LoadPlayingScene()
     {
         SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
-        ScoreTeam1 = 0;
-        ScoreTeam2 = 0;
+        ScoreTeam1 = scoreArea1.TeamScore;
+        ScoreTeam2 = scoreArea2.TeamScore;
     }
 
     /**

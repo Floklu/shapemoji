@@ -13,6 +13,13 @@ namespace ScoreArea
         private Renderer _renderer;
         private BoxCollider2D _collider;
         private int _teamScore;
+
+        public int TeamScore
+        {
+            get => _teamScore;
+            set => _teamScore = value;
+        }
+
         private EmojiSpriteManager _emojiSpriteManager;
         private SpriteRenderer _scoreAreaRenderer;
         private ScoreCalculation _scoreCalculation;
