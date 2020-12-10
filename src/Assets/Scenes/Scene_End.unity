@@ -403,7 +403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team 2 Score:'
+  m_Text: 'Team 1 Score:'
 --- !u!222 &113601918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team 1 Score:'
+  m_Text: 'Team 2 Score:'
 --- !u!222 &2071365582
 CanvasRenderer:
   m_ObjectHideFlags: 0
