@@ -110,4 +110,14 @@ public class GameTime : MonoBehaviour
             GameSceneManager.Instance.LoadEndScene();
         }
     }
+
+    /**
+     * SetFinishTime sets the finish time. Used in test
+     *
+     * @param time
+     */
+    public void SetFinishTime(int time)
+    {
+        finishTime = time;
+    }
 }
