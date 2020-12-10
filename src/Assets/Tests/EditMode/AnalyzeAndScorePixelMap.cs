@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -28,8 +28,8 @@ namespace Tests.EditMode
                 var texture = new Texture2D(2, 2);
                 texture.LoadImage(fileInBytes);
                 images.Add(texture.GetPixels());
-                //remove string but integer
-                var scoreInt = file.Replace("./Assets/Tests/EditMode/test_images/", "");
+                //remove folder paths
+                var scoreInt = Path.GetFileName(file);
                 expectedScores.Add(Int32.Parse(scoreInt.Replace(".png", "")));
             }
 
