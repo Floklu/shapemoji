@@ -24,9 +24,9 @@ public class GameTime : MonoBehaviour
      */
     private int startTime;
 
-    private Text text;
-    private Text text1;
-    private Text text2;
+    private string timeRemainingText2;
+    private string timeRemainingText1;
+    private string timeCountdownText;
 
 
     /**
@@ -34,10 +34,10 @@ public class GameTime : MonoBehaviour
      */
     private void Start()
     {
-        text2 = textTimeCountdown.GetComponent<Text>();
-        text1 = textTimeRemaining2.GetComponent<Text>();
-        text = textTimeRemaining1.GetComponent<Text>();
-        textTimeCountdown.GetComponent<Text>().text = "";
+        timeCountdownText = textTimeCountdown.GetComponent<Text>().text;
+        timeRemainingText1 = textTimeRemaining1.GetComponent<Text>().text;
+        timeRemainingText2 = textTimeRemaining2.GetComponent<Text>().text;
+        timeCountdownText = "";
         startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         timer = new Timer(1000);
@@ -93,8 +93,8 @@ public class GameTime : MonoBehaviour
         int time = GetRemainingTime();
         int seconds = time % 60;
         int minutes = time / 60;
-        text.text = $"{minutes:D2}:{seconds:D2}";
-        text1.text = $"{minutes:D2}:{seconds:D2}";
+        timeRemainingText2 = $"{minutes:D2}:{seconds:D2}";
+        timeRemainingText1 = $"{minutes:D2}:{seconds:D2}";
     }
 
     /**
@@ -104,7 +104,7 @@ public class GameTime : MonoBehaviour
     {
         if (GetRemainingTime() <= 5)
         {
-            text2.text = Convert.ToString(GetRemainingTime());
+            timeCountdownText = Convert.ToString(GetRemainingTime());
         }
         
     }
