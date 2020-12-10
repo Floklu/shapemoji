@@ -6,9 +6,9 @@
      */
     public class AnalyzeScoreAreaResult
     {
+        private int _backgroundCovered;
         private int _emojiCovered;
         private int _emojiUncovered;
-        private int _backgroundCovered;
 
         public int EmojiCovered
         {

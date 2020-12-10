@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager
 {
     private static GameSceneManager _instance;
+    private ScoreArea.ScoreArea scoreArea1;
+    private ScoreArea.ScoreArea scoreArea2;
 
     public static GameSceneManager Instance => GetInstance();
-    
+
     public int ScoreTeam1 { get; set; }
     public int ScoreTeam2 { get; set; }
 
@@ -32,8 +34,6 @@ public class GameSceneManager
     public void LoadPlayingScene()
     {
         SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
-        ScoreTeam1 = 0;
-        ScoreTeam2 = 0;
     }
 
     /**
@@ -41,10 +41,10 @@ public class GameSceneManager
      */
     public void LoadEndScene()
     {
-        //TODO get score from scoreAreas
-        var scoreArea1 = GameObject.Find("Team_1/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
-        var scoreArea2 = GameObject.Find("Team_2/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
-        
+        scoreArea1 = GameObject.Find("Team_1/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
+        scoreArea2 = GameObject.Find("Team_2/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
+        ScoreTeam1 = scoreArea1.TeamScore;
+        ScoreTeam2 = scoreArea2.TeamScore;
         // ReSharper disable once Unity.LoadSceneUnexistingScene 
         SceneManager.LoadScene("Scenes/Scene_End");
     }
