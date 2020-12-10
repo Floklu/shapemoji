@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983324fc5605dcd40afea7748c864b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishTime: 10
+  finishTime: 180
   textTimeCountdown: {fileID: 1985257376}
   textTimeRemaining1: {fileID: 1105659365}
   textTimeRemaining2: {fileID: 1672327677}
