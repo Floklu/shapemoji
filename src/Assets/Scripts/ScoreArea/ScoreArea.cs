@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -111,12 +112,16 @@ namespace ScoreArea
         public void AddStone(Stone stone)
         {
             _stones.Add(stone);
+            var stonesCount = _stones.Count;
+            //emoji has layer -1005, unadded stone layer 10
+            HookableObjectController.SetOrderInLayer(stone, stonesCount-1000);
             //lock n-1th stone and deactivate collider
-            if (_stones.Count > 1)
+            if (stonesCount > 1)
             {
-                var oldStone = _stones[_stones.Count - 2];
+                var oldStone = _stones[stonesCount - 2];
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
+                
             }
         }
 

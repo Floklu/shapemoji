@@ -10,6 +10,16 @@ public abstract class HookableObject : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
 
+    /**
+     * sets order in layer
+     *
+     * @param order Int to be set as order in layer
+     */
+    public void SetOrderInLayer(int order)
+    {
+        _spriteRenderer.sortingOrder = order;
+    }
+
     /**set color of renderer
      *
      * @param color Color to set
