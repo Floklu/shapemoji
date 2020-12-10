@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System;
 using System.Timers;
 using UnityEditor;
 using UnityEngine;
@@ -37,6 +36,7 @@ public class Game : MonoBehaviour
      */
     private void Start()
     {
+        textTimeCountdown.GetComponent<Text>().text = "";
         startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         timer = new Timer(1000);
