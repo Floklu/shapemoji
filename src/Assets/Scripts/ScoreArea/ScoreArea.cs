@@ -150,6 +150,7 @@ namespace ScoreArea
         public override void RemoveStone(Stone stone)
         {
             _stones.Remove(stone);
+            HookableObjectController.SetOrderInLayer(stone, 1000);
             // reenable draggable and collider on last stone
             var stoneCount = _stones.Count;
             if (stoneCount > 0)
