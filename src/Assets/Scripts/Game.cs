@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 /**
@@ -11,21 +12,53 @@ public class Game : MonoBehaviour
 {
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
+    [SerializeField] private GameObject pauseMenu;
+    
+    private bool _isPaused;
 
+    /**
+     * run once at start
+     * deactive pause menu
+     */
+    private void Start()
+    {
+        _isPaused = false;
+        pauseMenu.SetActive(false);
+    }
+    
     /**
      * Update is called once per frame.
      * The game is quitting if the escape key is pressed.
      */
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //toggle paused state
+            _isPaused = (_isPaused != true);
+            if (_isPaused)
+            {
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pauseMenu.SetActive(false);
+            }
+
+
+
+            /*
             // this quits the game in the unity editor
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#endif
+    #if UNITY_EDITOR
+            //EditorApplication.isPlaying = false;
+    #endif
             // this quits the game if it's already build and running
-            Application.Quit();
+            //Application.Quit();
+            Time.timeScale = 0;
+            */
         }
     }
 
