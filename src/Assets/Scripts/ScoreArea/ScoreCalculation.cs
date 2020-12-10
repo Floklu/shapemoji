@@ -36,8 +36,8 @@ namespace ScoreArea
             // create the image
             img.ReadPixels(rect, 0, 0);
             img.Apply();
-            //byte[] toPNG = img.EncodeToPNG();
-            //System.IO.File.WriteAllBytes("./screenshot.png", toPNG);
+            byte[] toPNG = img.EncodeToPNG();
+            System.IO.File.WriteAllBytes("./screenshot.png", toPNG);
             var pixels = img.GetPixels();
             //analyze pixels
             result = AnalyzePixelMap(pixels);

@@ -17,11 +17,7 @@ public class EndScreen : MonoBehaviour
     void Start()
     {
         var gameSceneManager = GameSceneManager.Instance;
-
-        //TODO remove when triggered in game
-        gameSceneManager.ScoreTeam1 = 100;
-        gameSceneManager.ScoreTeam2 = 102;
-        
+       
         var scoreTeam1 = gameSceneManager.ScoreTeam1;
         var scoreTeam2 = gameSceneManager.ScoreTeam2;
         
