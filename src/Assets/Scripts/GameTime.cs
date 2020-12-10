@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
@@ -108,6 +108,7 @@ public class GameTime : MonoBehaviour
     {
         if (GetRemainingTime() <= 0)
         {
+            timer.Enabled = false;
             GameSceneManager.Instance.LoadEndScene();
         }
     }
