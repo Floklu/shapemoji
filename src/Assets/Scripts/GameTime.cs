@@ -24,9 +24,9 @@ public class GameTime : MonoBehaviour
      */
     private int startTime;
 
-    private string timeRemainingText2;
-    private string timeRemainingText1;
-    private string timeCountdownText;
+    private Text timeRemainingText2;
+    private Text timeRemainingText1;
+    private Text timeCountdownText;
 
 
     /**
@@ -34,16 +34,18 @@ public class GameTime : MonoBehaviour
      */
     private void Start()
     {
-        timeCountdownText = textTimeCountdown.GetComponent<Text>().text;
-        timeRemainingText1 = textTimeRemaining1.GetComponent<Text>().text;
-        timeRemainingText2 = textTimeRemaining2.GetComponent<Text>().text;
-        timeCountdownText = "";
+        timeCountdownText = textTimeCountdown.GetComponent<Text>();
+        timeRemainingText1 = textTimeRemaining1.GetComponent<Text>();
+        timeRemainingText2 = textTimeRemaining2.GetComponent<Text>();
+        timeCountdownText.text = "";
         startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        
         timer = new Timer(1000);
         timer.Elapsed += OnTimerUpdate;
         timer.AutoReset = true;
         timer.Enabled = true;
+
     }
 
     /**
@@ -56,16 +58,6 @@ public class GameTime : MonoBehaviour
         TimeDisplay();
         CountdownDisplay();
         CheckGameOver();
-        
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // this quits the game in the unity editor
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#endif
-            // this quits the game if it's already build and running
-            Application.Quit();
-        }
     }
 
     /**
@@ -93,8 +85,9 @@ public class GameTime : MonoBehaviour
         int time = GetRemainingTime();
         int seconds = time % 60;
         int minutes = time / 60;
-        timeRemainingText2 = $"{minutes:D2}:{seconds:D2}";
-        timeRemainingText1 = $"{minutes:D2}:{seconds:D2}";
+        string toDisplay = $"{minutes:D2}:{seconds:D2}";
+        timeRemainingText2.text = toDisplay;
+        timeRemainingText1.text = toDisplay;
     }
 
     /**
@@ -104,7 +97,7 @@ public class GameTime : MonoBehaviour
     {
         if (GetRemainingTime() <= 5)
         {
-            timeCountdownText = Convert.ToString(GetRemainingTime());
+            timeCountdownText.text = Convert.ToString(GetRemainingTime());
         }
         
     }
@@ -116,7 +109,6 @@ public class GameTime : MonoBehaviour
     {
         if (GetRemainingTime() <= 0)
         {
-            timer.Enabled = false;
             GameSceneManager.Instance.LoadEndScene();
         }
     }
