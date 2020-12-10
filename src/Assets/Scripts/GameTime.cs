@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Timers;
 using UnityEditor;
 using UnityEngine;
-using Random = UnityEngine.Random;
 using UnityEngine.UI;
 
 public class GameTime : MonoBehaviour

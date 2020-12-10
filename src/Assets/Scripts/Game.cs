@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Timers;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using UnityEngine.UI;
 
 /**
  * Class Game has functionality to quit the game and time display
