@@ -6,22 +6,23 @@ using UnityEngine.UI;
 
 public class GameTime : MonoBehaviour
 {
-    
+    private static Timer timer;
+
     [SerializeField] private int finishTime;
     [SerializeField] private GameObject textTimeCountdown;
     [SerializeField] private GameObject textTimeRemaining1;
     [SerializeField] private GameObject textTimeRemaining2;
-    private static Timer timer;
 
-    
-    /**
-     * game start time in unix format
-     */
-    private int startTime;
     /**
      * current time in unix format, will be updated by timer
      */
     private int currentTime;
+
+
+    /**
+     * game start time in unix format
+     */
+    private int startTime;
 
     private Text text;
     private Text text1;
@@ -44,7 +45,7 @@ public class GameTime : MonoBehaviour
         timer.AutoReset = true;
         timer.Enabled = true;
     }
-    
+
     /**
      * Update is called once per frame.
      * Time display is refreshed.
@@ -66,7 +67,7 @@ public class GameTime : MonoBehaviour
             Application.Quit();
         }
     }
-    
+
     /**
      * Update elapsed time
      */
@@ -95,7 +96,7 @@ public class GameTime : MonoBehaviour
         text.text = $"{minutes:D2}:{seconds:D2}";
         text1.text = $"{minutes:D2}:{seconds:D2}";
     }
-    
+
     /**
      * Countdown display for remaining 5 seconds
      */

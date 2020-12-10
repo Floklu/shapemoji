@@ -8,14 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager
 {
     private static GameSceneManager _instance;
-    private ScoreArea.ScoreArea scoreArea2;
     private ScoreArea.ScoreArea scoreArea1;
+    private ScoreArea.ScoreArea scoreArea2;
 
     public static GameSceneManager Instance => GetInstance();
-    
+
     public int ScoreTeam1 { get; set; }
     public int ScoreTeam2 { get; set; }
-    
+
     /**
      * returns the current Instance of the GameSceneManager
      *

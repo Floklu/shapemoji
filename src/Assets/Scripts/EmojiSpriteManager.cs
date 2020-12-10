@@ -6,10 +6,10 @@
 public class EmojiSpriteManager : MonoBehaviour
 {
     [SerializeField] private GameObject emoji;
-    private Game _game;
-    private SpriteRenderer _emojiSprite;
 
     private int _currentEmojiNumber;
+    private SpriteRenderer _emojiSprite;
+    private Game _game;
 
     // Start is called before the first frame update
     private void Start()

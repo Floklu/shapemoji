@@ -29,7 +29,7 @@ public class Game : MonoBehaviour
             Application.Quit();
         }
     }
-   
+
 
     // Unity Event function, called when component is enabled
     private void OnEnable()
@@ -65,7 +65,4 @@ public class Game : MonoBehaviour
     {
         return emojiSprites.Count;
     }
-
-    
-
 }
