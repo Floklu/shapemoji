@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +6,7 @@ using UnityEngine.SceneManagement;
  */
 public class GameSceneManager
 {
-    private static GameSceneManager _instance;
+    private static GameSceneManager instance;
     private ScoreArea.ScoreArea scoreArea1;
     private ScoreArea.ScoreArea scoreArea2;
 
@@ -23,9 +22,9 @@ public class GameSceneManager
      */
     private static GameSceneManager GetInstance()
     {
-        if (_instance is null)
-            _instance = new GameSceneManager();
-        return _instance;
+        if (instance is null)
+            instance = new GameSceneManager();
+        return instance;
     }
 
     /**
@@ -45,7 +44,6 @@ public class GameSceneManager
         scoreArea2 = GameObject.Find("Team_2/ScoreArea").GetComponent<ScoreArea.ScoreArea>();
         ScoreTeam1 = scoreArea1.TeamScore;
         ScoreTeam2 = scoreArea2.TeamScore;
-        // ReSharper disable once Unity.LoadSceneUnexistingScene 
         SceneManager.LoadScene("Scenes/Scene_End");
     }
 }

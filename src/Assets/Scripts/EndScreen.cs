@@ -14,15 +14,17 @@ public class EndScreen : MonoBehaviour
     [SerializeField] private Text creditsText;
 
 
-    void Start()
+    /**
+     * executed after construction, reads scores, declares winner, updates view texts
+     */
+    private void Start()
     {
         var gameSceneManager = GameSceneManager.Instance;
-       
         var scoreTeam1 = gameSceneManager.ScoreTeam1;
         var scoreTeam2 = gameSceneManager.ScoreTeam2;
-        
+
         //decide winner
-        String winner;
+        string winner;
         if (scoreTeam1 > scoreTeam2)
         {
             winner = "Team 1";
@@ -40,8 +42,7 @@ public class EndScreen : MonoBehaviour
         winnerText.text += winner;
         scoreTeam1Text.text += "\n \n" + scoreTeam1.ToString() + "P";
         scoreTeam2Text.text += "\n \n" + scoreTeam2.ToString() + "P";
-        creditsText.text += "\n" + readTextFile("Assets/Media/Text/credits.txt");
-
+        creditsText.text += "\n" + ReadTextFile("Assets/Media/Text/credits.txt");
     }
 
     /**
@@ -49,7 +50,7 @@ public class EndScreen : MonoBehaviour
      *
      * @param filePath complete or relative path to file
      */
-    private static String readTextFile(string filePath)
+    private static string ReadTextFile(string filePath)
     {
         StreamReader reader = new StreamReader(filePath);
         var fileContent = reader.ReadToEnd();

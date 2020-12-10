@@ -39,12 +39,11 @@ public class GameTime : MonoBehaviour
         timeCountdownText.text = "";
         startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        
+
         timer = new Timer(1000);
         timer.Elapsed += OnTimerUpdate;
         timer.AutoReset = true;
         timer.Enabled = true;
-
     }
 
     /**
@@ -98,7 +97,6 @@ public class GameTime : MonoBehaviour
         {
             timeCountdownText.text = Convert.ToString(GetRemainingTime());
         }
-        
     }
 
     /**

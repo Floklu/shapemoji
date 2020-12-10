@@ -18,7 +18,6 @@ public class Game : MonoBehaviour
      */
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // this quits the game in the unity editor
