@@ -220,15 +220,15 @@ namespace ScoreArea
             var buttonColors = button.colors;
             if (button.isOn)
             {
-                buttonColors.normalColor = Color.green;
+               /* buttonColors.normalColor = Color.green;
                 buttonColors.selectedColor = Color.green;
-                buttonColors.highlightedColor = Color.green;
+                buttonColors.highlightedColor = Color.green;*/
             }
             else
             {
-                buttonColors.normalColor = Color.red;
+                /*buttonColors.normalColor = Color.red;
                 buttonColors.selectedColor = Color.red;
-                buttonColors.highlightedColor = Color.red;
+                buttonColors.highlightedColor = Color.red;*/
             }
 
             button.colors = buttonColors;

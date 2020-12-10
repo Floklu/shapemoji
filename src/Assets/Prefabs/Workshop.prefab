@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f544952a64d36c140b154152ef162d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  player: {fileID: 0}
+  team: {fileID: 0}
 --- !u!1 &3527310409826344567
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,4 +327,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f544952a64d36c140b154152ef162d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  player: {fileID: 0}
+  team: {fileID: 0}
