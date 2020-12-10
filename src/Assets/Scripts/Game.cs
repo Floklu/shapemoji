@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System;
 using System.Timers;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 using UnityEngine.UI;
 
 /**
@@ -9,6 +12,9 @@ using UnityEngine.UI;
  */
 public class Game : MonoBehaviour
 {
+    public static Game Instance;
+    [SerializeField] private List<Sprite> emojiSprites;
+
     /**
      * game start time in unix format
      */
@@ -59,6 +65,41 @@ public class Game : MonoBehaviour
             // this quits the game if it's already build and running
             Application.Quit();
         }
+    }
+
+    // Unity Event function, called when component is enabled
+    private void OnEnable()
+    {
+        Instance = this;
+        Random.InitState((int) DateTime.Now.Ticks);
+        emojiSprites.Shuffle();
+    }
+
+    // Unity Event function, called when component is disabled
+    private void OnDisable()
+    {
+        Instance = null;
+    }
+
+    /**
+     * Get the n-th emoji from the list of emoji sprites
+     * 
+     * @param num the position modulo the count of emojis
+     * @returns the sprite at the given position
+     */
+    public Sprite GetEmoji(int num)
+    {
+        return emojiSprites.Count != 0 ? emojiSprites[num % emojiSprites.Count] : null;
+    }
+
+    /**
+     * GetSpriteListCount returns the length of the sprite list
+     *
+     * @return the length of the emoji sprite list
+     */
+    public int GetSpriteListCount()
+    {
+        return emojiSprites.Count;
     }
 
     /**
