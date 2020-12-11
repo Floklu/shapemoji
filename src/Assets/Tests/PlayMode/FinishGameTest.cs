@@ -27,9 +27,9 @@ namespace Tests.PlayMode
         public IEnumerator TimerTest()
         {
             var gameTime = GameObject.Find("PlayingField").GetComponent<GameTime>();
-            gameTime.SetFinishTime(10);
+            gameTime.SetTimeLeft(10);
             yield return new WaitForSeconds(2);
-            Assert.IsTrue(gameTime.GetRemainingTime() == 8);
+            Assert.IsTrue(gameTime.GetTimeRemaining() == 8);
         }
 
         /**
@@ -38,7 +38,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator ChangeToFinishSceneTest()
         {
-            GameObject.Find("PlayingField").GetComponent<GameTime>().SetFinishTime(2);
+            GameObject.Find("PlayingField").GetComponent<GameTime>().SetTimeLeft(2);
             yield return new WaitForSeconds(4);
             Assert.IsTrue(SceneManager.GetActiveScene().name == "Scene_End");
         }

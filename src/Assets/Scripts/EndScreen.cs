@@ -1,7 +1,8 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
 
 /**
  * manages ui of end screen
@@ -12,6 +13,11 @@ public class EndScreen : MonoBehaviour
     [SerializeField] private Text scoreTeam1Text;
     [SerializeField] private Text scoreTeam2Text;
     [SerializeField] private Text creditsText;
+    [SerializeField] private GameObject buttonEndGame;
+    [SerializeField] private GameObject buttonRestartGame;
+
+    private Button _buttonEndGame;
+    private Button _buttonRestartGame;
 
 
     /**
@@ -43,7 +49,13 @@ public class EndScreen : MonoBehaviour
         scoreTeam1Text.text += "\n \n" + scoreTeam1.ToString() + "P";
         scoreTeam2Text.text += "\n \n" + scoreTeam2.ToString() + "P";
         creditsText.text += "\n" + ReadTextFile("Assets/Media/Text/credits.txt");
+        
+        _buttonEndGame = buttonEndGame.GetComponent<Button>();
+        _buttonEndGame.onClick.AddListener( () =>Game.Instance.StopGame() ) ;
+        _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
+        _buttonRestartGame.onClick.AddListener( GameSceneManager.Instance.LoadPlayingScene ) ;
     }
+
 
     /**
      * reads a file and returns input as string

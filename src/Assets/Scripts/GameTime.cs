@@ -5,27 +5,30 @@ using UnityEngine.UI;
 
 public class GameTime : MonoBehaviour
 {
-    private static Timer timer;
+    private static Timer _timer;
 
     [SerializeField] private int finishTime;
     [SerializeField] private GameObject textTimeCountdown;
     [SerializeField] private GameObject textTimeRemaining1;
     [SerializeField] private GameObject textTimeRemaining2;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject buttonExitGame;
+    [SerializeField] private GameObject buttonRestartGame;
+    [SerializeField] private GameObject buttonViewCredits;
+    [SerializeField] private GameObject buttonResume;
+    private Button _buttonExitGame;
+    private Button _buttonRestartGame;
+    private Button _buttonResume;
+    private Button _buttonViewCredits;
 
-    /**
-     * current time in unix format, will be updated by timer
-     */
-    private int currentTime;
+    private bool _isPaused;
+    private Text _timeCountdownText;
+    private int _timeLeft;
+    private Text _timeRemainingText1;
 
+    private Text _timeRemainingText2;
 
-    /**
-     * game start time in unix format
-     */
-    private int startTime;
-
-    private Text timeRemainingText2;
-    private Text timeRemainingText1;
-    private Text timeCountdownText;
+    private int _timestamp;
 
 
     /**
@@ -33,17 +36,25 @@ public class GameTime : MonoBehaviour
      */
     private void Start()
     {
-        timeCountdownText = textTimeCountdown.GetComponent<Text>();
-        timeRemainingText1 = textTimeRemaining1.GetComponent<Text>();
-        timeRemainingText2 = textTimeRemaining2.GetComponent<Text>();
-        timeCountdownText.text = "";
-        startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-
-        timer = new Timer(1000);
-        timer.Elapsed += OnTimerUpdate;
-        timer.AutoReset = true;
-        timer.Enabled = true;
+        // init time 
+        _timeCountdownText = textTimeCountdown.GetComponent<Text>();
+        _timeRemainingText1 = textTimeRemaining1.GetComponent<Text>();
+        _timeRemainingText2 = textTimeRemaining2.GetComponent<Text>();
+        _timeCountdownText.text = "";
+        _timeLeft = finishTime;
+        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        
+        //set state not paused and build pause menu
+        _isPaused = false;
+        pauseMenu.SetActive(false);
+        _buttonExitGame = buttonExitGame.GetComponent<Button>();
+        _buttonExitGame.onClick.AddListener( Game.Instance.StopGame) ;
+        _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
+        _buttonRestartGame.onClick.AddListener(Game.Instance.RestartGame);
+        _buttonViewCredits = buttonViewCredits.GetComponent<Button>();
+        _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
+        _buttonResume = buttonResume.GetComponent<Button>();
+        _buttonResume.onClick.AddListener(TogglePauseMenu);
     }
 
     /**
@@ -53,62 +64,78 @@ public class GameTime : MonoBehaviour
      */
     private void Update()
     {
-        TimeDisplay();
-        CountdownDisplay();
-        CheckGameOver();
+
+        if(!_isPaused) TimeUpdateEvent();
+        
+        //on esc toggle pause menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePauseMenu();
+        }
     }
 
     /**
-     * Update elapsed time
+     * starts or ends pause and shows menu accordingly
      */
-    private void OnTimerUpdate(object source, ElapsedEventArgs e)
+    private void TogglePauseMenu()
     {
-        currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        //toggle paused state
+        _isPaused = (_isPaused != true);
+        if (_isPaused)
+        {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+            pauseMenu.SetActive(false);
+        }
     }
 
     /**
-     * find out remaining time until game end
-     * @return remaining time
+     * trigger everything related to time update
      */
-    public int GetRemainingTime()
+    private void TimeUpdateEvent()
     {
-        return finishTime - currentTime + startTime;
+        TimeLeftIterator();      
+        UpdateTimerDisplay();
+        // start countdown
+        if (_timeLeft <= 5) _timeCountdownText.text = _timeLeft.ToString();
+        //end game
+        if (_timeLeft <= 0) GameSceneManager.Instance.LoadEndScene();
     }
+
+    /**
+     * iterates the time left
+     */
+    private void TimeLeftIterator()
+    {
+        var newTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        _timeLeft += _timestamp - newTime;
+        _timestamp = newTime;
+    }
+
 
     /**
      * remaining time display
      */
-    private void TimeDisplay()
+    private void UpdateTimerDisplay()
     {
-        int time = GetRemainingTime();
-        int seconds = time % 60;
-        int minutes = time / 60;
+        int seconds = _timeLeft % 60;
+        int minutes = _timeLeft / 60;
         string toDisplay = $"{minutes:D2}:{seconds:D2}";
-        timeRemainingText2.text = toDisplay;
-        timeRemainingText1.text = toDisplay;
+        _timeRemainingText2.text = toDisplay;
+        _timeRemainingText1.text = toDisplay;
     }
 
     /**
-     * Countdown display for remaining 5 seconds
+     * returns time left in s 
      */
-    private void CountdownDisplay()
+    public int GetTimeRemaining()
     {
-        if (GetRemainingTime() <= 5)
-        {
-            timeCountdownText.text = Convert.ToString(GetRemainingTime());
-        }
-    }
-
-    /**
-     * check, if time is over and load end scene
-     */
-    private void CheckGameOver()
-    {
-        if (GetRemainingTime() <= 0)
-        {
-            timer.Enabled = false;
-            GameSceneManager.Instance.LoadEndScene();
-        }
+        return _timeLeft;
     }
 
     /**
@@ -116,8 +143,8 @@ public class GameTime : MonoBehaviour
      *
      * @param time
      */
-    public void SetFinishTime(int time)
+    public void SetTimeLeft(int time)
     {
-        finishTime = time;
+        _timeLeft = time;
     }
 }
