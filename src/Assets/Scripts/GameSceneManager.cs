@@ -32,6 +32,7 @@ public class GameSceneManager
      */
     public void LoadPlayingScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
     }
 
