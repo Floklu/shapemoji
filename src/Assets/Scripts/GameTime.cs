@@ -16,19 +16,19 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameObject buttonRestartGame;
     [SerializeField] private GameObject buttonViewCredits;
     [SerializeField] private GameObject buttonResume;
-    
-    private bool _isPaused;
     private Button _buttonExitGame;
     private Button _buttonRestartGame;
-    private Button _buttonViewCredits;
     private Button _buttonResume;
+    private Button _buttonViewCredits;
+
+    private bool _isPaused;
+    private Text _timeCountdownText;
+    private int _timeLeft;
+    private Text _timeRemainingText1;
+
+    private Text _timeRemainingText2;
 
     private int _timestamp;
-    private int _timeLeft;
-    
-    private Text _timeRemainingText2;
-    private Text _timeRemainingText1;
-    private Text _timeCountdownText;
 
 
     /**
@@ -116,8 +116,8 @@ public class GameTime : MonoBehaviour
         _timeLeft += _timestamp - newtime;
         _timestamp = newtime;
     }
-    
-    
+
+
     /**
      * remaining time display
      */
@@ -136,7 +136,7 @@ public class GameTime : MonoBehaviour
     public int GetTimeRemaining()
     {
         return _timeLeft;
-    }   
+    }
 
     /**
      * SetFinishTime sets the finish time. Used in test

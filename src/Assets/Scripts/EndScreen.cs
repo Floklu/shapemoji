@@ -18,8 +18,8 @@ public class EndScreen : MonoBehaviour
 
     private Button _buttonEndGame;
     private Button _buttonRestartGame;
-    
-    
+
+
     /**
      * executed after construction, reads scores, declares winner, updates view texts
      */
