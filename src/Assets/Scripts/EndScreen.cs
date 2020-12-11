@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 

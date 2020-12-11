@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class GameTime : MonoBehaviour
 {
-    private static Timer _timer;
-
     [SerializeField] private int finishTime;
     [SerializeField] private GameObject textTimeCountdown;
     [SerializeField] private GameObject textTimeRemaining1;
