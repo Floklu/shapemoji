@@ -11,24 +11,8 @@ public class Game : MonoBehaviour
 {
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
-
-    /**
-     * Update is called once per frame.
-     * The game is quitting if the escape key is pressed.
-     */
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // this quits the game in the unity editor
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#endif
-            // this quits the game if it's already build and running
-            Application.Quit();
-        }
-    }
-
+    
+    
 
     // Unity Event function, called when component is enabled
     private void OnEnable()
@@ -63,5 +47,36 @@ public class Game : MonoBehaviour
     public int GetSpriteListCount()
     {
         return emojiSprites.Count;
+    }
+
+    /**
+     * stops and exits game
+     */
+    public void StopGame()
+    {
+        // this quits the game in the unity editor
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
+        // this quits the game if it's already build and running
+        Application.Quit();
+    }
+
+    /**
+     * restart the game 
+     */
+    public void RestartGame()
+    {
+        GameSceneManager.Instance.LoadPlayingScene();
+
+    }
+    
+    /**
+     * jump to end screen to show credits
+     */
+    private void ViewCredits()
+    {
+        GameSceneManager.Instance.LoadEndScene();
+
     }
 }
