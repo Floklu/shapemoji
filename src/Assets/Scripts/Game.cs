@@ -12,57 +12,8 @@ public class Game : MonoBehaviour
 {
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
-    [SerializeField] private GameObject pauseMenu;
-
-    [SerializeField] private GameObject buttonExitGame;
-    [SerializeField] private GameObject buttonRestartGame;
-    [SerializeField] private GameObject buttonViewCredits;
     
-    private bool _isPaused;
-    private Button _buttonExitGame;
-    private Button _buttonRestartGame;
-    private Button _buttonViewCredits;
-
-    /**
-     * run once at start
-     * deactive pause menu
-     */
-    private void Start()
-    {
-        _isPaused = false;
-        pauseMenu.SetActive(false);
-        _buttonExitGame = buttonExitGame.GetComponent<Button>();
-        _buttonExitGame.onClick.AddListener( StopGame) ;
-        _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
-        _buttonRestartGame.onClick.AddListener(RestartGame);
-        _buttonViewCredits = buttonViewCredits.GetComponent<Button>();
-        _buttonViewCredits.onClick.AddListener(ViewCredits);
-    }
     
-    /**
-     * Update is called once per frame.
-     * The game is quitting if the escape key is pressed.
-     */
-    private void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            //toggle paused state
-            _isPaused = (_isPaused != true);
-            if (_isPaused)
-            {
-                Time.timeScale = 0;
-                pauseMenu.SetActive(true);
-            }
-            else
-            {
-                Time.timeScale = 1;
-                pauseMenu.SetActive(false);
-            }
-        }
-    }
-
 
     // Unity Event function, called when component is enabled
     private void OnEnable()

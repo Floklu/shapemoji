@@ -11,6 +11,15 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameObject textTimeCountdown;
     [SerializeField] private GameObject textTimeRemaining1;
     [SerializeField] private GameObject textTimeRemaining2;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject buttonExitGame;
+    [SerializeField] private GameObject buttonRestartGame;
+    [SerializeField] private GameObject buttonViewCredits;
+    
+    private bool _isPaused;
+    private Button _buttonExitGame;
+    private Button _buttonRestartGame;
+    private Button _buttonViewCredits;
 
     /**
      * current time in unix format, will be updated by timer
@@ -39,11 +48,16 @@ public class GameTime : MonoBehaviour
         timeCountdownText.text = "";
         startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-
-        timer = new Timer(1000);
-        timer.Elapsed += OnTimerUpdate;
-        timer.AutoReset = true;
-        timer.Enabled = true;
+        
+        //set state not paused and build pause menu
+        _isPaused = false;
+        pauseMenu.SetActive(false);
+        _buttonExitGame = buttonExitGame.GetComponent<Button>();
+        _buttonExitGame.onClick.AddListener( Game.Instance.StopGame) ;
+        _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
+        _buttonRestartGame.onClick.AddListener(Game.Instance.RestartGame);
+        _buttonViewCredits = buttonViewCredits.GetComponent<Button>();
+        _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
     }
 
     /**
@@ -53,9 +67,27 @@ public class GameTime : MonoBehaviour
      */
     private void Update()
     {
+        currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         TimeDisplay();
         CountdownDisplay();
         CheckGameOver();
+        
+        //on esc toggle pause menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //toggle paused state
+            _isPaused = (_isPaused != true);
+            if (_isPaused)
+            {
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pauseMenu.SetActive(false);
+            }
+        }
     }
 
     /**

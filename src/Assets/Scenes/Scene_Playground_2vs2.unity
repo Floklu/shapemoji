@@ -1795,10 +1795,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 31d3f2607730e5f4b891a5f212870ccd, type: 3}
   - {fileID: 21300000, guid: 9129fb9e50a6ce340818331c00fc157d, type: 3}
   - {fileID: 21300000, guid: f7df04b9a985ce341930189150eba1b6, type: 3}
-  pauseMenu: {fileID: 580150640}
-  buttonExitGame: {fileID: 550878974}
-  buttonRestartGame: {fileID: 119003153}
-  buttonViewCredits: {fileID: 1667602539}
 --- !u!114 &541673401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1815,6 +1811,10 @@ MonoBehaviour:
   textTimeCountdown: {fileID: 1985257376}
   textTimeRemaining1: {fileID: 1105659365}
   textTimeRemaining2: {fileID: 1672327677}
+  pauseMenu: {fileID: 580150640}
+  buttonExitGame: {fileID: 550878974}
+  buttonRestartGame: {fileID: 119003153}
+  buttonViewCredits: {fileID: 1667602539}
 --- !u!1 &550878974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6075,7 +6075,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: End Round
 --- !u!222 &1964249079
 CanvasRenderer:
   m_ObjectHideFlags: 0

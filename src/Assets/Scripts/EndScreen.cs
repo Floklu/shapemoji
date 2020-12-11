@@ -51,12 +51,17 @@ public class EndScreen : MonoBehaviour
         creditsText.text += "\n" + ReadTextFile("Assets/Media/Text/credits.txt");
         
         _buttonEndGame = buttonEndGame.GetComponent<Button>();
-        _buttonEndGame.onClick.AddListener( Game.Instance.StopGame ) ;
+        //_buttonEndGame.onClick.AddListener( () =>Game.Instance.StopGame() ) ;
+        _buttonEndGame.onClick.AddListener(db);
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
         _buttonRestartGame.onClick.AddListener( GameSceneManager.Instance.LoadPlayingScene ) ;
     }
-    
-    
+
+
+    private static void db()
+    {
+        Debug.Log("hit");
+    }
     
     /**
      * reads a file and returns input as string
