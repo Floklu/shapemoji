@@ -56,6 +56,7 @@ public class GameTime : MonoBehaviour
         _buttonResume = buttonResume.GetComponent<Button>();
         _buttonResume.onClick.AddListener(TogglePauseMenu);
     }
+    
 
     /**
      * Update is called once per frame.
