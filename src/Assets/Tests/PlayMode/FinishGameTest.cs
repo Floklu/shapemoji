@@ -29,7 +29,7 @@ namespace Tests.PlayMode
             var gameTime = GameObject.Find("PlayingField").GetComponent<GameTime>();
             gameTime.SetFinishTime(10);
             yield return new WaitForSeconds(2);
-            Assert.IsTrue(gameTime.GetRemainingTime() == 8);
+            Assert.IsTrue(gameTime.GetTimeRemaining() == 8);
         }
 
         /**
