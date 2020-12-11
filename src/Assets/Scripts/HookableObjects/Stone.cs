@@ -25,16 +25,6 @@ public class Stone : HookableObject
     }
 
     /**
-     * OnTriggerExit2D is called when the Collider other has stopped touching the trigger.
-     *
-     * @param Collider2D other
-     */
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        _onDeselectParent = null;
-    }
-
-    /**
      * gets called by controller when WoundIn event is triggered. calls StoneToInventory
      *
      * @param inventory where stone is put to
