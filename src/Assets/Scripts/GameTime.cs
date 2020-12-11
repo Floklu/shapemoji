@@ -143,8 +143,8 @@ public class GameTime : MonoBehaviour
      *
      * @param time
      */
-    public void SetFinishTime(int time)
+    public void SetTimeLeft(int time)
     {
-        finishTime = time;
+        _timeLeft = time;
     }
 }
