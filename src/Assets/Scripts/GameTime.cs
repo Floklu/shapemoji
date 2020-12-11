@@ -90,13 +90,6 @@ public class GameTime : MonoBehaviour
         }
     }
 
-    /**
-     * Update elapsed time
-     */
-    private void OnTimerUpdate(object source, ElapsedEventArgs e)
-    {
-        currentTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-    }
 
     /**
      * find out remaining time until game end
@@ -138,7 +131,6 @@ public class GameTime : MonoBehaviour
     {
         if (GetRemainingTime() <= 0)
         {
-            timer.Enabled = false;
             GameSceneManager.Instance.LoadEndScene();
         }
     }
