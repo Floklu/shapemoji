@@ -112,9 +112,9 @@ public class GameTime : MonoBehaviour
      */
     private void TimeLeftIterator()
     {
-        var newtime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        _timeLeft += _timestamp - newtime;
-        _timestamp = newtime;
+        var newTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        _timeLeft += _timestamp - newTime;
+        _timestamp = newTime;
     }
 
 
