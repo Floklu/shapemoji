@@ -902,6 +902,8 @@ MonoBehaviour:
   scoreTeam1Text: {fileID: 113601917}
   scoreTeam2Text: {fileID: 2071365581}
   creditsText: {fileID: 72691918}
+  buttonEndGame: {fileID: 205599724}
+  buttonRestartGame: {fileID: 1476731261}
 --- !u!1 &1476731261
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Random = UnityEngine.Random;
 
@@ -103,7 +102,7 @@ public class Game : MonoBehaviour
     /**
      * stops and exits game
      */
-    private void StopGame()
+    public void StopGame()
     {
         // this quits the game in the unity editor
 #if UNITY_EDITOR
@@ -116,7 +115,7 @@ public class Game : MonoBehaviour
     /**
      * restart the game 
      */
-    private void RestartGame()
+    public void RestartGame()
     {
         GameSceneManager.Instance.LoadPlayingScene();
 
