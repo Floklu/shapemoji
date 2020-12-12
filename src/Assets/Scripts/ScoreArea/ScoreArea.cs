@@ -12,6 +12,8 @@ namespace ScoreArea
         [SerializeField] private GameObject teamScoreUI;
         [SerializeField] private GameObject button1;
         [SerializeField] private GameObject button2;
+        [SerializeField] private Sprite buttonOnSprite;
+        [SerializeField] private Sprite buttonOffSprite;
         private Toggle _button1;
         private Toggle _button2;
         private Camera _cam;
@@ -56,12 +58,12 @@ namespace ScoreArea
 
             _button1 = button1.GetComponent<Toggle>();
             _button1.onValueChanged.AddListener(delegate { TurnInEmoji(); });
-            _button1.onValueChanged.AddListener(delegate { ToggleColorOfButton(_button1); });
+            _button1.onValueChanged.AddListener(delegate { ToggleImageOfButton(_button1); });
             _button1.isOn = false;
 
             _button2 = button2.GetComponent<Toggle>();
             _button2.onValueChanged.AddListener(delegate { TurnInEmoji(); });
-            _button2.onValueChanged.AddListener(delegate { ToggleColorOfButton(_button2); });
+            _button2.onValueChanged.AddListener(delegate { ToggleImageOfButton(_button2); });
             _button2.isOn = false;
         }
 
@@ -220,20 +222,16 @@ namespace ScoreArea
          *
          * @param button Button to be changed
          */
-        private void ToggleColorOfButton(Toggle button)
+        private void ToggleImageOfButton(Toggle button)
         {
             var buttonColors = button.colors;
             if (button.isOn)
             {
-                buttonColors.normalColor = Color.green;
-                buttonColors.selectedColor = Color.green;
-                buttonColors.highlightedColor = Color.green;
+                button.image.overrideSprite = buttonOnSprite;
             }
             else
             {
-                buttonColors.normalColor = Color.red;
-                buttonColors.selectedColor = Color.red;
-                buttonColors.highlightedColor = Color.red;
+                button.image.overrideSprite = buttonOffSprite;
             }
 
             button.colors = buttonColors;
