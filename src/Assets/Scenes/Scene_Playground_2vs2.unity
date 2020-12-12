@@ -1102,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
         type: 3}
       propertyPath: m_Name
-      value: HarpoonBase (1)
+      value: HarpoonBase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bf26a46cfee3b48a56f3e8118fa221, type: 3}
@@ -2254,7 +2254,7 @@ PrefabInstance:
     - target: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
         type: 3}
       propertyPath: m_Name
-      value: HarpoonBase (1)
+      value: HarpoonBase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bf26a46cfee3b48a56f3e8118fa221, type: 3}
@@ -3333,7 +3333,7 @@ PrefabInstance:
     - target: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
         type: 3}
       propertyPath: m_Name
-      value: HarpoonBase (1)
+      value: HarpoonBase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bf26a46cfee3b48a56f3e8118fa221, type: 3}
@@ -6010,7 +6010,7 @@ PrefabInstance:
     - target: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
         type: 3}
       propertyPath: m_Name
-      value: HarpoonBase (1)
+      value: HarpoonBase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6bf26a46cfee3b48a56f3e8118fa221, type: 3}
