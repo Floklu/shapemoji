@@ -48,11 +48,11 @@ public class EndScreen : MonoBehaviour
         scoreTeam1Text.text += "\n \n" + scoreTeam1.ToString() + "P";
         scoreTeam2Text.text += "\n \n" + scoreTeam2.ToString() + "P";
         creditsText.text += "\n" + ReadTextFile("Assets/Media/Text/credits.txt");
-        
+
         _buttonEndGame = buttonEndGame.GetComponent<Button>();
-        _buttonEndGame.onClick.AddListener( () =>Game.Instance.StopGame() ) ;
+        _buttonEndGame.onClick.AddListener(() => Game.Instance.StopGame());
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
-        _buttonRestartGame.onClick.AddListener( GameSceneManager.Instance.LoadPlayingScene ) ;
+        _buttonRestartGame.onClick.AddListener(GameSceneManager.Instance.LoadCurrentScene);
     }
 
 
