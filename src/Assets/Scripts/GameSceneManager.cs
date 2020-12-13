@@ -47,4 +47,13 @@ public class GameSceneManager
         ScoreTeam2 = scoreArea2.TeamScore;
         SceneManager.LoadScene("Scenes/Scene_End");
     }
+
+    /**
+     * Loads the 1vs1 Playing Scene
+     */
+    public void Load1vs1PlayingScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Scenes/Scene_Playground_1vs1");
+    }
 }
