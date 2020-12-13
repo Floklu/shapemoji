@@ -56,7 +56,7 @@ public class GameSceneManager
     public void LoadPlayingScene1vs1()
     {
         Time.timeScale = 1;
-        playingScene = "Scene_Playground_1vs1";
+        playingScene = "Scenes/Scene_Playground_1vs1";
         SceneManager.LoadScene("Scenes/Scene_Playground_1vs1");
     }
 
