@@ -9,6 +9,7 @@ public class GameSceneManager
     private static GameSceneManager instance;
     private ScoreArea.ScoreArea scoreArea1;
     private ScoreArea.ScoreArea scoreArea2;
+    private string playingScene;
 
     public static GameSceneManager Instance => GetInstance();
 
@@ -33,6 +34,7 @@ public class GameSceneManager
     public void LoadPlayingScene2vs2()
     {
         Time.timeScale = 1;
+        playingScene = "Scenes/Scene_Playground_2vs2";
         SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
     }
 
@@ -54,6 +56,7 @@ public class GameSceneManager
     public void LoadPlayingScene1vs1()
     {
         Time.timeScale = 1;
+        playingScene = "Scene_Playground_1vs1";
         SceneManager.LoadScene("Scenes/Scene_Playground_1vs1");
     }
 
@@ -63,6 +66,6 @@ public class GameSceneManager
     public void LoadCurrentScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(playingScene);
     }
 }

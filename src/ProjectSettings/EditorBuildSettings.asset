@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_Playground_2vs2.unity
     guid: 29a1680fe20a9ae4f81caf08f3e692cb
   - enabled: 1
+    path: Assets/Scenes/Scene_Playground_1vs1.unity
+    guid: 11c44d23f40c0e3489b82f3fc4558732
+  - enabled: 1
     path: Assets/Scenes/Scene_End.unity
     guid: e661afc390aae42449e22be2370c0288
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
