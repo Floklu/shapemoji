@@ -8,9 +8,17 @@ public class StartMenu : MonoBehaviour
     /**
      * Run menu option: start game
      */
-    public void StartGame()
+    public void StartGame2vs2()
     {
-        GameSceneManager.Instance.LoadPlayingScene();
+        GameSceneManager.Instance.LoadPlayingScene2vs2();
+    }
+
+    /**
+     * Starts the 1vs1 game
+     */
+    public void StartGame1vs1()
+    {
+        GameSceneManager.Instance.LoadPlayingScene1vs1();
     }
 
     /**
@@ -20,5 +28,4 @@ public class StartMenu : MonoBehaviour
     {
         Game.Instance.StopGame();
     }
-    
 }
