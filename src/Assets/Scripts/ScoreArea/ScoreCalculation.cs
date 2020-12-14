@@ -90,10 +90,10 @@ namespace ScoreArea
         {
             // emoji size must not be zero!
             if (analyzed.EmojiCovered + analyzed.EmojiUncovered < 1) return 0;
-            var score = 200 * (analyzed.EmojiCovered - analyzed.BackgroundCovered) /
-                (analyzed.EmojiCovered + analyzed.EmojiUncovered) - 100;
+            int score =(int) ( 150 * (analyzed.EmojiCovered - 0.7 * analyzed.BackgroundCovered) /
+                (analyzed.EmojiCovered + analyzed.EmojiUncovered) - 50);
             // do not loose more then 100 points per emoji
-            if (score < -100) score = -100;
+            if (score < -50) score = -50;
             return score;
         }
     }
