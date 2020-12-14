@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Lean.Touch;
+﻿using Lean.Touch;
 using UnityEngine;
 
+/**
+ * helper class for lean touch library interaction
+ */
 public class LeanHandler 
 {
     /**

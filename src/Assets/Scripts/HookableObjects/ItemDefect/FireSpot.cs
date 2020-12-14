@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/**
+ * dummy class to be used in GetComponentInChilds
+ */
 public class FireSpot : MonoBehaviour
-{
-
-}
+{}
