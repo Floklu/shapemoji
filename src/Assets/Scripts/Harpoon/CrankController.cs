@@ -55,8 +55,7 @@ namespace Harpoon
         public void EnableController(bool status)
         {
             enabled = status;
-            if (_rotatableHandler == null) 
-                _rotatableHandler = GetComponent<RotatableHandler>(); 
+            if (_rotatableHandler == null) _rotatableHandler = GetComponent<RotatableHandler>(); 
             _rotatableHandler.enabled = status;
         }
 
