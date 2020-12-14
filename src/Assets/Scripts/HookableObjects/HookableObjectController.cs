@@ -151,7 +151,7 @@ public static class HookableObjectController
             // if there is a reason to hook stone, harpoon controller will return true
             if (harpoonController.NotifyCollisionWithHookableObject(hookableObject, projectileGameObject))
             {
-                GameObject.Find("StoneSpawner").GetComponent<StoneSpawner>().DeleteHookableObject(hookableObject);
+                GameObject.Find("StoneSpawner").GetComponent<HookableObjectSpawner>().DeleteHookableObject(hookableObject);
                 hookableObject.SetTransformParent(projectileGameObject.transform);
                 hookableObject.SetLayerToDraggableLayer();
                 //parent not needed right now
@@ -284,6 +284,8 @@ public static class HookableObjectController
      */
     public static void ActivateItem(Item item)
     {
+        item.OnActivate();
+        item.DestroyHookableObject();
     }
 
     /**
