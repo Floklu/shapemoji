@@ -21,7 +21,8 @@ public class GameTime : MonoBehaviour
     private Button _buttonViewCredits;
     
     [SerializeField] private List<GameObject> playerHarpoons;
-
+    private readonly List<HarpoonShotHandler> _shootHandlers = new List<HarpoonShotHandler>();
+    
     private bool _isPaused;
     private Text _timeCountdownText;
     private int _timeLeft;
@@ -44,6 +45,9 @@ public class GameTime : MonoBehaviour
         _timeCountdownText.text = "";
         _timeLeft = finishTime + 5;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        
+        // load players
+        LoadPlayers();
         
         // disable players
         SetPlayers(false);
@@ -99,15 +103,30 @@ public class GameTime : MonoBehaviour
         }
     }
 
-    /**
-     * Enable/Disable Player Harpoons
-     * @param state true -> enabled, false -> disabled
-     */
-    private void SetPlayers(bool state)
+    private void LoadPlayers()
     {
         foreach (GameObject harpoon in playerHarpoons)
         {
-            harpoon.gameObject.GetComponent<HarpoonShotHandler>().enabled = state;
+            _shootHandlers.Add(harpoon.gameObject.GetComponent<HarpoonShotHandler>());
+        }
+    }
+    
+    /**
+     * Enable/Disable Player Harpoons to shoot
+     * @param enable true -> enable player harpoons
+     */
+    private void SetPlayers(bool enable)
+    {
+        foreach (HarpoonShotHandler handler in _shootHandlers)
+        {
+            if (enable)
+            {
+                handler.OnEnable();
+            }
+            else
+            {
+                handler.OnDisable();
+            }
         }
     }
     
