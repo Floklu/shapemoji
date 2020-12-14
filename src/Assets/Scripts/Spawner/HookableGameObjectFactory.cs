@@ -54,7 +54,7 @@ namespace Spawner
 
             //create item
             var item = CreateHookableGameObject(preFab, x, y);
-            item.AddComponent(typeof(Item));
+            // item.AddComponent(typeof(Item)); specific component should be put into item prefab
 
             return item;
         }

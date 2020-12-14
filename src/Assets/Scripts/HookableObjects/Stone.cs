@@ -130,4 +130,9 @@ public class Stone : HookableObject
         var leanSelectable = gameObject.GetComponent<LeanSelectable>();
         leanSelectable.enabled = true;
     }
+
+    public override bool IsStone()
+    {
+        return true;
+    }
 }

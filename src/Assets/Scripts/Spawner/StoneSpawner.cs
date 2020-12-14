@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Spawner
 {
@@ -11,18 +13,19 @@ namespace Spawner
     public class StoneSpawner : MonoBehaviour
     {
         [FormerlySerializedAs("MaxStones")] public int maxStones;
+        public int maxItems;
 
         public HookableGameObjectFactory factory;
         public List<GameObject> spawnZones;
 
-        private readonly List<GameObject> _spawnPlaces;
+        private readonly List<SpawnPlace> _spawnPlaces;
 
         /**
          * constructor of class StoneSpawner
          */
         public StoneSpawner()
         {
-            _spawnPlaces = new List<GameObject>();
+            _spawnPlaces = new List<SpawnPlace>();
         }
 
         private void Start()
@@ -37,31 +40,31 @@ namespace Spawner
         public void StartGeneration()
         {
             foreach (var child in spawnZones.SelectMany(zone => zone.transform.Cast<Transform>()))
-                _spawnPlaces.Add(child.gameObject);
+                _spawnPlaces.Add(child.gameObject.GetComponent<SpawnPlace>());
 
             for (var i = 0; i < maxStones; i++) CreateRandomStone();
         }
 
         /**
-         * * deletes a stone at given position
+         * * deletes a HookableObject at given position
          * *
-         * * @param stone delete reference of given stone to free position
+         * * @param hookableObject delete reference of given hookableObject to free position
          */
         public void DeleteHookableObject(HookableObject hookableObject)
         {
             var places = _spawnPlaces
-                .Where(ContainsStone)
+                .Where(ContainsHookableObject)
                 .Select(x => x.GetComponent<SpawnPlace>())
-                .Where(x => x.stone.Equals(hookableObject.gameObject)).ToList();
-            places.ForEach(x => x.stone = null);
+                .Where(x => x.hookableObject.Equals(hookableObject)).ToList();
+            places.ForEach(x => x.hookableObject = null);
         }
 
         /**
-         * checks, if Spawner is at maximum capacity
+         * checks, if Spawner is at maximum capacity for stones
          * 
          * @returns true, if spawner cannot spawn any new stones
          */
-        public bool IsFull()
+        public bool ContainsMaxAmountStones()
         {
             var places = _spawnPlaces.Where(ContainsStone).Select(x => 1).Sum();
             return places == maxStones;
@@ -73,21 +76,32 @@ namespace Spawner
          */
         public void CreateRandomStone()
         {
-            if (IsFull()) return;
+            if (ContainsMaxAmountStones()) return;
 
             var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
 
-            if (places.Count < 1) return;
+            CreateHookableObject(places, new Func<float, float, GameObject>(factory.CreateStone));
+        }
 
-            var random = Random.Range(0, places.Count);
-            var place = places[random];
+        /**
+         * creates a hookable Object on a random place of a list of unoccupied spawnPlaces
+         *
+         * @param spawnPlaces list of spawnPlaces
+         */
+        private void CreateHookableObject(List<SpawnPlace> spawnPlaces, Delegate spawnHookableObject)
+        {
+            if (spawnPlaces.Count < 1) return;
+
+            var random = Random.Range(0, spawnPlaces.Count);
+            var place = spawnPlaces[random];
             var spawn = place.GetComponent<SpawnPlace>();
 
             var spawnPosition = place.transform.position;
             var x = spawnPosition.x;
             var y = spawnPosition.y;
-            var stone = factory.CreateStone(x, y);
-            spawn.stone = stone;
+            //var stone = factory.CreateStone(x, y);
+            var hookableObject = (GameObject)spawnHookableObject.DynamicInvoke(x, y);
+            spawn.hookableObject = hookableObject.GetComponent<HookableObject>();
         }
 
         /**
@@ -96,10 +110,34 @@ namespace Spawner
          * @param place chosen spawn place for a stone
          * @returns true, if the gameObject contains a SpawnPlace and it contains a stone
          */
-        private static bool ContainsStone(GameObject place)
+        private static bool ContainsStone(SpawnPlace place)
         {
-            var spawn = place.GetComponent<SpawnPlace>();
-            return spawn != null && spawn.stone != null;
+            //var spawn = place.GetComponent<SpawnPlace>();
+            return place != null && place.ContainsStone();
+        }
+        
+        /**
+         * determines, if the chosen GameObject already contains an item
+         * 
+         * @param place chosen spawn place for a item
+         * @returns true, if the gameObject contains a SpawnPlace and it contains a item
+         */
+        private static bool ContainsItem(SpawnPlace place)
+        {
+            //var spawn = place.GetComponent<SpawnPlace>();
+            return place != null && place.ContainsItem();
+        }
+        
+        /**
+         * determines, if the chosen GameObject already contains a HookableObject
+         * 
+         * @param place chosen spawn place for a HookableObject
+         * @returns true, if the gameObject contains a SpawnPlace and it contains a HookableObject
+         */
+        private static bool ContainsHookableObject(SpawnPlace place)
+        {
+            //var spawn = place.GetComponent<SpawnPlace>();
+            return place != null && (place.ContainsStone() || place.ContainsItem()) ;
         }
     }
 }
