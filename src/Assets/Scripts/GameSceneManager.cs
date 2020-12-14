@@ -66,7 +66,14 @@ public class GameSceneManager
     public void LoadCurrentScene()
     {
         Time.timeScale = 1;
-        // doesn't work if the 2vs2 or 1vs1 is started on it's own in editor(without start menu)
-        SceneManager.LoadScene(playingScene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    /**
+     * Loads the Start Menu Scene
+     */
+    public void LoadStartMenuScene()
+    {
+        SceneManager.LoadScene("Scenes/Start_Menu");
     }
 }

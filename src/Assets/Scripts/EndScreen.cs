@@ -52,7 +52,7 @@ public class EndScreen : MonoBehaviour
         _buttonEndGame = buttonEndGame.GetComponent<Button>();
         _buttonEndGame.onClick.AddListener(() => Game.Instance.StopGame());
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
-        _buttonRestartGame.onClick.AddListener(GameSceneManager.Instance.LoadCurrentScene);
+        _buttonRestartGame.onClick.AddListener(GameSceneManager.Instance.LoadStartMenuScene);
     }
 
 
