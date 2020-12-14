@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameTime : MonoBehaviour
 {
     [SerializeField] private int finishTime;
+    [SerializeField] private int countdownTime;
     [SerializeField] private GameObject textTimeCountdown;
     [SerializeField] private GameObject textTimeRemaining1;
     [SerializeField] private GameObject textTimeRemaining2;
@@ -24,6 +25,7 @@ public class GameTime : MonoBehaviour
     private readonly List<HarpoonShotHandler> _shootHandlers = new List<HarpoonShotHandler>();
     
     private bool _isPaused;
+    private bool _playersDisabled;
     private Text _timeCountdownText;
     private int _timeLeft;
     private Text _timeRemainingText1;
@@ -43,7 +45,7 @@ public class GameTime : MonoBehaviour
         _timeRemainingText1 = textTimeRemaining1.GetComponent<Text>();
         _timeRemainingText2 = textTimeRemaining2.GetComponent<Text>();
         _timeCountdownText.text = "";
-        _timeLeft = finishTime + 5;
+        _timeLeft = finishTime + countdownTime;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         
         // load players
@@ -51,7 +53,7 @@ public class GameTime : MonoBehaviour
         
         // disable players
         SetPlayers(false);
-        
+
         //set state not paused and build pause menu
         _isPaused = false;
         pauseMenu.SetActive(false);
@@ -128,6 +130,7 @@ public class GameTime : MonoBehaviour
                 handler.OnDisable();
             }
         }
+        _playersDisabled = !enable;
     }
     
     /**
@@ -145,15 +148,22 @@ public class GameTime : MonoBehaviour
             _timeRemainingText1.text = "";
             _timeRemainingText2.text = "";
         }
-        
-        // enable player harpoons after countdown at the beginning
-        if (_timeLeft == finishTime)
+        else
         {
-            SetPlayers(true);
-            _timeCountdownText.text = "";
+            // occurs only once in the end of the countdown during game start
+            if (_playersDisabled)
+            {
+                SetPlayers(true);
+                _timeCountdownText.text = "";
+            }
         }
+        
         // start countdown in the end
-        if (_timeLeft <= 5) _timeCountdownText.text = _timeLeft.ToString();
+        if (_timeLeft <= countdownTime)
+        {
+            _timeCountdownText.text = _timeLeft.ToString();
+
+        }
         //end game
         if (_timeLeft <= 0) GameSceneManager.Instance.LoadEndScene();
     }

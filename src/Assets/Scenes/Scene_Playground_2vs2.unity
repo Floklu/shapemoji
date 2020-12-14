@@ -1691,6 +1691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishTime: 180
+  countdownTime: 5
   textTimeCountdown: {fileID: 1985257376}
   textTimeRemaining1: {fileID: 1105659365}
   textTimeRemaining2: {fileID: 1672327677}
