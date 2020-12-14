@@ -193,6 +193,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3551211746315797961, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
         type: 3}
+      propertyPath: spawnZones.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551211746315797961, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
+        type: 3}
       propertyPath: spawnZones.Array.data[0]
       value: 
       objectReference: {fileID: 1214604815}
@@ -211,6 +216,21 @@ PrefabInstance:
       propertyPath: spawnZones.Array.data[3]
       value: 
       objectReference: {fileID: 945708040}
+    - target: {fileID: 3551211746315797961, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
+        type: 3}
+      propertyPath: spawnZones.Array.data[4]
+      value: 
+      objectReference: {fileID: 652472333}
+    - target: {fileID: 3551211746315797961, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
+        type: 3}
+      propertyPath: maxItems
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551211746315797961, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
+        type: 3}
+      propertyPath: percentageItemSpawn
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3551211746315797964, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
         type: 3}
       propertyPath: m_Name
@@ -220,6 +240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: preFabsStones.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551211746315797966, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
+        type: 3}
+      propertyPath: preFabsItems.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3551211746315797966, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
         type: 3}
@@ -256,6 +281,12 @@ PrefabInstance:
       propertyPath: preFabsStones.Array.data[5]
       value: 
       objectReference: {fileID: 6848690935837112765, guid: d937a5bef76810d4f94742421f551c7e,
+        type: 3}
+    - target: {fileID: 3551211746315797966, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
+        type: 3}
+      propertyPath: preFabsItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 2145019794092654562, guid: c4003869f71d22a4192ead4d651cd099,
         type: 3}
     - target: {fileID: 3551211746315797967, guid: f18c6a614ca83a4448cd9dd833a3f8f5,
         type: 3}
@@ -2087,6 +2118,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608563898}
   m_CullTransparentMesh: 0
+--- !u!1 &652472333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1118845313399429149, guid: 4064168966897cc42ad82c9170ccf049,
+    type: 3}
+  m_PrefabInstance: {fileID: 357066734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &720725279
 PrefabInstance:
   m_ObjectHideFlags: 0

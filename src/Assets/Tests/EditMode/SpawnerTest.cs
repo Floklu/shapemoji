@@ -50,7 +50,7 @@ namespace Tests.EditMode
         public IEnumerator SpawnerTestIfAllStonesSpawned()
         {
             var spawnPlaces = Object.FindObjectsOfType<GameObject>().Where(x => x.name.Equals("SpawnPlace"));
-            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
+            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<HookableObjectSpawner>();
             Assert.NotNull(spawner);
             spawner.StartGeneration();
             
@@ -71,7 +71,7 @@ namespace Tests.EditMode
         public IEnumerator SpawnerTestDeleteStone()
         {
             var spawnPlaces = Object.FindObjectsOfType<GameObject>().Where(x => x.name.Equals("SpawnPlace"));
-            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
+            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<HookableObjectSpawner>();
             Assert.NotNull(spawner);
             Assert.IsFalse(spawner.ContainsMaxAmountStones());
             spawner.StartGeneration();

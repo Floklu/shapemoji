@@ -16,6 +16,12 @@ public class DefectItem : Item
      */
     public override void OnWoundIn(Inventory inventory)
     {
-        throw new NotImplementedException(); //TODO trigger defect specific behaviour
+        base.OnWoundIn(inventory);
+        //TODO get harpoon to deactivate here
+    }
+
+    public override void OnActivate()
+    {
+        //TODO deactivate harpoon here
     }
 }

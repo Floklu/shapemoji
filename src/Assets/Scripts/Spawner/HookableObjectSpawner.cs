@@ -10,10 +10,11 @@ namespace Spawner
     /**
     * Class, which manages the available stones on the playground
     */
-    public class StoneSpawner : MonoBehaviour
+    public class HookableObjectSpawner : MonoBehaviour
     {
-        [FormerlySerializedAs("MaxStones")] public int maxStones;
-        public int maxItems;
+        [Tooltip("Defines the maximum number of stones on the playing field")][FormerlySerializedAs("MaxStones")] public int maxStones;
+        [Tooltip("Defines the maximum number of Items on the playing field")] public int maxItems;
+        [Tooltip("Determines the probability in percent to spawn an item")] public float percentageItemSpawn;
 
         public HookableGameObjectFactory factory;
         public List<GameObject> spawnZones;
@@ -23,7 +24,7 @@ namespace Spawner
         /**
          * constructor of class StoneSpawner
          */
-        public StoneSpawner()
+        public HookableObjectSpawner()
         {
             _spawnPlaces = new List<SpawnPlace>();
         }
@@ -32,6 +33,7 @@ namespace Spawner
         {
             StartGeneration();
             InvokeRepeating(nameof(CreateRandomStone), 1f, 1f);
+            InvokeRepeating(nameof(CreateRandomItem), 1f, 1f);
         }
 
         /**
@@ -67,7 +69,18 @@ namespace Spawner
         public bool ContainsMaxAmountStones()
         {
             var places = _spawnPlaces.Where(ContainsStone).Select(x => 1).Sum();
-            return places == maxStones;
+            return places >= maxStones;
+        }
+
+        /**
+         * checks, if Spawner is at maximum capacity for items
+         *
+         * @returns true, if spawner cannot spawn any new items
+         */
+        public bool ContainsMaxAmountItems()
+        {
+            var places = _spawnPlaces.Where(ContainsItem).Select(x=>1).Sum();
+            return places >= maxItems;
         }
 
 
@@ -78,9 +91,21 @@ namespace Spawner
         {
             if (ContainsMaxAmountStones()) return;
 
-            var places = _spawnPlaces.Where(plc => !ContainsStone(plc)).ToList();
+            var places = _spawnPlaces.Where(plc => !plc.isItemContainer && !ContainsStone(plc)).ToList();
 
             CreateHookableObject(places, new Func<float, float, GameObject>(factory.CreateStone));
+        }
+
+        public void CreateRandomItem()
+        {
+            var randomSpawn = Random.Range(0, 100);
+            if (randomSpawn < percentageItemSpawn)
+            {
+                if (ContainsMaxAmountItems()) return;
+                var places = _spawnPlaces.Where(plc => plc.isItemContainer && !ContainsItem(plc)).ToList();
+                CreateHookableObject(places, new Func<float, float, GameObject>(factory.CreateItem));    
+            }
+            
         }
 
         /**

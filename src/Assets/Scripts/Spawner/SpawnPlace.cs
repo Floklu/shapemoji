@@ -10,6 +10,7 @@ namespace Spawner
     {
         //keeps track of a stone
         public HookableObject hookableObject;
+        public bool isItemContainer;
 
         /**
          * checks, if spawn place contains Stone
