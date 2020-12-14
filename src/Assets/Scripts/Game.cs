@@ -11,8 +11,7 @@ public class Game : MonoBehaviour
 {
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
-    
-    
+
 
     // Unity Event function, called when component is enabled
     private void OnEnable()
@@ -67,16 +66,14 @@ public class Game : MonoBehaviour
      */
     public void RestartGame()
     {
-        GameSceneManager.Instance.LoadPlayingScene();
-
+        GameSceneManager.Instance.LoadCurrentScene();
     }
-    
+
     /**
      * jump to end screen to show credits
      */
     private void ViewCredits()
     {
         GameSceneManager.Instance.LoadEndScene();
-
     }
 }
