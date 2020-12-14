@@ -24,6 +24,10 @@ public class ItemDefect : Item
         _numberOfFireSpots = _fireSpots.Length;
         _nextSpawnTime = Time.time + spawnRate;
         _fireActive = true;
+        foreach (var fireSpot in _fireSpots)
+        {    
+            fireSpot.gameObject.SetActive(true);
+        }
 
     }
 
