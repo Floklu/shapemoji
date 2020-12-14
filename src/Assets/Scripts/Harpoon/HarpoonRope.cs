@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace Harpoon
@@ -44,7 +44,7 @@ namespace Harpoon
 
             ropeScale.x *= requiredRopeLength / currentRopeLength;
             _ropeTransform.position = ropeCenter;
-
+            //must not get zero as future scaling will be zero and rope invisible
             if (ropeScale.x < 0.0001f)
             {
                 ropeScale.x = 0.0001f;
