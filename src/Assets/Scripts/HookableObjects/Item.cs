@@ -25,6 +25,14 @@ public class Item : HookableObject
      */
     public override void OnWoundIn(Inventory inventory)
     {
+        HookableObjectController.ActivateItem(this);
+    }
+
+    /**
+     * Handles behaviour, after item has been activated
+     */
+    public virtual void OnActivate()
+    {
         throw new NotImplementedException();
     }
 }

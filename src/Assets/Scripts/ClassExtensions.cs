@@ -18,7 +18,7 @@ public static class ClassExtensions
      */
     public static bool CollidesWithGameObject(this LeanFinger finger, Collider2D collider, Camera camera)
     {
-        try //Abfangen, wenn für Kamera keine gültige Referenz vorliegt. 
+        try //catch, if no valid reference to camera exists 
         {
             if (camera is null) return false;
             var position = camera.ScreenToWorldPoint(finger.ScreenPosition);

@@ -6,6 +6,10 @@ using UnityEngine;
  */
 public class Player : MonoBehaviour
 {
+    public GameObject inventory;
+    public GameObject workshop;
+    public GameObject itemDefect;
+    
     private Inventory _inventory;
     private List<Stone> _stones;
     private Workshop _workshop;
@@ -14,8 +18,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        _inventory = gameObject.GetComponent<Inventory>();
-        _workshop = gameObject.GetComponent<Workshop>();
+        _inventory = inventory.GetComponent<Inventory>();
+        _workshop = workshop.GetComponent<Workshop>();
         _stones = new List<Stone>();
     }
 
@@ -64,5 +68,13 @@ public class Player : MonoBehaviour
     {
         //will cause null pointer exception if contains called and some stones are null if deleted?
         return _stones.Contains(stone);
+    }
+
+    /**
+     * Ignites the harpoon of the player and temporarily disables the functionality
+     */
+    public void IgniteHarpoon()
+    {
+        if (itemDefect != null) itemDefect.SetActive(true);
     }
 }
