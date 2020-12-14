@@ -72,7 +72,9 @@ public class Stone : HookableObject
      */
     public void OnDeselectOnUp()
     {
-        if (_onDeselectParent != null && _onDeselectParent != Parent.GetComponent<CanHoldHookableObject>())
+        if (_onDeselectParent != null && _onDeselectParent != Parent.GetComponent<CanHoldHookableObject>() &&
+            HookableObjectController.IsStoneInColliderOfOnDeselectParent(this, _onDeselectParent)
+        )
         {
             HookableObjectController.RemoveStoneFromCanHoldHookableObject(this, Parent);
             HookableObjectController.OnDeselectOnCanHoldHookableObject(this, _onDeselectParent);

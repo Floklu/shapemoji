@@ -42,6 +42,7 @@ namespace ScoreArea
         {
             _stones = new List<Stone>();
             _collider = gameObject.GetComponent<BoxCollider2D>();
+            _collider2D = _collider;
             _player = gameObject.GetComponentInParent<Player>();
             _team = gameObject.GetComponentInParent<Team>();
             _cam = Camera.main;
