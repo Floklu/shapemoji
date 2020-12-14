@@ -146,4 +146,13 @@ public class GameTime : MonoBehaviour
     {
         _timeLeft = time;
     }
+
+    /**
+     * Is used to reset Game Time
+     */
+    public void ResetGameTime()
+    {
+        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        enabled = true;
+    }
 }
