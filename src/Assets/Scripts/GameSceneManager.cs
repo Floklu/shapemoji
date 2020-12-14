@@ -9,6 +9,7 @@ public class GameSceneManager
     private static GameSceneManager instance;
     private ScoreArea.ScoreArea scoreArea1;
     private ScoreArea.ScoreArea scoreArea2;
+    private string playingScene;
 
     public static GameSceneManager Instance => GetInstance();
 
@@ -30,9 +31,10 @@ public class GameSceneManager
     /**
      * Loads the Playing Scene and initializes the team scores
      */
-    public void LoadPlayingScene()
+    public void LoadPlayingScene2vs2()
     {
         Time.timeScale = 1;
+        playingScene = "Scenes/Scene_Playground_2vs2";
         SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
     }
 
@@ -46,5 +48,32 @@ public class GameSceneManager
         ScoreTeam1 = scoreArea1.TeamScore;
         ScoreTeam2 = scoreArea2.TeamScore;
         SceneManager.LoadScene("Scenes/Scene_End");
+    }
+
+    /**
+     * Loads the 1vs1 Playing Scene
+     */
+    public void LoadPlayingScene1vs1()
+    {
+        Time.timeScale = 1;
+        playingScene = "Scenes/Scene_Playground_1vs1";
+        SceneManager.LoadScene("Scenes/Scene_Playground_1vs1");
+    }
+
+    /**
+     * Loads the current Scene
+     */
+    public void LoadCurrentScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    /**
+     * Loads the Start Menu Scene
+     */
+    public void LoadStartMenuScene()
+    {
+        SceneManager.LoadScene("Scenes/Start_Menu");
     }
 }

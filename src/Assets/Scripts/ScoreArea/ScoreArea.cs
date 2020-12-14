@@ -14,6 +14,7 @@ namespace ScoreArea
         [SerializeField] private GameObject button2;
         [SerializeField] private Sprite buttonOnSprite;
         [SerializeField] private Sprite buttonOffSprite;
+        [SerializeField] private bool oneVsOne;
         private Toggle _button1;
         private Toggle _button2;
         private Camera _cam;
@@ -115,14 +116,13 @@ namespace ScoreArea
             _stones.Add(stone);
             var stonesCount = _stones.Count;
             //emoji has layer -5, unadded stone layer 1000
-            HookableObjectController.SetOrderInLayer(stone, stonesCount+100);
+            HookableObjectController.SetOrderInLayer(stone, stonesCount + 100);
             //lock n-1th stone and deactivate collider
             if (stonesCount > 1)
             {
                 var oldStone = _stones[stonesCount - 2];
                 HookableObjectController.DisableStoneDraggable(oldStone);
                 HookableObjectController.SetHookableObjectColliderState(oldStone, false);
-                
             }
         }
 
@@ -210,10 +210,21 @@ namespace ScoreArea
          */
         private void TurnInEmoji()
         {
-            if (_button1.isOn && _button2.isOn)
+            if (oneVsOne)
             {
-                CreateScorableView();
-                StartCoroutine(_scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
+                if (_button1.isOn)
+                {
+                    CreateScorableView();
+                    StartCoroutine(_scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
+                }
+            }
+            else
+            {
+                if (_button1.isOn && _button2.isOn)
+                {
+                    CreateScorableView();
+                    StartCoroutine(_scoreCalculation.AnalyzeScoreableView(this, _renderer, _cam));
+                }
             }
         }
 
@@ -239,8 +250,12 @@ namespace ScoreArea
 
         private void ResetScoreArea()
         {
+            if (!oneVsOne)
+            {
+                _button2.isOn = false;
+            }
+
             _button1.isOn = false;
-            _button2.isOn = false;
 
             foreach (var stone in _stones)
             {
