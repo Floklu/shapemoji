@@ -51,6 +51,18 @@ namespace Harpoon
             HookableObjectController.AddHarpoonController(this);
         }
 
+        private void OnEnable()
+        {
+            _shotHandler = GetComponent<HarpoonShotHandler>();
+            _shotHandler.enabled = true;
+        }
+        
+        private void OnDisable()
+        {
+            _shotHandler = GetComponent<HarpoonShotHandler>();
+            _shotHandler.enabled = false;
+        }
+
         /**
          * shoots the projectile from the cannon
          */
