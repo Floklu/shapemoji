@@ -1,14 +1,15 @@
-using System;
+using System.Linq;
 using UnityEngine;
 
 /**
  * class DefectItem inherited from Item
  * 
- * future: will hold some
+ * activates defect on random harpoon on other team
  */
 public class DefectItem : Item
 {
-
+    private Player _player;
+    
     /**
      * gets called by controller on wound in event
      * 
@@ -16,12 +17,20 @@ public class DefectItem : Item
      */
     public override void OnWoundIn(Inventory inventory)
     {
+        //get first instance of list of teams, which doesn't contain the given inventory
+        var team = Game.Instance.Teams.First(x => !x.Players.Any(y => y.GetInventory().Equals(inventory)));
+        
+        if (team != null)
+        {
+            var randomPlayer = Random.Range(0, team.Players.Count);
+            _player = team.Players[randomPlayer];
+        }
+        
         base.OnWoundIn(inventory);
-        //TODO get harpoon to deactivate here
     }
 
     public override void OnActivate()
     {
-        //TODO deactivate harpoon here
+        if (_player != null) _player.IgniteHarpoon();
     }
 }

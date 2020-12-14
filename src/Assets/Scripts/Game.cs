@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,8 +12,16 @@ public class Game : MonoBehaviour
 {
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
+    [SerializeField] private List<GameObject> teams;
 
+    private List<Team> _teams;
+    public List<Team> Teams => _teams;
 
+    private void Start()
+    {
+        _teams = teams.Select(x => x.GetComponent<Team>()).ToList();
+    }
+    
     // Unity Event function, called when component is enabled
     private void OnEnable()
     {

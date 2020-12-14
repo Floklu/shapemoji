@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /**
@@ -6,6 +7,10 @@ using UnityEngine;
  */
 public class Team : MonoBehaviour
 {
+    public List<GameObject> players;
+    private List<Player> _players;
+    public List<Player> Players => _players;
+
     [SerializeField] private ScoreArea.ScoreArea ScoreArea;
 
     //private Player[] _players;
@@ -15,6 +20,7 @@ public class Team : MonoBehaviour
     {
         //_players = gameObject.GetComponents<Player>();
         _stones = new List<Stone>();
+        _players = players.Select(x => x.GetComponent<Player>()).ToList();
     }
 
     /**

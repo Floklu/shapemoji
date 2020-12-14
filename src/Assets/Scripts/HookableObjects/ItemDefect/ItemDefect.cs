@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemDefect : Item
 {
@@ -12,6 +10,18 @@ public class ItemDefect : Item
     private bool _fireActive;
     private float _nextSpawnTime;
     [SerializeField] private float spawnRate;
+    
+    /**
+     * Unity event, which will be invoked on ignition of the harpoon 
+     */
+    public UnityEvent OnIgnite { get { if (onIgnite == null) onIgnite = new UnityEvent(); return onIgnite; } } 
+    [SerializeField] private UnityEvent onIgnite;
+    
+    /**
+     * Unity event, which will be invoked when the fire is extinguished
+     */
+    public UnityEvent OnExtinguish { get { if (onExtinguish == null) onExtinguish = new UnityEvent(); return onExtinguish; } } 
+    [SerializeField] private UnityEvent onExtinguish;
 
     /**
      * init bubble and DefectItem
@@ -50,7 +60,22 @@ public class ItemDefect : Item
 
     }
 
-    
+    // Unity OnEnable Event
+    private void OnEnable()
+    {
+        _fireActive = true;
+        if (_fireSpots != null)
+            foreach (var fireSpot in _fireSpots)
+            {
+                fireSpot.gameObject.SetActive(true);
+            }
+    }
+
+    // Unity On Disable Event
+    private void OnDisable()
+    {
+        _fireActive = false;
+    }
 
     /**
      * deactivate component and set bubble to starting position
@@ -59,6 +84,7 @@ public class ItemDefect : Item
     {
         _bubble.SetPosition(_bubbleStartPos);
         gameObject.SetActive(false);
+        OnExtinguish.Invoke();
     }
 
     /**
@@ -69,6 +95,7 @@ public class ItemDefect : Item
     private void SetFireActive(FireSpot fireSpot)
     {
         fireSpot.gameObject.SetActive(true);
+        OnIgnite.Invoke();
     }
 
     /**

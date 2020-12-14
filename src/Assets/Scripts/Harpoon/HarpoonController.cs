@@ -77,7 +77,7 @@ namespace Harpoon
                 _cannonCollider.enabled = true;
                 _movingProjectile.SetVelocity(0);
 
-                _crankController.EnableController(true);
+                if (enabled) _crankController.EnableController(true);
 
                 //prepare windInProjectile functionality
                 _windInProjectile.ResetProjectile();
@@ -132,6 +132,37 @@ namespace Harpoon
             }
 
             return false;
+        }
+
+        private void OnEnable()
+        {
+            EnableController(true);
+        }
+
+        private void OnDisable()
+        {
+            EnableController(false);
+        }
+        
+        private void EnableController(bool status)
+        {
+            if (_rotatableHandler != null && _shotHandler != null)
+            {
+                if (!_isWoundIn)
+                {
+                    _rotatableHandler.enabled = status;
+                    _shotHandler.enabled = status;    
+                }
+                else
+                {
+                    if (_projectileShot)
+                    {
+                        _crankController.EnableController(status);    
+                    }
+                    
+                }
+
+            }
         }
 
         public void NotifyRemoveHookableObject(HookableObject hookableObject)
