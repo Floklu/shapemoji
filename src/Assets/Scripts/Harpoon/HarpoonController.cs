@@ -43,14 +43,10 @@ namespace Harpoon
             _windInProjectile = _projectileObj.GetComponent<WindInProjectile>();
             _cannonCollider.enabled = false;
             _crankController.EnableController(false);
-
-            _crankController.CrankRotationEvent += _windInProjectile.AddTravelDistance;
-            _rotatableHandler.RotationEvent += OnRotationEvent;
-            _shotHandler.ShotEvent += OnShotEvent;
-            _projectileCollision.CollisionEvent += ProjectileOnCollisionEvent;
+            
             HookableObjectController.AddHarpoonController(this);
         }
-
+        
         /**
          * shoots the projectile from the cannon
          */

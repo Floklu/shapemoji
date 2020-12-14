@@ -28,7 +28,7 @@ public class StartCountdownTime : MonoBehaviour
     /**
      * List of harpoon handlers
      */
-    [SerializeField] private List<HarpoonShotHandler> shootHandlers;
+    [SerializeField] private List<HarpoonController> harpoonControllers;
     /**
      * Time passed since start of countdown in seconds
      */
@@ -73,16 +73,9 @@ public class StartCountdownTime : MonoBehaviour
      */
     private void SetShootHandlers(bool enable)
     {
-        foreach (HarpoonShotHandler handler in shootHandlers)
+        foreach (HarpoonController controller in harpoonControllers)
         {
-            if (enable)
-            {
-                handler.OnEnable();
-            }
-            else
-            {
-                handler.OnDisable();
-            }
+            controller.enabled = enable;
         }
     }
 

@@ -20,13 +20,13 @@ namespace Harpoon
             _collider = GetComponent<Collider2D>();
         }
 
-        public void OnEnable()
+        private void OnEnable()
         {
             LeanTouch.OnFingerDown += OnFingerDown;
             LeanTouch.OnFingerUp += OnFingerUp;
         }
 
-        public void OnDisable()
+        private void OnDisable()
         {
             LeanTouch.OnFingerDown -= OnFingerDown;
             LeanTouch.OnFingerUp -= OnFingerUp;
