@@ -1,18 +1,55 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+/**
+ * water bubble to put out fire of HarpoonDefect
+ */
+public class Bubble : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private ItemDefect _parent;
+
+
+
+    
+    /**
+     * get correpsonding ItemDefectHandler
+     */
+    private void Start()
     {
-        
+        _parent = GetComponentInParent<ItemDefect>();
+    }
+    
+    /**
+     * initialize bubble and return starting position
+     */
+    public Vector3 InitBubble()
+    {
+        LeanHandler.MakeDraggable(this.gameObject);
+        return gameObject.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    /**
+     * sets position of bubble
+     *
+     * @param position Vector3D to set as position
+     */
+    public void SetPosition(Vector3 position)
     {
-        
+        gameObject.transform.position = position;
+    }
+    
+    
+    /**
+     * on collision with fire. Can only collide with fire as there are no other gameObjects in this collision layer.
+     *
+     * @param fire Collider2D of fireobjects
+     */
+    private void OnTriggerEnter2D(Collider2D fire){
+        if (fire.CompareTag("DefectFire")) // in case some players try to brake the game by colliding water bubbles
+        {
+            fire.gameObject.SetActive(false);
+            //trigger check if fires are all put out
+            _parent.CheckFireActive();
+        }
     }
 }
