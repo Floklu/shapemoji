@@ -51,6 +51,16 @@ namespace Harpoon
             HookableObjectController.AddHarpoonController(this);
         }
 
+        private void OnEnable()
+        {
+            EnableController(true);
+        }
+
+        private void OnDisable()
+        {
+            EnableController(false);
+        }
+
         /**
          * shoots the projectile from the cannon
          */
@@ -107,7 +117,7 @@ namespace Harpoon
 
         /**
          * rotates Harpoon to certain degree
-         *
+         * 
          * @param rotation rotates object to chosen degree
          */
         public void RotateHarpoon(float rotation)
@@ -117,12 +127,12 @@ namespace Harpoon
 
         /**
          * called on collision of HookableObject
-         *
+         * 
          * returns false if an object is already hooked
          * 
          * @param hookableObject: object which collided
          * @param projectile which had collision
-        */
+         */
         public bool NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject collidedObject)
         {
             if (collidedObject.Equals(_projectileObj) && _objectHooked == null)
@@ -134,16 +144,11 @@ namespace Harpoon
             return false;
         }
 
-        private void OnEnable()
-        {
-            EnableController(true);
-        }
-
-        private void OnDisable()
-        {
-            EnableController(false);
-        }
-        
+        /**
+         * Enables controller and its connected components
+         *
+         * @param status boolean, true => enable, false => disable controller
+         */
         private void EnableController(bool status)
         {
             if (_rotatableHandler != null && _shotHandler != null)
@@ -151,17 +156,12 @@ namespace Harpoon
                 if (!_isWoundIn)
                 {
                     _rotatableHandler.enabled = status;
-                    _shotHandler.enabled = status;    
+                    _shotHandler.enabled = status;
                 }
                 else
                 {
-                    if (_projectileShot)
-                    {
-                        _crankController.EnableController(status);    
-                    }
-                    
+                    if (_projectileShot) _crankController.EnableController(status);
                 }
-
             }
         }
 
@@ -195,7 +195,7 @@ namespace Harpoon
 
         /**
          * implements ShotEvent
-         *
+         * 
          * @param sender sender of event
          * @param eventArg is empty
          */
@@ -206,7 +206,7 @@ namespace Harpoon
 
         /**
          * implements RotationEvent
-         *
+         * 
          * @param sender sender of event
          * @param eventArg is empty
          */
