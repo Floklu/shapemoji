@@ -51,7 +51,7 @@ public class ItemDefect : Item
         {
             if (Time.time > _nextSpawnTime)
             {
-                int toSpawn = Random.Range(0, _numberOfFireSpots-1);
+                int toSpawn = Random.Range(0, _numberOfFireSpots);
                 SetFireActive(_fireSpots[toSpawn]);
                 _nextSpawnTime = Time.time + spawnRate;
             }
