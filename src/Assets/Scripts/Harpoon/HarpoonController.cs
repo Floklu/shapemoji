@@ -151,17 +151,22 @@ namespace Harpoon
          */
         private void EnableController(bool status)
         {
-            if (_rotatableHandler != null && _shotHandler != null)
+            if (_rotatableHandler == null || _shotHandler == null || _crankController == null)
             {
-                if (!_isWoundIn)
-                {
-                    _rotatableHandler.enabled = status;
-                    _shotHandler.enabled = status;
-                }
-                else
-                {
-                    if (_projectileShot) _crankController.EnableController(status);
-                }
+                _rotatableHandler = GetComponent<RotatableHandler>();
+                _shotHandler = GetComponent<HarpoonShotHandler>();
+                _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
+            }
+
+            if (status == false) _crankController.EnableController(false);
+            
+            if (!_isWoundIn) {
+                _rotatableHandler.enabled = status;
+                _shotHandler.enabled = status;
+            }
+            else
+            {
+                if (_projectileShot) _crankController.EnableController(status);
             }
         }
 
