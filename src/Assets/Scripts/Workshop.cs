@@ -14,6 +14,13 @@ public class Workshop : CanHoldHookableObject
 
     private Stone _child;
 
+    /**
+     * Start gets called once at the beginning
+     */
+    private void Start()
+    {
+        _collider2D = GetComponent<BoxCollider2D>();
+    }
 
     /**
      * SetChild sets the child of the workshop

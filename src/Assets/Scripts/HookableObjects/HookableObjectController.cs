@@ -342,4 +342,15 @@ public static class HookableObjectController
     {
         hookableObject.SetOrderInLayer(order);
     }
+
+    /**
+     * is called to check if stone is in collider of onDeselectParent
+     *
+     * @param stone the Stone to check
+     * @param parent the onDeselectParent to check
+     */
+    public static bool IsStoneInColliderOfOnDeselectParent(Stone stone, CanHoldHookableObject parent)
+    {
+        return parent.IsStoneInColliderOfCanHoldHookableObject(stone);
+    }
 }

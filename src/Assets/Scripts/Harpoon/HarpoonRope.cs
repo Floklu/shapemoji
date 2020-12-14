@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
 
 namespace Harpoon
 {
@@ -42,8 +43,14 @@ namespace Harpoon
             var currentRopeLength = _spriteRenderer.bounds.size.magnitude;
 
             ropeScale.x *= requiredRopeLength / currentRopeLength;
-            transform.localScale = ropeScale;
             _ropeTransform.position = ropeCenter;
+            //must not get zero as future scaling will be zero and rope invisible
+            if (ropeScale.x < 0.0001f)
+            {
+                ropeScale.x = 0.0001f;
+            }
+            
+            transform.localScale = ropeScale;
         }
     }
 }
