@@ -7,6 +7,7 @@ public abstract class CanHoldHookableObject : MonoBehaviour
 {
     protected Player _player;
     protected Team _team;
+    protected Collider2D _collider2D;
 
 
     /**
@@ -52,5 +53,18 @@ public abstract class CanHoldHookableObject : MonoBehaviour
     public virtual Team GetTeam()
     {
         return _team;
+    }
+
+    /**
+     * checks if Stone is in collider from CanHoldHookable Object
+     *
+     *@param stone Stone to check
+     * 
+     * @return boolean true if the Stone is inside
+     */
+    public bool IsStoneInColliderOfCanHoldHookableObject(Stone stone)
+    {
+        var currentStonePosition = HookableObjectController.GetPositionOfHookableObject(stone);
+        return _collider2D.bounds.Contains(currentStonePosition);
     }
 }
