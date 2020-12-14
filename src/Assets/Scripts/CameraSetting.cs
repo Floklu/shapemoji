@@ -91,6 +91,9 @@ public class CameraSetting : MonoBehaviour
     {
         _gameCamera = GetComponent<Camera>();
         RescaleCamera();
+        //limit framerate
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 180;
     }
 
     /**
