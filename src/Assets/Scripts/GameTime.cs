@@ -1,5 +1,4 @@
 using System;
-using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,8 +17,10 @@ public class GameTime : MonoBehaviour
     private Button _buttonRestartGame;
     private Button _buttonResume;
     private Button _buttonViewCredits;
+    private bool _duringStartCountDown;
 
     private bool _isPaused;
+    private bool _menuOpen;
     private Text _timeCountdownText;
     private int _timeLeft;
     private Text _timeRemainingText1;
@@ -27,7 +28,6 @@ public class GameTime : MonoBehaviour
     private Text _timeRemainingText2;
 
     private int _timestamp;
-
 
     /**
      * Called in the beginning of the game, once
@@ -41,20 +41,22 @@ public class GameTime : MonoBehaviour
         _timeCountdownText.text = "";
         _timeLeft = finishTime;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        
-        //set state not paused and build pause menu
-        _isPaused = false;
-        pauseMenu.SetActive(false);
+
+        //set state paused and build pause menu
+        _isPaused = true;
+
+        SetMenuState(false);
         _buttonExitGame = buttonExitGame.GetComponent<Button>();
-        _buttonExitGame.onClick.AddListener( Game.Instance.StopGame) ;
+        _buttonExitGame.onClick.AddListener(Game.Instance.StopGame);
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
         _buttonRestartGame.onClick.AddListener(Game.Instance.RestartGame);
         _buttonViewCredits = buttonViewCredits.GetComponent<Button>();
         _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
         _buttonResume = buttonResume.GetComponent<Button>();
         _buttonResume.onClick.AddListener(TogglePauseMenu);
+        TimeUpdateEvent();
     }
-    
+
 
     /**
      * Update is called once per frame.
@@ -63,13 +65,39 @@ public class GameTime : MonoBehaviour
      */
     private void Update()
     {
+        if (!_isPaused) TimeUpdateEvent();
 
-        if(!_isPaused) TimeUpdateEvent();
-        
         //on esc toggle pause menu
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
+        }
+    }
+
+    /**
+     * open or close menu
+     *
+     * @param state to set
+     */
+    private void SetMenuState(bool state)
+    {
+        _menuOpen = state;
+        pauseMenu.SetActive(state);
+    }
+
+    /**
+     * handle countdown event
+     *
+     * @param state state to set
+     */
+    public void SetDuringStartCountdown(bool state)
+    {
+        _duringStartCountDown = state;
+        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        _isPaused = state;
+        if (_menuOpen && state == false)
+        {
+            _isPaused = true;
         }
     }
 
@@ -79,17 +107,25 @@ public class GameTime : MonoBehaviour
     private void TogglePauseMenu()
     {
         //toggle paused state
-        _isPaused = (_isPaused != true);
-        if (_isPaused)
+        if (_duringStartCountDown)
         {
-            Time.timeScale = 0;
-            pauseMenu.SetActive(true);
+            var state = pauseMenu.activeSelf != true;
+            SetMenuState(state);
         }
         else
         {
-            Time.timeScale = 1;
-            _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-            pauseMenu.SetActive(false);
+            _isPaused = (_isPaused != true);
+            if (_isPaused)
+            {
+                Time.timeScale = 0;
+                SetMenuState(true);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+                SetMenuState(false);
+            }
         }
     }
 
@@ -98,7 +134,7 @@ public class GameTime : MonoBehaviour
      */
     private void TimeUpdateEvent()
     {
-        TimeLeftIterator();      
+        TimeLeftIterator();
         UpdateTimerDisplay();
         // start countdown
         if (_timeLeft <= 5) _timeCountdownText.text = _timeLeft.ToString();
@@ -115,7 +151,6 @@ public class GameTime : MonoBehaviour
         _timeLeft += _timestamp - newTime;
         _timestamp = newTime;
     }
-
 
     /**
      * remaining time display
@@ -145,14 +180,5 @@ public class GameTime : MonoBehaviour
     public void SetTimeLeft(int time)
     {
         _timeLeft = time;
-    }
-
-    /**
-     * Is used to reset Game Time
-     */
-    public void ResetGameTime()
-    {
-        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        enabled = true;
     }
 }
