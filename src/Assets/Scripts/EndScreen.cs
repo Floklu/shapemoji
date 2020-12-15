@@ -58,8 +58,7 @@ public class EndScreen : MonoBehaviour
         TextAsset creditAsset = Resources.Load<TextAsset>("Text/credits");
         if (!(creditAsset is null)) creditsText.text += "\n" + creditAsset.text;
 
-
-    _buttonEndGame = buttonEndGame.GetComponent<Button>(); 
+        _buttonEndGame = buttonEndGame.GetComponent<Button>(); 
         _buttonEndGame.onClick.AddListener(() => Game.Instance.StopGame());
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
         _buttonRestartGame.onClick.AddListener(GameSceneManager.Instance.LoadStartMenuScene);
