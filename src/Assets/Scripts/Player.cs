@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameObject inventory;
     public GameObject workshop;
     public GameObject itemDefect;
+    public GameObject harpoon;
     
     private Inventory _inventory;
     private List<Stone> _stones;

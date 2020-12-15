@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 /**
  * performs a smooth transition for a gameObject
@@ -9,6 +11,9 @@ public class SmoothTransition : MonoBehaviour
     public float InitialTime { get; set; }
     public Vector3 Direction { get; set; }
     public Vector3 TargetPosition { get; set; }
+    
+    [Tooltip("Triggered when the transition ends")]
+    public UnityEvent onExit = new UnityEvent();
 
     //calculate new Postion for the gameObject
     private void Update()
@@ -21,7 +26,7 @@ public class SmoothTransition : MonoBehaviour
         else
         {
             transform.position = TargetPosition;
-            //TODO trigger OnExit Event here
+            onExit.Invoke();
             Destroy(this);
         }
     }
@@ -34,12 +39,13 @@ public class SmoothTransition : MonoBehaviour
      * @param targetPosition where the gameObject should be moved to
      * @param transistionTime timePeriod over which the transition is done
      */
-    public static void AddTransition(GameObject obj, Vector3 targetPosition, float transitionTime)
+    public static SmoothTransition AddTransition(GameObject obj, Vector3 targetPosition, float transitionTime)
     {
-        var transistion = obj.AddComponent<SmoothTransition>();
-        transistion.Direction = targetPosition - obj.transform.position;
-        transistion.TargetPosition = targetPosition;
-        transistion.RemainingTime = transitionTime;
-        transistion.InitialTime = transitionTime;
+        var transition = obj.AddComponent<SmoothTransition>();
+        transition.Direction = targetPosition - obj.transform.position;
+        transition.TargetPosition = targetPosition;
+        transition.RemainingTime = transitionTime;
+        transition.InitialTime = transitionTime;
+        return transition;
     }
 }

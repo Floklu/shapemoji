@@ -22,8 +22,13 @@ public class DefectItem : Item
         
         if (team != null)
         {
-            var randomPlayer = Random.Range(0, team.Players.Count);
-            _player = team.Players[randomPlayer];
+            var players = team.Players.Where(x => x.itemDefect.activeSelf == false).ToList();
+            if (players.Count > 0)
+            {
+                var randomPlayer = Random.Range(0, players.Count);
+                _player = players[randomPlayer];    
+            }
+            
         }
         
         base.OnWoundIn(inventory);
@@ -31,6 +36,18 @@ public class DefectItem : Item
 
     public override void OnActivate()
     {
-        if (_player != null) _player.IgniteHarpoon();
+        if (_player != null)
+        {
+            var transition = SmoothTransition.AddTransition(gameObject, _player.harpoon.transform.position, 1f);
+            transition.onExit.AddListener(() =>
+            {
+                _player.IgniteHarpoon();
+                DestroyHookableObject();
+            });
+        }
+        else
+        {
+            DestroyHookableObject();
+        }
     }
 }
