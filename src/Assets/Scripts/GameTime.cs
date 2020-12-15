@@ -19,8 +19,10 @@ public class GameTime : MonoBehaviour
     private Button _buttonRestartGame;
     private Button _buttonResume;
     private Button _buttonViewCredits;
+    private bool _duringStartCountDown;
 
     private bool _isPaused;
+    private bool _menuOpen;
     private Text _timeCountdownText;
     private int _timeLeft;
     private Text _timeRemainingText1;
@@ -28,7 +30,6 @@ public class GameTime : MonoBehaviour
     private Text _timeRemainingText2;
 
     private int _timestamp;
-    private bool _duringStartCountDown;
 
     /**
      * Called in the beginning of the game, once
@@ -45,8 +46,8 @@ public class GameTime : MonoBehaviour
         
         //set state paused and build pause menu
         _isPaused = true;
-        
-        pauseMenu.SetActive(false);
+
+        SetMenuState(false);
         _buttonExitGame = buttonExitGame.GetComponent<Button>();
         _buttonExitGame.onClick.AddListener( Game.Instance.StopGame) ;
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
@@ -58,21 +59,7 @@ public class GameTime : MonoBehaviour
         TimeUpdateEvent();
     }
 
-    /**
-     * set _duringStartCountdown
-     *
-     * @param state state to set
-     */
-    public void SetDuringStartCountdown(bool state){
-    
-        _duringStartCountDown = state;
-        _isPaused = state;
-        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
 
-    }
-    
-    
-    
     /**
      * Update is called once per frame.
      * Time display is refreshed.
@@ -91,6 +78,33 @@ public class GameTime : MonoBehaviour
     }
 
     /**
+     * open or close menu
+     *
+     * @param state to set
+     */
+    private void SetMenuState(bool state)
+    {
+        _menuOpen = state;
+        pauseMenu.SetActive(state);
+    }
+
+    /**
+     * handle countdown event
+     *
+     * @param state state to set
+     */
+    public void SetDuringStartCountdown(bool state)
+    {
+        _duringStartCountDown = state;
+        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+        _isPaused = state;
+        if (!_menuOpen && state==false)
+        {
+            _isPaused = true;
+        }        
+    }
+
+    /**
      * starts or ends pause and shows menu accordingly
      */
     private void TogglePauseMenu()
@@ -99,7 +113,7 @@ public class GameTime : MonoBehaviour
         if (_duringStartCountDown)
         {
             var state = pauseMenu.activeSelf != true;
-            pauseMenu.SetActive(state);
+            SetMenuState(state);
         }
         else
         {
@@ -107,13 +121,13 @@ public class GameTime : MonoBehaviour
             if (_isPaused)
             {
                 Time.timeScale = 0;
-                pauseMenu.SetActive(true); 
+                SetMenuState(true);
             }
             else
             {
                 Time.timeScale = 1;
                 _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-                pauseMenu.SetActive(false);
+                SetMenuState(false);
             }
         }
 
@@ -171,5 +185,4 @@ public class GameTime : MonoBehaviour
     {
         _timeLeft = time;
     }
-
 }
