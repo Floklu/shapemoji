@@ -1,3 +1,4 @@
+using Transition;
 using UnityEngine;
 
 /**
@@ -107,7 +108,8 @@ public abstract class HookableObject : MonoBehaviour
      */
     public void SetPosition(Vector3 position)
     {
-        gameObject.transform.position = position;
+        //gameObject.transform.position = position;
+        SmoothTransition.AddTransition(gameObject, position, Game.Instance.transitionTimes.moveToInventory);
     }
 
     /**
