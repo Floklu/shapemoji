@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5040091135459127641}
   - component: {fileID: 4944769460416888524}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ToolBoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
