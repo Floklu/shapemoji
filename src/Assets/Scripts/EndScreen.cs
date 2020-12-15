@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Resources;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,7 +53,9 @@ public class EndScreen : MonoBehaviour
         string[] creditAsset = AssetDatabase.FindAssets("credits");
         Debug.Log(AssetDatabase.GUIDToAssetPath(creditAsset[0]));
         */
-        TextAsset creditAsset = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Media/Text/credits.txt");
+        
+        //TextAsset creditAsset = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Media/Text/credits.txt");
+        TextAsset creditAsset = Resources.Load<TextAsset>("Text/credits");
         if (!(creditAsset is null)) creditsText.text += "\n" + creditAsset.text;
 
 
