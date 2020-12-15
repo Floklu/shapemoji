@@ -604,7 +604,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -704.07}
-  m_SizeDelta: {x: 665.16113, y: 751.8651}
+  m_SizeDelta: {x: 665, y: 752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728378479
 MonoBehaviour:
@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emojiSprites: []
   teams: []
+  transitionTimes: {fileID: 0}
 --- !u!1 &1424508984
 GameObject:
   m_ObjectHideFlags: 0
