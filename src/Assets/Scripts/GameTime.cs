@@ -43,13 +43,13 @@ public class GameTime : MonoBehaviour
         _timeCountdownText.text = "";
         _timeLeft = finishTime;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        
+
         //set state paused and build pause menu
         _isPaused = true;
 
         SetMenuState(false);
         _buttonExitGame = buttonExitGame.GetComponent<Button>();
-        _buttonExitGame.onClick.AddListener( Game.Instance.StopGame) ;
+        _buttonExitGame.onClick.AddListener(Game.Instance.StopGame);
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
         _buttonRestartGame.onClick.AddListener(Game.Instance.RestartGame);
         _buttonViewCredits = buttonViewCredits.GetComponent<Button>();
@@ -67,9 +67,8 @@ public class GameTime : MonoBehaviour
      */
     private void Update()
     {
+        if (!_isPaused) TimeUpdateEvent();
 
-        if(!_isPaused) TimeUpdateEvent();
-        
         //on esc toggle pause menu
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -98,10 +97,10 @@ public class GameTime : MonoBehaviour
         _duringStartCountDown = state;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         _isPaused = state;
-        if (!_menuOpen && state==false)
+        if (_menuOpen && state == false)
         {
             _isPaused = true;
-        }        
+        }
     }
 
     /**
@@ -113,7 +112,7 @@ public class GameTime : MonoBehaviour
         if (_duringStartCountDown)
         {
             var state = pauseMenu.activeSelf != true;
-            pauseMenu.SetActive(state);
+            SetMenuState(state);
         }
         else
         {
@@ -130,7 +129,6 @@ public class GameTime : MonoBehaviour
                 SetMenuState(false);
             }
         }
-
     }
 
     /**
@@ -138,7 +136,7 @@ public class GameTime : MonoBehaviour
      */
     private void TimeUpdateEvent()
     {
-        TimeLeftIterator();      
+        TimeLeftIterator();
         UpdateTimerDisplay();
         // start countdown
         if (_timeLeft <= 5) _timeCountdownText.text = _timeLeft.ToString();
