@@ -1497,6 +1497,7 @@ MonoBehaviour:
   teams:
   - {fileID: 1811355958}
   - {fileID: 1011719101}
+  transitionTimes: {fileID: 11400000, guid: 95c1f788c91e4954fb3e670c6cdb43b3, type: 2}
 --- !u!114 &541673401
 MonoBehaviour:
   m_ObjectHideFlags: 0

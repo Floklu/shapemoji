@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Transition;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 /**
@@ -13,6 +15,7 @@ public class Game : MonoBehaviour
     public static Game Instance;
     [SerializeField] private List<Sprite> emojiSprites;
     [SerializeField] private List<GameObject> teams;
+    [Tooltip("Contains information about the transition times") ]public TransitionTimes transitionTimes;
 
     private List<Team> _teams;
     public List<Team> Teams => _teams;

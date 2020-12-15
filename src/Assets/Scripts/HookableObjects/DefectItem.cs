@@ -1,4 +1,5 @@
 using System.Linq;
+using Transition;
 using UnityEngine;
 
 /**
@@ -38,7 +39,7 @@ public class DefectItem : Item
     {
         if (_player != null)
         {
-            var transition = SmoothTransition.AddTransition(gameObject, _player.harpoon.transform.position, 1f);
+            var transition = SmoothTransition.AddTransition(gameObject, _player.harpoon.transform.position, Game.Instance.transitionTimes.itemTransition);
             transition.onExit.AddListener(() =>
             {
                 _player.IgniteHarpoon();

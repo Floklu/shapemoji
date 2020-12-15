@@ -1,4 +1,5 @@
 using Lean.Touch;
+using Transition;
 using UnityEngine;
 
 /**
@@ -83,7 +84,7 @@ public class Stone : HookableObject
         //transform.position =
         SmoothTransition.AddTransition(gameObject,
             HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this),
-            0.25f);
+            Game.Instance.transitionTimes.snapBack);
     }
 
     /**
