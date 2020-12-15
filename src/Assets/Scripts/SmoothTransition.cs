@@ -1,3 +1,4 @@
+using Lean.Touch;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -11,6 +12,8 @@ public class SmoothTransition : MonoBehaviour
     public float InitialTime { get; set; }
     public Vector3 Direction { get; set; }
     public Vector3 TargetPosition { get; set; }
+
+    public LeanSelectable Selectable { get; set;}
     
     [Tooltip("Triggered when the transition ends")]
     public UnityEvent onExit = new UnityEvent();
@@ -25,6 +28,10 @@ public class SmoothTransition : MonoBehaviour
         }
         else
         {
+            if (Selectable != null)
+            {
+                Selectable.enabled = true;
+            }
             transform.position = TargetPosition;
             onExit.Invoke();
             Destroy(this);
@@ -46,6 +53,13 @@ public class SmoothTransition : MonoBehaviour
         transition.TargetPosition = targetPosition;
         transition.RemainingTime = transitionTime;
         transition.InitialTime = transitionTime;
+
+        transition.Selectable = obj.GetComponent<LeanSelectable>();
+        if (transition.Selectable != null)
+        {
+            transition.Selectable.enabled = false;
+        }
+        
         return transition;
     }
 }
