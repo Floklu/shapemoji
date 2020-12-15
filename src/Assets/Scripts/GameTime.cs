@@ -113,7 +113,7 @@ public class GameTime : MonoBehaviour
         if (_duringStartCountDown)
         {
             var state = pauseMenu.activeSelf != true;
-            SetMenuState(state);
+            pauseMenu.SetActive(state);
         }
         else
         {
