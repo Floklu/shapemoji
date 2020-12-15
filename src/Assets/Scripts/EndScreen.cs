@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
@@ -47,9 +48,15 @@ public class EndScreen : MonoBehaviour
         winnerText.text += winner;
         scoreTeam1Text.text += "\n \n" + scoreTeam1.ToString() + "P";
         scoreTeam2Text.text += "\n \n" + scoreTeam2.ToString() + "P";
-        creditsText.text += "\n" + ReadTextFile("Assets/Media/Text/credits.txt");
+        /*
+        string[] creditAsset = AssetDatabase.FindAssets("credits");
+        Debug.Log(AssetDatabase.GUIDToAssetPath(creditAsset[0]));
+        */
+        TextAsset creditAsset = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Media/Text/credits.txt");
+        if (!(creditAsset is null)) creditsText.text += "\n" + creditAsset.text;
 
-        _buttonEndGame = buttonEndGame.GetComponent<Button>();
+
+    _buttonEndGame = buttonEndGame.GetComponent<Button>(); 
         _buttonEndGame.onClick.AddListener(() => Game.Instance.StopGame());
         _buttonRestartGame = buttonRestartGame.GetComponent<Button>();
         _buttonRestartGame.onClick.AddListener(GameSceneManager.Instance.LoadStartMenuScene);
