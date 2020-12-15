@@ -178,6 +178,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &49153387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
+    type: 3}
+  m_PrefabInstance: {fileID: 317629863}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &70441341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 206405651689447177, guid: b6bf26a46cfee3b48a56f3e8118fa221,
@@ -672,6 +678,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 603300191be9772438f66969d4468c54, type: 3}
+--- !u!1 &143406426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
+    type: 3}
+  m_PrefabInstance: {fileID: 2024787792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &176105952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -986,6 +998,7 @@ MonoBehaviour:
   inventory: {fileID: 259403148}
   workshop: {fileID: 1194849170}
   itemDefect: {fileID: 1302357407}
+  harpoon: {fileID: 49153387}
 --- !u!1 &263080741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1752,7 @@ MonoBehaviour:
   teams:
   - {fileID: 1811355958}
   - {fileID: 1011719101}
+  transitionTimes: {fileID: 11400000, guid: 220f2d706b5253842b85040cd862ff47, type: 2}
 --- !u!114 &541673401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,6 +2304,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1175505044}
     m_Modifications:
+    - target: {fileID: 206405651689447177, guid: b6bf26a46cfee3b48a56f3e8118fa221,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4795626347961660357, guid: b6bf26a46cfee3b48a56f3e8118fa221,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3112,6 +3131,7 @@ MonoBehaviour:
   inventory: {fileID: 1651748432}
   workshop: {fileID: 503030012}
   itemDefect: {fileID: 1868296532}
+  harpoon: {fileID: 1168498042}
 --- !u!1 &1105659365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3279,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75b4737b576d9d44f8fb2af3193391b9, type: 3}
+--- !u!1 &1168498042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
+    type: 3}
+  m_PrefabInstance: {fileID: 1231618954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1175505043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,6 +3892,7 @@ MonoBehaviour:
   inventory: {fileID: 2004575003}
   workshop: {fileID: 2025230748}
   itemDefect: {fileID: 2074998462}
+  harpoon: {fileID: 143406426}
 --- !u!1 &1499988573 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6686723403685417011, guid: e12cbe1fed66a9a4582498c71aaf5afa,
@@ -5842,6 +5869,12 @@ Transform:
   m_Father: {fileID: 541673399}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1954415638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4795626347961660358, guid: b6bf26a46cfee3b48a56f3e8118fa221,
+    type: 3}
+  m_PrefabInstance: {fileID: 750106794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1964249076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5967,6 +6000,7 @@ MonoBehaviour:
   inventory: {fileID: 267303521}
   workshop: {fileID: 2065496683}
   itemDefect: {fileID: 70441341}
+  harpoon: {fileID: 1954415638}
 --- !u!1 &1985257376
 GameObject:
   m_ObjectHideFlags: 0
