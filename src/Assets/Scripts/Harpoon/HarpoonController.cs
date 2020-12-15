@@ -53,14 +53,12 @@ namespace Harpoon
 
         private void OnEnable()
         {
-            _shotHandler = GetComponent<HarpoonShotHandler>();
-            _shotHandler.enabled = true;
+            EnableController(true);
         }
-        
+
         private void OnDisable()
         {
-            _shotHandler = GetComponent<HarpoonShotHandler>();
-            _shotHandler.enabled = false;
+            EnableController(false);
         }
 
         /**
@@ -89,7 +87,7 @@ namespace Harpoon
                 _cannonCollider.enabled = true;
                 _movingProjectile.SetVelocity(0);
 
-                _crankController.EnableController(true);
+                if (enabled) _crankController.EnableController(true);
 
                 //prepare windInProjectile functionality
                 _windInProjectile.ResetProjectile();
@@ -119,7 +117,7 @@ namespace Harpoon
 
         /**
          * rotates Harpoon to certain degree
-         *
+         * 
          * @param rotation rotates object to chosen degree
          */
         public void RotateHarpoon(float rotation)
@@ -129,12 +127,12 @@ namespace Harpoon
 
         /**
          * called on collision of HookableObject
-         *
+         * 
          * returns false if an object is already hooked
          * 
          * @param hookableObject: object which collided
          * @param projectile which had collision
-        */
+         */
         public bool NotifyCollisionWithHookableObject(HookableObject hookableObject, GameObject collidedObject)
         {
             if (collidedObject.Equals(_projectileObj) && _objectHooked == null)
@@ -144,6 +142,32 @@ namespace Harpoon
             }
 
             return false;
+        }
+
+        /**
+         * Enables controller and its connected components
+         *
+         * @param status boolean, true => enable, false => disable controller
+         */
+        private void EnableController(bool status)
+        {
+            if (_rotatableHandler == null || _shotHandler == null || _crankController == null)
+            {
+                _rotatableHandler = GetComponent<RotatableHandler>();
+                _shotHandler = GetComponent<HarpoonShotHandler>();
+                _crankController = gameObject.transform.Find("../../Wheel").gameObject.GetComponent<CrankController>();
+            }
+
+            if (status == false) _crankController.EnableController(false);
+            
+            if (!_isWoundIn) {
+                _rotatableHandler.enabled = status;
+                _shotHandler.enabled = status;
+            }
+            else
+            {
+                if (_projectileShot) _crankController.EnableController(status);
+            }
         }
 
         public void NotifyRemoveHookableObject(HookableObject hookableObject)
@@ -176,7 +200,7 @@ namespace Harpoon
 
         /**
          * implements ShotEvent
-         *
+         * 
          * @param sender sender of event
          * @param eventArg is empty
          */
@@ -187,7 +211,7 @@ namespace Harpoon
 
         /**
          * implements RotationEvent
-         *
+         * 
          * @param sender sender of event
          * @param eventArg is empty
          */

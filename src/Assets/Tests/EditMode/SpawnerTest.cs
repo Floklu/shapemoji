@@ -50,12 +50,12 @@ namespace Tests.EditMode
         public IEnumerator SpawnerTestIfAllStonesSpawned()
         {
             var spawnPlaces = Object.FindObjectsOfType<GameObject>().Where(x => x.name.Equals("SpawnPlace"));
-            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
+            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<HookableObjectSpawner>();
             Assert.NotNull(spawner);
             spawner.StartGeneration();
             
             //count spawned stones
-            var stonesSpawned = spawnPlaces.Select(place => place.GetComponent<SpawnPlace>()).Select(placeScript => placeScript.stone != null ? 1 : 0).Sum();
+            var stonesSpawned = spawnPlaces.Select(place => place.GetComponent<SpawnPlace>()).Select(placeScript => placeScript.hookableObject != null ? 1 : 0).Sum();
 
             Assert.AreEqual(spawner.maxStones, stonesSpawned );
             
@@ -71,22 +71,22 @@ namespace Tests.EditMode
         public IEnumerator SpawnerTestDeleteStone()
         {
             var spawnPlaces = Object.FindObjectsOfType<GameObject>().Where(x => x.name.Equals("SpawnPlace"));
-            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<StoneSpawner>();
+            var spawner = GameObject.Find("StoneSpawner")?.GetComponent<HookableObjectSpawner>();
             Assert.NotNull(spawner);
-            Assert.IsFalse(spawner.IsFull());
+            Assert.IsFalse(spawner.ContainsMaxAmountStones());
             spawner.StartGeneration();
-            Assert.IsTrue(spawner.IsFull());
+            Assert.IsTrue(spawner.ContainsMaxAmountStones());
 
             //get first stone
             var stone = spawnPlaces
                 .Select(place => place.GetComponent<SpawnPlace>())
-                .First(x => x.stone != null).stone;
+                .First(x => x.hookableObject != null).hookableObject;
 
             spawner.DeleteHookableObject(stone.GetComponent<HookableObject>());
-            Assert.IsFalse(spawner.IsFull());
+            Assert.IsFalse(spawner.ContainsMaxAmountStones());
             
             spawner.CreateRandomStone();
-            Assert.IsTrue(spawner.IsFull());
+            Assert.IsTrue(spawner.ContainsMaxAmountStones());
             
             yield return null;
         }

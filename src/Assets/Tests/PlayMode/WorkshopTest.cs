@@ -274,7 +274,7 @@ namespace Tests.PlayMode
 
             if (stones.Any())
             {
-                var stoneToAim = stones.First().GetComponent<SpawnPlace>().stone.gameObject;
+                var stoneToAim = stones.First().GetComponent<SpawnPlace>().hookableObject.gameObject;
                 return stoneToAim;
             }
 
@@ -310,7 +310,7 @@ namespace Tests.PlayMode
         private bool ContainsStone(GameObject place)
         {
             var spawn = place.GetComponent<SpawnPlace>();
-            return spawn != null && spawn.stone != null;
+            return spawn != null && spawn.hookableObject != null;
         }
 
         /**

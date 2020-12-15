@@ -135,4 +135,12 @@ public abstract class HookableObject : MonoBehaviour
         var _collider = GetComponent<PolygonCollider2D>();
         _collider.enabled = state;
     }
+
+    /**
+     * tells if hookableObject is a stone and should be treated as such
+     */
+    public virtual bool IsStone()
+    {
+        return false;
+    }
 }
