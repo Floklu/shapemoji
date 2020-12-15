@@ -21,12 +21,12 @@ public class TutorialVideo : MonoBehaviour
     }
     
     /**
-     * Exit Method is used, to stop the tutorial video and load Start Menu
+     * Exit Method is used, to stop the tutorial video and unload tutorial scene
      */
     public void Exit()
     {
         _videoPlayer.Stop();
-        GameSceneManager.Instance.LoadStartMenuScene();
+        GameSceneManager.Instance.UnloadTutorialScene();
     }
     
     /**

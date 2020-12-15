@@ -82,6 +82,14 @@ public class GameSceneManager
      */
     public void LoadTutorialScene()
     {
-        SceneManager.LoadScene("Scenes/Scene_Tutorial");
+        SceneManager.LoadScene("Scenes/Scene_Tutorial", LoadSceneMode.Additive);
+    }
+    
+    /**
+     * Closes the Tutorial Video Scene
+     */
+    public void UnloadTutorialScene()
+    {
+        SceneManager.UnloadSceneAsync("Scenes/Scene_Tutorial");
     }
 }
