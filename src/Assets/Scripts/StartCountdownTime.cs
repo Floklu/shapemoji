@@ -47,7 +47,7 @@ public class StartCountdownTime : MonoBehaviour
     private int _startTime;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _gameTime = GetComponent<GameTime>();
         _gameTime.SetDuringStartCountdown(true);
@@ -59,7 +59,7 @@ public class StartCountdownTime : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _elapsedTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds() - _startTime;
         textTimeCountdown.text = (countdownDuration - _elapsedTime).ToString();
@@ -71,14 +71,13 @@ public class StartCountdownTime : MonoBehaviour
             SetShootHandlers(true);
             _gameTime.SetDuringStartCountdown(false);
         }
-
     }
 
     /**
      * Enable/Disable Player Harpoons to shoot
      * @param enable true -> enable player harpoons
      */
-     void SetShootHandlers(bool enable)
+    private void SetShootHandlers(bool enable)
     {
         foreach (HarpoonController controller in harpoonControllers)
         {
