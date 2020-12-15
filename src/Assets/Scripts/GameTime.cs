@@ -1,5 +1,6 @@
 using System;
 using System.Timers;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +28,7 @@ public class GameTime : MonoBehaviour
     private Text _timeRemainingText2;
 
     private int _timestamp;
-
+    private bool _duringStartCountDown;
 
     /**
      * Called in the beginning of the game, once
@@ -42,8 +43,9 @@ public class GameTime : MonoBehaviour
         _timeLeft = finishTime;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         
-        //set state not paused and build pause menu
-        _isPaused = false;
+        //set state paused and build pause menu
+        _isPaused = true;
+        
         pauseMenu.SetActive(false);
         _buttonExitGame = buttonExitGame.GetComponent<Button>();
         _buttonExitGame.onClick.AddListener( Game.Instance.StopGame) ;
@@ -53,9 +55,24 @@ public class GameTime : MonoBehaviour
         _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
         _buttonResume = buttonResume.GetComponent<Button>();
         _buttonResume.onClick.AddListener(TogglePauseMenu);
+        TimeUpdateEvent();
+    }
+
+    /**
+     * set _duringStartCountdown
+     *
+     * @param state state to set
+     */
+    public void SetDuringStartCountdown(bool state){
+    
+        _duringStartCountDown = state;
+        _isPaused = state;
+        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+
     }
     
-
+    
+    
     /**
      * Update is called once per frame.
      * Time display is refreshed.
@@ -79,18 +96,27 @@ public class GameTime : MonoBehaviour
     private void TogglePauseMenu()
     {
         //toggle paused state
-        _isPaused = (_isPaused != true);
-        if (_isPaused)
+        if (_duringStartCountDown)
         {
-            Time.timeScale = 0;
-            pauseMenu.SetActive(true);
+            var state = pauseMenu.activeSelf != true;
+            pauseMenu.SetActive(state);
         }
         else
         {
-            Time.timeScale = 1;
-            _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-            pauseMenu.SetActive(false);
+            _isPaused = (_isPaused != true);
+            if (_isPaused)
+            {
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true); 
+            }
+            else
+            {
+                Time.timeScale = 1;
+                _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
+                pauseMenu.SetActive(false);
+            }
         }
+
     }
 
     /**
@@ -115,7 +141,6 @@ public class GameTime : MonoBehaviour
         _timeLeft += _timestamp - newTime;
         _timestamp = newTime;
     }
-
 
     /**
      * remaining time display
@@ -147,12 +172,4 @@ public class GameTime : MonoBehaviour
         _timeLeft = time;
     }
 
-    /**
-     * Is used to reset Game Time
-     */
-    public void ResetGameTime()
-    {
-        _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        enabled = true;
-    }
 }
