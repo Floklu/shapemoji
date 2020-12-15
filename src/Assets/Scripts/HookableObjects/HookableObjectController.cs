@@ -285,7 +285,6 @@ public static class HookableObjectController
     public static void ActivateItem(Item item)
     {
         item.OnActivate();
-        item.DestroyHookableObject();
     }
 
     /**
