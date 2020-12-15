@@ -80,8 +80,10 @@ public class Stone : HookableObject
             HookableObjectController.OnDeselectOnCanHoldHookableObject(this, _onDeselectParent);
         }
 
-        transform.position =
-            HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this);
+        //transform.position =
+        SmoothTransition.AddTransition(gameObject,
+            HookableObjectController.GetParentPositionOfChildStone(Parent.GetComponent<CanHoldHookableObject>(), this),
+            0.25f);
     }
 
     /**
