@@ -68,12 +68,20 @@ public class GameSceneManager
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    
     /**
      * Loads the Start Menu Scene
      */
     public void LoadStartMenuScene()
     {
         SceneManager.LoadScene("Scenes/Start_Menu");
+    }
+    
+    /**
+     * Loads the Tutorial Video Scene
+     */
+    public void LoadTutorialScene()
+    {
+        SceneManager.LoadScene("Scenes/Scene_Tutorial");
     }
 }
