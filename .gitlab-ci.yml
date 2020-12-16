@@ -1,0 +1,129 @@
+# by Marc Marschall based on https://gitlab.com/gableroux/unity3d-gitlab-ci-example
+stages:
+  - pre_requesits
+  - docu
+  - build_and_test
+  - deploy
+
+# If you are looking for a place where to add 'UNITY_LICENSE_FILE' and other secrets, please visit your project's gitlab page:
+# settings > CI/CD > Variables instead
+variables:
+  BUILD_NAME: ShapeMoji
+  UNITY_ACTIVATION_FILE: ./unity3d.alf
+  UNITY_VERSION: "2019.4.13f1"
+  #UNITY_VERSION: "2020.1.13f1"
+  IMAGE: unityci/editor # https://hub.docker.com/r/unityci/editor
+  IMAGE_VERSION: "0.7" # https://github.com/Unity-CI/docker/releases
+
+image: $IMAGE:$UNITY_VERSION-base-$IMAGE_VERSION
+
+# set build targets and license file
+.unity_before_script: &unity_before_script
+  before_script:
+    - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+
+.cache: &cache
+  cache:
+    key: "$CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$TEST_PLATFORM"
+    paths:
+      - Library/
+
+.license: &license
+  rules:
+    - if: '$UNITY_LICENSE != null'
+      when: always
+
+# run this job when you need to request a license
+# you may need to follow activation steps from documentation
+
+# added libcap2 as it seems to be needed for our version of unity
+
+before_script:
+  - apt-get update && apt-get install -y doxygen libcap2
+
+build_docu:   
+  stage: docu
+  script:    
+    - apt-get update && apt-get install -y doxygen
+    - doxygen Documentation/Doxyfile   
+  artifacts:     
+    paths:
+      - Documentation/Generated/html/    
+    expire_in: 1 week
+  only: 
+    - master
+  resource_group: all
+
+get-activation-file:
+  rules:
+    - if: '$UNITY_LICENSE == null'
+      when: manual
+  stage: build_and_test
+  script:
+    - chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
+  artifacts:
+    paths:
+      - $UNITY_ACTIVATION_FILE
+    expire_in: 10 min # Expiring this as artifacts may contain sensitive data and should not be kept public
+
+
+.test: &test
+  stage: build_and_test
+  <<: *unity_before_script
+  <<: *cache
+  <<: *license
+  script:
+    - chmod +x ./ci/test.sh && ./ci/test.sh
+  artifacts:
+    paths:
+      - $(pwd)/$TEST_PLATFORM-results.xml
+      - $(pwd)/$TEST_PLATFORM-coverage/
+  coverage: /<Linecoverage>(.*?)</Linecoverage>/
+  resource_group: all
+
+test-playmode:
+  <<: *test
+  variables:
+    TEST_PLATFORM: playmode
+  resource_group: all
+
+test-editmode:
+  <<: *test
+  variables:
+    TEST_PLATFORM: editmode
+  resource_group: all
+#.build: &build
+#  stage: build_and_test
+#  <<: *unity_before_script
+#  <<: *cache
+#  <<: *license
+#  script:
+#    - chmod +x ./ci/build.sh && ./ci/build.sh
+#  artifacts:
+#    paths:
+#      - ./Builds/
+
+
+#build-StandaloneLinux64:
+#  <<: *build
+#  variables:
+#    BUILD_TARGET: StandaloneLinux64
+
+#build-StandaloneWindows64:
+#  <<: *build
+#  image: $IMAGE:$UNITY_VERSION-windows-mono-$IMAGE_VERSION
+#  variables:
+#    BUILD_TARGET: StandaloneWindows64
+
+
+#pages:
+#  image: alpine:latest
+#  stage: deploy
+#  script:
+#    - mv "./Builds/WebGL/${BUILD_NAME}" public
+#  artifacts:
+#    paths:
+#      - public
+# only:
+#    - master
+

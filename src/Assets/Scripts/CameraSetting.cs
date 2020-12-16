@@ -1,26 +1,11 @@
 ﻿using UnityEngine;
 
 /**
- * The script is enforces the aspect ratio of the given height and width of the screen
-   based on source: https://forum.unity.com/threads/force-camera-aspect-ratio-16-9-in-viewport.385541/
+ * * The script is enforces the aspect ratio of the given height and width of the screen
+ * based on source: https://forum.unity.com/threads/force-camera-aspect-ratio-16-9-in-viewport.385541/
  */
 public class CameraSetting : MonoBehaviour
 {
-    #region Properties
-
-    public int screenHeight;
-    public int screenWidth;
-
-    #endregion
-
-    #region Variables
-
-    private int _screenSizeX;
-    private int _screenSizeY;
-    private Camera _gameCamera;
-
-    #endregion
-
     #region Methods
 
     /**
@@ -65,6 +50,21 @@ public class CameraSetting : MonoBehaviour
 
     #endregion
 
+    #region Properties
+
+    public int screenHeight;
+    public int screenWidth;
+
+    #endregion
+
+    #region Variables
+
+    private int _screenSizeX;
+    private int _screenSizeY;
+    private Camera _gameCamera;
+
+    #endregion
+
     #region Unity Methods
 
     /**
@@ -91,6 +91,9 @@ public class CameraSetting : MonoBehaviour
     {
         _gameCamera = GetComponent<Camera>();
         RescaleCamera();
+        //limit framerate
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 180;
     }
 
     /**

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Spawner
 {
@@ -7,9 +8,28 @@ namespace Spawner
  */
     public class SpawnPlace : MonoBehaviour
     {
-    
         //keeps track of a stone
-        public GameObject stone;
-    
+        public HookableObject hookableObject;
+        public bool isItemContainer;
+
+        /**
+         * checks, if spawn place contains Stone
+         *
+         * @return true, if place contains Object and it is a stone
+         */
+        public bool ContainsStone()
+        {
+            return hookableObject != null && hookableObject.IsStone();
+        }
+
+        /**
+         * checks, if spawn place contains item
+         *
+         * @return true, if place contains an object and it is an item
+         */
+        public bool ContainsItem()
+        {
+            return hookableObject != null && !hookableObject.IsStone();
+        }
     }
 }

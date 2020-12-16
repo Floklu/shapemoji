@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5157790541497175616}
   - component: {fileID: 2287853520606006067}
   - component: {fileID: 3428013771187844832}
+  - component: {fileID: 5530699165194842811}
   m_Layer: 0
   m_Name: TriangleRectangular_Stone
   m_TagString: Stone
@@ -70,9 +71,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1000
   m_Sprite: {fileID: 21300000, guid: a204a6e21db07244e89a54fa1531fb1c, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 0.36912602, g: 0.36912602, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -107,42 +108,27 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.6899999, y: -2.5549998}
-      - {x: 1.6999999, y: -2.565}
-      - {x: 3.07, y: -2.565}
-      - {x: 3.08, y: -2.5549998}
-      - {x: 3.08, y: -2.5149999}
-      - {x: 3.02, y: -2.455}
-      - {x: 2.84, y: -2.325}
-      - {x: 2.72, y: -2.225}
-      - {x: 2.6699998, y: -2.185}
-      - {x: 2.55, y: -2.085}
-      - {x: 2.5, y: -2.0449998}
-      - {x: 2.3799999, y: -1.9449999}
-      - {x: 2, y: -1.625}
-      - {x: 1.5899999, y: -1.295}
-      - {x: 1.4699999, y: -1.1949999}
-      - {x: 1.42, y: -1.155}
-      - {x: 1.3, y: -1.055}
-      - {x: 1.25, y: -1.015}
-      - {x: 1.13, y: -0.91499996}
-      - {x: 1.0799999, y: -0.875}
-      - {x: 0.96, y: -0.775}
-      - {x: 0.90999997, y: -0.73499995}
-      - {x: 0.78999996, y: -0.635}
-      - {x: 0.74, y: -0.59499997}
-      - {x: 0.62, y: -0.49499997}
-      - {x: 0.57, y: -0.45499998}
-      - {x: 0.45, y: -0.355}
-      - {x: -0.24, y: 0.21499999}
-      - {x: -0.37, y: 0.325}
-      - {x: -2.2, y: 1.8549999}
-      - {x: -3.04, y: 2.565}
-      - {x: -3.08, y: 2.565}
-      - {x: -3.08, y: 0.445}
-      - {x: -3.07, y: 0.435}
-      - {x: -3.07, y: -0.645}
-      - {x: -3.08, y: -0.655}
-      - {x: -3.08, y: -2.565}
-      - {x: -0.62, y: -2.565}
-      - {x: -0.61, y: -2.5549998}
+    - - {x: -3.054306, y: -2.5918007}
+      - {x: 3.108134, y: -2.565}
+      - {x: -3.095029, y: 2.6202078}
+--- !u!50 &5530699165194842811
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848690935837112765}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

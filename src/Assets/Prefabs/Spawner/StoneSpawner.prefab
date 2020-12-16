@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3551211746315797967}
-  - component: {fileID: 3551211746315797961}
   - component: {fileID: 3551211746315797966}
+  - component: {fileID: 3744752311560924746}
   m_Layer: 0
   m_Name: StoneSpawner
   m_TagString: Untagged
@@ -32,25 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3551211746315797961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3551211746315797964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eeaf805a1dc77141ab9ae46509f5574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxStones: 20
-  factory: {fileID: 3551211746315797966}
-  spawnZones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &3551211746315797966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,10 +44,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d066da185302ce40809244d53cee904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preFabs:
+  preFabsStones:
+  - {fileID: 5407080271319082549, guid: b3ffb0febd89b5b4fbdf4964ac504e04, type: 3}
+  - {fileID: 7219427178969211042, guid: a48f205771c517942a06df8fd9383f6a, type: 3}
+  - {fileID: 6195195600849841105, guid: 25aa62e0db199164a8c24c5ef77980f9, type: 3}
   - {fileID: 8526209949159661866, guid: 9a748d83e39cab14b8b631bc6c379106, type: 3}
   - {fileID: 8735554338465470828, guid: aba7d16d1d1ad6d4aad8a2d24f0fea3a, type: 3}
   - {fileID: 6848690935837112765, guid: d937a5bef76810d4f94742421f551c7e, type: 3}
-  - {fileID: 7219427178969211042, guid: a48f205771c517942a06df8fd9383f6a, type: 3}
-  - {fileID: 5407080271319082549, guid: b3ffb0febd89b5b4fbdf4964ac504e04, type: 3}
-  - {fileID: 6195195600849841105, guid: 25aa62e0db199164a8c24c5ef77980f9, type: 3}
+  preFabsItems:
+  - {fileID: 2145019794092654562, guid: c4003869f71d22a4192ead4d651cd099, type: 3}
+--- !u!114 &3744752311560924746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551211746315797964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db20bae0969631d4ebc4376427df0280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStones: 20
+  maxItems: 2
+  percentageItemSpawn: 2
+  factory: {fileID: 3551211746315797966}
+  spawnZones: []

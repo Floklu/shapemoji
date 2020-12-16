@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5407080271319082551}
   - component: {fileID: 5407080271319082548}
-  - component: {fileID: 2488530815367273065}
+  - component: {fileID: -9055775920760317246}
+  - component: {fileID: 640927675309001596}
   m_Layer: 0
   m_Name: Circle_Stone
   m_TagString: Stone
@@ -70,9 +71,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1000
   m_Sprite: {fileID: 21300000, guid: 5bd7667984da88e45ae4d17f0585a5c5, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.24647641, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.24705887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -82,8 +83,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2488530815367273065
-CircleCollider2D:
+--- !u!50 &-9055775920760317246
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5407080271319082549}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &640927675309001596
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,6 +117,23 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.004847717}
-  serializedVersion: 2
-  m_Radius: 2.1165543
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.2923458, y: -0.90909946}
+      - {x: -1.1960084, y: -2.1907825}
+      - {x: 0.6653595, y: -2.3950977}
+      - {x: 2.096018, y: -1.3069415}
+      - {x: 2.3835979, y: 0.67739475}
+      - {x: 1.2036775, y: 2.171638}
+      - {x: -0.91500354, y: 2.228477}
+      - {x: -2.287693, y: 0.94656646}
