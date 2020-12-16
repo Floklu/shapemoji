@@ -1780,6 +1780,7 @@ MonoBehaviour:
   buttonRestartGame: {fileID: 119003153}
   buttonViewCredits: {fileID: 1667602539}
   buttonResume: {fileID: 1007251510}
+  buttonTutorial: {fileID: 236931887}
 --- !u!114 &541673402
 MonoBehaviour:
   m_ObjectHideFlags: 0

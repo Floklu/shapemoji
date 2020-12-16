@@ -82,6 +82,7 @@ public class GameSceneManager
      */
     public void LoadTutorialScene()
     {
+        SetSound(false);
         SceneManager.LoadScene("Scenes/Scene_Tutorial", LoadSceneMode.Additive);
     }
     
@@ -91,5 +92,20 @@ public class GameSceneManager
     public void UnloadTutorialScene()
     {
         SceneManager.UnloadSceneAsync("Scenes/Scene_Tutorial");
+        SceneManager.sceneUnloaded += EnableSound;
+
+    }
+
+    private void SetSound(bool state)
+    {
+        var camera = Camera.allCameras[0];
+        if(camera!=null) {camera.GetComponent<AudioListener> ().enabled  =  true;}
+        camera.GetComponent<AudioListener> ().enabled  =  state;
+    }
+    
+    private void EnableSound(Scene scene)
+    {
+        SetSound(true);
+        SceneManager.sceneUnloaded -= EnableSound;
     }
 }
