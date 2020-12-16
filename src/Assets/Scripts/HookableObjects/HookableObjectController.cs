@@ -31,7 +31,6 @@ public static class HookableObjectController
         else if (AllowedToPutInWorkshop(gameObject, stone))
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
-            gameObject.GetComponent<Workshop>().GetPlayer().RemoveStone(stone);
         }
         else if (AllowedToPutOnEmoji(gameObject, stone))
         {

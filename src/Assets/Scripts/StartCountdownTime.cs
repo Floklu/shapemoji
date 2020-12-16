@@ -33,6 +33,8 @@ public class StartCountdownTime : MonoBehaviour
      * List of harpoon handlers
      */
     [SerializeField] private List<HarpoonController> harpoonControllers;
+    
+    [SerializeField] private Canvas canvasOverlay;
 
     /**
      * Time passed since start of countdown in seconds
@@ -56,6 +58,7 @@ public class StartCountdownTime : MonoBehaviour
         _startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         textTimeRemaining1.text = "";
         textTimeRemaining2.text = "";
+        canvasOverlay.enabled = true;
     }
 
     // Update is called once per frame
@@ -70,6 +73,7 @@ public class StartCountdownTime : MonoBehaviour
             textTimeCountdown.text = "";
             SetShootHandlers(true);
             _gameTime.SetDuringStartCountdown(false);
+            canvasOverlay.enabled = false;
         }
     }
 

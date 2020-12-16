@@ -76,6 +76,7 @@ public class Workshop : CanHoldHookableObject
     public override bool StoneToCanHoldHookableObject(Stone stone)
     {
         HookableObjectController.StoneToWorkshop(stone, this);
+        GetPlayer().RemoveStone(stone);
         return true;
     }
 
