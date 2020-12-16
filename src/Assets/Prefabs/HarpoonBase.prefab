@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 0.07
+  spawnAdjustRate: 40
   onIgnite:
     m_PersistentCalls:
       m_Calls:

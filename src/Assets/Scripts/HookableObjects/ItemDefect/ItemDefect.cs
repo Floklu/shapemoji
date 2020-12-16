@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class ItemDefect : Item
 {
     [SerializeField] private float spawnRate;
+    [SerializeField] private float spawnAdjustRate;
     [SerializeField] private UnityEvent onIgnite;
     [SerializeField] private UnityEvent onExtinguish;
     private Bubble _bubble;
@@ -109,7 +110,7 @@ public class ItemDefect : Item
      */
     public void IterateDynamicSpawnRate()
     {
-        _dynamicSpawnRate += spawnRate / 20;
+        _dynamicSpawnRate += spawnRate / spawnAdjustRate;
     }
     
     
