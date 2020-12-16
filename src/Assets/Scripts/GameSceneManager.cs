@@ -82,38 +82,7 @@ public class GameSceneManager
      */
     public void LoadTutorialScene()
     {
-        SetSound(false);
-        SceneManager.LoadScene("Scenes/Scene_Tutorial", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Scenes/Scene_Tutorial");
     }
     
-    /**
-     * Closes the Tutorial Video Scene
-     */
-    public void UnloadTutorialScene()
-    {
-        SceneManager.sceneUnloaded += EnableSound;
-        SceneManager.UnloadSceneAsync("Scenes/Scene_Tutorial");
-    }
-
-    /**
-     * Enable/Disable sound of the first camera
-     * @param state, true -> enable, false -> disable
-     */
-    private void SetSound(bool state)
-    {
-        var camera = Camera.allCameras[0];
-        if(camera!=null) 
-        {
-            camera.GetComponent<AudioListener> ().enabled  =  state;
-        }
-    }
-    
-    /**
-     * Event handler to enable sound after tutorial video scene unloaded
-     */
-    private void EnableSound(Scene scene)
-    {
-        SetSound(true);
-        SceneManager.sceneUnloaded -= EnableSound;
-    }
 }

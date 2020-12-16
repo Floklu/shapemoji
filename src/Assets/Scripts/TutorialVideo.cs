@@ -10,7 +10,7 @@ public class TutorialVideo : MonoBehaviour
      * video player in the scene, to play video
      */
     private VideoPlayer _videoPlayer;
-    
+
     /**
      * Start Method, to initialize variables
      */
@@ -26,7 +26,7 @@ public class TutorialVideo : MonoBehaviour
     public void Exit()
     {
         _videoPlayer.Stop();
-        GameSceneManager.Instance.UnloadTutorialScene();
+        GameSceneManager.Instance.LoadStartMenuScene();
     }
     
     /**
@@ -37,4 +37,5 @@ public class TutorialVideo : MonoBehaviour
     {
         Exit();
     }
+
 }
