@@ -20,6 +20,14 @@ public class StartMenu : MonoBehaviour
     {
         GameSceneManager.Instance.LoadPlayingScene1vs1();
     }
+    
+    /**
+     * Play tutorial
+     */
+    public void PlayTutorial()
+    {
+        GameSceneManager.Instance.LoadTutorialScene();
+    }
 
     /**
      * Exit menu option: exit the application

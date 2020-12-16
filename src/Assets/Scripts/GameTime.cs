@@ -1,4 +1,5 @@
 using System;
+using Lean.Touch;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,8 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameObject buttonMainMenu;
     
     
+    [SerializeField] private LeanSelectable selectableText1;
+    [SerializeField] private LeanSelectable selectableText2;
     private Button _buttonExitGame;
     private Button _buttonRestartGame;
     private Button _buttonResume;
@@ -28,7 +31,6 @@ public class GameTime : MonoBehaviour
     private Text _timeCountdownText;
     private int _timeLeft;
     private Text _timeRemainingText1;
-
     private Text _timeRemainingText2;
 
     private int _timestamp;
@@ -89,6 +91,8 @@ public class GameTime : MonoBehaviour
     {
         _menuOpen = state;
         pauseMenu.SetActive(state);
+        selectableText1.enabled = !state;
+        selectableText2.enabled = !state;
     }
 
     /**
@@ -110,7 +114,7 @@ public class GameTime : MonoBehaviour
     /**
      * starts or ends pause and shows menu accordingly
      */
-    private void TogglePauseMenu()
+    public void TogglePauseMenu()
     {
         //toggle paused state
         if (_duringStartCountDown)
@@ -120,7 +124,7 @@ public class GameTime : MonoBehaviour
         }
         else
         {
-            _isPaused = (_isPaused != true);
+            _isPaused = _isPaused != true;
             if (_isPaused)
             {
                 Time.timeScale = 0;
@@ -163,9 +167,9 @@ public class GameTime : MonoBehaviour
      */
     private void UpdateTimerDisplay()
     {
-        int seconds = _timeLeft % 60;
-        int minutes = _timeLeft / 60;
-        string toDisplay = $"{minutes:D2}:{seconds:D2}";
+        var seconds = _timeLeft % 60;
+        var minutes = _timeLeft / 60;
+        var toDisplay = $"{minutes:D2}:{seconds:D2}";
         _timeRemainingText2.text = toDisplay;
         _timeRemainingText1.text = toDisplay;
     }
