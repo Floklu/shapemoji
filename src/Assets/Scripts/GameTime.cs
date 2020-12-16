@@ -1,4 +1,5 @@
 using System;
+using Lean.Touch;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,8 +25,10 @@ public class GameTime : MonoBehaviour
     private Text _timeCountdownText;
     private int _timeLeft;
     private Text _timeRemainingText1;
-
     private Text _timeRemainingText2;
+
+    private LeanSelectable _selectableText1;
+    private LeanSelectable _selectableText2;
 
     private int _timestamp;
 
@@ -38,6 +41,8 @@ public class GameTime : MonoBehaviour
         _timeCountdownText = textTimeCountdown.GetComponent<Text>();
         _timeRemainingText1 = textTimeRemaining1.GetComponent<Text>();
         _timeRemainingText2 = textTimeRemaining2.GetComponent<Text>();
+        _selectableText1 = textTimeRemaining1.GetComponent<LeanSelectable>();
+        _selectableText2 = textTimeRemaining2.GetComponent<LeanSelectable>();
         _timeCountdownText.text = "";
         _timeLeft = finishTime;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
@@ -54,6 +59,9 @@ public class GameTime : MonoBehaviour
         _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
         _buttonResume = buttonResume.GetComponent<Button>();
         _buttonResume.onClick.AddListener(TogglePauseMenu);
+
+        
+        
         TimeUpdateEvent();
     }
 
@@ -83,6 +91,8 @@ public class GameTime : MonoBehaviour
     {
         _menuOpen = state;
         pauseMenu.SetActive(state);
+        _selectableText1.enabled = !state;
+        _selectableText2.enabled = !state;
     }
 
     /**
@@ -104,7 +114,7 @@ public class GameTime : MonoBehaviour
     /**
      * starts or ends pause and shows menu accordingly
      */
-    private void TogglePauseMenu()
+    public void TogglePauseMenu()
     {
         //toggle paused state
         if (_duringStartCountDown)
