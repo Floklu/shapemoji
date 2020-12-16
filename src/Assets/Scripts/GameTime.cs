@@ -14,6 +14,8 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameObject buttonRestartGame;
     [SerializeField] private GameObject buttonViewCredits;
     [SerializeField] private GameObject buttonResume;
+    [SerializeField] private LeanSelectable selectableText1;
+    [SerializeField] private LeanSelectable selectableText2;
     private Button _buttonExitGame;
     private Button _buttonRestartGame;
     private Button _buttonResume;
@@ -27,9 +29,6 @@ public class GameTime : MonoBehaviour
     private Text _timeRemainingText1;
     private Text _timeRemainingText2;
 
-    private LeanSelectable _selectableText1;
-    private LeanSelectable _selectableText2;
-
     private int _timestamp;
 
     /**
@@ -41,8 +40,6 @@ public class GameTime : MonoBehaviour
         _timeCountdownText = textTimeCountdown.GetComponent<Text>();
         _timeRemainingText1 = textTimeRemaining1.GetComponent<Text>();
         _timeRemainingText2 = textTimeRemaining2.GetComponent<Text>();
-        _selectableText1 = textTimeRemaining1.GetComponent<LeanSelectable>();
-        _selectableText2 = textTimeRemaining2.GetComponent<LeanSelectable>();
         _timeCountdownText.text = "";
         _timeLeft = finishTime;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
@@ -76,10 +73,7 @@ public class GameTime : MonoBehaviour
         if (!_isPaused) TimeUpdateEvent();
 
         //on esc toggle pause menu
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePauseMenu();
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
     }
 
     /**
@@ -91,8 +85,8 @@ public class GameTime : MonoBehaviour
     {
         _menuOpen = state;
         pauseMenu.SetActive(state);
-        _selectableText1.enabled = !state;
-        _selectableText2.enabled = !state;
+        selectableText1.enabled = !state;
+        selectableText2.enabled = !state;
     }
 
     /**
@@ -105,10 +99,7 @@ public class GameTime : MonoBehaviour
         _duringStartCountDown = state;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         _isPaused = state;
-        if (_menuOpen && state == false)
-        {
-            _isPaused = true;
-        }
+        if (_menuOpen && state == false) _isPaused = true;
     }
 
     /**
@@ -124,7 +115,7 @@ public class GameTime : MonoBehaviour
         }
         else
         {
-            _isPaused = (_isPaused != true);
+            _isPaused = _isPaused != true;
             if (_isPaused)
             {
                 Time.timeScale = 0;
@@ -167,9 +158,9 @@ public class GameTime : MonoBehaviour
      */
     private void UpdateTimerDisplay()
     {
-        int seconds = _timeLeft % 60;
-        int minutes = _timeLeft / 60;
-        string toDisplay = $"{minutes:D2}:{seconds:D2}";
+        var seconds = _timeLeft % 60;
+        var minutes = _timeLeft / 60;
+        var toDisplay = $"{minutes:D2}:{seconds:D2}";
         _timeRemainingText2.text = toDisplay;
         _timeRemainingText1.text = toDisplay;
     }

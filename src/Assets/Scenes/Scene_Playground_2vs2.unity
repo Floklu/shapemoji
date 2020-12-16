@@ -1780,6 +1780,8 @@ MonoBehaviour:
   buttonRestartGame: {fileID: 119003153}
   buttonViewCredits: {fileID: 1667602539}
   buttonResume: {fileID: 1007251510}
+  selectableText1: {fileID: 1278911882}
+  selectableText2: {fileID: 1998117127}
 --- !u!114 &541673402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3629,6 +3631,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 541673401}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8320879489513820290, guid: a2667d7f31b355844ac33b4147c0c8cc,
         type: 3}
       propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.size
@@ -3661,6 +3693,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2667d7f31b355844ac33b4147c0c8cc, type: 3}
+--- !u!114 &1278911882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1278911881}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302357407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 206405651689447177, guid: b6bf26a46cfee3b48a56f3e8118fa221,
@@ -6207,6 +6251,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 541673401}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+        type: 3}
+      propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8320879489513820290, guid: a2667d7f31b355844ac33b4147c0c8cc,
         type: 3}
       propertyPath: onSelect.m_PersistentCalls.m_Calls.Array.size
@@ -6251,6 +6325,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1998117124}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1998117127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6823429413576270565, guid: a2667d7f31b355844ac33b4147c0c8cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998117124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004575003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7520659676618978919, guid: e12cbe1fed66a9a4582498c71aaf5afa,
