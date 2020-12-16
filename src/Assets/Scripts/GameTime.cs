@@ -13,7 +13,6 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameObject buttonRestartGame;
     [SerializeField] private GameObject buttonViewCredits;
     [SerializeField] private GameObject buttonResume;
-    [SerializeField] private Button buttonTutorial;
     [SerializeField] private GameObject buttonMainMenu;
     
     
@@ -59,7 +58,6 @@ public class GameTime : MonoBehaviour
         _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
         _buttonResume = buttonResume.GetComponent<Button>();
         _buttonResume.onClick.AddListener(TogglePauseMenu);
-        buttonTutorial.onClick.AddListener(GameSceneManager.Instance.LoadTutorialScene);
         _mainMenuButton = buttonMainMenu.GetComponent<Button>();
         _mainMenuButton.onClick.AddListener(GameSceneManager.Instance.LoadStartMenuScene);
         TimeUpdateEvent();
