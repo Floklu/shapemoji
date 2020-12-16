@@ -28,6 +28,7 @@ public class Bubble : MonoBehaviour
             fire.gameObject.SetActive(false);
             //trigger check if fires are all put out
             _parent.CheckFireActive();
+            _parent.IterateDynamicSpawnRate();
         }
     }
 
