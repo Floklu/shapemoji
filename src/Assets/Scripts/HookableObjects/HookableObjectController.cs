@@ -31,7 +31,6 @@ public static class HookableObjectController
         else if (AllowedToPutInWorkshop(gameObject, stone))
         {
             SetOnDeselectParentOfStone(stone, gameObject.GetComponent<CanHoldHookableObject>());
-            gameObject.GetComponent<Workshop>().GetPlayer().RemoveStone(stone);
         }
         else if (AllowedToPutOnEmoji(gameObject, stone))
         {
@@ -215,6 +214,8 @@ public static class HookableObjectController
      */
     public static void StoneToWorkshop(Stone stone, Workshop workshop)
     {
+        //ugly bug fix: stone gets locked if dragged and child of emoji during adding another stone to emoji
+        ReEnableStoneDraggable(stone);
         stone.MakeScalableAndRotatable();
         stone.SetParent(workshop.gameObject);
         workshop.SetChild(stone);

@@ -14,12 +14,16 @@ public class GameTime : MonoBehaviour
     [SerializeField] private GameObject buttonRestartGame;
     [SerializeField] private GameObject buttonViewCredits;
     [SerializeField] private GameObject buttonResume;
+    [SerializeField] private GameObject buttonMainMenu;
+    
+    
     [SerializeField] private LeanSelectable selectableText1;
     [SerializeField] private LeanSelectable selectableText2;
     private Button _buttonExitGame;
     private Button _buttonRestartGame;
     private Button _buttonResume;
     private Button _buttonViewCredits;
+    private Button _mainMenuButton;
     private bool _duringStartCountDown;
 
     private bool _isPaused;
@@ -56,9 +60,8 @@ public class GameTime : MonoBehaviour
         _buttonViewCredits.onClick.AddListener(GameSceneManager.Instance.LoadEndScene);
         _buttonResume = buttonResume.GetComponent<Button>();
         _buttonResume.onClick.AddListener(TogglePauseMenu);
-
-        
-        
+        _mainMenuButton = buttonMainMenu.GetComponent<Button>();
+        _mainMenuButton.onClick.AddListener(GameSceneManager.Instance.LoadStartMenuScene);
         TimeUpdateEvent();
     }
 
@@ -73,7 +76,10 @@ public class GameTime : MonoBehaviour
         if (!_isPaused) TimeUpdateEvent();
 
         //on esc toggle pause menu
-        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseMenu();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePauseMenu();
+        }
     }
 
     /**
@@ -99,7 +105,10 @@ public class GameTime : MonoBehaviour
         _duringStartCountDown = state;
         _timestamp = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
         _isPaused = state;
-        if (_menuOpen && state == false) _isPaused = true;
+        if (_menuOpen && state == false)
+        {
+            _isPaused = true;
+        }
     }
 
     /**
