@@ -22,7 +22,8 @@ public class Bubble : MonoBehaviour
      *
      * @param fire Collider2D of fireobjects
      */
-    private void OnTriggerEnter2D(Collider2D fire){
+    private void OnTriggerEnter2D(Collider2D fire)
+    {
         if (fire.CompareTag("DefectFire")) // in case some players try to brake the game by colliding water bubbles
         {
             fire.gameObject.SetActive(false);
