@@ -1482,14 +1482,20 @@ MonoBehaviour:
   emojiSprites:
   - {fileID: 21300000, guid: 926d277dc0e11114f9ba24a4ab4e8dff, type: 3}
   - {fileID: 21300000, guid: 67497832f05bc82449015a7ab0ed63d0, type: 3}
+  - {fileID: 21300000, guid: b650eef44bd345247ad22ad189f3602c, type: 3}
+  - {fileID: 21300000, guid: 22f7f8d6eb283944b9e6ee6992fad8f9, type: 3}
   - {fileID: 21300000, guid: 9b8e4bb5c47fea24ebda1bc22d3ce814, type: 3}
   - {fileID: 21300000, guid: d25d63707f11aba429c5a65ee85c6f0e, type: 3}
   - {fileID: 21300000, guid: ae2a584270ee197459bd84fb5eb69cf8, type: 3}
+  - {fileID: 21300000, guid: 1f2ab9f8aa46a1343aeac7ca9f60eba5, type: 3}
   - {fileID: 21300000, guid: 211e8edd51cb91244ad8dac33d166b8b, type: 3}
+  - {fileID: 21300000, guid: 6b392238cf3553342846d87ea63b4880, type: 3}
   - {fileID: 21300000, guid: 2143475ba1a6c6447b14311819fd9000, type: 3}
+  - {fileID: 21300000, guid: 32680f4755e74fd49bb1dd5542bf3382, type: 3}
   - {fileID: 21300000, guid: ced85bdf408a30048abe6e140817fcff, type: 3}
   - {fileID: 21300000, guid: 067e1471643823e42b1ab5aba0784ab2, type: 3}
-  - {fileID: 21300000, guid: 51d2126ea4499084a9b88d07b3ea8b1c, type: 3}
+  - {fileID: 21300000, guid: 9e7d1ebda9575b54b86598847e54a20d, type: 3}
+  - {fileID: 21300000, guid: 7d26a33064f5c7d45843ddfd758bc1e5, type: 3}
   - {fileID: 21300000, guid: f824075b00836cf44857b12e0642611b, type: 3}
   - {fileID: 21300000, guid: 31d3f2607730e5f4b891a5f212870ccd, type: 3}
   - {fileID: 21300000, guid: 9129fb9e50a6ce340818331c00fc157d, type: 3}
@@ -1519,7 +1525,6 @@ MonoBehaviour:
   buttonRestartGame: {fileID: 119003153}
   buttonViewCredits: {fileID: 1667602539}
   buttonResume: {fileID: 1007251510}
-  buttonTutorial: {fileID: 236931887}
 --- !u!114 &541673402
 MonoBehaviour:
   m_ObjectHideFlags: 0
