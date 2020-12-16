@@ -10,7 +10,7 @@ using UnityEngine;
 public class DefectItem : Item
 {
     private Player _player;
-    
+
     /**
      * gets called by controller on wound in event
      * 
@@ -20,18 +20,17 @@ public class DefectItem : Item
     {
         //get first instance of list of teams, which doesn't contain the given inventory
         var team = Game.Instance.Teams.First(x => !x.Players.Any(y => y.GetInventory().Equals(inventory)));
-        
+
         if (team != null)
         {
             var players = team.Players.Where(x => x.itemDefect.activeSelf == false).ToList();
             if (players.Count > 0)
             {
                 var randomPlayer = Random.Range(0, players.Count);
-                _player = players[randomPlayer];    
+                _player = players[randomPlayer];
             }
-            
         }
-        
+
         base.OnWoundIn(inventory);
     }
 
@@ -39,7 +38,8 @@ public class DefectItem : Item
     {
         if (_player != null)
         {
-            var transition = SmoothTransition.AddTransition(gameObject, _player.harpoon.transform.position, Game.Instance.transitionTimes.itemTransition);
+            var transition = SmoothTransition.AddTransition(gameObject, _player.harpoon.transform.position,
+                Game.Instance.transitionTimes.itemTransition);
             transition.onExit.AddListener(() =>
             {
                 _player.IgniteHarpoon();
