@@ -22,12 +22,14 @@ public class StartCountdownTime : MonoBehaviour
     /**
      * Time Remaining Text (first), UI on the playing scene
      */
-    [SerializeField] private Text textTimeRemaining1;
+    [SerializeField] private GameObject textTimeRemaining1;
+    private Text  _textTimeRemaining1;
 
     /**
      * Time Remaining Text (second), UI on the playing scene
      */
-    [SerializeField] private Text textTimeRemaining2;
+    [SerializeField] private GameObject textTimeRemaining2;
+    private Text  _textTimeRemaining2;
 
     /**
      * List of harpoon handlers
@@ -51,13 +53,17 @@ public class StartCountdownTime : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        _textTimeRemaining1 = textTimeRemaining1.GetComponent<Text>();
+        _textTimeRemaining2 = textTimeRemaining2.GetComponent<Text>();
         _gameTime = GetComponent<GameTime>();
         _gameTime.SetDuringStartCountdown(true);
         SetShootHandlers(false);
         _elapsedTime = 0;
         _startTime = (int) DateTimeOffset.Now.ToUnixTimeSeconds();
-        textTimeRemaining1.text = "";
-        textTimeRemaining2.text = "";
+        textTimeRemaining1.SetActive(false);
+        textTimeRemaining2.SetActive(false);
+        _textTimeRemaining1.text = "";
+        _textTimeRemaining2.text = "";
         canvasOverlay.enabled = true;
     }
 
@@ -69,6 +75,8 @@ public class StartCountdownTime : MonoBehaviour
 
         if (_elapsedTime >= countdownDuration)
         {
+            textTimeRemaining1.SetActive(true);
+            textTimeRemaining2.SetActive(true);
             enabled = false;
             textTimeCountdown.text = "";
             SetShootHandlers(true);
