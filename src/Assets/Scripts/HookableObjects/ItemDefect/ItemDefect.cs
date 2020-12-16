@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class ItemDefect : Item
 {
     [SerializeField] private float spawnRate;
+    [SerializeField] private float spawnAdjustRate;
     [SerializeField] private UnityEvent onIgnite;
     [SerializeField] private UnityEvent onExtinguish;
     private Bubble _bubble;
@@ -15,6 +16,7 @@ public class ItemDefect : Item
     private FireSpot[] _fireSpots;
     private float _nextSpawnTime;
     private int _numberOfFireSpots;
+    private float _dynamicSpawnRate;
 
     /**
      * Unity event, which will be invoked on ignition of the harpoon 
@@ -37,6 +39,7 @@ public class ItemDefect : Item
         _numberOfFireSpots = _fireSpots.Length;
         _nextSpawnTime = Time.time + spawnRate;
         _fireActive = true;
+        _dynamicSpawnRate = spawnRate;
         foreach (var fireSpot in _fireSpots)
         {    
             fireSpot.gameObject.SetActive(true);
@@ -53,7 +56,7 @@ public class ItemDefect : Item
             {
                 int toSpawn = Random.Range(0, _numberOfFireSpots);
                 SetFireActive(_fireSpots[toSpawn]);
-                _nextSpawnTime = Time.time + spawnRate;
+                _nextSpawnTime = Time.time + _dynamicSpawnRate;
             }
         }
         else
@@ -101,6 +104,16 @@ public class ItemDefect : Item
         OnIgnite.Invoke();
     }
 
+
+    /**
+     * increase spawn timer
+     */
+    public void IterateDynamicSpawnRate()
+    {
+        _dynamicSpawnRate += spawnRate / spawnAdjustRate;
+    }
+    
+    
     /**
      * check if all fires are put out (triggered by collision)
      */

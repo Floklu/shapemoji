@@ -123,7 +123,6 @@ namespace ScoreArea
             {
                 var oldStone = _stones[stonesCount - 2];
                 HookableObjectController.DisableStoneDraggable(oldStone);
-                HookableObjectController.SetHookableObjectColliderState(oldStone, false);
             }
         }
 
@@ -159,7 +158,6 @@ namespace ScoreArea
             {
                 var newLastStone = _stones.Last();
                 HookableObjectController.ReEnableStoneDraggable(newLastStone);
-                HookableObjectController.SetHookableObjectColliderState(newLastStone, true);
             }
         }
 
