@@ -9,8 +9,6 @@ using UnityEngine;
  */
 public class Stone : HookableObject
 {
-    private bool _draggable;
-
     // Parent that changes when the stone collides with a CanHoldHookableObject
     private CanHoldHookableObject _onDeselectParent;
 
@@ -52,7 +50,6 @@ public class Stone : HookableObject
      */
     public void SetDraggable(bool state)
     {
-        _draggable = state;
         if (state)
             MakeDraggable();
         else
