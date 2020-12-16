@@ -67,6 +67,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStones: 20
   maxItems: 2
-  percentageItemSpawn: 10
+  percentageItemSpawn: 2
   factory: {fileID: 3551211746315797966}
   spawnZones: []
