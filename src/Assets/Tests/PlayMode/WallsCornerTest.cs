@@ -106,6 +106,7 @@ namespace Tests.PlayMode
          */
         private void LoadPlayer(int player)
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
             var team = (player + 1) / 2;
             _harpoon = GameObject.Find("Team_" + team + "/Player_" + player + "/Base/HarpoonBase/Harpoon");
             _projectile =

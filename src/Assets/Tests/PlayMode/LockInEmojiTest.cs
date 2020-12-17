@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using NUnit.Framework;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
@@ -66,6 +67,8 @@ namespace Tests.PlayMode
          */
         private IEnumerator TestPlayer(int player)
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
+            yield return new WaitForEndOfFrame();
             helper = new InteractionTestHelper(player);
             yield return helper.GetStone();
             helper.TestConditionsBeforeToWorkshop();

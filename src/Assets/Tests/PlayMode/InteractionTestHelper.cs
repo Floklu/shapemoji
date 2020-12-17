@@ -185,7 +185,6 @@ namespace Tests.PlayMode
         public IEnumerator MoveStone(Stone stone, Vector3 position)
         {
             stone.transform.position = position;
-
             yield return new WaitForSeconds(0.2f);
             stone.OnDeselectOnUp();
             yield return new WaitForSeconds(0.2f);
@@ -284,6 +283,7 @@ namespace Tests.PlayMode
             var spriteNew = Emoji.GetComponent<SpriteRenderer>().sprite;
             var countStonesNew = GameObject.FindGameObjectsWithTag("Stone").Count();
             Assert.AreNotEqual(spriteNew, sprite, $"Player {_currentPlayer}: Emoji sprite didn't change after turn in");
+            yield return new WaitForSeconds(1);
             Assert.AreNotEqual(countStonesNew, countStones, $"Player {_currentPlayer}: expected stones to be cleared from Emoji after turn in");
         }
 

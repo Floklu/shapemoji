@@ -26,6 +26,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator TimerTest()
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
             var gameTime = GameObject.Find("PlayingField").GetComponent<GameTime>();
             gameTime.SetTimeLeft(10);
             yield return new WaitForSeconds(2);
@@ -38,6 +39,7 @@ namespace Tests.PlayMode
         [UnityTest]
         public IEnumerator ChangeToFinishSceneTest()
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
             GameObject.Find("PlayingField").GetComponent<GameTime>().SetTimeLeft(2);
             yield return new WaitForSeconds(4);
             Assert.IsTrue(SceneManager.GetActiveScene().name == "Scene_End");

@@ -53,6 +53,7 @@ namespace Tests.PlayMode
         {
             for (var player = 1; player <= MAX_PLAYERS; player++)
             {
+                Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
                 LoadPlayer(player);
                 var location = _projectile.transform.position;
                 _harpoonController.ShootProjectile();
