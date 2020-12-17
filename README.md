@@ -2,16 +2,6 @@
 
 ## How to deploy the Game
 
-### What you need
-
-* PC with Windows 10 and a HDMI port
-* 16 GB Hard Disk Space
-* 4 GB RAM
-* UnityHub with Unity 2019.4.13f1 (UnityHub suggests to download the appropriate version after you defined the repository to use)
-* Gitbash
-* Touch-Monitor with at least 12 Touchpoints and a HDMI port
-* HDMI Cable
-
 ### Procedure
 
 #### Clone the repository
