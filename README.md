@@ -40,7 +40,7 @@ From the inventory the stones can be placed on the emoji and in the workshop.
 In the workshop the stone can be scaled and rotated. Afterwards the stone can be dragged away to emoji.
 The players try to cover the emoji with stones. For stones, that are badly placed, negative points will be added.
 In order to get points for the emoji coverage, the toggle button must be activated. In game mode "2vs2", both toggle buttons must be activated. After it, a new emoji is loaded.
-If a player activates Fire Item, the opponent's cannon starts to burn and must be restored with a water droplet.
+If a player activates Defect Item, the opponent's cannon starts to burn and must be restored with a water droplet.
 The game can be paused by touching the timer in the game field.
 The game ends after 3 minutes, the players will be warned with a countdown before the end.
 
