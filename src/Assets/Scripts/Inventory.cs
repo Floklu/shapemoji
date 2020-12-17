@@ -22,7 +22,6 @@ public class Inventory : CanHoldHookableObject
      * 
      * @param stoneGameObject the game object to add
      * 
-     * @return true if stone could be added, false otherwise
      */
     public Vector3? AddToInventory(Stone stone)
     {
