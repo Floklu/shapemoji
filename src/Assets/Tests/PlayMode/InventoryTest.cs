@@ -75,6 +75,8 @@ namespace Tests.PlayMode
         private IEnumerator TestPlayer(int player)
         {
             LoadPlayer(player);
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
+            yield return new WaitForSeconds(0.1f);
             GameObject stoneCollided = null;
 
             _projectile.GetComponent<ProjectileCollision>().CollisionEvent +=
