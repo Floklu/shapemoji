@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Assert = NUnit.Framework.Assert;
+using Object = UnityEngine.Object;
 
 namespace Tests.PlayMode
 {
@@ -92,6 +93,7 @@ namespace Tests.PlayMode
          */
         private IEnumerator TestPlayer()
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
             LoadPlayer();
             yield return GetStone();
             InitTest();
@@ -107,6 +109,7 @@ namespace Tests.PlayMode
          */
         private void InitTest()
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
             var leanSelectable = _currentStone.gameObject.GetComponent<LeanSelectable>();
             Assert.IsNotNull(leanSelectable, $"Player {_currentPlayer}: Stone is not selectable in the inventory");
             //Assert.AreEqual(_workshopSlot.GetComponent<Workshop>().GetInventory(), _inventory, $"Player {_currentPlayer}: Inventory not assigned to workshop");

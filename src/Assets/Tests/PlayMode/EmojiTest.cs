@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Assert = NUnit.Framework.Assert;
+using Object = UnityEngine.Object;
 
 namespace Tests.PlayMode
 {
@@ -45,6 +46,7 @@ namespace Tests.PlayMode
         public void Setup()
         {
             SceneManager.LoadScene("Scenes/Scene_Playground_2vs2");
+//            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
         }
 
         /**
@@ -93,6 +95,7 @@ namespace Tests.PlayMode
          */
         private IEnumerator TestPlayer()
         {
+            Object.FindObjectOfType<StartCountdownTime>().OnCountdownEnd();
             LoadPlayer();
             yield return GetStone();
             InitTest();
