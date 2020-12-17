@@ -75,14 +75,30 @@ public class StartCountdownTime : MonoBehaviour
 
         if (_elapsedTime >= countdownDuration)
         {
-            textTimeRemaining1.SetActive(true);
-            textTimeRemaining2.SetActive(true);
-            enabled = false;
-            textTimeCountdown.text = "";
-            SetShootHandlers(true);
-            _gameTime.SetDuringStartCountdown(false);
-            canvasOverlay.enabled = false;
+            OnCountdownEnd();
         }
+    }
+
+    /**
+     * sets countdownduration in runtime. Used by tests to set to zero
+     */
+    public void SetCountdownDuration(int timeInS)
+    {
+        countdownDuration = timeInS;
+    }
+    
+    /**
+     * gets called on end of countdown and handles transmission to game
+     */
+    public void OnCountdownEnd()
+    {
+        textTimeRemaining1.SetActive(true);
+        textTimeRemaining2.SetActive(true);
+        enabled = false;
+        textTimeCountdown.text = "";
+        SetShootHandlers(true);
+        _gameTime.SetDuringStartCountdown(false);
+        canvasOverlay.enabled = false;
     }
 
     /**
