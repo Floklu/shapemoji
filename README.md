@@ -32,7 +32,7 @@ There are 2 game modes in the game, that can be selected in the main menu.
 * 1vs1: 2 players compete against each other.
 
 ### Gameplay
-Before the game began, each player decides at which base he will play during the game. Each player should stay near his base during the game.
+Before the game begins, each player decides at which base he will play during the game. Each player should stay near his base during the game.
 The game begins, after the countdown is over.
 During the game the players can shoot the projectile, in order to catch stones and items. Then the projectile must be dragged back to the base, by rotating the wheel. After the projectile is back at it's initial position, the hooked stone/item can be used.
 The stones are placed into the inventory.
@@ -44,3 +44,4 @@ If a player activates Defect Item, the opponent's cannon starts to burn and must
 The game can be paused by touching the timer in the game field.
 The game ends after 3 minutes, the players will be warned with a countdown before the end.
 
+![Shapemoji Screenshot](src/Assets/Sprites/shapemoji.jpg)
