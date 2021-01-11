@@ -13,5 +13,9 @@ digraph "TMPro.TMP_InputField.SelectAll"
   Node4 [label="TMPro.TMP_InputField.Process\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#abdbb932fc8d6aa12272b0a480ad13504",tooltip=" "];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="TMPro.TMP_InputField.OnFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#ab9ec006dcffd4f1aceb65e632e224c49",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_InputField.Activate\lInputFieldInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a430740232f28a8263419238cb6b64595",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_InputField.Late\lUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___input_field.html#a4b7cccc36ecd8672c02a29ef7ebc2dd3",tooltip="Update the text based on input."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

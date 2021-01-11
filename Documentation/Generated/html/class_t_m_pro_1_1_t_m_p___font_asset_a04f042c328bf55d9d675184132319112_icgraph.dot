@@ -6,5 +6,9 @@ digraph "TMPro.TMP_FontAsset.GetCharactersArray"
   rankdir="RL";
   Node1 [label="TMPro.TMP_FontAsset.GetCharacters\lArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Function which returns an array that contains all the characters from a font asset."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.ShowFont\lAtlasCreatorWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a9e0ed45f56fa9d4b78c563be37ad3106",tooltip=" "];
+  Node2 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.DrawControls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a2f24ddd9864bf60c9df352fa2700e395",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.OnGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#acec42eaf35e7fd464492fd0a016c404e",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.ShowFont\lAtlasCreatorWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a9e0ed45f56fa9d4b78c563be37ad3106",tooltip=" "];
 }

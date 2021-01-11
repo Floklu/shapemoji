@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_sc
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_scrub-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.Scrub Class Reference</div>  </div>
@@ -133,6 +134,17 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aef99a81de039bff010ddef27640f1281 inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">ExecuteCommand</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
 <tr class="separator:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad75f432e5a9f96e748e1a429ea883cbc"><td class="memItemLeft" align="right" valign="top">readonly Func&lt; Event, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#ad75f432e5a9f96e748e1a429ea883cbc">m_OnMouseDown</a></td></tr>
+<tr class="separator:ad75f432e5a9f96e748e1a429ea883cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d46ccfcbdc67593d798837b405f67cb"><td class="memItemLeft" align="right" valign="top">readonly Action&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#a9d46ccfcbdc67593d798837b405f67cb">m_OnMouseDrag</a></td></tr>
+<tr class="separator:a9d46ccfcbdc67593d798837b405f67cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc826eb8d45a87d0def23b9455a9c4a1"><td class="memItemLeft" align="right" valign="top">readonly Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#adc826eb8d45a87d0def23b9455a9c4a1">m_OnMouseUp</a></td></tr>
+<tr class="separator:adc826eb8d45a87d0def23b9455a9c4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44d67ac838ebf61e01ef97e36befa67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_scrub.html#af44d67ac838ebf61e01ef97e36befa67">m_IsCaptured</a></td></tr>
+<tr class="separator:af44d67ac838ebf61e01ef97e36befa67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -310,8 +322,105 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af44d67ac838ebf61e01ef97e36befa67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af44d67ac838ebf61e01ef97e36befa67">&#9670;&nbsp;</a></span>m_IsCaptured</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.Scrub.m_IsCaptured</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00181">181</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad75f432e5a9f96e748e1a429ea883cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75f432e5a9f96e748e1a429ea883cbc">&#9670;&nbsp;</a></span>m_OnMouseDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Func&lt;Event, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>, bool&gt; UnityEditor.Timeline.Scrub.m_OnMouseDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00177">177</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9d46ccfcbdc67593d798837b405f67cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d46ccfcbdc67593d798837b405f67cb">&#9670;&nbsp;</a></span>m_OnMouseDrag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Action&lt;double&gt; UnityEditor.Timeline.Scrub.m_OnMouseDrag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00178">178</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+
+</div>
+</div>
+<a id="adc826eb8d45a87d0def23b9455a9c4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc826eb8d45a87d0def23b9455a9c4a1">&#9670;&nbsp;</a></span>m_OnMouseUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Action UnityEditor.Timeline.Scrub.m_OnMouseUp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00179">179</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/<a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/<a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

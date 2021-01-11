@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ti
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TimelineAssetInspector Class Reference</div>  </div>
@@ -101,6 +103,11 @@ Collaboration diagram for UnityEditor.Timeline.TimelineAssetInspector:</div>
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector__coll__graph.png" border="0" usemap="#a_unity_editor_8_timeline_8_timeline_asset_inspector_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_1_1_styles.html">Styles</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4669e882c90cc847abf9530d7499384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#ad4669e882c90cc847abf9530d7499384">OnEnable</a> ()</td></tr>
@@ -112,11 +119,57 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4358571677b4d170fee510782d5b5545"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a4358571677b4d170fee510782d5b5545">OnHeaderGUI</a> ()</td></tr>
 <tr class="separator:a4358571677b4d170fee510782d5b5545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a144e86ec440fdd81a8cb41679b2c97d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a144e86ec440fdd81a8cb41679b2c97d4">InitializeProperties</a> ()</td></tr>
+<tr class="separator:a144e86ec440fdd81a8cb41679b2c97d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8493e76e2beb5e671e2a37061932334f"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a8493e76e2beb5e671e2a37061932334f">m_FrameRateProperty</a></td></tr>
+<tr class="separator:a8493e76e2beb5e671e2a37061932334f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef67d12e259059e9bb48a17c0395b0e"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a2ef67d12e259059e9bb48a17c0395b0e">m_DurationModeProperty</a></td></tr>
+<tr class="separator:a2ef67d12e259059e9bb48a17c0395b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86af7e05e8ea50e1f6f1b3f44534c656"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector.html#a86af7e05e8ea50e1f6f1b3f44534c656">m_FixedDurationProperty</a></td></tr>
+<tr class="separator:a86af7e05e8ea50e1f6f1b3f44534c656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00007">7</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a144e86ec440fdd81a8cb41679b2c97d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144e86ec440fdd81a8cb41679b2c97d4">&#9670;&nbsp;</a></span>InitializeProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineAssetInspector.InitializeProperties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00021">21</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_a144e86ec440fdd81a8cb41679b2c97d4_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_a144e86ec440fdd81a8cb41679b2c97d4_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="ad4669e882c90cc847abf9530d7499384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4669e882c90cc847abf9530d7499384">&#9670;&nbsp;</a></span>OnEnable()</h2>
 
@@ -133,6 +186,11 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00028">28</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_ad4669e882c90cc847abf9530d7499384_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_ad4669e882c90cc847abf9530d7499384_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -179,11 +237,89 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00049">49</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_a8537073c5765434d1086082815767fb2_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_asset_inspector_a8537073c5765434d1086082815767fb2_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2ef67d12e259059e9bb48a17c0395b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef67d12e259059e9bb48a17c0395b0e">&#9670;&nbsp;</a></span>m_DurationModeProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.TimelineAssetInspector.m_DurationModeProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00018">18</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
+
+</div>
+</div>
+<a id="a86af7e05e8ea50e1f6f1b3f44534c656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86af7e05e8ea50e1f6f1b3f44534c656">&#9670;&nbsp;</a></span>m_FixedDurationProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.TimelineAssetInspector.m_FixedDurationProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00019">19</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8493e76e2beb5e671e2a37061932334f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8493e76e2beb5e671e2a37061932334f">&#9670;&nbsp;</a></span>m_FrameRateProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.TimelineAssetInspector.m_FrameRateProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_inspector_8cs_source.html#l00017">17</a> of file <a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/inspectors/<a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/inspectors/<a class="el" href="_timeline_asset_inspector_8cs_source.html">TimelineAssetInspector.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -6,5 +6,7 @@ digraph "UnityEditor.Timeline.TimelineClipGUI.Select"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Timeline\lClipGUI.Select",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.IZOrder\lProvider.Next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html#a49e0c99b9528891646569e0214fe6fa5",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Selection\lManager.Add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.IZOrder\lProvider.Next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html#a49e0c99b9528891646569e0214fe6fa5",tooltip=" "];
 }

@@ -6,5 +6,9 @@ digraph "UnityEditor.Timeline.DuplicateTracks.Execute"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Duplicate\lTracks.Execute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Window\lState.Refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Selection\lManager.Add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac0ae8dcaf9f44d7be4fc61cc05f5110b",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Selection\lManager.RemoveTimelineSelection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#ad4ae0d8cfbca3ef6705e5b46072bbcdb",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Selection\lManager.IsTimelineType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#a3a3d92b32cddd3d88d762299aa359d9b",tooltip=" "];
 }

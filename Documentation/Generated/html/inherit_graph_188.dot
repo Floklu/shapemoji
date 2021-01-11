@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.Timeline.Time\lAreaAutoPanner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_time_area_auto_panner.html",tooltip=" "];
+  Node0 [label="UnityEditor.Collaboration.\lCollabAnalytics.CollabUserAction\lAnalyticsEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_editor_1_1_collaboration_1_1_collab_analytics_1_1_collab_user_action_analytics_event.html",tooltip=" "];
 }

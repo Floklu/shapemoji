@@ -1,6 +1,8 @@
 var class_unity_engine_1_1_timeline_1_1_director_named_color =
 [
+    [ "CreateAndLoadFromText", "class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701", null ],
     [ "FromText", "class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae", null ],
+    [ "ParseFloat", "class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e", null ],
     [ "SetDefault", "class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac30021b15c2b374cb1e4e5f78f36c3c9", null ],
     [ "ToText", "class_unity_engine_1_1_timeline_1_1_director_named_color.html#aeaba48765f51bcc41de7dbc1b1e47d52", null ],
     [ "clipBckg", "class_unity_engine_1_1_timeline_1_1_director_named_color.html#affb1e40093bef22ba5f980de2a4a35e1", null ],

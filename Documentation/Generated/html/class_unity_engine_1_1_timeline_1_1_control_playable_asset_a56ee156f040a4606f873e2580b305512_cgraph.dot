@@ -13,4 +13,6 @@ digraph "UnityEngine.Timeline.ControlPlayableAsset.GatherProperties"
   Node4 [label="UnityEngine.Timeline.Timeline\lAsset.GatherProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aba7594fee65685d13b4743c542340e29",tooltip="Called by the Timeline Editor to gather properties requiring preview."];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="UnityEngine.Timeline.IProperty\lPreview.GatherProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_property_preview.html#a7b234535daf06a0dd380c4994e1f2c63",tooltip="Called by the Timeline Editor to gather properties requiring preview."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Control\lPlayableAsset.GetControlableScripts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#adc7b9ee8b66d9011dd4f81ea689f04dd",tooltip=" "];
 }

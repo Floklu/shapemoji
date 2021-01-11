@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.FaceInfo_Legacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_face_info___legacy.html",tooltip="Class that contains the basic information about the font."];
+  Node0 [label="Packages.Rider.Editor.Rider\lPathLocator.BuildNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_build_node.html",tooltip=" "];
 }

@@ -12,5 +12,10 @@ digraph "TMPro.EditorUtilities.TMP_BaseEditorPanel.GetStyleNames"
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="TMPro.EditorUtilities.TMP\l_EditorPanelUI.DrawExtraSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_panel_u_i.html#ab479d514050bbbdb9ba0982be775ab43",tooltip=" "];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3a60309b317f09709852e0c8013e6849",tooltip=" "];
+  Node5 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.ON_TEXT\l_STYLE_CHANGED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a1562b0a82679bd59481342d75b096040",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnDisable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#aef86582a22c23f9a5dd2236eb704aac7",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3a60309b317f09709852e0c8013e6849",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

@@ -84,11 +84,19 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_an
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.AnimationClipCurveCache Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for UnityEditor.Timeline.AnimationClipCurveCache:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache__coll__graph.png" border="0" usemap="#a_unity_editor_8_timeline_8_animation_clip_curve_cache_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,6 +115,23 @@ Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a79d05c439c5628c4f5ffa5a49d793e4e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a79d05c439c5628c4f5ffa5a49d793e4e">Instance</a><code> [get]</code></td></tr>
 <tr class="separator:a79d05c439c5628c4f5ffa5a49d793e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8ecb81b441b2ec2d9b6551bdb6842861"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a8ecb81b441b2ec2d9b6551bdb6842861">OnCurveWasModified</a> (AnimationClip clip, EditorCurveBinding binding, AnimationUtility.CurveModifiedType modification)</td></tr>
+<tr class="separator:a8ecb81b441b2ec2d9b6551bdb6842861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad7a1eaa1e6b3060322ef7e15df5ea64b"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; AnimationClip, <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html">AnimationClipCurveInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#ad7a1eaa1e6b3060322ef7e15df5ea64b">m_ClipCache</a> = new Dictionary&lt;AnimationClip, <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html">AnimationClipCurveInfo</a>&gt;()</td></tr>
+<tr class="separator:ad7a1eaa1e6b3060322ef7e15df5ea64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73ec7f07ec4ed02c5c04a3307f6b10b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#af73ec7f07ec4ed02c5c04a3307f6b10b">m_IsEnabled</a></td></tr>
+<tr class="separator:af73ec7f07ec4ed02c5c04a3307f6b10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a9b0ad6efb51fcc5c92fa9fddce88d006"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#a9b0ad6efb51fcc5c92fa9fddce88d006">s_Instance</a></td></tr>
+<tr class="separator:a9b0ad6efb51fcc5c92fa9fddce88d006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -132,6 +157,11 @@ Properties</h2></td></tr>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aaa5222401da1f0b2adf907a4d860fad9_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aaa5222401da1f0b2adf907a4d860fad9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aaa5222401da1f0b2adf907a4d860fad9_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aaa5222401da1f0b2adf907a4d860fad9_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -185,6 +215,55 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a8ecb81b441b2ec2d9b6551bdb6842861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ecb81b441b2ec2d9b6551bdb6842861">&#9670;&nbsp;</a></span>OnCurveWasModified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.AnimationClipCurveCache.OnCurveWasModified </td>
+          <td>(</td>
+          <td class="paramtype">AnimationClip&#160;</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EditorCurveBinding&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationUtility.CurveModifiedType&#160;</td>
+          <td class="paramname"><em>modification</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00308">308</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_a8ecb81b441b2ec2d9b6551bdb6842861_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_a8ecb81b441b2ec2d9b6551bdb6842861_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a22c0b73ee6b99053dca7495e944ae7a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22c0b73ee6b99053dca7495e944ae7a7">&#9670;&nbsp;</a></span>OnDisable()</h2>
 
@@ -201,6 +280,16 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00298">298</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_a22c0b73ee6b99053dca7495e944ae7a7_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_a22c0b73ee6b99053dca7495e944ae7a7_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_a22c0b73ee6b99053dca7495e944ae7a7_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_a22c0b73ee6b99053dca7495e944ae7a7_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -220,6 +309,89 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00289">289</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aefff77a81056ad7445f4f43cb8c6b5df_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aefff77a81056ad7445f4f43cb8c6b5df_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aefff77a81056ad7445f4f43cb8c6b5df_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache_aefff77a81056ad7445f4f43cb8c6b5df_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad7a1eaa1e6b3060322ef7e15df5ea64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a1eaa1e6b3060322ef7e15df5ea64b">&#9670;&nbsp;</a></span>m_ClipCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;AnimationClip, <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html">AnimationClipCurveInfo</a>&gt; UnityEditor.Timeline.AnimationClipCurveCache.m_ClipCache = new Dictionary&lt;AnimationClip, <a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html">AnimationClipCurveInfo</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00272">272</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="af73ec7f07ec4ed02c5c04a3307f6b10b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73ec7f07ec4ed02c5c04a3307f6b10b">&#9670;&nbsp;</a></span>m_IsEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.AnimationClipCurveCache.m_IsEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00273">273</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9b0ad6efb51fcc5c92fa9fddce88d006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0ad6efb51fcc5c92fa9fddce88d006">&#9670;&nbsp;</a></span>s_Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html">AnimationClipCurveCache</a> UnityEditor.Timeline.AnimationClipCurveCache.s_Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00271">271</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
 
 </div>
 </div>
@@ -249,7 +421,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Animation/<a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Animation/<a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

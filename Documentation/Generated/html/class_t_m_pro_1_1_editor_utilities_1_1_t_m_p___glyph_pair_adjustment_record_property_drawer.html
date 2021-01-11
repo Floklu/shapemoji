@@ -83,6 +83,9 @@ $(document).ready(function(){initNavTree('class_t_m_pro_1_1_editor_utilities_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer Class Reference</div>  </div>
@@ -103,11 +106,125 @@ Collaboration diagram for TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPro
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9678ea64a0d19a7db339d95d39dacccf"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9678ea64a0d19a7db339d95d39dacccf">OnGUI</a> (Rect position, SerializedProperty property, GUIContent label)</td></tr>
 <tr class="separator:a9678ea64a0d19a7db339d95d39dacccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab86856a31e550f42d74db872c0479f63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#ab86856a31e550f42d74db872c0479f63">ValidateInput</a> (string source)</td></tr>
+<tr class="separator:ab86856a31e550f42d74db872c0479f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4a485cd25b4124aafbeaefff0684db"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a9e4a485cd25b4124aafbeaefff0684db">GetUnicodeCharacter</a> (string source)</td></tr>
+<tr class="separator:a9e4a485cd25b4124aafbeaefff0684db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27100ab97eb2920fefac99465884110d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a27100ab97eb2920fefac99465884110d">DrawGlyph</a> (uint glyphIndex, Rect position, SerializedProperty property)</td></tr>
+<tr class="separator:a27100ab97eb2920fefac99465884110d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8289c51ad548be7b71c6f923c19ca63d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a8289c51ad548be7b71c6f923c19ca63d">isEditingEnabled</a> = false</td></tr>
+<tr class="separator:a8289c51ad548be7b71c6f923c19ca63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb62de88d4fb783ba7402a681425453"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#afeb62de88d4fb783ba7402a681425453">isSelectable</a> = false</td></tr>
+<tr class="separator:afeb62de88d4fb783ba7402a681425453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90161d72bc973f59b030aacc858c8cfe"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a90161d72bc973f59b030aacc858c8cfe">m_FirstCharacter</a> = string.Empty</td></tr>
+<tr class="separator:a90161d72bc973f59b030aacc858c8cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc93e304552893971094735df8a339d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a5bc93e304552893971094735df8a339d">m_SecondCharacter</a> = string.Empty</td></tr>
+<tr class="separator:a5bc93e304552893971094735df8a339d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebcb9bcfb14f7f3d88c061c98e30343"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#a5ebcb9bcfb14f7f3d88c061c98e30343">m_PreviousInput</a></td></tr>
+<tr class="separator:a5ebcb9bcfb14f7f3d88c061c98e30343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:afea8ad328c36a50ca475fef42be354ff"><td class="memItemLeft" align="right" valign="top">static GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer.html#afea8ad328c36a50ca475fef42be354ff">s_CharacterTextFieldLabel</a> = new GUIContent(&quot;Char:&quot;, &quot;Enter the character or its UTF16 or UTF32 Unicode character escape sequence. For UTF16 use \&quot;\\uFF00\&quot; and for UTF32 use \&quot;\\UFF00FF00\&quot; representation.&quot;)</td></tr>
+<tr class="separator:afea8ad328c36a50ca475fef42be354ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00013">13</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a27100ab97eb2920fefac99465884110d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27100ab97eb2920fefac99465884110d">&#9670;&nbsp;</a></span>DrawGlyph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.DrawGlyph </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>glyphIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>property</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00317">317</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a27100ab97eb2920fefac99465884110d_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a27100ab97eb2920fefac99465884110d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9e4a485cd25b4124aafbeaefff0684db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4a485cd25b4124aafbeaefff0684db">&#9670;&nbsp;</a></span>GetUnicodeCharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.GetUnicodeCharacter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00303">303</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a9e4a485cd25b4124aafbeaefff0684db_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a9e4a485cd25b4124aafbeaefff0684db_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a9e4a485cd25b4124aafbeaefff0684db_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a9e4a485cd25b4124aafbeaefff0684db_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a9678ea64a0d19a7db339d95d39dacccf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9678ea64a0d19a7db339d95d39dacccf">&#9670;&nbsp;</a></span>OnGUI()</h2>
 
@@ -141,11 +258,194 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00024">24</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a9678ea64a0d19a7db339d95d39dacccf_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_a9678ea64a0d19a7db339d95d39dacccf_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab86856a31e550f42d74db872c0479f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab86856a31e550f42d74db872c0479f63">&#9670;&nbsp;</a></span>ValidateInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.ValidateInput </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00248">248</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_ab86856a31e550f42d74db872c0479f63_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___glyph_pair_adjustment_record_property_drawer_ab86856a31e550f42d74db872c0479f63_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8289c51ad548be7b71c6f923c19ca63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8289c51ad548be7b71c6f923c19ca63d">&#9670;&nbsp;</a></span>isEditingEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.isEditingEnabled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00015">15</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="afeb62de88d4fb783ba7402a681425453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb62de88d4fb783ba7402a681425453">&#9670;&nbsp;</a></span>isSelectable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.isSelectable = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00016">16</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a90161d72bc973f59b030aacc858c8cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90161d72bc973f59b030aacc858c8cfe">&#9670;&nbsp;</a></span>m_FirstCharacter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.m_FirstCharacter = string.Empty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00018">18</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5ebcb9bcfb14f7f3d88c061c98e30343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebcb9bcfb14f7f3d88c061c98e30343">&#9670;&nbsp;</a></span>m_PreviousInput</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.m_PreviousInput</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00020">20</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5bc93e304552893971094735df8a339d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc93e304552893971094735df8a339d">&#9670;&nbsp;</a></span>m_SecondCharacter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.m_SecondCharacter = string.Empty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00019">19</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="afea8ad328c36a50ca475fef42be354ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea8ad328c36a50ca475fef42be354ff">&#9670;&nbsp;</a></span>s_CharacterTextFieldLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIContent TMPro.EditorUtilities.TMP_GlyphPairAdjustmentRecordPropertyDrawer.s_CharacterTextFieldLabel = new GUIContent(&quot;Char:&quot;, &quot;Enter the character or its UTF16 or UTF32 Unicode character escape sequence. For UTF16 use \&quot;\\uFF00\&quot; and for UTF32 use \&quot;\\UFF00FF00\&quot; representation.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html#l00022">22</a> of file <a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/<a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/<a class="el" href="_t_m_p___glyph_pair_adjustment_record_property_drawer_8cs_source.html">TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

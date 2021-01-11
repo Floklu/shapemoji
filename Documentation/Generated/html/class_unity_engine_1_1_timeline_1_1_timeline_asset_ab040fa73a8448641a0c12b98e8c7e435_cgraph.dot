@@ -7,4 +7,12 @@ digraph "UnityEngine.Timeline.TimelineAsset.CreateTrack&lt; T &gt;"
   Node1 [label="UnityEngine.Timeline.Timeline\lAsset.CreateTrack\< T \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Creates a track and adds it to the Timeline Asset."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEngine.Timeline.Timeline\lAsset.CreateTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266",tooltip="Allows you to create a track and add it to the Timeline."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Timeline\lCreateUtilities.GenerateUniqueActorName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a14a12e8449f26a9645fd6c6a71a3cd82",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEngine.Timeline.Timeline\lUndo.PushUndo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Timeline\lCreateUtilities.ValidateParentTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a35c6f3e2617f0c453032bd54858d8ba7",tooltip=" "];
 }

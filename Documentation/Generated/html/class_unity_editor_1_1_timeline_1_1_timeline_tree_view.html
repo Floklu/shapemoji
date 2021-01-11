@@ -85,6 +85,10 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ti
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TimelineTreeView Class Reference</div>  </div>
@@ -137,12 +141,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a468fdc69339a46452081b253830dc49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8036a5e9e573ea749db81f0c6031ff7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a8036a5e9e573ea749db81f0c6031ff7f">GetFirstAndLastRowVisible</a> (out int firstRowVisible, out int lastRowVisible)</td></tr>
 <tr class="separator:a8036a5e9e573ea749db81f0c6031ff7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250652caf4fca3e4757d7037a94a7f28"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a250652caf4fca3e4757d7037a94a7f28">GetTotalSize</a> ()</td></tr>
+<tr class="memitem:a250652caf4fca3e4757d7037a94a7f28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a250652caf4fca3e4757d7037a94a7f28">GetTotalSize</a> ()</td></tr>
 <tr class="separator:a250652caf4fca3e4757d7037a94a7f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a2e81a898a100d30ef09e2f58e4c40957"><td class="memItemLeft" align="right" valign="top">virtual Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a2e81a898a100d30ef09e2f58e4c40957">GetSizeOfRow</a> (TreeViewItem item)</td></tr>
+<tr class="memitem:a2e81a898a100d30ef09e2f58e4c40957"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a2e81a898a100d30ef09e2f58e4c40957">GetSizeOfRow</a> (TreeViewItem item)</td></tr>
 <tr class="separator:a2e81a898a100d30ef09e2f58e4c40957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addb82947902724183bc68adccb3c74b7"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#addb82947902724183bc68adccb3c74b7">GetFoldoutIndent</a> (TreeViewItem item)</td></tr>
 <tr class="separator:addb82947902724183bc68adccb3c74b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,12 +155,56 @@ Protected Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:ab7816a89ada9c5ff7e87194d5d1e8df3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#ab7816a89ada9c5ff7e87194d5d1e8df3">showInsertionMarker</a><code> [get, set]</code></td></tr>
 <tr class="separator:ab7816a89ada9c5ff7e87194d5d1e8df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd2991f5f05f14cbf71a9de251d0b40c"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#acd2991f5f05f14cbf71a9de251d0b40c">topRowMargin</a><code> [get]</code></td></tr>
+<tr class="memitem:acd2991f5f05f14cbf71a9de251d0b40c"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#acd2991f5f05f14cbf71a9de251d0b40c">topRowMargin</a><code> [get, private set]</code></td></tr>
 <tr class="separator:acd2991f5f05f14cbf71a9de251d0b40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa146a0f99d9a121be6bc100a8ee4fa0"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#aaa146a0f99d9a121be6bc100a8ee4fa0">bottomRowMargin</a><code> [get]</code></td></tr>
+<tr class="memitem:aaa146a0f99d9a121be6bc100a8ee4fa0"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#aaa146a0f99d9a121be6bc100a8ee4fa0">bottomRowMargin</a><code> [get, private set]</code></td></tr>
 <tr class="separator:aaa146a0f99d9a121be6bc100a8ee4fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9067db912e9bb3e9fa66cc0698046882"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a9067db912e9bb3e9fa66cc0698046882">halfDropBetweenHeight</a><code> [get]</code></td></tr>
 <tr class="separator:a9067db912e9bb3e9fa66cc0698046882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a30570ed27868bc269970392f2e4d44bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a30570ed27868bc269970392f2e4d44bd">ItemDoubleClickedCallback</a> (int id)</td></tr>
+<tr class="separator:a30570ed27868bc269970392f2e4d44bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255414ad686bf018b18d2466bcfe8b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a255414ad686bf018b18d2466bcfe8b60">ContextClickOutsideItemsCallback</a> ()</td></tr>
+<tr class="separator:a255414ad686bf018b18d2466bcfe8b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ccfb4c11bdef8657fee9d5f27c7049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a12ccfb4c11bdef8657fee9d5f27c7049">ContextClickItemCallback</a> (int id)</td></tr>
+<tr class="separator:a12ccfb4c11bdef8657fee9d5f27c7049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0c323d9d7698a6d3e1189c607887ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1d0c323d9d7698a6d3e1189c607887ff">SelectionChangedCallback</a> (int[] ids)</td></tr>
+<tr class="separator:a1d0c323d9d7698a6d3e1189c607887ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af310a47bee9b015c50717fc8906ee14f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#af310a47bee9b015c50717fc8906ee14f">DrawFoldout</a> (TreeViewItem item, Rect foldoutRect, float indent)</td></tr>
+<tr class="separator:af310a47bee9b015c50717fc8906ee14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a1702ffa398e7bd77a42856bb1aab4478"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1702ffa398e7bd77a42856bb1aab4478">GetSpacing</a> (TreeViewItem item)</td></tr>
+<tr class="separator:a1702ffa398e7bd77a42856bb1aab4478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab4f392323fe8b8cd6de45c9bc95df51f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#ab4f392323fe8b8cd6de45c9bc95df51f">m_FoldoutWidth</a></td></tr>
+<tr class="separator:ab4f392323fe8b8cd6de45c9bc95df51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03df7a3a4c36238bbe0f44bbf6d1864"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#af03df7a3a4c36238bbe0f44bbf6d1864">m_DraggingInsertionMarkerRect</a></td></tr>
+<tr class="separator:af03df7a3a4c36238bbe0f44bbf6d1864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a487133307147ccdbb4d8b67031de7"><td class="memItemLeft" align="right" valign="top">readonly TreeViewController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a23a487133307147ccdbb4d8b67031de7">m_TreeView</a></td></tr>
+<tr class="separator:a23a487133307147ccdbb4d8b67031de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989e4c3c4fbba69064d514d0ab8e618b"><td class="memItemLeft" align="right" valign="top">List&lt; Rect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a989e4c3c4fbba69064d514d0ab8e618b">m_RowRects</a> = new List&lt;Rect&gt;()</td></tr>
+<tr class="separator:a989e4c3c4fbba69064d514d0ab8e618b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65dad2464d9064e3e7f4b62f74a4ab2"><td class="memItemLeft" align="right" valign="top">List&lt; Rect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#ab65dad2464d9064e3e7f4b62f74a4ab2">m_ExpandedRowRects</a> = new List&lt;Rect&gt;()</td></tr>
+<tr class="separator:ab65dad2464d9064e3e7f4b62f74a4ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628505625618fd7f51bbff4139a0ee51"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a628505625618fd7f51bbff4139a0ee51">m_MaxWidthOfRows</a></td></tr>
+<tr class="separator:a628505625618fd7f51bbff4139a0ee51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d2f8e8ed40bfb776fca8fa26d11c3e"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#ad4d2f8e8ed40bfb776fca8fa26d11c3e">m_State</a></td></tr>
+<tr class="separator:ad4d2f8e8ed40bfb776fca8fa26d11c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a63b97c0e1166e336e2e34185028dee4f"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a63b97c0e1166e336e2e34185028dee4f">kMinTrackHeight</a> = 25.0f</td></tr>
+<tr class="separator:a63b97c0e1166e336e2e34185028dee4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504c95bdd17ea1703cc3cd3ecec5b7fb"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a504c95bdd17ea1703cc3cd3ecec5b7fb">kFoldOutOffset</a> = 14.0f</td></tr>
+<tr class="separator:a504c95bdd17ea1703cc3cd3ecec5b7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38ace7cecc8a9abbd6516d30b90a029"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#ad38ace7cecc8a9abbd6516d30b90a029">m_Styles</a></td></tr>
+<tr class="separator:ad38ace7cecc8a9abbd6516d30b90a029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -189,6 +237,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00029">29</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_af488072fdcfa4bf93cdf336f9b94cce5_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_af488072fdcfa4bf93cdf336f9b94cce5_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -324,6 +377,130 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1c05e1c7fe6a6cd897b5194d3245fcab_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1c05e1c7fe6a6cd897b5194d3245fcab_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a12ccfb4c11bdef8657fee9d5f27c7049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ccfb4c11bdef8657fee9d5f27c7049">&#9670;&nbsp;</a></span>ContextClickItemCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTreeView.ContextClickItemCallback </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00074">74</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a12ccfb4c11bdef8657fee9d5f27c7049_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a12ccfb4c11bdef8657fee9d5f27c7049_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a12ccfb4c11bdef8657fee9d5f27c7049_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a12ccfb4c11bdef8657fee9d5f27c7049_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a255414ad686bf018b18d2466bcfe8b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255414ad686bf018b18d2466bcfe8b60">&#9670;&nbsp;</a></span>ContextClickOutsideItemsCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTreeView.ContextClickOutsideItemsCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00068">68</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a255414ad686bf018b18d2466bcfe8b60_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a255414ad686bf018b18d2466bcfe8b60_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a255414ad686bf018b18d2466bcfe8b60_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a255414ad686bf018b18d2466bcfe8b60_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af310a47bee9b015c50717fc8906ee14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af310a47bee9b015c50717fc8906ee14f">&#9670;&nbsp;</a></span>DrawFoldout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTreeView.DrawFoldout </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>foldoutRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>indent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00207">207</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_af310a47bee9b015c50717fc8906ee14f_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_af310a47bee9b015c50717fc8906ee14f_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -664,7 +841,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Vector2 UnityEditor.Timeline.TimelineTreeView.GetSizeOfRow </td>
+          <td class="memname">virtual <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> UnityEditor.Timeline.TimelineTreeView.GetSizeOfRow </td>
           <td>(</td>
           <td class="paramtype">TreeViewItem&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
@@ -687,6 +864,44 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a1702ffa398e7bd77a42856bb1aab4478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1702ffa398e7bd77a42856bb1aab4478">&#9670;&nbsp;</a></span>GetSpacing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float UnityEditor.Timeline.TimelineTreeView.GetSpacing </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00262">262</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1702ffa398e7bd77a42856bb1aab4478_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1702ffa398e7bd77a42856bb1aab4478_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1702ffa398e7bd77a42856bb1aab4478_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1702ffa398e7bd77a42856bb1aab4478_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a250652caf4fca3e4757d7037a94a7f28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a250652caf4fca3e4757d7037a94a7f28">&#9670;&nbsp;</a></span>GetTotalSize()</h2>
 
@@ -694,7 +909,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector2 UnityEditor.Timeline.TimelineTreeView.GetTotalSize </td>
+          <td class="memname"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> UnityEditor.Timeline.TimelineTreeView.GetTotalSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -703,6 +918,44 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00426">426</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a30570ed27868bc269970392f2e4d44bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30570ed27868bc269970392f2e4d44bd">&#9670;&nbsp;</a></span>ItemDoubleClickedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTreeView.ItemDoubleClickedCallback </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00046">46</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a30570ed27868bc269970392f2e4d44bd_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a30570ed27868bc269970392f2e4d44bd_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a30570ed27868bc269970392f2e4d44bd_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a30570ed27868bc269970392f2e4d44bd_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -786,6 +1039,285 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a1d0c323d9d7698a6d3e1189c607887ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0c323d9d7698a6d3e1189c607887ff">&#9670;&nbsp;</a></span>SelectionChangedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTreeView.SelectionChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00085">85</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1d0c323d9d7698a6d3e1189c607887ff_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1d0c323d9d7698a6d3e1189c607887ff_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1d0c323d9d7698a6d3e1189c607887ff_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_tree_view_a1d0c323d9d7698a6d3e1189c607887ff_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a504c95bdd17ea1703cc3cd3ecec5b7fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504c95bdd17ea1703cc3cd3ecec5b7fb">&#9670;&nbsp;</a></span>kFoldOutOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TimelineTreeView.kFoldOutOffset = 14.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00021">21</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a63b97c0e1166e336e2e34185028dee4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b97c0e1166e336e2e34185028dee4f">&#9670;&nbsp;</a></span>kMinTrackHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.TimelineTreeView.kMinTrackHeight = 25.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00020">20</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="af03df7a3a4c36238bbe0f44bbf6d1864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03df7a3a4c36238bbe0f44bbf6d1864">&#9670;&nbsp;</a></span>m_DraggingInsertionMarkerRect</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect UnityEditor.Timeline.TimelineTreeView.m_DraggingInsertionMarkerRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00011">11</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab65dad2464d9064e3e7f4b62f74a4ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65dad2464d9064e3e7f4b62f74a4ab2">&#9670;&nbsp;</a></span>m_ExpandedRowRects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Rect&gt; UnityEditor.Timeline.TimelineTreeView.m_ExpandedRowRects = new List&lt;Rect&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00015">15</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab4f392323fe8b8cd6de45c9bc95df51f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f392323fe8b8cd6de45c9bc95df51f">&#9670;&nbsp;</a></span>m_FoldoutWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTreeView.m_FoldoutWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00010">10</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a628505625618fd7f51bbff4139a0ee51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628505625618fd7f51bbff4139a0ee51">&#9670;&nbsp;</a></span>m_MaxWidthOfRows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTreeView.m_MaxWidthOfRows</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00017">17</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a989e4c3c4fbba69064d514d0ab8e618b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989e4c3c4fbba69064d514d0ab8e618b">&#9670;&nbsp;</a></span>m_RowRects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Rect&gt; UnityEditor.Timeline.TimelineTreeView.m_RowRects = new List&lt;Rect&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00014">14</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad4d2f8e8ed40bfb776fca8fa26d11c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d2f8e8ed40bfb776fca8fa26d11c3e">&#9670;&nbsp;</a></span>m_State</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> UnityEditor.Timeline.TimelineTreeView.m_State</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00018">18</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad38ace7cecc8a9abbd6516d30b90a029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad38ace7cecc8a9abbd6516d30b90a029">&#9670;&nbsp;</a></span>m_Styles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_director_styles.html">DirectorStyles</a> UnityEditor.Timeline.TimelineTreeView.m_Styles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00023">23</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a23a487133307147ccdbb4d8b67031de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a487133307147ccdbb4d8b67031de7">&#9670;&nbsp;</a></span>m_TreeView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly TreeViewController UnityEditor.Timeline.TimelineTreeView.m_TreeView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_tree_view_8cs_source.html#l00012">12</a> of file <a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="aaa146a0f99d9a121be6bc100a8ee4fa0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa146a0f99d9a121be6bc100a8ee4fa0">&#9670;&nbsp;</a></span>bottomRowMargin</h2>
@@ -802,7 +1334,7 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -874,7 +1406,7 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -884,7 +1416,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/<a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/<a class="el" href="_timeline_tree_view_8cs_source.html">TimelineTreeView.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,38 +1,55 @@
 # ShapeMoji
 
-## How to deploy the Game
+## How to build the Project
+[Build Guide](manual/build_guide.md)
+1.  Clone the repository via `git clone https://gitlab.hochschule-stralsund.de/spo_ws2020_21/shapemoji/shapemoji.git`
+2.  Start Unity Hub 
+    1. Make sure the Unity Version 2019.4 LTS is installed or install the software over Installs > Add
+    2. Click on &quot;Add&quot; Button
+3.  Search for your clone in the File-Explorer 
+    1. Open the folder &quot;shapemoji&quot; 
+    2. Select the folder &quot;src&quot;
+4.  Click on the added Project in Unity Hub 
+    1. Unity will open the Project now, this may take some time
+5.  If the Project is opened in Unity 
+    1. Click on &quot;File&quot; 
+    2. Choose &quot;Build Settings&quot; 
+    3. Select your preferred Build Settings 
+    4. Click on Build 
+    5. Choose the location where you want to save the Build
+6.  To run it start the .exe / .apk from your chosen file location
 
-### Procedure
+## Installation
 
-#### Clone the repository
-Clone the repository from https://gitlab.hochschule-stralsund.de/spo_ws2020_21/shapemoji/shapemoji to an appropriate place using Gitbash: `git clone https://gitlab.hochschule-stralsund.de/spo_ws2020_21/shapemoji/shapemoji` or every other tool that you like for cloning repositories.
-#### Add the repository to UnityHub
-Open up UnityHub and go to "Projects". Use the ADD button to add the "src"-folder of the cloned repository as a project to UnityHub.
-#### Open the project
-By clicking on the added project called "src". Make sure you have chosen 2019.4.13f1 as "Unity Version".
-#### Check the opened project
-Go ahead and chose "Default" as layout options in the upper right corner for the purpose of this guide. Check the lower left corner for any exceptions. If the some exception appears just click on "Assets/Reimport All". If its a different exception or if the previous handling did not work you might want to search for the bug or continue none the less if you just want to build the project.
-#### Build the project
-In program menu select "File" > "Build Settings". In the new window "Build Settings" select "Build". In the new window "Build Windows" select a folder, to save the new Build.
-#### Setup Touch-Monitor
+### Windows
+If you have downloaded the Product-ZIP (shapemoji-master-Executables-windows.zip) on your device just search for it in the file system and unzip it. Open the folder "Exectuables" in the unzipped folder, then open the folder "windows". In this folder you'll find the Shapemoji.zip, unzip this as well. Open the unziped folder and then start the "Shapemoji.exe".  The game will then start to run automatically.
+
+### Android
+If you have downloaded the APK on your device your system should install it automatically. Just start the App once it is finished to play the Game. You may need to activate "Allow Installations from unknown source" / "Allow installation from this source" on your device, the latter is recommended.
+
+## Start the Game
+### Prerequisites
 Connect the PC to the Touch-Monitor with the HDMI Cable. Place the Touch-Monitor in the horizontal position for the best playing experience.
-#### Run the game
-Open File Explorer in the Start Menu and navigate to the folder with the saved build. Select ShapeMoji Application in the build folder to run the game.
 
-## How to play
+### Windows
+Start the Shapemoji.exe. No further software must be installed to run the game. All Files and directories included in the .ZIP file must be in the same directory.
 
-### Game Objective
+### Android
+After the .apk has been installed onto the system, you can then run the game by opening the game from your app launcher.
 
-The main goal of the game is to cover the emojis with stones as good as possible. The game lasts for 3 minutes and for each emoji covered with stones a score is determined. Scores for each emoji are added up and the winner is determined in the end of the game.
+## About the Game
+
+The goal of the game is to get more points within 3 minutes as a single player or a team than your opposition. You can get points by positioning shapes on top of Emojis in a way that covers up the whole current Emoji.
 
 ### Game Modes
+
 There are 2 game modes in the game, that can be selected in the main menu.
 
 * 2vs2: 4 players are divided in 2 groups, each group consists of 2 players. The groups compete against each other.
 * 1vs1: 2 players compete against each other.
 
 ### Gameplay
-Before the game begins, each player decides at which base he will play during the game. Each player should stay near his base during the game.
+Before the game began, each player decides at which base he will play during the game. Each player should stay near his base during the game.
 The game begins, after the countdown is over.
 During the game the players can shoot the projectile, in order to catch stones and items. Then the projectile must be dragged back to the base, by rotating the wheel. After the projectile is back at it's initial position, the hooked stone/item can be used.
 The stones are placed into the inventory.
@@ -45,3 +62,4 @@ The game can be paused by touching the timer in the game field.
 The game ends after 3 minutes, the players will be warned with a countdown before the end.
 
 ![Shapemoji Screenshot](src/Assets/Sprites/shapemoji.jpg)
+

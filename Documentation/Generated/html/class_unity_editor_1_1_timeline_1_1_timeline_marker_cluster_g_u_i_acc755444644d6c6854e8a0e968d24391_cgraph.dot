@@ -7,4 +7,8 @@ digraph "UnityEditor.Timeline.TimelineMarkerClusterGUI.CycleMarkers"
   Node1 [label="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.CycleMarkers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Timeline\lMarkerGUI.Deselect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a4794002d73a4ce35c5ec38d95eded252",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Selection\lManager.Remove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#a64339f961d920c86357e95ee50bd937d",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4",tooltip=" "];
 }

@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_in
 <div class="header">
   <div class="summary">
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.InlineCurveResize Class Reference</div>  </div>
@@ -122,6 +123,17 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aef99a81de039bff010ddef27640f1281 inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">ExecuteCommand</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
 <tr class="separator:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af79ae31d9348a90718214f7851524089"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#af79ae31d9348a90718214f7851524089">m_Captured</a></td></tr>
+<tr class="separator:af79ae31d9348a90718214f7851524089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2043f20f04c3cdc0b64e128745b57074"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a2043f20f04c3cdc0b64e128745b57074">m_CapturedHeight</a></td></tr>
+<tr class="separator:a2043f20f04c3cdc0b64e128745b57074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3445d1fc95d0813cfed053eeb83b8e01"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a3445d1fc95d0813cfed053eeb83b8e01">m_CaptureMouseYPos</a></td></tr>
+<tr class="separator:a3445d1fc95d0813cfed053eeb83b8e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091c9c3c370a40466ba26973f069ea93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html">InlineCurveResizeHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize.html#a091c9c3c370a40466ba26973f069ea93">m_Target</a></td></tr>
+<tr class="separator:a091c9c3c370a40466ba26973f069ea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -270,8 +282,105 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af79ae31d9348a90718214f7851524089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79ae31d9348a90718214f7851524089">&#9670;&nbsp;</a></span>m_Captured</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.InlineCurveResize.m_Captured</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_manipulations_tracks_8cs_source.html#l00009">9</a> of file <a class="el" href="_manipulations_tracks_8cs_source.html">ManipulationsTracks.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2043f20f04c3cdc0b64e128745b57074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2043f20f04c3cdc0b64e128745b57074">&#9670;&nbsp;</a></span>m_CapturedHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.InlineCurveResize.m_CapturedHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_manipulations_tracks_8cs_source.html#l00011">11</a> of file <a class="el" href="_manipulations_tracks_8cs_source.html">ManipulationsTracks.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3445d1fc95d0813cfed053eeb83b8e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3445d1fc95d0813cfed053eeb83b8e01">&#9670;&nbsp;</a></span>m_CaptureMouseYPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.InlineCurveResize.m_CaptureMouseYPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_manipulations_tracks_8cs_source.html#l00012">12</a> of file <a class="el" href="_manipulations_tracks_8cs_source.html">ManipulationsTracks.cs</a>.</p>
+
+</div>
+</div>
+<a id="a091c9c3c370a40466ba26973f069ea93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091c9c3c370a40466ba26973f069ea93">&#9670;&nbsp;</a></span>m_Target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_inline_curve_resize_handle.html">InlineCurveResizeHandle</a> UnityEditor.Timeline.InlineCurveResize.m_Target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_manipulations_tracks_8cs_source.html#l00014">14</a> of file <a class="el" href="_manipulations_tracks_8cs_source.html">ManipulationsTracks.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/<a class="el" href="_manipulations_tracks_8cs_source.html">ManipulationsTracks.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/<a class="el" href="_manipulations_tracks_8cs_source.html">ManipulationsTracks.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

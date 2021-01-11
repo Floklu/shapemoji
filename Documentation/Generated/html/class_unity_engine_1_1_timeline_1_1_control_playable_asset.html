@@ -85,6 +85,10 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_co
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_control_playable_asset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.ControlPlayableAsset Class Reference</div>  </div>
@@ -158,12 +162,215 @@ Properties</h2></td></tr>
 <tr class="memitem:ad73af6af3aa5b1f06545740d9da4db2c inherit properties_interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html#ad73af6af3aa5b1f06545740d9da4db2c">clipCaps</a><code> [get]</code></td></tr>
 <tr class="memdesc:ad73af6af3aa5b1f06545740d9da4db2c inherit properties_interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a description of the features supported by clips with PlayableAssets implementing this interface.  <a href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html#ad73af6af3aa5b1f06545740d9da4db2c">More...</a><br /></td></tr>
 <tr class="separator:ad73af6af3aa5b1f06545740d9da4db2c inherit properties_interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a810ee2585134d702afcdd5a69e9c9dec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a810ee2585134d702afcdd5a69e9c9dec">CreateActivationPlayable</a> (GameObject root, PlayableGraph graph, List&lt; Playable &gt; outplayables)</td></tr>
+<tr class="separator:a810ee2585134d702afcdd5a69e9c9dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a72394fc22fd208a3eeb0ff956e4323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a6a72394fc22fd208a3eeb0ff956e4323">SearchHiearchyAndConnectParticleSystem</a> (IEnumerable&lt; ParticleSystem &gt; particleSystems, PlayableGraph graph, List&lt; Playable &gt; outplayables)</td></tr>
+<tr class="separator:a6a72394fc22fd208a3eeb0ff956e4323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440657f58462e3481a9700588c5b5efa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a440657f58462e3481a9700588c5b5efa">SearchHierarchyAndConnectDirector</a> (IEnumerable&lt; PlayableDirector &gt; directors, PlayableGraph graph, List&lt; Playable &gt; outplayables, bool disableSelfReferences)</td></tr>
+<tr class="separator:a440657f58462e3481a9700588c5b5efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89cdf1c3f9266e8728400ca097129b22"><td class="memItemLeft" align="right" valign="top">IList&lt; ParticleSystem &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a89cdf1c3f9266e8728400ca097129b22">GetParticleSystemRoots</a> (GameObject go)</td></tr>
+<tr class="separator:a89cdf1c3f9266e8728400ca097129b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:aed169ea80e5fb28b04e6e2f2d49be38e"><td class="memItemLeft" align="right" valign="top">static Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#aed169ea80e5fb28b04e6e2f2d49be38e">ConnectPlayablesToMixer</a> (PlayableGraph graph, List&lt; Playable &gt; playables)</td></tr>
+<tr class="separator:aed169ea80e5fb28b04e6e2f2d49be38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b8da14ededd5dfc0da5da0ea45d0309"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a9b8da14ededd5dfc0da5da0ea45d0309">SearchHierarchyAndConnectControlableScripts</a> (IEnumerable&lt; MonoBehaviour &gt; controlableScripts, PlayableGraph graph, List&lt; Playable &gt; outplayables)</td></tr>
+<tr class="separator:a9b8da14ededd5dfc0da5da0ea45d0309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c03e74cb025c3dd9a83370ee67d447"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#ab7c03e74cb025c3dd9a83370ee67d447">ConnectMixerAndPlayable</a> (PlayableGraph graph, Playable mixer, Playable playable, int portIndex)</td></tr>
+<tr class="separator:ab7c03e74cb025c3dd9a83370ee67d447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7b9ee8b66d9011dd4f81ea689f04dd"><td class="memItemLeft" align="right" valign="top">static IEnumerable&lt; MonoBehaviour &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#adc7b9ee8b66d9011dd4f81ea689f04dd">GetControlableScripts</a> (GameObject root)</td></tr>
+<tr class="separator:adc7b9ee8b66d9011dd4f81ea689f04dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7589ca82e2adb54ebef683ab8e8b30ca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a7589ca82e2adb54ebef683ab8e8b30ca">GetParticleSystemRoots</a> (Transform t, ICollection&lt; ParticleSystem &gt; roots)</td></tr>
+<tr class="separator:a7589ca82e2adb54ebef683ab8e8b30ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a779ed55d90648a531df9e5af5427f522"><td class="memItemLeft" align="right" valign="top">PlayableAsset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a779ed55d90648a531df9e5af5427f522">m_ControlDirectorAsset</a></td></tr>
+<tr class="separator:a779ed55d90648a531df9e5af5427f522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4707ba26a40c333cebee39ef36d361"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a6a4707ba26a40c333cebee39ef36d361">m_Duration</a> = PlayableBinding.DefaultDuration</td></tr>
+<tr class="separator:a6a4707ba26a40c333cebee39ef36d361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff6d9460c8eb53e975865c1b32ca801"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a9ff6d9460c8eb53e975865c1b32ca801">m_SupportLoop</a></td></tr>
+<tr class="separator:a9ff6d9460c8eb53e975865c1b32ca801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a863271b0862e40ef3904c0996b13407b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a863271b0862e40ef3904c0996b13407b">k_MaxRandInt</a> = 10000</td></tr>
+<tr class="separator:a863271b0862e40ef3904c0996b13407b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e258e86a83fd60bf666fee51a60721"><td class="memItemLeft" align="right" valign="top">static readonly List&lt; PlayableDirector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#ad9e258e86a83fd60bf666fee51a60721">k_EmptyDirectorsList</a> = new List&lt;PlayableDirector&gt;(0)</td></tr>
+<tr class="separator:ad9e258e86a83fd60bf666fee51a60721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fa06a3bef4a7551199ef0632fa7eb9"><td class="memItemLeft" align="right" valign="top">static readonly List&lt; ParticleSystem &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a84fa06a3bef4a7551199ef0632fa7eb9">k_EmptyParticlesList</a> = new List&lt;ParticleSystem&gt;(0)</td></tr>
+<tr class="separator:a84fa06a3bef4a7551199ef0632fa7eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22354f3eb2510819e2d73c80436aa06e"><td class="memItemLeft" align="right" valign="top">static HashSet&lt; PlayableDirector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a22354f3eb2510819e2d73c80436aa06e">s_ProcessedDirectors</a> = new HashSet&lt;PlayableDirector&gt;()</td></tr>
+<tr class="separator:a22354f3eb2510819e2d73c80436aa06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978e161dde9d5e91cfe209c398aaa1d6"><td class="memItemLeft" align="right" valign="top">static HashSet&lt; GameObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_control_playable_asset.html#a978e161dde9d5e91cfe209c398aaa1d6">s_CreatedPrefabs</a> = new HashSet&lt;GameObject&gt;()</td></tr>
+<tr class="separator:a978e161dde9d5e91cfe209c398aaa1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Playable Asset that generates playables for controlling time-related elements on a GameObject. </p>
 
 <p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00012">12</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab7c03e74cb025c3dd9a83370ee67d447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c03e74cb025c3dd9a83370ee67d447">&#9670;&nbsp;</a></span>ConnectMixerAndPlayable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.ControlPlayableAsset.ConnectMixerAndPlayable </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>mixer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>portIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00248">248</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_ab7c03e74cb025c3dd9a83370ee67d447_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_ab7c03e74cb025c3dd9a83370ee67d447_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aed169ea80e5fb28b04e6e2f2d49be38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed169ea80e5fb28b04e6e2f2d49be38e">&#9670;&nbsp;</a></span>ConnectPlayablesToMixer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Playable UnityEngine.Timeline.ControlPlayableAsset.ConnectPlayablesToMixer </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Playable &gt;&#160;</td>
+          <td class="paramname"><em>playables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00184">184</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_aed169ea80e5fb28b04e6e2f2d49be38e_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_aed169ea80e5fb28b04e6e2f2d49be38e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_aed169ea80e5fb28b04e6e2f2d49be38e_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_aed169ea80e5fb28b04e6e2f2d49be38e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a810ee2585134d702afcdd5a69e9c9dec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810ee2585134d702afcdd5a69e9c9dec">&#9670;&nbsp;</a></span>CreateActivationPlayable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.ControlPlayableAsset.CreateActivationPlayable </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Playable &gt;&#160;</td>
+          <td class="paramname"><em>outplayables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00198">198</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a810ee2585134d702afcdd5a69e9c9dec_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a810ee2585134d702afcdd5a69e9c9dec_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a810ee2585134d702afcdd5a69e9c9dec_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a810ee2585134d702afcdd5a69e9c9dec_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a87c954a9c943e648eb2adfab74400ebb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87c954a9c943e648eb2adfab74400ebb">&#9670;&nbsp;</a></span>CreatePlayable()</h2>
 
@@ -248,6 +455,115 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="adc7b9ee8b66d9011dd4f81ea689f04dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7b9ee8b66d9011dd4f81ea689f04dd">&#9670;&nbsp;</a></span>GetControlableScripts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IEnumerable&lt;MonoBehaviour&gt; UnityEngine.Timeline.ControlPlayableAsset.GetControlableScripts </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00272">272</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_adc7b9ee8b66d9011dd4f81ea689f04dd_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_adc7b9ee8b66d9011dd4f81ea689f04dd_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a89cdf1c3f9266e8728400ca097129b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89cdf1c3f9266e8728400ca097129b22">&#9670;&nbsp;</a></span>GetParticleSystemRoots() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IList&lt;ParticleSystem&gt; UnityEngine.Timeline.ControlPlayableAsset.GetParticleSystemRoots </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>go</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00319">319</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a89cdf1c3f9266e8728400ca097129b22_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a89cdf1c3f9266e8728400ca097129b22_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a7589ca82e2adb54ebef683ab8e8b30ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7589ca82e2adb54ebef683ab8e8b30ca">&#9670;&nbsp;</a></span>GetParticleSystemRoots() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.ControlPlayableAsset.GetParticleSystemRoots </td>
+          <td>(</td>
+          <td class="paramtype">Transform&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ICollection&lt; ParticleSystem &gt;&#160;</td>
+          <td class="paramname"><em>roots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00331">331</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a7589ca82e2adb54ebef683ab8e8b30ca_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a7589ca82e2adb54ebef683ab8e8b30ca_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a51b07edda04d5792bf8abc9ab571ef9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51b07edda04d5792bf8abc9ab571ef9f">&#9670;&nbsp;</a></span>OnEnable()</h2>
 
@@ -269,6 +585,174 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a6a72394fc22fd208a3eeb0ff956e4323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a72394fc22fd208a3eeb0ff956e4323">&#9670;&nbsp;</a></span>SearchHiearchyAndConnectParticleSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.ControlPlayableAsset.SearchHiearchyAndConnectParticleSystem </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; ParticleSystem &gt;&#160;</td>
+          <td class="paramname"><em>particleSystems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Playable &gt;&#160;</td>
+          <td class="paramname"><em>outplayables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00206">206</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a6a72394fc22fd208a3eeb0ff956e4323_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a6a72394fc22fd208a3eeb0ff956e4323_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a6a72394fc22fd208a3eeb0ff956e4323_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a6a72394fc22fd208a3eeb0ff956e4323_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9b8da14ededd5dfc0da5da0ea45d0309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8da14ededd5dfc0da5da0ea45d0309">&#9670;&nbsp;</a></span>SearchHierarchyAndConnectControlableScripts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.ControlPlayableAsset.SearchHierarchyAndConnectControlableScripts </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; MonoBehaviour &gt;&#160;</td>
+          <td class="paramname"><em>controlableScripts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Playable &gt;&#160;</td>
+          <td class="paramname"><em>outplayables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00240">240</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a9b8da14ededd5dfc0da5da0ea45d0309_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a9b8da14ededd5dfc0da5da0ea45d0309_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a9b8da14ededd5dfc0da5da0ea45d0309_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a9b8da14ededd5dfc0da5da0ea45d0309_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a440657f58462e3481a9700588c5b5efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440657f58462e3481a9700588c5b5efa">&#9670;&nbsp;</a></span>SearchHierarchyAndConnectDirector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.ControlPlayableAsset.SearchHierarchyAndConnectDirector </td>
+          <td>(</td>
+          <td class="paramtype">IEnumerable&lt; PlayableDirector &gt;&#160;</td>
+          <td class="paramname"><em>directors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Playable &gt;&#160;</td>
+          <td class="paramname"><em>outplayables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disableSelfReferences</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00219">219</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a440657f58462e3481a9700588c5b5efa_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a440657f58462e3481a9700588c5b5efa_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_control_playable_asset_a440657f58462e3481a9700588c5b5efa_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_control_playable_asset_a440657f58462e3481a9700588c5b5efa_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a607cb05213fd968e6765442ec13aca51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a607cb05213fd968e6765442ec13aca51">&#9670;&nbsp;</a></span>active</h2>
@@ -285,6 +769,150 @@ Here is the call graph for this function:</div>
 <p>Indicate whether GameObject activation is controlled </p>
 
 <p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00059">59</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad9e258e86a83fd60bf666fee51a60721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e258e86a83fd60bf666fee51a60721">&#9670;&nbsp;</a></span>k_EmptyDirectorsList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;PlayableDirector&gt; UnityEngine.Timeline.ControlPlayableAsset.k_EmptyDirectorsList = new List&lt;PlayableDirector&gt;(0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00015">15</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a84fa06a3bef4a7551199ef0632fa7eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84fa06a3bef4a7551199ef0632fa7eb9">&#9670;&nbsp;</a></span>k_EmptyParticlesList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;ParticleSystem&gt; UnityEngine.Timeline.ControlPlayableAsset.k_EmptyParticlesList = new List&lt;ParticleSystem&gt;(0)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00016">16</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a863271b0862e40ef3904c0996b13407b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863271b0862e40ef3904c0996b13407b">&#9670;&nbsp;</a></span>k_MaxRandInt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int UnityEngine.Timeline.ControlPlayableAsset.k_MaxRandInt = 10000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00014">14</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a779ed55d90648a531df9e5af5427f522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779ed55d90648a531df9e5af5427f522">&#9670;&nbsp;</a></span>m_ControlDirectorAsset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PlayableAsset UnityEngine.Timeline.ControlPlayableAsset.m_ControlDirectorAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00066">66</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6a4707ba26a40c333cebee39ef36d361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4707ba26a40c333cebee39ef36d361">&#9670;&nbsp;</a></span>m_Duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.ControlPlayableAsset.m_Duration = PlayableBinding.DefaultDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00067">67</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9ff6d9460c8eb53e975865c1b32ca801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff6d9460c8eb53e975865c1b32ca801">&#9670;&nbsp;</a></span>m_SupportLoop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.ControlPlayableAsset.m_SupportLoop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00068">68</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
 
 </div>
 </div>
@@ -340,6 +968,54 @@ Here is the call graph for this function:</div>
 <p>Prefab object that will be instantiated. </p>
 
 <p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00026">26</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a978e161dde9d5e91cfe209c398aaa1d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978e161dde9d5e91cfe209c398aaa1d6">&#9670;&nbsp;</a></span>s_CreatedPrefabs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashSet&lt;GameObject&gt; UnityEngine.Timeline.ControlPlayableAsset.s_CreatedPrefabs = new HashSet&lt;GameObject&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00071">71</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a22354f3eb2510819e2d73c80436aa06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22354f3eb2510819e2d73c80436aa06e">&#9670;&nbsp;</a></span>s_ProcessedDirectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashSet&lt;PlayableDirector&gt; UnityEngine.Timeline.ControlPlayableAsset.s_ProcessedDirectors = new HashSet&lt;PlayableDirector&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_control_playable_asset_8cs_source.html#l00070">70</a> of file <a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a>.</p>
 
 </div>
 </div>
@@ -487,7 +1163,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Control/<a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Control/<a class="el" href="_control_playable_asset_8cs_source.html">ControlPlayableAsset.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

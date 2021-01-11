@@ -6,5 +6,9 @@ digraph "TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.ShowFontAtlasCreator
   rankdir="RL";
   Node1 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.ShowFont\lAtlasCreatorWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.EditorUtilities.TMP\l_FontAssetEditor.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor.html#a6252b5aae39cc04893667c96c9960881",tooltip=" "];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_ContextMenus.CreateFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___context_menus.html#a270c65ec60f4355cb8051306b4f7c4bf",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_FontAssetEditor.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor.html#a6252b5aae39cc04893667c96c9960881",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.EditorUtilities.TMP\l_ContextMenus.RegenerateFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___context_menus.html#ae4d887763220a8f15b3d642d118bd79d",tooltip=" "];
 }

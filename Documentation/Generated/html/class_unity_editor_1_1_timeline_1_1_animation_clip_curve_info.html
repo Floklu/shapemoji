@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_an
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.AnimationClipCurveInfo Class Reference</div>  </div>
@@ -123,10 +125,28 @@ Public Attributes</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a49c0007a59e324e4dd8029b838945273"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a49c0007a59e324e4dd8029b838945273">dirty</a><code> [get, set]</code></td></tr>
 <tr class="separator:a49c0007a59e324e4dd8029b838945273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012b5dc05ebc068e3136f50e71e44360"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a012b5dc05ebc068e3136f50e71e44360">version</a><code> [get]</code></td></tr>
+<tr class="memitem:a012b5dc05ebc068e3136f50e71e44360"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a012b5dc05ebc068e3136f50e71e44360">version</a><code> [get, private set]</code></td></tr>
 <tr class="separator:a012b5dc05ebc068e3136f50e71e44360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94960a3321dea1ebb3f277e62cf6a6dd"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a94960a3321dea1ebb3f277e62cf6a6dd">keyTimes</a><code> [get]</code></td></tr>
 <tr class="separator:a94960a3321dea1ebb3f277e62cf6a6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5595cf6d67b5d5c38866d5496161e9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a5595cf6d67b5d5c38866d5496161e9e6">RebuildKeyCache</a> ()</td></tr>
+<tr class="separator:a5595cf6d67b5d5c38866d5496161e9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afdcac9b7e645c7f644feb64c472a18a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#afdcac9b7e645c7f644feb64c472a18a5">m_CurveDirty</a> = true</td></tr>
+<tr class="separator:afdcac9b7e645c7f644feb64c472a18a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58e1da85e9a89ea65c7e427d16cc631"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#ae58e1da85e9a89ea65c7e427d16cc631">m_KeysDirty</a> = true</td></tr>
+<tr class="separator:ae58e1da85e9a89ea65c7e427d16cc631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc057e3275338234cac172475fa69615"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_binding_group.html">CurveBindingGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#adc057e3275338234cac172475fa69615">m_groupings</a></td></tr>
+<tr class="separator:adc057e3275338234cac172475fa69615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6433895b6b8a5784e5b91403c373e9"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a4c6433895b6b8a5784e5b91403c373e9">m_KeyTimes</a></td></tr>
+<tr class="separator:a4c6433895b6b8a5784e5b91403c373e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1102154edf1e997e8e52139b7121fc28"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; EditorCurveBinding, float[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html#a1102154edf1e997e8e52139b7121fc28">m_individualBindinsKey</a></td></tr>
+<tr class="separator:a1102154edf1e997e8e52139b7121fc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -219,6 +239,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00103">103</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info_a73a06ff5360cc671788e613f1168aa3e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_info_a73a06ff5360cc671788e613f1168aa3e_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -259,6 +284,38 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00198">198</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5595cf6d67b5d5c38866d5496161e9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5595cf6d67b5d5c38866d5496161e9e6">&#9670;&nbsp;</a></span>RebuildKeyCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.AnimationClipCurveInfo.RebuildKeyCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00122">122</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info_a5595cf6d67b5d5c38866d5496161e9e6_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_animation_clip_curve_info_a5595cf6d67b5d5c38866d5496161e9e6_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -312,6 +369,126 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00071">71</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="afdcac9b7e645c7f644feb64c472a18a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdcac9b7e645c7f644feb64c472a18a5">&#9670;&nbsp;</a></span>m_CurveDirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.AnimationClipCurveInfo.m_CurveDirty = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00053">53</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="adc057e3275338234cac172475fa69615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc057e3275338234cac172475fa69615">&#9670;&nbsp;</a></span>m_groupings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, <a class="el" href="class_unity_editor_1_1_timeline_1_1_curve_binding_group.html">CurveBindingGroup</a>&gt; UnityEditor.Timeline.AnimationClipCurveInfo.m_groupings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00077">77</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1102154edf1e997e8e52139b7121fc28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1102154edf1e997e8e52139b7121fc28">&#9670;&nbsp;</a></span>m_individualBindinsKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;EditorCurveBinding, float[]&gt; UnityEditor.Timeline.AnimationClipCurveInfo.m_individualBindinsKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00084">84</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae58e1da85e9a89ea65c7e427d16cc631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58e1da85e9a89ea65c7e427d16cc631">&#9670;&nbsp;</a></span>m_KeysDirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.AnimationClipCurveInfo.m_KeysDirty = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00054">54</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4c6433895b6b8a5784e5b91403c373e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6433895b6b8a5784e5b91403c373e9">&#9670;&nbsp;</a></span>m_KeyTimes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] UnityEditor.Timeline.AnimationClipCurveInfo.m_KeyTimes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_animation_clip_curve_cache_8cs_source.html#l00082">82</a> of file <a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a>.</p>
 
 </div>
 </div>
@@ -411,7 +588,7 @@ Properties</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -421,7 +598,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Animation/<a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Animation/<a class="el" href="_animation_clip_curve_cache_8cs_source.html">AnimationClipCurveCache.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

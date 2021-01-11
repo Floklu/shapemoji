@@ -10,5 +10,9 @@ digraph "TMPro.TMP_Dropdown.RefreshShownValue"
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="TMPro.TMP_Dropdown.Clear\lOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a031c8b8c5711c7fdb8a64bad0d139a0d",tooltip="Clear the list of options in the Dropdown."];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TMPro.TMP_Dropdown.Start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#ad5f10181747d1751111539353dc2d3f6",tooltip=" "];
+  Node4 [label="TMPro.TMP_Dropdown.SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a164c1aeee2827f985644517362af6d3c",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_Dropdown.SetValue\lWithoutNotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#ae2eee5918398091f930c433c0ff939d7",tooltip="Set index number of the current selection in the Dropdown without invoking onValueChanged callback."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_Dropdown.Start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#ad5f10181747d1751111539353dc2d3f6",tooltip=" "];
 }

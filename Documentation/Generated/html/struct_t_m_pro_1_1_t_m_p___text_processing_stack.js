@@ -14,6 +14,7 @@ var struct_t_m_pro_1_1_t_m_p___text_processing_stack =
     [ "SetDefault", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#a1580e126246f80bf22e81f42b58c103a", null ],
     [ "index", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#ac9b539a06415d0f8ec07983ee4b28f92", null ],
     [ "itemStack", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#a82dc6710d09eda5649b028da2b1adc0b", null ],
+    [ "k_DefaultCapacity", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#affa0ef3f976d58893585986e954c0fab", null ],
     [ "m_Capacity", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#a4d3888cf26473ad8ab690d517f8ec178", null ],
     [ "m_Count", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#a969b53235298d4a99293c6bedd4979f8", null ],
     [ "m_DefaultItem", "struct_t_m_pro_1_1_t_m_p___text_processing_stack.html#a6a31051ee436f5296def5c617ad0f8b2", null ],

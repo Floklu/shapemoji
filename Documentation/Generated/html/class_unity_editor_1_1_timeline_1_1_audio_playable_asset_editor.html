@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_au
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.AudioPlayableAssetEditor Class Reference</div>  </div>
@@ -126,6 +128,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac419b723377d66feeaf06f9013f119a6 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_clip_editor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html#ac419b723377d66feeaf06f9013f119a6">GetSubTimelines</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, PlayableDirector director, List&lt; PlayableDirector &gt; subTimelines)</td></tr>
 <tr class="memdesc:ac419b723377d66feeaf06f9013f119a6 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_clip_editor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the sub-timelines for a specific clip. Implement this method if your clip supports playing nested timelines.  <a href="class_unity_editor_1_1_timeline_1_1_clip_editor.html#ac419b723377d66feeaf06f9013f119a6">More...</a><br /></td></tr>
 <tr class="separator:ac419b723377d66feeaf06f9013f119a6 inherit pub_methods_class_unity_editor_1_1_timeline_1_1_clip_editor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a10c4066b5d54a079eb0a3487972fda42"><td class="memItemLeft" align="right" valign="top">static Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor.html#a10c4066b5d54a079eb0a3487972fda42">GammaCorrect</a> (Color color)</td></tr>
+<tr class="separator:a10c4066b5d54a079eb0a3487972fda42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a04f1c08fe59f92d792289ea7e7ae9439"><td class="memItemLeft" align="right" valign="top">readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor.html#a04f1c08fe59f92d792289ea7e7ae9439">k_NoClipAssignedError</a> = LocalizationDatabase.GetLocalizedString(&quot;No audio clip assigned&quot;)</td></tr>
+<tr class="separator:a04f1c08fe59f92d792289ea7e7ae9439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1206c8bf108b8f7ec1de2721f77734"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>, WaveformPreview &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor.html#acc1206c8bf108b8f7ec1de2721f77734">m_PersistentPreviews</a> = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>, WaveformPreview&gt;()</td></tr>
+<tr class="separator:acc1206c8bf108b8f7ec1de2721f77734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae908ff993d139921cfcf961e67c5f1ea"><td class="memItemLeft" align="right" valign="top">ColorSpace&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor.html#ae908ff993d139921cfcf961e67c5f1ea">m_ColorSpace</a> = ColorSpace.Uninitialized</td></tr>
+<tr class="separator:ae908ff993d139921cfcf961e67c5f1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -170,6 +186,44 @@ Public Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_clip_editor.html#a6e8f05dd04feaf1aa635dfbebc092d78">UnityEditor.Timeline.ClipEditor</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_audio_playable_asset_editor_8cs_source.html#l00027">27</a> of file <a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor_a3687c81461e2b7f6bd9a83d683d0462c_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor_a3687c81461e2b7f6bd9a83d683d0462c_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a10c4066b5d54a079eb0a3487972fda42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c4066b5d54a079eb0a3487972fda42">&#9670;&nbsp;</a></span>GammaCorrect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Color UnityEditor.Timeline.AudioPlayableAssetEditor.GammaCorrect </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_editor_8cs_source.html#l00079">79</a> of file <a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor_a10c4066b5d54a079eb0a3487972fda42_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_audio_playable_asset_editor_a10c4066b5d54a079eb0a3487972fda42_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -205,8 +259,81 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a04f1c08fe59f92d792289ea7e7ae9439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f1c08fe59f92d792289ea7e7ae9439">&#9670;&nbsp;</a></span>k_NoClipAssignedError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.AudioPlayableAssetEditor.k_NoClipAssignedError = LocalizationDatabase.GetLocalizedString(&quot;No audio clip assigned&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_editor_8cs_source.html#l00012">12</a> of file <a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae908ff993d139921cfcf961e67c5f1ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae908ff993d139921cfcf961e67c5f1ea">&#9670;&nbsp;</a></span>m_ColorSpace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorSpace UnityEditor.Timeline.AudioPlayableAssetEditor.m_ColorSpace = ColorSpace.Uninitialized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_editor_8cs_source.html#l00014">14</a> of file <a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="acc1206c8bf108b8f7ec1de2721f77734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1206c8bf108b8f7ec1de2721f77734">&#9670;&nbsp;</a></span>m_PersistentPreviews</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>, WaveformPreview&gt; UnityEditor.Timeline.AudioPlayableAssetEditor.m_PersistentPreviews = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>, WaveformPreview&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_editor_8cs_source.html#l00013">13</a> of file <a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Audio/<a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Audio/<a class="el" href="_audio_playable_asset_editor_8cs_source.html">AudioPlayableAssetEditor.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

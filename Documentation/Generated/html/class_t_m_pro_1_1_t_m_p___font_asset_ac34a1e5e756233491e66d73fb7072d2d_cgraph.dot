@@ -6,5 +6,11 @@ digraph "TMPro.TMP_FontAsset.HasCharacters"
   rankdir="LR";
   Node1 [label="TMPro.TMP_FontAsset.HasCharacters",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.TMP_FontAsset.Read\lFontAssetDefinition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#ade90a42615b002bb0c31b06d497df510",tooltip=" "];
+  Node2 [label="TMPro.TMP_FontAsset.HasCharacter\l_Internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#ae63094bef7331679a0d725df37421426",tooltip="Function to check if a character is contained in a font asset with the option to also check through f..."];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_FontAsset.Read\lFontAssetDefinition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#ade90a42615b002bb0c31b06d497df510",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_TextUtilities.\lGetSimpleHashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7",tooltip="Function which returns a simple hashcode from a string."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

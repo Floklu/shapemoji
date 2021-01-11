@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.test-framework@1.1.18/UnityEditor.TestRunner/Api/TestAdaptor.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.test-framework@1.1.18/UnityEditor.TestRunner/Api/TestAdaptor.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('_test_adaptor_8cs_source.html',''); in
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">internal</span> TestAdaptor(ITest test, ITestAdaptor[] children = <span class="keyword">null</span>)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            Id = test.Id;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            Name = test.Name;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="_o_f_l_8txt.html#a77bb8d12d5e0cf437d47a72fa8c3b07f">Name</a> = test.Name;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            var childIndex = -1;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (test.Properties[<span class="stringliteral">&quot;childIndex&quot;</span>].Count &gt; 0)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('_test_adaptor_8cs_source.html',''); in
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">internal</span> TestAdaptor(RemoteTestData test)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            Id = test.id;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            Name = test.name;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="_o_f_l_8txt.html#a77bb8d12d5e0cf437d47a72fa8c3b07f">Name</a> = test.name;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            FullName = test.ChildIndex != -1 ? GetIndexedTestCaseName(test.fullName, test.ChildIndex) : test.fullName;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            TestCaseCount = test.testCaseCount;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            HasChildren = test.hasChildren;</div>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('_test_adaptor_8cs_source.html',''); in
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> Id { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> Name { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="_o_f_l_8txt.html#a77bb8d12d5e0cf437d47a72fa8c3b07f">Name</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> FullName { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> TestCaseCount { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> HasChildren { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
@@ -235,6 +235,7 @@ $(document).ready(function(){initNavTree('_test_adaptor_8cs_source.html',''); in
 <div class="ttc" id="anamespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html_af169988e2317e7edb0f1b09d920412e9"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#af169988e2317e7edb0f1b09d920412e9">UnityEditor.TestTools.TestRunner.Api.TestMode</a></div><div class="ttdeci">TestMode</div><div class="ttdef"><b>Definition:</b> <a href="_test_mode_8cs_source.html#l00006">TestMode.cs:7</a></div></div>
 <div class="ttc" id="anamespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_html_ad6bcc775441176dd7331d8173c8527b7"><div class="ttname"><a href="namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api.html#ad6bcc775441176dd7331d8173c8527b7">UnityEditor.TestTools.TestRunner.Api.RunState</a></div><div class="ttdeci">RunState</div><div class="ttdef"><b>Definition:</b> <a href="_run_state_8cs_source.html#l00003">RunState.cs:4</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions.html">UnityEngine.TestRunner.NUnitExtensions</a></div><div class="ttdef"><b>Definition:</b> <a href="_assembly_name_filter_8cs_source.html#l00005">AssemblyNameFilter.cs:6</a></div></div>
+<div class="ttc" id="a_o_f_l_8txt_html_a77bb8d12d5e0cf437d47a72fa8c3b07f"><div class="ttname"><a href="_o_f_l_8txt.html#a77bb8d12d5e0cf437d47a72fa8c3b07f">Name</a></div><div class="ttdeci">Copyright The Varela Round Project in Original or Modified may be sold by itself Original or Modified Versions of the Font Software may be redistributed and or sold with any provided that each copy contains the above copyright notice and this license These can be included either as stand alone text human readable headers or in the appropriate machine readable metadata fields within text or binary files as long as those fields can be easily viewed by the user No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users. 4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote</div></div>
 <div class="ttc" id="anamespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner.html">UnityEngine.TestRunner.NUnitExtensions.Runner</a></div><div class="ttdef"><b>Definition:</b> <a href="_composite_work_item_8cs_source.html#l00014">CompositeWorkItem.cs:15</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_1_1_test_runner_1_1_test_launchers_html"><div class="ttname"><a href="namespace_unity_engine_1_1_test_runner_1_1_test_launchers.html">UnityEngine.TestRunner.TestLaunchers</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_remote_test_result_data_factory_8cs_source.html#l00004">IRemoteTestResultDataFactory.cs:5</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:6</a></div></div>

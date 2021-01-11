@@ -85,6 +85,9 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_in
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_interval_tree-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.IntervalTree&lt; T &gt; Class Template Reference</div>  </div>
@@ -118,6 +121,33 @@ Properties</h2></td></tr>
 <tr class="memitem:a1f02208a022524fa2aa11657f80a23c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a1f02208a022524fa2aa11657f80a23c2">dirty</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a1f02208a022524fa2aa11657f80a23c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the tree will be rebuilt on the next query  <a href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a1f02208a022524fa2aa11657f80a23c2">More...</a><br /></td></tr>
 <tr class="separator:a1f02208a022524fa2aa11657f80a23c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab58ac3984ef992b1c4ccdae61c3ac972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#ab58ac3984ef992b1c4ccdae61c3ac972">Query</a> (<a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a> intervalTreeNode, Int64 value, List&lt; T &gt; results)</td></tr>
+<tr class="separator:ab58ac3984ef992b1c4ccdae61c3ac972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea741cc1bc52be16a8d5fdea6cc5b0e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#aea741cc1bc52be16a8d5fdea6cc5b0e9">QueryRange</a> (<a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a> intervalTreeNode, Int64 start, Int64 end, List&lt; T &gt; results)</td></tr>
+<tr class="separator:aea741cc1bc52be16a8d5fdea6cc5b0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f54236bab7f7166eaa53e9d0927bce3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a0f54236bab7f7166eaa53e9d0927bce3">Rebuild</a> ()</td></tr>
+<tr class="separator:a0f54236bab7f7166eaa53e9d0927bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b0e477497581ecbc5c4e1c49ef6d4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#aa0b0e477497581ecbc5c4e1c49ef6d4d">Rebuild</a> (int start, int end)</td></tr>
+<tr class="separator:aa0b0e477497581ecbc5c4e1c49ef6d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2bc7fb79d26e60be3235fb61db41817e"><td class="memItemLeft" align="right" valign="top">readonly List&lt; Entry &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a2bc7fb79d26e60be3235fb61db41817e">m_Entries</a> = new List&lt;Entry&gt;()</td></tr>
+<tr class="separator:a2bc7fb79d26e60be3235fb61db41817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2caa33769224bd1e0e8af03530befeca"><td class="memItemLeft" align="right" valign="top">readonly List&lt; <a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a2caa33769224bd1e0e8af03530befeca">m_Nodes</a> = new List&lt;<a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a>&gt;()</td></tr>
+<tr class="separator:a2caa33769224bd1e0e8af03530befeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a815b0b4584e7f3d5380ee29d84228731"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a815b0b4584e7f3d5380ee29d84228731">kMinNodeSize</a> = 10</td></tr>
+<tr class="separator:a815b0b4584e7f3d5380ee29d84228731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36def6de79382e3cbc118871dc2daae6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#a36def6de79382e3cbc118871dc2daae6">kInvalidNode</a> = -1</td></tr>
+<tr class="separator:a36def6de79382e3cbc118871dc2daae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f2ad78d7ce8d33114592f4167d4c61"><td class="memItemLeft" align="right" valign="top">const Int64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html#ac7f2ad78d7ce8d33114592f4167d4c61">kCenterUnknown</a> = Int64.MaxValue</td></tr>
+<tr class="separator:ac7f2ad78d7ce8d33114592f4167d4c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="typeconstraint">
@@ -174,11 +204,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00265">265</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_interval_tree_a7b53dd9d1311000c641a8a58101d8497_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_interval_tree_a7b53dd9d1311000c641a8a58101d8497_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -264,11 +289,180 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00087">87</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab58ac3984ef992b1c4ccdae61c3ac972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58ac3984ef992b1c4ccdae61c3ac972">&#9670;&nbsp;</a></span>Query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.Query </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a>&#160;</td>
+          <td class="paramname"><em>intervalTreeNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int64&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>results</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00132">132</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_interval_tree_aae40d9e2e77a75c1cfefcb9032a4ffe8_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_interval_tree_aae40d9e2e77a75c1cfefcb9032a4ffe8_icgraph" alt=""/></div>
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_interval_tree_ab58ac3984ef992b1c4ccdae61c3ac972_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_interval_tree_ab58ac3984ef992b1c4ccdae61c3ac972_icgraph" alt=""/></div>
 </div>
+
+</div>
+</div>
+<a id="aea741cc1bc52be16a8d5fdea6cc5b0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea741cc1bc52be16a8d5fdea6cc5b0e9">&#9670;&nbsp;</a></span>QueryRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.QueryRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a>&#160;</td>
+          <td class="paramname"><em>intervalTreeNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int64&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int64&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>results</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00151">151</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_interval_tree_aea741cc1bc52be16a8d5fdea6cc5b0e9_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_interval_tree_aea741cc1bc52be16a8d5fdea6cc5b0e9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0f54236bab7f7166eaa53e9d0927bce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f54236bab7f7166eaa53e9d0927bce3">&#9670;&nbsp;</a></span>Rebuild() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.Rebuild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00170">170</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_interval_tree_a0f54236bab7f7166eaa53e9d0927bce3_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_interval_tree_a0f54236bab7f7166eaa53e9d0927bce3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa0b0e477497581ecbc5c4e1c49ef6d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b0e477497581ecbc5c4e1c49ef6d4d">&#9670;&nbsp;</a></span>Rebuild() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.Rebuild </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00177">177</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
 
 </div>
 </div>
@@ -290,6 +484,127 @@ Here is the caller graph for this function:</div>
 <p>Updates the intervals from their source. Use this to detect if the data in the tree has changed. </p>
 
 <p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00109">109</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac7f2ad78d7ce8d33114592f4167d4c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f2ad78d7ce8d33114592f4167d4c61">&#9670;&nbsp;</a></span>kCenterUnknown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Int64 <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.kCenterUnknown = Int64.MaxValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00032">32</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+
+</div>
+</div>
+<a id="a36def6de79382e3cbc118871dc2daae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36def6de79382e3cbc118871dc2daae6">&#9670;&nbsp;</a></span>kInvalidNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.kInvalidNode = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00031">31</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+
+</div>
+</div>
+<a id="a815b0b4584e7f3d5380ee29d84228731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815b0b4584e7f3d5380ee29d84228731">&#9670;&nbsp;</a></span>kMinNodeSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.kMinNodeSize = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00030">30</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2bc7fb79d26e60be3235fb61db41817e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc7fb79d26e60be3235fb61db41817e">&#9670;&nbsp;</a></span>m_Entries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;Entry&gt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.m_Entries = new List&lt;Entry&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00034">34</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2caa33769224bd1e0e8af03530befeca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2caa33769224bd1e0e8af03530befeca">&#9670;&nbsp;</a></span>m_Nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;<a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a>&gt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">UnityEngine.Timeline.IntervalTree</a>&lt; T &gt;.m_Nodes = new List&lt;<a class="el" href="struct_unity_engine_1_1_timeline_1_1_interval_tree_node.html">IntervalTreeNode</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_interval_tree_8cs_source.html#l00035">35</a> of file <a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a>.</p>
 
 </div>
 </div>
@@ -321,7 +636,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Evaluation/<a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Evaluation/<a class="el" href="_interval_tree_8cs_source.html">IntervalTree.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

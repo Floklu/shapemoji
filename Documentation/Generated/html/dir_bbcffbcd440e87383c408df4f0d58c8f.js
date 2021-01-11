@@ -1,6 +1,8 @@
 var dir_bbcffbcd440e87383c408df4f0d58c8f =
 [
-    [ "CompositeWorkItem.cs", "_composite_work_item_8cs.html", null ],
+    [ "CompositeWorkItem.cs", "_composite_work_item_8cs.html", [
+      [ "UnityWorkItemOrderComparer", "class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_composite_work_item_1_1_unity_work_item_order_comparer.html", "class_unity_engine_1_1_test_runner_1_1_n_unit_extensions_1_1_runner_1_1_composite_work_item_1_1_unity_work_item_order_comparer" ]
+    ] ],
     [ "CoroutineTestWorkItem.cs", "_coroutine_test_work_item_8cs.html", null ],
     [ "DefaultTestWorkItem.cs", "_default_test_work_item_8cs.html", "_default_test_work_item_8cs" ],
     [ "FailCommand.cs", "_fail_command_8cs.html", null ],

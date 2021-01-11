@@ -86,6 +86,8 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_ac
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_activation_control_playable-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.ActivationControlPlayable Class Reference</div>  </div>
@@ -144,12 +146,54 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a7c4a44700d0813c5086060405c689bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb0bc61e572391fcba2a882278a98714"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0">PostPlaybackState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#afb0bc61e572391fcba2a882278a98714">postPlayback</a> = <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a228073fb9829bd4bc24a2a43978683b0a5289bf157522a5cd34676f2777d27048">PostPlaybackState.Revert</a></td></tr>
 <tr class="separator:afb0bc61e572391fcba2a882278a98714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a2c478e8a65853f7e74b0ddcebd4e7c7d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">InitialState</a> { <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7dac9f88e098f6fe4e4e112eeb05ccb9671">InitialState.Unset</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7da4d3d769b812b6faa6b76e1a8abaece2d">InitialState.Active</a>, 
+<a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7da3cab03c00dbd11bc3569afa0748013f0">InitialState.Inactive</a>
+ }</td></tr>
+<tr class="separator:a2c478e8a65853f7e74b0ddcebd4e7c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9035471dfbb460601bd47f970c08d52d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">InitialState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a9035471dfbb460601bd47f970c08d52d">m_InitialState</a></td></tr>
+<tr class="separator:a9035471dfbb460601bd47f970c08d52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Playable that controls the active state of a GameObject. </p>
 
 <p class="definition">Definition at line <a class="el" href="_activation_control_playable_8cs_source.html#l00008">8</a> of file <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a2c478e8a65853f7e74b0ddcebd4e7c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c478e8a65853f7e74b0ddcebd4e7c7d">&#9670;&nbsp;</a></span>InitialState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">UnityEngine.Timeline.ActivationControlPlayable.InitialState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2c478e8a65853f7e74b0ddcebd4e7c7dac9f88e098f6fe4e4e112eeb05ccb9671"></a>Unset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2c478e8a65853f7e74b0ddcebd4e7c7da4d3d769b812b6faa6b76e1a8abaece2d"></a>Active&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2c478e8a65853f7e74b0ddcebd4e7c7da3cab03c00dbd11bc3569afa0748013f0"></a>Inactive&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_activation_control_playable_8cs_source.html#l00031">31</a> of file <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a>.</p>
+
+</div>
+</div>
 <a id="a228073fb9829bd4bc24a2a43978683b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a228073fb9829bd4bc24a2a43978683b0">&#9670;&nbsp;</a></span>PostPlaybackState</h2>
 
@@ -237,6 +281,11 @@ Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a playable that controls activation of a game object</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_activation_control_playable_8cs_source.html#l00049">49</a> of file <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_activation_control_playable_a1ba91d4b5b4099c740762c6e15f86b0a_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_activation_control_playable_a1ba91d4b5b4099c740762c6e15f86b0a_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -437,6 +486,30 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9035471dfbb460601bd47f970c08d52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9035471dfbb460601bd47f970c08d52d">&#9670;&nbsp;</a></span>m_InitialState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_activation_control_playable.html#a2c478e8a65853f7e74b0ddcebd4e7c7d">InitialState</a> UnityEngine.Timeline.ActivationControlPlayable.m_InitialState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_activation_control_playable_8cs_source.html#l00040">40</a> of file <a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a>.</p>
+
+</div>
+</div>
 <a id="afb0bc61e572391fcba2a882278a98714"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb0bc61e572391fcba2a882278a98714">&#9670;&nbsp;</a></span>postPlayback</h2>
 
@@ -454,7 +527,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Playables/<a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Playables/<a class="el" href="_activation_control_playable_8cs_source.html">ActivationControlPlayable.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

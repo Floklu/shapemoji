@@ -1,6 +1,9 @@
 var class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info =
 [
     [ "TimelineEventInfo", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#a78e106201dd8d7f1a341f45940a98ade", null ],
+    [ "IsUserType", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#a292e6eabe8926ddf92d88c5b6f32a737", null ],
+    [ "max_duration", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#aefe6009a09615f6e997867637366f7c8", null ],
+    [ "max_num_tracks", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#a5f81c42143f10002471b7b2ffc2ee1f7", null ],
     [ "min_duration", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#a9ec4661621bde269a35fa4f9af8f8467", null ],
     [ "min_num_tracks", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#a768d749d180c179a3c0bf8a671530c8a", null ],
     [ "most_popular_user_track", "class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_event_info.html#afdfec3d96b95d27a1e144b91709a78da", null ],

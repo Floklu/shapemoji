@@ -33,20 +33,29 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Properties", "functions_prop.html", null ],
+        [ "Events", "functions_evnt.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_camera_setting_8cs.html"
+"_analyze_and_score_pixel_map_8cs.html",
+"class_harpoon_1_1_crank_controller.html#a75e1599488933c4441a063a95e02c6f7",
+"class_spawner_1_1_hookable_object_spawner.html#af51914aeab042b310c279fbd7139409f",
+"class_workshop.html#a20556a61989a9edf9f583e2ff6b2e22b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

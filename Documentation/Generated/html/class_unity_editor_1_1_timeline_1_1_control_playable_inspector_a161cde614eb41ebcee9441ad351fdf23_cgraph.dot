@@ -6,5 +6,11 @@ digraph "UnityEditor.Timeline.ControlPlayableInspector.OnInspectorGUI"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Control\lPlayableInspector.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Control\lPlayableInspector.DisablePlayOnAwake",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_control_playable_inspector.html#a276f8d564911304ced71d402701bdeab",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Control\lPlayableInspector.CheckForCyclic\lReference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_control_playable_inspector.html#aa0abccd9e0f3ba67e9af9b3e78ab0ab3",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Control\lPlayableUtility.DetectCycle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a239614efebae47ddf892fd43feddb4b2",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Control\lPlayableUtility.GetPlayableAssets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_control_playable_utility.html#a90e7ed44a50217cccb56b71f805462ad",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Control\lPlayableInspector.DisablePlayOnAwake",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_control_playable_inspector.html#a276f8d564911304ced71d402701bdeab",tooltip=" "];
 }

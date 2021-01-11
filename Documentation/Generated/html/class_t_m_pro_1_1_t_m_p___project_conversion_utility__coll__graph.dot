@@ -6,4 +6,6 @@ digraph "TMPro.TMP_ProjectConversionUtility"
   Node1 [label="TMPro.TMP_ProjectConversion\lUtility",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="EditorWindow",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ConversionData" ,fontname="Helvetica"];
+  Node3 [label="TMPro.AssetConversionData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_asset_conversion_data.html",tooltip="Data structure containing a list of target and replacement fileID and GUID requiring remapping from p..."];
 }

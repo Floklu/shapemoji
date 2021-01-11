@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.GlyphValueRecord\l_Legacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_glyph_value_record___legacy.html",tooltip="Positional adjustments of a glyph"];
+  Node0 [label="Packages.Rider.Editor.Util.\lUnityUtils",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_util_1_1_unity_utils.html",tooltip=" "];
 }

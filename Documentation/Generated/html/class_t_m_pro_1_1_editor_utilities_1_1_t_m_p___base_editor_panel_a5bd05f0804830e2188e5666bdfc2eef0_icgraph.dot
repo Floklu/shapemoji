@@ -6,5 +6,11 @@ digraph "TMPro.EditorUtilities.TMP_BaseEditorPanel.GetMaterialPresets"
   rankdir="RL";
   Node1 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.GetMaterialPresets",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Method to retrieve the material presets that match the currently selected font asset."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3a60309b317f09709852e0c8013e6849",tooltip=" "];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.DrawFont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a309804d36b15c296067e56e945958414",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.DrawMainSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a4c8d796ceaf88f408b52ef25e81cb117",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a7ff0cf356660eaff8f0280fb6b0aaffd",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3a60309b317f09709852e0c8013e6849",tooltip=" "];
 }

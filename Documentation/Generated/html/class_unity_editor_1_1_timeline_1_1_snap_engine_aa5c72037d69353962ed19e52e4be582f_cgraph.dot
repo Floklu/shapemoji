@@ -6,11 +6,17 @@ digraph "UnityEditor.Timeline.SnapEngine.SnapEngine"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Snap\lEngine.SnapEngine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.ISequence\lState.GetEvaluableRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ae4c6b2b44fde0f1f5f57be982f573107",tooltip=" "];
-  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="UnityEditor.Timeline.Snap\lEngine.GetVisibleSnappables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_snap_engine.html#acf44a9b1d116ffdebf5f954a7708e54a",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Snap\lEngine.AddMagnet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4ed2c5a17d04c4f6d6917ed1de5a4103",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Snap\lEngine.IsMagnetInShownArea",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4f78c1fc9a7dde564cef1839cbf6ff71",tooltip=" "];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="UnityEditor.Timeline.Window\lState.IsEditingASubTimeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#ae086aef433dbe7bc582a5e174ee6ed32",tooltip=" "];
+  Node4 [label="UnityEditor.Timeline.ISequence\lState.GetEvaluableRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#ae4c6b2b44fde0f1f5f57be982f573107",tooltip=" "];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="UnityEditor.Timeline.Timeline\lMode.ShouldShowTimeCursor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a5b964bcb7af0789509dfd39b5f759842",tooltip=" "];
+  Node5 [label="UnityEditor.Timeline.Snap\lEngine.GetVisibleSnappables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_snap_engine.html#acf44a9b1d116ffdebf5f954a7708e54a",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Window\lState.IsEditingASubTimeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#ae086aef433dbe7bc582a5e174ee6ed32",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Window\lState.PixelToTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a4f51264da0ea7a603a9d6efeecbe1f75",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Timeline\lMode.ShouldShowTimeCursor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_mode.html#a5b964bcb7af0789509dfd39b5f759842",tooltip=" "];
 }

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/SequenceSelectorNameFormater.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/SequenceSelectorNameFormater.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,22 +94,22 @@ $(document).ready(function(){initNavTree('_sequence_selector_name_formater_8cs_s
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">// so that&#39;s why we need to keep information about the text we want to uniquely format.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html">SequenceMenuNameFormater</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        Dictionary&lt;int, int&gt; m_UniqueItem = <span class="keyword">new</span> Dictionary&lt;int, int&gt;();</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">   10</a></span>&#160;        Dictionary&lt;int, int&gt; <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">m_UniqueItem</a> = <span class="keyword">new</span> Dictionary&lt;int, int&gt;();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#ae9efe0ce39f8074a84a899f9b64c55b5">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#ae9efe0ce39f8074a84a899f9b64c55b5">Format</a>(<span class="keywordtype">string</span> text)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            var key = text.GetHashCode();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            var index = 0;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (m_UniqueItem.ContainsKey(key))</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">m_UniqueItem</a>.ContainsKey(key))</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                index = m_UniqueItem[key];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                index = <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">m_UniqueItem</a>[key];</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                index++;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                m_UniqueItem[key] = index;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">m_UniqueItem</a>[key] = index;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                m_UniqueItem.Add(key, index);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <a class="code" href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">m_UniqueItem</a>.Add(key, index);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordflow">return</span> text;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -120,6 +120,7 @@ $(document).ready(function(){initNavTree('_sequence_selector_name_formater_8cs_s
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater_html"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html">UnityEditor.Timeline.SequenceMenuNameFormater</a></div><div class="ttdef"><b>Definition:</b> <a href="_sequence_selector_name_formater_8cs_source.html#l00008">SequenceSelectorNameFormater.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater_html_aa6e0e0cdc0d4c89db40b7de289cf3166"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#aa6e0e0cdc0d4c89db40b7de289cf3166">UnityEditor.Timeline.SequenceMenuNameFormater.m_UniqueItem</a></div><div class="ttdeci">Dictionary&lt; int, int &gt; m_UniqueItem</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_selector_name_formater_8cs_source.html#l00010">SequenceSelectorNameFormater.cs:10</a></div></div>
 <div class="ttc" id="anamespace_unity_editor_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html">UnityEditor.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_clips_actions_8cs_source.html#l00010">ClipsActions.cs:11</a></div></div>
 <div class="ttc" id="aclass_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater_html_ae9efe0ce39f8074a84a899f9b64c55b5"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_sequence_menu_name_formater.html#ae9efe0ce39f8074a84a899f9b64c55b5">UnityEditor.Timeline.SequenceMenuNameFormater.Format</a></div><div class="ttdeci">string Format(string text)</div><div class="ttdef"><b>Definition:</b> <a href="_sequence_selector_name_formater_8cs_source.html#l00012">SequenceSelectorNameFormater.cs:12</a></div></div>
 <!-- start footer part -->

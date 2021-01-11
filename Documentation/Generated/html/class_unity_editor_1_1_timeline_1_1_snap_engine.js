@@ -1,6 +1,25 @@
 var class_unity_editor_1_1_timeline_1_1_snap_engine =
 [
+    [ "SnapInfo", "class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info.html", "class_unity_editor_1_1_timeline_1_1_snap_engine_1_1_snap_info" ],
+    [ "TimeBoundaries", "struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries.html", "struct_unity_editor_1_1_timeline_1_1_snap_engine_1_1_time_boundaries" ],
     [ "SnapEngine", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#aa5c72037d69353962ed19e52e4be582f", null ],
+    [ "AddMagnet", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4ed2c5a17d04c4f6d6917ed1de5a4103", null ],
+    [ "ClosestMagnet", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#ae8f5c379084ea39f7afda2d9470ebf4f", null ],
+    [ "DrawMagnetLineAt", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a38ffa8c115f8cb170af815b3c440ba33", null ],
+    [ "GetMagnetAt", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a9bd2ce9433d84dca5f01710b2704bf59", null ],
+    [ "GetVisibleSnappables", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#acf44a9b1d116ffdebf5f954a7708e54a", null ],
+    [ "IsMagnetInShownArea", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4f78c1fc9a7dde564cef1839cbf6ff71", null ],
     [ "OnGUI", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#aee4e629de9386458110f14f4c5037f1a", null ],
-    [ "Snap", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a1c3e3807454a0740cc09637fb9bd18cf", null ]
+    [ "Snap", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a1c3e3807454a0740cc09637fb9bd18cf", null ],
+    [ "displayDebugLayout", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#aae93ebbbbf5ce8a48a21413332d3048c", null ],
+    [ "k_MagnetInfluenceInPixels", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4301878973b9b1ad70030d8495efe44d", null ],
+    [ "m_Attractable", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a9fd771b15ea9a2a61e0f8296eef23010", null ],
+    [ "m_AttractionHandler", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a91260cbcbf259ad5fff3eac9fe6cbc84", null ],
+    [ "m_CurrentTimes", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a00c0788b7ff4116e98640fd4a3e9a9cb", null ],
+    [ "m_GrabbedTime", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#aca9f7582f6745029176696b1a68dedcc", null ],
+    [ "m_GrabbedTimes", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a9e7717b00102f55b984847d30a8afa0c", null ],
+    [ "m_Magnets", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a8bdee0b0962e953f339224145f691480", null ],
+    [ "m_ManipulateEdges", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#aad00db995cf2a6d288f67a7678654203", null ],
+    [ "m_SnapEnabled", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#a4daabb9bbced4eec2215d689b4145eb4", null ],
+    [ "m_State", "class_unity_editor_1_1_timeline_1_1_snap_engine.html#aca072ddd0ee0e9a151fc3f24d43805f1", null ]
 ];

@@ -4,6 +4,8 @@ var struct_unity_editor_1_1_timeline_1_1_marker_overlay_region =
     [ "Equals", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ae66646b2444b8dcf0ddd81e47cc6482d", null ],
     [ "Equals", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#abba252dd13dcaa493b04bf0003afcdbc", null ],
     [ "GetHashCode", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a1142d11eef0ce0be1a8b857f80d1b009", null ],
+    [ "operator!=", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#ac79906cccea5a97f3e7a83433dd3313c", null ],
+    [ "operator==", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a889dc240e733951ecda0748ea022bb7c", null ],
     [ "endTime", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a9d75da96aec2850472a914f59f1b0430", null ],
     [ "markerRegion", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a867b52fc4d7c919003af9a8524a3e99e", null ],
     [ "startTime", "struct_unity_editor_1_1_timeline_1_1_marker_overlay_region.html#a7cdcb81eb6f42cbc3663a99d3db0f97f", null ],

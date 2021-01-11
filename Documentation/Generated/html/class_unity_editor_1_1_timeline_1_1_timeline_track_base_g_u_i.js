@@ -1,5 +1,6 @@
 var class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i =
 [
+    [ "Styles", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_1_1_styles.html", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_1_1_styles" ],
     [ "TimelineTrackBaseGUI", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#aac70ceec23be0222df9cf2704660f36e", null ],
     [ "ClearDrawFlags", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a52332836b87db0c9f41304e55af26bf1", null ],
     [ "Draw", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#ad8e6e0a4ae0e8f976c7a7d19c74bb7cf", null ],
@@ -7,9 +8,14 @@ var class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i =
     [ "DrawLockButton", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a5cc50e70dd9bca99feed69998f802b7d", null ],
     [ "DrawMuteButton", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a216c859b1650722fd4f86c1abe2fab16", null ],
     [ "DrawTrackState", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a3083d956f452a068e3e4d3740980c798", null ],
+    [ "DrawTrackStateBox", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a49cd5937af6f55d83b21bfc1553c5884", null ],
+    [ "FindGUITrack", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a2612eb18f50fec4b14da748f87a47699", null ],
     [ "GetVerticalSpacingBetweenTracks", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a63c9a5cb746eaeec97cadc049fa3e1b4", null ],
     [ "OnGraphRebuilt", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a88c95d398d948b23440f4b89dcb3a10f", null ],
+    [ "k_ButtonSize", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a69666c9078780c9984a49974850892c5", null ],
+    [ "m_Drawer", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a58f374aeab0e575aac4d119a9026ab76", null ],
     [ "m_IsRoot", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#abcd4b4b12aaba7acfab4e18f54a9bf20", null ],
+    [ "m_TreeViewGUI", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a31af9af8f1dc852abfda899f90e77571", null ],
     [ "boundingRect", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#ab7f518ce5e0584fce10f9396b35fca96", null ],
     [ "drawer", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a8cd3a23fd4c957b08c3f9d69937ae9b2", null ],
     [ "drawInsertionMarkerAfter", "class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a076090921ac2a257628516383988dded", null ],

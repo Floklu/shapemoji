@@ -6,7 +6,11 @@ digraph "UnityEditor.Timeline.ItemsLayer.Draw"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Items\lLayer.Draw",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Window\lState.PixelDeltaToDeltaTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d",tooltip=" "];
-  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="UnityEditor.Timeline.Window\lState.PixelToTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a4f51264da0ea7a603a9d6efeecbe1f75",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Items\lLayer.GetLayerViewStateChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_items_layer.html#aa53cdd1085512a67369ba2acbe69a677",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Window\lState.PixelDeltaToDeltaTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a931c9a7c353584119fd61853d88f561d",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Window\lState.PixelToTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a4f51264da0ea7a603a9d6efeecbe1f75",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Items\lLayer.Sort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_items_layer.html#ae8803034130bca2297bbbcc0cc6e4a5e",tooltip=" "];
 }

@@ -7,4 +7,6 @@ digraph "UnityEditor.Timeline.ClipEditor.ClipEditor"
   Node1 [label="UnityEditor.Timeline.Clip\lEditor.ClipEditor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Default constructor"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Clip\lEditor.GetSubTimelines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_editor.html#ac419b723377d66feeaf06f9013f119a6",tooltip="Gets the sub-timelines for a specific clip. Implement this method if your clip supports playing neste..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Type\lUtility.HasOverrideMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_type_utility.html#a1a9f9104e256efb5de0e3f1742b26b73",tooltip="Checks whether a type has an overridden method with a specific name. This method also checks overridd..."];
 }

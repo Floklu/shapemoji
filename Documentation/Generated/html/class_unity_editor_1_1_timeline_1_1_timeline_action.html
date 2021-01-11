@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ti
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_timeline_action-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TimelineAction Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -116,7 +117,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a92e1e1fedaa89971598cb9990e526920"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a92e1e1fedaa89971598cb9990e526920">Invoke&lt; T &gt;</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
 <tr class="separator:a92e1e1fedaa89971598cb9990e526920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca3465858bf02905795fab03dba2e98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8ca3465858bf02905795fab03dba2e98">GetMenuEntries</a> (IEnumerable&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a> &gt; actions, Vector2? mousePos, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt; items)</td></tr>
+<tr class="memitem:a8ca3465858bf02905795fab03dba2e98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8ca3465858bf02905795fab03dba2e98">GetMenuEntries</a> (IEnumerable&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html">TimelineAction</a> &gt; actions, <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>? mousePos, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt; items)</td></tr>
 <tr class="separator:a8ca3465858bf02905795fab03dba2e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0d1311b3c56f6c8232659bb2ded4ab"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a8b0d1311b3c56f6c8232659bb2ded4ab">HandleShortcut</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Event evt)</td></tr>
 <tr class="separator:a8b0d1311b3c56f6c8232659bb2ded4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,13 +150,18 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:acf8c9b9c6c6e2035c00bb97c65d1778d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#acf8c9b9c6c6e2035c00bb97c65d1778d">DoInternal</a> (Type t, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
 <tr class="separator:acf8c9b9c6c6e2035c00bb97c65d1778d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a12eb417169f430f6802210a6afa35268"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_action.html#a12eb417169f430f6802210a6afa35268">CanExecute</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a12eb417169f430f6802210a6afa35268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
 <tr class="memitem:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a63de4780f5693888aa5b10be0df16ff6">s_ShowActionTriggeredByShortcut</a> = false</td></tr>
 <tr class="separator:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
-<tr class="memitem:a86f029d2991bbdd91f29c0556adf8b1e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">Vector2?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a86f029d2991bbdd91f29c0556adf8b1e">mousePosition</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a86f029d2991bbdd91f29c0556adf8b1e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a86f029d2991bbdd91f29c0556adf8b1e">mousePosition</a><code> [get, set]</code></td></tr>
 <tr class="separator:a86f029d2991bbdd91f29c0556adf8b1e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa731be9997b4d4b13626b2e54c2dfc8 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#aaa731be9997b4d4b13626b2e54c2dfc8">priority</a><code> [get]</code></td></tr>
 <tr class="separator:aaa731be9997b4d4b13626b2e54c2dfc8 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,11 +173,46 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4ac2ce497541b94029ae50b640e8e50a inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460dad0071328eebd1abaa5b240225a9 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a460dad0071328eebd1abaa5b240225a9">showInMenu</a><code> [get]</code></td></tr>
 <tr class="separator:a460dad0071328eebd1abaa5b240225a9 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c10d1adae4665f9c6df343880c8181 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">MenuEntryAttribute&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a90c10d1adae4665f9c6df343880c8181">menuInfo</a><code> [get]</code></td></tr>
+<tr class="separator:a90c10d1adae4665f9c6df343880c8181 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_timeline_actions_8cs_source.html#l00013">13</a> of file <a class="el" href="_timeline_actions_8cs_source.html">TimelineActions.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a12eb417169f430f6802210a6afa35268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12eb417169f430f6802210a6afa35268">&#9670;&nbsp;</a></span>CanExecute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineAction.CanExecute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_actions_8cs_source.html#l00032">32</a> of file <a class="el" href="_timeline_actions_8cs_source.html">TimelineActions.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_action_a12eb417169f430f6802210a6afa35268_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_action_a12eb417169f430f6802210a6afa35268_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="acf8c9b9c6c6e2035c00bb97c65d1778d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf8c9b9c6c6e2035c00bb97c65d1778d">&#9670;&nbsp;</a></span>DoInternal()</h2>
 
@@ -303,6 +344,11 @@ Here is the caller graph for this function:</div>
 <p>Reimplemented in <a class="el" href="class_unity_editor_1_1_timeline_1_1_match_content.html#a737ef5189f1e28a6ee2149dff690bd5d">UnityEditor.Timeline.MatchContent</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_delete_action.html#a15da0c3feb2fedd7155db1cc53a06763">UnityEditor.Timeline.DeleteAction</a>, <a class="el" href="class_unity_editor_1_1_timeline_1_1_paste_action.html#aab9a4e97c80d00a640827ce85dab1f11">UnityEditor.Timeline.PasteAction</a>, and <a class="el" href="class_unity_editor_1_1_timeline_1_1_copy_action.html#a386a5c5aa5bb3b9bbdfdbbf9a87a372d">UnityEditor.Timeline.CopyAction</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_actions_8cs_source.html#l00017">17</a> of file <a class="el" href="_timeline_actions_8cs_source.html">TimelineActions.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_action_ae362e092170217d3c8afb8fd28f3901c_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_action_ae362e092170217d3c8afb8fd28f3901c_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -324,7 +370,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector2?&#160;</td>
+          <td class="paramtype"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>?&#160;</td>
           <td class="paramname"><em>mousePos</em>, </td>
         </tr>
         <tr>
@@ -524,7 +570,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Actions/<a class="el" href="_timeline_actions_8cs_source.html">TimelineActions.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Actions/<a class="el" href="_timeline_actions_8cs_source.html">TimelineActions.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

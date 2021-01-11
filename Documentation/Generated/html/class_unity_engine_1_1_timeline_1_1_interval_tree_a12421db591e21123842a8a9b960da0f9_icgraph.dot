@@ -6,5 +6,7 @@ digraph "UnityEngine.Timeline.IntervalTree.Add"
   rankdir="RL";
   Node1 [label="UnityEngine.Timeline.Interval\lTree.Add",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Add an IInterval to the tree"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Space\lPartitioner.AddBounds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a88cdc0700e74458c055f6f7bfbe5e665",tooltip=" "];
+  Node2 [label="UnityEngine.Timeline.Animation\lTrack.CompileTrackPlayable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_animation_track.html#ad8e21a8c6d61a3e6c01cb4d7da7d2d4b",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Animation\lTrack.CreateInfiniteTrackPlayable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_animation_track.html#a604e7c258952966e5bcb6dcae31a026d",tooltip=" "];
 }

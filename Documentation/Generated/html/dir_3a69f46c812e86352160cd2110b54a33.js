@@ -12,6 +12,7 @@ var dir_3a69f46c812e86352160cd2110b54a33 =
       [ "IGUIDGenerator", "interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator.html", "interface_packages_1_1_rider_1_1_editor_1_1_i_g_u_i_d_generator" ],
       [ "IAssemblyNameProvider", "interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider.html", "interface_packages_1_1_rider_1_1_editor_1_1_i_assembly_name_provider" ],
       [ "AssemblyNameProvider", "class_packages_1_1_rider_1_1_editor_1_1_assembly_name_provider.html", "class_packages_1_1_rider_1_1_editor_1_1_assembly_name_provider" ],
-      [ "ProjectGeneration", "class_packages_1_1_rider_1_1_editor_1_1_project_generation.html", "class_packages_1_1_rider_1_1_editor_1_1_project_generation" ]
+      [ "ProjectGeneration", "class_packages_1_1_rider_1_1_editor_1_1_project_generation.html", "class_packages_1_1_rider_1_1_editor_1_1_project_generation" ],
+      [ "SolutionGuidGenerator", "class_packages_1_1_rider_1_1_editor_1_1_solution_guid_generator.html", "class_packages_1_1_rider_1_1_editor_1_1_solution_guid_generator" ]
     ] ]
 ];

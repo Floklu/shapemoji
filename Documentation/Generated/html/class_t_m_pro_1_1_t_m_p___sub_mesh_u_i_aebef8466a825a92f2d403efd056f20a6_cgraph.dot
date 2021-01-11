@@ -8,11 +8,19 @@ digraph "TMPro.TMP_SubMeshUI.OnDestroy"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_SubMeshUI.Recalculate\lClipping",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sub_mesh_u_i.html#a6505e4b6f7c11eeb4ea155d7d6ef4248",tooltip="Method called when the state of a parent changes."];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="TMPro.TextMeshProUGUI.Set\lAllDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a749eb1a6e9aa2f277b07a01f14483cc3",tooltip=" "];
-  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TMPro.TextMeshProUGUI.Set\lLayoutDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a662b65a09b65317f716297d4377e27a7",tooltip=" "];
-  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="TMPro.TextMeshProUGUI.Set\lMaterialDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#af75e3f762ed8c445cc4ad100903b5cf1",tooltip=" "];
-  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="TMPro.TextMeshProUGUI.Set\lVerticesDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#acc18f45edf09f79d04d6a9e461633d7c",tooltip=" "];
+  Node3 [label="TMPro.TMP_MaterialManager.\lReleaseFallbackMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___material_manager.html#a40169560d921e2f8204c6f0e9e39c82a",tooltip="Function to release the fallback material."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_MaterialManager.\lReleaseStencilMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___material_manager.html#a23dcfe3fad45f2cefb08bb0930bcc026",tooltip="Function to release the stencil material."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TextMeshProUGUI.Set\lAllDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a749eb1a6e9aa2f277b07a01f14483cc3",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TextMeshProUGUI.Set\lLayoutDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a662b65a09b65317f716297d4377e27a7",tooltip=" "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TextMeshProUGUI.Set\lMaterialDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#af75e3f762ed8c445cc4ad100903b5cf1",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TextMeshProUGUI.Delayed\lMaterialRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a2b24b078a7d69b540a9ebaad3054b543",tooltip="Delay registration of text object for graphic rebuild by one frame."];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TMPro.TextMeshProUGUI.Set\lVerticesDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#acc18f45edf09f79d04d6a9e461633d7c",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="TMPro.TextMeshProUGUI.Delayed\lGraphicRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro_u_g_u_i.html#a7ae697d929ce5b37097beb6c872a3735",tooltip="Delay registration of text object for graphic rebuild by one frame."];
 }

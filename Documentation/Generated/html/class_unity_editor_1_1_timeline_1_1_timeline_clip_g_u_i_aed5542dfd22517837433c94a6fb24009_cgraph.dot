@@ -6,9 +6,13 @@ digraph "UnityEditor.Timeline.TimelineClipGUI.TimelineClipGUI"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Timeline\lClipGUI.TimelineClipGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetClipEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a4b7f59487a7014735342fd15c71413f1",tooltip=" "];
-  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetDefaultClip\lEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a1965c36388ba999d52895befcac64496",tooltip=" "];
-  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="UnityEditor.Timeline.IZOrder\lProvider.Next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html#a49e0c99b9528891646569e0214fe6fa5",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Item\lToItemGui.Add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_item_to_item_gui.html#a932309b2cf6c980f452808f1ddc3b4d0",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetClipEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a4b7f59487a7014735342fd15c71413f1",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetDefaultClip\lEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a1965c36388ba999d52895befcac64496",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Editor\lClipFactory.GetEditorClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_editor_clip_factory.html#a2e8fade23bcb6e2be7aa64eac84d63c4",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.IZOrder\lProvider.Next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html#a49e0c99b9528891646569e0214fe6fa5",tooltip=" "];
 }

@@ -6,5 +6,20 @@ digraph "TMPro.EditorUtilities.TMP_StyleEditor.OnInspectorGUI"
   rankdir="LR";
   Node1 [label="TMPro.EditorUtilities.TMP\l_StyleEditor.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.TMP_StyleSheet.Refresh\lStyles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___style_sheet.html#a5f46893c06befe49793f7ea965615061",tooltip="Function to refresh the Style Dictionary."];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_StyleEditor.DoSelectionCheck",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_editor.html#ad808371158ce931df70e4138bb1bf495",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_EditorUtility.DrawBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#ace1889f81283f0a1bcd8973069222d48",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMPro_EventManager.\lON_TEXT_STYLE_PROPERTY\l_CHANGED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_pro___event_manager.html#a7c9fc58bd09d0c3a9998678fa0f42cf1",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_StyleSheet.Refresh\lStyles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___style_sheet.html#a5f46893c06befe49793f7ea965615061",tooltip="Function to refresh the Style Dictionary."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_StyleSheet.Load\lStyleDictionaryInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___style_sheet.html#ae83d9e90111accb45a4c696c54ce4d4e",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_TextParsingUtilities.\lGetHashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a77bb7b39afef3f677e915499b48e2c7a",tooltip="Function returning the hashcode value of a given string."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMP_TextParsingUtilities.\lToUpperASCIIFast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html#a57e8e32bda8815e697db41cb4820d56a",tooltip="Get uppercase version of this ASCII character."];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TMPro.EditorUtilities.TMP\l_StyleEditor.SwapStyleElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_editor.html#aec36f81fee2be294e9937cb1c062b3bf",tooltip=" "];
 }

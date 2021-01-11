@@ -28,16 +28,33 @@ var dir_b82b24a18642ea5203f1a5959ecca9d4 =
     [ "DirectorStyles.cs", "_director_styles_8cs.html", [
       [ "DirectorStyles", "class_unity_editor_1_1_timeline_1_1_director_styles.html", "class_unity_editor_1_1_timeline_1_1_director_styles" ]
     ] ],
-    [ "MenuOrder.cs", "_menu_order_8cs.html", null ],
-    [ "Shortcuts.cs", "_shortcuts_8cs.html", null ],
+    [ "MenuOrder.cs", "_menu_order_8cs.html", [
+      [ "MenuOrder", "class_unity_editor_1_1_timeline_1_1_menu_order.html", "class_unity_editor_1_1_timeline_1_1_menu_order" ],
+      [ "TimelineAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_timeline_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_timeline_action" ],
+      [ "TrackAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_track_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_track_action" ],
+      [ "TrackAddMenu", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_track_add_menu.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_track_add_menu" ],
+      [ "ClipEditAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_clip_edit_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_clip_edit_action" ],
+      [ "ClipAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_clip_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_clip_action" ],
+      [ "MarkerAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_marker_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_marker_action" ],
+      [ "CustomTrackAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_custom_track_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_custom_track_action" ],
+      [ "CustomClipAction", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_custom_clip_action.html", "class_unity_editor_1_1_timeline_1_1_menu_order_1_1_custom_clip_action" ]
+    ] ],
+    [ "Shortcuts.cs", "_shortcuts_8cs.html", [
+      [ "Shortcuts", "class_unity_editor_1_1_timeline_1_1_shortcuts.html", "class_unity_editor_1_1_timeline_1_1_shortcuts" ],
+      [ "Clip", "class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip.html", "class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_clip" ],
+      [ "Timeline", "class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline.html", "class_unity_editor_1_1_timeline_1_1_shortcuts_1_1_timeline" ]
+    ] ],
     [ "TimelineEditor.cs", "_timeline_editor_8cs.html", "_timeline_editor_8cs" ],
     [ "TimelineHelpers.cs", "_timeline_helpers_8cs.html", "_timeline_helpers_8cs" ],
-    [ "TimelineSelection.cs", "_timeline_selection_8cs.html", null ],
+    [ "TimelineSelection.cs", "_timeline_selection_8cs.html", [
+      [ "SelectionManager", "class_unity_editor_1_1_timeline_1_1_selection_manager.html", "class_unity_editor_1_1_timeline_1_1_selection_manager" ]
+    ] ],
     [ "TimelineUtility.cs", "_timeline_utility_8cs.html", "_timeline_utility_8cs" ],
     [ "Tooltip.cs", "_tooltip_8cs.html", [
       [ "Tooltip", "class_unity_editor_1_1_timeline_1_1_tooltip.html", "class_unity_editor_1_1_timeline_1_1_tooltip" ]
     ] ],
     [ "Trackhead.cs", "_trackhead_8cs.html", [
+      [ "Gaps", "class_unity_editor_1_1_timeline_1_1_gaps.html", "class_unity_editor_1_1_timeline_1_1_gaps" ],
       [ "PlayheadContextMenu", "class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html", "class_unity_editor_1_1_timeline_1_1_playhead_context_menu" ],
       [ "TimeAreaContextMenu", "class_unity_editor_1_1_timeline_1_1_time_area_context_menu.html", "class_unity_editor_1_1_timeline_1_1_time_area_context_menu" ],
       [ "Scrub", "class_unity_editor_1_1_timeline_1_1_scrub.html", "class_unity_editor_1_1_timeline_1_1_scrub" ],

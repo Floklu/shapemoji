@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.TestTools.Test\lRunner.Api.Filter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter.html",tooltip=" "];
+  Node0 [label="TMPro.TagAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_tag_attribute.html",tooltip="Structure used to store retrieve the name and hashcode of the font and material"];
 }

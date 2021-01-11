@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/AssetUpgrade/TimelineUpgrade.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/AssetUpgrade/TimelineUpgrade.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,26 +89,31 @@ $(document).ready(function(){initNavTree('_timeline_upgrade_8cs_source.html','')
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">    3</a></span>&#160;    <span class="keyword">partial class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        <span class="keyword">enum</span> Versions</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320">    5</a></span>&#160;        <span class="keyword">enum</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320">Versions</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;            Initial = 0</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        }</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_LatestVersion = (int)Versions.Initial;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        [SerializeField, HideInInspector] <span class="keywordtype">int</span> m_Version;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac2e60d51c793edc0e06adefa65a45500">    9</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac2e60d51c793edc0e06adefa65a45500">k_LatestVersion</a> = (int)<a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320">Versions</a>.Initial;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a340782cfaa9df7f6ef9b11cb86962c83">   10</a></span>&#160;        [SerializeField, HideInInspector] <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a340782cfaa9df7f6ef9b11cb86962c83">m_Version</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">//fields that are used for upgrading should be put here, ideally as read-only</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> UpgradeToLatestVersion()</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a17cabac20bb7a4a5c15090aea1e668fd">   14</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a17cabac20bb7a4a5c15090aea1e668fd">UpgradeToLatestVersion</a>()</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//upgrade code should go into this class</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span>TimelineAssetUpgrade</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_timeline_asset_upgrade.html">   18</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_timeline_asset_upgrade.html">TimelineAssetUpgrade</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_timeline_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">UnityEngine.Timeline.TimelineAsset</a></div><div class="ttdoc">A PlayableAsset that represents a timeline.</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00003">TimelineUpgrade.cs:4</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_timeline_asset_html_ac67a3cbd152b598dc9d15fa3e00e8320"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320">UnityEngine.Timeline.TimelineAsset.Versions</a></div><div class="ttdeci">Versions</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00005">TimelineUpgrade.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_timeline_asset_html_a340782cfaa9df7f6ef9b11cb86962c83"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a340782cfaa9df7f6ef9b11cb86962c83">UnityEngine.Timeline.TimelineAsset.m_Version</a></div><div class="ttdeci">int m_Version</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00010">TimelineUpgrade.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_timeline_asset_upgrade_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_timeline_asset_upgrade.html">UnityEngine.Timeline.TimelineAsset.TimelineAssetUpgrade</a></div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00018">TimelineUpgrade.cs:19</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_timeline_asset_html_ac2e60d51c793edc0e06adefa65a45500"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac2e60d51c793edc0e06adefa65a45500">UnityEngine.Timeline.TimelineAsset.k_LatestVersion</a></div><div class="ttdeci">const int k_LatestVersion</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00009">TimelineUpgrade.cs:9</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_timeline_asset_html_a17cabac20bb7a4a5c15090aea1e668fd"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a17cabac20bb7a4a5c15090aea1e668fd">UnityEngine.Timeline.TimelineAsset.UpgradeToLatestVersion</a></div><div class="ttdeci">void UpgradeToLatestVersion()</div><div class="ttdef"><b>Definition:</b> <a href="_timeline_upgrade_8cs_source.html#l00014">TimelineUpgrade.cs:14</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_br
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.BreadcrumbDrawer Class Reference</div>  </div>
@@ -93,11 +95,79 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_br
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7e7528b64f97f59371c1e019b6c2cf70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a7e7528b64f97f59371c1e019b6c2cf70">Draw</a> (float breadcrumbAreaWidth, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a> &gt; labels, Action&lt; int &gt; navigateToBreadcrumbIndex)</td></tr>
 <tr class="separator:a7e7528b64f97f59371c1e019b6c2cf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a00ca6760b90331c7d594f6e3562fce5e"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a00ca6760b90331c7d594f6e3562fce5e">BreadcrumbDrawer</a> ()</td></tr>
+<tr class="separator:a00ca6760b90331c7d594f6e3562fce5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25683c6ccd573768fb442e40e41bbb4"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ad25683c6ccd573768fb442e40e41bbb4">FitTextInArea</a> (float areaWidth, string text, GUIStyle style)</td></tr>
+<tr class="separator:ad25683c6ccd573768fb442e40e41bbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28b64ebe03d2b8e7be31f38ccb65965"><td class="memItemLeft" align="right" valign="top">static GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ab28b64ebe03d2b8e7be31f38ccb65965">GetTextContent</a> (int width, <a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a> text, GUIStyle style)</td></tr>
+<tr class="separator:ab28b64ebe03d2b8e7be31f38ccb65965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d06b074166fabdb2224c873edd2bc08"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a0d06b074166fabdb2224c873edd2bc08">DrawBreadcrumbAsSelectedSubSequence</a> (int width, <a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a> label, GUIStyle style, GUIStyle backgroundStyle)</td></tr>
+<tr class="separator:a0d06b074166fabdb2224c873edd2bc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4769ead2356ec15424e48b83fbc8c05"><td class="memItemLeft" align="right" valign="top">static Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ae4769ead2356ec15424e48b83fbc8c05">GetBreadcrumbLayoutRect</a> (GUIContent content, GUIStyle style)</td></tr>
+<tr class="separator:ae4769ead2356ec15424e48b83fbc8c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de7e0639afa2576b13ffdd06114f2f5"><td class="memItemLeft" align="right" valign="top">static Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a8de7e0639afa2576b13ffdd06114f2f5">DrawActiveBreadcrumb</a> (int width, <a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a> label, GUIStyle style, GUIStyle backgroundStyle)</td></tr>
+<tr class="separator:a8de7e0639afa2576b13ffdd06114f2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a7e59dc2f69319611327a38d09ade8c4a"><td class="memItemLeft" align="right" valign="top">static readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a7e59dc2f69319611327a38d09ade8c4a">s_TextContent</a> = new GUIContent()</td></tr>
+<tr class="separator:a7e59dc2f69319611327a38d09ade8c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475133d96e2c6e445554a256263b589e"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a475133d96e2c6e445554a256263b589e">k_DisabledComponentText</a> = L10n.Tr(&quot;The PlayableDirector is disabled&quot;)</td></tr>
+<tr class="separator:a475133d96e2c6e445554a256263b589e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe17b1e9e394ad31c8dc26ee5d2529e7"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#abe17b1e9e394ad31c8dc26ee5d2529e7">k_PrefabOutOfContext</a> = L10n.Tr(&quot;Prefab Isolation not enabled. Click to Enable.&quot;)</td></tr>
+<tr class="separator:abe17b1e9e394ad31c8dc26ee5d2529e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9b8fcbe2e6068292d0b187f12e1085"><td class="memItemLeft" align="right" valign="top">static readonly GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ace9b8fcbe2e6068292d0b187f12e1085">k_BreadCrumbLeft</a></td></tr>
+<tr class="separator:ace9b8fcbe2e6068292d0b187f12e1085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b6463bce819d590996f74f1a199860"><td class="memItemLeft" align="right" valign="top">static readonly GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ad3b6463bce819d590996f74f1a199860">k_BreadCrumbMid</a></td></tr>
+<tr class="separator:ad3b6463bce819d590996f74f1a199860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9622da39d985616a30274051f0f0b6b8"><td class="memItemLeft" align="right" valign="top">static readonly GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a9622da39d985616a30274051f0f0b6b8">k_BreadCrumbLeftBg</a></td></tr>
+<tr class="separator:a9622da39d985616a30274051f0f0b6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac761f1afe2d1db7ff0a78946065616fe"><td class="memItemLeft" align="right" valign="top">static readonly GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ac761f1afe2d1db7ff0a78946065616fe">k_BreadCrumbMidBg</a></td></tr>
+<tr class="separator:ac761f1afe2d1db7ff0a78946065616fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac676c60487ae66e380d8deb55dd6b977"><td class="memItemLeft" align="right" valign="top">static readonly GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ac676c60487ae66e380d8deb55dd6b977">k_BreadCrumbMidSelected</a></td></tr>
+<tr class="separator:ac676c60487ae66e380d8deb55dd6b977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382b25fa7af69565e5952702418d7496"><td class="memItemLeft" align="right" valign="top">static readonly GUIStyle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a382b25fa7af69565e5952702418d7496">k_BreadCrumbMidBgSelected</a></td></tr>
+<tr class="separator:a382b25fa7af69565e5952702418d7496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a7739604f76c4fcb02265a6e53ba7e"><td class="memItemLeft" align="right" valign="top">static readonly Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#a04a7739604f76c4fcb02265a6e53ba7e">k_TimelineIcon</a></td></tr>
+<tr class="separator:a04a7739604f76c4fcb02265a6e53ba7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad979e0a9134c174a2f9c9714a42f1c9c"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer.html#ad979e0a9134c174a2f9c9714a42f1c9c">k_Elipsis</a> = &quot;…&quot;</td></tr>
+<tr class="separator:ad979e0a9134c174a2f9c9714a42f1c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00024">24</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a00ca6760b90331c7d594f6e3562fce5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ca6760b90331c7d594f6e3562fce5e">&#9670;&nbsp;</a></span>BreadcrumbDrawer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UnityEditor.Timeline.BreadcrumbDrawer.BreadcrumbDrawer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00041">41</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7e7528b64f97f59371c1e019b6c2cf70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e7528b64f97f59371c1e019b6c2cf70">&#9670;&nbsp;</a></span>Draw()</h2>
 
@@ -139,11 +209,552 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00079">79</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a7e7528b64f97f59371c1e019b6c2cf70_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a7e7528b64f97f59371c1e019b6c2cf70_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a7e7528b64f97f59371c1e019b6c2cf70_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a7e7528b64f97f59371c1e019b6c2cf70_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8de7e0639afa2576b13ffdd06114f2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de7e0639afa2576b13ffdd06114f2f5">&#9670;&nbsp;</a></span>DrawActiveBreadcrumb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Rect UnityEditor.Timeline.BreadcrumbDrawer.DrawActiveBreadcrumb </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a>&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>style</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>backgroundStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00188">188</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a8de7e0639afa2576b13ffdd06114f2f5_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a8de7e0639afa2576b13ffdd06114f2f5_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a8de7e0639afa2576b13ffdd06114f2f5_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a8de7e0639afa2576b13ffdd06114f2f5_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0d06b074166fabdb2224c873edd2bc08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d06b074166fabdb2224c873edd2bc08">&#9670;&nbsp;</a></span>DrawBreadcrumbAsSelectedSubSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.BreadcrumbDrawer.DrawBreadcrumbAsSelectedSubSequence </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a>&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>style</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>backgroundStyle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00160">160</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a0d06b074166fabdb2224c873edd2bc08_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a0d06b074166fabdb2224c873edd2bc08_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a0d06b074166fabdb2224c873edd2bc08_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_a0d06b074166fabdb2224c873edd2bc08_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad25683c6ccd573768fb442e40e41bbb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad25683c6ccd573768fb442e40e41bbb4">&#9670;&nbsp;</a></span>FitTextInArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string UnityEditor.Timeline.BreadcrumbDrawer.FitTextInArea </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>areaWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>style</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00056">56</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ad25683c6ccd573768fb442e40e41bbb4_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ad25683c6ccd573768fb442e40e41bbb4_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae4769ead2356ec15424e48b83fbc8c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4769ead2356ec15424e48b83fbc8c05">&#9670;&nbsp;</a></span>GetBreadcrumbLayoutRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Rect UnityEditor.Timeline.BreadcrumbDrawer.GetBreadcrumbLayoutRect </td>
+          <td>(</td>
+          <td class="paramtype">GUIContent&#160;</td>
+          <td class="paramname"><em>content</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>style</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00175">175</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ae4769ead2356ec15424e48b83fbc8c05_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ae4769ead2356ec15424e48b83fbc8c05_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab28b64ebe03d2b8e7be31f38ccb65965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28b64ebe03d2b8e7be31f38ccb65965">&#9670;&nbsp;</a></span>GetTextContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static GUIContent UnityEditor.Timeline.BreadcrumbDrawer.GetTextContent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_bread_crumb_title.html">BreadCrumbTitle</a>&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GUIStyle&#160;</td>
+          <td class="paramname"><em>style</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00131">131</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ab28b64ebe03d2b8e7be31f38ccb65965_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ab28b64ebe03d2b8e7be31f38ccb65965_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ab28b64ebe03d2b8e7be31f38ccb65965_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_breadcrumb_drawer_ab28b64ebe03d2b8e7be31f38ccb65965_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ace9b8fcbe2e6068292d0b187f12e1085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace9b8fcbe2e6068292d0b187f12e1085">&#9670;&nbsp;</a></span>k_BreadCrumbLeft</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIStyle UnityEditor.Timeline.BreadcrumbDrawer.k_BreadCrumbLeft</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00030">30</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9622da39d985616a30274051f0f0b6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9622da39d985616a30274051f0f0b6b8">&#9670;&nbsp;</a></span>k_BreadCrumbLeftBg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIStyle UnityEditor.Timeline.BreadcrumbDrawer.k_BreadCrumbLeftBg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00032">32</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad3b6463bce819d590996f74f1a199860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b6463bce819d590996f74f1a199860">&#9670;&nbsp;</a></span>k_BreadCrumbMid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIStyle UnityEditor.Timeline.BreadcrumbDrawer.k_BreadCrumbMid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00031">31</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac761f1afe2d1db7ff0a78946065616fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac761f1afe2d1db7ff0a78946065616fe">&#9670;&nbsp;</a></span>k_BreadCrumbMidBg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIStyle UnityEditor.Timeline.BreadcrumbDrawer.k_BreadCrumbMidBg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00033">33</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a382b25fa7af69565e5952702418d7496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382b25fa7af69565e5952702418d7496">&#9670;&nbsp;</a></span>k_BreadCrumbMidBgSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIStyle UnityEditor.Timeline.BreadcrumbDrawer.k_BreadCrumbMidBgSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00035">35</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac676c60487ae66e380d8deb55dd6b977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac676c60487ae66e380d8deb55dd6b977">&#9670;&nbsp;</a></span>k_BreadCrumbMidSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIStyle UnityEditor.Timeline.BreadcrumbDrawer.k_BreadCrumbMidSelected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00034">34</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a475133d96e2c6e445554a256263b589e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475133d96e2c6e445554a256263b589e">&#9670;&nbsp;</a></span>k_DisabledComponentText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.BreadcrumbDrawer.k_DisabledComponentText = L10n.Tr(&quot;The PlayableDirector is disabled&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00027">27</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad979e0a9134c174a2f9c9714a42f1c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad979e0a9134c174a2f9c9714a42f1c9c">&#9670;&nbsp;</a></span>k_Elipsis</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string UnityEditor.Timeline.BreadcrumbDrawer.k_Elipsis = &quot;…&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00039">39</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="abe17b1e9e394ad31c8dc26ee5d2529e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe17b1e9e394ad31c8dc26ee5d2529e7">&#9670;&nbsp;</a></span>k_PrefabOutOfContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.BreadcrumbDrawer.k_PrefabOutOfContext = L10n.Tr(&quot;Prefab Isolation not enabled. Click to Enable.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00028">28</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a04a7739604f76c4fcb02265a6e53ba7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a7739604f76c4fcb02265a6e53ba7e">&#9670;&nbsp;</a></span>k_TimelineIcon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Texture UnityEditor.Timeline.BreadcrumbDrawer.k_TimelineIcon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00037">37</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7e59dc2f69319611327a38d09ade8c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e59dc2f69319611327a38d09ade8c4a">&#9670;&nbsp;</a></span>s_TextContent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent UnityEditor.Timeline.BreadcrumbDrawer.s_TextContent = new GUIContent()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_breadcrumb_drawer_8cs_source.html#l00026">26</a> of file <a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/<a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/<a class="el" href="_breadcrumb_drawer_8cs_source.html">BreadcrumbDrawer.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

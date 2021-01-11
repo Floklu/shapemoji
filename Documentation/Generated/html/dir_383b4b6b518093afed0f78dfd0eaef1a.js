@@ -14,7 +14,7 @@ var dir_383b4b6b518093afed0f78dfd0eaef1a =
       [ "PlayerLauncherTestRunSettings", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_player_launcher_test_run_settings.html", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_player_launcher_test_run_settings" ]
     ] ],
     [ "PlaymodeLauncher.cs", "_playmode_launcher_8cs.html", [
-      [ "BackgroundWatcher", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_playmode_launcher_1_1_background_watcher.html", null ]
+      [ "BackgroundWatcher", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_playmode_launcher_1_1_background_watcher.html", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_playmode_launcher_1_1_background_watcher" ]
     ] ],
     [ "PostbuildCleanupAttributeFinder.cs", "_postbuild_cleanup_attribute_finder_8cs.html", null ],
     [ "PrebuildSetupAttributeFinder.cs", "_prebuild_setup_attribute_finder_8cs.html", null ],

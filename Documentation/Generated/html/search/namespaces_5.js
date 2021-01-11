@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vscodeeditor_4771',['VSCodeEditor',['../namespace_v_s_code_editor.html',1,'']]]
+  ['scorearea_9287',['ScoreArea',['../namespace_score_area.html',1,'']]],
+  ['spawner_9288',['Spawner',['../namespace_spawner.html',1,'']]]
 ];

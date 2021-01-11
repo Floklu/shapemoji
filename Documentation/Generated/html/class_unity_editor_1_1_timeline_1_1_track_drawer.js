@@ -1,5 +1,6 @@
 var class_unity_editor_1_1_timeline_1_1_track_drawer =
 [
+    [ "CreateInstance", "class_unity_editor_1_1_timeline_1_1_track_drawer.html#a56183d54a71e44ae03b195a0a2bb0257", null ],
     [ "DrawRecordingBackground", "class_unity_editor_1_1_timeline_1_1_track_drawer.html#a0e84bc797567fe247c330b6887407eba", null ],
     [ "DrawTrack", "class_unity_editor_1_1_timeline_1_1_track_drawer.html#a861e8102d3578f83519bf559ae5546ed", null ],
     [ "DrawTrackHeaderButton", "class_unity_editor_1_1_timeline_1_1_track_drawer.html#a6b8aa2b69279efde0802ddf696e261a6", null ],

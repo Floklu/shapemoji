@@ -7,4 +7,14 @@ digraph "UnityEditor.Timeline.ClipEditor.GetSubTimelines"
   Node1 [label="UnityEditor.Timeline.Clip\lEditor.GetSubTimelines",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Gets the sub-timelines for a specific clip. Implement this method if your clip supports playing neste..."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Clip\lEditor.ClipEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_editor.html#affd8175678f7f46bbe5536d2e54a3731",tooltip="Default constructor"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lClipGUI.ShowDrillIcon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af35c75e19a8f105c0a98c9070a7a9517",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lClipGUI.UpdateClipIcons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#af72a1feb914645d8c68bdceb3395c154",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lClipGUI.UpdateDrawData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a77f2ccc653629c2ca7eff5dfd6b1bcbe",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawInto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ab30772c1d48fedd364a3eb1e366be97c",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Timeline\lClipGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa981e7c442e997b7c660044ccace7e00",tooltip=" "];
 }

@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_au
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_audio_playable_asset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.AudioPlayableAsset Class Reference</div>  </div>
@@ -130,6 +131,17 @@ Properties</h2></td></tr>
 <tr class="memitem:ad73af6af3aa5b1f06545740d9da4db2c inherit properties_interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_unity_engine_1_1_timeline.html#af0b68b9529bda08f212a5aefa79e7e03">ClipCaps</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html#ad73af6af3aa5b1f06545740d9da4db2c">clipCaps</a><code> [get]</code></td></tr>
 <tr class="memdesc:ad73af6af3aa5b1f06545740d9da4db2c inherit properties_interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a description of the features supported by clips with PlayableAssets implementing this interface.  <a href="interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset.html#ad73af6af3aa5b1f06545740d9da4db2c">More...</a><br /></td></tr>
 <tr class="separator:ad73af6af3aa5b1f06545740d9da4db2c inherit properties_interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab122eb32a244a8cb7485638ba0516f36"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_playable_asset.html#ab122eb32a244a8cb7485638ba0516f36">m_Clip</a></td></tr>
+<tr class="separator:ab122eb32a244a8cb7485638ba0516f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3477c20ef15d7c82e0fdd920f9f055e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_playable_asset.html#ad3477c20ef15d7c82e0fdd920f9f055e">m_Loop</a></td></tr>
+<tr class="separator:ad3477c20ef15d7c82e0fdd920f9f055e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40a0e8a81ebb389899e3fc85a3e9fd1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_playable_asset.html#ac40a0e8a81ebb389899e3fc85a3e9fd1">m_bufferingTime</a> = 0.1f</td></tr>
+<tr class="separator:ac40a0e8a81ebb389899e3fc85a3e9fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f3f708722171854b68636972cf8471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_clip_properties.html">AudioClipProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_playable_asset.html#a82f3f708722171854b68636972cf8471">m_ClipProperties</a> = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_clip_properties.html">AudioClipProperties</a>()</td></tr>
+<tr class="separator:a82f3f708722171854b68636972cf8471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PlayableAsset wrapper for an AudioClip in <a class="el" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>. </p>
@@ -173,6 +185,103 @@ Properties</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The root playable of the subgraph</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_audio_playable_asset_8cs_source.html#l00088">88</a> of file <a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac40a0e8a81ebb389899e3fc85a3e9fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40a0e8a81ebb389899e3fc85a3e9fd1">&#9670;&nbsp;</a></span>m_bufferingTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEngine.Timeline.AudioPlayableAsset.m_bufferingTime = 0.1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_8cs_source.html#l00023">23</a> of file <a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab122eb32a244a8cb7485638ba0516f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab122eb32a244a8cb7485638ba0516f36">&#9670;&nbsp;</a></span>m_Clip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip UnityEngine.Timeline.AudioPlayableAsset.m_Clip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_8cs_source.html#l00020">20</a> of file <a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a82f3f708722171854b68636972cf8471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f3f708722171854b68636972cf8471">&#9670;&nbsp;</a></span>m_ClipProperties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_clip_properties.html">AudioClipProperties</a> UnityEngine.Timeline.AudioPlayableAsset.m_ClipProperties = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_audio_clip_properties.html">AudioClipProperties</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_8cs_source.html#l00024">24</a> of file <a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad3477c20ef15d7c82e0fdd920f9f055e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3477c20ef15d7c82e0fdd920f9f055e">&#9670;&nbsp;</a></span>m_Loop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.AudioPlayableAsset.m_Loop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_audio_playable_asset_8cs_source.html#l00022">22</a> of file <a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a>.</p>
 
 </div>
 </div>
@@ -309,7 +418,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Audio/<a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Audio/<a class="el" href="_audio_playable_asset_8cs_source.html">AudioPlayableAsset.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

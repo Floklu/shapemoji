@@ -7,4 +7,5 @@ digraph "UnityEditor.Timeline.SequenceState.ToLocalTime"
   Node1 [label="UnityEditor.Timeline.Sequence\lState.ToLocalTime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Sequence\lState.GetEvaluableRange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_sequence_state.html#a180d8df4e8f1c7539d7b52ce0b223d23",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

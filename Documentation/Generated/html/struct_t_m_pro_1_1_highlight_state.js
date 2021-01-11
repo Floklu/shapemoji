@@ -4,6 +4,8 @@ var struct_t_m_pro_1_1_highlight_state =
     [ "Equals", "struct_t_m_pro_1_1_highlight_state.html#a4b477bce7106dd614ed8b2da64a709ac", null ],
     [ "Equals", "struct_t_m_pro_1_1_highlight_state.html#a7dc600e924f7a3e135905a4e79292b8a", null ],
     [ "GetHashCode", "struct_t_m_pro_1_1_highlight_state.html#a7b1b31885212044c55f56f20fbff5e51", null ],
+    [ "operator!=", "struct_t_m_pro_1_1_highlight_state.html#abe3ab1d87fa9cd5735a09dd2760b4525", null ],
+    [ "operator==", "struct_t_m_pro_1_1_highlight_state.html#aa87743c30322b1a5b0ceb167d29d387c", null ],
     [ "color", "struct_t_m_pro_1_1_highlight_state.html#a260b099bc749fec381d6279044094e14", null ],
     [ "padding", "struct_t_m_pro_1_1_highlight_state.html#abea6525918a68e356363fdc6881433c3", null ]
 ];

@@ -6,5 +6,22 @@ digraph "TMPro.EditorUtilities.TMP_BaseShaderGUI.OnGUI"
   rankdir="LR";
   Node1 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.OnGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.DoGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i.html#a04c57cff2c8f6cf93b5bf50209ef9f5f",tooltip="Override this method to create the specific shader GUI."];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.DoDragAndDropBegin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i.html#a90dbb31a14ea54461c830f74b140e99a",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.DoDragAndDropEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i.html#a9a7de03d49db95a8fa57e2af22a33fe3",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.PerformDrop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i.html#a52e00e42b03b735c548e0ffabcd2431f",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.EditorUtilities.TMP\l_EditorUtility.FindMatchingFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#a3b343e3bc5a81c2a9e668c3bb9dd6a98",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMPro_EventManager.\lON_DRAG_AND_DROP_MATERIAL\l_CHANGED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_pro___event_manager.html#ac81d525ab0922348b4b892542490a5c4",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.DoGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i.html#a04c57cff2c8f6cf93b5bf50209ef9f5f",tooltip="Override this method to create the specific shader GUI."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMPro_EventManager.\lON_MATERIAL_PROPERTY_CHANGED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_pro___event_manager.html#a0272103bcb7c80ab0a865e86cd87d053",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.PrepareGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i.html#a671524a22e8ba8366712c5fb97647f71",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="TMPro.ShaderUtilities.Get\lShaderPropertyIDs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_shader_utilities.html#a0274e3055f8915a0178e3bdcec5118cb",tooltip=" "];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

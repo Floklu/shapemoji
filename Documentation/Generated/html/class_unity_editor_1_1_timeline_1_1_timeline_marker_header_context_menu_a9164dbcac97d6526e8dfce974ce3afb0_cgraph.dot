@@ -7,4 +7,8 @@ digraph "UnityEditor.Timeline.TimelineMarkerHeaderContextMenu.ContextClick"
   Node1 [label="UnityEditor.Timeline.Timeline\lMarkerHeaderContextMenu.ContextClick",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Window\lState.GetWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Sequencer\lContextMenu.ShowMarkerHeaderContextMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_sequencer_context_menu.html#a7513b776479324b96d364344d9f31ff8",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Menu\lItemActionBase.BuildMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#abeba653e51c697fda0abcbb64e5d5da3",tooltip=" "];
 }

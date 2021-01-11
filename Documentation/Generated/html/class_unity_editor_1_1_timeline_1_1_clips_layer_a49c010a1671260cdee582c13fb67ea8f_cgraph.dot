@@ -7,4 +7,8 @@ digraph "UnityEditor.Timeline.ClipsLayer.ClipsLayer"
   Node1 [label="UnityEditor.Timeline.Clips\lLayer.ClipsLayer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Items\lLayer.AddItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_items_layer.html#a0040a13bc1fee51af3f786db717ed9a7",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Item\lToItemGui.GetGuiForClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_item_to_item_gui.html#abc05dbed21566341545f7f8d548c56bf",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Item\lToItemGui.GetGuiForItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_item_to_item_gui.html#afcf4b6d0ac7ebad4cca3a83ae207d59b",tooltip=" "];
 }

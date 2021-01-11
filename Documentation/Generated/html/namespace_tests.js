@@ -1,4 +1,5 @@
 var namespace_tests =
 [
-    [ "HarpoonTest", "class_tests_1_1_harpoon_test.html", "class_tests_1_1_harpoon_test" ]
+    [ "EditMode", "namespace_tests_1_1_edit_mode.html", "namespace_tests_1_1_edit_mode" ],
+    [ "PlayMode", "namespace_tests_1_1_play_mode.html", "namespace_tests_1_1_play_mode" ]
 ];

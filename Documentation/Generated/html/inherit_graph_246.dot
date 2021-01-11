@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="VSCodeEditor.IAssemblyName\lProvider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_v_s_code_editor_1_1_i_assembly_name_provider.html",tooltip=" "];
+  Node0 [label="UnityEditor.Timeline.Clip\lDrawer.Styles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_drawer_1_1_styles.html",tooltip=" "];
 }

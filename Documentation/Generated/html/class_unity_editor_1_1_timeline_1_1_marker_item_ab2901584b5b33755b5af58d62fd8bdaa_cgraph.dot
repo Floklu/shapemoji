@@ -6,5 +6,19 @@ digraph "UnityEditor.Timeline.MarkerItem.CloneTo"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Marker\lItem.CloneTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Marker\lItem.MarkerItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_item.html#a214eed0e8751aa48aec2077ac2c11b15",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Marker\lModifier.CloneMarkerToParent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_modifier.html#addf8a7f9f88c2b109150c1ed88beca09",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Marker\lModifier.AddMarkerToParent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_modifier.html#a55ad88df626ada16346ece902041a23c",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEngine.Timeline.Timeline\lUndo.PushUndo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a2c45dda5e68a6de6f481aee4888b352c",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEngine.Timeline.Timeline\lUndo.RegisterCreatedObjectUndo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_undo.html#a00de6f820def7986ea36db84a4628f5e",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Timeline\lCreateUtilities.SaveAssetIntoObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_create_utilities.html#a300b80877333ea7d68623ae21361fba2",tooltip=" "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetMarkerEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aa28059a4141cfdc02a9edc2d9e3a3de1",tooltip=" "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Marker\lEditor.OnCreate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_editor.html#ab311e906d3a9f04aa55b10c35a53f834",tooltip="Called when a marker is created."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.Marker\lItem.MarkerItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_item.html#a214eed0e8751aa48aec2077ac2c11b15",tooltip=" "];
 }

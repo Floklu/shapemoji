@@ -85,6 +85,11 @@ $(document).ready(function(){initNavTree('class_t_m_pro_1_1_editor_utilities_1_1
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow Class Reference</div>  </div>
@@ -101,6 +106,11 @@ Collaboration diagram for TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow:</d
 <div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window__coll__graph.png" border="0" usemap="#a_t_m_pro_8_editor_utilities_8_t_m_pro___font_asset_creator_window_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_1_1_font_asset_creation_settings_container.html">FontAssetCreationSettingsContainer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a92b04c483491694e0a6589141310ab84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a92b04c483491694e0a6589141310ab84">OnEnable</a> ()</td></tr>
@@ -122,11 +132,419 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a63ba434b610962d8eedccc61306ecc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0ed45f56fa9d4b78c563be37ad3106"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a9e0ed45f56fa9d4b78c563be37ad3106">ShowFontAtlasCreatorWindow</a> (<a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> fontAsset)</td></tr>
 <tr class="separator:a9e0ed45f56fa9d4b78c563be37ad3106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:afec27b6f939d16a842edbae0f942bb88"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88">FontPackingModes</a> { <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88ae16b5b7f26f54214445cbe38d72c2828">FontPackingModes.Fast</a> = 0, 
+<a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88a9936886d3be53d8c1e376cd2cae09233">FontPackingModes.Optimum</a> = 4
+ }</td></tr>
+<tr class="separator:afec27b6f939d16a842edbae0f942bb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af329da4baceb4987fe792e7c13d4a2db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#af329da4baceb4987fe792e7c13d4a2db">ON_RESOURCES_LOADED</a> ()</td></tr>
+<tr class="separator:af329da4baceb4987fe792e7c13d4a2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b735d62f48fb3e935763c27501f5553"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a8b735d62f48fb3e935763c27501f5553">CheckEssentialResources</a> ()</td></tr>
+<tr class="separator:a8b735d62f48fb3e935763c27501f5553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f24ddd9864bf60c9df352fa2700e395"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a2f24ddd9864bf60c9df352fa2700e395">DrawControls</a> ()</td></tr>
+<tr class="separator:a2f24ddd9864bf60c9df352fa2700e395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59aad380e29492f11a97e516dcd8339f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a59aad380e29492f11a97e516dcd8339f">ClearGeneratedData</a> ()</td></tr>
+<tr class="memdesc:a59aad380e29492f11a97e516dcd8339f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the previously generated data.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a59aad380e29492f11a97e516dcd8339f">More...</a><br /></td></tr>
+<tr class="separator:a59aad380e29492f11a97e516dcd8339f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac124393782152609f1056bff4d512b50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ac124393782152609f1056bff4d512b50">UpdateRenderFeedbackWindow</a> ()</td></tr>
+<tr class="memdesc:ac124393782152609f1056bff4d512b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the feedback window showing the results of the latest generation.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ac124393782152609f1056bff4d512b50">More...</a><br /></td></tr>
+<tr class="separator:ac124393782152609f1056bff4d512b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1645109d65892deb0239d3de6b12670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ad1645109d65892deb0239d3de6b12670">CreateFontAtlasTexture</a> ()</td></tr>
+<tr class="separator:ad1645109d65892deb0239d3de6b12670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafeb0b7534246d2fcc1c24d0b0cdf239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#aafeb0b7534246d2fcc1c24d0b0cdf239">SaveNewFontAsset</a> (<a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> sourceObject)</td></tr>
+<tr class="memdesc:aafeb0b7534246d2fcc1c24d0b0cdf239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open Save Dialog to provide the option save the font asset using the name of the source font file. This also appends SDF to the name if using any of the SDF Font Asset creation modes.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#aafeb0b7534246d2fcc1c24d0b0cdf239">More...</a><br /></td></tr>
+<tr class="separator:aafeb0b7534246d2fcc1c24d0b0cdf239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e9dbad9c04dbcc5a2dda87ce371315"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a70e9dbad9c04dbcc5a2dda87ce371315">SaveNewFontAssetWithSameName</a> (<a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> sourceObject)</td></tr>
+<tr class="memdesc:a70e9dbad9c04dbcc5a2dda87ce371315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open Save Dialog to provide the option to save the font asset under the same name.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a70e9dbad9c04dbcc5a2dda87ce371315">More...</a><br /></td></tr>
+<tr class="separator:a70e9dbad9c04dbcc5a2dda87ce371315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8256b906c6a45f7a296d4ca75892b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afc8256b906c6a45f7a296d4ca75892b7">Save_Bitmap_FontAsset</a> (string filePath)</td></tr>
+<tr class="separator:afc8256b906c6a45f7a296d4ca75892b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c22a9c7a897144a2b136db41e77af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae3c22a9c7a897144a2b136db41e77af6">Save_SDF_FontAsset</a> (string filePath)</td></tr>
+<tr class="separator:ae3c22a9c7a897144a2b136db41e77af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9615457a34821722e98e88bc36c90d05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a9615457a34821722e98e88bc36c90d05">SaveFontCreationSettings</a> ()</td></tr>
+<tr class="memdesc:a9615457a34821722e98e88bc36c90d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to save the Font Asset Creation Settings  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a9615457a34821722e98e88bc36c90d05">More...</a><br /></td></tr>
+<tr class="separator:a9615457a34821722e98e88bc36c90d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452c5ab90de98431340e246dfc7e723f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a452c5ab90de98431340e246dfc7e723f">LoadFontCreationSettings</a> (<a class="el" href="struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a> settings)</td></tr>
+<tr class="memdesc:a452c5ab90de98431340e246dfc7e723f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to load the Font Asset Creation Settings  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a452c5ab90de98431340e246dfc7e723f">More...</a><br /></td></tr>
+<tr class="separator:a452c5ab90de98431340e246dfc7e723f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf7c89649800f3e85f0cc47c4f92e94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#adcf7c89649800f3e85f0cc47c4f92e94">SaveCreationSettingsToEditorPrefs</a> (<a class="el" href="struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a> settings)</td></tr>
+<tr class="memdesc:adcf7c89649800f3e85f0cc47c4f92e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the latest font asset creation settings to EditorPrefs.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#adcf7c89649800f3e85f0cc47c4f92e94">More...</a><br /></td></tr>
+<tr class="separator:adcf7c89649800f3e85f0cc47c4f92e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b626ee8539fdd8495255a4550a2104"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae5b626ee8539fdd8495255a4550a2104">DrawPreview</a> ()</td></tr>
+<tr class="separator:ae5b626ee8539fdd8495255a4550a2104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c2956d97b7abbbc821bf660df469d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab4c2956d97b7abbbc821bf660df469d9">CheckForLegacyGlyphRenderMode</a> ()</td></tr>
+<tr class="separator:ab4c2956d97b7abbbc821bf660df469d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a67c9d8d5e386e9896e4f754f0ff02e22"><td class="memItemLeft" align="right" valign="top">static uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a67c9d8d5e386e9896e4f754f0ff02e22">ParseNumberSequence</a> (string sequence)</td></tr>
+<tr class="memdesc:a67c9d8d5e386e9896e4f754f0ff02e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which returns the character corresponding to a decimal value.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a67c9d8d5e386e9896e4f754f0ff02e22">More...</a><br /></td></tr>
+<tr class="separator:a67c9d8d5e386e9896e4f754f0ff02e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a8691a23dcd8fb199cc87ae73b5ec8"><td class="memItemLeft" align="right" valign="top">static uint[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a41a8691a23dcd8fb199cc87ae73b5ec8">ParseHexNumberSequence</a> (string sequence)</td></tr>
+<tr class="memdesc:a41a8691a23dcd8fb199cc87ae73b5ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which returns the character (decimal value) from a hex sequence.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a41a8691a23dcd8fb199cc87ae73b5ec8">More...</a><br /></td></tr>
+<tr class="separator:a41a8691a23dcd8fb199cc87ae73b5ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1ccf4a933f04c3ef524b8f2b81dc6577"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_1_1_font_asset_creation_settings_container.html">FontAssetCreationSettingsContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a1ccf4a933f04c3ef524b8f2b81dc6577">m_FontAssetCreationSettingsContainer</a></td></tr>
+<tr class="separator:a1ccf4a933f04c3ef524b8f2b81dc6577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844add34e8cfc6ab5f3b9709856a79db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a844add34e8cfc6ab5f3b9709856a79db">m_FontAssetCreationSettingsCurrentIndex</a> = 0</td></tr>
+<tr class="separator:a844add34e8cfc6ab5f3b9709856a79db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a336d7813bf6a4c8824399b88fe90352e"><td class="memItemLeft" align="right" valign="top">System.Diagnostics.Stopwatch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a336d7813bf6a4c8824399b88fe90352e">m_StopWatch</a></td></tr>
+<tr class="separator:a336d7813bf6a4c8824399b88fe90352e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65f0b740b222096d525c5190480fd18"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae65f0b740b222096d525c5190480fd18">m_GlyphPackingGenerationTime</a></td></tr>
+<tr class="separator:ae65f0b740b222096d525c5190480fd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a806c9fe9494f481c2eaabf3d759ef"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a76a806c9fe9494f481c2eaabf3d759ef">m_GlyphRenderingGenerationTime</a></td></tr>
+<tr class="separator:a76a806c9fe9494f481c2eaabf3d759ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7cc951bcf36f78ca1d1b2c01f34cbd"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#aef7cc951bcf36f78ca1d1b2c01f34cbd">m_FontSizingOptions</a> = { &quot;Auto Sizing&quot;, &quot;Custom Size&quot; }</td></tr>
+<tr class="separator:aef7cc951bcf36f78ca1d1b2c01f34cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e5acd2c2dda61b8d7ae4f920a92eb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae1e5acd2c2dda61b8d7ae4f920a92eb2">m_PointSizeSamplingMode</a></td></tr>
+<tr class="separator:ae1e5acd2c2dda61b8d7ae4f920a92eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1375e667283f6406f3ed278c870e4c"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afe1375e667283f6406f3ed278c870e4c">m_FontResolutionLabels</a> = { &quot;8&quot;, &quot;16&quot;,&quot;32&quot;, &quot;64&quot;, &quot;128&quot;, &quot;256&quot;, &quot;512&quot;, &quot;1024&quot;, &quot;2048&quot;, &quot;4096&quot;, &quot;8192&quot; }</td></tr>
+<tr class="separator:afe1375e667283f6406f3ed278c870e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038a899903ab85725ffd3dc181f98686"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a038a899903ab85725ffd3dc181f98686">m_FontAtlasResolutions</a> = { 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192 }</td></tr>
+<tr class="separator:a038a899903ab85725ffd3dc181f98686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d097eed22ab7fceb45afa85983727e8"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a5d097eed22ab7fceb45afa85983727e8">m_FontCharacterSets</a> = { &quot;ASCII&quot;, &quot;Extended ASCII&quot;, &quot;ASCII Lowercase&quot;, &quot;ASCII Uppercase&quot;, &quot;Numbers + Symbols&quot;, &quot;Custom Range&quot;, &quot;Unicode Range (Hex)&quot;, &quot;Custom Characters&quot;, &quot;Characters from File&quot; }</td></tr>
+<tr class="separator:a5d097eed22ab7fceb45afa85983727e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fe3b15f4f220aaa9a5e14313111a44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88">FontPackingModes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#af6fe3b15f4f220aaa9a5e14313111a44">m_PackingMode</a> = <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88ae16b5b7f26f54214445cbe38d72c2828">FontPackingModes.Fast</a></td></tr>
+<tr class="separator:af6fe3b15f4f220aaa9a5e14313111a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5133087771cd06489ea82e1ccd2c6094"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a5133087771cd06489ea82e1ccd2c6094">m_CharacterSetSelectionMode</a></td></tr>
+<tr class="separator:a5133087771cd06489ea82e1ccd2c6094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e54249a65ff14cea00e532ebb12959"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a49e54249a65ff14cea00e532ebb12959">m_CharacterSequence</a> = &quot;&quot;</td></tr>
+<tr class="separator:a49e54249a65ff14cea00e532ebb12959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f034d5984002f76bde4781b8a91335f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a1f034d5984002f76bde4781b8a91335f">m_OutputFeedback</a> = &quot;&quot;</td></tr>
+<tr class="separator:a1f034d5984002f76bde4781b8a91335f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe67edd8a8ee13ef03ee0bace38c60e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a0fe67edd8a8ee13ef03ee0bace38c60e">m_WarningMessage</a></td></tr>
+<tr class="separator:a0fe67edd8a8ee13ef03ee0bace38c60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dce255caeaf4b75a36d2378f464771"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a54dce255caeaf4b75a36d2378f464771">m_CharacterCount</a></td></tr>
+<tr class="separator:a54dce255caeaf4b75a36d2378f464771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a36c6e9f5541ea1cd82923b54f38b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#af9a36c6e9f5541ea1cd82923b54f38b6">m_ScrollPosition</a></td></tr>
+<tr class="separator:af9a36c6e9f5541ea1cd82923b54f38b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0a7b2c8f120a556da16034101ef1b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a6e0a7b2c8f120a556da16034101ef1b5">m_OutputScrollPosition</a></td></tr>
+<tr class="separator:a6e0a7b2c8f120a556da16034101ef1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b01f7cfccab37280de484712967c0d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a7b01f7cfccab37280de484712967c0d8">m_IsRepaintNeeded</a></td></tr>
+<tr class="separator:a7b01f7cfccab37280de484712967c0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49609975bfe04a9afe546e41b1cd32b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#aa49609975bfe04a9afe546e41b1cd32b">m_AtlasGenerationProgress</a></td></tr>
+<tr class="separator:aa49609975bfe04a9afe546e41b1cd32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5460cd2f8ad6755f825d9a4b09afae97"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a5460cd2f8ad6755f825d9a4b09afae97">m_AtlasGenerationProgressLabel</a> = string.Empty</td></tr>
+<tr class="separator:a5460cd2f8ad6755f825d9a4b09afae97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab464ad21d7ee03fc8b557d8abb238548"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab464ad21d7ee03fc8b557d8abb238548">m_RenderingProgress</a></td></tr>
+<tr class="separator:ab464ad21d7ee03fc8b557d8abb238548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848bc6395ce07368e3cd8c3128125001"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a848bc6395ce07368e3cd8c3128125001">m_IsGlyphPackingDone</a></td></tr>
+<tr class="separator:a848bc6395ce07368e3cd8c3128125001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a439310bf88985cb102f3b2c4cd3e4ff8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a439310bf88985cb102f3b2c4cd3e4ff8">m_IsGlyphRenderingDone</a></td></tr>
+<tr class="separator:a439310bf88985cb102f3b2c4cd3e4ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d827edf30c09f9ca45e44d802fc8418"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a8d827edf30c09f9ca45e44d802fc8418">m_IsRenderingDone</a></td></tr>
+<tr class="separator:a8d827edf30c09f9ca45e44d802fc8418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509be420c23f3c86127c2a200801ee43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a509be420c23f3c86127c2a200801ee43">m_IsProcessing</a></td></tr>
+<tr class="separator:a509be420c23f3c86127c2a200801ee43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614fb98034fe09473fbfa06c63251617"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a614fb98034fe09473fbfa06c63251617">m_IsGenerationDisabled</a></td></tr>
+<tr class="separator:a614fb98034fe09473fbfa06c63251617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db3f8cca80871197495b653af5bfd49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a0db3f8cca80871197495b653af5bfd49">m_IsGenerationCancelled</a></td></tr>
+<tr class="separator:a0db3f8cca80871197495b653af5bfd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5594261cc43380cc326a95d284f8521e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a5594261cc43380cc326a95d284f8521e">m_IsFontAtlasInvalid</a></td></tr>
+<tr class="separator:a5594261cc43380cc326a95d284f8521e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35350852f887dbf667dc807edb28d2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab35350852f887dbf667dc807edb28d2b">m_SourceFontFile</a></td></tr>
+<tr class="separator:ab35350852f887dbf667dc807edb28d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7809b41ad26ba64597c100c18ed9e8df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a7809b41ad26ba64597c100c18ed9e8df">m_SelectedFontAsset</a></td></tr>
+<tr class="separator:a7809b41ad26ba64597c100c18ed9e8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b7f786966e8efef4f0ceabe78209de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a88b7f786966e8efef4f0ceabe78209de">m_LegacyFontAsset</a></td></tr>
+<tr class="separator:a88b7f786966e8efef4f0ceabe78209de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d94f7f3593f09a67a53524d7a8cdca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ac3d94f7f3593f09a67a53524d7a8cdca">m_ReferencedFontAsset</a></td></tr>
+<tr class="separator:ac3d94f7f3593f09a67a53524d7a8cdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ecfa5420bedbf761e9bb1f130e8b42a"><td class="memItemLeft" align="right" valign="top">TextAsset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a2ecfa5420bedbf761e9bb1f130e8b42a">m_CharactersFromFile</a></td></tr>
+<tr class="separator:a2ecfa5420bedbf761e9bb1f130e8b42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7766645fd04fbe8a2738e033858dd1f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a7766645fd04fbe8a2738e033858dd1f3">m_PointSize</a></td></tr>
+<tr class="separator:a7766645fd04fbe8a2738e033858dd1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae506e84a66b06203fc86acf4ae9081b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae506e84a66b06203fc86acf4ae9081b0">m_Padding</a> = 5</td></tr>
+<tr class="separator:ae506e84a66b06203fc86acf4ae9081b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545d5503dc79c3a1bd5c3b7163d2203a"><td class="memItemLeft" align="right" valign="top">GlyphRenderMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a545d5503dc79c3a1bd5c3b7163d2203a">m_GlyphRenderMode</a> = GlyphRenderMode.SDFAA</td></tr>
+<tr class="separator:a545d5503dc79c3a1bd5c3b7163d2203a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ee004c1910ec24d81ed5ea97825be0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a65ee004c1910ec24d81ed5ea97825be0">m_AtlasWidth</a> = 512</td></tr>
+<tr class="separator:a65ee004c1910ec24d81ed5ea97825be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0962cdec306ceb1779c540a115dc118"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae0962cdec306ceb1779c540a115dc118">m_AtlasHeight</a> = 512</td></tr>
+<tr class="separator:ae0962cdec306ceb1779c540a115dc118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cae999639f7df7bb3339f7afde9769a"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a2cae999639f7df7bb3339f7afde9769a">m_AtlasTextureBuffer</a></td></tr>
+<tr class="separator:a2cae999639f7df7bb3339f7afde9769a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01e45f3a655f8afe83353270cf49641"><td class="memItemLeft" align="right" valign="top">Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#af01e45f3a655f8afe83353270cf49641">m_FontAtlasTexture</a></td></tr>
+<tr class="separator:af01e45f3a655f8afe83353270cf49641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69152df60d5ffe6d5730f91694ab605"><td class="memItemLeft" align="right" valign="top">Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab69152df60d5ffe6d5730f91694ab605">m_SavedFontAtlas</a></td></tr>
+<tr class="separator:ab69152df60d5ffe6d5730f91694ab605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5818fbcea67f14172a4451c7e9b02b50"><td class="memItemLeft" align="right" valign="top">List&lt; Glyph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a5818fbcea67f14172a4451c7e9b02b50">m_FontGlyphTable</a> = new List&lt;Glyph&gt;()</td></tr>
+<tr class="separator:a5818fbcea67f14172a4451c7e9b02b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafad030a223016e7bdce4886a284b80a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#aafad030a223016e7bdce4886a284b80a">m_FontCharacterTable</a> = new List&lt;<a class="el" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a>&gt;()</td></tr>
+<tr class="separator:aafad030a223016e7bdce4886a284b80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05409d6ddad4c738894fb3cdef8658a3"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; uint, uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a05409d6ddad4c738894fb3cdef8658a3">m_CharacterLookupMap</a> = new Dictionary&lt;uint, uint&gt;()</td></tr>
+<tr class="separator:a05409d6ddad4c738894fb3cdef8658a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa4642cadfed1e2523cd0cba691ef89"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; uint, List&lt; uint &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a4aa4642cadfed1e2523cd0cba691ef89">m_GlyphLookupMap</a> = new Dictionary&lt;uint, List&lt;uint&gt;&gt;()</td></tr>
+<tr class="separator:a4aa4642cadfed1e2523cd0cba691ef89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad8749546545adb9391bb1a391fda8e"><td class="memItemLeft" align="right" valign="top">List&lt; Glyph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a7ad8749546545adb9391bb1a391fda8e">m_GlyphsToPack</a> = new List&lt;Glyph&gt;()</td></tr>
+<tr class="separator:a7ad8749546545adb9391bb1a391fda8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464aa27cac5e83e4ebefd5df1408caa3"><td class="memItemLeft" align="right" valign="top">List&lt; Glyph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a464aa27cac5e83e4ebefd5df1408caa3">m_GlyphsPacked</a> = new List&lt;Glyph&gt;()</td></tr>
+<tr class="separator:a464aa27cac5e83e4ebefd5df1408caa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb82b0e5ede55152b8cbb69d6707a264"><td class="memItemLeft" align="right" valign="top">List&lt; GlyphRect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afb82b0e5ede55152b8cbb69d6707a264">m_FreeGlyphRects</a> = new List&lt;GlyphRect&gt;()</td></tr>
+<tr class="separator:afb82b0e5ede55152b8cbb69d6707a264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23dc402174a7d5fb6be161907c20f79"><td class="memItemLeft" align="right" valign="top">List&lt; GlyphRect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ae23dc402174a7d5fb6be161907c20f79">m_UsedGlyphRects</a> = new List&lt;GlyphRect&gt;()</td></tr>
+<tr class="separator:ae23dc402174a7d5fb6be161907c20f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cef3b6818309fe5930ec70c4f191dbf"><td class="memItemLeft" align="right" valign="top">List&lt; Glyph &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a9cef3b6818309fe5930ec70c4f191dbf">m_GlyphsToRender</a> = new List&lt;Glyph&gt;()</td></tr>
+<tr class="separator:a9cef3b6818309fe5930ec70c4f191dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f60d58981ab41ba2d8b2dccb5cb493"><td class="memItemLeft" align="right" valign="top">List&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab1f60d58981ab41ba2d8b2dccb5cb493">m_AvailableGlyphsToAdd</a> = new List&lt;uint&gt;()</td></tr>
+<tr class="separator:ab1f60d58981ab41ba2d8b2dccb5cb493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ca7ab49733ae074671d8a05daa1353"><td class="memItemLeft" align="right" valign="top">List&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab6ca7ab49733ae074671d8a05daa1353">m_MissingCharacters</a> = new List&lt;uint&gt;()</td></tr>
+<tr class="separator:ab6ca7ab49733ae074671d8a05daa1353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4ad39ec403a902b98552a2b6ef4322"><td class="memItemLeft" align="right" valign="top">List&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a2a4ad39ec403a902b98552a2b6ef4322">m_ExcludedCharacters</a> = new List&lt;uint&gt;()</td></tr>
+<tr class="separator:a2a4ad39ec403a902b98552a2b6ef4322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d4d3186c277a5c94143cbeadc82369"><td class="memItemLeft" align="right" valign="top">FaceInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a49d4d3186c277a5c94143cbeadc82369">m_FaceInfo</a></td></tr>
+<tr class="separator:a49d4d3186c277a5c94143cbeadc82369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc4f21b6b90dd00fae1c3bcc830570c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a8dc4f21b6b90dd00fae1c3bcc830570c">m_IncludeFontFeatures</a></td></tr>
+<tr class="separator:a8dc4f21b6b90dd00fae1c3bcc830570c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a0b3e94fa6d6a0f2f99f81e32017e9901"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a0b3e94fa6d6a0f2f99f81e32017e9901">k_FontAssetCreationSettingsContainerKey</a> = &quot;TextMeshPro.FontAssetCreator.RecentFontAssetCreationSettings.Container&quot;</td></tr>
+<tr class="separator:a0b3e94fa6d6a0f2f99f81e32017e9901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90ced8ba34652923b076bb5081c3dd9"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#ab90ced8ba34652923b076bb5081c3dd9">k_FontAssetCreationSettingsCurrentIndexKey</a> = &quot;TextMeshPro.FontAssetCreator.RecentFontAssetCreationSettings.CurrentIndex&quot;</td></tr>
+<tr class="separator:ab90ced8ba34652923b076bb5081c3dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15289e42ee4381e1286e285d60fb150c"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#a15289e42ee4381e1286e285d60fb150c">k_TwoColumnControlsWidth</a> = 335f</td></tr>
+<tr class="separator:a15289e42ee4381e1286e285d60fb150c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00016">16</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="afec27b6f939d16a842edbae0f942bb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec27b6f939d16a842edbae0f942bb88">&#9670;&nbsp;</a></span>FontPackingModes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88">TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.FontPackingModes</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afec27b6f939d16a842edbae0f942bb88ae16b5b7f26f54214445cbe38d72c2828"></a>Fast&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afec27b6f939d16a842edbae0f942bb88a9936886d3be53d8c1e376cd2cae09233"></a>Optimum&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00112">112</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b735d62f48fb3e935763c27501f5553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b735d62f48fb3e935763c27501f5553">&#9670;&nbsp;</a></span>CheckEssentialResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.CheckEssentialResources </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00245">245</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a8b735d62f48fb3e935763c27501f5553_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a8b735d62f48fb3e935763c27501f5553_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab4c2956d97b7abbbc821bf660df469d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c2956d97b7abbbc821bf660df469d9">&#9670;&nbsp;</a></span>CheckForLegacyGlyphRenderMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.CheckForLegacyGlyphRenderMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01754">1754</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ab4c2956d97b7abbbc821bf660df469d9_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ab4c2956d97b7abbbc821bf660df469d9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a59aad380e29492f11a97e516dcd8339f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59aad380e29492f11a97e516dcd8339f">&#9670;&nbsp;</a></span>ClearGeneratedData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.ClearGeneratedData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear the previously generated data. </p>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01105">1105</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a59aad380e29492f11a97e516dcd8339f_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a59aad380e29492f11a97e516dcd8339f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad1645109d65892deb0239d3de6b12670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1645109d65892deb0239d3de6b12670">&#9670;&nbsp;</a></span>CreateFontAtlasTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.CreateFontAtlasTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01183">1183</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ad1645109d65892deb0239d3de6b12670_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ad1645109d65892deb0239d3de6b12670_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2f24ddd9864bf60c9df352fa2700e395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f24ddd9864bf60c9df352fa2700e395">&#9670;&nbsp;</a></span>DrawControls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.DrawControls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00391">391</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a2f24ddd9864bf60c9df352fa2700e395_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a2f24ddd9864bf60c9df352fa2700e395_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a2f24ddd9864bf60c9df352fa2700e395_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a2f24ddd9864bf60c9df352fa2700e395_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae5b626ee8539fdd8495255a4550a2104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b626ee8539fdd8495255a4550a2104">&#9670;&nbsp;</a></span>DrawPreview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.DrawPreview </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01723">1723</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ae5b626ee8539fdd8495255a4550a2104_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ae5b626ee8539fdd8495255a4550a2104_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="ae3b9cc74296dd000f8e6f36ab79e0b4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3b9cc74296dd000f8e6f36ab79e0b4e">&#9670;&nbsp;</a></span>GetKerningTable()</h2>
 
@@ -151,6 +569,79 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a452c5ab90de98431340e246dfc7e723f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452c5ab90de98431340e246dfc7e723f">&#9670;&nbsp;</a></span>LoadFontCreationSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.LoadFontCreationSettings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a>&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal method to load the Font Asset Creation Settings </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01675">1675</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a452c5ab90de98431340e246dfc7e723f_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a452c5ab90de98431340e246dfc7e723f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af329da4baceb4987fe792e7c13d4a2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af329da4baceb4987fe792e7c13d4a2db">&#9670;&nbsp;</a></span>ON_RESOURCES_LOADED()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.ON_RESOURCES_LOADED </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00237">237</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_af329da4baceb4987fe792e7c13d4a2db_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_af329da4baceb4987fe792e7c13d4a2db_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a47eec290255d3982c222d61a5986a31c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47eec290255d3982c222d61a5986a31c">&#9670;&nbsp;</a></span>OnDisable()</h2>
 
@@ -167,6 +658,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00207">207</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a47eec290255d3982c222d61a5986a31c_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a47eec290255d3982c222d61a5986a31c_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -186,6 +682,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00176">176</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a92b04c483491694e0a6589141310ab84_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a92b04c483491694e0a6589141310ab84_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -205,6 +706,309 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00257">257</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_acec42eaf35e7fd464492fd0a016c404e_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_acec42eaf35e7fd464492fd0a016c404e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a41a8691a23dcd8fb199cc87ae73b5ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a8691a23dcd8fb199cc87ae73b5ec8">&#9670;&nbsp;</a></span>ParseHexNumberSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.ParseHexNumberSequence </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method which returns the character (decimal value) from a hex sequence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequence</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00360">360</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a41a8691a23dcd8fb199cc87ae73b5ec8_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a41a8691a23dcd8fb199cc87ae73b5ec8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a67c9d8d5e386e9896e4f754f0ff02e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c9d8d5e386e9896e4f754f0ff02e22">&#9670;&nbsp;</a></span>ParseNumberSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.ParseNumberSequence </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>sequence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method which returns the character corresponding to a decimal value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sequence</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00324">324</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a67c9d8d5e386e9896e4f754f0ff02e22_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a67c9d8d5e386e9896e4f754f0ff02e22_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="afc8256b906c6a45f7a296d4ca75892b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8256b906c6a45f7a296d4ca75892b7">&#9670;&nbsp;</a></span>Save_Bitmap_FontAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.Save_Bitmap_FontAsset </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01272">1272</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_afc8256b906c6a45f7a296d4ca75892b7_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_afc8256b906c6a45f7a296d4ca75892b7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae3c22a9c7a897144a2b136db41e77af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c22a9c7a897144a2b136db41e77af6">&#9670;&nbsp;</a></span>Save_SDF_FontAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.Save_SDF_FontAsset </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01450">1450</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ae3c22a9c7a897144a2b136db41e77af6_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ae3c22a9c7a897144a2b136db41e77af6_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="adcf7c89649800f3e85f0cc47c4f92e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf7c89649800f3e85f0cc47c4f92e94">&#9670;&nbsp;</a></span>SaveCreationSettingsToEditorPrefs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.SaveCreationSettingsToEditorPrefs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a>&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Save the latest font asset creation settings to EditorPrefs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01699">1699</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_adcf7c89649800f3e85f0cc47c4f92e94_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_adcf7c89649800f3e85f0cc47c4f92e94_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9615457a34821722e98e88bc36c90d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9615457a34821722e98e88bc36c90d05">&#9670;&nbsp;</a></span>SaveFontCreationSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_t_m_pro_1_1_font_asset_creation_settings.html">FontAssetCreationSettings</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.SaveFontCreationSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal method to save the Font Asset Creation Settings </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01646">1646</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a9615457a34821722e98e88bc36c90d05_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a9615457a34821722e98e88bc36c90d05_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aafeb0b7534246d2fcc1c24d0b0cdf239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafeb0b7534246d2fcc1c24d0b0cdf239">&#9670;&nbsp;</a></span>SaveNewFontAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.SaveNewFontAsset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>sourceObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open Save Dialog to provide the option save the font asset using the name of the source font file. This also appends SDF to the name if using any of the SDF Font Asset creation modes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01217">1217</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a70e9dbad9c04dbcc5a2dda87ce371315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e9dbad9c04dbcc5a2dda87ce371315">&#9670;&nbsp;</a></span>SaveNewFontAssetWithSameName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.SaveNewFontAssetWithSameName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>sourceObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open Save Dialog to provide the option to save the font asset under the same name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceObject</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01249">1249</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
 
 </div>
 </div>
@@ -317,11 +1121,1467 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00269">269</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a3acb07af5f723170bb73abc76d7b6de1_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_a3acb07af5f723170bb73abc76d7b6de1_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac124393782152609f1056bff4d512b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac124393782152609f1056bff4d512b50">&#9670;&nbsp;</a></span>UpdateRenderFeedbackWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.UpdateRenderFeedbackWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to update the feedback window showing the results of the latest generation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l01127">1127</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ac124393782152609f1056bff4d512b50_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_ac124393782152609f1056bff4d512b50_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0b3e94fa6d6a0f2f99f81e32017e9901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3e94fa6d6a0f2f99f81e32017e9901">&#9670;&nbsp;</a></span>k_FontAssetCreationSettingsContainerKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.k_FontAssetCreationSettingsContainerKey = &quot;TextMeshPro.FontAssetCreator.RecentFontAssetCreationSettings.Container&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00098">98</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab90ced8ba34652923b076bb5081c3dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90ced8ba34652923b076bb5081c3dd9">&#9670;&nbsp;</a></span>k_FontAssetCreationSettingsCurrentIndexKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.k_FontAssetCreationSettingsCurrentIndexKey = &quot;TextMeshPro.FontAssetCreator.RecentFontAssetCreationSettings.CurrentIndex&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00099">99</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a15289e42ee4381e1286e285d60fb150c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15289e42ee4381e1286e285d60fb150c">&#9670;&nbsp;</a></span>k_TwoColumnControlsWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.k_TwoColumnControlsWidth = 335f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00100">100</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa49609975bfe04a9afe546e41b1cd32b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49609975bfe04a9afe546e41b1cd32b">&#9670;&nbsp;</a></span>m_AtlasGenerationProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_AtlasGenerationProgress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00126">126</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5460cd2f8ad6755f825d9a4b09afae97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5460cd2f8ad6755f825d9a4b09afae97">&#9670;&nbsp;</a></span>m_AtlasGenerationProgressLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_AtlasGenerationProgressLabel = string.Empty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00127">127</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae0962cdec306ceb1779c540a115dc118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0962cdec306ceb1779c540a115dc118">&#9670;&nbsp;</a></span>m_AtlasHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_AtlasHeight = 512</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00150">150</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2cae999639f7df7bb3339f7afde9769a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cae999639f7df7bb3339f7afde9769a">&#9670;&nbsp;</a></span>m_AtlasTextureBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_AtlasTextureBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00151">151</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a65ee004c1910ec24d81ed5ea97825be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ee004c1910ec24d81ed5ea97825be0">&#9670;&nbsp;</a></span>m_AtlasWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_AtlasWidth = 512</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00149">149</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab1f60d58981ab41ba2d8b2dccb5cb493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f60d58981ab41ba2d8b2dccb5cb493">&#9670;&nbsp;</a></span>m_AvailableGlyphsToAdd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;uint&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_AvailableGlyphsToAdd = new List&lt;uint&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00167">167</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a54dce255caeaf4b75a36d2378f464771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54dce255caeaf4b75a36d2378f464771">&#9670;&nbsp;</a></span>m_CharacterCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_CharacterCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00120">120</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a05409d6ddad4c738894fb3cdef8658a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05409d6ddad4c738894fb3cdef8658a3">&#9670;&nbsp;</a></span>m_CharacterLookupMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;uint, uint&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_CharacterLookupMap = new Dictionary&lt;uint, uint&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00159">159</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a49e54249a65ff14cea00e532ebb12959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e54249a65ff14cea00e532ebb12959">&#9670;&nbsp;</a></span>m_CharacterSequence</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_CharacterSequence = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00117">117</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5133087771cd06489ea82e1ccd2c6094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5133087771cd06489ea82e1ccd2c6094">&#9670;&nbsp;</a></span>m_CharacterSetSelectionMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_CharacterSetSelectionMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00115">115</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2ecfa5420bedbf761e9bb1f130e8b42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ecfa5420bedbf761e9bb1f130e8b42a">&#9670;&nbsp;</a></span>m_CharactersFromFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextAsset TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_CharactersFromFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00142">142</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2a4ad39ec403a902b98552a2b6ef4322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4ad39ec403a902b98552a2b6ef4322">&#9670;&nbsp;</a></span>m_ExcludedCharacters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;uint&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_ExcludedCharacters = new List&lt;uint&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00169">169</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a49d4d3186c277a5c94143cbeadc82369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d4d3186c277a5c94143cbeadc82369">&#9670;&nbsp;</a></span>m_FaceInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FaceInfo TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FaceInfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00171">171</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1ccf4a933f04c3ef524b8f2b81dc6577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ccf4a933f04c3ef524b8f2b81dc6577">&#9670;&nbsp;</a></span>m_FontAssetCreationSettingsContainer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_1_1_font_asset_creation_settings_container.html">FontAssetCreationSettingsContainer</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontAssetCreationSettingsContainer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00093">93</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a844add34e8cfc6ab5f3b9709856a79db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844add34e8cfc6ab5f3b9709856a79db">&#9670;&nbsp;</a></span>m_FontAssetCreationSettingsCurrentIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontAssetCreationSettingsCurrentIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00096">96</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a038a899903ab85725ffd3dc181f98686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038a899903ab85725ffd3dc181f98686">&#9670;&nbsp;</a></span>m_FontAtlasResolutions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontAtlasResolutions = { 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00110">110</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="af01e45f3a655f8afe83353270cf49641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01e45f3a655f8afe83353270cf49641">&#9670;&nbsp;</a></span>m_FontAtlasTexture</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture2D TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontAtlasTexture</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00152">152</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5d097eed22ab7fceb45afa85983727e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d097eed22ab7fceb45afa85983727e8">&#9670;&nbsp;</a></span>m_FontCharacterSets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontCharacterSets = { &quot;ASCII&quot;, &quot;Extended ASCII&quot;, &quot;ASCII Lowercase&quot;, &quot;ASCII Uppercase&quot;, &quot;Numbers + Symbols&quot;, &quot;Custom Range&quot;, &quot;Unicode Range (Hex)&quot;, &quot;Custom Characters&quot;, &quot;Characters from File&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00111">111</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="aafad030a223016e7bdce4886a284b80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafad030a223016e7bdce4886a284b80a">&#9670;&nbsp;</a></span>m_FontCharacterTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a>&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontCharacterTable = new List&lt;<a class="el" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00157">157</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5818fbcea67f14172a4451c7e9b02b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5818fbcea67f14172a4451c7e9b02b50">&#9670;&nbsp;</a></span>m_FontGlyphTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Glyph&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontGlyphTable = new List&lt;Glyph&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00156">156</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="afe1375e667283f6406f3ed278c870e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1375e667283f6406f3ed278c870e4c">&#9670;&nbsp;</a></span>m_FontResolutionLabels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontResolutionLabels = { &quot;8&quot;, &quot;16&quot;,&quot;32&quot;, &quot;64&quot;, &quot;128&quot;, &quot;256&quot;, &quot;512&quot;, &quot;1024&quot;, &quot;2048&quot;, &quot;4096&quot;, &quot;8192&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00109">109</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="aef7cc951bcf36f78ca1d1b2c01f34cbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7cc951bcf36f78ca1d1b2c01f34cbd">&#9670;&nbsp;</a></span>m_FontSizingOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FontSizingOptions = { &quot;Auto Sizing&quot;, &quot;Custom Size&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00107">107</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="afb82b0e5ede55152b8cbb69d6707a264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb82b0e5ede55152b8cbb69d6707a264">&#9670;&nbsp;</a></span>m_FreeGlyphRects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;GlyphRect&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_FreeGlyphRects = new List&lt;GlyphRect&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00164">164</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4aa4642cadfed1e2523cd0cba691ef89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa4642cadfed1e2523cd0cba691ef89">&#9670;&nbsp;</a></span>m_GlyphLookupMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;uint, List&lt;uint&gt; &gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphLookupMap = new Dictionary&lt;uint, List&lt;uint&gt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00160">160</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae65f0b740b222096d525c5190480fd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65f0b740b222096d525c5190480fd18">&#9670;&nbsp;</a></span>m_GlyphPackingGenerationTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphPackingGenerationTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00104">104</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a76a806c9fe9494f481c2eaabf3d759ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a806c9fe9494f481c2eaabf3d759ef">&#9670;&nbsp;</a></span>m_GlyphRenderingGenerationTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphRenderingGenerationTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00105">105</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a545d5503dc79c3a1bd5c3b7163d2203a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545d5503dc79c3a1bd5c3b7163d2203a">&#9670;&nbsp;</a></span>m_GlyphRenderMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GlyphRenderMode TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphRenderMode = GlyphRenderMode.SDFAA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00148">148</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a464aa27cac5e83e4ebefd5df1408caa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464aa27cac5e83e4ebefd5df1408caa3">&#9670;&nbsp;</a></span>m_GlyphsPacked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Glyph&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphsPacked = new List&lt;Glyph&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00163">163</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7ad8749546545adb9391bb1a391fda8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad8749546545adb9391bb1a391fda8e">&#9670;&nbsp;</a></span>m_GlyphsToPack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Glyph&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphsToPack = new List&lt;Glyph&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00162">162</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9cef3b6818309fe5930ec70c4f191dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cef3b6818309fe5930ec70c4f191dbf">&#9670;&nbsp;</a></span>m_GlyphsToRender</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Glyph&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_GlyphsToRender = new List&lt;Glyph&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00166">166</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8dc4f21b6b90dd00fae1c3bcc830570c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc4f21b6b90dd00fae1c3bcc830570c">&#9670;&nbsp;</a></span>m_IncludeFontFeatures</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IncludeFontFeatures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00173">173</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5594261cc43380cc326a95d284f8521e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5594261cc43380cc326a95d284f8521e">&#9670;&nbsp;</a></span>m_IsFontAtlasInvalid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsFontAtlasInvalid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00136">136</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0db3f8cca80871197495b653af5bfd49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db3f8cca80871197495b653af5bfd49">&#9670;&nbsp;</a></span>m_IsGenerationCancelled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsGenerationCancelled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00134">134</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a614fb98034fe09473fbfa06c63251617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614fb98034fe09473fbfa06c63251617">&#9670;&nbsp;</a></span>m_IsGenerationDisabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsGenerationDisabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00133">133</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a848bc6395ce07368e3cd8c3128125001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848bc6395ce07368e3cd8c3128125001">&#9670;&nbsp;</a></span>m_IsGlyphPackingDone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsGlyphPackingDone</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00129">129</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a439310bf88985cb102f3b2c4cd3e4ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a439310bf88985cb102f3b2c4cd3e4ff8">&#9670;&nbsp;</a></span>m_IsGlyphRenderingDone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsGlyphRenderingDone</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00130">130</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a509be420c23f3c86127c2a200801ee43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a509be420c23f3c86127c2a200801ee43">&#9670;&nbsp;</a></span>m_IsProcessing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsProcessing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00132">132</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8d827edf30c09f9ca45e44d802fc8418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d827edf30c09f9ca45e44d802fc8418">&#9670;&nbsp;</a></span>m_IsRenderingDone</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsRenderingDone</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00131">131</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7b01f7cfccab37280de484712967c0d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b01f7cfccab37280de484712967c0d8">&#9670;&nbsp;</a></span>m_IsRepaintNeeded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_IsRepaintNeeded</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00124">124</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a88b7f786966e8efef4f0ceabe78209de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b7f786966e8efef4f0ceabe78209de">&#9670;&nbsp;</a></span>m_LegacyFontAsset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_LegacyFontAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00139">139</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab6ca7ab49733ae074671d8a05daa1353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ca7ab49733ae074671d8a05daa1353">&#9670;&nbsp;</a></span>m_MissingCharacters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;uint&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_MissingCharacters = new List&lt;uint&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00168">168</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1f034d5984002f76bde4781b8a91335f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f034d5984002f76bde4781b8a91335f">&#9670;&nbsp;</a></span>m_OutputFeedback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_OutputFeedback = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00118">118</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6e0a7b2c8f120a556da16034101ef1b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0a7b2c8f120a556da16034101ef1b5">&#9670;&nbsp;</a></span>m_OutputScrollPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_OutputScrollPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00122">122</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="af6fe3b15f4f220aaa9a5e14313111a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fe3b15f4f220aaa9a5e14313111a44">&#9670;&nbsp;</a></span>m_PackingMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88">FontPackingModes</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_PackingMode = <a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html#afec27b6f939d16a842edbae0f942bb88ae16b5b7f26f54214445cbe38d72c2828">FontPackingModes.Fast</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00113">113</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae506e84a66b06203fc86acf4ae9081b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae506e84a66b06203fc86acf4ae9081b0">&#9670;&nbsp;</a></span>m_Padding</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_Padding = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00144">144</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7766645fd04fbe8a2738e033858dd1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7766645fd04fbe8a2738e033858dd1f3">&#9670;&nbsp;</a></span>m_PointSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_PointSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00143">143</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae1e5acd2c2dda61b8d7ae4f920a92eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e5acd2c2dda61b8d7ae4f920a92eb2">&#9670;&nbsp;</a></span>m_PointSizeSamplingMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_PointSizeSamplingMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00108">108</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac3d94f7f3593f09a67a53524d7a8cdca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d94f7f3593f09a67a53524d7a8cdca">&#9670;&nbsp;</a></span>m_ReferencedFontAsset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_ReferencedFontAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00140">140</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab464ad21d7ee03fc8b557d8abb238548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab464ad21d7ee03fc8b557d8abb238548">&#9670;&nbsp;</a></span>m_RenderingProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_RenderingProgress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00128">128</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab69152df60d5ffe6d5730f91694ab605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69152df60d5ffe6d5730f91694ab605">&#9670;&nbsp;</a></span>m_SavedFontAtlas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture2D TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_SavedFontAtlas</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00153">153</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="af9a36c6e9f5541ea1cd82923b54f38b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a36c6e9f5541ea1cd82923b54f38b6">&#9670;&nbsp;</a></span>m_ScrollPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_ScrollPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00121">121</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7809b41ad26ba64597c100c18ed9e8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7809b41ad26ba64597c100c18ed9e8df">&#9670;&nbsp;</a></span>m_SelectedFontAsset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_SelectedFontAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00138">138</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab35350852f887dbf667dc807edb28d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35350852f887dbf667dc807edb28d2b">&#9670;&nbsp;</a></span>m_SourceFontFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_SourceFontFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00137">137</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a336d7813bf6a4c8824399b88fe90352e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a336d7813bf6a4c8824399b88fe90352e">&#9670;&nbsp;</a></span>m_StopWatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Diagnostics.Stopwatch TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_StopWatch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00103">103</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae23dc402174a7d5fb6be161907c20f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23dc402174a7d5fb6be161907c20f79">&#9670;&nbsp;</a></span>m_UsedGlyphRects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;GlyphRect&gt; TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_UsedGlyphRects = new List&lt;GlyphRect&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00165">165</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0fe67edd8a8ee13ef03ee0bace38c60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe67edd8a8ee13ef03ee0bace38c60e">&#9670;&nbsp;</a></span>m_WarningMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.m_WarningMessage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html#l00119">119</a> of file <a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/<a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/<a class="el" href="_t_m_pro___font_asset_creator_window_8cs_source.html">TMPro_FontAssetCreatorWindow.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

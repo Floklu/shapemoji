@@ -7,4 +7,10 @@ digraph "UnityEditor.Timeline.Signals.SignalReceiverItem.GetHeight"
   Node1 [label="UnityEditor.Timeline.Signals.\lSignalReceiverItem.GetHeight",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.GetCustom\lRowHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a8c0fe4ee279ef3b8d83ad316e0ebff1b",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.GetTotalHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a9b113e399787eafb3c539d02cfb0c14d",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a80d91af8b228cf0df25351661823261a",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Signals.\lSignalReceiverInspector.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a58084148a7a77b7456ed52d2e916dbc2",tooltip=" "];
 }

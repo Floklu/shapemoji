@@ -6,7 +6,15 @@ digraph "UnityEditor.Timeline.TimelineAnimationUtilities.UpdateClipOffsets"
   rankdir="RL";
   Node1 [label="UnityEditor.Timeline.Timeline\lAnimationUtilities.UpdateClipOffsets",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Timeline\lAnimationUtilities.MatchNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a9dbd25128bd78bb5e10709a4cdcd0881",tooltip=" "];
-  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="UnityEditor.Timeline.Timeline\lAnimationUtilities.MatchPrevious",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a4ce9e83b3d357e4a4ffafdb48e86a372",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Animation\lPlayableAssetInspector.DoManipulators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_playable_asset_inspector.html#a1eff7e6d79f7939ad937c43634293cc6",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Animation\lPlayableAssetInspector.OnSceneGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_playable_asset_inspector.html#aa51b4f13bd7e960e88ff770860fe3ea1",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Animation\lPlayableAssetInspector.OnDestroy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_playable_asset_inspector.html#adae0170f9157347124e65298c2b60df3",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Animation\lPlayableAssetInspector.OnEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_playable_asset_inspector.html#a5cd6cf90731508c10c122d40d18d80be",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Timeline\lAnimationUtilities.MatchNext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a9dbd25128bd78bb5e10709a4cdcd0881",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Timeline\lAnimationUtilities.MatchPrevious",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_animation_utilities.html#a4ce9e83b3d357e4a4ffafdb48e86a372",tooltip=" "];
 }

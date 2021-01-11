@@ -11,4 +11,12 @@ digraph "UnityEditor.Timeline.DirectorNamedColorInspector.OnInspectorGUI"
   Node3 [label="UnityEngine.Timeline.Director\lNamedColor.ToText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#aeaba48765f51bcc41de7dbc1b1e47d52",tooltip=" "];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="UnityEditor.Timeline.Director\lStyles.ReloadSkin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#adcd065af239105d4eb91072daf56948b",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Director\lStyles.LoadColorSkin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#a2bc6cdd0bc76ca77a3eba0d6c38ea4cb",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Director\lNamedColor.CreateAndLoadFromText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEngine.Timeline.Director\lNamedColor.FromText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEngine.Timeline.Director\lNamedColor.ParseFloat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e",tooltip=" "];
 }

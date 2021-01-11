@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.RichTextTagAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_rich_text_tag_attribute.html",tooltip=" "];
+  Node0 [label="Tests.PlayMode.InventoryTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tests_1_1_play_mode_1_1_inventory_test.html",tooltip=" "];
 }
