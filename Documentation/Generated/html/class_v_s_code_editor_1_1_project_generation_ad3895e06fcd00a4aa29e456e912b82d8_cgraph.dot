@@ -6,5 +6,7 @@ digraph "VSCodeEditor.ProjectGeneration.SolutionExists"
   rankdir="LR";
   Node1 [label="VSCodeEditor.ProjectGeneration.\lSolutionExists",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="VSCodeEditor.ProjectGeneration.\lSolutionFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_project_generation.html#a939ea1ad635f126eb182eff5e428af17",tooltip=" "];
+  Node2 [label="VSCodeEditor.IFileIO.Exists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_v_s_code_editor_1_1_i_file_i_o.html#a88e6a5be332b31ca5059a429486d0521",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VSCodeEditor.ProjectGeneration.\lSolutionFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_project_generation.html#a939ea1ad635f126eb182eff5e428af17",tooltip=" "];
 }

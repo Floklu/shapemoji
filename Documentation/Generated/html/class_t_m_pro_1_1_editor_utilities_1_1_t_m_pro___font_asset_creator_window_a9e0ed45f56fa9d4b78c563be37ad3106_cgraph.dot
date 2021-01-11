@@ -7,4 +7,6 @@ digraph "TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow.ShowFontAtlasCreator
   Node1 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.ShowFont\lAtlasCreatorWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_FontAsset.GetCharacters\lArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#a04f042c328bf55d9d675184132319112",tooltip="Function which returns an array that contains all the characters from a font asset."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_EditorUtility.GetUnicodeCharacter\lSequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#af76bcfebfee06e65c720177ffdd38bab",tooltip="Function which returns a string containing a sequence of Unicode (Hex) character ranges."];
 }

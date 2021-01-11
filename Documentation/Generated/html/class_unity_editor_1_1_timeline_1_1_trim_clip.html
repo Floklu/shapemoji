@@ -85,6 +85,9 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_tr
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_trim_clip-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TrimClip Class Reference</div>  </div>
@@ -101,6 +104,11 @@ Collaboration diagram for UnityEditor.Timeline.TrimClip:</div>
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_trim_clip__coll__graph.png" border="0" usemap="#a_unity_editor_8_timeline_8_trim_clip_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip_1_1_trim_clip_attraction_handler.html">TrimClipAttractionHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a16c4d7b4822b4f5add14d10b52ac9e9b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a16c4d7b4822b4f5add14d10b52ac9e9b">Overlay</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
@@ -132,6 +140,35 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aef99a81de039bff010ddef27640f1281 inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">ExecuteCommand</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
 <tr class="separator:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5896d9cdbbf5f7580265a5614408f3fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a5896d9cdbbf5f7580265a5614408f3fe">RefreshOverlayStrings</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a> handle, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a5896d9cdbbf5f7580265a5614408f3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a01854bf776a78cd71142e7b5c8f8277d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a01854bf776a78cd71142e7b5c8f8277d">m_IsCaptured</a></td></tr>
+<tr class="separator:a01854bf776a78cd71142e7b5c8f8277d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f90b5812b13f4807139f3390350c4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a33f90b5812b13f4807139f3390350c4f">m_TrimClipHandler</a></td></tr>
+<tr class="separator:a33f90b5812b13f4807139f3390350c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6e54b84c6eb87bea91cef6ce781a9a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#add6e54b84c6eb87bea91cef6ce781a9a">m_OriginalDuration</a></td></tr>
+<tr class="separator:add6e54b84c6eb87bea91cef6ce781a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef9cbfc3d8b0865690db54953f04914"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#afef9cbfc3d8b0865690db54953f04914">m_OriginalTimeScale</a></td></tr>
+<tr class="separator:afef9cbfc3d8b0865690db54953f04914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05e230d01b1590677357cf15fa4a6a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#aa05e230d01b1590677357cf15fa4a6a8">m_UndoSaved</a></td></tr>
+<tr class="separator:aa05e230d01b1590677357cf15fa4a6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923da680171df9d3276eff3922b18ef0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html">SnapEngine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a923da680171df9d3276eff3922b18ef0">m_SnapEngine</a></td></tr>
+<tr class="separator:a923da680171df9d3276eff3922b18ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0ce193dd947bcefd635c977c74ce28"><td class="memItemLeft" align="right" valign="top">readonly StringBuilder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#aac0ce193dd947bcefd635c977c74ce28">m_OverlayText</a> = new StringBuilder()</td></tr>
+<tr class="separator:aac0ce193dd947bcefd635c977c74ce28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f1013d9484d3b3865f0865c0fb40d8"><td class="memItemLeft" align="right" valign="top">readonly List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#ad0f1013d9484d3b3865f0865c0fb40d8">m_OverlayStrings</a> = new List&lt;string&gt;()</td></tr>
+<tr class="separator:ad0f1013d9484d3b3865f0865c0fb40d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a50c6d315645feb9ad43177caa13a72cf"><td class="memItemLeft" align="right" valign="top">static readonly double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_clip.html#a50c6d315645feb9ad43177caa13a72cf">kEpsilon</a> = 0.0000001</td></tr>
+<tr class="separator:a50c6d315645feb9ad43177caa13a72cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -264,6 +301,11 @@ Here is the call graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#ab07304a4edbfb45f3e6e75c04b78ef30">UnityEditor.Timeline.Manipulator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00087">87</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_trim_clip_adb57ef83f30b05cf17f63c8ad3866df5_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_trim_clip_adb57ef83f30b05cf17f63c8ad3866df5_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -312,8 +354,268 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a5896d9cdbbf5f7580265a5614408f3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5896d9cdbbf5f7580265a5614408f3fe">&#9670;&nbsp;</a></span>RefreshOverlayStrings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TrimClip.RefreshOverlayStrings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a>&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00172">172</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_trim_clip_a5896d9cdbbf5f7580265a5614408f3fe_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_trim_clip_a5896d9cdbbf5f7580265a5614408f3fe_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a50c6d315645feb9ad43177caa13a72cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c6d315645feb9ad43177caa13a72cf">&#9670;&nbsp;</a></span>kEpsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly double UnityEditor.Timeline.TrimClip.kEpsilon = 0.0000001</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00044">44</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="a01854bf776a78cd71142e7b5c8f8277d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01854bf776a78cd71142e7b5c8f8277d">&#9670;&nbsp;</a></span>m_IsCaptured</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TrimClip.m_IsCaptured</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00033">33</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="add6e54b84c6eb87bea91cef6ce781a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6e54b84c6eb87bea91cef6ce781a9a">&#9670;&nbsp;</a></span>m_OriginalDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimClip.m_OriginalDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00036">36</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="afef9cbfc3d8b0865690db54953f04914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef9cbfc3d8b0865690db54953f04914">&#9670;&nbsp;</a></span>m_OriginalTimeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimClip.m_OriginalTimeScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00037">37</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad0f1013d9484d3b3865f0865c0fb40d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f1013d9484d3b3865f0865c0fb40d8">&#9670;&nbsp;</a></span>m_OverlayStrings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;string&gt; UnityEditor.Timeline.TrimClip.m_OverlayStrings = new List&lt;string&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00042">42</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="aac0ce193dd947bcefd635c977c74ce28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0ce193dd947bcefd635c977c74ce28">&#9670;&nbsp;</a></span>m_OverlayText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly StringBuilder UnityEditor.Timeline.TrimClip.m_OverlayText = new StringBuilder()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00041">41</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="a923da680171df9d3276eff3922b18ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923da680171df9d3276eff3922b18ef0">&#9670;&nbsp;</a></span>m_SnapEngine</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_snap_engine.html">SnapEngine</a> UnityEditor.Timeline.TrimClip.m_SnapEngine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00039">39</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="a33f90b5812b13f4807139f3390350c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f90b5812b13f4807139f3390350c4f">&#9670;&nbsp;</a></span>m_TrimClipHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_handle.html">TimelineClipHandle</a> UnityEditor.Timeline.TrimClip.m_TrimClipHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00034">34</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa05e230d01b1590677357cf15fa4a6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05e230d01b1590677357cf15fa4a6a8">&#9670;&nbsp;</a></span>m_UndoSaved</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TrimClip.m_UndoSaved</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_clip_8cs_source.html#l00038">38</a> of file <a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Manipulators/Sequence/<a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Manipulators/Sequence/<a class="el" href="_trim_clip_8cs_source.html">TrimClip.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

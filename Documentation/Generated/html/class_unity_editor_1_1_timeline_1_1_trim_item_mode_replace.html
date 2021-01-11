@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_tr
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TrimItemModeReplace Class Reference</div>  </div>
@@ -109,6 +110,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa8aeec9f836bcac36940717cacd1df27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a187ad450b9df0556e0f3210c9d959462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#a187ad450b9df0556e0f3210c9d959462">DrawGUI</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Rect bounds, Color color, <a class="el" href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">TrimEdge</a> edge)</td></tr>
 <tr class="separator:a187ad450b9df0556e0f3210c9d959462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a32c1f8e89f2bb2ca491dc3782fe19b75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#a32c1f8e89f2bb2ca491dc3782fe19b75">m_Item</a></td></tr>
+<tr class="separator:a32c1f8e89f2bb2ca491dc3782fe19b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2f3abdc4001b5f0b1bbae42be44041"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#aac2f3abdc4001b5f0b1bbae42be44041">m_ItemToBeReplaced</a></td></tr>
+<tr class="separator:aac2f3abdc4001b5f0b1bbae42be44041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a70d8b399ad1fcf4e0dd4f3c49c2ad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#a62a70d8b399ad1fcf4e0dd4f3c49c2ad">m_ClipOriginalEdgeValue</a></td></tr>
+<tr class="separator:a62a70d8b399ad1fcf4e0dd4f3c49c2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7203c653da6f1f64f9aac369f48a5b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#ab7203c653da6f1f64f9aac369f48a5b1">m_TrimReplace</a></td></tr>
+<tr class="separator:ab7203c653da6f1f64f9aac369f48a5b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88661cdcecee05cf53a50037b4c20e0d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#a88661cdcecee05cf53a50037b4c20e0d">m_Min</a></td></tr>
+<tr class="separator:a88661cdcecee05cf53a50037b4c20e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65b728c4f20da867236e03d540bdd0d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace.html#aa65b728c4f20da867236e03d540bdd0d">m_Max</a></td></tr>
+<tr class="separator:aa65b728c4f20da867236e03d540bdd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -192,6 +208,11 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trim_item_mode.html#a8bd6b4b67820cdab1f2011b92933ef7a">UnityEditor.Timeline.ITrimItemMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00019">19</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_trim_item_mode_replace_a5bef244db20a38ad0af7aeac320e53ea_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_trim_item_mode_replace_a5bef244db20a38ad0af7aeac320e53ea_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -275,8 +296,153 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a62a70d8b399ad1fcf4e0dd4f3c49c2ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a70d8b399ad1fcf4e0dd4f3c49c2ad">&#9670;&nbsp;</a></span>m_ClipOriginalEdgeValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeReplace.m_ClipOriginalEdgeValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00013">13</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+
+</div>
+</div>
+<a id="a32c1f8e89f2bb2ca491dc3782fe19b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c1f8e89f2bb2ca491dc3782fe19b75">&#9670;&nbsp;</a></span>m_Item</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a> UnityEditor.Timeline.TrimItemModeReplace.m_Item</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00010">10</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+
+</div>
+</div>
+<a id="aac2f3abdc4001b5f0b1bbae42be44041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2f3abdc4001b5f0b1bbae42be44041">&#9670;&nbsp;</a></span>m_ItemToBeReplaced</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a> UnityEditor.Timeline.TrimItemModeReplace.m_ItemToBeReplaced</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00012">12</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa65b728c4f20da867236e03d540bdd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65b728c4f20da867236e03d540bdd0d">&#9670;&nbsp;</a></span>m_Max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeReplace.m_Max</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00017">17</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+
+</div>
+</div>
+<a id="a88661cdcecee05cf53a50037b4c20e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88661cdcecee05cf53a50037b4c20e0d">&#9670;&nbsp;</a></span>m_Min</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeReplace.m_Min</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00016">16</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab7203c653da6f1f64f9aac369f48a5b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7203c653da6f1f64f9aac369f48a5b1">&#9670;&nbsp;</a></span>m_TrimReplace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TrimItemModeReplace.m_TrimReplace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_replace_8cs_source.html#l00014">14</a> of file <a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Manipulators/Trim/<a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Manipulators/Trim/<a class="el" href="_trim_item_mode_replace_8cs_source.html">TrimItemModeReplace.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_test_tools_1_1_
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.TestTools.ConditionalIgnoreAttribute Class Reference</div>  </div>
@@ -111,6 +113,18 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a28de322ff132c36b3801121667407a83"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute.html#a28de322ff132c36b3801121667407a83">AddConditionalIgnoreMapping</a> (string key, bool value)</td></tr>
 <tr class="separator:a28de322ff132c36b3801121667407a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8e905b69ae93e6b44390ec273a1d204d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute.html#a8e905b69ae93e6b44390ec273a1d204d">m_ConditionKey</a></td></tr>
+<tr class="separator:a8e905b69ae93e6b44390ec273a1d204d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ff64ce2ac91ed0aa03ca4bedfb03ab"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute.html#a28ff64ce2ac91ed0aa03ca4bedfb03ab">m_IgnoreReason</a></td></tr>
+<tr class="separator:a28ff64ce2ac91ed0aa03ca4bedfb03ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a37ba9d80ccbb0fc00519e626c473930a"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute.html#a37ba9d80ccbb0fc00519e626c473930a">m_ConditionMap</a> = new Dictionary&lt;string, bool&gt;()</td></tr>
+<tr class="separator:a37ba9d80ccbb0fc00519e626c473930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -205,8 +219,81 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8e905b69ae93e6b44390ec273a1d204d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e905b69ae93e6b44390ec273a1d204d">&#9670;&nbsp;</a></span>m_ConditionKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEngine.TestTools.ConditionalIgnoreAttribute.m_ConditionKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_conditional_ignore_attribute_8cs_source.html#l00010">10</a> of file <a class="el" href="_conditional_ignore_attribute_8cs_source.html">ConditionalIgnoreAttribute.cs</a>.</p>
+
+</div>
+</div>
+<a id="a37ba9d80ccbb0fc00519e626c473930a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37ba9d80ccbb0fc00519e626c473930a">&#9670;&nbsp;</a></span>m_ConditionMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, bool&gt; UnityEngine.TestTools.ConditionalIgnoreAttribute.m_ConditionMap = new Dictionary&lt;string, bool&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_conditional_ignore_attribute_8cs_source.html#l00030">30</a> of file <a class="el" href="_conditional_ignore_attribute_8cs_source.html">ConditionalIgnoreAttribute.cs</a>.</p>
+
+</div>
+</div>
+<a id="a28ff64ce2ac91ed0aa03ca4bedfb03ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ff64ce2ac91ed0aa03ca4bedfb03ab">&#9670;&nbsp;</a></span>m_IgnoreReason</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string UnityEngine.TestTools.ConditionalIgnoreAttribute.m_IgnoreReason</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_conditional_ignore_attribute_8cs_source.html#l00011">11</a> of file <a class="el" href="_conditional_ignore_attribute_8cs_source.html">ConditionalIgnoreAttribute.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.test-framework@1.1.18/UnityEngine.TestRunner/NUnitExtensions/Attributes/<a class="el" href="_conditional_ignore_attribute_8cs_source.html">ConditionalIgnoreAttribute.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.test-framework@1.1.18/UnityEngine.TestRunner/NUnitExtensions/Attributes/<a class="el" href="_conditional_ignore_attribute_8cs_source.html">ConditionalIgnoreAttribute.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

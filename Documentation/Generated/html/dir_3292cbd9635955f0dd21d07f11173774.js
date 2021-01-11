@@ -2,7 +2,10 @@ var dir_3292cbd9635955f0dd21d07f11173774 =
 [
     [ "CallbacksDelegator.cs", "_callbacks_delegator_8cs.html", null ],
     [ "CallbacksDelegatorListener.cs", "_callbacks_delegator_listener_8cs.html", null ],
-    [ "CallbacksHolder.cs", "_callbacks_holder_8cs.html", null ],
+    [ "CallbacksHolder.cs", "_callbacks_holder_8cs.html", [
+      [ "CallbackWithPriority", "struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority.html", "struct_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_callback_with_priority" ],
+      [ "Suppressor", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor.html", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_callbacks_holder_1_1_suppressor" ]
+    ] ],
     [ "ExecutionSettings.cs", "_api_2_execution_settings_8cs.html", [
       [ "ExecutionSettings", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings.html", "class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_execution_settings" ]
     ] ],

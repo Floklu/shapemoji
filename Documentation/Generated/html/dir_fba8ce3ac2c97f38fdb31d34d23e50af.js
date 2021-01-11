@@ -36,7 +36,9 @@ var dir_fba8ce3ac2c97f38fdb31d34d23e50af =
       [ "TestRunCallbackAttribute", "class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute.html", "class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute" ]
     ] ],
     [ "TestRunCallbackListener.cs", "_test_run_callback_listener_8cs.html", null ],
-    [ "Utils.cs", "_utils_8cs.html", null ],
+    [ "Utils.cs", "_utils_8cs.html", [
+      [ "Utils", "class_unity_engine_1_1_test_tools_1_1_utils_1_1_utils.html", "class_unity_engine_1_1_test_tools_1_1_utils_1_1_utils" ]
+    ] ],
     [ "Vector2ComparerWithEqualsOperator.cs", "_vector2_comparer_with_equals_operator_8cs.html", [
       [ "Vector2ComparerWithEqualsOperator", "class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector2_comparer_with_equals_operator.html", "class_unity_engine_1_1_test_tools_1_1_utils_1_1_vector2_comparer_with_equals_operator" ]
     ] ],

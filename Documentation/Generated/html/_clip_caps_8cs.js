@@ -1,5 +1,6 @@
 var _clip_caps_8cs =
 [
+    [ "TimelineClipCapsExtensions", "class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions.html", "class_unity_engine_1_1_timeline_1_1_timeline_clip_caps_extensions" ],
     [ "ClipCaps", "_clip_caps_8cs.html#af0b68b9529bda08f212a5aefa79e7e03", [
       [ "None", "_clip_caps_8cs.html#af0b68b9529bda08f212a5aefa79e7e03a6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Looping", "_clip_caps_8cs.html#af0b68b9529bda08f212a5aefa79e7e03aa56d66d7acdce18b9861f4c84bf8f777", null ],

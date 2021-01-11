@@ -1,8 +1,11 @@
 var class_unity_editor_1_1_timeline_1_1_timeline_window_time_control =
 [
     [ "ClipData", "struct_unity_editor_1_1_timeline_1_1_timeline_window_time_control_1_1_clip_data.html", "struct_unity_editor_1_1_timeline_1_1_timeline_window_time_control_1_1_clip_data" ],
+    [ "ChangeFrame", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a329d9eae587051727cfbcb01b09c1d39", null ],
+    [ "ChangeTime", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a40356b2f6924ca2dc9cdbe4d677fb0b5", null ],
     [ "ClearCandidates", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a7607c9d3788c2dd0098324f4e887fd31", null ],
     [ "EndScrubTime", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a27bfc0147174c10b9206d846bc88d011", null ],
+    [ "GetCurves", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a0280601b413b62aa2520f9e8bbf32b56", null ],
     [ "GoToFirstKeyframe", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ab66fc934d64b9ba34c52e9972948899e", null ],
     [ "GoToFrame", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a58a3344d1932b8909233154ab5cd8eee", null ],
     [ "GoToLastKeyframe", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#afdf87e0cb416dd01f4642ed7d1a7d69f", null ],
@@ -16,10 +19,12 @@ var class_unity_editor_1_1_timeline_1_1_timeline_window_time_control =
     [ "OnDisable", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a9187e1ff2c8d965f2376bed864544de2", null ],
     [ "OnEnable", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a853c66baa0355def81a9df5982e1dde4", null ],
     [ "OnSelectionChanged", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ac38417349b8688fe3fb5962c1a85eb3b", null ],
+    [ "OnStateChange", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a6312a9a285662a6f8f8fa95bb2d4bead", null ],
     [ "PlaybackUpdate", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a0672e6c39d7196b72cba4107530889f9", null ],
     [ "ProcessCandidates", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a0640c7dc4920e856cdfaa6c44e4d3447", null ],
     [ "ResampleAnimation", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#aa349eb211554293a6c6013d75846699b", null ],
     [ "ScrubTime", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a67e0a212a2210bdc7e9e1f5440f6ace7", null ],
+    [ "SetPlaybackState", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a12940f50992fdedae76f5eba2bc653d0", null ],
     [ "StartPlayback", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#aaba38eca24f8da1ecb7fb68945c39078", null ],
     [ "StartPreview", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a6e40823f5656af9b4807f0b94a0685ce", null ],
     [ "StartRecording", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a6abf67eacf64e942c48c60a681065423", null ],
@@ -27,6 +32,11 @@ var class_unity_editor_1_1_timeline_1_1_timeline_window_time_control =
     [ "StopPlayback", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#afa224c2bb5d7eea7e498911c810f88ad", null ],
     [ "StopPreview", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ad42004289c69e6d5317036eb871bb51a", null ],
     [ "StopRecording", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ab42f1ab965346aeae7bf9517f71fff65", null ],
+    [ "ToAnimationClipTime", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ad30f9d694a07ceba13394f254c4cba00", null ],
+    [ "ToGlobalTime", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#af3591ff3421b20d0e8545c13bb0a1d48", null ],
+    [ "m_AnimWindowState", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a1e084ce1007a559e2c683dd560d0b58f", null ],
+    [ "m_Clip", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a7376a2494e622e1016959a9f71f3a5e7", null ],
+    [ "m_ClipData", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a5b9140a324f4a748f0a1c1d41ad5e218", null ],
     [ "canPlay", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a634b3bd03fa35c05da1684dc695da19c", null ],
     [ "canPreview", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a67566ac29eef1c5d093aee32028c9af1", null ],
     [ "canRecord", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a1fe6c8b32d84d77942f7ec4dad94de60", null ],
@@ -34,6 +44,8 @@ var class_unity_editor_1_1_timeline_1_1_timeline_window_time_control =
     [ "playing", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a1ffab91df717319b323e4d48925e8899", null ],
     [ "previewing", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a0dcdcf8db37bbde072b31cad0633e013", null ],
     [ "recording", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a5b52a955d6739fc632f7c9e50cf1fd21", null ],
+    [ "state", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a257d5e9467f6d350c04d3fd1e9132cae", null ],
     [ "time", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#aabbdc0fe0fdca0d204d4ab79a1d0b859", null ],
-    [ "track", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ae8e234c0180e59dd6c304523038c4568", null ]
+    [ "track", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#ae8e234c0180e59dd6c304523038c4568", null ],
+    [ "window", "class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a463c0c06ead3ece6717cef408703868e", null ]
 ];

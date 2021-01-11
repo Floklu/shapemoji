@@ -4,12 +4,13 @@ var dir_f4b2616e0b98d02acc6f71c05459be40 =
       [ "CustomSignalEventDrawer", "class_unity_engine_1_1_timeline_1_1_custom_signal_event_drawer.html", null ]
     ] ],
     [ "SignalAsset.cs", "_signal_asset_8cs.html", [
-      [ "SignalAsset", "class_unity_engine_1_1_timeline_1_1_signal_asset.html", null ]
+      [ "SignalAsset", "class_unity_engine_1_1_timeline_1_1_signal_asset.html", "class_unity_engine_1_1_timeline_1_1_signal_asset" ]
     ] ],
     [ "SignalEmitter.cs", "_signal_emitter_8cs.html", [
       [ "SignalEmitter", "class_unity_engine_1_1_timeline_1_1_signal_emitter.html", "class_unity_engine_1_1_timeline_1_1_signal_emitter" ]
     ] ],
     [ "SignalReceiver.cs", "_signal_receiver_8cs.html", [
-      [ "SignalReceiver", "class_unity_engine_1_1_timeline_1_1_signal_receiver.html", "class_unity_engine_1_1_timeline_1_1_signal_receiver" ]
+      [ "SignalReceiver", "class_unity_engine_1_1_timeline_1_1_signal_receiver.html", "class_unity_engine_1_1_timeline_1_1_signal_receiver" ],
+      [ "EventKeyValue", "class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html", "class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value" ]
     ] ]
 ];

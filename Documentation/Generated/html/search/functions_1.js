@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['getmouseposition_38',['GetMousePosition',['../class_harpoon.html#a3ddb6a1c07b61ca8a75a94c5a9dad445',1,'Harpoon']]],
-  ['gettouchindexonharpoon_39',['GetTouchIndexOnHarpoon',['../class_harpoon.html#a4559255fadebdd95cfdbabfe6e897ee4',1,'Harpoon']]]
+  ['calculatescore_656',['CalculateScore',['../class_score_area_1_1_score_calculation.html#ab52f158dd75f5f55686b6d2383b167ce',1,'ScoreArea::ScoreCalculation']]],
+  ['changecolorofemojispritetoblue_657',['ChangeColorOfEmojiSpriteToBlue',['../class_emoji_sprite_manager.html#aae867a432c83ef00fab4db57f1a72d64',1,'EmojiSpriteManager']]],
+  ['changeemojisprite_658',['ChangeEmojiSprite',['../class_emoji_sprite_manager.html#a6243b7494676da7816cdb34d7875b7bc',1,'EmojiSpriteManager.ChangeEmojiSprite()'],['../class_score_area_1_1_score_area.html#a07728374a66773d367002dfc4064205e',1,'ScoreArea.ScoreArea.ChangeEmojiSprite()']]],
+  ['changeparent_659',['ChangeParent',['../class_hookable_object.html#ab7402a9a9ca3c0a5809cf842b22eb6a2',1,'HookableObject']]],
+  ['changetofinishscenetest_660',['ChangeToFinishSceneTest',['../class_tests_1_1_play_mode_1_1_finish_game_test.html#ae6966281b72b1e30935d380c0e7defe6',1,'Tests::PlayMode::FinishGameTest']]],
+  ['checkfireactive_661',['CheckFireActive',['../class_item_defect.html#a8f971e7ee5d920166887fd08e5210ce5',1,'ItemDefect']]],
+  ['checkfirststonetouch_662',['CheckFirstStoneTouch',['../class_tests_1_1_play_mode_1_1_emoji_test.html#a127a2fd8089572475de927c49cdfd069',1,'Tests::PlayMode::EmojiTest']]],
+  ['checkharpoonexistence_663',['checkHarpoonExistence',['../class_tests_1_1_edit_mode_1_1_harpoon_shoot_test.html#afdb76b70a7e8c2cb866849c6aa562e5b',1,'Tests::EditMode::HarpoonShootTest']]],
+  ['collideswithgameobject_664',['CollidesWithGameObject',['../class_class_extensions.html#ab1fc9fe6a55055f7b6bf9ee8771fc3e8',1,'ClassExtensions']]],
+  ['containshookableobject_665',['ContainsHookableObject',['../class_spawner_1_1_hookable_object_spawner.html#a5958f89c10e21f5c298e4e994b01f1cb',1,'Spawner::HookableObjectSpawner']]],
+  ['containsitem_666',['ContainsItem',['../class_spawner_1_1_hookable_object_spawner.html#af8526ea3009e2df3c1b5be9cdb3b835c',1,'Spawner.HookableObjectSpawner.ContainsItem()'],['../class_spawner_1_1_spawn_place.html#a93b03b89c1170ae35367f00857c216a7',1,'Spawner.SpawnPlace.ContainsItem()']]],
+  ['containsmaxamountitems_667',['ContainsMaxAmountItems',['../class_spawner_1_1_hookable_object_spawner.html#ab07d39c4025d89359a2656b6f2207d9f',1,'Spawner::HookableObjectSpawner']]],
+  ['containsmaxamountstones_668',['ContainsMaxAmountStones',['../class_spawner_1_1_hookable_object_spawner.html#a71420a04b3cba132de980ef221aae231',1,'Spawner::HookableObjectSpawner']]],
+  ['containsstone_669',['ContainsStone',['../class_player.html#ab64489f656981e77cc739e350b3a6ed2',1,'Player.ContainsStone()'],['../class_score_area_1_1_score_area.html#a13d92df38c56f1d5d393974373efcbc5',1,'ScoreArea.ScoreArea.ContainsStone()'],['../class_spawner_1_1_hookable_object_spawner.html#a013f36a6628eb1e65abc354550002592',1,'Spawner.HookableObjectSpawner.ContainsStone()'],['../class_spawner_1_1_spawn_place.html#ac637607d672f486b71e04557090e066f',1,'Spawner.SpawnPlace.ContainsStone()'],['../class_team.html#ad8bcb023416bb52e0003c3d7b916be2e',1,'Team.ContainsStone()'],['../class_tests_1_1_play_mode_1_1_emoji_test.html#a8efa57e50ce76f197b1d77b1e66701e6',1,'Tests.PlayMode.EmojiTest.ContainsStone()'],['../class_tests_1_1_play_mode_1_1_interaction_test_helper.html#a1b52fee2f7e11727d08680820bb0f0ad',1,'Tests.PlayMode.InteractionTestHelper.ContainsStone()'],['../class_tests_1_1_play_mode_1_1_inventory_test.html#ae5e22f67d712b297f1f2d1f0b52c226e',1,'Tests.PlayMode.InventoryTest.ContainsStone()'],['../class_tests_1_1_play_mode_1_1_workshop_test.html#a9743f84fefe55e10662043e2bb1367e2',1,'Tests.PlayMode.WorkshopTest.ContainsStone()']]],
+  ['cornerlefttest_670',['CornerLeftTest',['../class_tests_1_1_play_mode_1_1_walls_corner_test.html#ae19ccb19e3164888f2a9e240e2f589ae',1,'Tests::PlayMode::WallsCornerTest']]],
+  ['cornerrighttest_671',['CornerRightTest',['../class_tests_1_1_play_mode_1_1_walls_corner_test.html#a58d1e0e94e6287b9f431c1c68de0c5b0',1,'Tests::PlayMode::WallsCornerTest']]],
+  ['cornertest_672',['CornerTest',['../class_tests_1_1_play_mode_1_1_walls_corner_test.html#abcf52e857b23cf2a1b983477a56b7c0c',1,'Tests::PlayMode::WallsCornerTest']]],
+  ['createhookablegameobject_673',['CreateHookableGameObject',['../class_spawner_1_1_hookable_game_object_factory.html#a340291d2864ed0bade912166313417c4',1,'Spawner::HookableGameObjectFactory']]],
+  ['createhookableobject_674',['CreateHookableObject',['../class_spawner_1_1_hookable_object_spawner.html#a3a94e82bd026da944e96d0eb584c34db',1,'Spawner::HookableObjectSpawner']]],
+  ['createitem_675',['CreateItem',['../class_spawner_1_1_hookable_game_object_factory.html#a5c86c3b4c1e6a41327f3c9db3c17fa86',1,'Spawner::HookableGameObjectFactory']]],
+  ['createrandomitem_676',['CreateRandomItem',['../class_spawner_1_1_hookable_object_spawner.html#a8ba98ac94d49d608ad0144bc81d571ac',1,'Spawner::HookableObjectSpawner']]],
+  ['createrandomstone_677',['CreateRandomStone',['../class_spawner_1_1_hookable_object_spawner.html#aae32a083920ae0b096d8daac12f3a33a',1,'Spawner::HookableObjectSpawner']]],
+  ['createscorableview_678',['CreateScorableView',['../class_score_area_1_1_score_area.html#af22351c86974b5a60ee1e4329368678a',1,'ScoreArea::ScoreArea']]],
+  ['createstone_679',['CreateStone',['../class_spawner_1_1_hookable_game_object_factory.html#abb481c71d1a73a6f4bbfba3d847e475d',1,'Spawner::HookableGameObjectFactory']]]
 ];

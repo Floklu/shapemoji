@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['viewmodelslist_7648',['ViewModelsList',['../_timeline_window_view_prefs_8cs.html#a1e8afbcd2a9315bf0ab20dd5e15b8fd9',1,'TimelineWindowViewPrefs.cs']]],
-  ['viewmodelsmap_7649',['ViewModelsMap',['../_timeline_window_view_prefs_8cs.html#ac566cae1b8a51aaf6c6d7801939e11e0',1,'TimelineWindowViewPrefs.cs']]]
+  ['setupteardowncommand_16163',['SetUpTearDownCommand',['../_default_test_work_item_8cs.html#a8ba7ce1ce7b3d0307d313039622a665e',1,'DefaultTestWorkItem.cs']]]
 ];

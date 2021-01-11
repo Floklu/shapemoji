@@ -5,4 +5,6 @@ digraph "TMPro.Extents"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="TMPro.Extents",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" uninitialized\nzero" ,fontname="Helvetica"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" max\nmin" ,fontname="Helvetica"];
+  Node2 [label="UnityEngine",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

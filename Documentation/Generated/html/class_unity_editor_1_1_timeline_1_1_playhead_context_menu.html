@@ -84,6 +84,9 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_pl
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.PlayheadContextMenu Class Reference</div>  </div>
@@ -133,6 +136,23 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aef99a81de039bff010ddef27640f1281 inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a9d791e0587e4c31b4279f597d36d07aa">ExecuteCommand</a> (Event evt, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
 <tr class="separator:a9d791e0587e4c31b4279f597d36d07aa inherit pro_methods_class_unity_editor_1_1_timeline_1_1_manipulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a099cd8202b04e9aa33038316c51f5f6e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#a099cd8202b04e9aa33038316c51f5f6e">SelectBlendingIntersecting</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip, double time)</td></tr>
+<tr class="separator:a099cd8202b04e9aa33038316c51f5f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62855c1bd8fb7e6b68c73ab5232db15"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#ae62855c1bd8fb7e6b68c73ab5232db15">SelectMenuCallback</a> (Func&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>, bool &gt; selector, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ae62855c1bd8fb7e6b68c73ab5232db15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2eb4649b5af3e6c65bcb45a8cab0e324"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_time_area_item.html">TimeAreaItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#a2eb4649b5af3e6c65bcb45a8cab0e324">m_TimeAreaItem</a></td></tr>
+<tr class="separator:a2eb4649b5af3e6c65bcb45a8cab0e324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a1b1f9b3b0e68203d00b688881ae7e8a3"><td class="memItemLeft" align="right" valign="top">static readonly int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_playhead_context_menu.html#a1b1f9b3b0e68203d00b688881ae7e8a3">kFrameInsertionValues</a> = {5, 10, 25, 100}</td></tr>
+<tr class="separator:a1b1f9b3b0e68203d00b688881ae7e8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -196,11 +216,156 @@ Protected Member Functions</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_manipulator.html#a04f91209f2b95af263a33b9ad604abf6">UnityEditor.Timeline.Manipulator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00056">56</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_playhead_context_menu_a763afce86972d1981795b9022102c720_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_playhead_context_menu_a763afce86972d1981795b9022102c720_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a099cd8202b04e9aa33038316c51f5f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099cd8202b04e9aa33038316c51f5f6e">&#9670;&nbsp;</a></span>SelectBlendingIntersecting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.PlayheadContextMenu.SelectBlendingIntersecting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00098">98</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_playhead_context_menu_a099cd8202b04e9aa33038316c51f5f6e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_playhead_context_menu_a099cd8202b04e9aa33038316c51f5f6e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae62855c1bd8fb7e6b68c73ab5232db15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62855c1bd8fb7e6b68c73ab5232db15">&#9670;&nbsp;</a></span>SelectMenuCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.PlayheadContextMenu.SelectMenuCallback </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>, bool &gt;&#160;</td>
+          <td class="paramname"><em>selector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00106">106</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_playhead_context_menu_ae62855c1bd8fb7e6b68c73ab5232db15_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_playhead_context_menu_ae62855c1bd8fb7e6b68c73ab5232db15_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_playhead_context_menu_ae62855c1bd8fb7e6b68c73ab5232db15_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_playhead_context_menu_ae62855c1bd8fb7e6b68c73ab5232db15_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1b1f9b3b0e68203d00b688881ae7e8a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1f9b3b0e68203d00b688881ae7e8a3">&#9670;&nbsp;</a></span>kFrameInsertionValues</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int [] UnityEditor.Timeline.PlayheadContextMenu.kFrameInsertionValues = {5, 10, 25, 100}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00049">49</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2eb4649b5af3e6c65bcb45a8cab0e324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb4649b5af3e6c65bcb45a8cab0e324">&#9670;&nbsp;</a></span>m_TimeAreaItem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_time_area_item.html">TimeAreaItem</a> UnityEditor.Timeline.PlayheadContextMenu.m_TimeAreaItem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trackhead_8cs_source.html#l00048">48</a> of file <a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/<a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/<a class="el" href="_trackhead_8cs_source.html">Trackhead.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -7,8 +7,13 @@ digraph "TMPro.EditorUtilities.TMP_BaseEditorPanel.OnEnable"
   Node1 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnEnable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.GetMaterialPresets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a5bd05f0804830e2188e5666bdfc2eef0",tooltip="Method to retrieve the material presets that match the currently selected font asset."];
-  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.GetStyleNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ade1813fb090642a7bb113ccb11c8c427",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_EditorUtility.FindMaterialReferences",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aedb608c58cdd10131bfd773a3fcbadcb",tooltip=" "];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnUndoRedo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a03f1303365c95a93f4fae9cb11af7df7",tooltip=" "];
+  Node4 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.GetStyleNames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#ade1813fb090642a7bb113ccb11c8c427",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.ON_TEXT\l_STYLE_CHANGED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a1562b0a82679bd59481342d75b096040",tooltip=" "];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.OnUndoRedo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a03f1303365c95a93f4fae9cb11af7df7",tooltip=" "];
 }

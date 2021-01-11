@@ -85,11 +85,19 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ut
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.Utilities.KeyTraverser Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for UnityEditor.Timeline.Utilities.KeyTraverser:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser__coll__graph.png" border="0" usemap="#a_unity_editor_8_timeline_8_utilities_8_key_traverser_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -113,6 +121,33 @@ Static Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a74f7fe8dad5d7c698b33e2e7b4336f4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a74f7fe8dad5d7c698b33e2e7b4336f4b">lastIndex</a><code> [get]</code></td></tr>
 <tr class="separator:a74f7fe8dad5d7c698b33e2e7b4336f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad63c887a682316e36372f4085209111f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#ad63c887a682316e36372f4085209111f">RebuildKeyCache</a> ()</td></tr>
+<tr class="separator:ad63c887a682316e36372f4085209111f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a317621bf193525a34048b914fdeb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a54a317621bf193525a34048b914fdeb8">CheckCache</a> (int dirtyStamp)</td></tr>
+<tr class="separator:a54a317621bf193525a34048b914fdeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:aadd0b8d3db231677adcb113db573016a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#aadd0b8d3db231677adcb113db573016a">CalcAnimClipHash</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset)</td></tr>
+<tr class="separator:aadd0b8d3db231677adcb113db573016a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6b78e8cea37429f6c453709a24fe4483"><td class="memItemLeft" align="right" valign="top">float[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a6b78e8cea37429f6c453709a24fe4483">m_KeyCache</a></td></tr>
+<tr class="separator:a6b78e8cea37429f6c453709a24fe4483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd5255b7c27f6436b07a36b3355cd900"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#acd5255b7c27f6436b07a36b3355cd900">m_DirtyStamp</a> = -1</td></tr>
+<tr class="separator:acd5255b7c27f6436b07a36b3355cd900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3763056ded5cbe73daee8ff3114636b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a3763056ded5cbe73daee8ff3114636b7">m_LastHash</a> = -1</td></tr>
+<tr class="separator:a3763056ded5cbe73daee8ff3114636b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92de63df3fcbb7c642a12396b93b626"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#af92de63df3fcbb7c642a12396b93b626">m_Asset</a></td></tr>
+<tr class="separator:af92de63df3fcbb7c642a12396b93b626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931679a948eb45e67c85327e49b8e0f9"><td class="memItemLeft" align="right" valign="top">readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a931679a948eb45e67c85327e49b8e0f9">m_Epsilon</a></td></tr>
+<tr class="separator:a931679a948eb45e67c85327e49b8e0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ff29adabf8c0d9ceafa2fb1536f77f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html#a03ff29adabf8c0d9ceafa2fb1536f77f">m_LastIndex</a> = -1</td></tr>
+<tr class="separator:a03ff29adabf8c0d9ceafa2fb1536f77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -149,6 +184,82 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aadd0b8d3db231677adcb113db573016a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd0b8d3db231677adcb113db573016a">&#9670;&nbsp;</a></span>CalcAnimClipHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int UnityEditor.Timeline.Utilities.KeyTraverser.CalcAnimClipHash </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>asset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00046">46</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aadd0b8d3db231677adcb113db573016a_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aadd0b8d3db231677adcb113db573016a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aadd0b8d3db231677adcb113db573016a_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aadd0b8d3db231677adcb113db573016a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a54a317621bf193525a34048b914fdeb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a317621bf193525a34048b914fdeb8">&#9670;&nbsp;</a></span>CheckCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Utilities.KeyTraverser.CheckCache </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dirtyStamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00110">110</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_a54a317621bf193525a34048b914fdeb8_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_a54a317621bf193525a34048b914fdeb8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_a54a317621bf193525a34048b914fdeb8_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_a54a317621bf193525a34048b914fdeb8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="abf9c2b7a498fe4fe224a01bbef3f0a4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf9c2b7a498fe4fe224a01bbef3f0a4d">&#9670;&nbsp;</a></span>GetClipKeyTimes()</h2>
 
@@ -204,6 +315,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00197">197</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aece4845a29c3fe38e2be2d42228b5316_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aece4845a29c3fe38e2be2d42228b5316_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -234,6 +350,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00121">121</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_a821b05c198f595cfc667783cb28b2385_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_a821b05c198f595cfc667783cb28b2385_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -264,6 +385,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00159">159</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aefd986808b9e312759b88eec4ec3e810_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aefd986808b9e312759b88eec4ec3e810_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -297,6 +423,193 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aec9e5e48fb6911300201dfc6dacb6670_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aec9e5e48fb6911300201dfc6dacb6670_cgraph" alt=""/></div>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aec9e5e48fb6911300201dfc6dacb6670_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_aec9e5e48fb6911300201dfc6dacb6670_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad63c887a682316e36372f4085209111f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63c887a682316e36372f4085209111f">&#9670;&nbsp;</a></span>RebuildKeyCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Utilities.KeyTraverser.RebuildKeyCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00079">79</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_ad63c887a682316e36372f4085209111f_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_ad63c887a682316e36372f4085209111f_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_ad63c887a682316e36372f4085209111f_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser_ad63c887a682316e36372f4085209111f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af92de63df3fcbb7c642a12396b93b626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92de63df3fcbb7c642a12396b93b626">&#9670;&nbsp;</a></span>m_Asset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html">TimelineAsset</a> UnityEditor.Timeline.Utilities.KeyTraverser.m_Asset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00014">14</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+
+</div>
+</div>
+<a id="acd5255b7c27f6436b07a36b3355cd900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd5255b7c27f6436b07a36b3355cd900">&#9670;&nbsp;</a></span>m_DirtyStamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.Utilities.KeyTraverser.m_DirtyStamp = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00012">12</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+
+</div>
+</div>
+<a id="a931679a948eb45e67c85327e49b8e0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931679a948eb45e67c85327e49b8e0f9">&#9670;&nbsp;</a></span>m_Epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditor.Timeline.Utilities.KeyTraverser.m_Epsilon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00015">15</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6b78e8cea37429f6c453709a24fe4483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b78e8cea37429f6c453709a24fe4483">&#9670;&nbsp;</a></span>m_KeyCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] UnityEditor.Timeline.Utilities.KeyTraverser.m_KeyCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00011">11</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3763056ded5cbe73daee8ff3114636b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3763056ded5cbe73daee8ff3114636b7">&#9670;&nbsp;</a></span>m_LastHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.Utilities.KeyTraverser.m_LastHash = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00013">13</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
+
+</div>
+</div>
+<a id="a03ff29adabf8c0d9ceafa2fb1536f77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ff29adabf8c0d9ceafa2fb1536f77f">&#9670;&nbsp;</a></span>m_LastIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.Utilities.KeyTraverser.m_LastIndex = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_key_traverser_8cs_source.html#l00016">16</a> of file <a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a>.</p>
 
 </div>
 </div>
@@ -326,7 +639,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/<a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/<a class="el" href="_key_traverser_8cs_source.html">KeyTraverser.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

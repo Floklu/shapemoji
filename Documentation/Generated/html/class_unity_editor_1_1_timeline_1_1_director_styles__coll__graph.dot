@@ -5,4 +5,8 @@ digraph "UnityEditor.Timeline.DirectorStyles"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="UnityEditor.Timeline.Director\lStyles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" s_Instance" ,fontname="Helvetica"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_DarkSkinColors\nm_DefaultSkinColors\nm_LightSkinColors" ,fontname="Helvetica"];
+  Node2 [label="UnityEngine.Timeline.Director\lNamedColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ScriptableObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['easeincliptext_6843',['EaseInClipText',['../class_unity_editor_1_1_timeline_1_1_ease_clip.html#a2882ae6f6ba9e36247029f2ae19341c6',1,'UnityEditor::Timeline::EaseClip']]],
-  ['easeintext_6844',['EaseInText',['../class_unity_editor_1_1_timeline_1_1_ease_clip.html#a56043ca2337c94119d33332dfb140765',1,'UnityEditor::Timeline::EaseClip']]],
-  ['easeoutcliptext_6845',['EaseOutClipText',['../class_unity_editor_1_1_timeline_1_1_ease_clip.html#ae4791fdcbf294ea9581fbbb369c2ff56',1,'UnityEditor::Timeline::EaseClip']]],
-  ['easeouttext_6846',['EaseOutText',['../class_unity_editor_1_1_timeline_1_1_ease_clip.html#a3030fbc337964615c7647641ff3ababc',1,'UnityEditor::Timeline::EaseClip']]],
-  ['edgesnaps_6847',['edgeSnaps',['../class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a72b547a3644ddadb1ed004ba7f858a39',1,'UnityEditor::Timeline::TimelineWindow::TimelineWindowPreferences']]],
-  ['editasassetbutton_6848',['editAsAssetButton',['../struct_unity_editor_1_1_timeline_1_1_timeline_mode_1_1_track_options_state.html#a14367ad0c29c44b0037ab3cde31e12a3',1,'UnityEditor::Timeline::TimelineMode::TrackOptionsState']]],
-  ['editmodebtn_6849',['editModeBtn',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#a318befe4973cc20c844981f26bdfef36',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['edittype_6850',['editType',['../class_unity_editor_1_1_timeline_1_1_timeline_window_1_1_timeline_window_preferences.html#a7f2d9bd49b0f0812d915fad242c1f1ce',1,'UnityEditor::Timeline::TimelineWindow::TimelineWindowPreferences']]],
-  ['elementtype_6851',['elementType',['../struct_t_m_pro_1_1_t_m_p___character_info.html#afa7f1363b87170b6275a010648dd3cbf',1,'TMPro::TMP_CharacterInfo']]],
-  ['end_6852',['end',['../struct_unity_editor_1_1_timeline_1_1_range.html#a49171739e87e3ff85cc3d9843832449b',1,'UnityEditor::Timeline::Range']]],
-  ['endmarker_6853',['endmarker',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#a1dcb740ec0cdef10e25de1b8dbbd91b8',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['entryname_6854',['entryName',['../struct_unity_editor_1_1_timeline_1_1_menu_action_item.html#a17346aec54073d544de02aa7cacf814b',1,'UnityEditor::Timeline::MenuActionItem']]],
-  ['events_6855',['events',['../class_packages_1_1_rider_1_1_editor_1_1_unit_testing_1_1_callback_data.html#a8f89b3d17836ab528a6fd47019a856a4',1,'Packages::Rider::Editor::UnitTesting::CallbackData']]],
-  ['eventtype_6856',['EventType',['../class_t_m_pro_1_1_compute___d_t___event_args.html#aff068cc0c90d7f96e3b8a2fc0c73c67e',1,'TMPro::Compute_DT_EventArgs']]],
-  ['exposedpropertytable_6857',['exposedPropertyTable',['../class_unity_editor_1_1_timeline_1_1_clipboard.html#a3e95f3aa683c059f823957cb3dc3c028',1,'UnityEditor::Timeline::Clipboard']]],
-  ['extrapolationcontinue_6858',['extrapolationContinue',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#a59e33e1f0ebea613ae23c056a8c94ef4',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['extrapolationhold_6859',['extrapolationHold',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#aa103ac73cb0b684089a0a892862240f8',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['extrapolationloop_6860',['extrapolationLoop',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#aae857fa3b774ae115c0d5b86aa44998c',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['extrapolationpingpong_6861',['extrapolationPingPong',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#a7d461ca4d6ce19b2fdcd1a70bfd7b798',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['extrasettings_6862',['extraSettings',['../struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel_1_1_foldout.html#aadab285b4225824d5dad2c72c9670a23',1,'TMPro::EditorUtilities::TMP_BaseEditorPanel::Foldout']]]
+  ['emoji_966',['emoji',['../class_emoji_sprite_manager.html#a153f5b2493f988092120b3d092a5a196',1,'EmojiSpriteManager']]],
+  ['emojiscoreui_967',['emojiScoreUI',['../class_score_area_1_1_score_area.html#a654dc8359a884fe25d0062f2af5c8136',1,'ScoreArea::ScoreArea']]],
+  ['emojisprites_968',['emojiSprites',['../class_game.html#a72b9f87c8f619c169fd65b38b34db7cd',1,'Game']]]
 ];

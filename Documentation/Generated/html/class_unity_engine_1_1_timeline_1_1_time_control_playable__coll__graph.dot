@@ -6,4 +6,6 @@ digraph "UnityEngine.Timeline.TimeControlPlayable"
   Node1 [label="UnityEngine.Timeline.Time\lControlPlayable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A PlayableBehaviour that manages a component that implements the ITimeControl interface"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="PlayableBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_timeControl" ,fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.ITime\lControl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_time_control.html",tooltip="Interface that can be implemented by MonoBehaviours indicating that they receive time-related control..."];
 }

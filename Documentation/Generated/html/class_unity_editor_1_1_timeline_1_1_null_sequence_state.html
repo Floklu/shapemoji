@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_nu
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_null_sequence_state-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.NullSequenceState Class Reference</div>  </div>
@@ -162,6 +163,11 @@ Properties</h2></td></tr>
 <tr class="separator:a7dce856904128b55d1779e6a4c9c2b42 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_sequence_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac9c3773981fa0dab6187f77e09e706 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_sequence_state"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#adac9c3773981fa0dab6187f77e09e706">frameRate</a><code> [get, set]</code></td></tr>
 <tr class="separator:adac9c3773981fa0dab6187f77e09e706 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_sequence_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaf2974bb278da51df19ac7c60fe75c0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#aaf2974bb278da51df19ac7c60fe75c0d">m_ViewModel</a></td></tr>
+<tr class="separator:aaf2974bb278da51df19ac7c60fe75c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used to hold default values for an implementation of <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html">ISequenceState</a>. It could be removed in a phase 2, but it is currently used to limit the scope of this refactoring: it allows client code to access sequence info without having to worry about <code>currentSequence</code> being null. In the future this should be removed and we should pass around the correct data structure (i.e. <a class="el" href="class_unity_editor_1_1_timeline_1_1_sequence_state.html">SequenceState</a> OR <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>) based on the situation. </p>
@@ -258,6 +264,11 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a7e2f3cdc8e8c02a9b3c5c9b4f8b95019">UnityEditor.Timeline.ISequenceState</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_sequence_state_8cs_source.html#l00081">81</a> of file <a class="el" href="_i_sequence_state_8cs_source.html">ISequenceState.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_null_sequence_state_a821d0e7ddaf939d7baa31bd46f3ec9e1_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_null_sequence_state_a821d0e7ddaf939d7baa31bd46f3ec9e1_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -302,6 +313,31 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a44a18b7a7f2d366afa4f9b720552f3f8">UnityEditor.Timeline.ISequenceState</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_sequence_state_8cs_source.html#l00091">91</a> of file <a class="el" href="_i_sequence_state_8cs_source.html">ISequenceState.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aaf2974bb278da51df19ac7c60fe75c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2974bb278da51df19ac7c60fe75c0d">&#9670;&nbsp;</a></span>m_ViewModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html">TimelineAssetViewModel</a> UnityEditor.Timeline.NullSequenceState.m_ViewModel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_sequence_state_8cs_source.html#l00046">46</a> of file <a class="el" href="_i_sequence_state_8cs_source.html">ISequenceState.cs</a>.</p>
 
 </div>
 </div>
@@ -571,7 +607,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/State/<a class="el" href="_i_sequence_state_8cs_source.html">ISequenceState.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/State/<a class="el" href="_i_sequence_state_8cs_source.html">ISequenceState.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

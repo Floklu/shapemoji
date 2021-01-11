@@ -1,6 +1,7 @@
 var dir_a39cb59c682b3bca10db579f06099c5b =
 [
     [ "AnimatedParameterCache.cs", "_animated_parameter_cache_8cs.html", [
+      [ "AnimatedParameterCache", "class_unity_editor_1_1_timeline_1_1_animated_parameter_cache.html", "class_unity_editor_1_1_timeline_1_1_animated_parameter_cache" ],
       [ "PropertyKey", "struct_unity_editor_1_1_timeline_1_1_property_key.html", "struct_unity_editor_1_1_timeline_1_1_property_key" ]
     ] ],
     [ "AnimatedParameterUtility.cs", "_animated_parameter_utility_8cs.html", "_animated_parameter_utility_8cs" ],
@@ -8,16 +9,25 @@ var dir_a39cb59c682b3bca10db579f06099c5b =
     [ "BreadcrumbDrawer.cs", "_breadcrumb_drawer_8cs.html", "_breadcrumb_drawer_8cs" ],
     [ "Clipboard.cs", "_clipboard_8cs.html", [
       [ "Clipboard", "class_unity_editor_1_1_timeline_1_1_clipboard.html", "class_unity_editor_1_1_timeline_1_1_clipboard" ],
+      [ "ExposedReferenceTable", "class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table.html", "class_unity_editor_1_1_timeline_1_1_clipboard_1_1_exposed_reference_table" ],
       [ "ClipboardTrackEntry", "struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry.html", "struct_unity_editor_1_1_timeline_1_1_clipboard_1_1_clipboard_track_entry" ]
     ] ],
-    [ "ClipModifier.cs", "_clip_modifier_8cs.html", null ],
-    [ "ControlPlayableUtility.cs", "_control_playable_utility_8cs.html", null ],
+    [ "ClipModifier.cs", "_clip_modifier_8cs.html", [
+      [ "ClipModifier", "class_unity_editor_1_1_timeline_1_1_clip_modifier.html", "class_unity_editor_1_1_timeline_1_1_clip_modifier" ]
+    ] ],
+    [ "ControlPlayableUtility.cs", "_control_playable_utility_8cs.html", [
+      [ "ControlPlayableUtility", "class_unity_editor_1_1_timeline_1_1_control_playable_utility.html", "class_unity_editor_1_1_timeline_1_1_control_playable_utility" ]
+    ] ],
     [ "CustomTrackDrawerAttribute.cs", "_custom_track_drawer_attribute_8cs.html", [
       [ "CustomTrackDrawerAttribute", "class_unity_editor_1_1_timeline_1_1_custom_track_drawer_attribute.html", "class_unity_editor_1_1_timeline_1_1_custom_track_drawer_attribute" ],
       [ "CustomTimelineEditorAttribute", "class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_attribute.html", "class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_attribute" ]
     ] ],
-    [ "DisplayNameHelper.cs", "_display_name_helper_8cs.html", null ],
-    [ "Graphics.cs", "_graphics_8cs.html", null ],
+    [ "DisplayNameHelper.cs", "_display_name_helper_8cs.html", [
+      [ "DisplayNameHelper", "class_unity_editor_1_1_timeline_1_1_display_name_helper.html", "class_unity_editor_1_1_timeline_1_1_display_name_helper" ]
+    ] ],
+    [ "Graphics.cs", "_graphics_8cs.html", [
+      [ "Graphics", "class_unity_editor_1_1_timeline_1_1_graphics.html", "class_unity_editor_1_1_timeline_1_1_graphics" ]
+    ] ],
     [ "GUIColorOverride.cs", "_g_u_i_color_override_8cs.html", [
       [ "GUIColorOverride", "struct_unity_editor_1_1_timeline_1_1_g_u_i_color_override.html", "struct_unity_editor_1_1_timeline_1_1_g_u_i_color_override" ]
     ] ],
@@ -34,7 +44,9 @@ var dir_a39cb59c682b3bca10db579f06099c5b =
       [ "KeyTraverser", "class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html", "class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser" ]
     ] ],
     [ "MarkerModifier.cs", "_marker_modifier_8cs.html", "_marker_modifier_8cs" ],
-    [ "ObjectExtension.cs", "_object_extension_8cs.html", null ],
+    [ "ObjectExtension.cs", "_object_extension_8cs.html", [
+      [ "ObjectExtension", "class_unity_editor_1_1_timeline_1_1_object_extension.html", "class_unity_editor_1_1_timeline_1_1_object_extension" ]
+    ] ],
     [ "ObjectReferenceField.cs", "_object_reference_field_8cs.html", "_object_reference_field_8cs" ],
     [ "PropertyCollector.cs", "_property_collector_8cs.html", "_property_collector_8cs" ],
     [ "Range.cs", "_range_8cs.html", [
@@ -45,15 +57,26 @@ var dir_a39cb59c682b3bca10db579f06099c5b =
     ] ],
     [ "SpacePartitioner.cs", "_space_partitioner_8cs.html", [
       [ "IBounds", "interface_unity_editor_1_1_timeline_1_1_i_bounds.html", "interface_unity_editor_1_1_timeline_1_1_i_bounds" ],
-      [ "SpacePartitioner", "class_unity_editor_1_1_timeline_1_1_space_partitioner.html", "class_unity_editor_1_1_timeline_1_1_space_partitioner" ]
+      [ "SpacePartitioner", "class_unity_editor_1_1_timeline_1_1_space_partitioner.html", "class_unity_editor_1_1_timeline_1_1_space_partitioner" ],
+      [ "Entry", "struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html", "struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry" ]
     ] ],
-    [ "StyleManager.cs", "_style_manager_8cs.html", null ],
+    [ "StyleManager.cs", "_style_manager_8cs.html", [
+      [ "StyleManager", "class_unity_editor_1_1_timeline_1_1_style_manager.html", "class_unity_editor_1_1_timeline_1_1_style_manager" ]
+    ] ],
     [ "StyleNormalColorOverride.cs", "_style_normal_color_override_8cs.html", [
       [ "StyleNormalColorOverride", "struct_unity_editor_1_1_timeline_1_1_style_normal_color_override.html", "struct_unity_editor_1_1_timeline_1_1_style_normal_color_override" ]
     ] ],
-    [ "TimelineKeyboardNavigation.cs", "_timeline_keyboard_navigation_8cs.html", null ],
-    [ "TimeReferenceUtility.cs", "_time_reference_utility_8cs.html", null ],
-    [ "TrackModifier.cs", "_track_modifier_8cs.html", null ],
-    [ "TrackResourceCache.cs", "_track_resource_cache_8cs.html", null ],
+    [ "TimelineKeyboardNavigation.cs", "_timeline_keyboard_navigation_8cs.html", [
+      [ "KeyboardNavigation", "class_unity_editor_1_1_timeline_1_1_keyboard_navigation.html", "class_unity_editor_1_1_timeline_1_1_keyboard_navigation" ]
+    ] ],
+    [ "TimeReferenceUtility.cs", "_time_reference_utility_8cs.html", [
+      [ "TimeReferenceUtility", "class_unity_editor_1_1_timeline_1_1_time_reference_utility.html", "class_unity_editor_1_1_timeline_1_1_time_reference_utility" ]
+    ] ],
+    [ "TrackModifier.cs", "_track_modifier_8cs.html", [
+      [ "TrackModifier", "class_unity_editor_1_1_timeline_1_1_track_modifier.html", "class_unity_editor_1_1_timeline_1_1_track_modifier" ]
+    ] ],
+    [ "TrackResourceCache.cs", "_track_resource_cache_8cs.html", [
+      [ "TrackResourceCache", "class_unity_editor_1_1_timeline_1_1_track_resource_cache.html", "class_unity_editor_1_1_timeline_1_1_track_resource_cache" ]
+    ] ],
     [ "TypeUtility.cs", "_type_utility_8cs.html", "_type_utility_8cs" ]
 ];

@@ -7,4 +7,14 @@ digraph "UnityEditor.Timeline.TimelineMarkerClusterGUI.RectToTimeline"
   Node1 [label="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.RectToTimeline",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Timeline\lMarkerGUI.RectToTimeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a0a1c4fdfdb668cab167f27e3d8c2901b",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Style\lManager.UssStyleForType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_style_manager.html#aa4c918b40e52f649c650fbf4392c3696",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Style\lManager.ClearCacheIfInvalid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_style_manager.html#aa6c16657f05a193d77054bb408ddb882",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Style\lManager.CustomStyleForType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_style_manager.html#a2a21fa3ec1194aeb403d4de42fdfcea7",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Director\lStyles.GetGUIStyle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#a5d06f3ba51299cb44424869a8f523735",tooltip=" "];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Style\lManager.IsStyleValid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_style_manager.html#aa41978cf3b7fdc9c19edca654a33d30e",tooltip=" "];
 }

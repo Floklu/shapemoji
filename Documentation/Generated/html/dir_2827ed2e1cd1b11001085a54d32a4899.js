@@ -35,12 +35,15 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
       [ "TMP_CharacterInfo", "struct_t_m_pro_1_1_t_m_p___character_info.html", "struct_t_m_pro_1_1_t_m_p___character_info" ]
     ] ],
     [ "TMP_ColorGradient.cs", "_t_m_p___color_gradient_8cs.html", "_t_m_p___color_gradient_8cs" ],
-    [ "TMP_Compatibility.cs", "_t_m_p___compatibility_8cs.html", null ],
+    [ "TMP_Compatibility.cs", "_t_m_p___compatibility_8cs.html", [
+      [ "TMP_Compatibility", "class_t_m_pro_1_1_t_m_p___compatibility.html", "class_t_m_pro_1_1_t_m_p___compatibility" ]
+    ] ],
     [ "TMP_CoroutineTween.cs", "_t_m_p___coroutine_tween_8cs.html", [
       [ "ColorTweenCallback", "class_t_m_pro_1_1_color_tween_1_1_color_tween_callback.html", null ],
       [ "FloatTweenCallback", "class_t_m_pro_1_1_float_tween_1_1_float_tween_callback.html", null ]
     ] ],
     [ "TMP_DefaultControls.cs", "_t_m_p___default_controls_8cs.html", [
+      [ "TMP_DefaultControls", "class_t_m_pro_1_1_t_m_p___default_controls.html", "class_t_m_pro_1_1_t_m_p___default_controls" ],
       [ "Resources", "struct_t_m_pro_1_1_t_m_p___default_controls_1_1_resources.html", "struct_t_m_pro_1_1_t_m_p___default_controls_1_1_resources" ]
     ] ],
     [ "TMP_Dropdown.cs", "_t_m_p___dropdown_8cs.html", [
@@ -53,16 +56,17 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
     [ "TMP_FontAsset.cs", "_t_m_p___font_asset_8cs.html", "_t_m_p___font_asset_8cs" ],
     [ "TMP_FontAssetCommon.cs", "_t_m_p___font_asset_common_8cs.html", [
       [ "FaceInfo_Legacy", "class_t_m_pro_1_1_face_info___legacy.html", "class_t_m_pro_1_1_face_info___legacy" ],
-      [ "TMP_Glyph", "class_t_m_pro_1_1_t_m_p___glyph.html", null ],
+      [ "TMP_Glyph", "class_t_m_pro_1_1_t_m_p___glyph.html", "class_t_m_pro_1_1_t_m_p___glyph" ],
       [ "FontAssetCreationSettings", "struct_t_m_pro_1_1_font_asset_creation_settings.html", "struct_t_m_pro_1_1_font_asset_creation_settings" ],
       [ "TMP_FontWeightPair", "struct_t_m_pro_1_1_t_m_p___font_weight_pair.html", "struct_t_m_pro_1_1_t_m_p___font_weight_pair" ],
       [ "KerningPairKey", "struct_t_m_pro_1_1_kerning_pair_key.html", "struct_t_m_pro_1_1_kerning_pair_key" ],
       [ "GlyphValueRecord_Legacy", "struct_t_m_pro_1_1_glyph_value_record___legacy.html", "struct_t_m_pro_1_1_glyph_value_record___legacy" ],
       [ "KerningPair", "class_t_m_pro_1_1_kerning_pair.html", "class_t_m_pro_1_1_kerning_pair" ],
-      [ "KerningTable", "class_t_m_pro_1_1_kerning_table.html", "class_t_m_pro_1_1_kerning_table" ]
+      [ "KerningTable", "class_t_m_pro_1_1_kerning_table.html", "class_t_m_pro_1_1_kerning_table" ],
+      [ "TMP_FontUtilities", "class_t_m_pro_1_1_t_m_p___font_utilities.html", "class_t_m_pro_1_1_t_m_p___font_utilities" ]
     ] ],
     [ "TMP_FontAssetUtilities.cs", "_t_m_p___font_asset_utilities_8cs.html", [
-      [ "TMP_FontAssetUtilities", "class_t_m_pro_1_1_t_m_p___font_asset_utilities.html", null ]
+      [ "TMP_FontAssetUtilities", "class_t_m_pro_1_1_t_m_p___font_asset_utilities.html", "class_t_m_pro_1_1_t_m_p___font_asset_utilities" ]
     ] ],
     [ "TMP_FontFeaturesCommon.cs", "_t_m_p___font_features_common_8cs.html", "_t_m_p___font_features_common_8cs" ],
     [ "TMP_FontFeatureTable.cs", "_t_m_p___font_feature_table_8cs.html", [
@@ -74,7 +78,8 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
       [ "OnChangeEvent", "class_t_m_pro_1_1_t_m_p___input_field_1_1_on_change_event.html", null ],
       [ "SelectionEvent", "class_t_m_pro_1_1_t_m_p___input_field_1_1_selection_event.html", null ],
       [ "TextSelectionEvent", "class_t_m_pro_1_1_t_m_p___input_field_1_1_text_selection_event.html", null ],
-      [ "TouchScreenKeyboardEvent", "class_t_m_pro_1_1_t_m_p___input_field_1_1_touch_screen_keyboard_event.html", null ]
+      [ "TouchScreenKeyboardEvent", "class_t_m_pro_1_1_t_m_p___input_field_1_1_touch_screen_keyboard_event.html", null ],
+      [ "SetPropertyUtility", "class_t_m_pro_1_1_set_property_utility.html", "class_t_m_pro_1_1_set_property_utility" ]
     ] ],
     [ "TMP_InputValidator.cs", "_t_m_p___input_validator_8cs.html", [
       [ "TMP_InputValidator", "class_t_m_pro_1_1_t_m_p___input_validator.html", "class_t_m_pro_1_1_t_m_p___input_validator" ]
@@ -83,12 +88,16 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
       [ "TMP_LineInfo", "struct_t_m_pro_1_1_t_m_p___line_info.html", "struct_t_m_pro_1_1_t_m_p___line_info" ]
     ] ],
     [ "TMP_ListPool.cs", "_t_m_p___list_pool_8cs.html", null ],
-    [ "TMP_MaterialManager.cs", "_t_m_p___material_manager_8cs.html", null ],
+    [ "TMP_MaterialManager.cs", "_t_m_p___material_manager_8cs.html", [
+      [ "TMP_MaterialManager", "class_t_m_pro_1_1_t_m_p___material_manager.html", "class_t_m_pro_1_1_t_m_p___material_manager" ],
+      [ "FallbackMaterial", "class_t_m_pro_1_1_t_m_p___material_manager_1_1_fallback_material.html", "class_t_m_pro_1_1_t_m_p___material_manager_1_1_fallback_material" ],
+      [ "MaskingMaterial", "class_t_m_pro_1_1_t_m_p___material_manager_1_1_masking_material.html", "class_t_m_pro_1_1_t_m_p___material_manager_1_1_masking_material" ]
+    ] ],
     [ "TMP_MeshInfo.cs", "_t_m_p___mesh_info_8cs.html", "_t_m_p___mesh_info_8cs" ],
     [ "TMP_ObjectPool.cs", "_t_m_p___object_pool_8cs.html", null ],
     [ "TMP_PackageResourceImporter.cs", "_t_m_p___package_resource_importer_8cs.html", null ],
     [ "TMP_ResourcesManager.cs", "_t_m_p___resources_manager_8cs.html", [
-      [ "TMP_ResourceManager", "class_t_m_pro_1_1_t_m_p___resource_manager.html", null ]
+      [ "TMP_ResourceManager", "class_t_m_pro_1_1_t_m_p___resource_manager.html", "class_t_m_pro_1_1_t_m_p___resource_manager" ]
     ] ],
     [ "TMP_RichTextTagsCommon.cs", "_t_m_p___rich_text_tags_common_8cs.html", "_t_m_p___rich_text_tags_common_8cs" ],
     [ "TMP_ScrollbarEventHandler.cs", "_t_m_p___scrollbar_event_handler_8cs.html", [
@@ -101,7 +110,9 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
       [ "TMP_Settings", "class_t_m_pro_1_1_t_m_p___settings.html", "class_t_m_pro_1_1_t_m_p___settings" ],
       [ "LineBreakingTable", "class_t_m_pro_1_1_t_m_p___settings_1_1_line_breaking_table.html", "class_t_m_pro_1_1_t_m_p___settings_1_1_line_breaking_table" ]
     ] ],
-    [ "TMP_ShaderUtilities.cs", "_t_m_p___shader_utilities_8cs.html", null ],
+    [ "TMP_ShaderUtilities.cs", "_t_m_p___shader_utilities_8cs.html", [
+      [ "ShaderUtilities", "class_t_m_pro_1_1_shader_utilities.html", "class_t_m_pro_1_1_shader_utilities" ]
+    ] ],
     [ "TMP_Sprite.cs", "_t_m_p___sprite_8cs.html", [
       [ "TMP_Sprite", "class_t_m_pro_1_1_t_m_p___sprite.html", "class_t_m_pro_1_1_t_m_p___sprite" ]
     ] ],
@@ -135,7 +146,7 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
       [ "TMP_TextInfo", "class_t_m_pro_1_1_t_m_p___text_info.html", "class_t_m_pro_1_1_t_m_p___text_info" ]
     ] ],
     [ "TMP_TextParsingUtilities.cs", "_t_m_p___text_parsing_utilities_8cs.html", [
-      [ "TMP_TextParsingUtilities", "class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html", null ]
+      [ "TMP_TextParsingUtilities", "class_t_m_pro_1_1_t_m_p___text_parsing_utilities.html", "class_t_m_pro_1_1_t_m_p___text_parsing_utilities" ]
     ] ],
     [ "TMP_TextProcessingStack.cs", "_t_m_p___text_processing_stack_8cs.html", [
       [ "TMP_FontStyleStack", "struct_t_m_pro_1_1_t_m_p___font_style_stack.html", "struct_t_m_pro_1_1_t_m_p___font_style_stack" ],
@@ -143,13 +154,16 @@ var dir_2827ed2e1cd1b11001085a54d32a4899 =
     ] ],
     [ "TMP_TextUtilities.cs", "_t_m_p___text_utilities_8cs.html", "_t_m_p___text_utilities_8cs" ],
     [ "TMP_UpdateManager.cs", "_t_m_p___update_manager_8cs.html", [
-      [ "TMP_UpdateManager", "class_t_m_pro_1_1_t_m_p___update_manager.html", null ]
+      [ "TMP_UpdateManager", "class_t_m_pro_1_1_t_m_p___update_manager.html", "class_t_m_pro_1_1_t_m_p___update_manager" ]
     ] ],
     [ "TMP_UpdateRegistery.cs", "_t_m_p___update_registery_8cs.html", [
       [ "TMP_UpdateRegistry", "class_t_m_pro_1_1_t_m_p___update_registry.html", "class_t_m_pro_1_1_t_m_p___update_registry" ]
     ] ],
     [ "TMPro_EventManager.cs", "_t_m_pro___event_manager_8cs.html", "_t_m_pro___event_manager_8cs" ],
-    [ "TMPro_ExtensionMethods.cs", "_t_m_pro___extension_methods_8cs.html", null ],
+    [ "TMPro_ExtensionMethods.cs", "_t_m_pro___extension_methods_8cs.html", [
+      [ "TMPro_ExtensionMethods", "class_t_m_pro_1_1_t_m_pro___extension_methods.html", "class_t_m_pro_1_1_t_m_pro___extension_methods" ],
+      [ "TMP_Math", "class_t_m_pro_1_1_t_m_p___math.html", "class_t_m_pro_1_1_t_m_p___math" ]
+    ] ],
     [ "TMPro_MeshUtilities.cs", "_t_m_pro___mesh_utilities_8cs.html", "_t_m_pro___mesh_utilities_8cs" ],
     [ "TMPro_Private.cs", "_t_m_pro___private_8cs.html", "_t_m_pro___private_8cs" ],
     [ "TMPro_UGUI_Private.cs", "_t_m_pro___u_g_u_i___private_8cs.html", "_t_m_pro___u_g_u_i___private_8cs" ]

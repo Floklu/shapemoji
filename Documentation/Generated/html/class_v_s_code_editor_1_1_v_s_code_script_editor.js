@@ -1,13 +1,32 @@
 var class_v_s_code_editor_1_1_v_s_code_script_editor =
 [
     [ "VSCodeScriptEditor", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a5dbeb680b9ff7e5e127f5d56925d32f7", null ],
+    [ "VSCodeScriptEditor", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ae338a90bccdd8628355e3c123b598e63", null ],
     [ "CreateIfDoesntExist", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#aba06d39e77ea3de0c6ac14eea38728c3", null ],
     [ "Initialize", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a492b5476253e2c9d233d2b6410ac0a7a", null ],
+    [ "IsVSCodeInstallation", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a402e8db3beb5dfb6b1578620a0994aaa", null ],
     [ "OnGUI", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a9b426ee84d2a35d6dd45fd8f61da0a2a", null ],
+    [ "OpenOSX", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ab33c9ee29ae5470d40fb327de6be57b4", null ],
     [ "OpenProject", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ab29552b1f1e0382d890c2d2aa9e5323a", null ],
+    [ "RegenerateProjectFiles", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ac29ab20bace82921185c1c7d5f9ce346", null ],
+    [ "SettingsButton", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ad4419b5915e17a2b60d57876b9800bbc", null ],
+    [ "SupportsExtension", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a2a9fd302cd0b71e5d6d11e7e203993e4", null ],
     [ "SyncAll", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#aeb78af562ff11f73c7dcb946ab1be533", null ],
     [ "SyncIfNeeded", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#abcb3f955a7ac9188c31d5a4850f3ad66", null ],
     [ "TryGetInstallationForPath", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a5d61619335328ff3194ac869dffde347", null ],
+    [ "DefaultApp", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a939e707e21d9dc702d93ac007fbe8068", null ],
     [ "Installations", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#abbc9572edd7cea2c3c414c5e56489aeb", null ],
-    [ "Arguments", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a503fd4d2bc592d9433a6a13dda3c954a", null ]
+    [ "IsOSX", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a1748dfee06699a0f88523e725602dba8", null ],
+    [ "k_ResetArguments", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a5f788860c95a2a5d366fe552b3b3e013", null ],
+    [ "k_SupportedFileNames", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ac3375a96c4f4ece591be44970b75ab67", null ],
+    [ "m_Arguments", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a9f7470feb4a093b6de61cf0a366658a8", null ],
+    [ "m_Discoverability", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a0f99e545167e556042e873543960b42d", null ],
+    [ "m_ProjectGeneration", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a860862d5fed20d210b5169a70bd5b5bd", null ],
+    [ "vscode_argument", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a3349b9509a7fdb653184a3d9b11760c8", null ],
+    [ "vscode_extension", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a24fde12594fd7b4abae50039f2b9f34b", null ],
+    [ "Arguments", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a503fd4d2bc592d9433a6a13dda3c954a", null ],
+    [ "DefaultArgument", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a8721f56f2f83e32d975e42663c537cbc", null ],
+    [ "defaultExtensions", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a46956acbf88a859d2fabd88554335aeb", null ],
+    [ "HandledExtensions", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#ae1a4326e67a34039b56008ae265d8756", null ],
+    [ "HandledExtensionsString", "class_v_s_code_editor_1_1_v_s_code_script_editor.html#a2b3eb7d3391e7c383fd8db808c3e3144", null ]
 ];

@@ -6,5 +6,11 @@ digraph "UnityEditor.Timeline.WindowState.ArmForRecord"
   rankdir="RL";
   Node1 [label="UnityEditor.Timeline.Window\lState.ArmForRecord",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Timeline\lWindowTimeControl.StartRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a6abf67eacf64e942c48c60a681065423",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Timeline\lTrackGUI.DrawRecordButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a5063c1a729ebdb36c31dc826cb0ddacf",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lTrackGUI.DrawTrackHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a04b4af56376c3ced95e0a3ae873afdb8",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lTrackGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a747cc3a832cf8df23274996439249d9c",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lWindowTimeControl.StartRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window_time_control.html#a6abf67eacf64e942c48c60a681065423",tooltip=" "];
 }

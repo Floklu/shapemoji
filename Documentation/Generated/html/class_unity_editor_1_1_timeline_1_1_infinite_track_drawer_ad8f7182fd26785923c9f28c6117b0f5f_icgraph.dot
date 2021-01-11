@@ -7,4 +7,6 @@ digraph "UnityEditor.Timeline.InfiniteTrackDrawer.CanDraw"
   Node1 [label="UnityEditor.Timeline.Infinite\lTrackDrawer.CanDraw",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Infinite\lTrackDrawer.DrawTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_infinite_track_drawer.html#a5690bd567ae2be6f53a62707422ac5d8",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lTrackGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a747cc3a832cf8df23274996439249d9c",tooltip=" "];
 }

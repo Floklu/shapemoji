@@ -6,4 +6,6 @@ digraph "UnityEditor.Timeline.TrackDrawer.CreateInstance"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Track\lDrawer.CreateInstance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Timeline\lHelpers.GetCustomDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1ec44eb1bb6de56f6241e2c67fb70c04",tooltip=" "];
 }

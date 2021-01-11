@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('class_t_m_pro_1_1_t_m_p___sprite_anima
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_t_m_pro_1_1_t_m_p___sprite_animator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TMPro.TMP_SpriteAnimator Class Reference</div>  </div>
@@ -105,11 +107,56 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade0c942998e861854cd24c280c679320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaea8d585b20ea1d6f9d96c60033dc1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#aaea8d585b20ea1d6f9d96c60033dc1a6">DoSpriteAnimation</a> (int currentCharacter, <a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, int start, int end, int framerate)</td></tr>
 <tr class="separator:aaea8d585b20ea1d6f9d96c60033dc1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac711a8704f406ecee3bdcf9a0039487b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ac711a8704f406ecee3bdcf9a0039487b">Awake</a> ()</td></tr>
+<tr class="separator:ac711a8704f406ecee3bdcf9a0039487b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21803be85c20eb5800b7b91bba00ef6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a21803be85c20eb5800b7b91bba00ef6f">OnEnable</a> ()</td></tr>
+<tr class="separator:a21803be85c20eb5800b7b91bba00ef6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112ea082d27be707753e4b57c0b4213b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a112ea082d27be707753e4b57c0b4213b">OnDisable</a> ()</td></tr>
+<tr class="separator:a112ea082d27be707753e4b57c0b4213b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67cc7dd827db153552560727532c72cc"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#a67cc7dd827db153552560727532c72cc">DoSpriteAnimationInternal</a> (int currentCharacter, <a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, int start, int end, int framerate)</td></tr>
+<tr class="separator:a67cc7dd827db153552560727532c72cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab39df19fa74ea4792b0607f87f6d3fe9"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#ab39df19fa74ea4792b0607f87f6d3fe9">m_animations</a> = new Dictionary&lt;int, bool&gt;(16)</td></tr>
+<tr class="separator:ab39df19fa74ea4792b0607f87f6d3fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4390e99668bf2cdad6d61a10a18c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_animator.html#afd4390e99668bf2cdad6d61a10a18c6a">m_TextComponent</a></td></tr>
+<tr class="separator:afd4390e99668bf2cdad6d61a10a18c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00009">9</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac711a8704f406ecee3bdcf9a0039487b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac711a8704f406ecee3bdcf9a0039487b">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_SpriteAnimator.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00017">17</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
+
+</div>
+</div>
 <a id="aaea8d585b20ea1d6f9d96c60033dc1a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaea8d585b20ea1d6f9d96c60033dc1a6">&#9670;&nbsp;</a></span>DoSpriteAnimation()</h2>
 
@@ -156,10 +203,135 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00045">45</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___sprite_animator_aaea8d585b20ea1d6f9d96c60033dc1a6_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___sprite_animator_aaea8d585b20ea1d6f9d96c60033dc1a6_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_t_m_pro_1_1_t_m_p___sprite_animator_aaea8d585b20ea1d6f9d96c60033dc1a6_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___sprite_animator_aaea8d585b20ea1d6f9d96c60033dc1a6_icgraph" alt=""/></div>
 </div>
+
+</div>
+</div>
+<a id="a67cc7dd827db153552560727532c72cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67cc7dd827db153552560727532c72cc">&#9670;&nbsp;</a></span>DoSpriteAnimationInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator TMPro.TMP_SpriteAnimator.DoSpriteAnimationInternal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentCharacter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a>&#160;</td>
+          <td class="paramname"><em>spriteAsset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>framerate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00058">58</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___sprite_animator_a67cc7dd827db153552560727532c72cc_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___sprite_animator_a67cc7dd827db153552560727532c72cc_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___sprite_animator_a67cc7dd827db153552560727532c72cc_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___sprite_animator_a67cc7dd827db153552560727532c72cc_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a112ea082d27be707753e4b57c0b4213b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112ea082d27be707753e4b57c0b4213b">&#9670;&nbsp;</a></span>OnDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_SpriteAnimator.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00031">31</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
+
+</div>
+</div>
+<a id="a21803be85c20eb5800b7b91bba00ef6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21803be85c20eb5800b7b91bba00ef6f">&#9670;&nbsp;</a></span>OnEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.TMP_SpriteAnimator.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00025">25</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
 
 </div>
 </div>
@@ -187,8 +359,57 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab39df19fa74ea4792b0607f87f6d3fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39df19fa74ea4792b0607f87f6d3fe9">&#9670;&nbsp;</a></span>m_animations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;int, bool&gt; TMPro.TMP_SpriteAnimator.m_animations = new Dictionary&lt;int, bool&gt;(16)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00011">11</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
+
+</div>
+</div>
+<a id="afd4390e99668bf2cdad6d61a10a18c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd4390e99668bf2cdad6d61a10a18c6a">&#9670;&nbsp;</a></span>m_TextComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___text.html">TMP_Text</a> TMPro.TMP_SpriteAnimator.m_TextComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_animator_8cs_source.html#l00014">14</a> of file <a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/<a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/<a class="el" href="_t_m_p___sprite_animator_8cs_source.html">TMP_SpriteAnimator.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

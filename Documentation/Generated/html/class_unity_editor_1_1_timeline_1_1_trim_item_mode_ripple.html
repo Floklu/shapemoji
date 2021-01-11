@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_tr
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TrimItemModeRipple Class Reference</div>  </div>
@@ -109,6 +110,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5d8284f2e51b406abbeeb414e3503574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92b243bc2eeef5f145699947a1541762"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple.html#a92b243bc2eeef5f145699947a1541762">DrawGUI</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Rect bounds, Color color, <a class="el" href="namespace_unity_editor_1_1_timeline.html#a9a326556a8b43ab6cfd54914e27dd415">TrimEdge</a> edge)</td></tr>
 <tr class="separator:a92b243bc2eeef5f145699947a1541762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6c52e7c298e813c4282eb2e237d6f6a7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple.html#a6c52e7c298e813c4282eb2e237d6f6a7">m_OriginalClipStart</a></td></tr>
+<tr class="separator:a6c52e7c298e813c4282eb2e237d6f6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80340f533ec0eb24c6d5569658c85572"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple.html#a80340f533ec0eb24c6d5569658c85572">m_OriginalClipEnd</a></td></tr>
+<tr class="separator:a80340f533ec0eb24c6d5569658c85572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd77b832b42eb04c4165b3b95d377abe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple.html#afd77b832b42eb04c4165b3b95d377abe">m_NextItems</a></td></tr>
+<tr class="separator:afd77b832b42eb04c4165b3b95d377abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ef46f5522ef33306ff8b8dc8e636a4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple.html#a34ef46f5522ef33306ff8b8dc8e636a4">m_BlendDuration</a></td></tr>
+<tr class="separator:a34ef46f5522ef33306ff8b8dc8e636a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26300fd3386ee703478fefbe8c696a2b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple.html#a26300fd3386ee703478fefbe8c696a2b">m_TrimStartShift</a></td></tr>
+<tr class="separator:a26300fd3386ee703478fefbe8c696a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -192,6 +206,11 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trim_item_mode.html#a8bd6b4b67820cdab1f2011b92933ef7a">UnityEditor.Timeline.ITrimItemMode</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_trim_item_mode_ripple_8cs_source.html#l00019">19</a> of file <a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple_a72de7d040d00e89f6e7554bad89d7247_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_trim_item_mode_ripple_a72de7d040d00e89f6e7554bad89d7247_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -275,8 +294,129 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a34ef46f5522ef33306ff8b8dc8e636a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ef46f5522ef33306ff8b8dc8e636a4">&#9670;&nbsp;</a></span>m_BlendDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeRipple.m_BlendDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_ripple_8cs_source.html#l00015">15</a> of file <a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a>.</p>
+
+</div>
+</div>
+<a id="afd77b832b42eb04c4165b3b95d377abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd77b832b42eb04c4165b3b95d377abe">&#9670;&nbsp;</a></span>m_NextItems</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_trimmable.html">ITrimmable</a> [] UnityEditor.Timeline.TrimItemModeRipple.m_NextItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_ripple_8cs_source.html#l00013">13</a> of file <a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a>.</p>
+
+</div>
+</div>
+<a id="a80340f533ec0eb24c6d5569658c85572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80340f533ec0eb24c6d5569658c85572">&#9670;&nbsp;</a></span>m_OriginalClipEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeRipple.m_OriginalClipEnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_ripple_8cs_source.html#l00011">11</a> of file <a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6c52e7c298e813c4282eb2e237d6f6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c52e7c298e813c4282eb2e237d6f6a7">&#9670;&nbsp;</a></span>m_OriginalClipStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeRipple.m_OriginalClipStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_ripple_8cs_source.html#l00010">10</a> of file <a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a>.</p>
+
+</div>
+</div>
+<a id="a26300fd3386ee703478fefbe8c696a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26300fd3386ee703478fefbe8c696a2b">&#9670;&nbsp;</a></span>m_TrimStartShift</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEditor.Timeline.TrimItemModeRipple.m_TrimStartShift</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trim_item_mode_ripple_8cs_source.html#l00017">17</a> of file <a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Manipulators/Trim/<a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Manipulators/Trim/<a class="el" href="_trim_item_mode_ripple_8cs_source.html">TrimItemModeRipple.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

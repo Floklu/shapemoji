@@ -10,4 +10,8 @@ digraph "UnityEditor.Timeline.TrackItemsDrawer"
   Node3 [label="ItemsLayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_items_layer.html",tooltip=" "];
   Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="IZOrderProvider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_LastZOrder" ,fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Layer\lZOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_editor_1_1_timeline_1_1_layer_z_order.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="IComparable\< LayerZOrder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

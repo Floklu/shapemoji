@@ -6,5 +6,19 @@ digraph "UnityEditor.Timeline.MoveItemHandler.UpdateTrackTarget"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Move\lItemHandler.UpdateTrackTarget",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Move\lItemHandler.RefreshPreviewItems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5bd2232dc5b53e272c87bfc2444085d3",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Edit\lMode.AllowTrackSwitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_mode.html#a93a9f02b65c7db005f5354ba8964db37",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.IMove\lItemMode.AllowTrackSwitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_move_item_mode.html#af62cf58c0128b04a5f1e06f7a8463bb8",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Edit\lMode.HandleTrackSwitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_mode.html#a06c40811a3c02e9da3bfd4e7d07e9771",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.IMove\lItemMode.HandleTrackSwitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_move_item_mode.html#a7d52a6c12598b464fcc8cb6805892920",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Move\lItemHandler.RefreshPreviewItems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_move_item_handler.html#a5bd2232dc5b53e272c87bfc2444085d3",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Move\lItemHandler.ValidateItemDrag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_move_item_handler.html#ab9bd1c1c198cffb1dd29661437f67da7",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Edit\lMode.ValidateDrag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_mode.html#ad29b94cb7c4603efa133f06259d101f9",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.IMove\lItemMode.ValidateMove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_move_item_mode.html#ac5d4037b688390e9731e82fc124f2a40",tooltip=" "];
 }

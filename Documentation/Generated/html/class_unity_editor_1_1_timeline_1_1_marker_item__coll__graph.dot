@@ -8,4 +8,6 @@ digraph "UnityEditor.Timeline.MarkerItem"
   Node2 [label="ITimelineItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html",tooltip=" "];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="IEquatable\< ITimelineItem \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Marker" ,fontname="Helvetica"];
+  Node4 [label="UnityEngine.Timeline.IMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_marker.html",tooltip="Interface implemented by markers."];
 }

@@ -1,12 +1,31 @@
 var class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor =
 [
+    [ "RiderScriptEditor", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4ee46a0bf8d504d483eda23803f08956", null ],
     [ "RiderScriptEditor", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a8121a56659c06bf8a3695e6443961057", null ],
     [ "CreateSolutionIfDoesntExist", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7dedf234a8bd96644cae85ad854962ed", null ],
+    [ "GetBaseUnityDeveloperFolder", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4259cbe1310d0d6e04681f36e03ed931", null ],
+    [ "GetSolutionFile", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3f6cc8268ff8bf52591221c9f98c90b8", null ],
     [ "Initialize", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a31a75c6d68eb9ced6f93ae384491b33b", null ],
+    [ "InitProjectFilesWatcher", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a2e736705962f47e76b2fd9349728396c", null ],
+    [ "IsAssetImportWorkerProcess", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab9c8f25e03b8d5cb199e9d1f3b5478fa", null ],
+    [ "IsRiderInstallation", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#adf9f526d4291aee496f1d33d15e63c56", null ],
+    [ "IsUnityScript", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad9b770cc707ce3df94a65de66fa0f700", null ],
+    [ "OnChanged", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a9b47e569a7211ecf7b4dfe4cde493684", null ],
     [ "OnGUI", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab67aa62d6561dd387b52e39e3bbba193", null ],
+    [ "OpenOSXApp", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ad7c027f49d6d01fdc6c010390679c4a6", null ],
     [ "OpenProject", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a5275b5a4c038c1661f5aa27173a51a80", null ],
+    [ "ShowWarningOnUnexpectedScriptEditor", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3b4eac5234f4fa2da28c3b73c2ad9e25", null ],
+    [ "SupportsExtension", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab555ef43bdb2f7db6e83e631e5365b93", null ],
     [ "SyncAll", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#abb34135b5bd405c295aa0947e431b643", null ],
     [ "SyncIfNeeded", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a41543b63fec44cba19ec63db6d52cbc3", null ],
     [ "TryGetInstallationForPath", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a95ae6ac6342a23b1ec07668b9ff1dabc", null ],
-    [ "Installations", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ac447c3036b762b58e71df2e706166a86", null ]
+    [ "CurrentEditor", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4cd617d3f36357b90ee33ffe9ef2a0b0", null ],
+    [ "Installations", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ac447c3036b762b58e71df2e706166a86", null ],
+    [ "m_Discoverability", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ae2506284eef5f76e1480065cee724ee3", null ],
+    [ "m_Initiliazer", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7ab4cc10c5aae77e24857ad5a1696436", null ],
+    [ "m_ProjectGeneration", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#ab11351a2d71decc7c6c6ee2c8ced2f17", null ],
+    [ "unity_generate_all", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#af421a0fd09ed0fd1db78f120364b5fc7", null ],
+    [ "defaultExtensions", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a7e69be8f27c0782ca95a914c7e0e0df9", null ],
+    [ "HandledExtensions", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a3258cc365a9b5a4374c801e515319aaa", null ],
+    [ "HandledExtensionsString", "class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a11211c1617c56c73ab7fd4b7390437a8", null ]
 ];

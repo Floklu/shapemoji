@@ -1,6 +1,9 @@
 var struct_t_m_pro_1_1_material_reference =
 [
     [ "MaterialReference", "struct_t_m_pro_1_1_material_reference.html#a5af83438b727dbb8cf9c49b02fdc2fda", null ],
+    [ "AddMaterialReference", "struct_t_m_pro_1_1_material_reference.html#a671a784525ebc4709414c442d7af7187", null ],
+    [ "AddMaterialReference", "struct_t_m_pro_1_1_material_reference.html#ad911a49231e643344d43a137a8b72baf", null ],
+    [ "Contains", "struct_t_m_pro_1_1_material_reference.html#a9b5219f0d1330cd811cfa3aa837d0b33", null ],
     [ "fallbackMaterial", "struct_t_m_pro_1_1_material_reference.html#afb2e5da38674a7a363ad2b4f3c6215d7", null ],
     [ "fontAsset", "struct_t_m_pro_1_1_material_reference.html#a57d6038454b7627a678c178751ae7b2e", null ],
     [ "index", "struct_t_m_pro_1_1_material_reference.html#af0e1e670567aeaa6b1b1bc67b41d4d3d", null ],

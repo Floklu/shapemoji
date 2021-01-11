@@ -1,6 +1,28 @@
 var searchData=
 [
-  ['onmousedown_17',['OnMouseDown',['../class_harpoon.html#abc98d60e6f7c78c05b3d65fdfe0f2f5f',1,'Harpoon']]],
-  ['onmouseup_18',['OnMouseUp',['../class_harpoon.html#a4bfc252db38e35f0560e87bfb3c9db79',1,'Harpoon']]],
-  ['onprecull_19',['OnPreCull',['../class_camera_setting.html#aae93874a25f5030c3daa58e2d3da0adb',1,'CameraSetting']]]
+  ['emoji_185',['emoji',['../class_emoji_sprite_manager.html#a153f5b2493f988092120b3d092a5a196',1,'EmojiSpriteManager.emoji()'],['../class_tests_1_1_play_mode_1_1_interaction_test_helper.html#a3b3aeb1364247995ab69b72b6265fc89',1,'Tests.PlayMode.InteractionTestHelper.Emoji()']]],
+  ['emojicovered_186',['EmojiCovered',['../class_score_area_1_1_analyze_score_area_result.html#a52fb702d218d3ad39070b6a94fa30261',1,'ScoreArea::AnalyzeScoreAreaResult']]],
+  ['emojilistcheckduplicatestest_187',['EmojiListCheckDuplicatesTest',['../class_tests_1_1_play_mode_1_1_emoji_list_test.html#aeca716b02c51b28eaeb11895ed73329a',1,'Tests::PlayMode::EmojiListTest']]],
+  ['emojilistovermaxnumberemojistest_188',['EmojiListOverMaxNumberEmojisTest',['../class_tests_1_1_play_mode_1_1_emoji_list_test.html#a96fb5bb255361d56e4c57ff01c66e4a0',1,'Tests::PlayMode::EmojiListTest']]],
+  ['emojilistsimpleaccesstest_189',['EmojiListSimpleAccessTest',['../class_tests_1_1_play_mode_1_1_emoji_list_test.html#a99d952ea44f7c26753424b1d477a1321',1,'Tests::PlayMode::EmojiListTest']]],
+  ['emojilisttest_190',['EmojiListTest',['../class_tests_1_1_play_mode_1_1_emoji_list_test.html',1,'Tests::PlayMode']]],
+  ['emojilisttest_2ecs_191',['EmojiListTest.cs',['../_emoji_list_test_8cs.html',1,'']]],
+  ['emojiscoreui_192',['emojiScoreUI',['../class_score_area_1_1_score_area.html#a654dc8359a884fe25d0062f2af5c8136',1,'ScoreArea::ScoreArea']]],
+  ['emojispritemanager_193',['EmojiSpriteManager',['../class_emoji_sprite_manager.html',1,'']]],
+  ['emojispritemanager_2ecs_194',['EmojiSpriteManager.cs',['../_emoji_sprite_manager_8cs.html',1,'']]],
+  ['emojisprites_195',['emojiSprites',['../class_game.html#a72b9f87c8f619c169fd65b38b34db7cd',1,'Game']]],
+  ['emojitest_196',['EmojiTest',['../class_tests_1_1_play_mode_1_1_emoji_test.html',1,'Tests::PlayMode']]],
+  ['emojitest_2ecs_197',['EmojiTest.cs',['../_emoji_test_8cs.html',1,'']]],
+  ['emojitestplayer1_198',['EmojiTestPlayer1',['../class_tests_1_1_play_mode_1_1_emoji_test.html#a40c00b4a15c414c20c84968c55b71cdf',1,'Tests::PlayMode::EmojiTest']]],
+  ['emojitestplayer2_199',['EmojiTestPlayer2',['../class_tests_1_1_play_mode_1_1_emoji_test.html#a790bcba63e97e7ec18d8d9f6205e2012',1,'Tests::PlayMode::EmojiTest']]],
+  ['emojitestplayer3_200',['EmojiTestPlayer3',['../class_tests_1_1_play_mode_1_1_emoji_test.html#a82b61392064ab2ab46cf53eebc6a453a',1,'Tests::PlayMode::EmojiTest']]],
+  ['emojitestplayer4_201',['EmojiTestPlayer4',['../class_tests_1_1_play_mode_1_1_emoji_test.html#a8e6acae6c26cd3865e8f68ba97dbfe45',1,'Tests::PlayMode::EmojiTest']]],
+  ['emojiuncovered_202',['EmojiUncovered',['../class_score_area_1_1_analyze_score_area_result.html#aa32df93b2bb8b865f44be08b004caaf2',1,'ScoreArea::AnalyzeScoreAreaResult']]],
+  ['enablecontroller_203',['EnableController',['../class_harpoon_1_1_crank_controller.html#a67b0adafb4cd8c7fdc1dc4b55890fa43',1,'Harpoon.CrankController.EnableController()'],['../class_harpoon_1_1_harpoon_controller.html#a4fce7e5fe3245469d58754b67ce055ac',1,'Harpoon.HarpoonController.EnableController()']]],
+  ['enablestonedraggable_204',['EnableStoneDraggable',['../class_hookable_object_controller.html#a0e1192fa2588f4635e5d7743c6a05db5',1,'HookableObjectController']]],
+  ['endevent_205',['EndEvent',['../class_item_defect.html#a5a8c2055685fb5021a9ad3a81747689b',1,'ItemDefect']]],
+  ['endreached_206',['EndReached',['../class_tutorial_video.html#a6c8de2589bb06cfae747f5a2ebdb334e',1,'TutorialVideo']]],
+  ['endscreen_207',['EndScreen',['../class_end_screen.html',1,'']]],
+  ['endscreen_2ecs_208',['EndScreen.cs',['../_end_screen_8cs.html',1,'']]],
+  ['exit_209',['Exit',['../class_start_menu.html#aaa45b397ed5a3e00998b0c38f610e52f',1,'StartMenu.Exit()'],['../class_tutorial_video.html#a01e461ef08892d7230a47d8fda1a4881',1,'TutorialVideo.Exit()']]]
 ];

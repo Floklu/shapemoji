@@ -86,6 +86,11 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_ti
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_timeline_asset-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.TimelineAsset Class Reference</div>  </div>
@@ -94,11 +99,18 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_ti
 
 <p>A PlayableAsset that represents a timeline.  
  <a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for UnityEngine.Timeline.TimelineAsset:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset__coll__graph.png" border="0" usemap="#a_unity_engine_8_timeline_8_timeline_asset_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">EditorSettings</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties of the timeline that are used by the editor  <a href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_timeline_asset_upgrade.html">TimelineAssetUpgrade</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -191,6 +203,68 @@ Properties</h2></td></tr>
 <tr class="memitem:aab981e915aae984ca3702895c88ffbaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_marker_track.html">MarkerTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aab981e915aae984ca3702895c88ffbaf">markerTrack</a><code> [get]</code></td></tr>
 <tr class="memdesc:aab981e915aae984ca3702895c88ffbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the marker track for this <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html" title="A PlayableAsset that represents a timeline.">TimelineAsset</a>.  <a href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aab981e915aae984ca3702895c88ffbaf">More...</a><br /></td></tr>
 <tr class="separator:aab981e915aae984ca3702895c88ffbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:ac67a3cbd152b598dc9d15fa3e00e8320"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320">Versions</a> { <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320a4f2a91e15af2631ff9424564b8a45fb2">Versions.Initial</a> = 0
+ }</td></tr>
+<tr class="separator:ac67a3cbd152b598dc9d15fa3e00e8320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a17cabac20bb7a4a5c15090aea1e668fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a17cabac20bb7a4a5c15090aea1e668fd">UpgradeToLatestVersion</a> ()</td></tr>
+<tr class="separator:a17cabac20bb7a4a5c15090aea1e668fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aef98be60f0aae08069f1c0be615eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a1aef98be60f0aae08069f1c0be615eb1">OnValidate</a> ()</td></tr>
+<tr class="separator:a1aef98be60f0aae08069f1c0be615eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e30321bd7f56c8ae86f05e942a6ac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a23e30321bd7f56c8ae86f05e942a6ac4">UpdateRootTrackCache</a> ()</td></tr>
+<tr class="separator:a23e30321bd7f56c8ae86f05e942a6ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca75bed675bde3d251907517472e65b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a4ca75bed675bde3d251907517472e65b">UpdateOutputTrackCache</a> ()</td></tr>
+<tr class="separator:a4ca75bed675bde3d251907517472e65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70d31793a009312a016bd4dee35cfb4"><td class="memItemLeft" align="right" valign="top">void ISerializationCallbackReceiver.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ad70d31793a009312a016bd4dee35cfb4">OnBeforeSerialize</a> ()</td></tr>
+<tr class="separator:ad70d31793a009312a016bd4dee35cfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab312ca6f5334f470db013bc26d2ac5e3"><td class="memItemLeft" align="right" valign="top">void ISerializationCallbackReceiver.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ab312ca6f5334f470db013bc26d2ac5e3">OnAfterDeserialize</a> ()</td></tr>
+<tr class="separator:ab312ca6f5334f470db013bc26d2ac5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669e962dc8ab34c10fee20c67abf9868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a669e962dc8ab34c10fee20c67abf9868">__internalAwake</a> ()</td></tr>
+<tr class="separator:a669e962dc8ab34c10fee20c67abf9868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75df641665d0fdbea020ee8f57e85e03"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a75df641665d0fdbea020ee8f57e85e03">CalculateDuration</a> ()</td></tr>
+<tr class="separator:a75df641665d0fdbea020ee8f57e85e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1e49ec97fecfacf930b5b50260bf2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#afa1e49ec97fecfacf930b5b50260bf2e">DeleteRecordedAnimation</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track)</td></tr>
+<tr class="separator:afa1e49ec97fecfacf930b5b50260bf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f7a7617eb8ae55784fb611ccce25b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a39f7a7617eb8ae55784fb611ccce25b2">DeleteRecordedAnimation</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> clip)</td></tr>
+<tr class="separator:a39f7a7617eb8ae55784fb611ccce25b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a047f07028041fe0787baed66c6a10b43"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a047f07028041fe0787baed66c6a10b43">GetValidFramerate</a> (float framerate)</td></tr>
+<tr class="separator:a047f07028041fe0787baed66c6a10b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45592ac243170c583ed2afef69550e7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac45592ac243170c583ed2afef69550e7">AddSubTracksRecursive</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, ref List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt; allTracks)</td></tr>
+<tr class="separator:ac45592ac243170c583ed2afef69550e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a340782cfaa9df7f6ef9b11cb86962c83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a340782cfaa9df7f6ef9b11cb86962c83">m_Version</a></td></tr>
+<tr class="separator:a340782cfaa9df7f6ef9b11cb86962c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619e8d00ac5174ea3d83a48348da6829"><td class="memItemLeft" align="right" valign="top">List&lt; ScriptableObject &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a619e8d00ac5174ea3d83a48348da6829">m_Tracks</a></td></tr>
+<tr class="separator:a619e8d00ac5174ea3d83a48348da6829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527488e8a053e21dd1e331aec885abd1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a527488e8a053e21dd1e331aec885abd1">m_FixedDuration</a></td></tr>
+<tr class="separator:a527488e8a053e21dd1e331aec885abd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e83fd0fbc8d4f45b103f59b5ff433f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a5e83fd0fbc8d4f45b103f59b5ff433f5">m_CacheOutputTracks</a></td></tr>
+<tr class="separator:a5e83fd0fbc8d4f45b103f59b5ff433f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ad0e3bb76fdb02d02f754106b5b7df"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a84ad0e3bb76fdb02d02f754106b5b7df">m_CacheRootTracks</a></td></tr>
+<tr class="separator:a84ad0e3bb76fdb02d02f754106b5b7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1d7b592354003511a5064b7290cee1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aab1d7b592354003511a5064b7290cee1">m_CacheFlattenedTracks</a></td></tr>
+<tr class="separator:aab1d7b592354003511a5064b7290cee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691bbd0944945e134e528bbe3d606f74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">EditorSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a691bbd0944945e134e528bbe3d606f74">m_EditorSettings</a> = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">EditorSettings</a>()</td></tr>
+<tr class="separator:a691bbd0944945e134e528bbe3d606f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc435450fd12ce54e53d6de70459f1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1a">DurationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#acfc435450fd12ce54e53d6de70459f1a">m_DurationMode</a></td></tr>
+<tr class="separator:acfc435450fd12ce54e53d6de70459f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc7bb972108903c7352099654b75c13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_marker_track.html">MarkerTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a1dc7bb972108903c7352099654b75c13">m_MarkerTrack</a></td></tr>
+<tr class="separator:a1dc7bb972108903c7352099654b75c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ac2e60d51c793edc0e06adefa65a45500"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac2e60d51c793edc0e06adefa65a45500">k_LatestVersion</a> = (int)<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320a4f2a91e15af2631ff9424564b8a45fb2">Versions.Initial</a></td></tr>
+<tr class="separator:ac2e60d51c793edc0e06adefa65a45500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A PlayableAsset that represents a timeline. </p>
@@ -262,7 +336,136 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="ac67a3cbd152b598dc9d15fa3e00e8320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67a3cbd152b598dc9d15fa3e00e8320">&#9670;&nbsp;</a></span>Versions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320">UnityEngine.Timeline.TimelineAsset.Versions</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac67a3cbd152b598dc9d15fa3e00e8320a4f2a91e15af2631ff9424564b8a45fb2"></a>Initial&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_timeline_upgrade_8cs_source.html#l00005">5</a> of file <a class="el" href="_timeline_upgrade_8cs_source.html">TimelineUpgrade.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a669e962dc8ab34c10fee20c67abf9868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669e962dc8ab34c10fee20c67abf9868">&#9670;&nbsp;</a></span>__internalAwake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.__internalAwake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00361">361</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac45592ac243170c583ed2afef69550e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45592ac243170c583ed2afef69550e7">&#9670;&nbsp;</a></span>AddSubTracksRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.TimelineAsset.AddSubTracksRecursive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt;&#160;</td>
+          <td class="paramname"><em>allTracks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00443">443</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_ac45592ac243170c583ed2afef69550e7_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_ac45592ac243170c583ed2afef69550e7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a75df641665d0fdbea020ee8f57e85e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75df641665d0fdbea020ee8f57e85e03">&#9670;&nbsp;</a></span>CalculateDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineAsset.CalculateDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00425">425</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_a75df641665d0fdbea020ee8f57e85e03_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_a75df641665d0fdbea020ee8f57e85e03_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a502d5d05908fc38b5e72c64381fd9c28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a502d5d05908fc38b5e72c64381fd9c28">&#9670;&nbsp;</a></span>CreateMarkerTrack()</h2>
 
@@ -283,6 +486,11 @@ Properties</h2></td></tr>
 <p>This track is always bound to the GameObject that contains the PlayableDirector component for the current timeline. The marker track is created the first time this method is called. If the marker track is already created, this method does nothing. </p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00405">405</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_a502d5d05908fc38b5e72c64381fd9c28_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_a502d5d05908fc38b5e72c64381fd9c28_cgraph" alt=""/></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -381,6 +589,11 @@ Here is the call graph for this function:</div>
 <p>This method will throw an InvalidOperationException if the parent is not valid. The parent can be any <a class="el" href="class_unity_engine_1_1_timeline_1_1_group_track.html" title="A group track is a container that allows tracks to be arranged in a hierarchical manner.">GroupTrack</a>, or a supported parent type of track. For example, this can be used to create override tracks in AnimationTracks. </p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset___create_remove_8cs_source.html#l00022">22</a> of file <a class="el" href="_timeline_asset___create_remove_8cs_source.html">TimelineAsset_CreateRemove.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_add8b82ba55c370c655d380de9fe7c266_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_add8b82ba55c370c655d380de9fe7c266_cgraph" alt=""/></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -569,9 +782,85 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset___create_remove_8cs_source.html#l00108">108</a> of file <a class="el" href="_timeline_asset___create_remove_8cs_source.html">TimelineAsset_CreateRemove.cs</a>.</p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_aa5356a1260ee2e86a9df796a15496c95_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_aa5356a1260ee2e86a9df796a15496c95_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_aa5356a1260ee2e86a9df796a15496c95_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_aa5356a1260ee2e86a9df796a15496c95_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a39f7a7617eb8ae55784fb611ccce25b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f7a7617eb8ae55784fb611ccce25b2">&#9670;&nbsp;</a></span>DeleteRecordedAnimation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.DeleteRecordedAnimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset___create_remove_8cs_source.html#l00237">237</a> of file <a class="el" href="_timeline_asset___create_remove_8cs_source.html">TimelineAsset_CreateRemove.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_a39f7a7617eb8ae55784fb611ccce25b2_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_a39f7a7617eb8ae55784fb611ccce25b2_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="afa1e49ec97fecfacf930b5b50260bf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1e49ec97fecfacf930b5b50260bf2e">&#9670;&nbsp;</a></span>DeleteRecordedAnimation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.DeleteRecordedAnimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset___create_remove_8cs_source.html#l00227">227</a> of file <a class="el" href="_timeline_asset___create_remove_8cs_source.html">TimelineAsset_CreateRemove.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_afa1e49ec97fecfacf930b5b50260bf2e_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_afa1e49ec97fecfacf930b5b50260bf2e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_afa1e49ec97fecfacf930b5b50260bf2e_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_afa1e49ec97fecfacf930b5b50260bf2e_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -606,6 +895,11 @@ Here is the caller graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_ae811f0b439c896f971ae476c7997d4a0_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_ae811f0b439c896f971ae476c7997d4a0_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_ae811f0b439c896f971ae476c7997d4a0_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_ae811f0b439c896f971ae476c7997d4a0_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -703,6 +997,11 @@ Here is the caller graph for this function:</div>
 <p>An output track is a track the generates a PlayableOutput. In general, an output track is any track that is not a <a class="el" href="class_unity_engine_1_1_timeline_1_1_group_track.html" title="A group track is a container that allows tracks to be arranged in a hierarchical manner.">GroupTrack</a> or subtrack. </p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00227">227</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_a82a8c61e425d1d7448bf5a0822ad6c2a_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_a82a8c61e425d1d7448bf5a0822ad6c2a_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -755,6 +1054,442 @@ Here is the caller graph for this function:</div>
 <p>A root track refers to all tracks that occur at the root of the timeline. These are the outmost level GroupTracks, and output tracks that do not belong to any group.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00203">203</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_asset_a0fc27a36491f7c52a91c791665b83809_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_asset_a0fc27a36491f7c52a91c791665b83809_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a047f07028041fe0787baed66c6a10b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047f07028041fe0787baed66c6a10b43">&#9670;&nbsp;</a></span>GetValidFramerate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float UnityEngine.Timeline.TimelineAsset.GetValidFramerate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>framerate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00180">180</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab312ca6f5334f470db013bc26d2ac5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab312ca6f5334f470db013bc26d2ac5e3">&#9670;&nbsp;</a></span>OnAfterDeserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializationCallbackReceiver. UnityEngine.Timeline.TimelineAsset.OnAfterDeserialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00352">352</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad70d31793a009312a016bd4dee35cfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70d31793a009312a016bd4dee35cfb4">&#9670;&nbsp;</a></span>OnBeforeSerialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISerializationCallbackReceiver. UnityEngine.Timeline.TimelineAsset.OnBeforeSerialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00346">346</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1aef98be60f0aae08069f1c0be615eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aef98be60f0aae08069f1c0be615eb1">&#9670;&nbsp;</a></span>OnValidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.OnValidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00175">175</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4ca75bed675bde3d251907517472e65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca75bed675bde3d251907517472e65b">&#9670;&nbsp;</a></span>UpdateOutputTrackCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.UpdateOutputTrackCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00257">257</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a23e30321bd7f56c8ae86f05e942a6ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e30321bd7f56c8ae86f05e942a6ac4">&#9670;&nbsp;</a></span>UpdateRootTrackCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.UpdateRootTrackCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00233">233</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a17cabac20bb7a4a5c15090aea1e668fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17cabac20bb7a4a5c15090aea1e668fd">&#9670;&nbsp;</a></span>UpgradeToLatestVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelineAsset.UpgradeToLatestVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_upgrade_8cs_source.html#l00014">14</a> of file <a class="el" href="_timeline_upgrade_8cs_source.html">TimelineUpgrade.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac2e60d51c793edc0e06adefa65a45500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e60d51c793edc0e06adefa65a45500">&#9670;&nbsp;</a></span>k_LatestVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int UnityEngine.Timeline.TimelineAsset.k_LatestVersion = (int)<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320a4f2a91e15af2631ff9424564b8a45fb2">Versions.Initial</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_upgrade_8cs_source.html#l00009">9</a> of file <a class="el" href="_timeline_upgrade_8cs_source.html">TimelineUpgrade.cs</a>.</p>
+
+</div>
+</div>
+<a id="aab1d7b592354003511a5064b7290cee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab1d7b592354003511a5064b7290cee1">&#9670;&nbsp;</a></span>m_CacheFlattenedTracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&gt; UnityEngine.Timeline.TimelineAsset.m_CacheFlattenedTracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00060">60</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5e83fd0fbc8d4f45b103f59b5ff433f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e83fd0fbc8d4f45b103f59b5ff433f5">&#9670;&nbsp;</a></span>m_CacheOutputTracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> [] UnityEngine.Timeline.TimelineAsset.m_CacheOutputTracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00058">58</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a84ad0e3bb76fdb02d02f754106b5b7df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ad0e3bb76fdb02d02f754106b5b7df">&#9670;&nbsp;</a></span>m_CacheRootTracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&gt; UnityEngine.Timeline.TimelineAsset.m_CacheRootTracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00059">59</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="acfc435450fd12ce54e53d6de70459f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc435450fd12ce54e53d6de70459f1a">&#9670;&nbsp;</a></span>m_DurationMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1a">DurationMode</a> UnityEngine.Timeline.TimelineAsset.m_DurationMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00062">62</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a691bbd0944945e134e528bbe3d606f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691bbd0944945e134e528bbe3d606f74">&#9670;&nbsp;</a></span>m_EditorSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">EditorSettings</a> UnityEngine.Timeline.TimelineAsset.m_EditorSettings = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html">EditorSettings</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00061">61</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a527488e8a053e21dd1e331aec885abd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527488e8a053e21dd1e331aec885abd1">&#9670;&nbsp;</a></span>m_FixedDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.TimelineAsset.m_FixedDuration</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00057">57</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1dc7bb972108903c7352099654b75c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc7bb972108903c7352099654b75c13">&#9670;&nbsp;</a></span>m_MarkerTrack</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_marker_track.html">MarkerTrack</a> UnityEngine.Timeline.TimelineAsset.m_MarkerTrack</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00064">64</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a619e8d00ac5174ea3d83a48348da6829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619e8d00ac5174ea3d83a48348da6829">&#9670;&nbsp;</a></span>m_Tracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;ScriptableObject&gt; UnityEngine.Timeline.TimelineAsset.m_Tracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_8cs_source.html#l00056">56</a> of file <a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a>.</p>
+
+</div>
+</div>
+<a id="a340782cfaa9df7f6ef9b11cb86962c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340782cfaa9df7f6ef9b11cb86962c83">&#9670;&nbsp;</a></span>m_Version</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEngine.Timeline.TimelineAsset.m_Version</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_upgrade_8cs_source.html#l00010">10</a> of file <a class="el" href="_timeline_upgrade_8cs_source.html">TimelineUpgrade.cs</a>.</p>
 
 </div>
 </div>
@@ -997,9 +1732,9 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/AssetUpgrade/<a class="el" href="_timeline_upgrade_8cs_source.html">TimelineUpgrade.cs</a></li>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/<a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a></li>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/<a class="el" href="_timeline_asset___create_remove_8cs_source.html">TimelineAsset_CreateRemove.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/AssetUpgrade/<a class="el" href="_timeline_upgrade_8cs_source.html">TimelineUpgrade.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/<a class="el" href="_timeline_asset_8cs_source.html">TimelineAsset.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/<a class="el" href="_timeline_asset___create_remove_8cs_source.html">TimelineAsset_CreateRemove.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

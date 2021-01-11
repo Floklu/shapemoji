@@ -14,6 +14,7 @@ var class_unity_editor_1_1_timeline_1_1_clip_item =
     [ "ToString", "class_unity_editor_1_1_timeline_1_1_clip_item.html#a152e63e488508559f2aa6c0c58f01898", null ],
     [ "TrimEnd", "class_unity_editor_1_1_timeline_1_1_clip_item.html#a17ed1d3f4f544b6d0083fae6e62029a9", null ],
     [ "TrimStart", "class_unity_editor_1_1_timeline_1_1_clip_item.html#a366dd8bc13274f384efac1292761467f", null ],
+    [ "m_Clip", "class_unity_editor_1_1_timeline_1_1_clip_item.html#ae052b0e64c906ce7771af03acff9455d", null ],
     [ "clip", "class_unity_editor_1_1_timeline_1_1_clip_item.html#ae39ea6838d3823722bf4935d63fe380e", null ],
     [ "duration", "class_unity_editor_1_1_timeline_1_1_clip_item.html#a3236d82f8bd9b017d76cddd1b6aa5f9e", null ],
     [ "end", "class_unity_editor_1_1_timeline_1_1_clip_item.html#a216d2a3db463161a4ba7b7b83f34fdee", null ],

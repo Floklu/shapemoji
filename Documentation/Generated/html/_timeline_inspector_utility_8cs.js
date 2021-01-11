@@ -1,5 +1,7 @@
 var _timeline_inspector_utility_8cs =
 [
+    [ "InputEventMethods", "class_unity_editor_1_1_timeline_1_1_input_event_methods.html", "class_unity_editor_1_1_timeline_1_1_input_event_methods" ],
+    [ "TimelineInspectorUtility", "class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html", "class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility" ],
     [ "InputEvent", "_timeline_inspector_utility_8cs.html#aed7b8e93c689129b6ecc636f0918cb3a", [
       [ "None", "_timeline_inspector_utility_8cs.html#aed7b8e93c689129b6ecc636f0918cb3aa6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "DragEnter", "_timeline_inspector_utility_8cs.html#aed7b8e93c689129b6ecc636f0918cb3aa490b2e0a61ad3ca9a255343037bbb74c", null ],

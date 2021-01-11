@@ -23,6 +23,7 @@ var dir_18d889f1fa604f9074cfbc300879e4a1 =
       [ "TimeControlPlayable", "class_unity_engine_1_1_timeline_1_1_time_control_playable.html", "class_unity_engine_1_1_timeline_1_1_time_control_playable" ]
     ] ],
     [ "TimeNotificationBehaviour.cs", "_time_notification_behaviour_8cs.html", [
-      [ "TimeNotificationBehaviour", "class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html", "class_unity_engine_1_1_timeline_1_1_time_notification_behaviour" ]
+      [ "TimeNotificationBehaviour", "class_unity_engine_1_1_timeline_1_1_time_notification_behaviour.html", "class_unity_engine_1_1_timeline_1_1_time_notification_behaviour" ],
+      [ "NotificationEntry", "struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry.html", "struct_unity_engine_1_1_timeline_1_1_time_notification_behaviour_1_1_notification_entry" ]
     ] ]
 ];

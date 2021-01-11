@@ -4,19 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node494 [label="IApplyToTest",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node494 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="UnityEditor.TestTools.Require\lPlatformSupportAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_test_tools_1_1_require_platform_support_attribute.html",tooltip=" "];
-  Node494 -> Node200 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node200 [label="UnityEngine.TestTools.Conditional\lIgnoreAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute.html",tooltip=" "];
-  Node494 -> Node201 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node201 [label="UnityEngine.TestTools.Unity\lPlatformAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_tools_1_1_unity_platform_attribute.html",tooltip=" "];
-  Node198 [label="NUnitAttribute",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node198 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node198 -> Node200 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node198 -> Node201 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node198 -> Node202 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node202 [label="UnityEngine.TestTools.Unity\lSetUpAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_tools_1_1_unity_set_up_attribute.html",tooltip=" "];
-  Node198 -> Node203 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node203 [label="UnityEngine.TestTools.Unity\lTearDownAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_tools_1_1_unity_tear_down_attribute.html",tooltip=" "];
+  Node0 [label="TMPro.SpriteAssetUtilities.\lTexturePacker_JsonArray.SpriteData\lObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer___json_array_1_1_sprite_data_object.html",tooltip=" "];
 }

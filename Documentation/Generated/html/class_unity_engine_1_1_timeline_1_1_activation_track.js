@@ -9,5 +9,7 @@ var class_unity_engine_1_1_timeline_1_1_activation_track =
     [ "CreateTrackMixer", "class_unity_engine_1_1_timeline_1_1_activation_track.html#a2bdaef90137b4649efd00503b463f425", null ],
     [ "GatherProperties", "class_unity_engine_1_1_timeline_1_1_activation_track.html#af4cf30aaabb54e30d80694a248dd32ff", null ],
     [ "OnCreateClip", "class_unity_engine_1_1_timeline_1_1_activation_track.html#a1287f3867043f910168ebf7f578201dc", null ],
+    [ "m_ActivationMixer", "class_unity_engine_1_1_timeline_1_1_activation_track.html#ae3f25d4861db4755186f6b3b91fc88a9", null ],
+    [ "m_PostPlaybackState", "class_unity_engine_1_1_timeline_1_1_activation_track.html#a90e8fa6e7aa39fb531a8167125b4eb9f", null ],
     [ "postPlaybackState", "class_unity_engine_1_1_timeline_1_1_activation_track.html#a0481f502c86b90706501954f10d6e3c7", null ]
 ];

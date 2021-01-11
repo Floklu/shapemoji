@@ -7,4 +7,8 @@ digraph "VSCodeEditor.IAssemblyNameProvider.ToggleProjectGeneration"
   Node1 [label="VSCodeEditor.IAssemblyName\lProvider.ToggleProjectGeneration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="VSCodeEditor.ProjectGeneration.\lGenerateAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_project_generation.html#ae385e6404a2d16774f1fbe47dfbb3fd0",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VSCodeEditor.VSCodeScript\lEditor.SettingsButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#ad4419b5915e17a2b60d57876b9800bbc",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VSCodeEditor.VSCodeScript\lEditor.OnGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#a9b426ee84d2a35d6dd45fd8f61da0a2a",tooltip=" "];
 }

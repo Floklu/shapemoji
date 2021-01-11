@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.TMP_Settings.LineBreaking\lTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___settings_1_1_line_breaking_table.html",tooltip=" "];
+  Node0 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow.FontAsset\lCreationSettingsContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window_1_1_font_asset_creation_settings_container.html",tooltip=" "];
 }

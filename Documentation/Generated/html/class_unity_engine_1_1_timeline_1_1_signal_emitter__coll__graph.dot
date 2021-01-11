@@ -14,4 +14,7 @@ digraph "UnityEngine.Timeline.SignalEmitter"
   Node5 [label="INotification",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node6 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="INotificationOptionProvider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_notification_option_provider.html",tooltip="Implement this interface to change the behaviour of an INotification."];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Asset" ,fontname="Helvetica"];
+  Node7 [label="UnityEngine.Timeline.Signal\lAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_signal_asset.html",tooltip="An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver..."];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.TMP_TextProcessing\lStack\< TMPro.HighlightState \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_t_m_p___text_processing_stack.html",tooltip=" "];
+  Node0 [label="TMPro.ITextElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_t_m_pro_1_1_i_text_element.html",tooltip=" "];
 }

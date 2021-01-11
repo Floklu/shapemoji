@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('class_unity_editor_internal_1_1_bindin
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditorInternal.BindingTreeViewGUI Class Reference</div>  </div>
@@ -115,6 +117,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a213533b69636dd8a86a285f73de0a762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a303e5864f2c7c4df4ed047ff4cd0a7"><td class="memItemLeft" align="right" valign="top">override Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html#a2a303e5864f2c7c4df4ed047ff4cd0a7">GetIconForItem</a> (TreeViewItem item)</td></tr>
 <tr class="separator:a2a303e5864f2c7c4df4ed047ff4cd0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae903b3cb279ae5f1bbfc246b9f33522c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html#ae903b3cb279ae5f1bbfc246b9f33522c">DoCurveColorIndicator</a> (Rect rect, <a class="el" href="class_unity_editor_internal_1_1_curve_tree_view_node.html">CurveTreeViewNode</a> node)</td></tr>
+<tr class="separator:ae903b3cb279ae5f1bbfc246b9f33522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ab3955a770557cf680c7bede57b3a1258"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html#ab3955a770557cf680c7bede57b3a1258">s_RowRightOffset</a> = 10</td></tr>
+<tr class="separator:ab3955a770557cf680c7bede57b3a1258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8ff3cfe644fcf2be20b658dd64be6a"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html#a0e8ff3cfe644fcf2be20b658dd64be6a">s_ColorIndicatorTopMargin</a> = 3</td></tr>
+<tr class="separator:a0e8ff3cfe644fcf2be20b658dd64be6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6e2e5af2fb167620ee63522b3c7e4b"><td class="memItemLeft" align="right" valign="top">static readonly Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html#a5b6e2e5af2fb167620ee63522b3c7e4b">s_KeyColorForNonCurves</a> = new Color(0.7f, 0.7f, 0.7f, 0.5f)</td></tr>
+<tr class="separator:a5b6e2e5af2fb167620ee63522b3c7e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7581e1e51ce39bdfe34cdaa274efd70a"><td class="memItemLeft" align="right" valign="top">static readonly Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html#a7581e1e51ce39bdfe34cdaa274efd70a">s_ChildrenCurveLabelColor</a> = new Color(1.0f, 1.0f, 1.0f, 0.7f)</td></tr>
+<tr class="separator:a7581e1e51ce39bdfe34cdaa274efd70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -168,6 +186,49 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00040">40</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae903b3cb279ae5f1bbfc246b9f33522c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae903b3cb279ae5f1bbfc246b9f33522c">&#9670;&nbsp;</a></span>DoCurveColorIndicator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditorInternal.BindingTreeViewGUI.DoCurveColorIndicator </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_internal_1_1_curve_tree_view_node.html">CurveTreeViewNode</a>&#160;</td>
+          <td class="paramname"><em>node</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00045">45</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_internal_1_1_binding_tree_view_g_u_i_ae903b3cb279ae5f1bbfc246b9f33522c_icgraph.png" border="0" usemap="#aclass_unity_editor_internal_1_1_binding_tree_view_g_u_i_ae903b3cb279ae5f1bbfc246b9f33522c_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -272,11 +333,113 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00020">20</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_internal_1_1_binding_tree_view_g_u_i_a561cdbd234bb421c7c2335b53168652a_cgraph.png" border="0" usemap="#aclass_unity_editor_internal_1_1_binding_tree_view_g_u_i_a561cdbd234bb421c7c2335b53168652a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7581e1e51ce39bdfe34cdaa274efd70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7581e1e51ce39bdfe34cdaa274efd70a">&#9670;&nbsp;</a></span>s_ChildrenCurveLabelColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Color UnityEditorInternal.BindingTreeViewGUI.s_ChildrenCurveLabelColor = new Color(1.0f, 1.0f, 1.0f, 0.7f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00012">12</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0e8ff3cfe644fcf2be20b658dd64be6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8ff3cfe644fcf2be20b658dd64be6a">&#9670;&nbsp;</a></span>s_ColorIndicatorTopMargin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditorInternal.BindingTreeViewGUI.s_ColorIndicatorTopMargin = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00010">10</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5b6e2e5af2fb167620ee63522b3c7e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6e2e5af2fb167620ee63522b3c7e4b">&#9670;&nbsp;</a></span>s_KeyColorForNonCurves</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Color UnityEditorInternal.BindingTreeViewGUI.s_KeyColorForNonCurves = new Color(0.7f, 0.7f, 0.7f, 0.5f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00011">11</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab3955a770557cf680c7bede57b3a1258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3955a770557cf680c7bede57b3a1258">&#9670;&nbsp;</a></span>s_RowRightOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float UnityEditorInternal.BindingTreeViewGUI.s_RowRightOffset = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html#l00009">9</a> of file <a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Animation/<a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Animation/<a class="el" href="_binding_tree_view_data_source_g_u_i_8cs_source.html">BindingTreeViewDataSourceGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

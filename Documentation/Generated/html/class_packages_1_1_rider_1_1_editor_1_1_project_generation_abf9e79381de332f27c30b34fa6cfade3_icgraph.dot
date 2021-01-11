@@ -7,4 +7,12 @@ digraph "Packages.Rider.Editor.ProjectGeneration.SolutionFile"
   Node1 [label="Packages.Rider.Editor.Project\lGeneration.SolutionFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="Packages.Rider.Editor.Project\lGeneration.HasSolutionBeenGenerated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#add02f728d5b30eb5ab7714322c97a2b2",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Packages.Rider.Editor.Project\lGeneration.SyncSolution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a658821a6b0fc5938aa67c3ef9d5408ed",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Packages.Rider.Editor.Project\lGeneration.GenerateAndWriteSolution\lAndProjects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a98c773d55e6fc95774f6eb998a8c2ff8",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Packages.Rider.Editor.Project\lGeneration.Sync",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#a7df4c31a74fb47f70fb901fc0e93b8a2",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Packages.Rider.Editor.Project\lGeneration.SyncIfNeeded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_project_generation.html#ab9afac3af177b6017d48ea0dc68636ef",tooltip="Syncs the scripting solution if any affected files are relevant."];
 }

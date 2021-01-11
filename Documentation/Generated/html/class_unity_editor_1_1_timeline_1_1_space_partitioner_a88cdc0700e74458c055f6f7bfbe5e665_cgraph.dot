@@ -6,5 +6,5 @@ digraph "UnityEditor.Timeline.SpacePartitioner.AddBounds"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Space\lPartitioner.AddBounds",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEngine.Timeline.Interval\lTree.Add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_interval_tree.html#a12421db591e21123842a8a9b960da0f9",tooltip="Add an IInterval to the tree"];
+  Node2 [label="UnityEditor.Timeline.Space\lPartitioner.Entry.FromFloat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html#ad37e5465f3cba90b73b02b4f1fe0c7cd",tooltip=" "];
 }

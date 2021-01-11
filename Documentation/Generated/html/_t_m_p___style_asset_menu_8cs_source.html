@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/TMP_StyleAssetMenu.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/TMP_StyleAssetMenu.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,11 +94,11 @@ $(document).ready(function(){initNavTree('_t_m_p___style_asset_menu_8cs_source.h
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro_1_1_editor_utilities.html">TMPro.EditorUtilities</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>TMP_StyleAssetMenu</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu.html">TMP_StyleAssetMenu</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [MenuItem(<span class="stringliteral">&quot;Assets/Create/TextMeshPro/Style Sheet&quot;</span>, <span class="keyword">false</span>, 120)]</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> CreateTextMeshProObjectPerform()</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu.html#a0cf76bd2de42165b0139db2c1d802dbf">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu.html#a0cf76bd2de42165b0139db2c1d802dbf">CreateTextMeshProObjectPerform</a>()</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordtype">string</span> filePath;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (Selection.assetGUIDs.Length == 0)</div>
@@ -122,10 +122,10 @@ $(document).ready(function(){initNavTree('_t_m_p___style_asset_menu_8cs_source.h
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordtype">string</span> filePathWithName = AssetDatabase.GenerateUniqueAssetPath(filePath + <span class="stringliteral">&quot;/Text StyleSheet.asset&quot;</span>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            TMP_StyleSheet styleSheet = ScriptableObject.CreateInstance&lt;TMP_StyleSheet&gt;();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___style_sheet.html">TMP_StyleSheet</a> styleSheet = ScriptableObject.CreateInstance&lt;<a class="code" href="class_t_m_pro_1_1_t_m_p___style_sheet.html">TMP_StyleSheet</a>&gt;();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// Create Normal default style</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            TMP_Style style = <span class="keyword">new</span> TMP_Style(<span class="stringliteral">&quot;Normal&quot;</span>, <span class="keywordtype">string</span>.Empty, <span class="keywordtype">string</span>.Empty);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___style.html">TMP_Style</a> style = <span class="keyword">new</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___style.html">TMP_Style</a>(<span class="stringliteral">&quot;Normal&quot;</span>, <span class="keywordtype">string</span>.Empty, <span class="keywordtype">string</span>.Empty);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            styleSheet.styles.Add(style);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            AssetDatabase.CreateAsset(styleSheet, filePathWithName);</div>
@@ -143,7 +143,11 @@ $(document).ready(function(){initNavTree('_t_m_p___style_asset_menu_8cs_source.h
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_collab_analytics_8cs_source.html#l00003">CollabAnalytics.cs:4</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_sheet_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___style_sheet.html">TMPro.TMP_StyleSheet</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___style_sheet_8cs_source.html#l00010">TMP_StyleSheet.cs:11</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu_html"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu.html">TMPro.EditorUtilities.TMP_StyleAssetMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___style_asset_menu_8cs_source.html#l00010">TMP_StyleAssetMenu.cs:11</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu_html_a0cf76bd2de42165b0139db2c1d802dbf"><div class="ttname"><a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___style_asset_menu.html#a0cf76bd2de42165b0139db2c1d802dbf">TMPro.EditorUtilities.TMP_StyleAssetMenu.CreateTextMeshProObjectPerform</a></div><div class="ttdeci">static void CreateTextMeshProObjectPerform()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___style_asset_menu_8cs_source.html#l00014">TMP_StyleAssetMenu.cs:14</a></div></div>
 <div class="ttc" id="anamespace_t_m_pro_1_1_editor_utilities_html"><div class="ttname"><a href="namespace_t_m_pro_1_1_editor_utilities.html">TMPro.EditorUtilities</a></div><div class="ttdef"><b>Definition:</b> <a href="_dropdown_option_list_drawer_8cs_source.html#l00006">DropdownOptionListDrawer.cs:7</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___style_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___style.html">TMPro.TMP_Style</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___style_8cs_source.html#l00009">TMP_Style.cs:10</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:6</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

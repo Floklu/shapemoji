@@ -19,6 +19,8 @@ digraph "UnityEngine.Timeline.RuntimeClip.EvaluateAt"
   Node7 [label="UnityEngine.Timeline.Runtime\lClip.SetTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_runtime_clip.html#a83be86440f6899d1f846bcd80cfc6061",tooltip=" "];
   Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node8 [label="UnityEngine.Timeline.Timeline\lClip.ToLocalTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_clip.html#a0e93badf4d11e12235eec8e938263184",tooltip="Converts from global time to a clips local time."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEngine.Timeline.Timeline\lClip.GetExtrapolatedTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_timeline_clip.html#ac450e9204a02d72bcb7bac55471f6da9",tooltip=" "];
   Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

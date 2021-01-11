@@ -6,4 +6,12 @@ digraph "UnityEditor.Timeline.TrackParametersCurveDataSource"
   Node1 [label="UnityEditor.Timeline.Track\lParametersCurveDataSource",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="CurveDataSource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_curve_data_source.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_TrackGUI" ,fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.IRowGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_CurvesProxy" ,fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Curves\lProxy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_curves_proxy.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ICurvesOwner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_OriginalOwner" ,fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.ICurves\lOwner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html",tooltip=" "];
 }

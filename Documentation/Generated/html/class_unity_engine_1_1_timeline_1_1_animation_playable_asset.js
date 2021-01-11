@@ -1,13 +1,34 @@
 var class_unity_engine_1_1_timeline_1_1_animation_playable_asset =
 [
+    [ "AnimationPlayableAssetUpgrade", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset_1_1_animation_playable_asset_upgrade.html", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset_1_1_animation_playable_asset_upgrade" ],
     [ "LoopMode", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834e", [
       [ "UseSourceAsset", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834ea88c32444db4793e34b96d69a0c635426", null ],
       [ "On", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834ea521c36a31c2762741cf0f8890cbe05e3", null ],
       [ "Off", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa01707fe3f113b2e01fc742ee390834ead15305d7a4e34e02489c74a5ef542f36", null ]
     ] ],
+    [ "Versions", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a2edbb512995d7d8c8b6d35645e4ab403", [
+      [ "Initial", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a2edbb512995d7d8c8b6d35645e4ab403a4f2a91e15af2631ff9424564b8a45fb2", null ],
+      [ "RotationAsEuler", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a2edbb512995d7d8c8b6d35645e4ab403a5a0112bc00d327483955904300bb0df5", null ]
+    ] ],
     [ "CreatePlayable", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8a5b07dd9ee2448159dbf70462633384", null ],
     [ "GatherProperties", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a67b7157e3342cac77daaf3961b7d875d", null ],
+    [ "OnAfterDeserialize", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aa457d650099ee3010fe2edebba5221ee", null ],
+    [ "OnBeforeSerialize", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a7f7966fadbcf87b4334e1ead13c58552", null ],
+    [ "OnUpgradeFromVersion", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#aaadb4437fc36b380b169ccf35ecd70f4", null ],
     [ "ResetOffsets", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a2f1e1f0051c7e2c8b244244db9763c01", null ],
+    [ "ShouldApplyOffset", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#afba42617c26d0d7fb630381e30e766af", null ],
+    [ "ShouldApplyScaleRemove", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#ac9c0c97744948fedf60ebdb07db34406", null ],
+    [ "k_LatestVersion", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a380dabc2e0b509665e4159b80ec5e497", null ],
+    [ "m_ApplyFootIK", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#abd13e3efff4657e58d0db4b2dc526634", null ],
+    [ "m_Clip", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a43f10217c48ba4a56b20b07c7cf4e145", null ],
+    [ "m_EulerAngles", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a078824677410941f2eb88f900c4eb52f", null ],
+    [ "m_Loop", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a15d6e0a02f4c8bb94fcb384412ab7587", null ],
+    [ "m_MatchTargetFields", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#ae68c274420e6e65b60f8748e170c0c18", null ],
+    [ "m_Position", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#adac9d3109c0ac4352effed38fbfb62bd", null ],
+    [ "m_RemoveStartOffset", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a7e2ee150a1214dd1327c79889686b087", null ],
+    [ "m_Rotation", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#ae21aa083011809185165e08c81b9268d", null ],
+    [ "m_UseTrackMatchFields", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a98a5715d83c8a4c67532e330655c6231", null ],
+    [ "m_Version", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#ac9a9c17cd135e2725dd905de00bf3da4", null ],
     [ "appliedOffsetMode", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a5a7b4921fa8ef653c842b1d0db531566", null ],
     [ "applyFootIK", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a4292da37606524c83a096036398fbd6a", null ],
     [ "clip", "class_unity_engine_1_1_timeline_1_1_animation_playable_asset.html#a8db52ada6e34ac04e62c415b0ec6deba", null ],

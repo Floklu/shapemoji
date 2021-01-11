@@ -11,19 +11,22 @@ var dir_3e1df7ee8c266b64e4e754857c565f24 =
       [ "RectangleSelect", "class_unity_editor_1_1_timeline_1_1_rectangle_select.html", "class_unity_editor_1_1_timeline_1_1_rectangle_select" ]
     ] ],
     [ "RectangleTool.cs", "_rectangle_tool_8cs.html", [
-      [ "RectangleTool", "class_unity_editor_1_1_timeline_1_1_rectangle_tool.html", "class_unity_editor_1_1_timeline_1_1_rectangle_tool" ]
+      [ "RectangleTool", "class_unity_editor_1_1_timeline_1_1_rectangle_tool.html", "class_unity_editor_1_1_timeline_1_1_rectangle_tool" ],
+      [ "TimelinePoint", "struct_unity_editor_1_1_timeline_1_1_rectangle_tool_1_1_timeline_point.html", "struct_unity_editor_1_1_timeline_1_1_rectangle_tool_1_1_timeline_point" ]
     ] ],
     [ "RectangleZoom.cs", "_rectangle_zoom_8cs.html", [
       [ "RectangleZoom", "class_unity_editor_1_1_timeline_1_1_rectangle_zoom.html", "class_unity_editor_1_1_timeline_1_1_rectangle_zoom" ]
     ] ],
     [ "SelectAndMoveItem.cs", "_select_and_move_item_8cs.html", [
       [ "ClearSelection", "class_unity_editor_1_1_timeline_1_1_clear_selection.html", "class_unity_editor_1_1_timeline_1_1_clear_selection" ],
+      [ "ItemSelection", "class_unity_editor_1_1_timeline_1_1_item_selection.html", "class_unity_editor_1_1_timeline_1_1_item_selection" ],
       [ "SelectAndMoveItem", "class_unity_editor_1_1_timeline_1_1_select_and_move_item.html", "class_unity_editor_1_1_timeline_1_1_select_and_move_item" ]
     ] ],
     [ "TrackZoom.cs", "_track_zoom_8cs.html", [
       [ "TrackZoom", "class_unity_editor_1_1_timeline_1_1_track_zoom.html", "class_unity_editor_1_1_timeline_1_1_track_zoom" ]
     ] ],
     [ "TrimClip.cs", "_trim_clip_8cs.html", [
-      [ "TrimClip", "class_unity_editor_1_1_timeline_1_1_trim_clip.html", "class_unity_editor_1_1_timeline_1_1_trim_clip" ]
+      [ "TrimClip", "class_unity_editor_1_1_timeline_1_1_trim_clip.html", "class_unity_editor_1_1_timeline_1_1_trim_clip" ],
+      [ "TrimClipAttractionHandler", "class_unity_editor_1_1_timeline_1_1_trim_clip_1_1_trim_clip_attraction_handler.html", "class_unity_editor_1_1_timeline_1_1_trim_clip_1_1_trim_clip_attraction_handler" ]
     ] ]
 ];

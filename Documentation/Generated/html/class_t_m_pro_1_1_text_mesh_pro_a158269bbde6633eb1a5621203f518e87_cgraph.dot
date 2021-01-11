@@ -7,4 +7,10 @@ digraph "TMPro.TextMeshPro.OnDestroy"
   Node1 [label="TMPro.TextMeshPro.OnDestroy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_UpdateManager.\lUnRegisterTextElementForRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#a230503254fd8d8ebc2ba1849ff30dad8",tooltip="Function to unregister elements which no longer require a rebuild."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_UpdateManager.\lInternalUnRegisterTextElement\lForGraphicRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#a702bc5628d42144979b453dbe1d74193",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_UpdateManager.\lInternalUnRegisterTextElement\lForLayoutRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#a72536893b55821f950d64a191907f6bb",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_UpdateManager.\lInternalUnRegisterTextObject\lForUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#a506d7bd1acada0d495706a5928a599c4",tooltip=" "];
 }

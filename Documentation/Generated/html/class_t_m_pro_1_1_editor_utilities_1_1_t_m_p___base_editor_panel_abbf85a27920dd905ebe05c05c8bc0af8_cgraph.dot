@@ -7,4 +7,6 @@ digraph "TMPro.EditorUtilities.TMP_BaseEditorPanel.DrawMargins"
   Node1 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.DrawMargins",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.DrawMarginProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#af44c33a23c1dc0d7821d96be352c8d56",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_BaseEditorPanel.DrawMarginField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_editor_panel.html#a3e2e1c4f33deb5f941f8322df6c60808",tooltip=" "];
 }

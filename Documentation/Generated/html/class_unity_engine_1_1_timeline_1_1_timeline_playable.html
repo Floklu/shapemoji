@@ -84,6 +84,9 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_ti
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_timeline_playable-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.TimelinePlayable Class Reference</div>  </div>
@@ -117,12 +120,106 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a39d9a13d92b7770d062756a55cc17692"><td class="memItemLeft" align="right" valign="top">static ScriptPlayable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html">TimelinePlayable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a39d9a13d92b7770d062756a55cc17692">Create</a> (PlayableGraph graph, IEnumerable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt; tracks, GameObject go, bool autoRebalance, bool createOutputs)</td></tr>
 <tr class="memdesc:a39d9a13d92b7770d062756a55cc17692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an instance of a <a class="el" href="namespace_unity_engine_1_1_timeline.html">Timeline</a>  <a href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a39d9a13d92b7770d062756a55cc17692">More...</a><br /></td></tr>
 <tr class="separator:a39d9a13d92b7770d062756a55cc17692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3a36013433c319b2d0997445b0e3b3ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a3a36013433c319b2d0997445b0e3b3ce">CompileTrackList</a> (PlayableGraph graph, Playable timelinePlayable, IEnumerable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt; tracks, GameObject go, bool createOutputs)</td></tr>
+<tr class="separator:a3a36013433c319b2d0997445b0e3b3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97b25eaa1abc69b8066256c49134f1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#aa97b25eaa1abc69b8066256c49134f1c">CreateTrackOutput</a> (PlayableGraph graph, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, GameObject go, Playable playable, int port)</td></tr>
+<tr class="separator:aa97b25eaa1abc69b8066256c49134f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58ef52368fee4bf8d55b81a6885aa25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#ad58ef52368fee4bf8d55b81a6885aa25">EvaluateWeightsForAnimationPlayableOutput</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, AnimationPlayableOutput animOutput)</td></tr>
+<tr class="separator:ad58ef52368fee4bf8d55b81a6885aa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168a514bf2d0951369e32c6b119c5d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a168a514bf2d0951369e32c6b119c5d06">EvaluateAnimationPreviewUpdateCallback</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, AnimationPlayableOutput animOutput)</td></tr>
+<tr class="separator:a168a514bf2d0951369e32c6b119c5d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a937fa8e042b5b045bb531101c298be53"><td class="memItemLeft" align="right" valign="top">Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a937fa8e042b5b045bb531101c298be53">CreateTrackPlayable</a> (PlayableGraph graph, Playable timelinePlayable, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, GameObject go, bool createOutputs)</td></tr>
+<tr class="separator:a937fa8e042b5b045bb531101c298be53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ef0e257a7d1dcdb1a32956ac7b8222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a94ef0e257a7d1dcdb1a32956ac7b8222">Evaluate</a> (Playable playable, FrameData frameData)</td></tr>
+<tr class="separator:a94ef0e257a7d1dcdb1a32956ac7b8222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae94269506d205c48b4f9f95adbfa41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#aaae94269506d205c48b4f9f95adbfa41">CacheTrack</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> track, Playable playable, int port, Playable parent)</td></tr>
+<tr class="separator:aaae94269506d205c48b4f9f95adbfa41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a4229c63ae8f830cc17707790dc6911c3"><td class="memItemLeft" align="right" valign="top">static Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a4229c63ae8f830cc17707790dc6911c3">CreatePlayableGraph</a> (PlayableGraph graph, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> asset, GameObject go, <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a> &gt; tree, Playable timelinePlayable)</td></tr>
+<tr class="separator:a4229c63ae8f830cc17707790dc6911c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c49b69a2a97faec485e7e3914ad84e6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a2c49b69a2a97faec485e7e3914ad84e6">ForAOTCompilationOnly</a> ()</td></tr>
+<tr class="separator:a2c49b69a2a97faec485e7e3914ad84e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aca7a8e2a8a470ae5687fef0c678679d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#aca7a8e2a8a470ae5687fef0c678679d9">m_IntervalTree</a> = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt;()</td></tr>
+<tr class="separator:aca7a8e2a8a470ae5687fef0c678679d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b0ffebfe5286f57dd1957c59e0209f"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a19b0ffebfe5286f57dd1957c59e0209f">m_ActiveClips</a> = new List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt;()</td></tr>
+<tr class="separator:a19b0ffebfe5286f57dd1957c59e0209f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e50b1396deb8be9b2d0ba6420ae03a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#ad9e50b1396deb8be9b2d0ba6420ae03a">m_CurrentListOfActiveClips</a></td></tr>
+<tr class="separator:ad9e50b1396deb8be9b2d0ba6420ae03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22c414b69c68871033e3210eecc0830"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#af22c414b69c68871033e3210eecc0830">m_ActiveBit</a> = 0</td></tr>
+<tr class="separator:af22c414b69c68871033e3210eecc0830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d707edb9686712f55f25e14bed507bd"><td class="memItemLeft" align="right" valign="top">List&lt; ITimelineEvaluateCallback &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#a8d707edb9686712f55f25e14bed507bd">m_EvaluateCallbacks</a> = new List&lt;ITimelineEvaluateCallback&gt;()</td></tr>
+<tr class="separator:a8d707edb9686712f55f25e14bed507bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc53ca1d79b3f9a762ca251f61fb23b1"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, Playable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_playable.html#adc53ca1d79b3f9a762ca251f61fb23b1">m_PlayableCache</a> = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, Playable&gt;()</td></tr>
+<tr class="separator:adc53ca1d79b3f9a762ca251f61fb23b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The root Playable generated by timeline. </p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00049">49</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaae94269506d205c48b4f9f95adbfa41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae94269506d205c48b4f9f95adbfa41">&#9670;&nbsp;</a></span>CacheTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelinePlayable.CacheTrack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00299">299</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_aaae94269506d205c48b4f9f95adbfa41_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_aaae94269506d205c48b4f9f95adbfa41_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a275e892709b35b475ec50b7261bba269"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a275e892709b35b475ec50b7261bba269">&#9670;&nbsp;</a></span>Compile()</h2>
 
@@ -187,6 +284,77 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00098">98</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a275e892709b35b475ec50b7261bba269_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a275e892709b35b475ec50b7261bba269_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3a36013433c319b2d0997445b0e3b3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a36013433c319b2d0997445b0e3b3ce">&#9670;&nbsp;</a></span>CompileTrackList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelinePlayable.CompileTrackList </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>timelinePlayable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IEnumerable&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt;&#160;</td>
+          <td class="paramname"><em>tracks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>createOutputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00124">124</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a3a36013433c319b2d0997445b0e3b3ce_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a3a36013433c319b2d0997445b0e3b3ce_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a3a36013433c319b2d0997445b0e3b3ce_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a3a36013433c319b2d0997445b0e3b3ce_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -264,6 +432,360 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a4229c63ae8f830cc17707790dc6911c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4229c63ae8f830cc17707790dc6911c3">&#9670;&nbsp;</a></span>CreatePlayableGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Playable UnityEngine.Timeline.TimelinePlayable.CreatePlayableGraph </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>asset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a> &gt;&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>timelinePlayable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00187">187</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a4229c63ae8f830cc17707790dc6911c3_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a4229c63ae8f830cc17707790dc6911c3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa97b25eaa1abc69b8066256c49134f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97b25eaa1abc69b8066256c49134f1c">&#9670;&nbsp;</a></span>CreateTrackOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelinePlayable.CreateTrackOutput </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00139">139</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_aa97b25eaa1abc69b8066256c49134f1c_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_aa97b25eaa1abc69b8066256c49134f1c_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_aa97b25eaa1abc69b8066256c49134f1c_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_aa97b25eaa1abc69b8066256c49134f1c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a937fa8e042b5b045bb531101c298be53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937fa8e042b5b045bb531101c298be53">&#9670;&nbsp;</a></span>CreateTrackPlayable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playable UnityEngine.Timeline.TimelinePlayable.CreateTrackPlayable </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>timelinePlayable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>createOutputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00192">192</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a937fa8e042b5b045bb531101c298be53_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a937fa8e042b5b045bb531101c298be53_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a937fa8e042b5b045bb531101c298be53_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a937fa8e042b5b045bb531101c298be53_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a94ef0e257a7d1dcdb1a32956ac7b8222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ef0e257a7d1dcdb1a32956ac7b8222">&#9670;&nbsp;</a></span>Evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelinePlayable.Evaluate </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>frameData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00252">252</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a94ef0e257a7d1dcdb1a32956ac7b8222_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a94ef0e257a7d1dcdb1a32956ac7b8222_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a94ef0e257a7d1dcdb1a32956ac7b8222_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a94ef0e257a7d1dcdb1a32956ac7b8222_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a168a514bf2d0951369e32c6b119c5d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168a514bf2d0951369e32c6b119c5d06">&#9670;&nbsp;</a></span>EvaluateAnimationPreviewUpdateCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelinePlayable.EvaluateAnimationPreviewUpdateCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationPlayableOutput&#160;</td>
+          <td class="paramname"><em>animOutput</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00182">182</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a168a514bf2d0951369e32c6b119c5d06_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a168a514bf2d0951369e32c6b119c5d06_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad58ef52368fee4bf8d55b81a6885aa25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58ef52368fee4bf8d55b81a6885aa25">&#9670;&nbsp;</a></span>EvaluateWeightsForAnimationPlayableOutput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.TimelinePlayable.EvaluateWeightsForAnimationPlayableOutput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AnimationPlayableOutput&#160;</td>
+          <td class="paramname"><em>animOutput</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00177">177</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_ad58ef52368fee4bf8d55b81a6885aa25_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_ad58ef52368fee4bf8d55b81a6885aa25_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2c49b69a2a97faec485e7e3914ad84e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c49b69a2a97faec485e7e3914ad84e6">&#9670;&nbsp;</a></span>ForAOTCompilationOnly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEngine.Timeline.TimelinePlayable.ForAOTCompilationOnly </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00305">305</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+
+</div>
+</div>
 <a id="a2ef452b5a04ed625cc8b788c30c35ff4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ef452b5a04ed625cc8b788c30c35ff4">&#9670;&nbsp;</a></span>PrepareFrame()</h2>
 
@@ -300,11 +822,161 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00239">239</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_timeline_playable_a2ef452b5a04ed625cc8b788c30c35ff4_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_timeline_playable_a2ef452b5a04ed625cc8b788c30c35ff4_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af22c414b69c68871033e3210eecc0830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22c414b69c68871033e3210eecc0830">&#9670;&nbsp;</a></span>m_ActiveBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEngine.Timeline.TimelinePlayable.m_ActiveBit = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00054">54</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+
+</div>
+</div>
+<a id="a19b0ffebfe5286f57dd1957c59e0209f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19b0ffebfe5286f57dd1957c59e0209f">&#9670;&nbsp;</a></span>m_ActiveClips</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt; UnityEngine.Timeline.TimelinePlayable.m_ActiveClips = new List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00052">52</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad9e50b1396deb8be9b2d0ba6420ae03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e50b1396deb8be9b2d0ba6420ae03a">&#9670;&nbsp;</a></span>m_CurrentListOfActiveClips</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt; UnityEngine.Timeline.TimelinePlayable.m_CurrentListOfActiveClips</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00053">53</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8d707edb9686712f55f25e14bed507bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d707edb9686712f55f25e14bed507bd">&#9670;&nbsp;</a></span>m_EvaluateCallbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;ITimelineEvaluateCallback&gt; UnityEngine.Timeline.TimelinePlayable.m_EvaluateCallbacks = new List&lt;ITimelineEvaluateCallback&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00056">56</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+
+</div>
+</div>
+<a id="aca7a8e2a8a470ae5687fef0c678679d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7a8e2a8a470ae5687fef0c678679d9">&#9670;&nbsp;</a></span>m_IntervalTree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt; UnityEngine.Timeline.TimelinePlayable.m_IntervalTree = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html">RuntimeElement</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00051">51</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
+
+</div>
+</div>
+<a id="adc53ca1d79b3f9a762ca251f61fb23b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc53ca1d79b3f9a762ca251f61fb23b1">&#9670;&nbsp;</a></span>m_PlayableCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, Playable&gt; UnityEngine.Timeline.TimelinePlayable.m_PlayableCache = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, Playable&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_playable_8cs_source.html#l00058">58</a> of file <a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/<a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/<a class="el" href="_timeline_playable_8cs_source.html">TimelinePlayable.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

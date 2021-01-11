@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.Timeline.Timeline\lWindow.OverlayData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_editor_1_1_timeline_1_1_timeline_window_1_1_overlay_data.html",tooltip=" "];
+  Node0 [label="UnityEditor.TestTools.Test\lRunner.CommandLineTest.Executer.\lExceptionHandling",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_command_line_test_1_1_executer_1_1_exception_handling.html",tooltip=" "];
 }

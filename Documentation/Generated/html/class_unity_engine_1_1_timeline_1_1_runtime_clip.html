@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_ru
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_runtime_clip-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.RuntimeClip Class Reference</div>  </div>
@@ -127,6 +129,20 @@ Properties</h2></td></tr>
 <tr class="separator:a58e51ab08048a2a16b81ff13e4b87d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356c4a0b4349cdff062226e00e074258"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html#a356c4a0b4349cdff062226e00e074258">enable</a><code> [set]</code></td></tr>
 <tr class="separator:a356c4a0b4349cdff062226e00e074258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a25ec4ba7d355920d077f6884a2386f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html#a25ec4ba7d355920d077f6884a2386f92">Create</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html#a633d034380072b2c60724691b4a5a8ee">clip</a>, Playable clipPlayable, Playable parentMixer)</td></tr>
+<tr class="separator:a25ec4ba7d355920d077f6884a2386f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6cbd9c06b6cac590b54b745c7b6a80a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html#a6cbd9c06b6cac590b54b745c7b6a80a1">m_Clip</a></td></tr>
+<tr class="separator:a6cbd9c06b6cac590b54b745c7b6a80a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab483e7f5e6c9956f6e2537778f9a1e65"><td class="memItemLeft" align="right" valign="top">Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html#ab483e7f5e6c9956f6e2537778f9a1e65">m_Playable</a></td></tr>
+<tr class="separator:ab483e7f5e6c9956f6e2537778f9a1e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3455f11e56f822803f3370a29854fc"><td class="memItemLeft" align="right" valign="top">Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_clip.html#a7d3455f11e56f822803f3370a29854fc">m_ParentMixer</a></td></tr>
+<tr class="separator:a7d3455f11e56f822803f3370a29854fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -165,10 +181,64 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_runtime_clip_8cs_source.html#l00025">25</a> of file <a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_runtime_clip_a7b4df6a9f9a8d80995885ed56e808768_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_runtime_clip_a7b4df6a9f9a8d80995885ed56e808768_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a25ec4ba7d355920d077f6884a2386f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ec4ba7d355920d077f6884a2386f92">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.RuntimeClip.Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a>&#160;</td>
+          <td class="paramname"><em>clip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>clipPlayable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>parentMixer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_runtime_clip_8cs_source.html#l00030">30</a> of file <a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_runtime_clip_a25ec4ba7d355920d077f6884a2386f92_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_runtime_clip_a25ec4ba7d355920d077f6884a2386f92_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a7ea80d8e08fc1bb42e7bbc37945ce552"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ea80d8e08fc1bb42e7bbc37945ce552">&#9670;&nbsp;</a></span>EvaluateAt()</h2>
 
@@ -295,6 +365,79 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_engine_1_1_timeline_1_1_runtime_clip_a83be86440f6899d1f846bcd80cfc6061_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_runtime_clip_a83be86440f6899d1f846bcd80cfc6061_icgraph" alt=""/></div>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6cbd9c06b6cac590b54b745c7b6a80a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbd9c06b6cac590b54b745c7b6a80a1">&#9670;&nbsp;</a></span>m_Clip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_timeline_clip.html">TimelineClip</a> UnityEngine.Timeline.RuntimeClip.m_Clip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_runtime_clip_8cs_source.html#l00011">11</a> of file <a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7d3455f11e56f822803f3370a29854fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3455f11e56f822803f3370a29854fc">&#9670;&nbsp;</a></span>m_ParentMixer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playable UnityEngine.Timeline.RuntimeClip.m_ParentMixer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_runtime_clip_8cs_source.html#l00013">13</a> of file <a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab483e7f5e6c9956f6e2537778f9a1e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab483e7f5e6c9956f6e2537778f9a1e65">&#9670;&nbsp;</a></span>m_Playable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playable UnityEngine.Timeline.RuntimeClip.m_Playable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_runtime_clip_8cs_source.html#l00012">12</a> of file <a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a>.</p>
 
 </div>
 </div>
@@ -444,7 +587,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Evaluation/<a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Evaluation/<a class="el" href="_runtime_clip_8cs_source.html">RuntimeClip.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

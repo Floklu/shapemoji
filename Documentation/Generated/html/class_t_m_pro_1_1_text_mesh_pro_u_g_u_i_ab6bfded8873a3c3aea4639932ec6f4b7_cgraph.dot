@@ -9,4 +9,13 @@ digraph "TMPro.TextMeshProUGUI.SetOutlineColor"
   Node2 [label="TMPro.TMP_Text.CreateMaterial\lInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a427ecf798a6c03dd9f3230b3ceaf1f61",tooltip="Method to set the materials of the text and sub text objects."];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="TMPro.TMP_Text.GetPadding\lForMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a7182ea72ca6b396af6cae05cee59243d",tooltip="Get the padding value for the currently assigned material"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.ShaderUtilities.Get\lPadding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_shader_utilities.html#a4763b7c59759a96bfbf996302b611ff2",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.ShaderUtilities.Get\lShaderPropertyIDs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_shader_utilities.html#a0274e3055f8915a0178e3bdcec5118cb",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.ShaderUtilities.Update\lShaderRatios",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_shader_utilities.html#a521a6bf81a833a2f3768c3a70028c118",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.ShaderUtilities.Is\lMaskingEnabled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_shader_utilities.html#a65ecd279b8bf1e963d3e14e8fa613da4",tooltip=" "];
 }

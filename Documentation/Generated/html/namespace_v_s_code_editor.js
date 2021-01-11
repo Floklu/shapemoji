@@ -8,6 +8,7 @@ var namespace_v_s_code_editor =
     [ "IGenerator", "interface_v_s_code_editor_1_1_i_generator.html", "interface_v_s_code_editor_1_1_i_generator" ],
     [ "IGUIDGenerator", "interface_v_s_code_editor_1_1_i_g_u_i_d_generator.html", "interface_v_s_code_editor_1_1_i_g_u_i_d_generator" ],
     [ "ProjectGeneration", "class_v_s_code_editor_1_1_project_generation.html", "class_v_s_code_editor_1_1_project_generation" ],
+    [ "SolutionGuidGenerator", "class_v_s_code_editor_1_1_solution_guid_generator.html", "class_v_s_code_editor_1_1_solution_guid_generator" ],
     [ "VSCodeDiscovery", "class_v_s_code_editor_1_1_v_s_code_discovery.html", "class_v_s_code_editor_1_1_v_s_code_discovery" ],
     [ "VSCodeScriptEditor", "class_v_s_code_editor_1_1_v_s_code_script_editor.html", "class_v_s_code_editor_1_1_v_s_code_script_editor" ]
 ];

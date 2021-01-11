@@ -6,6 +6,7 @@ var class_unity_editor_1_1_timeline_1_1_null_sequence_state =
     [ "TimeAsString", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a821d0e7ddaf939d7baa31bd46f3ec9e1", null ],
     [ "ToGlobalTime", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#ac8cb0f6ab3a85f8a6fd631183198c154", null ],
     [ "ToLocalTime", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a631c51869a94baacf6b06c6d580a9a47", null ],
+    [ "m_ViewModel", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#aaf2974bb278da51df19ac7c60fe75c0d", null ],
     [ "asset", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a86ae5dd5b43913287b91027db4463241", null ],
     [ "director", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#a2df315b6b70169a718405ca5d1d62f68", null ],
     [ "duration", "class_unity_editor_1_1_timeline_1_1_null_sequence_state.html#acb15d5e410119a6f79a4e8efd90ae093", null ],

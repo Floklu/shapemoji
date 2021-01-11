@@ -6,5 +6,17 @@ digraph "UnityEditor.Timeline.TimelineTreeViewGUI.Reload"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Timeline\lTreeViewGUI.Reload",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Animation\lClipCurveCache.ClearCachedProxyClips",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#afe5be08ff31dbe4db08bac7ae462cb91",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Timeline\lTreeView.CalculateRowRects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1c05e1c7fe6a6cd897b5194d3245fcab",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lTreeView.GetSizeOfRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a2e81a898a100d30ef09e2f58e4c40957",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lTreeView.GetSpacing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_tree_view.html#a1702ffa398e7bd77a42856bb1aab4478",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lTrackBaseGUI.GetVerticalSpacingBetween\lTracks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a63c9a5cb746eaeec97cadc049fa3e1b4",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Timeline\lGroupGUI.SetExpanded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a1273eeccd2aa0203d292b6abd78848ce",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Animation\lClipCurveCache.ClearCachedProxyClips",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html#afe5be08ff31dbe4db08bac7ae462cb91",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Timeline\lDataSource.ExpandItems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_data_source.html#a159df415a255687645c8aea47d133235",tooltip=" "];
 }

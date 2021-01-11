@@ -8,5 +8,15 @@ digraph "TMPro.TMP_Dropdown.CreateBlocker"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_Dropdown.Hide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a7b1a625bbfae2222ce459deb2df40afd",tooltip="Hide the dropdown list. I.e. close it."];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="TMPro.TMP_Dropdown.Destroy\lBlocker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a1bf1e08099436573116705840810dc3f",tooltip="Convenience method to explicitly destroy the previously generated blocker object"];
+  Node3 [label="TMPro.TMP_Dropdown.Alpha\lFadeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#aff167da326d2dd7b2457f23f14fd9c39",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_Dropdown.Delayed\lDestroyDropdownList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a46cd4f19a98c232b1e28ddc7a08925d2",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_Dropdown.Immediate\lDestroyDropdownList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a699c7c613477d55a6a62417d6b31ad13",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_Dropdown.Destroy\lDropdownList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#adf7f42bd73c1274367a38b60596f4645",tooltip="Convenience method to explicitly destroy the previously generated dropdown list"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TMP_Dropdown.DestroyItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a1a885c39fedfa1f678c50f8d3c4f55b8",tooltip="Convenience method to explicitly destroy the previously generated Items."];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TMPro.TMP_Dropdown.Destroy\lBlocker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown.html#a1bf1e08099436573116705840810dc3f",tooltip="Convenience method to explicitly destroy the previously generated blocker object"];
 }

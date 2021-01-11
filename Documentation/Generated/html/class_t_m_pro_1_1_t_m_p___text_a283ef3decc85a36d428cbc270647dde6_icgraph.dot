@@ -8,7 +8,7 @@ digraph "TMPro.TMP_Text.GetTextBounds"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_Text.GetRendered\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aac1235e0778a66ae1cf9c174196171c5",tooltip="Method returning the rendered width and height of the text object."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="TMPro.TMP_Text.GetRendered\lHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#ac94f45240acb3ae89c3c2a70437030ce",tooltip="Method returning the rendered height of the text object."];
+  Node3 [label="TMPro.TMP_Text.GetRendered\lHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a935fe16317c1b8250ca6b748dba7bd19",tooltip="Method returning the rendered height of the text object."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TMPro.TMP_Text.GetRendered\lWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aab9263cb25a2af2ef736c9e2d0f63e40",tooltip="Method returning the rendered width of the text object."];
+  Node4 [label="TMPro.TMP_Text.GetRendered\lWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a1c36b279765c95e9530d1e3ce2511d8d",tooltip="Method returning the rendered width of the text object."];
 }

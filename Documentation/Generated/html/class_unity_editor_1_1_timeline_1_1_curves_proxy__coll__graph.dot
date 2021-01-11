@@ -6,4 +6,6 @@ digraph "UnityEditor.Timeline.CurvesProxy"
   Node1 [label="UnityEditor.Timeline.Curves\lProxy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="ICurvesOwner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_OriginalOwner" ,fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.ICurves\lOwner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_engine_1_1_timeline_1_1_i_curves_owner.html",tooltip=" "];
 }
