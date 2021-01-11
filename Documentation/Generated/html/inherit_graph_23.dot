@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.ShaderFeature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i_1_1_shader_feature.html",tooltip="Representation of a #pragma shader_feature."];
+  Node0 [label="Packages.Rider.Editor.Plugin\lSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_plugin_settings.html",tooltip=" "];
 }

@@ -6,5 +6,11 @@ digraph "TMPro.EditorUtilities.TMP_FontAssetEditor.OnEnable"
   rankdir="LR";
   Node1 [label="TMPro.EditorUtilities.TMP\l_FontAssetEditor.OnEnable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.TMP_FontAsset.Read\lFontAssetDefinition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#ade90a42615b002bb0c31b06d497df510",tooltip=" "];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_FontAssetEditor.CleanFallback\lFontAssetTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___font_asset_editor.html#ac11f3bf8d81cd2697c710351e7e54d77",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_EditorUtility.FindMaterialReferences",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aedb608c58cdd10131bfd773a3fcbadcb",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_FontAsset.Read\lFontAssetDefinition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset.html#ade90a42615b002bb0c31b06d497df510",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_TextUtilities.\lGetSimpleHashCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text_utilities.html#a84e924d9b433452d0742b2efc6a532b7",tooltip="Function which returns a simple hashcode from a string."];
 }

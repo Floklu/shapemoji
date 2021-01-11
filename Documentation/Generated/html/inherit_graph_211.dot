@@ -4,5 +4,18 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.Timeline.Utilities.\lKeyTraverser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_utilities_1_1_key_traverser.html",tooltip=" "];
+  Node802 [label="EditorWindow",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node802 -> Node803 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node803 [label="TMPro.EditorUtilities.TMPro\l_FontAssetCreatorWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___font_asset_creator_window.html",tooltip=" "];
+  Node802 -> Node804 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node804 [label="TMPro.TMP_ProjectConversion\lUtility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___project_conversion_utility.html",tooltip=" "];
+  Node802 -> Node805 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node805 [label="TMPro.TMP_SpriteAssetImporter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sprite_asset_importer.html",tooltip=" "];
+  Node802 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="UnityEditor.TestTools.Test\lRunner.TestRunnerWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_test_runner_window.html",tooltip="The TestRunnerWindow class is repsonsible for drawing the Test Runner window."];
+  Node802 -> Node655 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node655 [label="UnityEditor.Timeline.Timeline\lWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window.html",tooltip=" "];
+  Node653 [label="IHasCustomMenu",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node653 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node653 -> Node655 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

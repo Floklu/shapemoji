@@ -9,4 +9,6 @@ digraph "UnityEditor.Timeline.WindowState.RebuildPlayableGraph"
   Node2 [label="UnityEditor.Timeline.Timeline\lWindow.RebuildGraphIfNecessary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window.html#acc50183d8d8bb06a0714764d62452f77",tooltip=" "];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="UnityEditor.Timeline.Animation\lTrackRecorder.FinalizeRecording",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_animation_track_recorder.html#a380c9200939121de63d86333cd1a6ebb",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lWindow.OnGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window.html#a7327db99348d465b7c37571f863e05e6",tooltip=" "];
 }

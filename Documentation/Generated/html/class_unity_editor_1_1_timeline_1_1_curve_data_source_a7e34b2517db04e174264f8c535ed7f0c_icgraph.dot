@@ -9,4 +9,27 @@ digraph "UnityEditor.Timeline.CurveDataSource.ConfigureCurveWrapper"
   Node2 [label="UnityEditor.Timeline.Curve\lDataSource.GenerateWrappers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_curve_data_source.html#a54aec942aac0075062e90d01e2f7789c",tooltip=" "];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="UnityEditor.BindingSelector.\lRefreshCurves",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_binding_selector.html#a15babcd7b3cad2cc430b23301e7416aa",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.BindingSelector.\lRefreshSelection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_binding_selector.html#aa7dd0e3d1c991c5712ec303454c7885e",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.ClipCurveEditor.\lUpdateCurveEditorIfNeeded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_clip_curve_editor.html#a7e8f11bbd8f12b940d0a5d294f6f9e24",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.ClipCurveEditor.\lDrawCurveEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_clip_curve_editor.html#a16578d01c3ffb12a0a7349d01f238911",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Inline\lCurveEditor.DrawCurveEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#aa06184323593bcb2525c22bbd0d63c12",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Inline\lCurveEditor.DrawCurveEditorForTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#add420b8712f91d403b2ba5cd09e54cd9",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.Inline\lCurveEditor.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#a9ff42cdd3346e917053dbe1a6af1684c",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UnityEditor.Timeline.Timeline\lTrackGUI.DrawInlineCurves",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a85d4be0c837f8d1a4d06b3ed0d7b00fc",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="UnityEditor.Timeline.Timeline\lTrackGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a747cc3a832cf8df23274996439249d9c",tooltip=" "];
+  Node8 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="UnityEditor.Timeline.Inline\lCurveEditor.DrawCurvesEditorFor\lNothingSelected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#a84c31ec83cb46856e067ec55a596c376",tooltip=" "];
+  Node12 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="UnityEditor.Timeline.Inline\lCurveEditor.DrawCurveEditorsFor\lClipsOnTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_inline_curve_editor.html#a7d002fce7eb48a255c5de26e2d6bbec4",tooltip=" "];
+  Node13 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

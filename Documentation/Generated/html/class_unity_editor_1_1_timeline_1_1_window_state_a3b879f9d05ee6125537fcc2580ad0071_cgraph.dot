@@ -9,4 +9,6 @@ digraph "UnityEditor.Timeline.WindowState.IsTrackRecordable"
   Node2 [label="UnityEditor.Timeline.Window\lState.IsArmedForRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#ae175108ad2831c486eadbb74e0a536e1",tooltip=" "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="UnityEditor.Timeline.Window\lState.GetArmedTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#aae6bf1fe75e9b2d331e969110c482b25",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lUtility.GetSceneReferenceTrack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_utility.html#a7bd94e0bdc5ef28f8c7922386967d1e7",tooltip=" "];
 }

@@ -6,4 +6,6 @@ digraph "UnityEditor.Timeline.SequenceHierarchy.CreateInstance"
   rankdir="RL";
   Node1 [label="UnityEditor.Timeline.Sequence\lHierarchy.CreateInstance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UnityEditor.Timeline.Timeline\lWindow.OnEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_window.html#a5358f1ca17e955996afaf5c9ac237bf4",tooltip=" "];
 }

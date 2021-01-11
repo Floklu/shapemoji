@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/TMP_ProjectTextSettings.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/TMP_ProjectTextSettings.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,13 +91,13 @@ $(document).ready(function(){initNavTree('_t_m_p___project_text_settings_8cs_sou
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_t_m_pro.html">TMPro</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>TMP_ProjectTextSettings</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html">TMP_ProjectTextSettings</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="comment">// Open Project Text Settings</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        [MenuItem(<span class="stringliteral">&quot;Edit/Project Settings/TextMeshPro Settings&quot;</span>, <span class="keyword">false</span>, 309)]</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SelectProjectTextSettings()</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#ab526effa135b0372db76fba84102ce17">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#ab526effa135b0372db76fba84102ce17">SelectProjectTextSettings</a>()</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            TMP_Settings textSettings = TMP_Settings.instance;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a> textSettings = <a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html#a27bd5ea027ced6add42d15cc09d2925b">instance</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">if</span> (textSettings)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            {</div>
@@ -108,16 +108,16 @@ $(document).ready(function(){initNavTree('_t_m_p___project_text_settings_8cs_sou
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                EditorGUIUtility.PingObject(textSettings);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                TMPro_EventManager.RESOURCE_LOAD_EVENT.Add(ON_RESOURCES_LOADED);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <a class="code" href="class_t_m_pro_1_1_t_m_pro___event_manager.html">TMPro_EventManager</a>.<a class="code" href="class_t_m_pro_1_1_t_m_pro___event_manager.html#a460aa5178179e3409cbc93a099a68400">RESOURCE_LOAD_EVENT</a>.Add(<a class="code" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#aae388163a438e5812a1e905777f11b9b">ON_RESOURCES_LOADED</a>);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// Event received when TMP resources have been loaded.</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> ON_RESOURCES_LOADED()</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#aae388163a438e5812a1e905777f11b9b">   29</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#aae388163a438e5812a1e905777f11b9b">ON_RESOURCES_LOADED</a>()</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            TMPro_EventManager.RESOURCE_LOAD_EVENT.Remove(ON_RESOURCES_LOADED);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_pro___event_manager.html">TMPro_EventManager</a>.<a class="code" href="class_t_m_pro_1_1_t_m_pro___event_manager.html#a460aa5178179e3409cbc93a099a68400">RESOURCE_LOAD_EVENT</a>.Remove(<a class="code" href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#aae388163a438e5812a1e905777f11b9b">ON_RESOURCES_LOADED</a>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            TMP_Settings textSettings = TMP_Settings.instance;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a> textSettings = <a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html">TMP_Settings</a>.<a class="code" href="class_t_m_pro_1_1_t_m_p___settings.html#a27bd5ea027ced6add42d15cc09d2925b">instance</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Selection.activeObject = textSettings;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
@@ -130,8 +130,15 @@ $(document).ready(function(){initNavTree('_t_m_p___project_text_settings_8cs_sou
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_pro___event_manager_html_a460aa5178179e3409cbc93a099a68400"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_pro___event_manager.html#a460aa5178179e3409cbc93a099a68400">TMPro.TMPro_EventManager.RESOURCE_LOAD_EVENT</a></div><div class="ttdeci">static readonly FastAction RESOURCE_LOAD_EVENT</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_pro___event_manager_8cs_source.html#l00031">TMPro_EventManager.cs:31</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_pro___event_manager_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_pro___event_manager.html">TMPro.TMPro_EventManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_pro___event_manager_8cs_source.html#l00010">TMPro_EventManager.cs:11</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___project_text_settings_html_ab526effa135b0372db76fba84102ce17"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#ab526effa135b0372db76fba84102ce17">TMPro.TMP_ProjectTextSettings.SelectProjectTextSettings</a></div><div class="ttdeci">static void SelectProjectTextSettings()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___project_text_settings_8cs_source.html#l00011">TMP_ProjectTextSettings.cs:11</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___project_text_settings_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___project_text_settings.html">TMPro.TMP_ProjectTextSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___project_text_settings_8cs_source.html#l00007">TMP_ProjectTextSettings.cs:8</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___settings_html_a27bd5ea027ced6add42d15cc09d2925b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___settings.html#a27bd5ea027ced6add42d15cc09d2925b">TMPro.TMP_Settings.instance</a></div><div class="ttdeci">static TMP_Settings instance</div><div class="ttdoc">Get a singleton instance of the settings class.</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_8cs_source.html#l00384">TMP_Settings.cs:385</a></div></div>
 <div class="ttc" id="anamespace_unity_editor_html"><div class="ttname"><a href="namespace_unity_editor.html">UnityEditor</a></div><div class="ttdef"><b>Definition:</b> <a href="_collab_analytics_8cs_source.html#l00003">CollabAnalytics.cs:4</a></div></div>
 <div class="ttc" id="anamespace_t_m_pro_html"><div class="ttname"><a href="namespace_t_m_pro.html">TMPro</a></div><div class="ttdef"><b>Definition:</b> <a href="_dropdown_option_list_drawer_8cs_source.html#l00006">DropdownOptionListDrawer.cs:7</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___settings_html"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___settings.html">TMPro.TMP_Settings</a></div><div class="ttdoc">Scaling options for the sprites</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___settings_8cs_source.html#l00020">TMP_Settings.cs:21</a></div></div>
+<div class="ttc" id="aclass_t_m_pro_1_1_t_m_p___project_text_settings_html_aae388163a438e5812a1e905777f11b9b"><div class="ttname"><a href="class_t_m_pro_1_1_t_m_p___project_text_settings.html#aae388163a438e5812a1e905777f11b9b">TMPro.TMP_ProjectTextSettings.ON_RESOURCES_LOADED</a></div><div class="ttdeci">static void ON_RESOURCES_LOADED()</div><div class="ttdef"><b>Definition:</b> <a href="_t_m_p___project_text_settings_8cs_source.html#l00029">TMP_ProjectTextSettings.cs:29</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

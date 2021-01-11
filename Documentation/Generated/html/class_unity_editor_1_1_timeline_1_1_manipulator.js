@@ -11,5 +11,6 @@ var class_unity_editor_1_1_timeline_1_1_manipulator =
     [ "MouseUp", "class_unity_editor_1_1_timeline_1_1_manipulator.html#ab07304a4edbfb45f3e6e75c04b78ef30", null ],
     [ "MouseWheel", "class_unity_editor_1_1_timeline_1_1_manipulator.html#abd679235960e80eb7498397ca9081f94", null ],
     [ "Overlay", "class_unity_editor_1_1_timeline_1_1_manipulator.html#ae9c99cac4b65a9eddae47948daf8a47d", null ],
-    [ "ValidateCommand", "class_unity_editor_1_1_timeline_1_1_manipulator.html#aef99a81de039bff010ddef27640f1281", null ]
+    [ "ValidateCommand", "class_unity_editor_1_1_timeline_1_1_manipulator.html#aef99a81de039bff010ddef27640f1281", null ],
+    [ "m_Id", "class_unity_editor_1_1_timeline_1_1_manipulator.html#a4212202b247ad855cfcae33c4629c32c", null ]
 ];

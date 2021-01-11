@@ -6,5 +6,17 @@ digraph "UnityEditor.BindingSelector.InitIfNeeded"
   rankdir="LR";
   Node1 [label="UnityEditor.BindingSelector.\lInitIfNeeded",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditorInternal.Binding\lTreeViewDataSource.UpdateData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_internal_1_1_binding_tree_view_data_source.html#a316ceb98ca904bbb8eddfc084bdffc90",tooltip=" "];
+  Node2 [label="UnityEditor.BindingSelector.\lOnItemSelectionChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_binding_selector.html#ab8d7316006b14afe9924aca47ec05198",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.BindingSelector.\lRefreshSelection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_binding_selector.html#a86222e81c10af2f31cae20d569775153",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.BindingSelector.\lRefreshAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_binding_selector.html#a675a33c60d4e486fa49209460a700700",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.BindingSelector.\lRefreshTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_binding_selector.html#a9ffcf19abdfc12d0dd3e09c04a0cbe57",tooltip=" "];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditorInternal.Binding\lTreeViewDataSource.UpdateData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_internal_1_1_binding_tree_view_data_source.html#a316ceb98ca904bbb8eddfc084bdffc90",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

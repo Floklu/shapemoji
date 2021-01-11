@@ -7,4 +7,6 @@ digraph "UnityEngine.Timeline.DirectorNamedColor.CreateAndLoadFromText"
   Node1 [label="UnityEngine.Timeline.Director\lNamedColor.CreateAndLoadFromText",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEngine.Timeline.Director\lNamedColor.FromText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Director\lNamedColor.ParseFloat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e",tooltip=" "];
 }

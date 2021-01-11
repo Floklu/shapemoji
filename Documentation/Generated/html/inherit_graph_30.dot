@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.FastAction\< A, B \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_fast_action.html",tooltip=" "];
+  Node0 [label="Packages.Rider.Editor.Rider\lPathLocator.RiderInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_packages_1_1_rider_1_1_editor_1_1_rider_path_locator_1_1_rider_info.html",tooltip=" "];
 }

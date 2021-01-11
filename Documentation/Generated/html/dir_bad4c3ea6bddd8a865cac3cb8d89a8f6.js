@@ -13,7 +13,8 @@ var dir_bad4c3ea6bddd8a865cac3cb8d89a8f6 =
     ] ],
     [ "ProjectGeneration.cs", "com_8unity_8ide_8vscode_0d1_82_82_2_editor_2_project_generation_2_project_generation_8cs.html", [
       [ "IGenerator", "interface_v_s_code_editor_1_1_i_generator.html", "interface_v_s_code_editor_1_1_i_generator" ],
-      [ "ProjectGeneration", "class_v_s_code_editor_1_1_project_generation.html", "class_v_s_code_editor_1_1_project_generation" ]
+      [ "ProjectGeneration", "class_v_s_code_editor_1_1_project_generation.html", "class_v_s_code_editor_1_1_project_generation" ],
+      [ "SolutionGuidGenerator", "class_v_s_code_editor_1_1_solution_guid_generator.html", "class_v_s_code_editor_1_1_solution_guid_generator" ]
     ] ],
     [ "ProjectGenerationFlag.cs", "_project_generation_flag_8cs.html", "_project_generation_flag_8cs" ]
 ];

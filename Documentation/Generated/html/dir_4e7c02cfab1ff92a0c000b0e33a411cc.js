@@ -5,9 +5,13 @@ var dir_4e7c02cfab1ff92a0c000b0e33a411cc =
       [ "CurveBindingPair", "struct_unity_editor_1_1_timeline_1_1_curve_binding_pair.html", "struct_unity_editor_1_1_timeline_1_1_curve_binding_pair" ],
       [ "CurveBindingGroup", "class_unity_editor_1_1_timeline_1_1_curve_binding_group.html", "class_unity_editor_1_1_timeline_1_1_curve_binding_group" ],
       [ "AnimationClipCurveInfo", "class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info.html", "class_unity_editor_1_1_timeline_1_1_animation_clip_curve_info" ],
-      [ "AnimationClipCurveCache", "class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html", "class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache" ]
+      [ "AnimationClipCurveCache", "class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache.html", "class_unity_editor_1_1_timeline_1_1_animation_clip_curve_cache" ],
+      [ "EditorCurveBindingExtension", "class_unity_editor_1_1_timeline_1_1_editor_curve_binding_extension.html", "class_unity_editor_1_1_timeline_1_1_editor_curve_binding_extension" ],
+      [ "CurveBindingGroupExtensions", "class_unity_editor_1_1_timeline_1_1_curve_binding_group_extensions.html", "class_unity_editor_1_1_timeline_1_1_curve_binding_group_extensions" ]
     ] ],
-    [ "AnimationOffsetMenu.cs", "_animation_offset_menu_8cs.html", null ],
+    [ "AnimationOffsetMenu.cs", "_animation_offset_menu_8cs.html", [
+      [ "AnimationOffsetMenu", "class_unity_editor_1_1_timeline_1_1_animation_offset_menu.html", "class_unity_editor_1_1_timeline_1_1_animation_offset_menu" ]
+    ] ],
     [ "AnimationPlayableAssetEditor.cs", "_animation_playable_asset_editor_8cs.html", [
       [ "AnimationPlayableAssetEditor", "class_unity_editor_1_1_timeline_1_1_animation_playable_asset_editor.html", "class_unity_editor_1_1_timeline_1_1_animation_playable_asset_editor" ]
     ] ],
@@ -31,7 +35,9 @@ var dir_4e7c02cfab1ff92a0c000b0e33a411cc =
       [ "BindingTreeViewGUI", "class_unity_editor_internal_1_1_binding_tree_view_g_u_i.html", "class_unity_editor_internal_1_1_binding_tree_view_g_u_i" ]
     ] ],
     [ "ClipCurveEditor.cs", "_clip_curve_editor_8cs.html", [
-      [ "ClipCurveEditor", "class_unity_editor_1_1_clip_curve_editor.html", "class_unity_editor_1_1_clip_curve_editor" ]
+      [ "ClipCurveEditor", "class_unity_editor_1_1_clip_curve_editor.html", "class_unity_editor_1_1_clip_curve_editor" ],
+      [ "FrameFormatCurveEditorState", "class_unity_editor_1_1_clip_curve_editor_1_1_frame_format_curve_editor_state.html", "class_unity_editor_1_1_clip_curve_editor_1_1_frame_format_curve_editor_state" ],
+      [ "UnformattedCurveEditorState", "class_unity_editor_1_1_clip_curve_editor_1_1_unformatted_curve_editor_state.html", "class_unity_editor_1_1_clip_curve_editor_1_1_unformatted_curve_editor_state" ]
     ] ],
     [ "CurveDataSource.cs", "_curve_data_source_8cs.html", [
       [ "CurveDataSource", "class_unity_editor_1_1_timeline_1_1_curve_data_source.html", "class_unity_editor_1_1_timeline_1_1_curve_data_source" ],

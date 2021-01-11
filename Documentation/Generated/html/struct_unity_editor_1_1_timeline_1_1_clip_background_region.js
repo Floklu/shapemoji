@@ -4,6 +4,8 @@ var struct_unity_editor_1_1_timeline_1_1_clip_background_region =
     [ "Equals", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#ab4da8efd78b3123c5d1106cb062a0667", null ],
     [ "Equals", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#ae2b232c692ed64a4e685b7f174fa063c", null ],
     [ "GetHashCode", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#aabc073188237aaec5266120002a24581", null ],
+    [ "operator!=", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#ab0684b133f6f030e298da1ccf15fa88d", null ],
+    [ "operator==", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#a7cefb690812a8d947fe38e795718bfef", null ],
     [ "endTime", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#a9c53ff9c232b9182c28322cfbccb9b66", null ],
     [ "position", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#a7a488469a8395064af31debc81f61b07", null ],
     [ "startTime", "struct_unity_editor_1_1_timeline_1_1_clip_background_region.html#a9e1687b9e5198813078307f07c754779", null ]

@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.TMP_Dropdown.OptionData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___dropdown_1_1_option_data.html",tooltip="Class to store the text and/or image of a single option in the dropdown list."];
+  Node0 [label="TMPro.EditorUtilities.Editor\lShaderUtilities",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_editor_shader_utilities.html",tooltip=" "];
 }

@@ -84,13 +84,16 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_tr
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_track_editor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TrackEditor Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Use this class to customize track types in the TimelineEditor.  
+<p>Use this class to customize track types in the <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html" title="Information currently being edited in the Timeline Editor Window.">TimelineEditor</a>.  
  <a href="class_unity_editor_1_1_timeline_1_1_track_editor.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for UnityEditor.Timeline.TrackEditor:</div>
@@ -130,9 +133,32 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ae07ef3cfd2fece33c904983ef556b32c"><td class="memItemLeft" align="right" valign="top">static readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#ae07ef3cfd2fece33c904983ef556b32c">MaximumTrackHeight</a> = 256.0f</td></tr>
 <tr class="memdesc:ae07ef3cfd2fece33c904983ef556b32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum height of a track.  <a href="class_unity_editor_1_1_timeline_1_1_track_editor.html#ae07ef3cfd2fece33c904983ef556b32c">More...</a><br /></td></tr>
 <tr class="separator:ae07ef3cfd2fece33c904983ef556b32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:aa9a30b5a6eb7e43712bc0f1c1cb9c156"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aa9a30b5a6eb7e43712bc0f1c1cb9c156">HasFlag</a> (<a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a> errors, <a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a> flag)</td></tr>
+<tr class="separator:aa9a30b5a6eb7e43712bc0f1c1cb9c156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a015c05c4e69ba53fc9328151d46eed9e"><td class="memItemLeft" align="right" valign="top">readonly Dictionary&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a015c05c4e69ba53fc9328151d46eed9e">m_BindingCache</a> = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type&gt;()</td></tr>
+<tr class="separator:a015c05c4e69ba53fc9328151d46eed9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a375c206c5cae7eea8c09c737b79fe706"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a375c206c5cae7eea8c09c737b79fe706">k_BoundGameObjectDisabled</a> = LocalizationDatabase.GetLocalizedString(&quot;The bound GameObject is disabled.&quot;)</td></tr>
+<tr class="separator:a375c206c5cae7eea8c09c737b79fe706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548bc6bd49f4d53d3acf1970f0eb9784"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a548bc6bd49f4d53d3acf1970f0eb9784">k_NoValidComponent</a> = LocalizationDatabase.GetLocalizedString(&quot;Could not find appropriate component on this gameObject&quot;)</td></tr>
+<tr class="separator:a548bc6bd49f4d53d3acf1970f0eb9784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee82c679d40d7a889bc140273640e4e"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aeee82c679d40d7a889bc140273640e4e">k_RequiredComponentIsDisabled</a> = LocalizationDatabase.GetLocalizedString(&quot;The component is disabled&quot;)</td></tr>
+<tr class="separator:aeee82c679d40d7a889bc140273640e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a386649d633049de3518ab2532dfdd"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#a23a386649d633049de3518ab2532dfdd">k_InvalidBinding</a> = LocalizationDatabase.GetLocalizedString(&quot;The bound object is not the correct type.&quot;)</td></tr>
+<tr class="separator:a23a386649d633049de3518ab2532dfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f4b698808755c35c4cfe40126b082d"><td class="memItemLeft" align="right" valign="top">static readonly string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html#aa2f4b698808755c35c4cfe40126b082d">k_PrefabBound</a> = LocalizationDatabase.GetLocalizedString(&quot;The bound object is a Prefab&quot;)</td></tr>
+<tr class="separator:aa2f4b698808755c35c4cfe40126b082d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Use this class to customize track types in the TimelineEditor. </p>
+<div class="textblock"><p>Use this class to customize track types in the <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_editor.html" title="Information currently being edited in the Timeline Editor Window.">TimelineEditor</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00123">123</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -254,6 +280,11 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00238">238</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba_icgraph" alt=""/></div>
@@ -319,6 +350,49 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aa9a30b5a6eb7e43712bc0f1c1cb9c156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a30b5a6eb7e43712bc0f1c1cb9c156">&#9670;&nbsp;</a></span>HasFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TrackEditor.HasFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a>&#160;</td>
+          <td class="paramname"><em>errors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_unity_editor_1_1_timeline.html#ab1298abef70580c7ae84c896c0fa4a85">TrackBindingErrors</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00279">279</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_aa9a30b5a6eb7e43712bc0f1c1cb9c156_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_track_editor_aa9a30b5a6eb7e43712bc0f1c1cb9c156_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a6d49935006780094f55cf8adf37c6826"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d49935006780094f55cf8adf37c6826">&#9670;&nbsp;</a></span>OnCreate()</h2>
 
@@ -365,6 +439,11 @@ Here is the caller graph for this function:</div>
 <p>Reimplemented in <a class="el" href="class_unity_editor_1_1_timeline_1_1_activation_track_editor.html#aac85a9ef4fb7d3531a3c3509c648b3e9">UnityEditor.Timeline.ActivationTrackEditor</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00267">267</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -401,6 +480,11 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00275">275</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_track_editor_a76e5612bfc7e6174e162ec65a551fa5f_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_track_editor_a76e5612bfc7e6174e162ec65a551fa5f_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -428,6 +512,150 @@ Here is the caller graph for this function:</div>
 <p>The default height of a track. </p>
 
 <p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00136">136</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a375c206c5cae7eea8c09c737b79fe706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375c206c5cae7eea8c09c737b79fe706">&#9670;&nbsp;</a></span>k_BoundGameObjectDisabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_BoundGameObjectDisabled = LocalizationDatabase.GetLocalizedString(&quot;The bound GameObject is disabled.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00125">125</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a23a386649d633049de3518ab2532dfdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a386649d633049de3518ab2532dfdd">&#9670;&nbsp;</a></span>k_InvalidBinding</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_InvalidBinding = LocalizationDatabase.GetLocalizedString(&quot;The bound object is not the correct type.&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00128">128</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a548bc6bd49f4d53d3acf1970f0eb9784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548bc6bd49f4d53d3acf1970f0eb9784">&#9670;&nbsp;</a></span>k_NoValidComponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_NoValidComponent = LocalizationDatabase.GetLocalizedString(&quot;Could not find appropriate component on this gameObject&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00126">126</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa2f4b698808755c35c4cfe40126b082d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f4b698808755c35c4cfe40126b082d">&#9670;&nbsp;</a></span>k_PrefabBound</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_PrefabBound = LocalizationDatabase.GetLocalizedString(&quot;The bound object is a Prefab&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00129">129</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="aeee82c679d40d7a889bc140273640e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee82c679d40d7a889bc140273640e4e">&#9670;&nbsp;</a></span>k_RequiredComponentIsDisabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly string UnityEditor.Timeline.TrackEditor.k_RequiredComponentIsDisabled = LocalizationDatabase.GetLocalizedString(&quot;The component is disabled&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00127">127</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a015c05c4e69ba53fc9328151d46eed9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015c05c4e69ba53fc9328151d46eed9e">&#9670;&nbsp;</a></span>m_BindingCache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type&gt; UnityEditor.Timeline.TrackEditor.m_BindingCache = new Dictionary&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>, System.Type&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_editor_8cs_source.html#l00131">131</a> of file <a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a>.</p>
 
 </div>
 </div>
@@ -484,7 +712,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/CustomEditors/<a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/CustomEditors/<a class="el" href="_track_editor_8cs_source.html">TrackEditor.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

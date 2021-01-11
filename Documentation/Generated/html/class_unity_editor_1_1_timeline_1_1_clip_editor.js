@@ -7,5 +7,7 @@ var class_unity_editor_1_1_timeline_1_1_clip_editor =
     [ "GetErrorText", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#a59ef2b27cdfd2e2b0f2331556c3da101", null ],
     [ "GetSubTimelines", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#ac419b723377d66feeaf06f9013f119a6", null ],
     [ "OnClipChanged", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#a8b44b6fe0385359b27192362c34a7b9f", null ],
-    [ "OnCreate", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#a586e666943496ce611ce864fee755710", null ]
+    [ "OnCreate", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#a586e666943496ce611ce864fee755710", null ],
+    [ "k_NoPlayableAssetError", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#a773919f68e403afaa879fff8be76053d", null ],
+    [ "k_ScriptLoadError", "class_unity_editor_1_1_timeline_1_1_clip_editor.html#a53605391a49ba9f1564a4ad3903b9f82", null ]
 ];

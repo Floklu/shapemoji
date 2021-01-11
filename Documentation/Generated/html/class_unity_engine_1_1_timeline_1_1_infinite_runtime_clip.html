@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_in
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.InfiniteRuntimeClip Class Reference</div>  </div>
@@ -135,6 +137,16 @@ Properties</h2></td></tr>
 <tr class="separator:a27c22bd7810a1d6603ba4000f36f55da inherit properties_interface_unity_engine_1_1_timeline_1_1_i_interval"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa12f25a8e9c30c5e7641be77d2ad249d inherit properties_interface_unity_engine_1_1_timeline_1_1_i_interval"><td class="memItemLeft" align="right" valign="top">Int64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_interval.html#aa12f25a8e9c30c5e7641be77d2ad249d">intervalEnd</a><code> [get]</code></td></tr>
 <tr class="separator:aa12f25a8e9c30c5e7641be77d2ad249d inherit properties_interface_unity_engine_1_1_timeline_1_1_i_interval"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a334e9b42695e569c5566b403424f11ac"><td class="memItemLeft" align="right" valign="top">Playable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#a334e9b42695e569c5566b403424f11ac">m_Playable</a></td></tr>
+<tr class="separator:a334e9b42695e569c5566b403424f11ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af45d958f68a27fb7f1c908992081ec13"><td class="memItemLeft" align="right" valign="top">static readonly Int64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_infinite_runtime_clip.html#af45d958f68a27fb7f1c908992081ec13">kIntervalEnd</a> = <a class="el" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a8874a1b1dd33b35c24b49fe8543cde44">DiscreteTime.GetNearestTick</a>(TimelineClip.kMaxTimeValue)</td></tr>
+<tr class="separator:af45d958f68a27fb7f1c908992081ec13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Runtime clip customized for 'infinite' tracks playables. Used for clips whose time needs to match the timelines exactly </p>
@@ -199,6 +211,55 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="class_unity_engine_1_1_timeline_1_1_runtime_element.html#a7adae48243862ea1ed8c43c871957921">UnityEngine.Timeline.RuntimeElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_infinite_runtime_clip_8cs_source.html#l00041">41</a> of file <a class="el" href="_infinite_runtime_clip_8cs_source.html">InfiniteRuntimeClip.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af45d958f68a27fb7f1c908992081ec13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45d958f68a27fb7f1c908992081ec13">&#9670;&nbsp;</a></span>kIntervalEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly Int64 UnityEngine.Timeline.InfiniteRuntimeClip.kIntervalEnd = <a class="el" href="struct_unity_engine_1_1_timeline_1_1_discrete_time.html#a8874a1b1dd33b35c24b49fe8543cde44">DiscreteTime.GetNearestTick</a>(TimelineClip.kMaxTimeValue)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_infinite_runtime_clip_8cs_source.html#l00013">13</a> of file <a class="el" href="_infinite_runtime_clip_8cs_source.html">InfiniteRuntimeClip.cs</a>.</p>
+
+</div>
+</div>
+<a id="a334e9b42695e569c5566b403424f11ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334e9b42695e569c5566b403424f11ac">&#9670;&nbsp;</a></span>m_Playable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Playable UnityEngine.Timeline.InfiniteRuntimeClip.m_Playable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_infinite_runtime_clip_8cs_source.html#l00012">12</a> of file <a class="el" href="_infinite_runtime_clip_8cs_source.html">InfiniteRuntimeClip.cs</a>.</p>
 
 </div>
 </div>
@@ -276,7 +337,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Evaluation/<a class="el" href="_infinite_runtime_clip_8cs_source.html">InfiniteRuntimeClip.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Evaluation/<a class="el" href="_infinite_runtime_clip_8cs_source.html">InfiniteRuntimeClip.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

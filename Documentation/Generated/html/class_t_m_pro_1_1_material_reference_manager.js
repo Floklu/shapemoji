@@ -1,5 +1,29 @@
 var class_t_m_pro_1_1_material_reference_manager =
 [
+    [ "AddColorGradientPreset", "class_t_m_pro_1_1_material_reference_manager.html#aaff4d63fa8a94aa0b4badb98076ce0b3", null ],
+    [ "AddColorGradientPreset_Internal", "class_t_m_pro_1_1_material_reference_manager.html#a68f69bb113e368f3707df45a21ff53d3", null ],
+    [ "AddFontAsset", "class_t_m_pro_1_1_material_reference_manager.html#aef7197e07d5b322b6ed3d8baf4d8c0cf", null ],
+    [ "AddFontAssetInternal", "class_t_m_pro_1_1_material_reference_manager.html#abff80a1e0a563c05c798d3f69881775e", null ],
+    [ "AddFontMaterial", "class_t_m_pro_1_1_material_reference_manager.html#ad32f019ea73193084d8e7f90f387b679", null ],
+    [ "AddFontMaterialInternal", "class_t_m_pro_1_1_material_reference_manager.html#a7bfdccc121693da8b62075044991fd3b", null ],
+    [ "AddSpriteAsset", "class_t_m_pro_1_1_material_reference_manager.html#a6ec369694dfd5ba0c8dbebcbc7bd1f97", null ],
+    [ "AddSpriteAsset", "class_t_m_pro_1_1_material_reference_manager.html#a3810186f9c82e44d3ca54ed456f6d8bd", null ],
+    [ "AddSpriteAssetInternal", "class_t_m_pro_1_1_material_reference_manager.html#a2d8a0d59d86936f863f284581a283874", null ],
+    [ "AddSpriteAssetInternal", "class_t_m_pro_1_1_material_reference_manager.html#ac74256d4f9111735b59454e83fd8c853", null ],
     [ "Contains", "class_t_m_pro_1_1_material_reference_manager.html#a573b9237cc9247f29300bd6074fa6cb0", null ],
-    [ "Contains", "class_t_m_pro_1_1_material_reference_manager.html#a900e5d78f7716ac071050558f4f838fa", null ]
+    [ "Contains", "class_t_m_pro_1_1_material_reference_manager.html#a900e5d78f7716ac071050558f4f838fa", null ],
+    [ "TryGetColorGradientPreset", "class_t_m_pro_1_1_material_reference_manager.html#a61de4a348042d6714254fd9558f8f632", null ],
+    [ "TryGetColorGradientPresetInternal", "class_t_m_pro_1_1_material_reference_manager.html#a194a3d36c194b2bfd85a0a09b71a614f", null ],
+    [ "TryGetFontAsset", "class_t_m_pro_1_1_material_reference_manager.html#aea90526985cf5081a931bfbc4d36af81", null ],
+    [ "TryGetFontAssetInternal", "class_t_m_pro_1_1_material_reference_manager.html#aab688b6da9af3e56584030c924ce80e1", null ],
+    [ "TryGetMaterial", "class_t_m_pro_1_1_material_reference_manager.html#a4826b2b5ac5de579423e0eaee6955dfc", null ],
+    [ "TryGetMaterialInternal", "class_t_m_pro_1_1_material_reference_manager.html#a7d64465c6a255460405c16179a90b305", null ],
+    [ "TryGetSpriteAsset", "class_t_m_pro_1_1_material_reference_manager.html#a134f55b51c7660176516e2fe3b71d4ae", null ],
+    [ "TryGetSpriteAssetInternal", "class_t_m_pro_1_1_material_reference_manager.html#a169391d501cdc93c322c30e10fd97f8d", null ],
+    [ "m_ColorGradientReferenceLookup", "class_t_m_pro_1_1_material_reference_manager.html#ace1e279c1c3ab26e8a1cf30510f2d37f", null ],
+    [ "m_FontAssetReferenceLookup", "class_t_m_pro_1_1_material_reference_manager.html#a67019d1538ad50876c7c62d1ad68dc7a", null ],
+    [ "m_FontMaterialReferenceLookup", "class_t_m_pro_1_1_material_reference_manager.html#a2d56543f275742d8ac7f3d6bb341e1a3", null ],
+    [ "m_SpriteAssetReferenceLookup", "class_t_m_pro_1_1_material_reference_manager.html#a38a8c0bc4c7750575f09d369de069446", null ],
+    [ "s_Instance", "class_t_m_pro_1_1_material_reference_manager.html#a8eb31241ae88c5fce931b77ae7ca7fa0", null ],
+    [ "instance", "class_t_m_pro_1_1_material_reference_manager.html#a51b1daac64638054a8ae2afbae3628f5", null ]
 ];

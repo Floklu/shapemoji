@@ -6,5 +6,9 @@ digraph "UnityEditor.Timeline.ClearSelection.MouseDown"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Clear\lSelection.MouseDown",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Window\lState.GetWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Item\lSelection.CanClearSelection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_item_selection.html#af9badc1edb526d2b9117722d678ce7bd",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Selection\lManager.Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#a587eb1360aef383023f0eb0c7fe0d3a9",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Window\lState.GetWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#af1e0a5f9a63a8aaa835f5ed772a25741",tooltip=" "];
 }

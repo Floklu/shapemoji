@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['camerasetting_2ecs_33',['CameraSetting.cs',['../_camera_setting_8cs.html',1,'']]]
+  ['analyzeandscorepixelmap_2ecs_583',['AnalyzeAndScorePixelMap.cs',['../_analyze_and_score_pixel_map_8cs.html',1,'']]],
+  ['analyzescorearearesult_2ecs_584',['AnalyzeScoreAreaResult.cs',['../_analyze_score_area_result_8cs.html',1,'']]]
 ];

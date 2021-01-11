@@ -1,6 +1,7 @@
 var class_unity_engine_1_1_timeline_1_1_timeline_asset =
 [
     [ "EditorSettings", "class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings.html", "class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_editor_settings" ],
+    [ "TimelineAssetUpgrade", "class_unity_engine_1_1_timeline_1_1_timeline_asset_1_1_timeline_asset_upgrade.html", null ],
     [ "DurationMode", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1a", [
       [ "BasedOnClips", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1aaf3a64ee7ab649ccfbee7077ae1b73a16", null ],
       [ "FixedLength", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae97149925f4adf36a27e28f85ccb8a1aa4b1ddaa2b496677284d5262fc1ea3798", null ]
@@ -14,6 +15,12 @@ var class_unity_engine_1_1_timeline_1_1_timeline_asset =
       [ "Hybrid", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a626d3bb9a283af2af6872786e023fbc2afb1b6e23a3767d2a31ef7899e6dd3f1e", null ],
       [ "Group", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a626d3bb9a283af2af6872786e023fbc2a03937134cedab9078be39a77ee3a48a0", null ]
     ] ],
+    [ "Versions", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320", [
+      [ "Initial", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac67a3cbd152b598dc9d15fa3e00e8320a4f2a91e15af2631ff9424564b8a45fb2", null ]
+    ] ],
+    [ "__internalAwake", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a669e962dc8ab34c10fee20c67abf9868", null ],
+    [ "AddSubTracksRecursive", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac45592ac243170c583ed2afef69550e7", null ],
+    [ "CalculateDuration", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a75df641665d0fdbea020ee8f57e85e03", null ],
     [ "CreateMarkerTrack", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a502d5d05908fc38b5e72c64381fd9c28", null ],
     [ "CreatePlayable", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a75d7ae108e0719811a7fedc0a3da4dbf", null ],
     [ "CreateTrack", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#add8b82ba55c370c655d380de9fe7c266", null ],
@@ -21,12 +28,31 @@ var class_unity_engine_1_1_timeline_1_1_timeline_asset =
     [ "CreateTrack< T >", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae0a2d7ab08cea4b8dde0e296b6a18535", null ],
     [ "CreateTrack< T >", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#af7f63eee1fa03dc03d9cbfe0c6d2fb01", null ],
     [ "DeleteClip", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aa5356a1260ee2e86a9df796a15496c95", null ],
+    [ "DeleteRecordedAnimation", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a39f7a7617eb8ae55784fb611ccce25b2", null ],
+    [ "DeleteRecordedAnimation", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#afa1e49ec97fecfacf930b5b50260bf2e", null ],
     [ "DeleteTrack", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ae811f0b439c896f971ae476c7997d4a0", null ],
     [ "GatherProperties", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aba7594fee65685d13b4743c542340e29", null ],
     [ "GetOutputTrack", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a490cf097525239a17c7cdd71eb119db0", null ],
     [ "GetOutputTracks", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a82a8c61e425d1d7448bf5a0822ad6c2a", null ],
     [ "GetRootTrack", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a8e7f6adfd5d11b91ea70084c229319b9", null ],
     [ "GetRootTracks", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a0fc27a36491f7c52a91c791665b83809", null ],
+    [ "GetValidFramerate", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a047f07028041fe0787baed66c6a10b43", null ],
+    [ "OnAfterDeserialize", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ab312ca6f5334f470db013bc26d2ac5e3", null ],
+    [ "OnBeforeSerialize", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ad70d31793a009312a016bd4dee35cfb4", null ],
+    [ "OnValidate", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a1aef98be60f0aae08069f1c0be615eb1", null ],
+    [ "UpdateOutputTrackCache", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a4ca75bed675bde3d251907517472e65b", null ],
+    [ "UpdateRootTrackCache", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a23e30321bd7f56c8ae86f05e942a6ac4", null ],
+    [ "UpgradeToLatestVersion", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a17cabac20bb7a4a5c15090aea1e668fd", null ],
+    [ "k_LatestVersion", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#ac2e60d51c793edc0e06adefa65a45500", null ],
+    [ "m_CacheFlattenedTracks", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#aab1d7b592354003511a5064b7290cee1", null ],
+    [ "m_CacheOutputTracks", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a5e83fd0fbc8d4f45b103f59b5ff433f5", null ],
+    [ "m_CacheRootTracks", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a84ad0e3bb76fdb02d02f754106b5b7df", null ],
+    [ "m_DurationMode", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#acfc435450fd12ce54e53d6de70459f1a", null ],
+    [ "m_EditorSettings", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a691bbd0944945e134e528bbe3d606f74", null ],
+    [ "m_FixedDuration", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a527488e8a053e21dd1e331aec885abd1", null ],
+    [ "m_MarkerTrack", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a1dc7bb972108903c7352099654b75c13", null ],
+    [ "m_Tracks", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a619e8d00ac5174ea3d83a48348da6829", null ],
+    [ "m_Version", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a340782cfaa9df7f6ef9b11cb86962c83", null ],
     [ "clipCaps", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a79c78d3d1029ddf4a9183bfdb5589a04", null ],
     [ "duration", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a631a8cf0de9785cd1e4b830b5bacc9dc", null ],
     [ "durationMode", "class_unity_engine_1_1_timeline_1_1_timeline_asset.html#a2914899ca5884ee833fb5e919a5c8dd6", null ],

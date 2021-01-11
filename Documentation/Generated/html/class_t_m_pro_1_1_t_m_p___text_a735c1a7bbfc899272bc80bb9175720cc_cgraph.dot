@@ -9,8 +9,10 @@ digraph "TMPro.TMP_Text.DrawUnderlineMesh"
   Node2 [label="TMPro.TMP_Text.GetUnderline\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aa644bbb25fe0d440b1adf25dc2081f37",tooltip=" "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a9d70106b39c64e03f4e62e1f13c0948b",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
-  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TMPro.TMP_Text.PackUV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#ab3678ea5e10c2193b87d1ee79f8ef5c3",tooltip="Function to pack scale information in the UV2 Channel."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset\l_Internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d",tooltip="Internal function returning the text element character for the given unicode value taking into consid..."];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="TMPro.TMP_MeshInfo.Resize\lMeshInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_t_m_p___mesh_info.html#ac2631e006b2107ce543716541a48e5d1",tooltip="Function to resized the content of MeshData and re-assign normals, tangents and triangles."];
+  Node5 [label="TMPro.TMP_Text.PackUV",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#ab3678ea5e10c2193b87d1ee79f8ef5c3",tooltip="Function to pack scale information in the UV2 Channel."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_MeshInfo.Resize\lMeshInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_t_m_p___mesh_info.html#ac2631e006b2107ce543716541a48e5d1",tooltip="Function to resized the content of MeshData and re-assign normals, tangents and triangles."];
 }

@@ -23,4 +23,6 @@ digraph "TMPro.TextMeshPro.OnEnable"
   Node9 [label="TMPro.TextMeshPro.SetVertices\lDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro.html#a8ca7b09fd7f2319069c84e72c0db0fa8",tooltip="Schedule rebuilding of the text geometry."];
   Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node10 [label="TMPro.TMP_UpdateManager.\lRegisterTextElementForGraphic\lRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#a110903981e6a8c00d95957b707cc3c99",tooltip="Function to register elements which require a layout rebuild."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="TMPro.TMP_UpdateManager.\lInternalRegisterTextElementFor\lGraphicRebuild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#a5121a0eb320fa45e8cf9cf2b9be73833",tooltip=" "];
 }

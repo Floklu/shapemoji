@@ -6,6 +6,8 @@ var class_t_m_pro_1_1_t_m_p___color_gradient =
     [ "bottomLeft", "class_t_m_pro_1_1_t_m_p___color_gradient.html#a62988544237aa04d417b3d84c87370b2", null ],
     [ "bottomRight", "class_t_m_pro_1_1_t_m_p___color_gradient.html#ae3cdb55acae4d10fa309586b7af75d26", null ],
     [ "colorMode", "class_t_m_pro_1_1_t_m_p___color_gradient.html#ae4b077f3e706fd554da95fe79eeb7a33", null ],
+    [ "k_DefaultColor", "class_t_m_pro_1_1_t_m_p___color_gradient.html#a9e655d358ffea53b1c82a78fa9883dd0", null ],
+    [ "k_DefaultColorMode", "class_t_m_pro_1_1_t_m_p___color_gradient.html#a5b4a70641bb14a8573b60a3dc57a0b16", null ],
     [ "topLeft", "class_t_m_pro_1_1_t_m_p___color_gradient.html#add761a25f601b2bc256bbfd5508273e6", null ],
     [ "topRight", "class_t_m_pro_1_1_t_m_p___color_gradient.html#a1d43c017959ce5b0fb38a2db7b4ed8a7", null ]
 ];

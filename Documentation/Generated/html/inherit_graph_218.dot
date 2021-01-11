@@ -4,7 +4,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node369 [label="Is",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node369 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="UnityEngine.TestTools.Constraints.Is",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is.html",tooltip=" "];
+  Node614 [label="IPostprocessBuildWithReport",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node614 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="UnityEditor.Timeline.Analytics.\lTimelineAnalytics.TimelineAnalytics\lPostProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_analytics_1_1_timeline_analytics_1_1_timeline_analytics_post_process.html",tooltip=" "];
 }

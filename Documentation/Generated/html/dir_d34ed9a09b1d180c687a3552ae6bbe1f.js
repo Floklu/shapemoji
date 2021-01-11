@@ -9,7 +9,9 @@ var dir_d34ed9a09b1d180c687a3552ae6bbe1f =
     [ "ItemsPerTrack.cs", "_items_per_track_8cs.html", [
       [ "ItemsPerTrack", "class_unity_editor_1_1_timeline_1_1_items_per_track.html", "class_unity_editor_1_1_timeline_1_1_items_per_track" ]
     ] ],
-    [ "ItemsUtils.cs", "_items_utils_8cs.html", null ],
+    [ "ItemsUtils.cs", "_items_utils_8cs.html", [
+      [ "ItemsUtils", "class_unity_editor_1_1_timeline_1_1_items_utils.html", "class_unity_editor_1_1_timeline_1_1_items_utils" ]
+    ] ],
     [ "ITimelineItem.cs", "_i_timeline_item_8cs.html", [
       [ "ITimelineItem", "interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html", "interface_unity_editor_1_1_timeline_1_1_i_timeline_item" ],
       [ "ITrimmable", "interface_unity_editor_1_1_timeline_1_1_i_trimmable.html", "interface_unity_editor_1_1_timeline_1_1_i_trimmable" ],

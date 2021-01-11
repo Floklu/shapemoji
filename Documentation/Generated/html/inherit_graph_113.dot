@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.TestTools.ITest\lPlayerBuildModifier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_test_tools_1_1_i_test_player_build_modifier.html",tooltip=" "];
+  Node0 [label="TMPro.SpriteAssetUtilities.\lTexturePacker_JsonArray.Meta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer___json_array_1_1_meta.html",tooltip=" "];
 }

@@ -86,6 +86,10 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_si
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.Signals.SignalReceiverTreeView Class Reference</div>  </div>
@@ -129,10 +133,42 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a0c9d5b8d29a13a7e4a50385821afb935"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a0c9d5b8d29a13a7e4a50385821afb935">dirty</a><code> [set]</code></td></tr>
+<tr class="memitem:a0c9d5b8d29a13a7e4a50385821afb935"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a0c9d5b8d29a13a7e4a50385821afb935">dirty</a><code> [set, private get]</code></td></tr>
 <tr class="separator:a0c9d5b8d29a13a7e4a50385821afb935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa55335d8a18c9d51ed7a1703155fa7"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a6aa55335d8a18c9d51ed7a1703155fa7">signals</a><code> [get, set]</code></td></tr>
+<tr class="separator:a6aa55335d8a18c9d51ed7a1703155fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe94026ae2f47d145aeff0306431be45"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#afe94026ae2f47d145aeff0306431be45">events</a><code> [get, set]</code></td></tr>
+<tr class="separator:afe94026ae2f47d145aeff0306431be45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1d0065417e8de78dcc1e69d2f00aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#afd1d0065417e8de78dcc1e69d2f00aa3">signalAssetContext</a><code> [get, set]</code></td></tr>
+<tr class="separator:afd1d0065417e8de78dcc1e69d2f00aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27f74eaa1892d5a83d03729968927477"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a27f74eaa1892d5a83d03729968927477">readonlySignals</a><code> [get, set]</code></td></tr>
 <tr class="separator:a27f74eaa1892d5a83d03729968927477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a55d29b1847ce46d993afb07a55c37b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a55d29b1847ce46d993afb07a55c37b53">SetSerializedProperties</a> (SerializedObject serializedObject)</td></tr>
+<tr class="separator:a55d29b1847ce46d993afb07a55c37b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9555110f18b6d5e76422a194460b96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#abd9555110f18b6d5e76422a194460b96">AddItem</a> (TreeViewItem root, int id, bool enabled=true)</td></tr>
+<tr class="separator:abd9555110f18b6d5e76422a194460b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b113e399787eafb3c539d02cfb0c14d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a9b113e399787eafb3c539d02cfb0c14d">GetTotalHeight</a> ()</td></tr>
+<tr class="separator:a9b113e399787eafb3c539d02cfb0c14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ab4941822b3c488b8c96845160c1d0388"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#ab4941822b3c488b8c96845160c1d0388">FindIdForSignal</a> (SerializedProperty <a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a6aa55335d8a18c9d51ed7a1703155fa7">signals</a>, <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> signalToFind)</td></tr>
+<tr class="separator:ab4941822b3c488b8c96845160c1d0388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7140a490ad881760e5d9dd65bd1070a6"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html">SignalReceiver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a7140a490ad881760e5d9dd65bd1070a6">m_Target</a></td></tr>
+<tr class="separator:a7140a490ad881760e5d9dd65bd1070a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a6a11debb8198f6225536143efcfe86c2"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a6a11debb8198f6225536143efcfe86c2">k_VerticalPadding</a> = 5</td></tr>
+<tr class="separator:a6a11debb8198f6225536143efcfe86c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3958ceae2ffaf560ed57b94cb551a1"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a3b3958ceae2ffaf560ed57b94cb551a1">k_HorizontalPadding</a> = 5</td></tr>
+<tr class="separator:a3b3958ceae2ffaf560ed57b94cb551a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -177,10 +213,64 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00021">21</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_aca4255a5ae32da68df0ea3727eba0b69_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_aca4255a5ae32da68df0ea3727eba0b69_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abd9555110f18b6d5e76422a194460b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9555110f18b6d5e76422a194460b96">&#9670;&nbsp;</a></span>AddItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalReceiverTreeView.AddItem </td>
+          <td>(</td>
+          <td class="paramtype">TreeViewItem&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00121">121</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_abd9555110f18b6d5e76422a194460b96_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_abd9555110f18b6d5e76422a194460b96_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a5ca1afeb5d090ea11d777fc01e3c1f56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ca1afeb5d090ea11d777fc01e3c1f56">&#9670;&nbsp;</a></span>BuildRoot()</h2>
 
@@ -205,6 +295,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00087">87</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a5ca1afeb5d090ea11d777fc01e3c1f56_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a5ca1afeb5d090ea11d777fc01e3c1f56_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -225,9 +320,57 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00046">46</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a80d91af8b228cf0df25351661823261a_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a80d91af8b228cf0df25351661823261a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a80d91af8b228cf0df25351661823261a_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a80d91af8b228cf0df25351661823261a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab4941822b3c488b8c96845160c1d0388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4941822b3c488b8c96845160c1d0388">&#9670;&nbsp;</a></span>FindIdForSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int UnityEditor.Timeline.Signals.SignalReceiverTreeView.FindIdForSignal </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>signals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&#160;</td>
+          <td class="paramname"><em>signalToFind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00141">141</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_ab4941822b3c488b8c96845160c1d0388_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_ab4941822b3c488b8c96845160c1d0388_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -256,6 +399,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00060">60</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a9fe02df25f61a10a768b8f7eb956ae31_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a9fe02df25f61a10a768b8f7eb956ae31_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -298,6 +446,43 @@ Here is the caller graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a8c0fe4ee279ef3b8d83ad316e0ebff1b_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a8c0fe4ee279ef3b8d83ad316e0ebff1b_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9b113e399787eafb3c539d02cfb0c14d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b113e399787eafb3c539d02cfb0c14d">&#9670;&nbsp;</a></span>GetTotalHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.Signals.SignalReceiverTreeView.GetTotalHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00128">128</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a9b113e399787eafb3c539d02cfb0c14d_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a9b113e399787eafb3c539d02cfb0c14d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a9b113e399787eafb3c539d02cfb0c14d_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a9b113e399787eafb3c539d02cfb0c14d_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -354,6 +539,44 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a55d29b1847ce46d993afb07a55c37b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d29b1847ce46d993afb07a55c37b53">&#9670;&nbsp;</a></span>SetSerializedProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.Signals.SignalReceiverTreeView.SetSerializedProperties </td>
+          <td>(</td>
+          <td class="paramtype">SerializedObject&#160;</td>
+          <td class="paramname"><em>serializedObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00039">39</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a55d29b1847ce46d993afb07a55c37b53_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a55d29b1847ce46d993afb07a55c37b53_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a55d29b1847ce46d993afb07a55c37b53_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a55d29b1847ce46d993afb07a55c37b53_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a01074582cb9126f1c137ca91df2bfc08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01074582cb9126f1c137ca91df2bfc08">&#9670;&nbsp;</a></span>SetSignalContext()</h2>
 
@@ -371,6 +594,84 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00033">33</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a01074582cb9126f1c137ca91df2bfc08_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view_a01074582cb9126f1c137ca91df2bfc08_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3b3958ceae2ffaf560ed57b94cb551a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3958ceae2ffaf560ed57b94cb551a1">&#9670;&nbsp;</a></span>k_HorizontalPadding</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float UnityEditor.Timeline.Signals.SignalReceiverTreeView.k_HorizontalPadding = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00019">19</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6a11debb8198f6225536143efcfe86c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a11debb8198f6225536143efcfe86c2">&#9670;&nbsp;</a></span>k_VerticalPadding</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float UnityEditor.Timeline.Signals.SignalReceiverTreeView.k_VerticalPadding = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00018">18</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7140a490ad881760e5d9dd65bd1070a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7140a490ad881760e5d9dd65bd1070a6">&#9670;&nbsp;</a></span>m_Target</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html">SignalReceiver</a> UnityEditor.Timeline.Signals.SignalReceiverTreeView.m_Target</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00016">16</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
 
 </div>
 </div>
@@ -390,12 +691,36 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">set</span><span class="mlabel">private get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00011">11</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="afe94026ae2f47d145aeff0306431be45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe94026ae2f47d145aeff0306431be45">&#9670;&nbsp;</a></span>events</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.Signals.SignalReceiverTreeView.events</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00014">14</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
 
 </div>
 </div>
@@ -423,8 +748,56 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="afd1d0065417e8de78dcc1e69d2f00aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1d0065417e8de78dcc1e69d2f00aa3">&#9670;&nbsp;</a></span>signalAssetContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a> UnityEditor.Timeline.Signals.SignalReceiverTreeView.signalAssetContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00030">30</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6aa55335d8a18c9d51ed7a1703155fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa55335d8a18c9d51ed7a1703155fa7">&#9670;&nbsp;</a></span>signals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty UnityEditor.Timeline.Signals.SignalReceiverTreeView.signals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_tree_view_8cs_source.html#l00013">13</a> of file <a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Signals/TreeView/<a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Signals/TreeView/<a class="el" href="_signal_receiver_tree_view_8cs_source.html">SignalReceiverTreeView.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

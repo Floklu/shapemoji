@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.TMP_FontFeatureTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_feature_table.html",tooltip="Table that contains the various font features available for the given font asset."];
+  Node0 [label="TMPro.EditorUtilities.TMP\l_ColorGradientAssetMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___color_gradient_asset_menu.html",tooltip=" "];
 }

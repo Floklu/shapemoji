@@ -7,4 +7,14 @@ digraph "TMPro.TMP_SubMesh.UpdateMaterial"
   Node1 [label="TMPro.TMP_SubMesh.Update\lMaterial",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_SubMesh.SetMaterial\lDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sub_mesh.html#a8df49466a47cb2d29a910fb00dfa2af5",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_SubMesh.GetMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sub_mesh.html#a75d79eac1b73bd3cfebe08661296565e",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_SubMesh.SetShared\lMaterial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sub_mesh.html#a1793e4ae425e416cf4dc4cac19be5d5b",tooltip="Method to set the shared material."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_SubMesh.AddSub\lTextObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sub_mesh.html#aab11f751e99fd3566e382584cc334a4d",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TextMeshPro.SetArray\lSizes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro.html#aca89de99dcd34f8ac176b0eb4f5c11a5",tooltip="Method used to determine the number of visible characters and required buffer allocations."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TMPro.TextMeshPro.GetTextInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_text_mesh_pro.html#a3652c1b48e8b425fc8a599aa05fad59e",tooltip="Function used to evaluate the length of a text string."];
 }

@@ -84,6 +84,9 @@ $(document).ready(function(){initNavTree('class_t_m_pro_1_1_editor_utilities_1_1
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TMPro.EditorUtilities.TMP_SpriteAssetEditor Class Reference</div>  </div>
@@ -100,17 +103,407 @@ Collaboration diagram for TMPro.EditorUtilities.TMP_SpriteAssetEditor:</div>
 <div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor__coll__graph.png" border="0" usemap="#a_t_m_pro_8_editor_utilities_8_t_m_p___sprite_asset_editor_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_1_1_u_i___panel_state.html">UI_PanelState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1b4511c2229bbfec1c7fb53102c51cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ae1b4511c2229bbfec1c7fb53102c51cf">OnEnable</a> ()</td></tr>
 <tr class="separator:ae1b4511c2229bbfec1c7fb53102c51cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296eb60d2ec23a05512aa1ab4751e190"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a296eb60d2ec23a05512aa1ab4751e190">OnInspectorGUI</a> ()</td></tr>
 <tr class="separator:a296eb60d2ec23a05512aa1ab4751e190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab51c936c8f0755bf1fa516786c061dc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ab51c936c8f0755bf1fa516786c061dc7">DisplayPageNavigation</a> (ref int currentPage, int arraySize, int itemsPerPage)</td></tr>
+<tr class="separator:ab51c936c8f0755bf1fa516786c061dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c7bc8790094fabfced10f0eb944cfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a42c7bc8790094fabfced10f0eb944cfd">UpdateGlobalProperty</a> (string property, float value)</td></tr>
+<tr class="memdesc:a42c7bc8790094fabfced10f0eb944cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to update the properties of all sprites  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a42c7bc8790094fabfced10f0eb944cfd">More...</a><br /></td></tr>
+<tr class="separator:a42c7bc8790094fabfced10f0eb944cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31945b5ae12161dc4eca9365603eb09a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a31945b5ae12161dc4eca9365603eb09a">DoSelectionCheck</a> (Rect selectionArea)</td></tr>
+<tr class="separator:a31945b5ae12161dc4eca9365603eb09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af813fcc2841a0d91f0061c83ec0af8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a2af813fcc2841a0d91f0061c83ec0af8">SwapCharacterElements</a> (int selectedIndex, int newIndex)</td></tr>
+<tr class="memdesc:a2af813fcc2841a0d91f0061c83ec0af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the sprite item at the currently selected array index to another index.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a2af813fcc2841a0d91f0061c83ec0af8">More...</a><br /></td></tr>
+<tr class="separator:a2af813fcc2841a0d91f0061c83ec0af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a48ee3d8c6168f63b4e2ee61fa42f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a25a48ee3d8c6168f63b4e2ee61fa42f7">MoveCharacterToIndex</a> (int selectedIndex, int newIndex)</td></tr>
+<tr class="memdesc:a25a48ee3d8c6168f63b4e2ee61fa42f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move Sprite Element at selected index to another index and reorder sprite list.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a25a48ee3d8c6168f63b4e2ee61fa42f7">More...</a><br /></td></tr>
+<tr class="separator:a25a48ee3d8c6168f63b4e2ee61fa42f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3540d0ca4d294db0140c37dbba5ea6c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a3540d0ca4d294db0140c37dbba5ea6c3">SwapGlyphElements</a> (int selectedIndex, int newIndex)</td></tr>
+<tr class="separator:a3540d0ca4d294db0140c37dbba5ea6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84cd2dc798551ee976b28b59175e8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ae84cd2dc798551ee976b28b59175e8d3">MoveGlyphToIndex</a> (int selectedIndex, int newIndex)</td></tr>
+<tr class="memdesc:ae84cd2dc798551ee976b28b59175e8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move Sprite Element at selected index to another index and reorder sprite list.  <a href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ae84cd2dc798551ee976b28b59175e8d3">More...</a><br /></td></tr>
+<tr class="separator:ae84cd2dc798551ee976b28b59175e8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b14513e9710484f9a88b37529d871b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a17b14513e9710484f9a88b37529d871b">CopyCharacterSerializedProperty</a> (SerializedProperty source, ref SerializedProperty target)</td></tr>
+<tr class="separator:a17b14513e9710484f9a88b37529d871b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3a415af00217f17972d5db8f2d659b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a3b3a415af00217f17972d5db8f2d659b">CopyGlyphSerializedProperty</a> (SerializedProperty srcGlyph, ref SerializedProperty dstGlyph)</td></tr>
+<tr class="separator:a3b3a415af00217f17972d5db8f2d659b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac187d838c5ddb95f76766a9f644bf486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ac187d838c5ddb95f76766a9f644bf486">SearchCharacterTable</a> (string searchPattern, ref List&lt; int &gt; searchResults)</td></tr>
+<tr class="separator:ac187d838c5ddb95f76766a9f644bf486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561b3a687c3eafb126fa9c44450db194"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a561b3a687c3eafb126fa9c44450db194">SearchGlyphTable</a> (string searchPattern, ref List&lt; int &gt; searchResults)</td></tr>
+<tr class="separator:a561b3a687c3eafb126fa9c44450db194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a06594370e748daa0dc57652291b3a8e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a06594370e748daa0dc57652291b3a8e0">m_moveToIndex</a></td></tr>
+<tr class="separator:a06594370e748daa0dc57652291b3a8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab055ef76c70fcc1f8b24b25264699695"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ab055ef76c70fcc1f8b24b25264699695">m_selectedElement</a> = -1</td></tr>
+<tr class="separator:ab055ef76c70fcc1f8b24b25264699695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa066bbb0a618bd450d86a5bc9c2307"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a5aa066bbb0a618bd450d86a5bc9c2307">m_CurrentCharacterPage</a></td></tr>
+<tr class="separator:a5aa066bbb0a618bd450d86a5bc9c2307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a6d76154d04495f4558bc07f909765"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ab2a6d76154d04495f4558bc07f909765">m_CurrentGlyphPage</a></td></tr>
+<tr class="separator:ab2a6d76154d04495f4558bc07f909765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b13f76f4451f49dccd0e16ee633a5c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a31b13f76f4451f49dccd0e16ee633a5c">m_CharacterSearchPattern</a></td></tr>
+<tr class="separator:a31b13f76f4451f49dccd0e16ee633a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda8fc30cc3830fa7b03e043386fe75f"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#acda8fc30cc3830fa7b03e043386fe75f">m_CharacterSearchList</a></td></tr>
+<tr class="separator:acda8fc30cc3830fa7b03e043386fe75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295bfecaef7792bef07aa2b5acbe4bcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a295bfecaef7792bef07aa2b5acbe4bcd">m_IsCharacterSearchDirty</a></td></tr>
+<tr class="separator:a295bfecaef7792bef07aa2b5acbe4bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161974a392afe35c9459dc1f9f143aa9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a161974a392afe35c9459dc1f9f143aa9">m_GlyphSearchPattern</a></td></tr>
+<tr class="separator:a161974a392afe35c9459dc1f9f143aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10957d1b382a50649c8366f09d08499e"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a10957d1b382a50649c8366f09d08499e">m_GlyphSearchList</a></td></tr>
+<tr class="separator:a10957d1b382a50649c8366f09d08499e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d5909953c6a7c04c5f630e4355d388"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ac6d5909953c6a7c04c5f630e4355d388">m_IsGlyphSearchDirty</a></td></tr>
+<tr class="separator:ac6d5909953c6a7c04c5f630e4355d388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1130d0fb7555971a0af60499f9fea53e"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a1130d0fb7555971a0af60499f9fea53e">m_FaceInfoProperty</a></td></tr>
+<tr class="separator:a1130d0fb7555971a0af60499f9fea53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7abfc3c679c97b209e96a04674038ee"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#af7abfc3c679c97b209e96a04674038ee">m_PointSizeProperty</a></td></tr>
+<tr class="separator:af7abfc3c679c97b209e96a04674038ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c4450f61ec3f47bfbedaf16409eb91"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a64c4450f61ec3f47bfbedaf16409eb91">m_ScaleProperty</a></td></tr>
+<tr class="separator:a64c4450f61ec3f47bfbedaf16409eb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f43c7161a65f79fafa6ca9780edb4a"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a74f43c7161a65f79fafa6ca9780edb4a">m_LineHeightProperty</a></td></tr>
+<tr class="separator:a74f43c7161a65f79fafa6ca9780edb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a94bf52838b7b5f5fdde19eb530786c"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a3a94bf52838b7b5f5fdde19eb530786c">m_AscentLineProperty</a></td></tr>
+<tr class="separator:a3a94bf52838b7b5f5fdde19eb530786c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499101ca97610d61b1dcdd090798138d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a499101ca97610d61b1dcdd090798138d">m_BaselineProperty</a></td></tr>
+<tr class="separator:a499101ca97610d61b1dcdd090798138d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb2d7941de06dbe6203cfc14e33f701"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a7bb2d7941de06dbe6203cfc14e33f701">m_DescentLineProperty</a></td></tr>
+<tr class="separator:a7bb2d7941de06dbe6203cfc14e33f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35bf42ab03d465877d8361a291d7b08"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ac35bf42ab03d465877d8361a291d7b08">m_spriteAtlas_prop</a></td></tr>
+<tr class="separator:ac35bf42ab03d465877d8361a291d7b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c99bf31317bdeb56890f8d21d2d73a"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a48c99bf31317bdeb56890f8d21d2d73a">m_material_prop</a></td></tr>
+<tr class="separator:a48c99bf31317bdeb56890f8d21d2d73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb4ac0798354b4c20cc3ce7a4ba7ae4"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#abeb4ac0798354b4c20cc3ce7a4ba7ae4">m_SpriteCharacterTableProperty</a></td></tr>
+<tr class="separator:abeb4ac0798354b4c20cc3ce7a4ba7ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e371670a6f221788bfe5cd046510ddc"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a6e371670a6f221788bfe5cd046510ddc">m_SpriteGlyphTableProperty</a></td></tr>
+<tr class="separator:a6e371670a6f221788bfe5cd046510ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3d8c4cdff64bf6782aaef6ec33a63b"><td class="memItemLeft" align="right" valign="top">ReorderableList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#aab3d8c4cdff64bf6782aaef6ec33a63b">m_fallbackSpriteAssetList</a></td></tr>
+<tr class="separator:aab3d8c4cdff64bf6782aaef6ec33a63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0044bf5fec5d96a88ac99574ff7ecda5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a0044bf5fec5d96a88ac99574ff7ecda5">m_SpriteAsset</a></td></tr>
+<tr class="separator:a0044bf5fec5d96a88ac99574ff7ecda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa569d2162711b071639b7d4490eb21f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#aa569d2162711b071639b7d4490eb21f3">isAssetDirty</a></td></tr>
+<tr class="separator:aa569d2162711b071639b7d4490eb21f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ea166cd01cd3fb9aae9e8572d9a4f4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a40ea166cd01cd3fb9aae9e8572d9a4f4">m_xOffset</a></td></tr>
+<tr class="separator:a40ea166cd01cd3fb9aae9e8572d9a4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b3e0836cc606a263e5c014b01d1f0f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ac3b3e0836cc606a263e5c014b01d1f0f">m_yOffset</a></td></tr>
+<tr class="separator:ac3b3e0836cc606a263e5c014b01d1f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c53a19ab69d00b80d9ea0f69676599c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a8c53a19ab69d00b80d9ea0f69676599c">m_xAdvance</a></td></tr>
+<tr class="separator:a8c53a19ab69d00b80d9ea0f69676599c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad684ab499c8419c7d3c212d9a37c7f07"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#ad684ab499c8419c7d3c212d9a37c7f07">m_scale</a></td></tr>
+<tr class="separator:ad684ab499c8419c7d3c212d9a37c7f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aa1f98526abc45286ff11f985bb34245d"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#aa1f98526abc45286ff11f985bb34245d">s_UiStateLabel</a> = new string[] { &quot;&lt;i&gt;(Click to collapse)&lt;/i&gt; &quot;, &quot;&lt;i&gt;(Click to expand)&lt;/i&gt; &quot; }</td></tr>
+<tr class="separator:aa1f98526abc45286ff11f985bb34245d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40dcde122df7e62f81152bafd25c3a90"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor.html#a40dcde122df7e62f81152bafd25c3a90">k_UndoRedo</a> = &quot;UndoRedoPerformed&quot;</td></tr>
+<tr class="separator:a40dcde122df7e62f81152bafd25c3a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00012">12</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a17b14513e9710484f9a88b37529d871b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b14513e9710484f9a88b37529d871b">&#9670;&nbsp;</a></span>CopyCharacterSerializedProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.CopyCharacterSerializedProperty </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref SerializedProperty&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td></td></tr>
+    <tr><td class="paramname">target</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00835">835</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a17b14513e9710484f9a88b37529d871b_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a17b14513e9710484f9a88b37529d871b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3b3a415af00217f17972d5db8f2d659b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b3a415af00217f17972d5db8f2d659b">&#9670;&nbsp;</a></span>CopyGlyphSerializedProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.CopyGlyphSerializedProperty </td>
+          <td>(</td>
+          <td class="paramtype">SerializedProperty&#160;</td>
+          <td class="paramname"><em>srcGlyph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref SerializedProperty&#160;</td>
+          <td class="paramname"><em>dstGlyph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00844">844</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a3b3a415af00217f17972d5db8f2d659b_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a3b3a415af00217f17972d5db8f2d659b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab51c936c8f0755bf1fa516786c061dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51c936c8f0755bf1fa516786c061dc7">&#9670;&nbsp;</a></span>DisplayPageNavigation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.DisplayPageNavigation </td>
+          <td>(</td>
+          <td class="paramtype">ref int&#160;</td>
+          <td class="paramname"><em>currentPage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arraySize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemsPerPage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arraySize</td><td></td></tr>
+    <tr><td class="paramname">itemsPerPage</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00674">674</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_ab51c936c8f0755bf1fa516786c061dc7_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_ab51c936c8f0755bf1fa516786c061dc7_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a31945b5ae12161dc4eca9365603eb09a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31945b5ae12161dc4eca9365603eb09a">&#9670;&nbsp;</a></span>DoSelectionCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_SpriteAssetEditor.DoSelectionCheck </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>selectionArea</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00742">742</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a31945b5ae12161dc4eca9365603eb09a_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a31945b5ae12161dc4eca9365603eb09a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a25a48ee3d8c6168f63b4e2ee61fa42f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a48ee3d8c6168f63b4e2ee61fa42f7">&#9670;&nbsp;</a></span>MoveCharacterToIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.MoveCharacterToIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selectedIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move Sprite Element at selected index to another index and reorder sprite list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selectedIndex</td><td></td></tr>
+    <tr><td class="paramname">newIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00779">779</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a25a48ee3d8c6168f63b4e2ee61fa42f7_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a25a48ee3d8c6168f63b4e2ee61fa42f7_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae84cd2dc798551ee976b28b59175e8d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84cd2dc798551ee976b28b59175e8d3">&#9670;&nbsp;</a></span>MoveGlyphToIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.MoveGlyphToIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selectedIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move Sprite Element at selected index to another index and reorder sprite list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selectedIndex</td><td></td></tr>
+    <tr><td class="paramname">newIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00813">813</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_ae84cd2dc798551ee976b28b59175e8d3_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_ae84cd2dc798551ee976b28b59175e8d3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="ae1b4511c2229bbfec1c7fb53102c51cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1b4511c2229bbfec1c7fb53102c51cf">&#9670;&nbsp;</a></span>OnEnable()</h2>
 
@@ -154,8 +547,975 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ac187d838c5ddb95f76766a9f644bf486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac187d838c5ddb95f76766a9f644bf486">&#9670;&nbsp;</a></span>SearchCharacterTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.SearchCharacterTable </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>searchPattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref List&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>searchResults</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">searchPattern</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00880">880</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_ac187d838c5ddb95f76766a9f644bf486_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_ac187d838c5ddb95f76766a9f644bf486_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a561b3a687c3eafb126fa9c44450db194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a561b3a687c3eafb126fa9c44450db194">&#9670;&nbsp;</a></span>SearchGlyphTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.SearchGlyphTable </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>searchPattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref List&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>searchResults</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00916">916</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2af813fcc2841a0d91f0061c83ec0af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af813fcc2841a0d91f0061c83ec0af8">&#9670;&nbsp;</a></span>SwapCharacterElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.SwapCharacterElements </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selectedIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swap the sprite item at the currently selected array index to another index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selectedIndex</td><td>Selected index.</td></tr>
+    <tr><td class="paramname">newIndex</td><td>New index.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00766">766</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a2af813fcc2841a0d91f0061c83ec0af8_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a2af813fcc2841a0d91f0061c83ec0af8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3540d0ca4d294db0140c37dbba5ea6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3540d0ca4d294db0140c37dbba5ea6c3">&#9670;&nbsp;</a></span>SwapGlyphElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.SwapGlyphElements </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selectedIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selectedIndex</td><td></td></tr>
+    <tr><td class="paramname">newIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00800">800</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a3540d0ca4d294db0140c37dbba5ea6c3_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a3540d0ca4d294db0140c37dbba5ea6c3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a42c7bc8790094fabfced10f0eb944cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c7bc8790094fabfced10f0eb944cfd">&#9670;&nbsp;</a></span>UpdateGlobalProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TMPro.EditorUtilities.TMP_SpriteAssetEditor.UpdateGlobalProperty </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to update the properties of all sprites </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">property</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00718">718</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a42c7bc8790094fabfced10f0eb944cfd_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_editor_utilities_1_1_t_m_p___sprite_asset_editor_a42c7bc8790094fabfced10f0eb944cfd_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa569d2162711b071639b7d4490eb21f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa569d2162711b071639b7d4490eb21f3">&#9670;&nbsp;</a></span>isAssetDirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_SpriteAssetEditor.isAssetDirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00056">56</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a40dcde122df7e62f81152bafd25c3a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40dcde122df7e62f81152bafd25c3a90">&#9670;&nbsp;</a></span>k_UndoRedo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string TMPro.EditorUtilities.TMP_SpriteAssetEditor.k_UndoRedo = &quot;UndoRedoPerformed&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00030">30</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3a94bf52838b7b5f5fdde19eb530786c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a94bf52838b7b5f5fdde19eb530786c">&#9670;&nbsp;</a></span>m_AscentLineProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_AscentLineProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00044">44</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a499101ca97610d61b1dcdd090798138d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499101ca97610d61b1dcdd090798138d">&#9670;&nbsp;</a></span>m_BaselineProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_BaselineProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00045">45</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="acda8fc30cc3830fa7b03e043386fe75f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acda8fc30cc3830fa7b03e043386fe75f">&#9670;&nbsp;</a></span>m_CharacterSearchList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_CharacterSearchList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00033">33</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a31b13f76f4451f49dccd0e16ee633a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b13f76f4451f49dccd0e16ee633a5c">&#9670;&nbsp;</a></span>m_CharacterSearchPattern</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_CharacterSearchPattern</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00032">32</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5aa066bbb0a618bd450d86a5bc9c2307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa066bbb0a618bd450d86a5bc9c2307">&#9670;&nbsp;</a></span>m_CurrentCharacterPage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_CurrentCharacterPage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00027">27</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab2a6d76154d04495f4558bc07f909765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a6d76154d04495f4558bc07f909765">&#9670;&nbsp;</a></span>m_CurrentGlyphPage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_CurrentGlyphPage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00028">28</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7bb2d7941de06dbe6203cfc14e33f701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb2d7941de06dbe6203cfc14e33f701">&#9670;&nbsp;</a></span>m_DescentLineProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_DescentLineProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00046">46</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1130d0fb7555971a0af60499f9fea53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1130d0fb7555971a0af60499f9fea53e">&#9670;&nbsp;</a></span>m_FaceInfoProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_FaceInfoProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00040">40</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="aab3d8c4cdff64bf6782aaef6ec33a63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3d8c4cdff64bf6782aaef6ec33a63b">&#9670;&nbsp;</a></span>m_fallbackSpriteAssetList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReorderableList TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_fallbackSpriteAssetList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00052">52</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a10957d1b382a50649c8366f09d08499e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10957d1b382a50649c8366f09d08499e">&#9670;&nbsp;</a></span>m_GlyphSearchList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_GlyphSearchList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00037">37</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a161974a392afe35c9459dc1f9f143aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a161974a392afe35c9459dc1f9f143aa9">&#9670;&nbsp;</a></span>m_GlyphSearchPattern</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_GlyphSearchPattern</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00036">36</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a295bfecaef7792bef07aa2b5acbe4bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295bfecaef7792bef07aa2b5acbe4bcd">&#9670;&nbsp;</a></span>m_IsCharacterSearchDirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_IsCharacterSearchDirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00034">34</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac6d5909953c6a7c04c5f630e4355d388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d5909953c6a7c04c5f630e4355d388">&#9670;&nbsp;</a></span>m_IsGlyphSearchDirty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_IsGlyphSearchDirty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00038">38</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a74f43c7161a65f79fafa6ca9780edb4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f43c7161a65f79fafa6ca9780edb4a">&#9670;&nbsp;</a></span>m_LineHeightProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_LineHeightProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00043">43</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a48c99bf31317bdeb56890f8d21d2d73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c99bf31317bdeb56890f8d21d2d73a">&#9670;&nbsp;</a></span>m_material_prop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_material_prop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00049">49</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a06594370e748daa0dc57652291b3a8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06594370e748daa0dc57652291b3a8e0">&#9670;&nbsp;</a></span>m_moveToIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_moveToIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00025">25</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="af7abfc3c679c97b209e96a04674038ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7abfc3c679c97b209e96a04674038ee">&#9670;&nbsp;</a></span>m_PointSizeProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_PointSizeProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00041">41</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad684ab499c8419c7d3c212d9a37c7f07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad684ab499c8419c7d3c212d9a37c7f07">&#9670;&nbsp;</a></span>m_scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00061">61</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a64c4450f61ec3f47bfbedaf16409eb91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c4450f61ec3f47bfbedaf16409eb91">&#9670;&nbsp;</a></span>m_ScaleProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_ScaleProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00042">42</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab055ef76c70fcc1f8b24b25264699695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab055ef76c70fcc1f8b24b25264699695">&#9670;&nbsp;</a></span>m_selectedElement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_selectedElement = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00026">26</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0044bf5fec5d96a88ac99574ff7ecda5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0044bf5fec5d96a88ac99574ff7ecda5">&#9670;&nbsp;</a></span>m_SpriteAsset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_SpriteAsset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00054">54</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac35bf42ab03d465877d8361a291d7b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35bf42ab03d465877d8361a291d7b08">&#9670;&nbsp;</a></span>m_spriteAtlas_prop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_spriteAtlas_prop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00048">48</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="abeb4ac0798354b4c20cc3ce7a4ba7ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb4ac0798354b4c20cc3ce7a4ba7ae4">&#9670;&nbsp;</a></span>m_SpriteCharacterTableProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_SpriteCharacterTableProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00050">50</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6e371670a6f221788bfe5cd046510ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e371670a6f221788bfe5cd046510ddc">&#9670;&nbsp;</a></span>m_SpriteGlyphTableProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SerializedProperty TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_SpriteGlyphTableProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00051">51</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8c53a19ab69d00b80d9ea0f69676599c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c53a19ab69d00b80d9ea0f69676599c">&#9670;&nbsp;</a></span>m_xAdvance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_xAdvance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00060">60</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a40ea166cd01cd3fb9aae9e8572d9a4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ea166cd01cd3fb9aae9e8572d9a4f4">&#9670;&nbsp;</a></span>m_xOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_xOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00058">58</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac3b3e0836cc606a263e5c014b01d1f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b3e0836cc606a263e5c014b01d1f0f">&#9670;&nbsp;</a></span>m_yOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float TMPro.EditorUtilities.TMP_SpriteAssetEditor.m_yOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00059">59</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa1f98526abc45286ff11f985bb34245d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f98526abc45286ff11f985bb34245d">&#9670;&nbsp;</a></span>s_UiStateLabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] TMPro.EditorUtilities.TMP_SpriteAssetEditor.s_UiStateLabel = new string[] { &quot;&lt;i&gt;(Click to collapse)&lt;/i&gt; &quot;, &quot;&lt;i&gt;(Click to expand)&lt;/i&gt; &quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html#l00023">23</a> of file <a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/<a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Editor/<a class="el" href="_t_m_p___sprite_asset_editor_8cs_source.html">TMP_SpriteAssetEditor.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_tr
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_track_action-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TrackAction Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -110,7 +112,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a52110acb0bd9f3d5dd33d6da75fa8555"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a52110acb0bd9f3d5dd33d6da75fa8555">Invoke&lt; T &gt;</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
 <tr class="separator:a52110acb0bd9f3d5dd33d6da75fa8555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5803969b21e353535616724950c19b8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a5803969b21e353535616724950c19b8d">GetMenuEntries</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Vector2? mousePos, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt; items)</td></tr>
+<tr class="memitem:a5803969b21e353535616724950c19b8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a5803969b21e353535616724950c19b8d">GetMenuEntries</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>? mousePos, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks, List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_menu_action_item.html">MenuActionItem</a> &gt; items)</td></tr>
 <tr class="separator:a5803969b21e353535616724950c19b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95af73057a5aec7baa1c83c337346dd7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a95af73057a5aec7baa1c83c337346dd7">HandleShortcut</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, Event evt, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
 <tr class="separator:a95af73057a5aec7baa1c83c337346dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,13 +137,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac435949d2702d00cafa82121afc46dc9"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#ac435949d2702d00cafa82121afc46dc9">GetDisplayName</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>[] tracks)</td></tr>
 <tr class="separator:ac435949d2702d00cafa82121afc46dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
-<tr class="memitem:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a63de4780f5693888aa5b10be0df16ff6">s_ShowActionTriggeredByShortcut</a> = false</td></tr>
-<tr class="separator:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a962371147b4eaa7c826f70347fe6042c"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a962371147b4eaa7c826f70347fe6042c">actions</a><code> [get]</code></td></tr>
+<tr class="separator:a962371147b4eaa7c826f70347fe6042c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
-<tr class="memitem:a86f029d2991bbdd91f29c0556adf8b1e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">Vector2?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a86f029d2991bbdd91f29c0556adf8b1e">mousePosition</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a86f029d2991bbdd91f29c0556adf8b1e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a86f029d2991bbdd91f29c0556adf8b1e">mousePosition</a><code> [get, set]</code></td></tr>
 <tr class="separator:a86f029d2991bbdd91f29c0556adf8b1e inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa731be9997b4d4b13626b2e54c2dfc8 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#aaa731be9997b4d4b13626b2e54c2dfc8">priority</a><code> [get]</code></td></tr>
 <tr class="separator:aaa731be9997b4d4b13626b2e54c2dfc8 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +154,19 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4ac2ce497541b94029ae50b640e8e50a inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460dad0071328eebd1abaa5b240225a9 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a460dad0071328eebd1abaa5b240225a9">showInMenu</a><code> [get]</code></td></tr>
 <tr class="separator:a460dad0071328eebd1abaa5b240225a9 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c10d1adae4665f9c6df343880c8181 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">MenuEntryAttribute&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a90c10d1adae4665f9c6df343880c8181">menuInfo</a><code> [get]</code></td></tr>
+<tr class="separator:a90c10d1adae4665f9c6df343880c8181 inherit properties_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a880e32a1e6b527976997a4361aa9f964"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html#a880e32a1e6b527976997a4361aa9f964">s_ActionClasses</a></td></tr>
+<tr class="separator:a880e32a1e6b527976997a4361aa9f964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html">UnityEditor.Timeline.MenuItemActionBase</a></td></tr>
+<tr class="memitem:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html#a63de4780f5693888aa5b10be0df16ff6">s_ShowActionTriggeredByShortcut</a> = false</td></tr>
+<tr class="separator:a63de4780f5693888aa5b10be0df16ff6 inherit pro_static_attribs_class_unity_editor_1_1_timeline_1_1_menu_item_action_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -284,7 +298,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector2?&#160;</td>
+          <td class="paramtype"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>?&#160;</td>
           <td class="paramname"><em>mousePos</em>, </td>
         </tr>
         <tr>
@@ -461,8 +475,58 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a880e32a1e6b527976997a4361aa9f964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880e32a1e6b527976997a4361aa9f964">&#9670;&nbsp;</a></span>s_ActionClasses</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a>&gt; UnityEditor.Timeline.TrackAction.s_ActionClasses</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_actions_8cs_source.html#l00035">35</a> of file <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a962371147b4eaa7c826f70347fe6042c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a962371147b4eaa7c826f70347fe6042c">&#9670;&nbsp;</a></span>actions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_action.html">TrackAction</a>&gt; UnityEditor.Timeline.TrackAction.actions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_track_actions_8cs_source.html#l00037">37</a> of file <a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Actions/<a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Actions/<a class="el" href="_track_actions_8cs_source.html">TrackActions.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -4,9 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.Timeline.Track\lEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_editor.html",tooltip="Use this class to customize track types in the TimelineEditor."];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="UnityEditor.Timeline.Activation\lTrackEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_activation_track_editor.html",tooltip=" "];
-  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Marker\lTrackEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_track_editor.html",tooltip=" "];
+  Node0 [label="UnityEditor.TestTools.Test\lRunner.ITestSettingsDeserializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_test_tools_1_1_test_runner_1_1_i_test_settings_deserializer.html",tooltip=" "];
 }

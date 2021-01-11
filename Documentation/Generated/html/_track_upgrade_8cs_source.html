@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/AssetUpgrade/TrackUpgrade.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/AssetUpgrade/TrackUpgrade.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,9 +100,9 @@ $(document).ready(function(){initNavTree('_track_upgrade_8cs_source.html',''); i
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            AnimatedTrackProperties = 3</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> k_LatestVersion = (int)Versions.AnimatedTrackProperties;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#affc44aa9b297342ccb4faf14d2b62f46">   16</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#affc44aa9b297342ccb4faf14d2b62f46">k_LatestVersion</a> = (int)Versions.AnimatedTrackProperties;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        [SerializeField, HideInInspector] <span class="keywordtype">int</span> m_Version;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a38731ace76c8f29fcf58bdb8b1849b20">   18</a></span>&#160;        [SerializeField, HideInInspector] <span class="keywordtype">int</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a38731ace76c8f29fcf58bdb8b1849b20">m_Version</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        [Obsolete(<span class="stringliteral">&quot;Please use m_InfiniteClip (on AnimationTrack) instead.&quot;</span>, <span class="keyword">false</span>)]</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        [SerializeField, HideInInspector, FormerlySerializedAs(<span class="stringliteral">&quot;m_animClip&quot;</span>)]</div>
@@ -113,35 +113,35 @@ $(document).ready(function(){initNavTree('_track_upgrade_8cs_source.html',''); i
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">internal</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnUpgradeFromVersion(<span class="keywordtype">int</span> oldVersion) {}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> ISerializationCallbackReceiver.OnBeforeSerialize()</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a4c93c8d362b871b9213714e7e576fbde">   29</a></span>&#160;        <span class="keywordtype">void</span> ISerializationCallbackReceiver.OnBeforeSerialize()</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            m_Version = k_LatestVersion;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a38731ace76c8f29fcf58bdb8b1849b20">m_Version</a> = <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#affc44aa9b297342ccb4faf14d2b62f46">k_LatestVersion</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//make sure children are correctly parented</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (m_Children != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2cc6578e9e8ac44618b6b3111c6b959a">m_Children</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">for</span> (var i = m_Children.Count - 1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">for</span> (var i = <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2cc6578e9e8ac44618b6b3111c6b959a">m_Children</a>.Count - 1; i &gt;= 0; i--)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    var asset = m_Children[i] as TrackAsset;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordflow">if</span> (asset != <span class="keyword">null</span> &amp;&amp; asset.parent != <span class="keyword">this</span>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        asset.parent = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    var <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a911f64cbf1c00660ecebe009f91cef4a">asset</a> = <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2cc6578e9e8ac44618b6b3111c6b959a">m_Children</a>[i] as <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a911f64cbf1c00660ecebe009f91cef4a">asset</a> != <span class="keyword">null</span> &amp;&amp; <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a911f64cbf1c00660ecebe009f91cef4a">asset</a>.parent != <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a911f64cbf1c00660ecebe009f91cef4a">asset</a>.parent = <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a86365529c26b8c9093e885e2eed006a4">OnBeforeTrackSerialize</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> ISerializationCallbackReceiver.OnAfterDeserialize()</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#ae1377534f73afe129fc0c3087a799c0b">   47</a></span>&#160;        <span class="keywordtype">void</span> ISerializationCallbackReceiver.OnAfterDeserialize()</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// Clear the clip cache when a deserialize is performed, or</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// we can get out of sync when performing Undo</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            m_ClipsCache = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a8e79d5058d628065dc5255e9a14e2552">m_ClipsCache</a> = <span class="keyword">null</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            Invalidate();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (m_Version &lt; k_LatestVersion)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a38731ace76c8f29fcf58bdb8b1849b20">m_Version</a> &lt; <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#affc44aa9b297342ccb4faf14d2b62f46">k_LatestVersion</a>)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                UpgradeToLatestVersion(); <span class="comment">//upgrade TrackAsset</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                OnUpgradeFromVersion(m_Version); <span class="comment">//upgrade derived classes</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a1f5dddb029a6d59dd0601ac8e0b29cec">UpgradeToLatestVersion</a>(); <span class="comment">//upgrade TrackAsset</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                OnUpgradeFromVersion(<a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a38731ace76c8f29fcf58bdb8b1849b20">m_Version</a>); <span class="comment">//upgrade derived classes</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">foreach</span> (var marker <span class="keywordflow">in</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2be435785ae018be8940f7c5ce78de87">GetMarkers</a>())</div>
@@ -153,22 +153,29 @@ $(document).ready(function(){initNavTree('_track_upgrade_8cs_source.html',''); i
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//fields that are used for upgrading should be put here, ideally as read-only</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> UpgradeToLatestVersion()</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a1f5dddb029a6d59dd0601ac8e0b29cec">   69</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a1f5dddb029a6d59dd0601ac8e0b29cec">UpgradeToLatestVersion</a>()</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//upgrade code should go into this class</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span>TrackAssetUpgrade</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_unity_engine_1_1_timeline_1_1_track_asset_1_1_track_asset_upgrade.html">   73</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_unity_engine_1_1_timeline_1_1_track_asset_1_1_track_asset_upgrade.html">TrackAssetUpgrade</a></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {}</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a2cc6578e9e8ac44618b6b3111c6b959a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2cc6578e9e8ac44618b6b3111c6b959a">UnityEngine.Timeline.TrackAsset.m_Children</a></div><div class="ttdeci">List&lt; ScriptableObject &gt; m_Children</div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00053">TrackAsset.cs:53</a></div></div>
 <div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html">UnityEngine.Timeline.TrackAsset</a></div><div class="ttdoc">A PlayableAsset representing a track inside a timeline.</div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00006">TrackUpgrade.cs:7</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a8e79d5058d628065dc5255e9a14e2552"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a8e79d5058d628065dc5255e9a14e2552">UnityEngine.Timeline.TrackAsset.m_ClipsCache</a></div><div class="ttdeci">TimelineClip[] m_ClipsCache</div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00056">TrackAsset.cs:56</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_1_1_track_asset_upgrade_html"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset_1_1_track_asset_upgrade.html">UnityEngine.Timeline.TrackAsset.TrackAssetUpgrade</a></div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00073">TrackUpgrade.cs:74</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a911f64cbf1c00660ecebe009f91cef4a"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a911f64cbf1c00660ecebe009f91cef4a">UnityEngine.Timeline.TrackAsset.asset</a></div><div class="ttdeci">Object ICurvesOwner. asset</div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00318">TrackAsset.cs:319</a></div></div>
 <div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a807f50ad14d1f696df4323ae0e7e18c8"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a807f50ad14d1f696df4323ae0e7e18c8">UnityEngine.Timeline.TrackAsset.OnAfterTrackDeserialize</a></div><div class="ttdeci">virtual void OnAfterTrackDeserialize()</div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00025">TrackUpgrade.cs:25</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_affc44aa9b297342ccb4faf14d2b62f46"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#affc44aa9b297342ccb4faf14d2b62f46">UnityEngine.Timeline.TrackAsset.k_LatestVersion</a></div><div class="ttdeci">const int k_LatestVersion</div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00016">TrackUpgrade.cs:16</a></div></div>
 <div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a2be435785ae018be8940f7c5ce78de87"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a2be435785ae018be8940f7c5ce78de87">UnityEngine.Timeline.TrackAsset.GetMarkers</a></div><div class="ttdeci">IEnumerable&lt; IMarker &gt; GetMarkers()</div><div class="ttdoc">Returns an enumerable list of markers on the current asset.</div><div class="ttdef"><b>Definition:</b> <a href="_track_asset_8cs_source.html#l00561">TrackAsset.cs:561</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:10</a></div></div>
 <div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a86365529c26b8c9093e885e2eed006a4"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a86365529c26b8c9093e885e2eed006a4">UnityEngine.Timeline.TrackAsset.OnBeforeTrackSerialize</a></div><div class="ttdeci">virtual void OnBeforeTrackSerialize()</div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00024">TrackUpgrade.cs:24</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:6</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a1f5dddb029a6d59dd0601ac8e0b29cec"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a1f5dddb029a6d59dd0601ac8e0b29cec">UnityEngine.Timeline.TrackAsset.UpgradeToLatestVersion</a></div><div class="ttdeci">void UpgradeToLatestVersion()</div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00069">TrackUpgrade.cs:69</a></div></div>
+<div class="ttc" id="aclass_unity_engine_1_1_timeline_1_1_track_asset_html_a38731ace76c8f29fcf58bdb8b1849b20"><div class="ttname"><a href="class_unity_engine_1_1_timeline_1_1_track_asset.html#a38731ace76c8f29fcf58bdb8b1849b20">UnityEngine.Timeline.TrackAsset.m_Version</a></div><div class="ttdeci">int m_Version</div><div class="ttdef"><b>Definition:</b> <a href="_track_upgrade_8cs_source.html#l00018">TrackUpgrade.cs:18</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

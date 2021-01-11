@@ -6,7 +6,22 @@ digraph "UnityEditor.Timeline.ClipBorder.Selection"
   rankdir="RL";
   Node1 [label="UnityEditor.Timeline.Clip\lBorder.Selection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawGhostClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa9ea0ae47297a07479ce0581ad14d2d0",tooltip=" "];
-  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawInvalidClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a5e6d086ae70c0e5610c382a9d884ac96",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Clip\lDrawer.DrawClipBorder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_drawer.html#ad14ad3c154db383fc4263a6b3ea9daaf",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Clip\lDrawer.DrawDefaultClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_drawer.html#abc4b33126a5dfd6e9778cfa53ceafe57",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ac7bc5987b33be4a1327590b789efe843",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawInto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#ab30772c1d48fedd364a3eb1e366be97c",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Timeline\lClipGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa981e7c442e997b7c660044ccace7e00",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawGhostClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#aa9ea0ae47297a07479ce0581ad14d2d0",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Moving\lItems.DrawItemInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_moving_items.html#a2a157b0323cbc64ac48eb21ad61340b4",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.Moving\lItems.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_moving_items.html#af39ee0b34c59524ed63641226a2cc5dd",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UnityEditor.Timeline.Timeline\lClipGUI.DrawInvalidClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html#a5e6d086ae70c0e5610c382a9d884ac96",tooltip=" "];
+  Node10 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

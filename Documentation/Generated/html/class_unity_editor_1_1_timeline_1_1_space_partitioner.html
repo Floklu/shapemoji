@@ -84,15 +84,24 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_sp
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_space_partitioner-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.SpacePartitioner Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for UnityEditor.Timeline.SpacePartitioner:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner__coll__graph.png" border="0" usemap="#a_unity_editor_8_timeline_8_space_partitioner_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>CachedList</b></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -103,13 +112,25 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85d8effbff6e987e54683254d4e17680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88cdc0700e74458c055f6f7bfbe5e665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a88cdc0700e74458c055f6f7bfbe5e665">AddBounds</a> (object item, Rect rect)</td></tr>
 <tr class="separator:a88cdc0700e74458c055f6f7bfbe5e665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b9c9981b3e73a9459535971070f2714"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a3b9c9981b3e73a9459535971070f2714">GetItemsAtPosition&lt; T &gt;</a> (Vector2 position)</td></tr>
+<tr class="memitem:a3b9c9981b3e73a9459535971070f2714"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a3b9c9981b3e73a9459535971070f2714">GetItemsAtPosition&lt; T &gt;</a> (<a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> position)</td></tr>
 <tr class="memdesc:a3b9c9981b3e73a9459535971070f2714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get items of type T at a given position  <a href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a3b9c9981b3e73a9459535971070f2714">More...</a><br /></td></tr>
 <tr class="separator:a3b9c9981b3e73a9459535971070f2714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07f7c8bcbe953aec545e4bc1066cb1ed"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a07f7c8bcbe953aec545e4bc1066cb1ed">GetItemsInArea&lt; T &gt;</a> (Rect area)</td></tr>
 <tr class="separator:a07f7c8bcbe953aec545e4bc1066cb1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37156a92a8b51b1b189f16cb7079f047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a37156a92a8b51b1b189f16cb7079f047">DebugDraw</a> ()</td></tr>
 <tr class="separator:a37156a92a8b51b1b189f16cb7079f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2b73c277c4d51a5c178fc7edd8cee687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#a2b73c277c4d51a5c178fc7edd8cee687">m_Tree</a> = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td></tr>
+<tr class="separator:a2b73c277c4d51a5c178fc7edd8cee687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82c32f06e3467c902ef9567dd93a832"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#aa82c32f06e3467c902ef9567dd93a832">m_CacheList</a> = new List&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td></tr>
+<tr class="separator:aa82c32f06e3467c902ef9567dd93a832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aa04785679389ee7620ff082829539636"><td class="memItemLeft" align="right" valign="top">const EventType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_space_partitioner.html#aa04785679389ee7620ff082829539636">k_GuiEventLock</a> = EventType.Repaint</td></tr>
+<tr class="separator:aa04785679389ee7620ff082829539636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -192,9 +213,9 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_space_partitioner_8cs_source.html#l00049">49</a> of file <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a>.</p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_cgraph" alt=""/></div>
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_space_partitioner_a28db13deca2d4efaa65d47aac98c9fac_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -216,9 +237,9 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_space_partitioner_8cs_source.html#l00112">112</a> of file <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a>.</p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_cgraph" alt=""/></div>
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_space_partitioner_a37156a92a8b51b1b189f16cb7079f047_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -232,7 +253,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">IEnumerable&lt;T&gt; UnityEditor.Timeline.SpacePartitioner.GetItemsAtPosition&lt; T &gt; </td>
           <td>(</td>
-          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramtype"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td>
           <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
@@ -299,11 +320,6 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_space_partitioner_8cs_source.html#l00097">97</a> of file <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a>.</p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_space_partitioner_a07f7c8bcbe953aec545e4bc1066cb1ed_icgraph" alt=""/></div>
@@ -311,8 +327,81 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa04785679389ee7620ff082829539636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04785679389ee7620ff082829539636">&#9670;&nbsp;</a></span>k_GuiEventLock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EventType UnityEditor.Timeline.SpacePartitioner.k_GuiEventLock = EventType.Repaint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_space_partitioner_8cs_source.html#l00044">44</a> of file <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa82c32f06e3467c902ef9567dd93a832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82c32f06e3467c902ef9567dd93a832">&#9670;&nbsp;</a></span>m_CacheList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt; UnityEditor.Timeline.SpacePartitioner.m_CacheList = new List&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_space_partitioner_8cs_source.html#l00047">47</a> of file <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2b73c277c4d51a5c178fc7edd8cee687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b73c277c4d51a5c178fc7edd8cee687">&#9670;&nbsp;</a></span>m_Tree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt; UnityEditor.Timeline.SpacePartitioner.m_Tree = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_interval_tree.html">IntervalTree</a>&lt;<a class="el" href="struct_unity_editor_1_1_timeline_1_1_space_partitioner_1_1_entry.html">Entry</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_space_partitioner_8cs_source.html#l00046">46</a> of file <a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/<a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Utilities/<a class="el" href="_space_partitioner_8cs_source.html">SpacePartitioner.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

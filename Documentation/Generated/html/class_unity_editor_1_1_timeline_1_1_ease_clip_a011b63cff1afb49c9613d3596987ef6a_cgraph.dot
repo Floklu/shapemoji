@@ -11,4 +11,6 @@ digraph "UnityEditor.Timeline.EaseClip.MouseDown"
   Node3 [label="UnityEditor.Timeline.Window\lState.AddCaptured",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#aea2f15e02d1c279836c9147416a00fc8",tooltip=" "];
   Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="UnityEditor.Timeline.Timeline\lCursors.SetCursor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#af3aaa89dd70528922d3b286f8d18bed7",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lCursors.LoadCursorAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_cursors.html#aa1e23a019377f476a106eaeb0ee07e67",tooltip=" "];
 }

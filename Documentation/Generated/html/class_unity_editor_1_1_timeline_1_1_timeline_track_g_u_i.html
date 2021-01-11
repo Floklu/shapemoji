@@ -85,6 +85,10 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ti
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TimelineTrackGUI Class Reference</div>  </div>
@@ -101,6 +105,13 @@ Collaboration diagram for UnityEditor.Timeline.TimelineTrackGUI:</div>
 <div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i__coll__graph.png" border="0" usemap="#a_unity_editor_8_timeline_8_timeline_track_g_u_i_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_1_1_styles.html">Styles</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_1_1_track_draw_data.html">TrackDrawData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b6aabdf8033ae01af176b30c13a31db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a5b6aabdf8033ae01af176b30c13a31db">TimelineTrackGUI</a> (TreeViewController tv, <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i.html">TimelineTreeViewGUI</a> w, int id, int depth, TreeViewItem parent, string displayName, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> sequenceActor)</td></tr>
@@ -133,10 +144,16 @@ Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a136104c8e189d00d8d76392812645a40"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a136104c8e189d00d8d76392812645a40">expandable</a><code> [get]</code></td></tr>
 <tr class="separator:a136104c8e189d00d8d76392812645a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb2f883761b928a41f4ca635be5dde51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_clip_curve_editor.html">ClipCurveEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#afb2f883761b928a41f4ca635be5dde51">clipCurveEditor</a><code> [get]</code></td></tr>
+<tr class="memitem:afb2f883761b928a41f4ca635be5dde51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_clip_curve_editor.html">ClipCurveEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#afb2f883761b928a41f4ca635be5dde51">clipCurveEditor</a><code> [get, private set]</code></td></tr>
 <tr class="separator:afb2f883761b928a41f4ca635be5dde51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a721d807c02a7f09c2a7950fd78c71d3c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a721d807c02a7f09c2a7950fd78c71d3c">inlineCurvesSelected</a><code> [get, set]</code></td></tr>
 <tr class="separator:a721d807c02a7f09c2a7950fd78c71d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade6e01da058616f4060df813085962d8"><td class="memItemLeft" align="right" valign="top">bool IClipCurveEditorOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ade6e01da058616f4060df813085962d8">showLoops</a><code> [get]</code></td></tr>
+<tr class="separator:ade6e01da058616f4060df813085962d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c0a3bd2272b3833b4dd96849beca11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> IClipCurveEditorOwner.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a13c0a3bd2272b3833b4dd96849beca11">owner</a><code> [get]</code></td></tr>
+<tr class="separator:a13c0a3bd2272b3833b4dd96849beca11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa92e6511e659b296d755eddff31fc89d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aa92e6511e659b296d755eddff31fc89d">trackHasAnimatableParameters</a><code> [get]</code></td></tr>
+<tr class="separator:aa92e6511e659b296d755eddff31fc89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea69826b36ffc9df912ef7dc23a06d88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aea69826b36ffc9df912ef7dc23a06d88">locked</a><code> [get]</code></td></tr>
 <tr class="separator:aea69826b36ffc9df912ef7dc23a06d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d6ff0aa3f4fe1ede1fab79dc950470e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a8d6ff0aa3f4fe1ede1fab79dc950470e">showMarkers</a><code> [get]</code></td></tr>
@@ -145,6 +162,12 @@ Properties</h2></td></tr>
 <tr class="separator:a6ef6134627628bdc50885f5d78d892ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d0f4aaf25ac8c66a5c29b74afcb781"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i.html">TimelineClipGUI</a> &gt;?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ad2d0f4aaf25ac8c66a5c29b74afcb781">clips</a><code> [get]</code></td></tr>
 <tr class="separator:ad2d0f4aaf25ac8c66a5c29b74afcb781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bb1f7989c706295d8e0f73674ec8d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> IRowGUI.&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ab2bb1f7989c706295d8e0f73674ec8d7">asset</a><code> [get]</code></td></tr>
+<tr class="separator:ab2bb1f7989c706295d8e0f73674ec8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ad03d47d34bcfc4788d0e0bfb1cb2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a07ad03d47d34bcfc4788d0e0bfb1cb2a">showTrackRecordingDisabled</a><code> [get]</code></td></tr>
+<tr class="separator:a07ad03d47d34bcfc4788d0e0bfb1cb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2425049c8b61783f1faf216f680fa4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aac2425049c8b61783f1faf216f680fa4">showSceneReference</a><code> [get]</code></td></tr>
+<tr class="separator:aac2425049c8b61783f1faf216f680fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html">UnityEditor.Timeline.TimelineGroupGUI</a></td></tr>
 <tr class="memitem:a97cf6b1e7f2d534bd957ac1b0723dfda inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i"><td class="memItemLeft" align="right" valign="top">override Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a97cf6b1e7f2d534bd957ac1b0723dfda">boundingRect</a><code> [get]</code></td></tr>
 <tr class="separator:a97cf6b1e7f2d534bd957ac1b0723dfda inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +180,7 @@ Properties</h2></td></tr>
 <tr class="memitem:a0151e84013805887b081417483d4436f inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a0151e84013805887b081417483d4436f">dropRect</a><code> [get, set]</code></td></tr>
 <tr class="separator:a0151e84013805887b081417483d4436f inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html">UnityEditor.Timeline.TimelineTrackBaseGUI</a></td></tr>
-<tr class="memitem:a10e6839f51237c79417a13941c0b6f5e inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a10e6839f51237c79417a13941c0b6f5e">treeViewToWindowTransformation</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a10e6839f51237c79417a13941c0b6f5e inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a10e6839f51237c79417a13941c0b6f5e">treeViewToWindowTransformation</a><code> [get, set]</code></td></tr>
 <tr class="separator:a10e6839f51237c79417a13941c0b6f5e inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43c5f776b62ad74723d8f2960054586 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#af43c5f776b62ad74723d8f2960054586">isExpanded</a><code> [get, set]</code></td></tr>
 <tr class="separator:af43c5f776b62ad74723d8f2960054586 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +188,8 @@ Properties</h2></td></tr>
 <tr class="separator:a6d4289f8dffe891f62079196d2a8eae4 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4907df580e1956c8aad31d2190231b96 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a4907df580e1956c8aad31d2190231b96">track</a><code> [get]</code></td></tr>
 <tr class="separator:a4907df580e1956c8aad31d2190231b96 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee4fc6088661d7926b208a67d93aa56 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top">TreeViewController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a9ee4fc6088661d7926b208a67d93aa56">treeView</a><code> [get]</code></td></tr>
+<tr class="separator:a9ee4fc6088661d7926b208a67d93aa56 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d2254638748b118a7b3c9430413e4a inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a62d2254638748b118a7b3c9430413e4a">TimelineWindow</a><code> [get]</code></td></tr>
 <tr class="separator:a62d2254638748b118a7b3c9430413e4a inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd3a23fd4c957b08c3f9d69937ae9b2 inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_track_drawer.html">TrackDrawer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a8cd3a23fd4c957b08c3f9d69937ae9b2">drawer</a><code> [get]</code></td></tr>
@@ -204,6 +229,106 @@ Properties</h2></td></tr>
 <tr class="separator:aa3c28f061e185db900b45ceb39071cdd inherit properties_interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527f4c75fa1e63dd4b161b0940180c88 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i.html#a527f4c75fa1e63dd4b161b0940180c88">muted</a><code> [get]</code></td></tr>
 <tr class="separator:a527f4c75fa1e63dd4b161b0940180c88 inherit properties_interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a864fa431f81802a6b60845b5e97ef0d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a864fa431f81802a6b60845b5e97ef0d4">UpdateInfiniteClipEditor</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a> window)</td></tr>
+<tr class="separator:a864fa431f81802a6b60845b5e97ef0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4874f7c369b41a01cfb582804799875a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a4874f7c369b41a01cfb582804799875a">DetectTrackChanged</a> ()</td></tr>
+<tr class="separator:a4874f7c369b41a01cfb582804799875a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca062241d30efa2b2ad28eac41f1a987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aca062241d30efa2b2ad28eac41f1a987">OnTrackChanged</a> ()</td></tr>
+<tr class="separator:aca062241d30efa2b2ad28eac41f1a987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d4693d49b63d06eb27041d4a8861ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ad9d4693d49b63d06eb27041d4a8861ec">UpdateDrawData</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ad9d4693d49b63d06eb27041d4a8861ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d4be0c837f8d1a4d06b3ed0d7b00fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a85d4be0c837f8d1a4d06b3ed0d7b00fc">DrawInlineCurves</a> (Rect curvesHeaderRect, Rect curvesContentRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a85d4be0c837f8d1a4d06b3ed0d7b00fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef488b660b1549370d84e0c145fbbcfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aef488b660b1549370d84e0c145fbbcfa">DrawErrorIcon</a> (Rect position, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:aef488b660b1549370d84e0c145fbbcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b091828644eb81d3eb9c8d11be63d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a69b091828644eb81d3eb9c8d11be63d1">DrawBackground</a> (Rect trackRect, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> trackAsset, <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> visibleTime, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a69b091828644eb81d3eb9c8d11be63d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3efce353bf0f40f98ffc9c5b4da727"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a2e3efce353bf0f40f98ffc9c5b4da727">InlineCurveHeight</a> ()</td></tr>
+<tr class="separator:a2e3efce353bf0f40f98ffc9c5b4da727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97188ac0462dd9b99436227f5e99f100"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a97188ac0462dd9b99436227f5e99f100">GetTrackContentHeight</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a97188ac0462dd9b99436227f5e99f100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b4af56376c3ced95e0a3ae873afdb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a04b4af56376c3ced95e0a3ae873afdb8">DrawTrackHeader</a> (Rect trackHeaderRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a04b4af56376c3ced95e0a3ae873afdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e04e37a37c485933bdfeb4c855722ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a2e04e37a37c485933bdfeb4c855722ec">DrawHeaderBackground</a> (Rect headerRect)</td></tr>
+<tr class="separator:a2e04e37a37c485933bdfeb4c855722ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5093aa0e2f44b02a01cd392df1dd3e2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a5093aa0e2f44b02a01cd392df1dd3e2e">DrawTrackColorKind</a> (Rect rect)</td></tr>
+<tr class="separator:a5093aa0e2f44b02a01cd392df1dd3e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0240c2bca54cf4182f95158729ad8c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a6d0240c2bca54cf4182f95158729ad8c">DrawTrackIconKind</a> (Rect rect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a6d0240c2bca54cf4182f95158729ad8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db3e86a350547fc26860ffebf0b0231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a3db3e86a350547fc26860ffebf0b0231">DrawTrackBinding</a> (Rect rect, Rect headerRect)</td></tr>
+<tr class="separator:a3db3e86a350547fc26860ffebf0b0231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b2907709dab37cdf1ac44431a6ff9e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a60b2907709dab37cdf1ac44431a6ff9e">DrawTrackDropDownMenu</a> (Rect rect)</td></tr>
+<tr class="separator:a60b2907709dab37cdf1ac44431a6ff9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2de27a04029e676c9964ec40157292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#acd2de27a04029e676c9964ec40157292">CanDrawInlineCurve</a> ()</td></tr>
+<tr class="separator:acd2de27a04029e676c9964ec40157292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2df26c742e4e5c5cc983437b7d51de9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aa2df26c742e4e5c5cc983437b7d51de9">DrawInlineCurveButton</a> (Rect rect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:aa2df26c742e4e5c5cc983437b7d51de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5063c1a729ebdb36c31dc826cb0ddacf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a5063c1a729ebdb36c31dc826cb0ddacf">DrawRecordButton</a> (Rect rect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a5063c1a729ebdb36c31dc826cb0ddacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb5258886e1827e84a82d11eb6f39a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a5fb5258886e1827e84a82d11eb6f39a2">DrawCustomTrackButton</a> (Rect rect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a5fb5258886e1827e84a82d11eb6f39a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe503582ce873525a1a7642c9a7bf68e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#afe503582ce873525a1a7642c9a7bf68e">DrawLockMarkersButton</a> (Rect rect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:afe503582ce873525a1a7642c9a7bf68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100e7584fd0ddc149b251fc735a37971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a100e7584fd0ddc149b251fc735a37971">DoTrackBindingGUI</a> (Rect rect, Rect headerRect)</td></tr>
+<tr class="separator:a100e7584fd0ddc149b251fc735a37971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d33a4a72980d6f55f3eff83469095e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a66d33a4a72980d6f55f3eff83469095e">IsRecording</a> (<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a66d33a4a72980d6f55f3eff83469095e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6322058baa69b76156180bac940958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a4e6322058baa69b76156180bac940958">DrawRecordingTrackBackground</a> (Rect trackRect, <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> trackAsset, <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> visibleTime, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:a4e6322058baa69b76156180bac940958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3dc9504349f3f997fe1e22131f36b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#acd3dc9504349f3f997fe1e22131f36b8">UpdateClipOverlaps</a> ()</td></tr>
+<tr class="separator:acd3dc9504349f3f997fe1e22131f36b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eea9bb8abae7c1cc76adee39fb13989"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a7eea9bb8abae7c1cc76adee39fb13989">BlendHash</a> ()</td></tr>
+<tr class="separator:a7eea9bb8abae7c1cc76adee39fb13989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6c006a644d78efa602494b2078c75c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#afe6c006a644d78efa602494b2078c75c">RefreshCurveEditor</a> ()</td></tr>
+<tr class="separator:afe6c006a644d78efa602494b2078c75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a2ffac9ccba7cd51adf621ae888bf268d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a2ffac9ccba7cd51adf621ae888bf268d">DoesTrackAllowsRecording</a> (<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i.html#a4907df580e1956c8aad31d2190231b96">track</a>)</td></tr>
+<tr class="separator:a2ffac9ccba7cd51adf621ae888bf268d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97c60cd6b715f39d6e32ba288e44fc3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ae97c60cd6b715f39d6e32ba288e44fc3">IsInlineCurvesEditorInBounds</a> (Rect windowSpaceTrackRect, float inlineCurveHeight, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state)</td></tr>
+<tr class="separator:ae97c60cd6b715f39d6e32ba288e44fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d4c0b38b59e5e70ac5a842523ba69c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a45d4c0b38b59e5e70ac5a842523ba69c">CanDrawIcon</a> (GUIContent icon)</td></tr>
+<tr class="separator:a45d4c0b38b59e5e70ac5a842523ba69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f8621c572d93bf9bace57c84373f5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ad8f8621c572d93bf9bace57c84373f5e">ObjectBindingField</a> (Rect position, <a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> obj, PlayableBinding binding)</td></tr>
+<tr class="separator:ad8f8621c572d93bf9bace57c84373f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6179d5f77e0996956a0f57bc7b9bb6ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a6179d5f77e0996956a0f57bc7b9bb6ab">m_InlineCurvesSkipped</a></td></tr>
+<tr class="separator:a6179d5f77e0996956a0f57bc7b9bb6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaae8109fd35fe8e910613c1f4556f70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#afaae8109fd35fe8e910613c1f4556f70">m_TrackHash</a> = -1</td></tr>
+<tr class="separator:afaae8109fd35fe8e910613c1f4556f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f8383104b635f8c4fd62ff76c9ab0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aa0f8383104b635f8c4fd62ff76c9ab0f">m_BlendHash</a> = -1</td></tr>
+<tr class="separator:aa0f8383104b635f8c4fd62ff76c9ab0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac294f259bdf9c04592a5e941869deae1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ac294f259bdf9c04592a5e941869deae1">m_LastDirtyIndex</a> = -1</td></tr>
+<tr class="separator:ac294f259bdf9c04592a5e941869deae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f225c3c5e6271fb77469bf42cc19a8"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_infinite_track_drawer.html">InfiniteTrackDrawer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#ad1f225c3c5e6271fb77469bf42cc19a8">m_InfiniteTrackDrawer</a></td></tr>
+<tr class="separator:ad1f225c3c5e6271fb77469bf42cc19a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4657dbecab0e2a5766c09e1175d30698"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_track_items_drawer.html">TrackItemsDrawer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a4657dbecab0e2a5766c09e1175d30698">m_ItemsDrawer</a></td></tr>
+<tr class="separator:a4657dbecab0e2a5766c09e1175d30698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd45f47f7223ca4e9611d31af2f628da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_1_1_track_draw_data.html">TrackDrawData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#afd45f47f7223ca4e9611d31af2f628da">m_TrackDrawData</a></td></tr>
+<tr class="separator:afd45f47f7223ca4e9611d31af2f628da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3568793b6835e72552b40740215f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html">TrackDrawOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a4c3568793b6835e72552b40740215f2c">m_TrackDrawOptions</a></td></tr>
+<tr class="separator:a4c3568793b6835e72552b40740215f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d9141b968fe1e63ccde57a8bfb3080"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html">TrackEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a78d9141b968fe1e63ccde57a8bfb3080">m_TrackEditor</a></td></tr>
+<tr class="separator:a78d9141b968fe1e63ccde57a8bfb3080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977d65d0c1d2da04126de379ffa5285d"><td class="memItemLeft" align="right" valign="top">readonly GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a977d65d0c1d2da04126de379ffa5285d">m_DefaultTrackIcon</a></td></tr>
+<tr class="separator:a977d65d0c1d2da04126de379ffa5285d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002c0f711fd22ce8f948f1bd139e3154"><td class="memItemLeft" align="right" valign="top">bool?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a002c0f711fd22ce8f948f1bd139e3154">m_TrackHasAnimatableParameters</a></td></tr>
+<tr class="separator:a002c0f711fd22ce8f948f1bd139e3154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a45fa936e3adb0ccdf74e601cfc09ec70"><td class="memItemLeft" align="right" valign="top">static GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a45fa936e3adb0ccdf74e601cfc09ec70">s_ArmForRecordContentOn</a></td></tr>
+<tr class="separator:a45fa936e3adb0ccdf74e601cfc09ec70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aee08a5b781d6a270a102b67042ff68"><td class="memItemLeft" align="right" valign="top">static GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#a2aee08a5b781d6a270a102b67042ff68">s_ArmForRecordContentOff</a></td></tr>
+<tr class="separator:a2aee08a5b781d6a270a102b67042ff68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacfb6a4ac46e40ff9ef8deb41f86895"><td class="memItemLeft" align="right" valign="top">static GUIContent&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i.html#aaacfb6a4ac46e40ff9ef8deb41f86895">s_ArmForRecordDisabled</a></td></tr>
+<tr class="separator:aaacfb6a4ac46e40ff9ef8deb41f86895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -308,6 +433,236 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7eea9bb8abae7c1cc76adee39fb13989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eea9bb8abae7c1cc76adee39fb13989">&#9670;&nbsp;</a></span>BlendHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineTrackGUI.BlendHash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00777">777</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a7eea9bb8abae7c1cc76adee39fb13989_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a7eea9bb8abae7c1cc76adee39fb13989_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a7eea9bb8abae7c1cc76adee39fb13989_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a7eea9bb8abae7c1cc76adee39fb13989_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a45d4c0b38b59e5e70ac5a842523ba69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45d4c0b38b59e5e70ac5a842523ba69c">&#9670;&nbsp;</a></span>CanDrawIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineTrackGUI.CanDrawIcon </td>
+          <td>(</td>
+          <td class="paramtype">GUIContent&#160;</td>
+          <td class="paramname"><em>icon</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00440">440</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a45d4c0b38b59e5e70ac5a842523ba69c_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a45d4c0b38b59e5e70ac5a842523ba69c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acd2de27a04029e676c9964ec40157292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2de27a04029e676c9964ec40157292">&#9670;&nbsp;</a></span>CanDrawInlineCurve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineTrackGUI.CanDrawInlineCurve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00593">593</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd2de27a04029e676c9964ec40157292_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd2de27a04029e676c9964ec40157292_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd2de27a04029e676c9964ec40157292_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd2de27a04029e676c9964ec40157292_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4874f7c369b41a01cfb582804799875a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4874f7c369b41a01cfb582804799875a">&#9670;&nbsp;</a></span>DetectTrackChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DetectTrackChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00192">192</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4874f7c369b41a01cfb582804799875a_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4874f7c369b41a01cfb582804799875a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4874f7c369b41a01cfb582804799875a_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4874f7c369b41a01cfb582804799875a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2ffac9ccba7cd51adf621ae888bf268d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffac9ccba7cd51adf621ae888bf268d">&#9670;&nbsp;</a></span>DoesTrackAllowsRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineTrackGUI.DoesTrackAllowsRecording </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00080">80</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2ffac9ccba7cd51adf621ae888bf268d_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2ffac9ccba7cd51adf621ae888bf268d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2ffac9ccba7cd51adf621ae888bf268d_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2ffac9ccba7cd51adf621ae888bf268d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a100e7584fd0ddc149b251fc735a37971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100e7584fd0ddc149b251fc735a37971">&#9670;&nbsp;</a></span>DoTrackBindingGUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DoTrackBindingGUI </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>headerRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00729">729</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a100e7584fd0ddc149b251fc735a37971_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a100e7584fd0ddc149b251fc735a37971_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a100e7584fd0ddc149b251fc735a37971_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a100e7584fd0ddc149b251fc735a37971_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a747cc3a832cf8df23274996439249d9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a747cc3a832cf8df23274996439249d9c">&#9670;&nbsp;</a></span>Draw()</h2>
 
@@ -359,6 +714,668 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a69b091828644eb81d3eb9c8d11be63d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b091828644eb81d3eb9c8d11be63d1">&#9670;&nbsp;</a></span>DrawBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawBackground </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>trackAsset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td>
+          <td class="paramname"><em>visibleTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00385">385</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a69b091828644eb81d3eb9c8d11be63d1_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a69b091828644eb81d3eb9c8d11be63d1_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a69b091828644eb81d3eb9c8d11be63d1_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a69b091828644eb81d3eb9c8d11be63d1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5fb5258886e1827e84a82d11eb6f39a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb5258886e1827e84a82d11eb6f39a2">&#9670;&nbsp;</a></span>DrawCustomTrackButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.DrawCustomTrackButton </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00681">681</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5fb5258886e1827e84a82d11eb6f39a2_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5fb5258886e1827e84a82d11eb6f39a2_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5fb5258886e1827e84a82d11eb6f39a2_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5fb5258886e1827e84a82d11eb6f39a2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aef488b660b1549370d84e0c145fbbcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef488b660b1549370d84e0c145fbbcfa">&#9670;&nbsp;</a></span>DrawErrorIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawErrorIcon </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00377">377</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aef488b660b1549370d84e0c145fbbcfa_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aef488b660b1549370d84e0c145fbbcfa_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2e04e37a37c485933bdfeb4c855722ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e04e37a37c485933bdfeb4c855722ec">&#9670;&nbsp;</a></span>DrawHeaderBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawHeaderBackground </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>headerRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00487">487</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e04e37a37c485933bdfeb4c855722ec_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e04e37a37c485933bdfeb4c855722ec_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e04e37a37c485933bdfeb4c855722ec_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e04e37a37c485933bdfeb4c855722ec_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa2df26c742e4e5c5cc983437b7d51de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2df26c742e4e5c5cc983437b7d51de9">&#9670;&nbsp;</a></span>DrawInlineCurveButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.DrawInlineCurveButton </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00599">599</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aa2df26c742e4e5c5cc983437b7d51de9_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aa2df26c742e4e5c5cc983437b7d51de9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aa2df26c742e4e5c5cc983437b7d51de9_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aa2df26c742e4e5c5cc983437b7d51de9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a85d4be0c837f8d1a4d06b3ed0d7b00fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d4be0c837f8d1a4d06b3ed0d7b00fc">&#9670;&nbsp;</a></span>DrawInlineCurves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawInlineCurves </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>curvesHeaderRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>curvesContentRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00339">339</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a85d4be0c837f8d1a4d06b3ed0d7b00fc_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a85d4be0c837f8d1a4d06b3ed0d7b00fc_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a85d4be0c837f8d1a4d06b3ed0d7b00fc_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a85d4be0c837f8d1a4d06b3ed0d7b00fc_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="afe503582ce873525a1a7642c9a7bf68e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe503582ce873525a1a7642c9a7bf68e">&#9670;&nbsp;</a></span>DrawLockMarkersButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.DrawLockMarkersButton </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00690">690</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_afe503582ce873525a1a7642c9a7bf68e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_afe503582ce873525a1a7642c9a7bf68e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_afe503582ce873525a1a7642c9a7bf68e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_afe503582ce873525a1a7642c9a7bf68e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5063c1a729ebdb36c31dc826cb0ddacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5063c1a729ebdb36c31dc826cb0ddacf">&#9670;&nbsp;</a></span>DrawRecordButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.DrawRecordButton </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00621">621</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5063c1a729ebdb36c31dc826cb0ddacf_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5063c1a729ebdb36c31dc826cb0ddacf_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5063c1a729ebdb36c31dc826cb0ddacf_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5063c1a729ebdb36c31dc826cb0ddacf_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4e6322058baa69b76156180bac940958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6322058baa69b76156180bac940958">&#9670;&nbsp;</a></span>DrawRecordingTrackBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawRecordingTrackBackground </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&#160;</td>
+          <td class="paramname"><em>trackAsset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td>
+          <td class="paramname"><em>visibleTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00757">757</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4e6322058baa69b76156180bac940958_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4e6322058baa69b76156180bac940958_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4e6322058baa69b76156180bac940958_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a4e6322058baa69b76156180bac940958_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3db3e86a350547fc26860ffebf0b0231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db3e86a350547fc26860ffebf0b0231">&#9670;&nbsp;</a></span>DrawTrackBinding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawTrackBinding </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>headerRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00543">543</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a3db3e86a350547fc26860ffebf0b0231_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a3db3e86a350547fc26860ffebf0b0231_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a3db3e86a350547fc26860ffebf0b0231_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a3db3e86a350547fc26860ffebf0b0231_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5093aa0e2f44b02a01cd392df1dd3e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5093aa0e2f44b02a01cd392df1dd3e2e">&#9670;&nbsp;</a></span>DrawTrackColorKind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawTrackColorKind </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00500">500</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5093aa0e2f44b02a01cd392df1dd3e2e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a5093aa0e2f44b02a01cd392df1dd3e2e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a60b2907709dab37cdf1ac44431a6ff9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b2907709dab37cdf1ac44431a6ff9e">&#9670;&nbsp;</a></span>DrawTrackDropDownMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.DrawTrackDropDownMenu </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00574">574</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a60b2907709dab37cdf1ac44431a6ff9e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a60b2907709dab37cdf1ac44431a6ff9e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a60b2907709dab37cdf1ac44431a6ff9e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a60b2907709dab37cdf1ac44431a6ff9e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a04b4af56376c3ced95e0a3ae873afdb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b4af56376c3ced95e0a3ae873afdb8">&#9670;&nbsp;</a></span>DrawTrackHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.DrawTrackHeader </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackHeaderRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00458">458</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a04b4af56376c3ced95e0a3ae873afdb8_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a04b4af56376c3ced95e0a3ae873afdb8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a04b4af56376c3ced95e0a3ae873afdb8_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a04b4af56376c3ced95e0a3ae873afdb8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6d0240c2bca54cf4182f95158729ad8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0240c2bca54cf4182f95158729ad8c">&#9670;&nbsp;</a></span>DrawTrackIconKind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.DrawTrackIconKind </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>rect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00515">515</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a6d0240c2bca54cf4182f95158729ad8c_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a6d0240c2bca54cf4182f95158729ad8c_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a6d0240c2bca54cf4182f95158729ad8c_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a6d0240c2bca54cf4182f95158729ad8c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a1d547452ed9cfe0ea2ed1e8faffa8b08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d547452ed9cfe0ea2ed1e8faffa8b08">&#9670;&nbsp;</a></span>GetHeight()</h2>
 
@@ -386,6 +1403,44 @@ Here is the call graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a3cd4f18591e1b27be022c95c2607d045">UnityEditor.Timeline.TimelineGroupGUI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00420">420</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a1d547452ed9cfe0ea2ed1e8faffa8b08_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a1d547452ed9cfe0ea2ed1e8faffa8b08_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a97188ac0462dd9b99436227f5e99f100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97188ac0462dd9b99436227f5e99f100">&#9670;&nbsp;</a></span>GetTrackContentHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.GetTrackContentHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00430">430</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a97188ac0462dd9b99436227f5e99f100_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a97188ac0462dd9b99436227f5e99f100_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -418,6 +1473,184 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a2e3efce353bf0f40f98ffc9c5b4da727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3efce353bf0f40f98ffc9c5b4da727">&#9670;&nbsp;</a></span>InlineCurveHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnityEditor.Timeline.TimelineTrackGUI.InlineCurveHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00413">413</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e3efce353bf0f40f98ffc9c5b4da727_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e3efce353bf0f40f98ffc9c5b4da727_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e3efce353bf0f40f98ffc9c5b4da727_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2e3efce353bf0f40f98ffc9c5b4da727_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae97c60cd6b715f39d6e32ba288e44fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97c60cd6b715f39d6e32ba288e44fc3">&#9670;&nbsp;</a></span>IsInlineCurvesEditorInBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnityEditor.Timeline.TimelineTrackGUI.IsInlineCurvesEditorInBounds </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>windowSpaceTrackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>inlineCurveHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00369">369</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ae97c60cd6b715f39d6e32ba288e44fc3_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ae97c60cd6b715f39d6e32ba288e44fc3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a66d33a4a72980d6f55f3eff83469095e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d33a4a72980d6f55f3eff83469095e">&#9670;&nbsp;</a></span>IsRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineTrackGUI.IsRecording </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00751">751</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a66d33a4a72980d6f55f3eff83469095e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a66d33a4a72980d6f55f3eff83469095e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a66d33a4a72980d6f55f3eff83469095e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a66d33a4a72980d6f55f3eff83469095e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad8f8621c572d93bf9bace57c84373f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f8621c572d93bf9bace57c84373f5e">&#9670;&nbsp;</a></span>ObjectBindingField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineTrackGUI.ObjectBindingField </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_emoji_test_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a>&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PlayableBinding&#160;</td>
+          <td class="paramname"><em>binding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00711">711</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad8f8621c572d93bf9bace57c84373f5e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad8f8621c572d93bf9bace57c84373f5e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad8f8621c572d93bf9bace57c84373f5e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad8f8621c572d93bf9bace57c84373f5e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="ac0b586455fec06cc5a127480a509bf1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0b586455fec06cc5a127480a509bf1e">&#9670;&nbsp;</a></span>OnGraphRebuilt()</h2>
 
@@ -444,10 +1677,558 @@ Here is the call graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_group_g_u_i.html#a25fff134967e6a4b281f9c9afcab8aaf">UnityEditor.Timeline.TimelineGroupGUI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00791">791</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ac0b586455fec06cc5a127480a509bf1e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ac0b586455fec06cc5a127480a509bf1e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aca062241d30efa2b2ad28eac41f1a987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca062241d30efa2b2ad28eac41f1a987">&#9670;&nbsp;</a></span>OnTrackChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.OnTrackChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00214">214</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aca062241d30efa2b2ad28eac41f1a987_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aca062241d30efa2b2ad28eac41f1a987_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aca062241d30efa2b2ad28eac41f1a987_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_aca062241d30efa2b2ad28eac41f1a987_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="afe6c006a644d78efa602494b2078c75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6c006a644d78efa602494b2078c75c">&#9670;&nbsp;</a></span>RefreshCurveEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.RefreshCurveEditor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00796">796</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_afe6c006a644d78efa602494b2078c75c_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_afe6c006a644d78efa602494b2078c75c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acd3dc9504349f3f997fe1e22131f36b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd3dc9504349f3f997fe1e22131f36b8">&#9670;&nbsp;</a></span>UpdateClipOverlaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.UpdateClipOverlaps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00763">763</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd3dc9504349f3f997fe1e22131f36b8_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd3dc9504349f3f997fe1e22131f36b8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd3dc9504349f3f997fe1e22131f36b8_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_acd3dc9504349f3f997fe1e22131f36b8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad9d4693d49b63d06eb27041d4a8861ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d4693d49b63d06eb27041d4a8861ec">&#9670;&nbsp;</a></span>UpdateDrawData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.UpdateDrawData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00227">227</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad9d4693d49b63d06eb27041d4a8861ec_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad9d4693d49b63d06eb27041d4a8861ec_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad9d4693d49b63d06eb27041d4a8861ec_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_ad9d4693d49b63d06eb27041d4a8861ec_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a864fa431f81802a6b60845b5e97ef0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864fa431f81802a6b60845b5e97ef0d4">&#9670;&nbsp;</a></span>UpdateInfiniteClipEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineTrackGUI.UpdateInfiniteClipEditor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_window.html">TimelineWindow</a>&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00183">183</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a864fa431f81802a6b60845b5e97ef0d4_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a864fa431f81802a6b60845b5e97ef0d4_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a864fa431f81802a6b60845b5e97ef0d4_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a864fa431f81802a6b60845b5e97ef0d4_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa0f8383104b635f8c4fd62ff76c9ab0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0f8383104b635f8c4fd62ff76c9ab0f">&#9670;&nbsp;</a></span>m_BlendHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineTrackGUI.m_BlendHash = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00038">38</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a977d65d0c1d2da04126de379ffa5285d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a977d65d0c1d2da04126de379ffa5285d">&#9670;&nbsp;</a></span>m_DefaultTrackIcon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly GUIContent UnityEditor.Timeline.TimelineTrackGUI.m_DefaultTrackIcon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00046">46</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad1f225c3c5e6271fb77469bf42cc19a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f225c3c5e6271fb77469bf42cc19a8">&#9670;&nbsp;</a></span>m_InfiniteTrackDrawer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_infinite_track_drawer.html">InfiniteTrackDrawer</a> UnityEditor.Timeline.TimelineTrackGUI.m_InfiniteTrackDrawer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00041">41</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6179d5f77e0996956a0f57bc7b9bb6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6179d5f77e0996956a0f57bc7b9bb6ab">&#9670;&nbsp;</a></span>m_InlineCurvesSkipped</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineTrackGUI.m_InlineCurvesSkipped</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00036">36</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4657dbecab0e2a5766c09e1175d30698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4657dbecab0e2a5766c09e1175d30698">&#9670;&nbsp;</a></span>m_ItemsDrawer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_track_items_drawer.html">TrackItemsDrawer</a> UnityEditor.Timeline.TimelineTrackGUI.m_ItemsDrawer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00042">42</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac294f259bdf9c04592a5e941869deae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac294f259bdf9c04592a5e941869deae1">&#9670;&nbsp;</a></span>m_LastDirtyIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineTrackGUI.m_LastDirtyIndex = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00039">39</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="afd45f47f7223ca4e9611d31af2f628da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd45f47f7223ca4e9611d31af2f628da">&#9670;&nbsp;</a></span>m_TrackDrawData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_1_1_track_draw_data.html">TrackDrawData</a> UnityEditor.Timeline.TimelineTrackGUI.m_TrackDrawData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00043">43</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4c3568793b6835e72552b40740215f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3568793b6835e72552b40740215f2c">&#9670;&nbsp;</a></span>m_TrackDrawOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_track_draw_options.html">TrackDrawOptions</a> UnityEditor.Timeline.TimelineTrackGUI.m_TrackDrawOptions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00044">44</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a78d9141b968fe1e63ccde57a8bfb3080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d9141b968fe1e63ccde57a8bfb3080">&#9670;&nbsp;</a></span>m_TrackEditor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_editor.html">TrackEditor</a> UnityEditor.Timeline.TimelineTrackGUI.m_TrackEditor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00045">45</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a002c0f711fd22ce8f948f1bd139e3154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002c0f711fd22ce8f948f1bd139e3154">&#9670;&nbsp;</a></span>m_TrackHasAnimatableParameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool? UnityEditor.Timeline.TimelineTrackGUI.m_TrackHasAnimatableParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00090">90</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="afaae8109fd35fe8e910613c1f4556f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaae8109fd35fe8e910613c1f4556f70">&#9670;&nbsp;</a></span>m_TrackHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineTrackGUI.m_TrackHash = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00037">37</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2aee08a5b781d6a270a102b67042ff68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aee08a5b781d6a270a102b67042ff68">&#9670;&nbsp;</a></span>s_ArmForRecordContentOff</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIContent UnityEditor.Timeline.TimelineTrackGUI.s_ArmForRecordContentOff</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00033">33</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a45fa936e3adb0ccdf74e601cfc09ec70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fa936e3adb0ccdf74e601cfc09ec70">&#9670;&nbsp;</a></span>s_ArmForRecordContentOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIContent UnityEditor.Timeline.TimelineTrackGUI.s_ArmForRecordContentOn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00032">32</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="aaacfb6a4ac46e40ff9ef8deb41f86895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacfb6a4ac46e40ff9ef8deb41f86895">&#9670;&nbsp;</a></span>s_ArmForRecordDisabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIContent UnityEditor.Timeline.TimelineTrackGUI.s_ArmForRecordDisabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00034">34</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="ab2bb1f7989c706295d8e0f73674ec8d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2bb1f7989c706295d8e0f73674ec8d7">&#9670;&nbsp;</a></span>asset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> IRowGUI. UnityEditor.Timeline.TimelineTrackGUI.asset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00127">127</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
 <a id="afb2f883761b928a41f4ca635be5dde51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb2f883761b928a41f4ca635be5dde51">&#9670;&nbsp;</a></span>clipCurveEditor</h2>
 
@@ -463,7 +2244,7 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -592,6 +2373,54 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a13c0a3bd2272b3833b4dd96849beca11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c0a3bd2272b3833b4dd96849beca11">&#9670;&nbsp;</a></span>owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> IClipCurveEditorOwner. UnityEditor.Timeline.TimelineTrackGUI.owner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00075">75</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="ade6e01da058616f4060df813085962d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6e01da058616f4060df813085962d8">&#9670;&nbsp;</a></span>showLoops</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IClipCurveEditorOwner. UnityEditor.Timeline.TimelineTrackGUI.showLoops</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00070">70</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
 <a id="a8d6ff0aa3f4fe1ede1fab79dc950470e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d6ff0aa3f4fe1ede1fab79dc950470e">&#9670;&nbsp;</a></span>showMarkers</h2>
 
@@ -616,8 +2445,80 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="aac2425049c8b61783f1faf216f680fa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2425049c8b61783f1faf216f680fa4">&#9670;&nbsp;</a></span>showSceneReference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineTrackGUI.showSceneReference</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00445">445</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a07ad03d47d34bcfc4788d0e0bfb1cb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ad03d47d34bcfc4788d0e0bfb1cb2a">&#9670;&nbsp;</a></span>showTrackRecordingDisabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineTrackGUI.showTrackRecordingDisabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00129">129</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa92e6511e659b296d755eddff31fc89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa92e6511e659b296d755eddff31fc89d">&#9670;&nbsp;</a></span>trackHasAnimatableParameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineTrackGUI.trackHasAnimatableParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_track_g_u_i_8cs_source.html#l00091">91</a> of file <a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/<a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/<a class="el" href="_timeline_track_g_u_i_8cs_source.html">TimelineTrackGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

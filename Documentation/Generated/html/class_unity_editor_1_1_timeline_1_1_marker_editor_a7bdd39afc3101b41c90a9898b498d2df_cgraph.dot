@@ -7,4 +7,6 @@ digraph "UnityEditor.Timeline.MarkerEditor.MarkerEditor"
   Node1 [label="UnityEditor.Timeline.Marker\lEditor.MarkerEditor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Default constructor"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Marker\lEditor.DrawOverlay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_marker_editor.html#a7303ada120f031d2360054b7049bd280",tooltip="Draws additional overlays for a marker."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Type\lUtility.HasOverrideMethod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_type_utility.html#a1a9f9104e256efb5de0e3f1742b26b73",tooltip="Checks whether a type has an overridden method with a specific name. This method also checks overridd..."];
 }

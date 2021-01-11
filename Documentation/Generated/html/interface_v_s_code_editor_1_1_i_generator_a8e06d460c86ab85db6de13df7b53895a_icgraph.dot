@@ -8,5 +8,9 @@ digraph "VSCodeEditor.IGenerator.Sync"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="VSCodeEditor.VSCodeScript\lEditor.CreateIfDoesntExist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#aba06d39e77ea3de0c6ac14eea38728c3",tooltip=" "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="VSCodeEditor.VSCodeScript\lEditor.SyncAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#aeb78af562ff11f73c7dcb946ab1be533",tooltip=" "];
+  Node3 [label="VSCodeEditor.VSCodeScript\lEditor.RegenerateProjectFiles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#ac29ab20bace82921185c1c7d5f9ce346",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VSCodeEditor.VSCodeScript\lEditor.OnGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#a9b426ee84d2a35d6dd45fd8f61da0a2a",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VSCodeEditor.VSCodeScript\lEditor.SyncAll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html#aeb78af562ff11f73c7dcb946ab1be533",tooltip=" "];
 }

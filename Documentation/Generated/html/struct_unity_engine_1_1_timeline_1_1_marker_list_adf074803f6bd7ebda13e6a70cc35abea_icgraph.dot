@@ -7,4 +7,12 @@ digraph "UnityEngine.Timeline.MarkerList.BuildCache"
   Node1 [label="UnityEngine.Timeline.Marker\lList.BuildCache",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEngine.Timeline.Marker\lList.HasNotifications",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_unity_engine_1_1_timeline_1_1_marker_list.html#a0bc5838fed89fa38871158dc86a25e09",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEngine.Timeline.Track\lAsset.CanCompileNotifications",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_track_asset.html#af51b96c73eb10b869465ebbde0456e8c",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEngine.Timeline.Track\lAsset.GatherNotificiations",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_track_asset.html#ad14e4096f993f890f42a6e9883e574d5",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEngine.Timeline.Track\lAsset.CreateNotificationsPlayable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_track_asset.html#a940f43efc4600a790e6d611e72234aea",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Track\lAsset.HasNotifications",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_track_asset.html#acfd7ede1d2bdb578c37f6b25e307e7be",tooltip=" "];
 }

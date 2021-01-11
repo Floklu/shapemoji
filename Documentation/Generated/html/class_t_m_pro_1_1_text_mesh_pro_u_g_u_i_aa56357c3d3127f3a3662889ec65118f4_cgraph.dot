@@ -7,4 +7,6 @@ digraph "TMPro.TextMeshProUGUI.Cull"
   Node1 [label="TMPro.TextMeshProUGUI.Cull",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Method called when Stencil Mask needs to be updated on this element and parents."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_UpdateManager.\lRegisterTextElementForCulling\lUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#af07f103da07d8d3b183840367c38653e",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_UpdateManager.\lInternalRegisterTextElementFor\lCullingUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___update_manager.html#ae85be5b2a329505a15bc8694715e14d3",tooltip=" "];
 }

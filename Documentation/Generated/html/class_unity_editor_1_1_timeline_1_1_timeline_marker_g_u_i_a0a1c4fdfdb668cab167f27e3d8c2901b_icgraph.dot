@@ -6,5 +6,11 @@ digraph "UnityEditor.Timeline.TimelineMarkerGUI.RectToTimeline"
   rankdir="RL";
   Node1 [label="UnityEditor.Timeline.Timeline\lMarkerGUI.RectToTimeline",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.RectToTimeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#a00811832cf08cd1ec3e7c0516c664c3d",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Timeline\lMarkerGUI.CalculateClipRectangle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a1fc98a00b04f15b353bd3cd61e9d785d",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lMarkerGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#af1a7dbb45ab73a42770f5c17c27a1776",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#ad67b7bf104ce44ad188f33667bf69177",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lMarkerClusterGUI.RectToTimeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i.html#a00811832cf08cd1ec3e7c0516c664c3d",tooltip=" "];
 }

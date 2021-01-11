@@ -85,6 +85,9 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ti
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#events">Events</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TimelineMarkerGUI Class Reference</div>  </div>
@@ -129,6 +132,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a75dfbd5c467fd5d8ef58d4af08b9578f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a75dfbd5c467fd5d8ef58d4af08b9578f">marker</a><code> [get]</code></td></tr>
+<tr class="separator:a75dfbd5c467fd5d8ef58d4af08b9578f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f50c25c7b884c7046287930b58105e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#af9f50c25c7b884c7046287930b58105e">selectable</a><code> [get]</code></td></tr>
+<tr class="separator:af9f50c25c7b884c7046287930b58105e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77ba02bfade59f2fa66be702ab1318d0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a77ba02bfade59f2fa66be702ab1318d0">time</a><code> [get]</code></td></tr>
 <tr class="separator:a77ba02bfade59f2fa66be702ab1318d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a81cec484a25ae7e3fdebc63b1d5e35"><td class="memItemLeft" align="right" valign="top">override double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a1a81cec484a25ae7e3fdebc63b1d5e35">start</a><code> [get]</code></td></tr>
@@ -137,6 +144,8 @@ Properties</h2></td></tr>
 <tr class="separator:a3bccb1d4667203b8554d1092541abd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26ab526295b617f6f3e30b779a4db16"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#af26ab526295b617f6f3e30b779a4db16">item</a><code> [get]</code></td></tr>
 <tr class="separator:af26ab526295b617f6f3e30b779a4db16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90735df1be0aac166b97c7c483077887"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html">IZOrderProvider</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a90735df1be0aac166b97c7c483077887">zOrderProvider</a><code> [get]</code></td></tr>
+<tr class="separator:a90735df1be0aac166b97c7c483077887"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td colspan="2" onclick="javascript:toggleInherit('properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html">UnityEditor.Timeline.TimelineItemGUI</a></td></tr>
 <tr class="memitem:a2be47938d2d0507a6a62e081abbf1e2d inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memItemLeft" align="right" valign="top">abstract <a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html">ITimelineItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#a2be47938d2d0507a6a62e081abbf1e2d">item</a><code> [get]</code></td></tr>
 <tr class="separator:a2be47938d2d0507a6a62e081abbf1e2d inherit properties_class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,6 +178,33 @@ Properties</h2></td></tr>
 Events</h2></td></tr>
 <tr class="memitem:a61560a4105643bbf86e61e74ac14b70b"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a61560a4105643bbf86e61e74ac14b70b">onStartDrag</a></td></tr>
 <tr class="separator:a61560a4105643bbf86e61e74ac14b70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6b6936c99eed5c36f41f46b099cfe919"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a6b6936c99eed5c36f41f46b099cfe919">ComputeDirtyHash</a> ()</td></tr>
+<tr class="separator:a6b6936c99eed5c36f41f46b099cfe919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d30469ed6b92225b3091c8d14cc910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a14d30469ed6b92225b3091c8d14cc910">UpdateDrawData</a> ()</td></tr>
+<tr class="separator:a14d30469ed6b92225b3091c8d14cc910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc98a00b04f15b353bd3cd61e9d785d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a1fc98a00b04f15b353bd3cd61e9d785d">CalculateClipRectangle</a> (Rect trackRect, <a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a> state, int projectedClipHash, bool trackRectChanged)</td></tr>
+<tr class="separator:a1fc98a00b04f15b353bd3cd61e9d785d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a94e4795a7a6e898804ef612ace596e8e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a94e4795a7a6e898804ef612ace596e8e">DrawMarker</a> (Rect drawRect, Type type, bool isSelected, bool isCollapsed, <a class="el" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> options)</td></tr>
+<tr class="separator:a94e4795a7a6e898804ef612ace596e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ade92c01eb666029e62ee09995c4b0412"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#ade92c01eb666029e62ee09995c4b0412">m_ProjectedClipHash</a></td></tr>
+<tr class="separator:ade92c01eb666029e62ee09995c4b0412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f514bfbe5c7931558c2711d9b26ef6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a3f514bfbe5c7931558c2711d9b26ef6f">m_MarkerHash</a></td></tr>
+<tr class="separator:a3f514bfbe5c7931558c2711d9b26ef6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d59c7b696c5c368b36757a45054c52"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a74d59c7b696c5c368b36757a45054c52">m_Selectable</a></td></tr>
+<tr class="separator:a74d59c7b696c5c368b36757a45054c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2785cf52f61fc0bb85b54fc605292d7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a2785cf52f61fc0bb85b54fc605292d7a">m_MarkerDrawOptions</a></td></tr>
+<tr class="separator:a2785cf52f61fc0bb85b54fc605292d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be9059be30d81c7b6eab820817e3d7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">MarkerEditor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i.html#a9be9059be30d81c7b6eab820817e3d7f">m_Editor</a></td></tr>
+<tr class="separator:a9be9059be30d81c7b6eab820817e3d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -230,6 +266,98 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1fc98a00b04f15b353bd3cd61e9d785d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc98a00b04f15b353bd3cd61e9d785d">&#9670;&nbsp;</a></span>CalculateClipRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineMarkerGUI.CalculateClipRectangle </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>trackRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_unity_editor_1_1_timeline_1_1_window_state.html">WindowState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>projectedClipHash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>trackRectChanged</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00159">159</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1fc98a00b04f15b353bd3cd61e9d785d_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1fc98a00b04f15b353bd3cd61e9d785d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1fc98a00b04f15b353bd3cd61e9d785d_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a1fc98a00b04f15b353bd3cd61e9d785d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6b6936c99eed5c36f41f46b099cfe919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6936c99eed5c36f41f46b099cfe919">&#9670;&nbsp;</a></span>ComputeDirtyHash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineMarkerGUI.ComputeDirtyHash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00082">82</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a6b6936c99eed5c36f41f46b099cfe919_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a6b6936c99eed5c36f41f46b099cfe919_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a4794002d73a4ce35c5ec38d95eded252"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4794002d73a4ce35c5ec38d95eded252">&#9670;&nbsp;</a></span>Deselect()</h2>
 
@@ -256,6 +384,11 @@ Here is the caller graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#ab64614d2ba64c05cb96f52c857c5a58f">UnityEditor.Timeline.TimelineItemGUI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00054">54</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a4794002d73a4ce35c5ec38d95eded252_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a4794002d73a4ce35c5ec38d95eded252_cgraph" alt=""/></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -320,6 +453,72 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a94e4795a7a6e898804ef612ace596e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e4795a7a6e898804ef612ace596e8e">&#9670;&nbsp;</a></span>DrawMarker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnityEditor.Timeline.TimelineMarkerGUI.DrawMarker </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>drawRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Type&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isSelected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isCollapsed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a>&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00087">87</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a94e4795a7a6e898804ef612ace596e8e_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a94e4795a7a6e898804ef612ace596e8e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a94e4795a7a6e898804ef612ace596e8e_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a94e4795a7a6e898804ef612ace596e8e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a2c449fa6227f238f87230f44c3fffe74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c449fa6227f238f87230f44c3fffe74">&#9670;&nbsp;</a></span>IsSelected()</h2>
 
@@ -346,6 +545,11 @@ Here is the caller graph for this function:</div>
 <p>Reimplemented from <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#addab9624be4f66866bc7a987ddf8b732">UnityEditor.Timeline.TimelineItemGUI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00049">49</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a2c449fa6227f238f87230f44c3fffe74_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a2c449fa6227f238f87230f44c3fffe74_cgraph" alt=""/></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -437,6 +641,11 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i.html#aa717593bee5a8ca1bd9d4ad5950088b6">UnityEditor.Timeline.TimelineItemGUI</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00168">168</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a0a1c4fdfdb668cab167f27e3d8c2901b_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a0a1c4fdfdb668cab167f27e3d8c2901b_cgraph" alt=""/></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -567,6 +776,164 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a14d30469ed6b92225b3091c8d14cc910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d30469ed6b92225b3091c8d14cc910">&#9670;&nbsp;</a></span>UpdateDrawData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEditor.Timeline.TimelineMarkerGUI.UpdateDrawData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00108">108</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a14d30469ed6b92225b3091c8d14cc910_cgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a14d30469ed6b92225b3091c8d14cc910_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a14d30469ed6b92225b3091c8d14cc910_icgraph.png" border="0" usemap="#aclass_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a14d30469ed6b92225b3091c8d14cc910_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9be9059be30d81c7b6eab820817e3d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be9059be30d81c7b6eab820817e3d7f">&#9670;&nbsp;</a></span>m_Editor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_editor_1_1_timeline_1_1_marker_editor.html">MarkerEditor</a> UnityEditor.Timeline.TimelineMarkerGUI.m_Editor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00018">18</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2785cf52f61fc0bb85b54fc605292d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2785cf52f61fc0bb85b54fc605292d7a">&#9670;&nbsp;</a></span>m_MarkerDrawOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_unity_editor_1_1_timeline_1_1_marker_draw_options.html">MarkerDrawOptions</a> UnityEditor.Timeline.TimelineMarkerGUI.m_MarkerDrawOptions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00017">17</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3f514bfbe5c7931558c2711d9b26ef6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f514bfbe5c7931558c2711d9b26ef6f">&#9670;&nbsp;</a></span>m_MarkerHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineMarkerGUI.m_MarkerHash</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00014">14</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="ade92c01eb666029e62ee09995c4b0412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade92c01eb666029e62ee09995c4b0412">&#9670;&nbsp;</a></span>m_ProjectedClipHash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnityEditor.Timeline.TimelineMarkerGUI.m_ProjectedClipHash</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00013">13</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a74d59c7b696c5c368b36757a45054c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d59c7b696c5c368b36757a45054c52">&#9670;&nbsp;</a></span>m_Selectable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineMarkerGUI.m_Selectable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00015">15</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="a3bccb1d4667203b8554d1092541abd70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bccb1d4667203b8554d1092541abd70">&#9670;&nbsp;</a></span>end</h2>
@@ -613,6 +980,54 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00059">59</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="a75dfbd5c467fd5d8ef58d4af08b9578f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75dfbd5c467fd5d8ef58d4af08b9578f">&#9670;&nbsp;</a></span>marker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_engine_1_1_timeline_1_1_i_marker.html">IMarker</a> UnityEditor.Timeline.TimelineMarkerGUI.marker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00020">20</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
+<a id="af9f50c25c7b884c7046287930b58105e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f50c25c7b884c7046287930b58105e">&#9670;&nbsp;</a></span>selectable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEditor.Timeline.TimelineMarkerGUI.selectable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00022">22</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
 
 </div>
 </div>
@@ -664,6 +1079,30 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a90735df1be0aac166b97c7c483077887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90735df1be0aac166b97c7c483077887">&#9670;&nbsp;</a></span>zOrderProvider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_unity_editor_1_1_timeline_1_1_i_z_order_provider.html">IZOrderProvider</a> UnityEditor.Timeline.TimelineMarkerGUI.zOrderProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_marker_g_u_i_8cs_source.html#l00064">64</a> of file <a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Event Documentation</h2>
 <a id="a61560a4105643bbf86e61e74ac14b70b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61560a4105643bbf86e61e74ac14b70b">&#9670;&nbsp;</a></span>onStartDrag</h2>
@@ -682,7 +1121,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/ItemGui/<a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/treeview/ItemGui/<a class="el" href="_timeline_marker_g_u_i_8cs_source.html">TimelineMarkerGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

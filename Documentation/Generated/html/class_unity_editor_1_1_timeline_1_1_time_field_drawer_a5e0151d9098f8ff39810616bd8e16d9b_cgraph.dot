@@ -7,4 +7,28 @@ digraph "UnityEditor.Timeline.TimeFieldDrawer.OnGUI"
   Node1 [label="UnityEditor.Timeline.Time\lFieldDrawer.OnGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Window\lState.Refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a773c3585d8ee2c63765f06afa6536990",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Window\lState.CheckRecordingState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#afe83a6fd2e6916ff712417f5abbc4287",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Time\lFieldDrawer.TimeField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_time_field_drawer.html#abfb44bd7ca5b2968fe50d3ec34830efd",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lInspectorUtility.TimeField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_inspector_utility.html#af54652dd1c15ec56d401d98e269d67d3",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Time\lFieldDrawer.TimeFieldWithEditMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_time_field_drawer.html#ad9d60864cd18d7974b0fc45e6bc49e08",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Edit\lModeInputHandler.ProcessMove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html#ad4991b7025e1635a7d41d27c3059f210",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Edit\lModeInputHandler.ProcessInputAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_edit_mode_input_handler.html#a488ae2c955ee1a3532960c0ba2598b13",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.Edit\lModeInputHandler.IInputHandler.\lOnDrag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#a193a335540300e6037a554bacc352123",tooltip=" "];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UnityEditor.Timeline.Edit\lModeInputHandler.IInputHandler.\lOnEnterDrag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#a7c97930011eeadc4660515987cd021fc",tooltip=" "];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="UnityEditor.Timeline.Edit\lModeInputHandler.IInputHandler.\lOnExitDrag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#a7b4594d3d0cee072bb2ca7c9b17a033f",tooltip=" "];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="UnityEditor.Timeline.Edit\lModeInputHandler.IInputHandler.\lOnSetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_edit_mode_input_handler_1_1_i_input_handler.html#ac3e7660bfb37eff5434d1bc804b62db0",tooltip=" "];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="UnityEditor.Timeline.Selection\lManager.SelectedItems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#abce25cf985bb918f83215c038a29abce",tooltip=" "];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

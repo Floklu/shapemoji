@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_unity_editor_1_1_timeline_1_1_ti
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEditor.Timeline.TimelineAssetViewModel Class Reference</div>  </div>
@@ -114,7 +115,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5d16bf988831456f5842ecf18499a60a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a5d16bf988831456f5842ecf18499a60a">timeInFrames</a> = true</td></tr>
 <tr class="separator:a5d16bf988831456f5842ecf18499a60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3b467dd605600c8df2af3be0a1926ef"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ad3b467dd605600c8df2af3be0a1926ef">timeAreaShownRange</a> = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">TimeAreaDefaultRange</a></td></tr>
+<tr class="memitem:ad3b467dd605600c8df2af3be0a1926ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ad3b467dd605600c8df2af3be0a1926ef">timeAreaShownRange</a> = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">TimeAreaDefaultRange</a></td></tr>
 <tr class="separator:ad3b467dd605600c8df2af3be0a1926ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2684c209ec40a5c89df7c42bca28c0cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2684c209ec40a5c89df7c42bca28c0cc">showAudioWaveform</a> = true</td></tr>
 <tr class="separator:a2684c209ec40a5c89df7c42bca28c0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +123,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af4aa4ac02546e52dc58cfe3f18479d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab14a17bd2bf67feacc43fff0457ce5b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ab14a17bd2bf67feacc43fff0457ce5b6">playRangeEnabled</a></td></tr>
 <tr class="separator:ab14a17bd2bf67feacc43fff0457ce5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37173f96de2db4013c7926b63794743d"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a37173f96de2db4013c7926b63794743d">timeAreaPlayRange</a> = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">NoPlayRangeSet</a></td></tr>
+<tr class="memitem:a37173f96de2db4013c7926b63794743d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a37173f96de2db4013c7926b63794743d">timeAreaPlayRange</a> = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">NoPlayRangeSet</a></td></tr>
 <tr class="separator:a37173f96de2db4013c7926b63794743d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96ab8726a49fe2b5f1bd357ec3ab9152"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a96ab8726a49fe2b5f1bd357ec3ab9152">windowTime</a></td></tr>
 <tr class="separator:a96ab8726a49fe2b5f1bd357ec3ab9152"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,10 +140,17 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a61f2d8e00547a62d0f9b05bcd15ec2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b3fcf1cf76ecb23b69693967eb9580"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ac7b3fcf1cf76ecb23b69693967eb9580">DefaultVerticalScroll</a> = 0</td></tr>
 <tr class="separator:ac7b3fcf1cf76ecb23b69693967eb9580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d44213cf9d3aa59f24d365d3205bea3"><td class="memItemLeft" align="right" valign="top">static readonly Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">TimeAreaDefaultRange</a> = new Vector2(-WindowConstants.timeAreaShownRangePadding, 5.0f)</td></tr>
+<tr class="memitem:a2d44213cf9d3aa59f24d365d3205bea3"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">TimeAreaDefaultRange</a> = new <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>(-<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a46824a60cb2f9fd4223a6e738b1b3d14">WindowConstants.timeAreaShownRangePadding</a>, 5.0f)</td></tr>
 <tr class="separator:a2d44213cf9d3aa59f24d365d3205bea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9d493d2b94e8620a0e48526f035c88f"><td class="memItemLeft" align="right" valign="top">static readonly Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">NoPlayRangeSet</a> = new Vector2(float.MaxValue, float.MaxValue)</td></tr>
+<tr class="memitem:aa9d493d2b94e8620a0e48526f035c88f"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">NoPlayRangeSet</a> = new <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>(float.MaxValue, float.MaxValue)</td></tr>
 <tr class="separator:aa9d493d2b94e8620a0e48526f035c88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab83ab48d7b5c02f843418277660238d1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#ab83ab48d7b5c02f843418277660238d1">m_Keys</a> = new List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&gt;()</td></tr>
+<tr class="separator:ab83ab48d7b5c02f843418277660238d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec34cdf8078f5cff6eeb82e0d7637b28"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aec34cdf8078f5cff6eeb82e0d7637b28">m_Vals</a> = new List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>&gt;()</td></tr>
+<tr class="separator:aec34cdf8078f5cff6eeb82e0d7637b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -254,6 +262,54 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab83ab48d7b5c02f843418277660238d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83ab48d7b5c02f843418277660238d1">&#9670;&nbsp;</a></span>m_Keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&gt; UnityEditor.Timeline.TimelineAssetViewModel.m_Keys = new List&lt;<a class="el" href="class_unity_engine_1_1_timeline_1_1_track_asset.html">TrackAsset</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_view_model_8cs_source.html#l00078">78</a> of file <a class="el" href="_timeline_asset_view_model_8cs_source.html">TimelineAssetViewModel.cs</a>.</p>
+
+</div>
+</div>
+<a id="aec34cdf8078f5cff6eeb82e0d7637b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec34cdf8078f5cff6eeb82e0d7637b28">&#9670;&nbsp;</a></span>m_Vals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>&gt; UnityEditor.Timeline.TimelineAssetViewModel.m_Vals = new List&lt;<a class="el" href="class_unity_editor_1_1_timeline_1_1_track_view_model_data.html">TrackViewModelData</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_timeline_asset_view_model_8cs_source.html#l00079">79</a> of file <a class="el" href="_timeline_asset_view_model_8cs_source.html">TimelineAssetViewModel.cs</a>.</p>
+
+</div>
+</div>
 <a id="aa9d493d2b94e8620a0e48526f035c88f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9d493d2b94e8620a0e48526f035c88f">&#9670;&nbsp;</a></span>NoPlayRangeSet</h2>
 
@@ -264,7 +320,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly Vector2 UnityEditor.Timeline.TimelineAssetViewModel.NoPlayRangeSet = new Vector2(float.MaxValue, float.MaxValue)</td>
+          <td class="memname">readonly <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> UnityEditor.Timeline.TimelineAssetViewModel.NoPlayRangeSet = new <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>(float.MaxValue, float.MaxValue)</td>
         </tr>
       </table>
   </td>
@@ -336,7 +392,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly Vector2 UnityEditor.Timeline.TimelineAssetViewModel.TimeAreaDefaultRange = new Vector2(-WindowConstants.timeAreaShownRangePadding, 5.0f)</td>
+          <td class="memname">readonly <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> UnityEditor.Timeline.TimelineAssetViewModel.TimeAreaDefaultRange = new <a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a>(-<a class="el" href="class_unity_editor_1_1_timeline_1_1_window_constants.html#a46824a60cb2f9fd4223a6e738b1b3d14">WindowConstants.timeAreaShownRangePadding</a>, 5.0f)</td>
         </tr>
       </table>
   </td>
@@ -357,7 +413,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector2 UnityEditor.Timeline.TimelineAssetViewModel.timeAreaPlayRange = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">NoPlayRangeSet</a></td>
+          <td class="memname"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> UnityEditor.Timeline.TimelineAssetViewModel.timeAreaPlayRange = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#aa9d493d2b94e8620a0e48526f035c88f">NoPlayRangeSet</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -373,7 +429,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector2 UnityEditor.Timeline.TimelineAssetViewModel.timeAreaShownRange = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">TimeAreaDefaultRange</a></td>
+          <td class="memname"><a class="el" href="_lean_pinch_bounded_scale_8cs.html#a06bbba33a1577dca9bc9091421acf931">Vector2</a> UnityEditor.Timeline.TimelineAssetViewModel.timeAreaShownRange = <a class="el" href="class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a2d44213cf9d3aa59f24d365d3205bea3">TimeAreaDefaultRange</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -463,7 +519,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Window/ViewModel/<a class="el" href="_timeline_asset_view_model_8cs_source.html">TimelineAssetViewModel.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Window/ViewModel/<a class="el" href="_timeline_asset_view_model_8cs_source.html">TimelineAssetViewModel.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

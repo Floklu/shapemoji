@@ -84,11 +84,18 @@ $(document).ready(function(){initNavTree('class_t_m_pro_1_1_t_m_p___font_asset_u
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TMPro.TMP_FontAssetUtilities Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for TMPro.TMP_FontAssetUtilities:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities__coll__graph.png" border="0" usemap="#a_t_m_pro_8_t_m_p___font_asset_utilities_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -106,11 +113,62 @@ Properties</h2></td></tr>
 <tr class="memitem:a1f34ababfd8ed6e00fa3a83796442ade"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1f34ababfd8ed6e00fa3a83796442ade">instance</a><code> [get]</code></td></tr>
 <tr class="memdesc:a1f34ababfd8ed6e00fa3a83796442ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a singleton instance of the Font Asset Utilities class.  <a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a1f34ababfd8ed6e00fa3a83796442ade">More...</a><br /></td></tr>
 <tr class="separator:a1f34ababfd8ed6e00fa3a83796442ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a62d1248c0f7640bcb6fd1327b90a0867"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a62d1248c0f7640bcb6fd1327b90a0867">TMP_FontAssetUtilities</a> ()</td></tr>
+<tr class="memdesc:a62d1248c0f7640bcb6fd1327b90a0867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor  <a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a62d1248c0f7640bcb6fd1327b90a0867">More...</a><br /></td></tr>
+<tr class="separator:a62d1248c0f7640bcb6fd1327b90a0867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22faa12b72e374579a7377572828051d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d">GetCharacterFromFontAsset_Internal</a> (uint unicode, <a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a> sourceFontAsset, bool includeFallbacks, <a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a> fontStyle, <a class="el" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a> fontWeight, out bool isAlternativeTypeface)</td></tr>
+<tr class="memdesc:a22faa12b72e374579a7377572828051d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function returning the text element character for the given unicode value taking into consideration the font style and weight. Function searches the source font asset, list of font assets assigned as alternative typefaces and list of fallback font assets.  <a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d">More...</a><br /></td></tr>
+<tr class="separator:a22faa12b72e374579a7377572828051d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fbe4a0f2358e43282d40c205dfd498"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMP_SpriteCharacter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ac9fbe4a0f2358e43282d40c205dfd498">GetSpriteCharacterFromSpriteAsset_Internal</a> (uint unicode, <a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a> spriteAsset, bool includeFallbacks)</td></tr>
+<tr class="separator:ac9fbe4a0f2358e43282d40c205dfd498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a7f6270a7580ff645706ddaa4b164853c"><td class="memItemLeft" align="right" valign="top">static readonly <a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a7f6270a7580ff645706ddaa4b164853c">s_Instance</a> = new <a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a>()</td></tr>
+<tr class="separator:a7f6270a7580ff645706ddaa4b164853c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceb6c30b14135bc7a40bea9f7744a2d9"><td class="memItemLeft" align="right" valign="top">static HashSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#aceb6c30b14135bc7a40bea9f7744a2d9">k_SearchedAssets</a></td></tr>
+<tr class="memdesc:aceb6c30b14135bc7a40bea9f7744a2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">HashSet containing instance ID of font assets already searched.  <a href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#aceb6c30b14135bc7a40bea9f7744a2d9">More...</a><br /></td></tr>
+<tr class="separator:aceb6c30b14135bc7a40bea9f7744a2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac275299fc8b475f1e9a64cbf1962a749"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#ac275299fc8b475f1e9a64cbf1962a749">k_IsFontEngineInitialized</a></td></tr>
+<tr class="separator:ac275299fc8b475f1e9a64cbf1962a749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00008">8</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a62d1248c0f7640bcb6fd1327b90a0867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d1248c0f7640bcb6fd1327b90a0867">&#9670;&nbsp;</a></span>TMP_FontAssetUtilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static TMPro.TMP_FontAssetUtilities.TMP_FontAssetUtilities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor </p>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00015">15</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9d70106b39c64e03f4e62e1f13c0948b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d70106b39c64e03f4e62e1f13c0948b">&#9670;&nbsp;</a></span>GetCharacterFromFontAsset()</h2>
 
@@ -186,9 +244,83 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00047">47</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_a9d70106b39c64e03f4e62e1f13c0948b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a22faa12b72e374579a7377572828051d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22faa12b72e374579a7377572828051d">&#9670;&nbsp;</a></span>GetCharacterFromFontAsset_Internal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_t_m_pro_1_1_t_m_p___character.html">TMP_Character</a> TMPro.TMP_FontAssetUtilities.GetCharacterFromFontAsset_Internal </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>unicode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset.html">TMP_FontAsset</a>&#160;</td>
+          <td class="paramname"><em>sourceFontAsset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>includeFallbacks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_t_m_pro.html#aedf79b6e7e2ce2b9c9ac84e790596e7c">FontStyles</a>&#160;</td>
+          <td class="paramname"><em>fontStyle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_t_m_pro.html#ae08cbdb438aade8d0ee87c88b451d48e">FontWeight</a>&#160;</td>
+          <td class="paramname"><em>fontWeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out bool&#160;</td>
+          <td class="paramname"><em>isAlternativeTypeface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal function returning the text element character for the given unicode value taking into consideration the font style and weight. Function searches the source font asset, list of font assets assigned as alternative typefaces and list of fallback font assets. </p>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00065">65</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_a22faa12b72e374579a7377572828051d_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_a22faa12b72e374579a7377572828051d_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -274,6 +406,11 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00214">214</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_afdc59bd1dcec2cddc898a4f034a66dee_icgraph" alt=""/></div>
@@ -333,6 +470,146 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00261">261</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_a466e7da43c7a39c16ec53c04c98335bc_cgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_a466e7da43c7a39c16ec53c04c98335bc_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac9fbe4a0f2358e43282d40c205dfd498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fbe4a0f2358e43282d40c205dfd498">&#9670;&nbsp;</a></span>GetSpriteCharacterFromSpriteAsset_Internal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_character.html">TMP_SpriteCharacter</a> TMPro.TMP_FontAssetUtilities.GetSpriteCharacterFromSpriteAsset_Internal </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>unicode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_t_m_pro_1_1_t_m_p___sprite_asset.html">TMP_SpriteAsset</a>&#160;</td>
+          <td class="paramname"><em>spriteAsset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>includeFallbacks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unicode</td><td></td></tr>
+    <tr><td class="paramname">spriteAsset</td><td></td></tr>
+    <tr><td class="paramname">includeFallbacks</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00321">321</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_t_m_pro_1_1_t_m_p___font_asset_utilities_ac9fbe4a0f2358e43282d40c205dfd498_icgraph.png" border="0" usemap="#aclass_t_m_pro_1_1_t_m_p___font_asset_utilities_ac9fbe4a0f2358e43282d40c205dfd498_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac275299fc8b475f1e9a64cbf1962a749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac275299fc8b475f1e9a64cbf1962a749">&#9670;&nbsp;</a></span>k_IsFontEngineInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TMPro.TMP_FontAssetUtilities.k_IsFontEngineInitialized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00366">366</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
+
+</div>
+</div>
+<a id="aceb6c30b14135bc7a40bea9f7744a2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceb6c30b14135bc7a40bea9f7744a2d9">&#9670;&nbsp;</a></span>k_SearchedAssets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HashSet&lt;int&gt; TMPro.TMP_FontAssetUtilities.k_SearchedAssets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HashSet containing instance ID of font assets already searched. </p>
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00030">30</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7f6270a7580ff645706ddaa4b164853c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6270a7580ff645706ddaa4b164853c">&#9670;&nbsp;</a></span>s_Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly <a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a> TMPro.TMP_FontAssetUtilities.s_Instance = new <a class="el" href="class_t_m_pro_1_1_t_m_p___font_asset_utilities.html">TMP_FontAssetUtilities</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html#l00010">10</a> of file <a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a>.</p>
 
 </div>
 </div>
@@ -364,7 +641,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/<a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.textmeshpro@2.1.1/Scripts/Runtime/<a class="el" href="_t_m_p___font_asset_utilities_8cs_source.html">TMP_FontAssetUtilities.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

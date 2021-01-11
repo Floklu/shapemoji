@@ -2,6 +2,10 @@ var class_unity_editor_1_1_timeline_1_1_time_area_item =
 [
     [ "TimeAreaItem", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#ac30c0cbc4b44a930bca3c83faac53090", null ],
     [ "Draw", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#ace71640e86a5c27de3d74f8698387dcb", null ],
+    [ "m_BoundingRect", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#a68d1f56b32ce7a22839124501a54749f", null ],
+    [ "m_HeaderContent", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#a7210df3c266f337d6c2400198ac72852", null ],
+    [ "m_Style", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#a01442f5bcbc4c89169471049f3b9c133", null ],
+    [ "m_Tooltip", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#a013093fce81b2315352da381d9529369", null ],
     [ "boundOffset", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#a6114b30d8860192182c2fca61a4a02f3", null ],
     [ "bounds", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#ad7b89d3a3b84677230fa2963c5f97f20", null ],
     [ "canMoveHead", "class_unity_editor_1_1_timeline_1_1_time_area_item.html#aa495ca342867059a1309fcd2c1721c68", null ],

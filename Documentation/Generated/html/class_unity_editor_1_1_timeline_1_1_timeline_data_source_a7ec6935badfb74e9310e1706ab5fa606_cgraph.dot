@@ -7,4 +7,6 @@ digraph "UnityEditor.Timeline.TimelineDataSource.TimelineDataSource"
   Node1 [label="UnityEditor.Timeline.Timeline\lDataSource.TimelineDataSource",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Timeline\lDataSource.FetchData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_data_source.html#a4b8a5e860318a13d1b13cf203cc1ac95",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lDataSource.CreateItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_data_source.html#a430bddda3445466f60505dcd34cb63f6",tooltip=" "];
 }

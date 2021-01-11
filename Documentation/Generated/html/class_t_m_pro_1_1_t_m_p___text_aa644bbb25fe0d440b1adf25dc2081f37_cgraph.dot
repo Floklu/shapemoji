@@ -7,4 +7,6 @@ digraph "TMPro.TMP_Text.GetUnderlineSpecialCharacter"
   Node1 [label="TMPro.TMP_Text.GetUnderline\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a9d70106b39c64e03f4e62e1f13c0948b",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset\l_Internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d",tooltip="Internal function returning the text element character for the given unicode value taking into consid..."];
 }

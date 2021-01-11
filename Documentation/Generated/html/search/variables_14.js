@@ -1,9 +1,27 @@
 var searchData=
 [
-  ['w_7625',['w',['../struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer___json_array_1_1_sprite_frame.html#a550d28a6a8ac911eb3bc154c8a609b5b',1,'TMPro.SpriteAssetUtilities.TexturePacker_JsonArray.SpriteFrame.w()'],['../struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer___json_array_1_1_sprite_size.html#a5eecd29380a01f5b1b98d2b77a12d20b',1,'TMPro.SpriteAssetUtilities.TexturePacker_JsonArray.SpriteSize.w()']]],
-  ['warning_7626',['warning',['../class_unity_editor_1_1_timeline_1_1_director_styles.html#a1e9dd0db107699be5d1dd3597fe06c2b',1,'UnityEditor::Timeline::DirectorStyles']]],
-  ['width_7627',['width',['../struct_t_m_pro_1_1_t_m_p___line_info.html#a83588bf25880d72d2f7296fdbe4788ad',1,'TMPro.TMP_LineInfo.width()'],['../class_t_m_pro_1_1_t_m_p___text_element___legacy.html#a24fb115bccca4a6c83ae92bf31bbd5e2',1,'TMPro.TMP_TextElement_Legacy.width()']]],
-  ['windowtime_7628',['windowTime',['../class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a96ab8726a49fe2b5f1bd357ec3ab9152',1,'UnityEditor::Timeline::TimelineAssetViewModel']]],
-  ['wordcount_7629',['wordCount',['../struct_t_m_pro_1_1_t_m_p___line_info.html#a5c5c82928595ce3573d26df72a19e041',1,'TMPro.TMP_LineInfo.wordCount()'],['../class_t_m_pro_1_1_t_m_p___text_info.html#ac2bb20330e0efa71d8fecd90c783fe65',1,'TMPro.TMP_TextInfo.wordCount()'],['../struct_t_m_pro_1_1_word_wrap_state.html#a59cdd2ef1b57ab28ede52355e148ed95',1,'TMPro.WordWrapState.wordCount()']]],
-  ['wordinfo_7630',['wordInfo',['../class_t_m_pro_1_1_t_m_p___text_info.html#a5d98e3b54820b5c1368b8e9ee8205f5c',1,'TMPro::TMP_TextInfo']]]
+  ['validtemplate_16105',['validTemplate',['../class_t_m_pro_1_1_t_m_p___dropdown.html#a3a79ec7ebac0d911a64232d84618e8d5',1,'TMPro::TMP_Dropdown']]],
+  ['valuehashcode_16106',['valueHashCode',['../struct_t_m_pro_1_1_rich_text_tag_attribute.html#ac623c19b32e8051264195cfb4c3ec52a',1,'TMPro::RichTextTagAttribute']]],
+  ['valuelength_16107',['valueLength',['../struct_t_m_pro_1_1_rich_text_tag_attribute.html#a8e9341fe8ce85bdf670d23c7014f7793',1,'TMPro::RichTextTagAttribute']]],
+  ['valuestartindex_16108',['valueStartIndex',['../struct_t_m_pro_1_1_rich_text_tag_attribute.html#adcbc4faef975d394a34805ea15056a6f',1,'TMPro::RichTextTagAttribute']]],
+  ['valuetype_16109',['valueType',['../struct_t_m_pro_1_1_rich_text_tag_attribute.html#a9c6ef719e2ef910f1dbbe47278c960ef',1,'TMPro::RichTextTagAttribute']]],
+  ['version_16110',['version',['../class_lean_1_1_common_1_1_examples_1_1_lean_guide.html#a66663c8c9d886561d3c85094a44953da',1,'Lean.Common.Examples.LeanGuide.version()'],['../struct_t_m_pro_1_1_sprite_asset_utilities_1_1_texture_packer___json_array_1_1_meta.html#a98fdb49ed35d50d3243ac980811e16f3',1,'TMPro.SpriteAssetUtilities.TexturePacker_JsonArray.Meta.version()'],['../_o_f_l_8txt.html#afcbc039d4b784518e2662707f51db988',1,'Version():&#160;OFL.txt']]],
+  ['versions_16111',['Versions',['../_o_f_l_8txt.html#ad725d404ec790e7aee5d67c8b1e026da',1,'OFL.txt']]],
+  ['vertex_5fbl_16112',['vertex_BL',['../struct_t_m_pro_1_1_t_m_p___character_info.html#a1db4e65984f8c8ffb59573ca92a11407',1,'TMPro::TMP_CharacterInfo']]],
+  ['vertex_5fbr_16113',['vertex_BR',['../struct_t_m_pro_1_1_t_m_p___character_info.html#a3d92945b506fd0055af0d6879452451e',1,'TMPro::TMP_CharacterInfo']]],
+  ['vertex_5ftl_16114',['vertex_TL',['../struct_t_m_pro_1_1_t_m_p___character_info.html#a7eab69190af658de10d224148be7779d',1,'TMPro::TMP_CharacterInfo']]],
+  ['vertex_5ftr_16115',['vertex_TR',['../struct_t_m_pro_1_1_t_m_p___character_info.html#a3584fc81cee8f653bf33fddd299b4cc9',1,'TMPro::TMP_CharacterInfo']]],
+  ['vertexcolor_16116',['vertexColor',['../struct_t_m_pro_1_1_word_wrap_state.html#aedc6e8de28278f3e628c5fbfaa4a8886',1,'TMPro::WordWrapState']]],
+  ['vertexcount_16117',['vertexCount',['../struct_t_m_pro_1_1_t_m_p___mesh_info.html#a6546f16eff9f1de656a8f75415934aea',1,'TMPro::TMP_MeshInfo']]],
+  ['vertexindex_16118',['vertexIndex',['../struct_t_m_pro_1_1_t_m_p___character_info.html#a92354221459bdb806b3ebbb17bf066da',1,'TMPro.TMP_CharacterInfo.vertexIndex()'],['../struct_t_m_pro_1_1_t_m_p___sprite_info.html#a65f40aee8fe65bad773cbfb32552054f',1,'TMPro.TMP_SpriteInfo.vertexIndex()']]],
+  ['verticalscroll_16119',['verticalScroll',['../class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model.html#a1e736b70e57c3916767d69d3d1bc79aa',1,'UnityEditor::Timeline::TimelineAssetViewModel']]],
+  ['vertices_16120',['vertices',['../struct_t_m_pro_1_1_t_m_p___mesh_info.html#a7f31f8c5b18a9d84129a7f2cb5981728',1,'TMPro::TMP_MeshInfo']]],
+  ['visible_5fcharactercount_16121',['visible_CharacterCount',['../struct_t_m_pro_1_1_word_wrap_state.html#aa83c77430bb7e109c0efc58d3dc29f03',1,'TMPro::WordWrapState']]],
+  ['visible_5flinkcount_16122',['visible_LinkCount',['../struct_t_m_pro_1_1_word_wrap_state.html#a02ab5a3177607b31f85830e5a3789ffd',1,'TMPro::WordWrapState']]],
+  ['visible_5fspritecount_16123',['visible_SpriteCount',['../struct_t_m_pro_1_1_word_wrap_state.html#a3a75181631548d2705bc91ecafd23cca',1,'TMPro::WordWrapState']]],
+  ['visiblecharactercount_16124',['visibleCharacterCount',['../struct_t_m_pro_1_1_t_m_p___line_info.html#a7b8f73404dad3ef77774d60757adc2ae',1,'TMPro::TMP_LineInfo']]],
+  ['visual_16125',['Visual',['../class_lean_1_1_touch_1_1_lean_path.html#adb3d8d23819429c2bc3e68686d447718',1,'Lean::Touch::LeanPath']]],
+  ['volume_16126',['volume',['../class_unity_engine_1_1_timeline_1_1_audio_clip_properties.html#af0a9ce556ac960a02d08f6571b12e50a',1,'UnityEngine.Timeline.AudioClipProperties.volume()'],['../class_unity_engine_1_1_timeline_1_1_audio_mixer_properties.html#a5a32c213ac0c275086965081b2a7708b',1,'UnityEngine.Timeline.AudioMixerProperties.volume()']]],
+  ['vscode_5fargument_16127',['vscode_argument',['../class_v_s_code_editor_1_1_v_s_code_script_editor.html#a3349b9509a7fdb653184a3d9b11760c8',1,'VSCodeEditor::VSCodeScriptEditor']]],
+  ['vscode_5fextension_16128',['vscode_extension',['../class_v_s_code_editor_1_1_v_s_code_script_editor.html#a24fde12594fd7b4abae50039f2b9f34b',1,'VSCodeEditor::VSCodeScriptEditor']]]
 ];

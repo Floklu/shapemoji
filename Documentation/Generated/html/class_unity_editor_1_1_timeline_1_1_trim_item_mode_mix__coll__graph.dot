@@ -8,4 +8,10 @@ digraph "UnityEditor.Timeline.TrimItemModeMix"
   Node2 [label="ITrimItemMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_trim_item_mode.html",tooltip=" "];
   Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="ITrimItemDrawer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_trim_item_drawer.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Item" ,fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.ITrimmable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_trimmable.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ITimelineItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_timeline_item.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="IEquatable\< ITimelineItem \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

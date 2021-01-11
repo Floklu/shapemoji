@@ -4,5 +4,9 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="UnityEditor.Timeline.Space\lPartitioner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_space_partitioner.html",tooltip=" "];
+  Node722 [label="ICurveEditorState",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node722 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="UnityEditor.ClipCurveEditor.\lFrameFormatCurveEditorState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_clip_curve_editor_1_1_frame_format_curve_editor_state.html",tooltip=" "];
+  Node722 -> Node724 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node724 [label="UnityEditor.ClipCurveEditor.\lUnformattedCurveEditorState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_clip_curve_editor_1_1_unformatted_curve_editor_state.html",tooltip=" "];
 }

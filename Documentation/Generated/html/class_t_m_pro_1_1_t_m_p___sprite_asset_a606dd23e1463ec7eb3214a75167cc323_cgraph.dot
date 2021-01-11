@@ -9,4 +9,9 @@ digraph "TMPro.TMP_SpriteAsset.SearchForSpriteByUnicode"
   Node2 [label="TMPro.TMP_SpriteAsset.Get\lSpriteIndexFromUnicode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sprite_asset.html#a8ee6b1fc6a39a615005fe6b53c2906a2",tooltip="Returns the index of the sprite for the given unicode value."];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="TMPro.TMP_SpriteAsset.Update\lLookupTables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sprite_asset.html#ac0d576c7ae191d74887684c5388ca32a",tooltip="Function to update the sprite name and unicode lookup tables. This function should be called when a s..."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_SpriteAsset.Upgrade\lSpriteAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sprite_asset.html#a2fb7d253030a3930af59366ce7e8a31e",tooltip="Internal method used to upgrade sprite asset."];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_SpriteAsset.Search\lForSpriteByUnicodeInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___sprite_asset.html#a417df8b98b5fbf3bdaaa710531376103",tooltip="Search through the given list of sprite assets and fallbacks for a sprite whose unicode value matches..."];
 }

@@ -4,5 +4,9 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.FastAction\< bool,\l Material \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_fast_action.html",tooltip=" "];
+  Node668 [label="IExternalCodeEditor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node668 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Packages.Rider.Editor.Rider\lScriptEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html",tooltip=" "];
+  Node668 -> Node670 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node670 [label="VSCodeEditor.VSCodeScript\lEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_v_s_code_editor_1_1_v_s_code_script_editor.html",tooltip=" "];
 }

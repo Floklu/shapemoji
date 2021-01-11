@@ -7,4 +7,17 @@ digraph "UnityEditor.Timeline.ClipItem.CloneTo"
   Node1 [label="UnityEditor.Timeline.Clip\lItem.CloneTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Clip\lItem.ClipItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_item.html#aa42a155cda7dfc7b0c6e3b9932b9cb83",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Timeline\lHelpers.Clone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#a1fa5029776007597867809545f70440b",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Track\lExtensions.ComputeBlendsFromOverlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_extensions.html#afec36c3c62b442e17aef2d034c2895c4",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Timeline\lHelpers.DuplicateClip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_helpers.html#aad484f1a825dd85f5b8e1f5c0b4699b6",tooltip=" "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetClipEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a4b7f59487a7014735342fd15c71413f1",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetDefaultClip\lEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#a1965c36388ba999d52895befcac64496",tooltip=" "];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Clip\lEditor.OnCreate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_clip_editor.html#a586e666943496ce611ce864fee755710",tooltip="Called when a clip is created."];
 }

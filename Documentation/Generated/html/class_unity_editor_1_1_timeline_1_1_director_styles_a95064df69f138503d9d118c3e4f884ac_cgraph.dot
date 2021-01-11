@@ -6,5 +6,21 @@ digraph "UnityEditor.Timeline.DirectorStyles.Initialize"
   rankdir="LR";
   Node1 [label="UnityEditor.Timeline.Director\lStyles.Initialize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="UnityEditor.Timeline.Director\lStyles.GetBackgroundImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#ad1a6d796ba54107ec2692a823b4113c4",tooltip=" "];
+  Node2 [label="UnityEditor.Timeline.Track\lResourceCache.ClearTrackColorCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#aa34d222123efa2c6f18e4270d294e8ec",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Track\lResourceCache.ClearTrackIconCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a75d06f95433e84f1b9fa4e98cee1b498",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Director\lStyles.CreateDefaultSkin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#a40d1da307a9eddde2b653927a0c76a12",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEngine.Timeline.Director\lNamedColor.SetDefault",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#ac30021b15c2b374cb1e4e5f78f36c3c9",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Director\lStyles.GetBackgroundImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#ad1a6d796ba54107ec2692a823b4113c4",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Director\lStyles.LoadColorSkin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_director_styles.html#a2bc6cdd0bc76ca77a3eba0d6c38ea4cb",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEngine.Timeline.Director\lNamedColor.CreateAndLoadFromText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#a506d7a97aee83d1459a5211d6292d701",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEngine.Timeline.Director\lNamedColor.FromText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#acd308eaa128ca513fc5f6516809b23ae",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UnityEngine.Timeline.Director\lNamedColor.ParseFloat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_director_named_color.html#a233f6c5e89bc95ee416ea0fef435ef2e",tooltip=" "];
 }

@@ -7,6 +7,22 @@ digraph "UnityEditor.Timeline.Signals.SignalReceiverInspector.OnInspectorGUI"
   Node1 [label="UnityEditor.Timeline.Signals.\lSignalReceiverInspector.OnInspectorGUI",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a80d91af8b228cf0df25351661823261a",tooltip=" "];
-  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.RefreshIfDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#aa4ab4eb04b99ba64d3e1a020ea55c4c9",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.GetTotalHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#a9b113e399787eafb3c539d02cfb0c14d",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Signals.\lSignalReceiverItem.GetHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_item.html#afab36a940f64f8d0a8db28b5c27b4722",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Signals.\lSignalReceiverInspector.DrawAddRemove\lButtons",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a3f9fb60f8ab566c5f5fdfec5b71faf85",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEngine.Timeline.Signal\lReceiver.AddEmptyReaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_signal_receiver.html#abb432062d379652308282ce4bdb85458",tooltip="Appends a null SignalAsset with a reaction specified by the UnityEvent."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEngine.Timeline.Signal\lReceiver.EventKeyValue.Append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html#ac0d9294d498ac79affa3a2de177996d8",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEditor.Timeline.Signals.\lSignalReceiverInspector.DrawEmitter\lControls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_inspector.html#a53932026a70653055ecfd04794ba5e19",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.Signals.\lSignalUtility.DrawCenteredButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#acaab023f8cfec29556403e3ad4066d41",tooltip=" "];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UnityEditor.Timeline.Signals.\lSignalUtility.DrawCenteredMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_utility.html#ac78643addefb5d72ceee836f03db453e",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="UnityEditor.Timeline.Signals.\lSignalReceiverTreeView.RefreshIfDirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_receiver_tree_view.html#aa4ab4eb04b99ba64d3e1a020ea55c4c9",tooltip=" "];
 }

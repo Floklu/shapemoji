@@ -12,6 +12,7 @@ var namespace_unity_engine_1_1_test_tools =
     [ "IOuterUnityTestAction", "interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action.html", "interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action" ],
     [ "IPostBuildCleanup", "interface_unity_engine_1_1_test_tools_1_1_i_post_build_cleanup.html", "interface_unity_engine_1_1_test_tools_1_1_i_post_build_cleanup" ],
     [ "IPrebuildSetup", "interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup.html", "interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup" ],
+    [ "LogAssert", "class_unity_engine_1_1_test_tools_1_1_log_assert.html", "class_unity_engine_1_1_test_tools_1_1_log_assert" ],
     [ "MonoBehaviourTest", "class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test.html", "class_unity_engine_1_1_test_tools_1_1_mono_behaviour_test" ],
     [ "PostBuildCleanupAttribute", "class_unity_engine_1_1_test_tools_1_1_post_build_cleanup_attribute.html", "class_unity_engine_1_1_test_tools_1_1_post_build_cleanup_attribute" ],
     [ "PrebuildSetupAttribute", "class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute.html", "class_unity_engine_1_1_test_tools_1_1_prebuild_setup_attribute" ],

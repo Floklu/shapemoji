@@ -4,5 +4,11 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="TMPro.EditorUtilities.TMP\l_EditorCoroutine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_coroutine.html",tooltip="Simple implementation of coroutine working in the Unity Editor."];
+  Node926 [label="AssetPostprocessor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node926 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Packages.Rider.Editor.Post\lProcessors.RiderAssetPostprocessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_post_processors_1_1_rider_asset_postprocessor.html",tooltip=" "];
+  Node926 -> Node928 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node928 [label="TMPro.EditorUtilities.Font\lAssetPostProcessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_font_asset_post_processor.html",tooltip="Asset post processor used to handle font assets getting updated outside of the Unity editor."];
+  Node926 -> Node929 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node929 [label="TMPro.EditorUtilities.TMPro\l_TexturePostProcessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_pro___texture_post_processor.html",tooltip=" "];
 }

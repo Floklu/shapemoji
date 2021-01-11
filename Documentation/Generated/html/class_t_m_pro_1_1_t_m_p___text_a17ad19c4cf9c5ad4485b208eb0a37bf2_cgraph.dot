@@ -9,9 +9,12 @@ digraph "TMPro.TMP_Text.GetSpecialCharacters"
   Node2 [label="TMPro.TMP_Text.GetEllipsis\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#a3193988e012b58e178ae978de5e64e6d",tooltip=" "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a9d70106b39c64e03f4e62e1f13c0948b",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
-  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAssets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#afdc59bd1dcec2cddc898a4f034a66dee",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
-  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="TMPro.TMP_Text.GetUnderline\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aa644bbb25fe0d440b1adf25dc2081f37",tooltip=" "];
-  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAsset\l_Internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#a22faa12b72e374579a7377572828051d",tooltip="Internal function returning the text element character for the given unicode value taking into consid..."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.TMP_FontAssetUtilities.\lGetCharacterFromFontAssets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___font_asset_utilities.html#afdc59bd1dcec2cddc898a4f034a66dee",tooltip="Returns the text element (character) for the given unicode value taking into consideration the reques..."];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TMPro.TMP_Text.GetUnderline\lSpecialCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_t_m_p___text.html#aa644bbb25fe0d440b1adf25dc2081f37",tooltip=" "];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

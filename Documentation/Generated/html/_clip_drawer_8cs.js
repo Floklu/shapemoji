@@ -4,6 +4,8 @@ var _clip_drawer_8cs =
     [ "ClipBorder", "class_unity_editor_1_1_timeline_1_1_clip_border.html", "class_unity_editor_1_1_timeline_1_1_clip_border" ],
     [ "ClipBlends", "struct_unity_editor_1_1_timeline_1_1_clip_blends.html", "struct_unity_editor_1_1_timeline_1_1_clip_blends" ],
     [ "ClipDrawData", "struct_unity_editor_1_1_timeline_1_1_clip_draw_data.html", "struct_unity_editor_1_1_timeline_1_1_clip_draw_data" ],
+    [ "ClipDrawer", "class_unity_editor_1_1_timeline_1_1_clip_drawer.html", "class_unity_editor_1_1_timeline_1_1_clip_drawer" ],
+    [ "Styles", "class_unity_editor_1_1_timeline_1_1_clip_drawer_1_1_styles.html", "class_unity_editor_1_1_timeline_1_1_clip_drawer_1_1_styles" ],
     [ "BlendAngle", "_clip_drawer_8cs.html#afa5d10e725a75069a0a2b638e46f96c0", [
       [ "Descending", "_clip_drawer_8cs.html#afa5d10e725a75069a0a2b638e46f96c0ae3cf5ac19407b1a62c6fccaff675a53b", null ],
       [ "Ascending", "_clip_drawer_8cs.html#afa5d10e725a75069a0a2b638e46f96c0acf3fb1ff52ea1eed3347ac5401ee7f0c", null ]

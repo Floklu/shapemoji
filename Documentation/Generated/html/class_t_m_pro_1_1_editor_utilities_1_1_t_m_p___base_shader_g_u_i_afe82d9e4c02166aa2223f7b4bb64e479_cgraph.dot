@@ -6,7 +6,11 @@ digraph "TMPro.EditorUtilities.TMP_BaseShaderGUI.BeginPanel"
   rankdir="LR";
   Node1 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.BeginPanel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.ShaderFeature.ReadState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i_1_1_shader_feature.html#a0dca9d0fb4ddc129cd29ee4d4079c788",tooltip=" "];
+  Node2 [label="TMPro.EditorUtilities.TMP\l_EditorUtility.EditorToggle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___editor_utility.html#aee9d8d84e90e724694a0425528ab1b0b",tooltip=" "];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.ShaderFeature.Set\lActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i_1_1_shader_feature.html#a27cd0346e0b4ec6aa5c0ffa566f94627",tooltip=" "];
+  Node3 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.ShaderFeature.ReadState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i_1_1_shader_feature.html#a0dca9d0fb4ddc129cd29ee4d4079c788",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.ShaderFeature.Set\lActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i_1_1_shader_feature.html#a27cd0346e0b4ec6aa5c0ffa566f94627",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TMPro.EditorUtilities.TMP\l_BaseShaderGUI.ShaderFeature.Set\lStateKeywords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_t_m_pro_1_1_editor_utilities_1_1_t_m_p___base_shader_g_u_i_1_1_shader_feature.html#ae0a8dbc2d217fdc856496dd6a6f186ac",tooltip=" "];
 }

@@ -8,8 +8,12 @@ digraph "UnityEditor.Timeline.PrevKeyAction"
   Node2 [label="TimelineAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_action.html",tooltip=" "];
   Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="MenuItemActionBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_menu_item_action_base.html",tooltip=" "];
-  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AllActions\nMenuActions" ,fontname="Helvetica"];
-  Node4 [label="UnityEditor.Timeline.Timeline\lAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_action.html",tooltip=" "];
-  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AllActions\nMenuActions" ,fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" NoMenu\nm_MenuInfo" ,fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Menu\lEntryAttribute",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="Used to indicate path and priority of classes that are auto added to the menu"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Attribute",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AllActions\nMenuActions" ,fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Timeline\lAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_timeline_action.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" AllActions\nMenuActions" ,fontname="Helvetica"];
 }

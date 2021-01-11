@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Signals/SignalEventDrawer.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Editor/Signals/SignalEventDrawer.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('_signal_event_drawer_8cs_source.html',
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [UsedImplicitly]</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html">SignalEventDrawer</a> : UnityEventDrawer</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a6adf97f83acf6453d4a6a4b1070f3754">GameObject</a> FindBoundObject(SerializedProperty property)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html#aecae7d024172876863164f99655964e2">   13</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a6adf97f83acf6453d4a6a4b1070f3754">GameObject</a> <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html#aecae7d024172876863164f99655964e2">FindBoundObject</a>(SerializedProperty property)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            var component = <span class="keyword">property</span>.serializedObject.targetObject as <a class="code" href="_type_utility_8cs.html#a554ba7da72478fc0e507fb6fd77f6476">Component</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">return</span> component != <span class="keyword">null</span> ? component.gameObject : <span class="keyword">null</span>;</div>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('_signal_event_drawer_8cs_source.html',
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                var lastCall = list.serializedProperty.GetArrayElementAtIndex(listProperty.arraySize - 1);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                var targetProperty = lastCall.FindPropertyRelative(kInstancePath);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                targetProperty.objectReferenceValue = FindBoundObject(listProperty);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                targetProperty.objectReferenceValue = <a class="code" href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html#aecae7d024172876863164f99655964e2">FindBoundObject</a>(listProperty);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
@@ -137,6 +137,7 @@ $(document).ready(function(){initNavTree('_signal_event_drawer_8cs_source.html',
 <div class="ttc" id="aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer_html_a7c8fd6d8cfae945cb161329189b43815"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html#a7c8fd6d8cfae945cb161329189b43815">UnityEditor.Timeline.Signals.SignalEventDrawer.SetupReorderableList</a></div><div class="ttdeci">override void SetupReorderableList(ReorderableList list)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_event_drawer_8cs_source.html#l00033">SignalEventDrawer.cs:33</a></div></div>
 <div class="ttc" id="anamespace_unity_editor_1_1_timeline_html_a834283c802e55ced7c6c64c4a2d094a6a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="namespace_unity_editor_1_1_timeline.html#a834283c802e55ced7c6c64c4a2d094a6a6adf97f83acf6453d4a6a4b1070f3754">UnityEditor.Timeline.TitleMode.None</a></div><div class="ttdeci">@ None</div></div>
 <div class="ttc" id="anamespace_unity_engine_1_1_timeline_html"><div class="ttname"><a href="namespace_unity_engine_1_1_timeline.html">UnityEngine.Timeline</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_clip_properties_drawer_8cs_source.html#l00009">AudioClipPropertiesDrawer.cs:10</a></div></div>
+<div class="ttc" id="aclass_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer_html_aecae7d024172876863164f99655964e2"><div class="ttname"><a href="class_unity_editor_1_1_timeline_1_1_signals_1_1_signal_event_drawer.html#aecae7d024172876863164f99655964e2">UnityEditor.Timeline.Signals.SignalEventDrawer.FindBoundObject</a></div><div class="ttdeci">static GameObject FindBoundObject(SerializedProperty property)</div><div class="ttdef"><b>Definition:</b> <a href="_signal_event_drawer_8cs_source.html#l00013">SignalEventDrawer.cs:13</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:6</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -13,4 +13,14 @@ digraph "UnityEditor.Timeline.Scrub.MouseDrag"
   Node4 [label="UnityEditor.Timeline.Window\lState.TrackSpacePixelToTimeAreaTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a0beea79158a44ba15b0deffa0a777e9c",tooltip=" "];
   Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="UnityEditor.Timeline.Window\lState.SnapToFrameIfRequired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a593ea4f713fdc3298c3fe686e822cbad",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Time\lReferenceUtility.SnapToFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_time_reference_utility.html#a5dd3151a2e6f26956ba7290034c1c47d",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEngine.Timeline.Time\lUtility.RoundToFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_time_utility.html#ad48a823919b02af48ca5f6d97dab773b",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UnityEngine.Timeline.Time\lUtility.ValidateFrameRate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_engine_1_1_timeline_1_1_time_utility.html#a08c330d0c8ec3b2d1331e41cb6d22917",tooltip=" "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UnityEditor.Timeline.ISequence\lState.ToGlobalTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a2d1921dec1efd2e0aea2a5234529eef0",tooltip=" "];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UnityEditor.Timeline.ISequence\lState.ToLocalTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_unity_editor_1_1_timeline_1_1_i_sequence_state.html#a44a18b7a7f2d366afa4f9b720552f3f8",tooltip=" "];
 }

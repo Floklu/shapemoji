@@ -6,6 +6,10 @@ digraph "VSCodeEditor.VSCodeScriptEditor"
   Node1 [label="VSCodeEditor.VSCodeScript\lEditor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="IExternalCodeEditor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Installations" ,fontname="Helvetica"];
-  Node3 [label="CodeEditor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_ProjectGeneration" ,fontname="Helvetica"];
+  Node3 [label="VSCodeEditor.IGenerator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_v_s_code_editor_1_1_i_generator.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_Discoverability" ,fontname="Helvetica"];
+  Node4 [label="VSCodeEditor.IDiscovery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_v_s_code_editor_1_1_i_discovery.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Installations" ,fontname="Helvetica"];
+  Node5 [label="CodeEditor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

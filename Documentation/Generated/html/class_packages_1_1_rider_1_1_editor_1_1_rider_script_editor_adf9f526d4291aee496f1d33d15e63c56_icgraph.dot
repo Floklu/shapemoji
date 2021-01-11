@@ -6,7 +6,13 @@ digraph "Packages.Rider.Editor.RiderScriptEditor.IsRiderInstallation"
   rankdir="RL";
   Node1 [label="Packages.Rider.Editor.Rider\lScriptEditor.IsRiderInstallation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Packages.Rider.Editor.Post\lProcessors.RiderAssetPostprocessor.\lOnPreGeneratingCSProjectFiles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_post_processors_1_1_rider_asset_postprocessor.html#a6822b0cf9d1721f254946acf4478cfef",tooltip=" "];
+  Node2 [label="JetBrains.Rider.Unity.Editor.\lRiderMenu.MenuOpenProject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_jet_brains_1_1_rider_1_1_unity_1_1_editor_1_1_rider_menu.html#abdc6f99c6d2b4ba78c91de50fc37c77c",tooltip=" "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Packages.Rider.Editor.Rider\lScriptEditor.TryGetInstallation\lForPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a95ae6ac6342a23b1ec07668b9ff1dabc",tooltip=" "];
+  Node3 [label="Packages.Rider.Editor.Post\lProcessors.RiderAssetPostprocessor.\lOnPreGeneratingCSProjectFiles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_post_processors_1_1_rider_asset_postprocessor.html#a6822b0cf9d1721f254946acf4478cfef",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Packages.Rider.Editor.Plugin\lSettings.RiderPreferencesItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_plugin_settings.html#a4585cf2bb31beea990767818eac37b6e",tooltip="Preferences menu layout"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Packages.Rider.Editor.Rider\lScriptEditor.RiderScriptEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a4ee46a0bf8d504d483eda23803f08956",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Packages.Rider.Editor.Rider\lScriptEditor.TryGetInstallation\lForPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_packages_1_1_rider_1_1_editor_1_1_rider_script_editor.html#a95ae6ac6342a23b1ec07668b9ff1dabc",tooltip=" "];
 }

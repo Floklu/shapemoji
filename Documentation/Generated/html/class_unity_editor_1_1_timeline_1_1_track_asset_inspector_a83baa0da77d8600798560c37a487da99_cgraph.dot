@@ -7,4 +7,8 @@ digraph "UnityEditor.Timeline.TrackAssetInspector.OnEnable"
   Node1 [label="UnityEditor.Timeline.Track\lAssetInspector.OnEnable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="UnityEditor.Timeline.Custom\lTimelineEditorCache.GetTrackEditor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_custom_timeline_editor_cache.html#aae5081f889dccc72e79757a88c2948aa",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UnityEditor.Timeline.Track\lResourceCache.GetTrackIcon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a6d00d5c42be74fcf3ed92a4d2bd95eda",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UnityEditor.Timeline.Track\lResourceCache.FindTrackIcon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_track_resource_cache.html#a1aa92f8e98821c683bb2790ad9d14372",tooltip=" "];
 }

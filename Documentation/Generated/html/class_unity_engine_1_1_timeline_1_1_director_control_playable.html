@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_di
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_director_control_playable-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.DirectorControlPlayable Class Reference</div>  </div>
@@ -132,6 +134,26 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a704dca1a2a54f5c3fb6f2d2502fb5de5"><td class="memItemLeft" align="right" valign="top">PlayableDirector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a704dca1a2a54f5c3fb6f2d2502fb5de5">director</a></td></tr>
 <tr class="memdesc:a704dca1a2a54f5c3fb6f2d2502fb5de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The PlayableDirector being controlled by this PlayableBehaviour  <a href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a704dca1a2a54f5c3fb6f2d2502fb5de5">More...</a><br /></td></tr>
 <tr class="separator:a704dca1a2a54f5c3fb6f2d2502fb5de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af8930d3f7789f49fb1c1326496a0e6fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#af8930d3f7789f49fb1c1326496a0e6fb">SyncSpeed</a> (double speed)</td></tr>
+<tr class="separator:af8930d3f7789f49fb1c1326496a0e6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3157782fa6446aa5518d7a97de84836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#ac3157782fa6446aa5518d7a97de84836">SyncPlayState</a> (PlayableGraph graph, double playableTime)</td></tr>
+<tr class="separator:ac3157782fa6446aa5518d7a97de84836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb">DetectDiscontinuity</a> (Playable playable, FrameData info)</td></tr>
+<tr class="separator:a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b1d6efaac0b59317aa8dce05899932"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a34b1d6efaac0b59317aa8dce05899932">DetectOutOfSync</a> (Playable playable)</td></tr>
+<tr class="separator:a34b1d6efaac0b59317aa8dce05899932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae686374793bf09b845857213274409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a1ae686374793bf09b845857213274409">UpdateTime</a> (Playable playable)</td></tr>
+<tr class="separator:a1ae686374793bf09b845857213274409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5f61a5cb7e9be320c38b466953e56d0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a5f61a5cb7e9be320c38b466953e56d0b">m_SyncTime</a> = false</td></tr>
+<tr class="separator:a5f61a5cb7e9be320c38b466953e56d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806208dd018d223472dfca2a3b41247c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html#a806208dd018d223472dfca2a3b41247c">m_AssetDuration</a> = double.MaxValue</td></tr>
+<tr class="separator:a806208dd018d223472dfca2a3b41247c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Playable Behaviour used to control a PlayableDirector. </p>
@@ -184,6 +206,87 @@ Public Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a Playable with a <a class="el" href="class_unity_engine_1_1_timeline_1_1_director_control_playable.html" title="Playable Behaviour used to control a PlayableDirector.">DirectorControlPlayable</a> attached</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00030">30</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_ac9721ed9c4beb4d89c702f94a4706acd_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_ac9721ed9c4beb4d89c702f94a4706acd_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb">&#9670;&nbsp;</a></span>DetectDiscontinuity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.DirectorControlPlayable.DetectDiscontinuity </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FrameData&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00158">158</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_a5f9ae8e0dfcf2ff93e5fd0bc06c1bccb_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a34b1d6efaac0b59317aa8dce05899932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b1d6efaac0b59317aa8dce05899932">&#9670;&nbsp;</a></span>DetectOutOfSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.DirectorControlPlayable.DetectOutOfSync </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00163">163</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_a34b1d6efaac0b59317aa8dce05899932_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_a34b1d6efaac0b59317aa8dce05899932_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -321,6 +424,11 @@ Public Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00061">61</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_a2311b379f631c3f19d47bda8eb4d0e63_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_a2311b379f631c3f19d47bda8eb4d0e63_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -367,6 +475,120 @@ Public Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00109">109</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_a952cbdf72cbb2582d921c6c8316a972e_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_a952cbdf72cbb2582d921c6c8316a972e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac3157782fa6446aa5518d7a97de84836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3157782fa6446aa5518d7a97de84836">&#9670;&nbsp;</a></span>SyncPlayState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.DirectorControlPlayable.SyncPlayState </td>
+          <td>(</td>
+          <td class="paramtype">PlayableGraph&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>playableTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00149">149</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_ac3157782fa6446aa5518d7a97de84836_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_ac3157782fa6446aa5518d7a97de84836_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af8930d3f7789f49fb1c1326496a0e6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8930d3f7789f49fb1c1326496a0e6fb">&#9670;&nbsp;</a></span>SyncSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.DirectorControlPlayable.SyncSpeed </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00133">133</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_af8930d3f7789f49fb1c1326496a0e6fb_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_af8930d3f7789f49fb1c1326496a0e6fb_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a1ae686374793bf09b845857213274409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae686374793bf09b845857213274409">&#9670;&nbsp;</a></span>UpdateTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.DirectorControlPlayable.UpdateTime </td>
+          <td>(</td>
+          <td class="paramtype">Playable&#160;</td>
+          <td class="paramname"><em>playable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00189">189</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_director_control_playable_a1ae686374793bf09b845857213274409_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_director_control_playable_a1ae686374793bf09b845857213274409_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -389,8 +611,56 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a806208dd018d223472dfca2a3b41247c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806208dd018d223472dfca2a3b41247c">&#9670;&nbsp;</a></span>m_AssetDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double UnityEngine.Timeline.DirectorControlPlayable.m_AssetDuration = double.MaxValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00022">22</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5f61a5cb7e9be320c38b466953e56d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f61a5cb7e9be320c38b466953e56d0b">&#9670;&nbsp;</a></span>m_SyncTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnityEngine.Timeline.DirectorControlPlayable.m_SyncTime = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_director_control_playable_8cs_source.html#l00020">20</a> of file <a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Playables/<a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Playables/<a class="el" href="_director_control_playable_8cs_source.html">DirectorControlPlayable.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

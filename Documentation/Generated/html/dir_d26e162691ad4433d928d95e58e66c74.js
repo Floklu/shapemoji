@@ -43,6 +43,7 @@ var dir_d26e162691ad4433d928d95e58e66c74 =
       [ "TimelinePlayable", "class_unity_engine_1_1_timeline_1_1_timeline_playable.html", "class_unity_engine_1_1_timeline_1_1_timeline_playable" ]
     ] ],
     [ "TrackAsset.cs", "_track_asset_8cs.html", [
-      [ "TrackAsset", "class_unity_engine_1_1_timeline_1_1_track_asset.html", "class_unity_engine_1_1_timeline_1_1_track_asset" ]
+      [ "TrackAsset", "class_unity_engine_1_1_timeline_1_1_track_asset.html", "class_unity_engine_1_1_timeline_1_1_track_asset" ],
+      [ "TransientBuildData", "struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data.html", "struct_unity_engine_1_1_timeline_1_1_track_asset_1_1_transient_build_data" ]
     ] ]
 ];

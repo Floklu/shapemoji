@@ -84,6 +84,8 @@ $(document).ready(function(){initNavTree('class_unity_engine_1_1_timeline_1_1_si
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_unity_engine_1_1_timeline_1_1_signal_receiver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnityEngine.Timeline.SignalReceiver Class Reference</div>  </div>
@@ -103,6 +105,11 @@ Collaboration diagram for UnityEngine.Timeline.SignalReceiver:</div>
 <div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver__coll__graph.png" border="0" usemap="#a_unity_engine_8_timeline_8_signal_receiver_coll__map" alt="Collaboration graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html">EventKeyValue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b8381c9439b508dff0586415d6c004e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#a7b8381c9439b508dff0586415d6c004e">OnNotify</a> (Playable origin, INotification notification, object context)</td></tr>
@@ -141,6 +148,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acf0c474d241e6fcd7aa3941c72cafd80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html">SignalAsset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#acf0c474d241e6fcd7aa3941c72cafd80">GetSignalAssetAtIndex</a> (int idx)</td></tr>
 <tr class="memdesc:acf0c474d241e6fcd7aa3941c72cafd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html" title="An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver...">SignalAsset</a> at a specific index  <a href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#acf0c474d241e6fcd7aa3941c72cafd80">More...</a><br /></td></tr>
 <tr class="separator:acf0c474d241e6fcd7aa3941c72cafd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9278463f19e0c529e362d719f7a9ada2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#a9278463f19e0c529e362d719f7a9ada2">OnEnable</a> ()</td></tr>
+<tr class="separator:a9278463f19e0c529e362d719f7a9ada2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adbe026eb503c302377ff706d2fffee86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html">EventKeyValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver.html#adbe026eb503c302377ff706d2fffee86">m_Events</a> = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html">EventKeyValue</a>()</td></tr>
+<tr class="separator:adbe026eb503c302377ff706d2fffee86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Listens for emitted signals and reacts depending on its defined reactions. </p>
@@ -175,6 +192,16 @@ Public Member Functions</h2></td></tr>
 <p>Multiple null assets are valid.</p>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00060">60</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_abb432062d379652308282ce4bdb85458_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -221,6 +248,16 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00044">44</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_a1f0b3b2c98cb3becc376295c07659854_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -312,6 +349,11 @@ Public Member Functions</h2></td></tr>
 <p>The new <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html" title="An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver...">SignalAsset</a> can be null.</p>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00121">121</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_af04471e99839bcede561f7815fc27663_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_af04471e99839bcede561f7815fc27663_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -363,6 +405,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns the reaction associated with a <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html" title="An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver...">SignalAsset</a>. Returns null if the signal asset does not exist.</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00094">94</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_ae501e66f27c9e350ac35f3cad74b832e_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_ae501e66f27c9e350ac35f3cad74b832e_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -414,6 +461,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a list of SignalAssets.</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00084">84</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_afa40a1ef4dd5f72d1ca6669500ce2f54_icgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_afa40a1ef4dd5f72d1ca6669500ce2f54_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -443,6 +495,33 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns a <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_asset.html" title="An asset representing an emitted signal. A SignalAsset connects a SignalEmitter with a SignalReceiver...">SignalAsset</a>.</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00178">178</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9278463f19e0c529e362d719f7a9ada2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9278463f19e0c529e362d719f7a9ada2">&#9670;&nbsp;</a></span>OnEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnityEngine.Timeline.SignalReceiver.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00186">186</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
 
 </div>
 </div>
@@ -481,6 +560,11 @@ Public Member Functions</h2></td></tr>
 <p>Called when a notification is sent. </p>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00024">24</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_a7b8381c9439b508dff0586415d6c004e_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_a7b8381c9439b508dff0586415d6c004e_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -509,6 +593,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00070">70</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_a84832683010fb04c26c135048dc21daa_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_a84832683010fb04c26c135048dc21daa_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -537,11 +626,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00140">140</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_unity_engine_1_1_timeline_1_1_signal_receiver_a40ca90a94b66965764392b45fd9db7d7_cgraph.png" border="0" usemap="#aclass_unity_engine_1_1_timeline_1_1_signal_receiver_a40ca90a94b66965764392b45fd9db7d7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adbe026eb503c302377ff706d2fffee86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe026eb503c302377ff706d2fffee86">&#9670;&nbsp;</a></span>m_Events</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html">EventKeyValue</a> UnityEngine.Timeline.SignalReceiver.m_Events = new <a class="el" href="class_unity_engine_1_1_timeline_1_1_signal_receiver_1_1_event_key_value.html">EventKeyValue</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_signal_receiver_8cs_source.html#l00019">19</a> of file <a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Events/Signals/<a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a></li>
+<li>C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Events/Signals/<a class="el" href="_signal_receiver_8cs_source.html">SignalReceiver.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

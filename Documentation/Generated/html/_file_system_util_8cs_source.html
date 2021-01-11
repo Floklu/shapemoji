@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShapeMoji: C:/Users/host/RiderProjects/196/shapemoji/src/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/Util/FileSystemUtil.cs Source File</title>
+<title>ShapeMoji: C:/Studium/marc/shapemoji/src/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/Util/FileSystemUtil.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,10 +94,10 @@ $(document).ready(function(){initNavTree('_file_system_util_8cs_source.html','')
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_packages_1_1_rider_1_1_editor_1_1_util.html">Packages.Rider.Editor.Util</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>FileSystemUtil</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">FileSystemUtil</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [NotNull]</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> GetFinalPathName([NotNull] <span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a879251b5a89590e35198369830de4c74">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a879251b5a89590e35198369830de4c74">GetFinalPathName</a>([NotNull] <span class="keywordtype">string</span> path)</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">if</span> (path == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="stringliteral">&quot;path&quot;</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('_file_system_util_8cs_source.html','')
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">new</span> FileInfo(sb.ToString()).FullName;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> FileNameWithoutExtension(<span class="keywordtype">string</span> path)</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#ae6410748630d7e8df4737958d49bbd76">   29</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#ae6410748630d7e8df4737958d49bbd76">FileNameWithoutExtension</a>(<span class="keywordtype">string</span> path)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(path))</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      {</div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('_file_system_util_8cs_source.html','')
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">return</span> path.Substring(indexOfSlash, indexOfDot - indexOfSlash);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> EditorPathExists(<span class="keywordtype">string</span> editorPath)</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">EditorPathExists</a>(<span class="keywordtype">string</span> editorPath)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX &amp;&amp; <span class="keyword">new</span> DirectoryInfo(editorPath).Exists </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;             || SystemInfo.operatingSystemFamily != OperatingSystemFamily.MacOSX &amp;&amp; <span class="keyword">new</span> FileInfo(editorPath).Exists;</div>
@@ -153,8 +153,12 @@ $(document).ready(function(){initNavTree('_file_system_util_8cs_source.html','')
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html">Packages.Rider.Editor.Util.FileSystemUtil</a></div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00010">FileSystemUtil.cs:11</a></div></div>
 <div class="ttc" id="anamespace_packages_1_1_rider_1_1_editor_1_1_util_html"><div class="ttname"><a href="namespace_packages_1_1_rider_1_1_editor_1_1_util.html">Packages.Rider.Editor.Util</a></div><div class="ttdef"><b>Definition:</b> <a href="_command_line_parser_8cs_source.html#l00003">CommandLineParser.cs:4</a></div></div>
+<div class="ttc" id="aclass_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html_ae6410748630d7e8df4737958d49bbd76"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#ae6410748630d7e8df4737958d49bbd76">Packages.Rider.Editor.Util.FileSystemUtil.FileNameWithoutExtension</a></div><div class="ttdeci">static string FileNameWithoutExtension(string path)</div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00029">FileSystemUtil.cs:29</a></div></div>
 <div class="ttc" id="anamespace_jet_brains_html"><div class="ttname"><a href="namespace_jet_brains.html">JetBrains</a></div><div class="ttdef"><b>Definition:</b> <a href="_rider_menu_8cs_source.html#l00008">RiderMenu.cs:9</a></div></div>
+<div class="ttc" id="aclass_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html_a6ae94bf5a7e99ad1c7df838e9d36459d"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a6ae94bf5a7e99ad1c7df838e9d36459d">Packages.Rider.Editor.Util.FileSystemUtil.EditorPathExists</a></div><div class="ttdeci">static bool EditorPathExists(string editorPath)</div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00060">FileSystemUtil.cs:60</a></div></div>
+<div class="ttc" id="aclass_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util_html_a879251b5a89590e35198369830de4c74"><div class="ttname"><a href="class_packages_1_1_rider_1_1_editor_1_1_util_1_1_file_system_util.html#a879251b5a89590e35198369830de4c74">Packages.Rider.Editor.Util.FileSystemUtil.GetFinalPathName</a></div><div class="ttdeci">static string GetFinalPathName([NotNull] string path)</div><div class="ttdef"><b>Definition:</b> <a href="_file_system_util_8cs_source.html#l00013">FileSystemUtil.cs:13</a></div></div>
 <div class="ttc" id="anamespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="_enter_play_mode_8cs_source.html#l00005">EnterPlayMode.cs:6</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

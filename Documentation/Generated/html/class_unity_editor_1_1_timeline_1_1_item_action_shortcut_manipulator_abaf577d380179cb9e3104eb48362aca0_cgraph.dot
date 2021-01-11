@@ -11,4 +11,10 @@ digraph "UnityEditor.Timeline.ItemActionShortcutManipulator.ExecuteCommand"
   Node3 [label="UnityEditor.Timeline.Window\lState.IsEditingASubItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a2fcf53cb212d80e02e30d883bc259b75",tooltip=" "];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="UnityEditor.Timeline.Window\lState.IsCurrentEditingASequencer\lTextField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_window_state.html#a6904fd1570b48a1f42e77c2afcb6f50a",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UnityEditor.Timeline.Selection\lManager.IsCurveEditorFocused",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#aa8f170d62df3f6ea00457cad78d1fc80",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UnityEditor.Timeline.Selection\lManager.SelectedClips",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#a7ba16cd0f29030674819bbb430e24efc",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UnityEditor.Timeline.Selection\lManager.SelectedMarkers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_unity_editor_1_1_timeline_1_1_selection_manager.html#ac9e501bc39110ef71216b27cd4895c6c",tooltip=" "];
 }
